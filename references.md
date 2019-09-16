@@ -62,6 +62,10 @@ By: Parth Ghiya</a>. Acceda por medio del <a href="https://www.ull.es/servicios/
 * <a href="https://git-scm.com/book/en/v2/" target="_blank">Chacon's book on Git</a>
 * <a href="https://campusvirtual.ull.es/ocw/course/view.php?id=136" target="_blank">OCW ULL: Integración de las Herramientas "GitHub Education" en el Aula</a> Casiano et Al.
 
+## React
+
+* [Learning React. O'Reilly. Eve Porcello, Alex Banks](https://learning.oreilly.com/library/view/learning-react/9781491954614/)
+
 ## Bibliografía Auxiliar
 
 * <a href="https://ull-mii-ca-1819.github.io/docs/" target="_blank">Página de la Asignatura CA del MII</a>
