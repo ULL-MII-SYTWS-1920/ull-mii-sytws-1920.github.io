@@ -11,5 +11,7 @@ Tutorial written by Maira Bello: <https://www.howtographql.com/graphql-js/1-gett
 * [Adding a DataBase](https://www.howtographql.com/graphql-js/4-adding-a-database/)
 * [Connecting Server and Database with the Prisma Client](https://www.howtographql.com/graphql-js/5-connecting-server-and-database/)
 * [Authentication](https://www.howtographql.com/graphql-js/6-authentication/)
-
+* [Realtime GraphQL Subscriptions](https://www.howtographql.com/graphql-js/7-subscriptions/)
+* [Filtering, Pagination & Sorting](https://www.howtographql.com/graphql-js/8-filtering-pagination-and-sorting/)
+* [Summary](https://www.howtographql.com/graphql-js/9-summary/)
 
