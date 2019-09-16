@@ -2,7 +2,7 @@
 
 ## Campus Virtual
 
-* [DMSI](https://campusvirtual.ull.es/1920/course/view.php?id=201911084)
+* [SYTWS](https://campusvirtual.ull.es/1920/course/view.php?id=201911084)
 * [Participantes](https://campusvirtual.ull.es/1920/user/index.php?page=0&perpage=20&contextid=0&id=201911084)
 * [Calificaciones](https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201911084)
 * [Tareas](https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201911084)
@@ -10,13 +10,13 @@
 
 ## GitHub
 
-* [Página Web de DMSI](https://ull-esit-dmsi-1920.github.io)
-* [Organización ULL-ESIT-DMSI-1920](https://github.com/ULL-ESIT-DMSI-1920)
-  - [Repo ull-esit-dmsi-1920.github.io](https://github.com/ULL-ESIT-DMSI-1920/ull-esit-dmsi-1920.github.io)
+* [Página Web de SYTWS](https://ull-esit-sytws-1920.github.io)
+* [Organización ULL-ESIT-SYTWS-1920](https://github.com/ULL-ESIT-SYTWS-1920)
+  - [Repo ull-esit-sytws-1920.github.io](https://github.com/ULL-ESIT-SYTWS-1920/ull-esit-sytws-1920.github.io)
 
 ## Google+
 
-* [Comunidad Google+ DMSI](https://plus.google.com/u/2/communities/114199442894867980706)
+* [Comunidad Google+ SYTWS](https://plus.google.com/u/2/communities/104629784252354892324)
 
 # Recursos Generales
 
