@@ -1,9 +1,15 @@
-# Tema 4: Introducción a GraphQL
+# Tema 4: GraphQL
 
-Tutorial written by Maira Bello: <https://www.howtographql.com/graphql-js/1-getting-started/>
+## Capítulo. Fundamentals
 
-## Index
+* [Basics Tutorial - Introduction](https://www.howtographql.com/basics/0-introduction/)
+* [GraphQL is the better REST](https://www.howtographql.com/basics/1-graphql-is-the-better-rest/)
+* [Core Concpets](https://www.howtographql.com/basics/2-core-concepts/)
+* [Big Picture (Architecture)](https://www.howtographql.com/basics/3-big-picture/)
 
+## Capítulo. Tutorial written by Maira Bello: Build your own GraphQL server
+
+* Maira Bello tutorial: <https://www.howtographql.com/graphql-js/1-getting-started/>
 * [Introduction](https://www.howtographql.com/graphql-js/0-introduction/)
 * [Getting Started](https://www.howtographql.com/graphql-js/1-getting-started/)
 * [A Simple Query](https://www.howtographql.com/graphql-js/2-a-simple-query/)
