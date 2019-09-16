@@ -1,0 +1,4 @@
+- gem install jekyll bundler
+- bundle install
+- bundle exec jekyll serve See localhost:4000
+- _layouts/default.html for navigation bar
