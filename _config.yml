@@ -1,6 +1,6 @@
-title: 'Desarrollo y Mantenimiento de Sistemas Informáticos'
-subtitle: 'Itinerario de Sistemas de la Información. Grado en Ingeniería Informática. ULL. Curso 2019/2020'
+title: 'Sistemas y Tecbologías Web: Servidor'
+subtitle: 'Master de Ingeniería Informática'
 theme: jekyll-theme-midnight
-description: '4º. 1er cuatrimestre. Itinerario de Sistemas de la Información. Grado en Ingeniería Informática. ULL. Curso 2019/2020'
+description: '1er cuatrimestre. ULL. Curso 2019/2020'
 exclude: [ 'Arona-winter-course', 'dsi1819', 'dsi1819-introduccion', 'tema0-introduccion-a-pl/practicas/code']
 show_downloads: false
