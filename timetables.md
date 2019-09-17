@@ -1,22 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**ÍNDICE** 
-
-- [Calendarios, Horarios y Exámenes](#calendarios-horarios-y-ex%C3%A1menes)
-  - [Calendario Académico](#calendario-acad%C3%A9mico)
-  - [Horarios](#horarios)
-  - [Normativa de Evaluación](#normativa-de-evaluaci%C3%B3n)
-  - [Exámenes de convocatoria](#ex%C3%A1menes-de-convocatoria)
-  - [Revisión de Calificaciones](#revisi%C3%B3n-de-calificaciones)
-  - [Cierre de actas](#cierre-de-actas)
-  - [Sobre las Calificaciones de Prácticas](#sobre-las-calificaciones-de-pr%C3%A1cticas)
-  - [Q&A](#qa)
-  - [Instrucciones para los exámenes de Convocatoria](#instrucciones-para-los-ex%C3%A1menes-de-convocatoria)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-
 # Calendarios, Horarios y Exámenes
 
 ## Calendario Académico
@@ -26,8 +7,9 @@
 
 ## Horarios
 
-- <a href="https://www.ull.es/grados/ingenieria-informatica/informacion-academica/horarios-y-calendario-examenes/" target="_blank">Horarios de Ingeniería Informática para el curso 19/20</a>
-- <a href="https://docs.google.com/spreadsheets/d/1ZTGvLA70qCYEsBwcA8dCiUZby3ZOM9oHt8kmiNNKId0/edit#gid=0" target="_blank">Horarios de tutorías del Departamento de Ingeniería Informática</a>
+* <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios 19/20</a>
+
+* <a href="https://docs.google.com/spreadsheets/d/1ZTGvLA70qCYEsBwcA8dCiUZby3ZOM9oHt8kmiNNKId0/edit#gid=0" target="_blank">Horarios de tutorías del Departamento de Ingeniería Informática</a>
 
 
 ## Normativa de Evaluación
@@ -36,9 +18,6 @@
 * [Normativa de Compensación](https://riull.ull.es/xmlui/bitstream/handle/915/8580/acuerdo12.pdf?sequence=1&isAllowed=y)
 
 ## Exámenes de convocatoria
-
-* <a href="https://www.ull.es/grados/ingenieria-informatica/informacion-academica/horarios-y-calendario-examenes/" target="_blank">Enlace al Calendario Oficial de exámenes</a>
-
 
 ## Revisión de Calificaciones
 
