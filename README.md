@@ -20,7 +20,7 @@
 -->
 
 
-## [Tema 3: Modelos Emergentes de Bases de Datos y Calidad en los  Servicios y Aplicaciones Web](tema3-web/)
+## [Tema 3: Introducción a los  Servicios y Aplicaciones Web](tema3-web/)
 
 ### [Práctica Websockets (p5-t3-websockets)](tema3-web/practicas/p5-t3-websockets)
 

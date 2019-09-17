@@ -1,4 +1,4 @@
-# Tema 3. Patrones, Entornos de Trabajo, Pruebas, Integración y Calidad en los Servicios y Aplicaciones Web 
+# Tema 3. Introducción a los Servicios y Aplicaciones Web 
 
 ## Capítulo: WebSockets
 
