@@ -19,7 +19,7 @@
 
 ### [Práctica Asynchronous Programming with Javascript EdX Course: Modules 1 (Asynchronous Fundamentals) and 2 (Promises) (p7-t2-async-js-edx)](tema2-async/practicas/p7-t2-async-js-edx)
 
-## [Tema 3: Introducción a los  Servicios y Aplicaciones Web](tema3-web/)
+## [Tema 3: Servicios y Aplicaciones Web](tema3-web/)
 
 ### [Práctica Websockets (p5-t3-websockets)](tema3-web/practicas/p5-t3-websockets)
 
@@ -30,8 +30,6 @@
 ### [Práctica: Commanding Databases (p10-t3-commanding-databases)](tema3-web/practicas/p10-t3-commanding-databases)
 
 ### [Práctica: Developing RESTful Web Services (p11-t3-restful)](tema3-web/practicas/p11-t3-restful)
-
-## [Tema 4: GraphQL](tema4-graphql)
 
 <!--
 
