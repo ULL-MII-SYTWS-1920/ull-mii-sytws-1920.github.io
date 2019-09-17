@@ -10,15 +10,14 @@
 
 ### [Práctica HTTP (p3-t1-c3-http)](tema1-introduccion/practicas/p3-t1-c3-http/README.md)
 
-<!--
+
+## [Tema 2: Computación Asíncrona y Distribuida](tema2-async/)
 
 ### [Práctica Networking (p4-t2-networking)](tema2-async/practicas/p4-t2-networking)
 
 ### [Práctica Connecting Robust Microservices (p6-t2-microservices)](tema2-async/practicas/p6-t2-microservices)
 
 ### [Práctica Asynchronous Programming with Javascript EdX Course: Modules 1 (Asynchronous Fundamentals) and 2 (Promises) (p7-t2-async-js-edx)](tema2-async/practicas/p7-t2-async-js-edx)
--->
-
 
 ## [Tema 3: Introducción a los  Servicios y Aplicaciones Web](tema3-web/)
 
