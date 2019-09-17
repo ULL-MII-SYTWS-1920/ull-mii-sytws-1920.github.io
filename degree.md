@@ -1,2 +1,3 @@
-* <a href="https://www.ull.es/grados/ingenieria-informatica/" target="_blank">Plan de Estudios, exámenes, etc.</a>
-* <a href="https://campusvirtual.ull.es/facultades/course/view.php?id=100" target="_blank">Aula de Coordinación de Tercer curso. (Grado en Ingeniería Informática)</a>
+* <a href="https://www.ull.es/masteres/ingenieria-informatica/" target="_blank">Horarios, Exámenes, Guías Docentes, Prácticas Externas, Becas y Ayudas.</a>
+* <a href="https://docs.google.com/spreadsheets/d/1AdPtWJnX5aR4p6Op_DcB1VfW3Eo35rUawG40TIROLzw/edit#gid=850748816" target="_blank">Google Spreadsheet con las Asignaturas de FullStack</a>
+* <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios 19/20</a>

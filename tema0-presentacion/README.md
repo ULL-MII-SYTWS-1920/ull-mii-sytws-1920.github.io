@@ -1,8 +1,8 @@
-# Tema 0:Introducción a la Asignatura Desarrollo y Mantenimiento de Sistemas de Información
+# Tema 0:Introducción a la Asignatura 
 
-## [Guía Docente](https://www.ull.es/apps/guias/guias/view_subject_guide/139264413/)
+## [Guía Docente](https://www.ull.es/apps/guias/guias/view_subject_guide/139264413/) Aún no elaborada
 
-## [El Grado](../degree.md)
+## [El Master](../degree.md)
 
 ## [Recursos](../resources.md)
 
