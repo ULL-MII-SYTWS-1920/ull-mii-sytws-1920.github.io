@@ -2,7 +2,7 @@
 ## [Tema 0: Presentación](tema0-presentacion)
 
 
-## [Tema 1: Introducción al Desarrollo y Mantenimiento de Sistemas de Información](tema1-introduccion/README.md)
+## [Tema 1: Introducción](tema1-introduccion/README.md)
 
 ### [Práctica de Manejo del iaas.ull.es (p1-t1-iaas)](tema1-introduccion/practicas/p1-t1-iaas/README.md)
 
