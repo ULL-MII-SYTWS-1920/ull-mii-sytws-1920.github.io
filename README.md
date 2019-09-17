@@ -34,7 +34,7 @@
 
 -->
 
-## [Tema 4: Modelos Emergentes de Bases de Datos: GraphQL](tema4-graphql)
+## [Tema 4: GraphQL](tema4-graphql)
 
 <!--
 
