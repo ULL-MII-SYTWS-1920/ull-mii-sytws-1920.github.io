@@ -1,6 +1,6 @@
 # Tema 0:Introducción a la Asignatura 
 
-## [Guía Docente](https://www.ull.es/apps/guias/guias/view_subject_guide/139264413/) Aún no elaborada
+## [Guías Docentes del Master](https://www.ull.es/apps/guias/guias/view_degree/670) Aún no elaboradas
 
 ## [El Master](../degree.md)
 
