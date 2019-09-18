@@ -2,7 +2,7 @@
 
 ## Campus Virtual
 
-* [SYTWS](https://campusvirtual.ull.es/1920/course/view.php?id=2XXXXXXX)
+* [SYTWS](https://campusvirtual.ull.es/1920/course/view.php?id=XXXXXXXX)
 * [Participantes](https://campusvirtual.ull.es/1920/user/index.php?page=0&perpage=20&contextid=0&id=2XXXXXXX)
 * [Calificaciones](https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=2XXXXXXX)
 * [Tareas](https://campusvirtual.ull.es/1920/mod/assign/index.php?id=2XXXXXXX)
