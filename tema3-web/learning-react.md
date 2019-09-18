@@ -1,3 +1,5 @@
+# Learning React by Eve Porcello, Alex Banks. O'Reilly 2017
+
 <ol class="detail-toc">
 
 
