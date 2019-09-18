@@ -18,7 +18,7 @@
   - [Capítulo: GraphQL](#cap%c3%adtulo-graphql)
     - [Fundamentals](#fundamentals)
     - [Tutorial written by Maira Bello: Build your own GraphQL server](#tutorial-written-by-maira-bello-build-your-own-graphql-server)
-  - [React](#react)
+  - [Learning React by Eve Porcello, Alex Banks Index](#learning-react-by-eve-porcello-alex-banks-index)
 
 
 # Tema 3. Servicios y Aplicaciones Web 
@@ -288,12 +288,17 @@ en los apuntes del profesor
 * [Summary](https://www.howtographql.com/graphql-js/9-summary/)
 
 
-## React
+## Learning React by Eve Porcello, Alex Banks Index
+
+Be sure you are authenticated in PuntoQ
 
 <ol class="detail-toc">
 
 
-<li class="toc-level-1 t-toc-level-1 js-content-uri" data-content-uri="/api/v1/book/9781491954614/chapter/preface01.html"><a href="https://learning.oreilly.com/library/view/learning-react/9781491954614/preface01.html#_preface" class="t-chapter" tabindex="33">Preface</a><ol>
+<li class="toc-level-1 t-toc-level-1 js-content-uri" data-content-uri="/api/v1/book/9781491954614/chapter/preface01.html">
+<a href="https://learning.oreilly.com/library/view/learning-react/9781491954614/preface01.html#_preface" 
+class="t-chapter" tabindex="33">Preface</a>
+<ol>
 <li class="toc-level-2 t-toc-level-2 js-content-uri" data-content-uri="/api/v1/book/9781491954614/chapter/preface01.html"><a href="https://learning.oreilly.com/library/view/learning-react/9781491954614/preface01.html#_conventions_used_in_this_book" class="t-chapter" tabindex="34">Conventions Used in This Book</a></li>
 <li class="toc-level-2 t-toc-level-2 js-content-uri" data-content-uri="/api/v1/book/9781491954614/chapter/preface01.html"><a href="https://learning.oreilly.com/library/view/learning-react/9781491954614/preface01.html#_using_code_examples" class="t-chapter" tabindex="35">Using Code Examples</a></li>
 <li class="toc-level-2 t-toc-level-2 js-content-uri" data-content-uri="/api/v1/book/9781491954614/chapter/preface01.html"><a href="https://learning.oreilly.com/library/view/learning-react/9781491954614/preface01.html#_safari_books_online" class="t-chapter" tabindex="36">O’Reilly Safari</a></li>
