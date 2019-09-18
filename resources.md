@@ -30,7 +30,7 @@
 ### Connecting GitHub Classroom with Moodle
 
 * [Use GitHub Classroom with Canvas, Google Classroom, or your own tools](https://github.blog/2019-08-13-use-github-classroom-with-your-own-tools/)
-* [Integrating with a learning management system (LMS)](https://classroom.github.com/help/connect-to-lms)
+* [Integrating GHC with a learning management system (LMS)](https://classroom.github.com/help/connect-to-lms)
 * [Configuring GitHub Classroom in Moodle](https://classroom.github.com/help/setup-moodle)
 
 ## BULL
