@@ -1,7 +1,9 @@
-<!-- TOC -->autoauto- [Tema 3. Servicios y Aplicaciones Web](#tema-3-servicios-y-aplicaciones-web)auto    - [Capítulo: WebSockets](#capítulo-websockets)auto        - [Prácticas](#prácticas)auto    - [Capítulo: Web Workers](#capítulo-web-workers)auto    - [Capítulo: REST](#capítulo-rest)auto        - [Prácticas](#prácticas-1)auto    - [Capítulo: Google APIs](#capítulo-google-apis)auto    - [Capítulo: Clientes para APIS REST](#capítulo-clientes-para-apis-rest)auto    - [Capítulo: Limitaciones de REST. GraphQL](#capítulo-limitaciones-de-rest-graphql)auto    - [Capítulo: Authentication](#capítulo-authentication)auto        - [Prácticas](#prácticas-2)auto    - [Capítulo: Web Scrapping](#capítulo-web-scrapping)auto        - [Prácticas](#prácticas-3)auto    - [Capítulo: Bases de Datos No Relacionales: MongoDB](#capítulo-bases-de-datos-no-relacionales-mongodb)auto    - [Capítulo: GraphQL](#capítulo-graphql)auto        - [Fundamentals](#fundamentals)auto        - [Tutorial written by Maira Bello: Build your own GraphQL server](#tutorial-written-by-maira-bello-build-your-own-graphql-server)autoauto<!-- /TOC -->
+<!-- TOC -->autoauto- [Tema 3. Servicios y Aplicaciones Web](#tema-3-servicios-y-aplicaciones-web)auto    - [Capítulo: WebSockets](#capítulo-websockets)auto        - [Prácticas](#prácticas)auto    - [Capítulo: Web Workers](#capítulo-web-workers)auto    - [Capítulo: <!-- TOC -->autoauto1. [Tema 3. Servicios y Aplicaciones Web](#tema-3-servicios-y-aplicaciones-web)auto    1. [Capítulo: WebSockets](#capítulo-websockets)auto        1. [Prácticas](#prácticas)auto    2. [Capítulo: Web Workers](#capítulo-web-workers)auto    3. [Capítulo: REST](#capítulo-rest)auto        1. [Prácticas](#prácticas-1)auto    4. [Capítulo: Google APIs](#capítulo-google-apis)auto    5. [Capítulo: Clientes para APIS REST](#capítulo-clientes-para-apis-rest)auto    6. [Capítulo: Limitaciones de REST. GraphQL](#capítulo-limitaciones-de-rest-graphql)auto    7. [Capítulo: Authentication](#capítulo-authentication)auto        1. [Prácticas](#prácticas-2)auto    8. [Capítulo: Web Scrapping](#capítulo-web-scrapping)auto        1. [Prácticas](#prácticas-3)auto    9. [Capítulo: Bases de Datos No Relacionales: MongoDB](#capítulo-bases-de-datos-no-relacionales-mongodb)auto    10. [Capítulo: GraphQL](#capítulo-graphql)auto        1. [Fundamentals](#fundamentals)auto        2. [Tutorial written by Maira Bello: Build your own GraphQL server](#tutorial-written-by-maira-bello-build-your-own-graphql-server)autoauto<!-- /TOC -->REST](#capítulo-rest)auto        - [Prácticas](#prácticas-1)auto    - [Capítulo: Google APIs](#capítulo-google-apis)auto    - [Capítulo: Clientes para APIS REST](#capítulo-clientes-para-apis-rest)auto    - [Capítulo: Limitaciones de REST. GraphQL](#capítulo-limitaciones-de-rest-graphql)auto    - [Capítulo: Authentication](#capítulo-authentication)auto        - [Prácticas](#prácticas-2)auto    - [Capítulo: Web Scrapping](#capítulo-web-scrapping)auto        - [Prácticas](#prácticas-3)auto    - [Capítulo: Bases de Datos No Relacionales: MongoDB](#capítulo-bases-de-datos-no-relacionales-mongodb)auto    - [Capítulo: GraphQL](#capítulo-graphql)auto        - [Fundamentals](#fundamentals)auto        - [Tutorial written by Maira Bello: Build your own GraphQL server](#tutorial-written-by-maira-bello-build-your-own-graphql-server)autoauto<!-- /TOC -->
 
+<a id="markdown-tema-3-servicios-y-aplicaciones-web" name="tema-3-servicios-y-aplicaciones-web"></a>
 # Tema 3. Servicios y Aplicaciones Web 
 
+<a id="markdown-capítulo-websockets" name="capítulo-websockets"></a>
 ## Capítulo: WebSockets
 
 * [Socket.io Guide: a chat](https://socket.io/get-started/chat/)
@@ -29,15 +31,18 @@
 
 * [Socket.IO Real-time Web Application Development By: Rohit Rai](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781782160786) book at PuntoQ ULL
 
+<a id="markdown-prácticas" name="prácticas"></a>
 ### Prácticas
 
 * [Descripción de la práctica p5-t3-websockets](practicas/p5-t3-websockets)
 
 
+<a id="markdown-capítulo-web-workers" name="capítulo-web-workers"></a>
 ## Capítulo: Web Workers
 
 1. [Book Web Workers: Safari O'Reilly. Usa Acceso ULL](http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter)
 
+<a id="markdown-capítulo-rest" name="capítulo-rest"></a>
 ## Capítulo: REST
 
 1. [Pro REST API Development with Node.js by Fernando Doglio. Apress 2015](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781484209172) Book PuntoQ BULL
@@ -70,12 +75,14 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
 
 * [REST API con Express, Mongodb y Async/Await](https://www.youtube.com/watch?v=0XgRqjAAsaU&list=PLL0TiOXBeDajy0GJ47Ce9dU_iYxddpR4o) 6 vídeos por Fatz
 
+<a id="markdown-prácticas-1" name="prácticas-1"></a>
 ### Prácticas
 
 * [Descripción de la práctica p10-t3-commanding-databases](practicas/p10-t3-commanding-databases)
 * [Práctica: developing RESTful Web Services (p11-t3-restful)](practicas/p11-t3-restful)
 
 
+<a id="markdown-capítulo-google-apis" name="capítulo-google-apis"></a>
 ## Capítulo: Google APIs
 
 2. [googlemaps/google-maps-services-js](https://github.com/googlemaps/google-maps-services-js) GitHub
@@ -85,6 +92,7 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
    3. [Google APIs Client Library for JavaScript](https://github.com/google/google-api-javascript-client)
    4. [Google API Client Libraries JavaScript. Tutorial](https://developers.google.com/api-client-library/javascript/start/start-js)
 
+<a id="markdown-capítulo-clientes-para-apis-rest" name="capítulo-clientes-para-apis-rest"></a>
 ## Capítulo: Clientes para APIS REST
 
 4. Postman
@@ -93,6 +101,7 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
 5. Curl
    1. [curl.md](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58) gist
 
+<a id="markdown-capítulo-limitaciones-de-rest-graphql" name="capítulo-limitaciones-de-rest-graphql"></a>
 ## Capítulo: Limitaciones de REST. GraphQL
 
 * [React Quickly: Painless web apps with React, JSX, Redux, and GraphQL by Azat Mardan. Manning. 2017](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/programming/javascript/9781617293344/about-this-book/kindle_split_009_html)
@@ -104,6 +113,7 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
 * [Learning GraphQL and Relay by Samer Buna. Pack. 2016](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781786465757) PuntoQ BULL Safari
 * [Visual Design of GraphQL Data. Frisendal. APress. 2018](https://link-springer-com.accedys2.bbtk.ull.es/content/pdf/10.1007%2F978-1-4842-3904-9.pdf)
 
+<a id="markdown-capítulo-authentication" name="capítulo-authentication"></a>
 ## Capítulo: Authentication
 
 **Sessions y Authentication**
@@ -162,6 +172,7 @@ en los apuntes del profesor
     This will allow you to test your facebook plugins locally.
 * StackOverflow: [Facebook Site URL?](http://stackoverflow.com/questions/8107911/facebook-site-url)
 
+<a id="markdown-prácticas-2" name="prácticas-2"></a>
 ### Prácticas
 
 * [Práctica: Cookies, Sesiones, Autenticación y Módulos npm (p8-t3-sessions-and-modules)](practicas/p8-t3-sessions-and-modules)
@@ -173,6 +184,7 @@ en los apuntes del profesor
 * [Build a Node.js App with Express + EJS + Stylus by Robin Skafte](https://scotch.io/@robinskafte/build-a-nodejs-app-with-express-ejs-stylus)
 -->
 
+<a id="markdown-capítulo-web-scrapping" name="capítulo-web-scrapping"></a>
 ## Capítulo: Web Scrapping
 
 > **Crawling** refers to the act of going through multiple sites. **Web scrapping** refers to going after content from a website. Scrapping refers to the act of getting the content from the site. See [Stackoverflow](https://stackoverflow.com/questions/4327392/what-is-the-difference-between-web-crawling-and-web-scraping)
@@ -184,10 +196,12 @@ en los apuntes del profesor
   * [ankitjain28may/scraping-using-node](https://github.com/ankitjain28may/scraping-using-node)
 * [How can I scrape sites that require authentication using node.js?](https://stackoverflow.com/questions/8726079/how-can-i-scrape-sites-that-require-authentication-using-node-js) Stackoverflow
 
+<a id="markdown-prácticas-3" name="prácticas-3"></a>
 ### Prácticas
 
 * [Práctica Transforming Data and Testing Continuously (p9-t3-transfoming-data)](practicas/p9-t3-transforming-data/)
 
+<a id="markdown-capítulo-bases-de-datos-no-relacionales-mongodb" name="capítulo-bases-de-datos-no-relacionales-mongodb"></a>
 ## Capítulo: Bases de Datos No Relacionales: MongoDB
 
 **Apuntes del profesor para Mongo**
@@ -243,8 +257,10 @@ en los apuntes del profesor
 * [Repo ULL-ESIT-MII-CA-1718/w3schools-mongodb](https://github.com/ULL-ESIT-MII-CA-1718/w3schools-mongodb)
 * [Mongodb NodeJS API documentation](https://mongodb.github.io/node-mongodb-native/contents.html)
 
+<a id="markdown-capítulo-graphql" name="capítulo-graphql"></a>
 ## Capítulo: GraphQL
 
+<a id="markdown-fundamentals" name="fundamentals"></a>
 ###  Fundamentals
 
 * [Basics Tutorial - Introduction](https://www.howtographql.com/basics/0-introduction/)
@@ -252,6 +268,7 @@ en los apuntes del profesor
 * [Core Concpets](https://www.howtographql.com/basics/2-core-concepts/)
 * [Big Picture (Architecture)](https://www.howtographql.com/basics/3-big-picture/)
 
+<a id="markdown-tutorial-written-by-maira-bello-build-your-own-graphql-server" name="tutorial-written-by-maira-bello-build-your-own-graphql-server"></a>
 ### Tutorial written by Maira Bello: Build your own GraphQL server
 
 * Maira Bello tutorial: <https://www.howtographql.com/graphql-js/1-getting-started/>
