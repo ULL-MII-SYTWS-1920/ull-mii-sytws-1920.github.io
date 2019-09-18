@@ -19,6 +19,7 @@
     - [Fundamentals](#fundamentals)
     - [Tutorial written by Maira Bello: Build your own GraphQL server](#tutorial-written-by-maira-bello-build-your-own-graphql-server)
   - [React](#react)
+  - [Electron](#electron)
 
 
 # Tema 3. Servicios y Aplicaciones Web 
@@ -292,6 +293,6 @@ en los apuntes del profesor
 
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
 
-## Desktop Apss Using Web Technologias
+## Electron
 
 * [Electron](electron.md)
