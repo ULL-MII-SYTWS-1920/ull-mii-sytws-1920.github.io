@@ -28,7 +28,7 @@
   - [Community](https://github.com/sindresorhus/awesome-electron/blob/master/readme.md#community)
   - [Tips](https://github.com/sindresorhus/awesome-electron/blob/master/readme.md#tips)
 
-  La app [mojibar](https://github.com/muan/mojibar) puede que sea un buen ejemplo de como hacer una manubar app
+  La app [mojibar](https://github.com/muan/mojibar) puede que sea un buen ejemplo de como hacer una menubar app
 
 ## Gopinav Codevolution Tutorials
 
