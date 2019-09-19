@@ -17,7 +17,7 @@
 
 ## Capítulo: [Web Scrapping](web-scrapping)
 
-## Capítulo: [Bases de Datos No Relacionales: MongoDB](mongodb)
+## Capítulo: [Bases de Datos No Relacionales](mongodb)
 
 ## Capítulo: [GraphQL](graphql)
 
