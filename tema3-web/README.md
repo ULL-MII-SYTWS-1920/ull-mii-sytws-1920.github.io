@@ -1,12 +1,12 @@
 # Tema 3. Servicios y Aplicaciones Web 
 
-## Capítulo: [WebSockets](websockets.md)
+## [WebSockets](websockets.md)
 
-## Capítulo: [Web Workers](web-workers)
+## [Web Workers](web-workers)
 
-## Capítulo: [REST](rest.md)
+## [REST](rest.md)
 
-## Capítulo: [Authentication](authentication.md)
+## [Authentication](authentication.md)
 
 <!--
 **Stylus**
@@ -15,12 +15,12 @@
 * [Build a Node.js App with Express + EJS + Stylus by Robin Skafte](https://scotch.io/@robinskafte/build-a-nodejs-app-with-express-ejs-stylus)
 -->
 
-## Capítulo: [Web Scrapping](web-scrapping)
+## [Web Scrapping](web-scrapping)
 
-## Capítulo: [Bases de Datos No Relacionales](mongodb)
+## [Bases de Datos No Relacionales](mongodb)
 
-## Capítulo: [GraphQL](graphql)
+## [GraphQL](graphql)
 
-## Capítulo: [React](react) 
+## [React](react) 
 
-## Capítulo: [Desktop Apps using Web Technologies: Electron](electron)
+## [Desktop Apps using Web Technologies: Electron](electron)
