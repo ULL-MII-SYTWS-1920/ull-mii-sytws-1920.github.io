@@ -6,7 +6,7 @@
 
 1. [Book Web Workers: Safari O'Reilly. Usa Acceso ULL](http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter)
 
-## [Capítulo: REST](rest.md)
+## Capítulo: [REST](rest.md)
 
 ## [Capítulo: Authentication](authentication.md)
 
