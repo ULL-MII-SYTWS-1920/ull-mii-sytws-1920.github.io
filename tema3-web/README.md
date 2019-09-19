@@ -23,4 +23,4 @@
 
 ## [React](react) 
 
-## [Desktop Apps using Web Technologies: Electron](electron)
+## [Desktop Apps using Web Technologies](electron)
