@@ -7,7 +7,6 @@
   - [Capítulo: REST](#cap%c3%adtulo-rest)
   - [Capítulo: Authentication](#cap%c3%adtulo-authentication)
   - [Capítulo: Web Scrapping](#cap%c3%adtulo-web-scrapping)
-    - [Prácticas](#pr%c3%a1cticas)
   - [Capítulo: Bases de Datos No Relacionales: MongoDB](#cap%c3%adtulo-bases-de-datos-no-relacionales-mongodb)
   - [Capítulo: GraphQL](#cap%c3%adtulo-graphql)
   - [React](#react)
@@ -34,11 +33,6 @@
 -->
 
 ## Capítulo: [Web Scrapping](web-scrapping)
-
-
-### Prácticas
-
-* [Práctica Transforming Data and Testing Continuously (p9-t3-transfoming-data)](practicas/p9-t3-transforming-data/)
 
 ## [Capítulo: Bases de Datos No Relacionales: MongoDB](mongodb)
 
