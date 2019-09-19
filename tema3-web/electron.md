@@ -1,4 +1,4 @@
-# Electron  {#primer-apartado-de-este-cap-tulo}
+# Desktop Apps using Web Technologies: Electron 
 
 ## Introduction/Quick Start
 
