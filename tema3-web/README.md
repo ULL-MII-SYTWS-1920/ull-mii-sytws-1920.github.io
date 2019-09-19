@@ -2,13 +2,11 @@
 
 ## Capítulo: [WebSockets](websockets.md)
 
-## Capítulo: Web Workers
-
-1. [Book Web Workers: Safari O'Reilly. Usa Acceso ULL](http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter)
+## Capítulo: [Web Workers](web-workers)
 
 ## Capítulo: [REST](rest.md)
 
-## [Capítulo: Authentication](authentication.md)
+## Capítulo: [Authentication](authentication.md)
 
 <!--
 **Stylus**
@@ -19,14 +17,10 @@
 
 ## Capítulo: [Web Scrapping](web-scrapping)
 
-## [Capítulo: Bases de Datos No Relacionales: MongoDB](mongodb)
+## Capítulo: [Bases de Datos No Relacionales: MongoDB](mongodb)
 
 ## Capítulo: [GraphQL](graphql)
 
-## Capítulo: React 
+## Capítulo: [React](react) 
 
-* Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
-
-## Capítulo: Desktop Apps using Web Technologies: Electron
-
-* [Electron](electron.md)
+## Capítulo: [Desktop Apps using Web Technologies: Electron](electron)
