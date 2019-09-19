@@ -40,6 +40,15 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
    1. [curl.md](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58) gist
 
 
+## Capítulo: Google APIs
+
+2. [googlemaps/google-maps-services-js](https://github.com/googlemaps/google-maps-services-js) GitHub
+5. [Google Calendar API](https://developers.google.com/google-apps/calendar/)
+   1.  [Repo de ejemplo de uso en NodeJS de la API de Calendar](https://github.com/ULL-ESIT-MII-CA-1718/nodejs-google-calendar-example)
+   2. Tutorial [Building a Google Calendar Booking App with MongoDB, ExpressJS, AngularJS, and Node.js ](https://github.com/ULL-ESIT-MII-CA-1718/googlecalendarapidemo)
+   3. [Google APIs Client Library for JavaScript](https://github.com/google/google-api-javascript-client)
+   4. [Google API Client Libraries JavaScript. Tutorial](https://developers.google.com/api-client-library/javascript/start/start-js)
+
 ### Prácticas
 
 * [Descripción de la práctica p10-t3-commanding-databases](practicas/p10-t3-commanding-databases)
