@@ -6,6 +6,13 @@
 * [Philip Roberts: ¿Que diablos es el "event loop" (bucle de eventos) de todos modos? | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 * [loupe](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D) a tool n the cloud to see the event loop working
 
+### Handling Events
+
+* [Chapter 14: Handling Events](http://eloquentjavascript.net/14_event.html)
+* [How to Create Custom Events in JavaScript](https://www.sitepoint.com/javascript-custom-events/)
+* [Repo ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events con ejemplos y ejercicios](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events)
+* [JavaScript and CSS: Coordinates](https://javascript.info/coordinates)
+
 ### Promesas, Async/Await
 
 * [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
