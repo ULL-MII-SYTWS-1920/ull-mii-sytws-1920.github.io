@@ -8,4 +8,4 @@
 
 ## Capítulo: [RPC](rpc)
 
-## [Módulos en ECMA5](modulos-ecma5)
+## Capítulo: [Módulos en ECMA5](modulos-ecma5)
