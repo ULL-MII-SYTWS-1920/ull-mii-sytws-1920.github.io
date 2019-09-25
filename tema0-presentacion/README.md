@@ -18,4 +18,6 @@
 
 1. [Práctica pb-gh-campus-expert](practicas/pb-gh-campus-expert) Práctica Bono Opcional
 
+### Ejercicios
 
+* [Preguntas sobre Asincronía](preguntas-async.html)
