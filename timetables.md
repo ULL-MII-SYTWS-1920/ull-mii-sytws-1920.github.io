@@ -21,7 +21,7 @@ Nos comunican que las clases comenzarán el Lunes 30/09/2019.
  
 * [Calendario Google de SYTWS](https://calendar.google.com/calendar/b/1?cid=dWxsLmVkdS5lc19oM2FiN3AzcmxmYW1qY25zbmhsdDZ1aGI0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
 
-* <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios 19/20</a>
+* <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios completos del curso 19/20 del Master de II</a>
 
 * <a href="https://docs.google.com/spreadsheets/d/1ZTGvLA70qCYEsBwcA8dCiUZby3ZOM9oHt8kmiNNKId0/edit#gid=0" target="_blank">Horarios de tutorías del Departamento de Ingeniería Informática</a>
 
