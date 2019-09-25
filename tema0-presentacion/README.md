@@ -10,6 +10,8 @@
 
 ## [Ficha de la Asignatura](TWBE.html) (Borrador)
 
+## [Plan de Estudios](Plan_Estudios.html) (Borrador)
+
 ## [Referencias](../references.md)
 
 ### Prácticas
