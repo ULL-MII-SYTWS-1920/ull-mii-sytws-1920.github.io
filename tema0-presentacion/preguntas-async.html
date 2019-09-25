@@ -1,40 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>Moodle Quiz XHTML Export</title>
-<style type="text/css">
-body {
-     font-family: verdana, helvetica, sans-serif;
-     background-color: #fff;
-     color: #000;
- }
- 
- .question {
-     border: 1px solid #ddd;
-     margin: 5px;
-     padding: 3px;
- }
- 
- .question h3 {
-     font-weight: normal;
-     font-size: 125%;
- }
- 
- .question ul {
-     list-style-type: none;
- }
-</style>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Moodle Quiz XHTML Export</title>
+    <style type="text/css">
+        body {
+            font-family: verdana, helvetica, sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .question {
+            border: 1px solid #ddd;
+            margin: 5px;
+            padding: 3px;
+        }
+        
+        .question h3 {
+            font-weight: normal;
+            font-size: 125%;
+        }
+        
+        .question ul {
+            list-style-type: none;
+        }
+    </style>
 </head>
+
 <body>
-<form action="...REPLACE ME..." method="post">
+    <form action="...REPLACE ME..." method="post">
 
 
-<!-- question: 754960  name: call stack -->
-<div class="question">
-<h3>call stack</h3>
-<p class="questiontext"><pre><code class="js">function doMath(x,y){
+        <!-- question: 754960  name: call stack -->
+        <div class="question">
+            <h3>call stack</h3>
+            <p class="questiontext"><pre><code class="js">function doMath(x,y){
     return square(x) - square(y);
 }
 
@@ -52,82 +54,68 @@ doMath();
 doMath();
 </code></pre>
 
-<p>Which functions will be on the call stack when the call stack is logged inside the square() function for the first time?
-Functions are listed from left to right in order of call stack height</p>
-</p>
-<ul class="multichoice">
-  <li><input name="quest_754960" type="radio" value="doMath,square,multiply" />doMath,square,multiply</li>
-  <li><input name="quest_754960" type="radio" value="doMath,square" />doMath,square</li>
-  <li><input name="quest_754960" type="radio" value="square,doMath" />square,doMath</li>
-  <li><input name="quest_754960" type="radio" value="doMath,doMath,square" />doMath,doMath,square</li>
-</ul>
-</div>
+                <p>Which functions will be on the call stack when the call stack is logged inside the square() function for the first time? Functions are listed from left to right in order of call stack height</p>
+            </p>
+            <ul class="multichoice">
+                <li><input name="quest_754960" type="radio" value="doMath,square,multiply" />doMath,square,multiply</li>
+                <li><input name="quest_754960" type="radio" value="doMath,square" />doMath,square</li>
+                <li><input name="quest_754960" type="radio" value="square,doMath" />square,doMath</li>
+                <li><input name="quest_754960" type="radio" value="doMath,doMath,square" />doMath,doMath,square</li>
+            </ul>
+        </div>
 
 
 
-<!-- question: 754961  name: event queue and call stack -->
-<div class="question">
-<h3>event queue and call stack</h3>
-<p class="questiontext"><p>There are currently several functions on the call stack that are in the process of running.</p>
+        <!-- question: 754961  name: event queue and call stack -->
+        <div class="question">
+            <h3>event queue and call stack</h3>
+            <p class="questiontext">
+                <p>There are currently several functions on the call stack that are in the process of running.</p>
 
-<p>The event queue is empty.</p>
+                <p>The event queue is empty.</p>
 
-<p>A <code>mouseclick</code> event occurs and puts a new task onto the event queue.</p>
+                <p>A <code>mouseclick</code> event occurs and puts a new task onto the event queue.</p>
 
-<p>What happens next?</p>
-</p>
-<ul class="multichoice">
-  <li><input name="quest_754961" type="radio" value="The mouseclick task occurs first because it is asynchronous and then the functions on the call stack resume running" />The mouseclick task occurs first because it is asynchronous and then the functions on the call stack resume running</li>
-  <li><input name="quest_754961" type="radio" value="The call stack finishes running and then the mouse click task gets put on the call stack to run" />The call stack finishes running and then the mouse click task gets put on the call stack to run</li>
-  <li><input name="quest_754961" type="radio" value="Both the mouseclick task and the call stack functions run at the same time" />Both the mouseclick task and the call stack functions run at the same time</li>
-  <li><input name="quest_754961" type="radio" value="The mouseclick never occurs because the event happened while the call stack was not empty" />The mouseclick never occurs because the event happened while the call stack was not empty</li>
-</ul>
-</div>
-
-
-
-<!-- question: 754968  name: Re-resolve a promise? -->
-<div class="question">
-<h3>Re-resolve a promise?</h3>
-<p class="questiontext"><p>What’s the output of the code below?</p>
-
-<pre><code>let promise = new Promise(function(resolve, reject) {
-  resolve(1);
-
-  setTimeout(() =&gt; resolve(2), 1000);
-});
-
-promise.then(alert);
-</code></pre>
-</p>
-<ul class="multichoice">
-  <li><input name="quest_754968" type="radio" value="1" />1</li>
-  <li><input name="quest_754968" type="radio" value="2" />2</li>
-</ul>
-</div>
+                <p>What happens next?</p>
+            </p>
+            <ul class="multichoice">
+                <li><input name="quest_754961" type="radio" value="The mouseclick task occurs first because it is asynchronous and then the functions on the call stack resume running" />The mouseclick task occurs first because it is asynchronous and then
+                    the functions on the call stack resume running</li>
+                <li><input name="quest_754961" type="radio" value="The call stack finishes running and then the mouse click task gets put on the call stack to run" />The call stack finishes running and then the mouse click task gets put on the call stack
+                    to run</li>
+                <li><input name="quest_754961" type="radio" value="Both the mouseclick task and the call stack functions run at the same time" />Both the mouseclick task and the call stack functions run at the same time</li>
+                <li><input name="quest_754961" type="radio" value="The mouseclick never occurs because the event happened while the call stack was not empty" />The mouseclick never occurs because the event happened while the call stack was not empty</li>
+            </ul>
+        </div>
 
 
 
-<!-- question: 435152  name: let-loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } (copia) -->
-<div class="question">
-<h3>let-loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } (copia)</h3>
-<p class="questiontext"><p>¿Cual es la salida?</p>
 
-<pre><code>for(let i=0;i&lt;=3; i++) {
+        <!-- question: 435152  name: let-loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } (copia) -->
+        <div class="question">
+            <h3>let-loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } (copia)</h3>
+            <p class="questiontext">
+                <p>¿Cual es la salida?</p>
+
+                <pre><code>for(let i=0;i&lt;=3; i++) {
     setTimeout(()=&gt; console.log(i), 0)
 }
 </code></pre>
-</p>
-<ul class="shortanswer"><li><label class="accesshide" for="quest_435152">Respuesta</label><input id="quest_435152" name="quest_435152" type="text" /></li></ul></div>
+            </p>
+            <ul class="shortanswer">
+                <li><label class="accesshide" for="quest_435152">Respuesta</label><input id="quest_435152" name="quest_435152" type="text" /></li>
+            </ul>
+        </div>
 
 
 
-<!-- question: 435151  name: loop-blocking-timeout.js -->
-<div class="question">
-<h3>loop-blocking-timeout.js</h3>
-<p class="questiontext"><p>¿Cual es la salida?</p>
+        <!-- question: 435151  name: loop-blocking-timeout.js -->
+        <div class="question">
+            <h3>loop-blocking-timeout.js</h3>
+            <p class="questiontext">
+                <p>¿Cual es la salida?</p>
 
-<pre><code>let start = new Date;
+                <pre><code>let start = new Date;
 setTimeout(() =&gt; {
     var end = new Date;
     console.log("Elapsed time: "+(end - start));
@@ -135,28 +123,36 @@ setTimeout(() =&gt; {
   500);
 while (new Date - start &lt; 1000) {}
 </code></pre>
-</p>
-<ul class="shortanswer"><li><label class="accesshide" for="quest_435151">Respuesta</label><input id="quest_435151" name="quest_435151" type="text" /></li></ul></div>
+            </p>
+            <ul class="shortanswer">
+                <li><label class="accesshide" for="quest_435151">Respuesta</label><input id="quest_435151" name="quest_435151" type="text" /></li>
+            </ul>
+        </div>
 
 
 
-<!-- question: 435153  name: loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } -->
-<div class="question">
-<h3>loop-with-timeout.jsfor(var i=0;i console.log(i), 0) }</h3>
-<p class="questiontext"><p>¿Cual es la salida?</p>
+        <!-- question: 435153  name: loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } -->
+        <div class="question">
+            <h3>loop-with-timeout.jsfor(var i=0;i console.log(i), 0) }</h3>
+            <p class="questiontext">
+                <p>¿Cual es la salida?</p>
 
-<pre><code>for(var i=0;i&lt;=3; i++) {
+                <pre><code>for(var i=0;i&lt;=3; i++) {
     setTimeout(()=&gt; console.log(i), 0)
 }
 </code></pre>
-</p>
-<ul class="shortanswer"><li><label class="accesshide" for="quest_435153">Respuesta</label><input id="quest_435153" name="quest_435153" type="text" /></li></ul></div>
+            </p>
+            <ul class="shortanswer">
+                <li><label class="accesshide" for="quest_435153">Respuesta</label><input id="quest_435153" name="quest_435153" type="text" /></li>
+            </ul>
+        </div>
 
 
 
-<p class="submit">
-  <input type="submit" />
-</p>
-</form>
+        <p class="submit">
+            <input type="submit" />
+        </p>
+    </form>
 </body>
+
 </html>
