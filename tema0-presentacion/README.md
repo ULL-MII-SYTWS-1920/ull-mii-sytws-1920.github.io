@@ -10,7 +10,7 @@
 
 ## [Ficha de la Asignatura](TWBE.html) (Borrador)
 
-## [Plan de Estudiosi del Modifica 2019](Plan_Estudios.html) (Borrador)
+## [Plan de Estudios (Modifica 2019)](Plan_Estudios.html) (Borrador)
 
 ## [Referencias](../references.md)
 
