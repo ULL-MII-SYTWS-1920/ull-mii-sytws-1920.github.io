@@ -42,6 +42,13 @@ Nos comunican que las clases comenzarán el Lunes 30/09/2019.
 
 ## Cierre de actas 
 
+* Viernes 14 de Febrero 2020
+* Viernes 27 de Marzo 2020
+* Jueves 25 de Junio 2020
+* Miércoles 22 de Julio 2020
+* Jueves 25 de Septiembre 2020
+
+
 ## Sobre las Calificaciones de Prácticas 
 
 En una primera publicación de calificaciones aparecerá una lista con los alumnos que tienen las prácticas **APTAS** o **NO APTAS**.
