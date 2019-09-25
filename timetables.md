@@ -19,7 +19,7 @@ El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos
 
 Nos comunican que las clases comenzarán el Lunes 30/09/2019.
  
-* [Calendario Google de SYTWS](https://calendar.google.com/calendar/b/1?cid=dWxsLmVkdS5lc19oM2FiN3AzcmxmYW1qY25zbmhsdDZ1aGI0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t)
+* [Calendario Google de SYTWS](https://calendar.google.com/calendar/b/1?cid=dWxsLmVkdS5lc19oM2FiN3AzcmxmYW1qY25zbmhsdDZ1aGI0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t) (Por si lo quieres añadir a tu Google Calendar)
 
 * <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios completos del curso 19/20 del Master de II</a>
 
