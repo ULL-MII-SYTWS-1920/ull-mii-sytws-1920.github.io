@@ -71,32 +71,6 @@ doMath();
         </div>
 
 
-
-        <!-- question: 754961  name: event queue and call stack -->
-        <div class="question">
-            <h3>event queue and call stack</h3>
-            <p class="questiontext">
-                <p>There are currently several functions on the call stack that are in the process of running.</p>
-
-                <p>The event queue is empty.</p>
-
-                <p>A <code>mouseclick</code> event occurs and puts a new task onto the event queue.</p>
-
-                <p>What happens next?</p>
-            </p>
-            <ul class="multichoice">
-                <li><input name="quest_754961" type="radio" value="The mouseclick task occurs first because it is asynchronous and then the functions on the call stack resume running" />The mouseclick task occurs first because it is asynchronous and then
-                    the functions on the call stack resume running</li>
-                <li><input name="quest_754961" type="radio" value="The call stack finishes running and then the mouse click task gets put on the call stack to run" />The call stack finishes running and then the mouse click task gets put on the call stack
-                    to run</li>
-                <li><input name="quest_754961" type="radio" value="Both the mouseclick task and the call stack functions run at the same time" />Both the mouseclick task and the call stack functions run at the same time</li>
-                <li><input name="quest_754961" type="radio" value="The mouseclick never occurs because the event happened while the call stack was not empty" />The mouseclick never occurs because the event happened while the call stack was not empty</li>
-            </ul>
-        </div>
-
-
-
-
         <!-- question: 435152  name: let-loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } (copia) -->
         <div class="question">
             <h3>let-loop-with-timeout.jsfor(var i=0;i console.log(i), 0) } (copia)</h3>
@@ -158,6 +132,32 @@ while (new Date - start &lt; 1000) {}
         <p class="submit">
             <input type="submit" />
         </p>
+
+
+        <!-- question: 754961  name: event queue and call stack -->
+        <div class="question">
+            <h3>event queue and call stack</h3>
+            <p class="questiontext">
+                <p>There are currently several functions on the call stack that are in the process of running.</p>
+
+                <p>The event queue is empty.</p>
+
+                <p>A <code>mouseclick</code> event occurs and puts a new task onto the event queue.</p>
+
+                <p>What happens next?</p>
+            </p>
+            <ul class="multichoice">
+                <li><input name="quest_754961" type="radio" value="The mouseclick task occurs first because it is asynchronous and then the functions on the call stack resume running" />The mouseclick task occurs first because it is asynchronous and then
+                    the functions on the call stack resume running</li>
+                <li><input name="quest_754961" type="radio" value="The call stack finishes running and then the mouse click task gets put on the call stack to run" />The call stack finishes running and then the mouse click task gets put on the call stack
+                    to run</li>
+                <li><input name="quest_754961" type="radio" value="Both the mouseclick task and the call stack functions run at the same time" />Both the mouseclick task and the call stack functions run at the same time</li>
+                <li><input name="quest_754961" type="radio" value="The mouseclick never occurs because the event happened while the call stack was not empty" />The mouseclick never occurs because the event happened while the call stack was not empty</li>
+            </ul>
+        </div>
+
+
+
     </form>
 </body>
 
