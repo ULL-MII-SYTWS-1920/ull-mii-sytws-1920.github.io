@@ -8,7 +8,7 @@
 * [Core Concpets](https://www.howtographql.com/basics/2-core-concepts/)
 * [Big Picture (Architecture)](https://www.howtographql.com/basics/3-big-picture/)
 
-### Advanced Tutorial
+### Advanced Tutorial (Skip the first time and come back again after the next tutorials)
 
 * [Advanced Tutorial - Clients](https://www.howtographql.com/advanced/0-clients/)
 * [Server](https://www.howtographql.com/advanced/1-server/)
@@ -48,6 +48,7 @@
 * [Summary](https://www.howtographql.com/react-apollo/10-summary/)
 
 * [The GitHub repository `howtographql/react-apollo` contains the final project for the "REACT + APOLLO TUTORIAL" on "How to GraphQL"](https://github.com/howtographql/react-apollo)
+* [Hacker News](https://news.ycombinator.com/)
 
 ## REFERENCIAS
 
