@@ -31,7 +31,7 @@
 * [Filtering, Pagination & Sorting](https://www.howtographql.com/graphql-js/8-filtering-pagination-and-sorting/)
 * [Summary](https://www.howtographql.com/graphql-js/9-summary/)
 
-* [The GitHub repository howtographql/graphql-js contains the final project for the "GraphQL.js tutorial" on "How to GraphQL". Note that it also serves as foundation for all frontend tutorials on the site. ](https://github.com/howtographql/graphql-js)
+* [The GitHub repository howtographql/graphql-js contains the final project for the "GraphQL.js tutorial" on "How to GraphQL". Note that it also serves as foundation for all frontend tutorials on the "How to GraphQL" site. ](https://github.com/howtographql/graphql-js)
 
 ## REFERENCIAS
 
