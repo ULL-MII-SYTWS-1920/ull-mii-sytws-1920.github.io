@@ -47,6 +47,7 @@
 * [Pagination](https://www.howtographql.com/react-apollo/9-pagination/)
 * [Summary](https://www.howtographql.com/react-apollo/10-summary/)
 
+* [The GitHub repository `howtographql/react-apollo` contains the final project for the "REACT + APOLLO TUTORIAL" on "How to GraphQL"](https://github.com/howtographql/react-apollo)
 
 ## REFERENCIAS
 
