@@ -1,5 +1,5 @@
 
-## Capítulo: GraphQL
+## How to GraphQL
 
 ###  GRAPHQL FUNDAMENTALS
 
