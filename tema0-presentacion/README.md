@@ -6,6 +6,7 @@
 
 * [Tabla del Master](masterii2019.html)
 * [Competencias](Competencias.html)
+* [Comparativa Master II - FullStack - Contestacion Modifica](https://docs.google.com/spreadsheets/d/12kSTXT4L2cDqxWn1KzDiuxTOlsn2tPqQU0oOjAB4Sn8/edit?ts=5d710033#gid=850748816) (Acceso restringido)
 
 ## [Recursos](../resources.md)
 
