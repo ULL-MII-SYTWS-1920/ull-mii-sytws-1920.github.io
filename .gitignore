@@ -81,6 +81,7 @@ tema3-web/practicas/p12-tfa-user-experience/eval/
 tema3-web/practicas/p11-t3-restful/README.tex
 tema3-web/practicas/p5-t3-websockets/README.tex
 tema3-web/practicas/p9-t3-transforming-data/reto.tex
+tema3-web/graphql-src
 
 
 
@@ -88,3 +89,4 @@ tema3-web/practicas/p9-t3-transforming-data/reto.tex
 tema4-graphql/learning-graphql
 
 tfa
+.vscode

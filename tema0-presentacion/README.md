@@ -4,6 +4,8 @@
 
 ## [El Master](../degree.md)
 
+* [Competencias](Competencias.html)
+
 ## [Recursos](../resources.md)
 
 ## [Calendarios, Horarios y Fechas de Exámenes](../timetables.md)
