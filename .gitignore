@@ -39,10 +39,9 @@ tema2-async/practicas/p4-t2-networking/networking-with-sockets-chapter-3
 tema2-async/practicas/p4-t2-networking/simpleChatApp
 tema2-async/practicas/p4-t2-networking/sol-nodejs-the-right-way
 
-
-
-tema3-web/web_workers
-tema3-web/websockets
+tema3-web/react-src
+tema3-web/web-workers-src
+tema3-web/websockets-src
 
 tema3-web/practicas/p5-t3-websockets/websockets
 tema3-web/practicas/p5-t3-websockets/express-start
