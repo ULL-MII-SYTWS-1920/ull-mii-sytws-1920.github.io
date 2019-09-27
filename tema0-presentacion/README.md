@@ -15,9 +15,9 @@
     * Específicas
         * SL2	Comprender, evaluar y aplicar las tecnologías, herramientas, recursos en el marco de las arquitecturas, redes, componentes, servicios y estándares en sistemas y entornos libres.
         * SL3	Comprender, diseñar, evaluar y aplicar tecnologías, herramientas, recursos, estándares en el marco del desarrollo de software y su implantación en sistemas y entornos libres.
-        * TI_2	Capacidad de comprender y saber aplicar el funcionamiento y organización de Internet, las tecnologías y protocolos de redes de nueva generación, los modelos de componentes, software intermediario y servicios					
-        * TI_3	Capacidad para asegurar, gestionar, auditar y certificar la calidad de los desarrollos, procesos, sistemas, servicios, aplicaciones y productos informáticos					
-        * TI_6	Capacidad para diseñar y evaluar sistemas operativos y servidores, y aplicaciones y sistemas basados en computación distribuida					
+        * TI_2	Capacidad de comprender y saber aplicar el funcionamiento y organización de Internet, las tecnologías y protocolos de redes de nueva generación, los modelos de componentes, software intermediario y servicios
+        * TI_3	Capacidad para asegurar, gestionar, auditar y certificar la calidad de los desarrollos, procesos, sistemas, servicios, aplicaciones y productos informáticos
+        * TI_6	Capacidad para diseñar y evaluar sistemas operativos y servidores, y aplicaciones y sistemas basados en computación distribuida
         * TI_8	Capacidad de diseñar y desarrollar sistemas, aplicaciones y servicios informáticos en sistemas empotrados y ubicuos
 * [Comparativa Master II - FullStack - Contestacion Modifica](https://docs.google.com/spreadsheets/d/12kSTXT4L2cDqxWn1KzDiuxTOlsn2tPqQU0oOjAB4Sn8/edit?ts=5d710033#gid=850748816) (Acceso restringido)
 
