@@ -52,6 +52,7 @@
 
 ## REFERENCIAS
 
+* [GraphQL Specifications](https://graphql.github.io/graphql-spec/)
 * [React Quickly: Painless web apps with React, JSX, Redux, and GraphQL by Azat Mardan. Manning. 2017](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/programming/javascript/9781617293344/about-this-book/kindle_split_009_html)
 * [Beginning GraphQL by Brian Kimokoti.  Packt 2018](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781789610543) PuntoQ BULL Safari
 * [REST with Hypermedia - Hot or Not?](https://reflectoring.io/rest-hypermedia/) blog by Tom Hombergs
