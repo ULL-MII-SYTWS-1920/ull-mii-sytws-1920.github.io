@@ -4,7 +4,7 @@
 
 ## [Tema 1: Introducción](tema1-introduccion/README.md)
 
-### [Práctica de Manejo del iaas.ull.es (p1-t1-iaas)](tema1-introduccion/practicas/p1-t1-iaas/README.md)
+### [Práctica de Manejo del iaas.ull.es (p01-t1-iaas)](tema1-introduccion/practicas/p01-t1-iaas/README.md)
 
 ### [Práctica Wrangling the File System (p2-t1-c3-file-system)](tema1-introduccion/practicas/p2-t1-c3-file-system/README.md)
 
