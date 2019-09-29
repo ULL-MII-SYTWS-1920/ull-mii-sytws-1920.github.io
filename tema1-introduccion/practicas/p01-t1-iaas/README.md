@@ -1,4 +1,4 @@
-# Descripción de la Práctica p1-t1-iaas
+# Descripción de la Práctica p01-t1-iaas
 
 * Siguiendo las instrucciones en el  [repositorio SYTW/iaas-ull-es](https://github.com/SYTW/iaas-ull-es) despliegue un ejemplo como el que aparece en [crguezl/express-start](https://github.com/crguezl/express-start) en su máquina virtual del servicio [iaas.ull.es](iaas.ull.es).
 * Puede encontrar un vídeo del profesor introduciendo el [iaas.ull.es aquí](https://youtu.be/qKHgbV0lYbA).
