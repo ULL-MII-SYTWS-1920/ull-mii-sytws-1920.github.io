@@ -1,13 +1,14 @@
-# React 
+# React
 
 ## Intro to React
 
 * [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
 
-##  Hello World React
+## Hello World React
 
-* [React: Hello World](https://reactjs.org/docs/hello-world.html)
-* [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+1. [React: Hello World](https://reactjs.org/docs/hello-world.html)
+2. [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+3. [Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
 
 ## Learning React by Eve Porcello, Alex Banks 
 
