@@ -9,6 +9,7 @@
 1. [React: Hello World](https://reactjs.org/docs/hello-world.html)
 2. [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
 3. [Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
+4. [Components and Props](https://reactjs.org/docs/components-and-props.html)
 
 ## Learning React by Eve Porcello, Alex Banks 
 
