@@ -6,6 +6,8 @@
 3. Use Live Share para colaborar con un compañero
 4. Elabore un informe con la experiencia adquirida
 
+## Recursos
+
 - Collaboration
     - [Introducing Visual Studio Live Share](https://code.visualstudio.com/blogs/2017/11/15/live-share)
     - <a href="https://youtu.be/fWXe1HQ1wVA" target="_blank">Vídeo Visual Studio Live Share Demo on VS Code</a>
@@ -20,3 +22,5 @@
     - macOS $HOME/Library/ApplicationSupport/Code/User/settings.json
     - Linux $HOME/.config/Code/User/settings.json
     - The workspace setting file is located under the .vscode folder in your root folder.
+- <a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks target="_blank">Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a> 
+<a href="https://github.com/ULL-ESIT-GRADOII-TFG/tfg-alejandro-gonzalez-alonso" target="_blank">(TFG de II de la ULL)</a>
