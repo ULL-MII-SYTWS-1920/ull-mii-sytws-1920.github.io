@@ -42,6 +42,11 @@
     - The workspace setting file is located under the .vscode folder in your root folder.
 - <a href="https://youtu.be/3owknsJy-iE" target="_blank">Vídeo de Jesús Torres: Breve intro de cómo programar y depurar C++ con Visual Studio Code + Gatos</a>
 
+### Prácticas
+
+- <a href="practicas/p2-t1-vscode/" target="_blank">Descripción de la Práctica p2-t1-vscode</a>
+
+
 ## Capítulo. Node.JS
 
 ### Debugging NodeJS
