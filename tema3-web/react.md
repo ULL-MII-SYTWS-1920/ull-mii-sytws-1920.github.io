@@ -9,7 +9,7 @@
 * [React: Hello World](https://reactjs.org/docs/hello-world.html)
 * [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
 
-## Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ
+## Learning React by Eve Porcello, Alex Banks 
 
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
 
