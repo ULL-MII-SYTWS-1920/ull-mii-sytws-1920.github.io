@@ -18,8 +18,11 @@
 ## [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
 
 * [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
+* [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search)
+* [This project was bootstrapped with Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
+  
 
-## Props
+## References
 
 * [How to pass props to components in React](https://www.robinwieruch.de/react-pass-props-to-component#react-props) blog by ROBIN WIERUCH
  
