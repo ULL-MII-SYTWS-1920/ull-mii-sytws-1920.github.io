@@ -34,7 +34,7 @@
 
 * Una vez acepte la tarea en GitHub Classroom, pasará a ser *outside collaborator* de la organización de la asignatura,
 * En algun momento, el profesor le hará una invitación a ser miembro de pleno derecho de la organización
-    - [Acepte la invitacion del profesor a pertenecer a la organización Github de la asignatura visitando la página de la organización](https://github.com/ULL-ESIT-DSI-1819)
+    - [Acepte la invitacion del profesor a pertenecer a la organización Github de la asignatura visitando la página de la organización](https://github.com/ULL-MII-SYTWS-1920)
     - También recibirá un email con la invitación. Puede aceptar haciendo click en el correspondiente enlace
 
 ### Formulario
