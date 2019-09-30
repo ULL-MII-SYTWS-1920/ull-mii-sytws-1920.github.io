@@ -12,9 +12,9 @@ El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos
 * Semana B: 
     * Lunes de 17 a 17:50. Grupo G2. Aula 2.2
     * Miércoles 
-        * de 16 a 16:50. Grupo G2. Aula 2.2
-        * de 17 a 17:50. Grupo G2. Aula 2.2
-        * de 18 a 18:50. Grupo G2. Aula 2.2
+        * de 16 a 16:50. Grupo G2. Sala 1.3
+        * de 17 a 17:50. Grupo G2. Sala 1.3
+        * de 18 a 18:50. Grupo G2. Sala 1.3
 * Semana C: Lunes de 17 a 17:50. Grupo G2. Aula 2.2
 
 Nos comunican que las clases comenzarán el Lunes 30/09/2019.
