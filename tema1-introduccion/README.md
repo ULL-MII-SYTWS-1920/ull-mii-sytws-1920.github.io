@@ -1,6 +1,6 @@
 # Tema 1: Introducción a Sistemas y Tecnologías Web en el Servidor
 
-## Capítulo 1. Uso del iaas.ull.es. Entornos de Trabajo
+## Capítulo. Uso del iaas.ull.es. Entornos de Trabajo
 
 - <a href="https://casianorodriguezleon.gitbooks.io/ull-esit-1617/recursos/iaas.html" target="_blank">Instrucciones para el uso de iaas.ull.es</a>
 - <a href="https://github.com/SYTW/iaas-ull-es" target="_blank">Repo SYTW/iaas-ull-es: Instrucciones Sobre Como Desplegar una Aplicación Web en iaas.ull.es</a>
@@ -14,7 +14,7 @@
 - <a href="practicas/p01-t1-iaas/" target="_blank">Descripción de la Práctica p01-t1-iaas</a>
     - [Express Web Framework (Node.js/JavaScript)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs) (Mozilla)
 
-## Capítulo 2. Editores. Entornos de Trabajo
+## Capítulo. Editores. Entornos de Trabajo
 
 ### Atom
 
@@ -42,7 +42,7 @@
     - The workspace setting file is located under the .vscode folder in your root folder.
 - <a href="https://youtu.be/3owknsJy-iE" target="_blank">Vídeo de Jesús Torres: Breve intro de cómo programar y depurar C++ con Visual Studio Code + Gatos</a>
 
-## Capítulo 3. Node.JS
+## Capítulo. Node.JS
 
 ### Debugging NodeJS
 
@@ -88,7 +88,7 @@
 * [Descripción de la práctica p3-t1-c3-http](practicas/p3-t1-c3-http/)
 
 
-## Capítulo 4. Pruebas, Integración y Calidad
+## Capítulo. Pruebas, Integración y Calidad
 
 ### Chapter 5. Transforming Data and Testing Continuously
 
@@ -121,12 +121,12 @@
   * [BrowserSync](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/pruebas/browsersync.html)
 
 
-## Capítulo 5. Programación Funcional
+## Capítulo. Programación Funcional
 
 - [Eloquent JS](http://eloquentjavascript.net/index.html): [High Order Functions](http://eloquentjavascript.net/05_higher_order.html)
 - [Repo ULL-ESIT-MII-CA-1718/ejs-chapter05-higher-order-functions](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter05-higher-order-functions)
 
-## Capítulo 6. OOP
+## Capítulo. OOP
 
 ### ECMA5 OOP
 
@@ -158,7 +158,7 @@
 * [Object-Oriented JavaScript — A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
 
 
-## Capítulo 7. Módulos en NPM
+## Capítulo. Módulos en NPM
 
 * [Creación de Paquetes NPM](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/npm/nodejspackages.html) (Apuntes)
 * [Ejemplo en https://github.com/ULL-ESIT-DSI-1617/create-a-npm-module](https://github.com/ULL-ESIT-DSI-1617/create-a-npm-module)
@@ -185,7 +185,7 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
   - [Submódulo https://github.com/ULL-ESIT-DSI-1617/scapegoat](https://github.com/ULL-ESIT-DSI-1617/scapegoat)
   - [Submódulo https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat](https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat)
 
-## Capítulo 8. Módulos en ECMA6
+## Capítulo. Módulos en ECMA6
 
 - [Eloquent JS](http://eloquentjavascript.net/index.html): [Modules](http://eloquentjavascript.net/10_modules.html)
 - [Book: Understanding ECMAScript 6. Chapter 13. Encapsulating Code With Modules](https://leanpub.com/understandinges6/read#leanpub-auto-encapsulating-code-with-modules)
@@ -207,7 +207,7 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
 - Véase un ejemplo en la implementación del proyecto "Electronic Life" en la rama `modules` del repo [`ULL-ESIT-MII-CA-1718/electronic-life`](https://github.com/ULL-ESIT-MII-CA-1718/electronic-life/tree/modules)
 
 
-## Capítulo 9. Diseño: Smells, Strategy Pattern y el Switch Smell
+## Capítulo. Diseño: Smells, Strategy Pattern y el Switch Smell
 
 * [Apuntes del curso 15/16: Code Smells/Código Hediondo](https://casianorodriguezleon.gitbooks.io/pl1516/content/apuntes/codesmell.html)
 * [Apuntes del curso 16/17: Patrones de Diseño](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/)
@@ -217,21 +217,21 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
 * [Apuntes del curso 16/17: Práctica: Creación de Paquetes NPM y Strategy Pattern](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicamodulestrategypattern.html)
 * [JSHint](http://jshint.com/)
 
-## Capítulo 10. JavaScript and The Browser
+## Capítulo. JavaScript and The Browser
 
 - [Eloquent JS](http://eloquentjavascript.net/index.html): [JavaScript and the Browser](http://eloquentjavascript.net/12_browser.html)
 
-## Capítulo 11. The DOM
+## Capítulo. The DOM
 
 - [Eloquent JS. Chapter13: The Document Object Model](http://eloquentjavascript.net/13_dom.html)
 - [Repository ULL-ESIT-MII-CA-1718/ejs-chapter13-DOM-examples with examples for Chapter13: The Document Object Model](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter13-DOM-examples)
 - [Repo ULL-ESIT-MII-CA-1718/the-document-object-model-KevMCh)](https://github.com/ULL-ESIT-MII-CA-1718/the-document-object-model-KevMCh)
 
-## Capítulo 12. Events
+## Capítulo. Events
 
 - [Eloquent JS](http://eloquentjavascript.net/index.html): [Handling Events](http://eloquentjavascript.net/14_event.html)
 
-## Capítulo 13. Form and Form Fields
+## Capítulo. Form and Form Fields
 
 - [Eloquent JS](http://eloquentjavascript.net/index.html): [Forms and Form Fields](https://eloquentjavascript.net/18_forms.html)
 - [Eloquent JS:  Forms and Form Fields](https://eloquentjavascript.net/18_forms.html)
@@ -240,7 +240,7 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
 - [Developer Moxilla. Sending forms through JavaScript](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
   * [Using FormData bound to a form element](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript#Using_FormData_bound_to_a_form_element)
 
-## Capítulo 14. Extending Visual Studio Code
+## Capítulo. Extending Visual Studio Code
 
 - <a href="https://code.visualstudio.com/api" target="_blank">Visual Studio Code Extension API</a>
 - <a href="https://youtu.be/j917FBGfttQ" target="_blank">Visual Studio Code Extension: hello (Youtube, vídeo del profesor)</a>
