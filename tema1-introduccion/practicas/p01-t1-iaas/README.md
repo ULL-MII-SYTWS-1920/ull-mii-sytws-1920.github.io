@@ -28,7 +28,7 @@
   - Instale [ctags](https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html)
   - [ag](http://conqueringthecommandline.com/book/ack_ag) o [ack](http://conqueringthecommandline.com/book/ack_ag)
   - etc. 
-* [Hágase miembro de la comunidad Google+ DSI1819](https://plus.google.com/u/2/communities/101210698918846038099)
+* [Hágase miembro de la comunidad Google+ SYTWS](https://plus.google.com/u/1/communities/104629784252354892324)  (Asegúrate de estar identificado con tu cuenta de Gmail de la ULL)
 
 ### GitHub Classroom: Outside Colaborators and members
 
@@ -39,4 +39,4 @@
 
 ### Formulario
 
-Rellene el [formulario solicitado](https://campusvirtual.ull.es/1819/mod/assign/view.php?id=150012) en la tarea en el Campus Virtual
+Rellene el [formulario solicitado](https://docs.google.com/forms/d/1mCcxXPrz-ySxotIvzOZXO4hvVMni1pj2O73XrLL-Oqw/edit) si no lo ha hecho ya
