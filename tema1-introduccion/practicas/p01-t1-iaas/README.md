@@ -39,4 +39,4 @@
 
 ### Formulario
 
-Rellene el [formulario solicitado](https://docs.google.com/forms/d/1mCcxXPrz-ySxotIvzOZXO4hvVMni1pj2O73XrLL-Oqw/edit) si no lo ha hecho ya
+Rellene el [formulario solicitado con la relación aluXX-GitHub](https://docs.google.com/forms/d/1mCcxXPrz-ySxotIvzOZXO4hvVMni1pj2O73XrLL-Oqw/edit) si no lo ha hecho ya
