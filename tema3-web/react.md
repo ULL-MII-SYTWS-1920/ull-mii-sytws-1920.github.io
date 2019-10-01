@@ -12,6 +12,11 @@
 4. [Components and Props](https://reactjs.org/docs/components-and-props.html)
 5. [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
+## Visual Studio Code
+
+* [Using React in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
+
+
 ## Learning React by Eve Porcello, Alex Banks 
 
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
