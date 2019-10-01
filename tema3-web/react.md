@@ -15,7 +15,7 @@
 ## Visual Studio Code
 
 * [Using React in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
-
+* [Visual studio code changes format (React-JSX)](https://stackoverflow.com/questions/44993808/visual-studio-code-changes-format-react-jsx)
 
 ## Learning React by Eve Porcello, Alex Banks 
 
