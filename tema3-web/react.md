@@ -20,6 +20,7 @@
 ## Learning React by Eve Porcello, Alex Banks 
 
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
+* [MoonHighway/learning-react](https://github.com/moonhighway/learning-react) Github repo with the code samples for Learning React by Alex Banks and Eve Porcello, published by O'Reilly Media
 
 ## [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
 
