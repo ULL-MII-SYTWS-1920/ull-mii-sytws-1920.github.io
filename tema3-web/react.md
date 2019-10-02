@@ -25,6 +25,7 @@
 ## [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
 
 * [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
+* [YouTube video: Getting Started with Create React App](https://youtu.be/eCz3rhsDG5s) by Elijah  Manor
 * [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search)
 * [This project was bootstrapped with Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
   
