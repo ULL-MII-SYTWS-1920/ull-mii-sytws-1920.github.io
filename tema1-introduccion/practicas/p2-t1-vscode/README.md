@@ -2,6 +2,64 @@
 
 1. Instale VSCode en su máquina
 2. Siga los tutoriales de VSCode
+    <ul id="editor-articles" class="collapse ">
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/codebasics" >Basic Editing</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/extension-gallery" >Extension Marketplace</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/intellisense" >IntelliSense</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/editingevolved" >Code Navigation</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/refactoring" >Refactoring</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/debugging" >Debugging</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/versioncontrol" >Version Control</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/integrated-terminal" >Integrated Terminal</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/multi-root-workspaces" >Multi-root Workspaces</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/tasks" >Tasks</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/userdefinedsnippets" >Snippets</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/emmet" >Emmet</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/command-line" >Command Line</a>
+                            </li>
+                          
+                            <li >
+                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/accessibility" >Accessibility</a>
+                            </li>
+                          
+                          </ul>
 2. Instale el plugin SSH FS y aprenda a usarlo con el sistema de archivo de una máquina remota via SSH
 3. Use Live Share para colaborar con un compañero
 4. Elabore un informe con la experiencia adquirida
