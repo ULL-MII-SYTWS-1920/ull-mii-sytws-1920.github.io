@@ -4,59 +4,59 @@
 2. Siga los tutoriales de VSCode
     <ul id="editor-articles" class="collapse ">
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/codebasics" >Basic Editing</a>
+                              <a href="https://code.visualstudio.com/docs/editor/codebasics" >Basic Editing</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/extension-gallery" >Extension Marketplace</a>
+                              <a href="https://code.visualstudio.com/docs/editor/extension-gallery" >Extension Marketplace</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/intellisense" >IntelliSense</a>
+                              <a href="https://code.visualstudio.com/docs/editor/intellisense" >IntelliSense</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/editingevolved" >Code Navigation</a>
+                              <a href="https://code.visualstudio.com/docs/editor/editingevolved" >Code Navigation</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/refactoring" >Refactoring</a>
+                              <a href="https://code.visualstudio.com/docs/editor/refactoring" >Refactoring</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/debugging" >Debugging</a>
+                              <a href="https://code.visualstudio.com/docs/editor/debugging" >Debugging</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/versioncontrol" >Version Control</a>
+                              <a href="https://code.visualstudio.com/docs/editor/versioncontrol" >Version Control</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/integrated-terminal" >Integrated Terminal</a>
+                              <a href="https://code.visualstudio.com/docs/editor/integrated-terminal" >Integrated Terminal</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/multi-root-workspaces" >Multi-root Workspaces</a>
+                              <a href="https://code.visualstudio.com/docs/editor/multi-root-workspaces" >Multi-root Workspaces</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/tasks" >Tasks</a>
+                              <a href="https://code.visualstudio.com/docs/editor/tasks" >Tasks</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/userdefinedsnippets" >Snippets</a>
+                              <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets" >Snippets</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/emmet" >Emmet</a>
+                              <a href="https://code.visualstudio.com/docs/editor/emmet" >Emmet</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/command-line" >Command Line</a>
+                              <a href="https://code.visualstudio.com/docs/editor/command-line" >Command Line</a>
                             </li>
                           
                             <li >
-                              <a href="https://code.visualstudio.com/docs/getstarted/introvideos/docs/editor/accessibility" >Accessibility</a>
+                              <a href="https://code.visualstudio.com/docs/editor/accessibility" >Accessibility</a>
                             </li>
                           
                           </ul>
