@@ -1,5 +1,10 @@
 # Bibliografía y Referencias
 
+# See also
+
+* [Repo de Bibliografía en ULL-SYTWS-1920](https://github.com/ULL-SYTWS-1920/books-shared)
+
+
 ## Development and Management of Information Systems
 
 * [Developing Information Systems : Practical guidance for IT professionals](https://puntoq-ull-es.accedys2.bbtk.ull.es/primo-explore/fulldisplay?docid=ullsfx2550000001351302&context=L&vid=ull&lang=es_ES&search_scope=ull_sfxebooks&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,Developing%20Information%20Systems&offset=0) by James Cadle, Tahir Ahmed, Julian Cox, Lynda Girvan, Alan Paul, Debra Paul, and Pete Thompson
@@ -9,6 +14,7 @@
 
 * [Eloquent JS 3rd Edition](https://eloquentjavascript.net/)
 * [Eloquent JS 2nd Edition](http://eloquentjavascript.net/2nd_edition/)
+* [Advanced JavaScript. Zachary Shute. 2019](https://puntoq-ull-es.accedys2.bbtk.ull.es/primo-explore/fulldisplay?docid=ullsfx4100000007593934&context=L&vid=ull&lang=es_ES&search_scope=ull_sfxebooks&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,javascript&sortby=date&offset=0) PuntoQ ULL
 
 ## Node.js
 
@@ -65,6 +71,7 @@ By: Parth Ghiya</a>. Acceda por medio del <a href="https://www.ull.es/servicios/
 ## React
 
 * [Learning React. O'Reilly. Eve Porcello, Alex Banks](https://learning.oreilly.com/library/view/learning-react/9781491954614/)
+* [Advanced JavaScript. Zachary Shute. 2019](https://puntoq-ull-es.accedys2.bbtk.ull.es/primo-explore/fulldisplay?docid=ullsfx4100000007593934&context=L&vid=ull&lang=es_ES&search_scope=ull_sfxebooks&adaptor=Local%20Search%20Engine&tab=default_tab&query=any,contains,javascript&sortby=date&offset=0) PuntoQ ULL
 
 ## Bibliografía Auxiliar
 
