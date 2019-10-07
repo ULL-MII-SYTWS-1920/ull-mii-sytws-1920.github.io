@@ -79,8 +79,8 @@
         <li >
         <a href="https://code.visualstudio.com/docs/editor/accessibility" >Accessibility</a>
         </li>
-    
     </ul>
+    
 - Version Control
     - [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
     - [Video Git Version Control in VS Code](https://youtu.be/AKNYgP0yEOY)
