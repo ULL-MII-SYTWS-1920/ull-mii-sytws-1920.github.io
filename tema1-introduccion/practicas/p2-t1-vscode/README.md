@@ -94,14 +94,17 @@
 ### Integrate with External Tools via Tasks
 
 - [Integrate with External Tools via Tasks](https://code.visualstudio.com/docs/editor/tasks)
+
+
+### Web Bookmarks
+
+- <a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">MarketPlace: Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a> 
+- <a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">GitHub Repo: Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a> 
+
+## Localización del Fichero de Configuración `settings.json`
 - Settings file locations
   - Depending on your platform, the user settings file is located here:
     - Windows %APPDATA%\Code\User\settings.json
     - macOS $HOME/Library/ApplicationSupport/Code/User/settings.json
     - Linux $HOME/.config/Code/User/settings.json
     - The workspace setting file is located under the .vscode folder in your root folder.
-
-### Web Bookmarks
-
-- <a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">MarketPlace: Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a> 
-- <a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">GitHub Repo: Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a> 
