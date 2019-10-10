@@ -21,8 +21,8 @@
 
 ## [Bases de Datos No Relacionales](mongodb)
 
-## [GraphQL](graphql)
-
 ## [React](react) 
+
+## [GraphQL](graphql)
 
 ## [Desktop Apps using Web Technologies](electron)

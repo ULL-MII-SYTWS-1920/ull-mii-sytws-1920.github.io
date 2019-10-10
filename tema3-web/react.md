@@ -4,6 +4,27 @@
 
 * [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
 
+## Creating a React App
+
+* [Create a new React App](https://reactjs.org/docs/create-a-new-react-app.html)
+
+### For a Web App
+
+* [Add React to a Web Site](https://reactjs.org/docs/add-react-to-a-website.html)
+
+### From Scratch
+
+* [Creating a React App… From Scratch](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658)
+  - Github repo [paradoxinversion/creating-a-react-app-from-scratch](https://github.com/paradoxinversion/creating-a-react-app-from-scratch)
+
+### [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
+
+* [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
+* [YouTube video: Getting Started with Create React App](https://youtu.be/eCz3rhsDG5s) by Elijah  Manor
+* [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search)
+* [This project was bootstrapped with Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
+  
+
 ## Hello World React
 
 1. [React: Hello World](https://reactjs.org/docs/hello-world.html)
@@ -21,14 +42,6 @@
 
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
 * [MoonHighway/learning-react](https://github.com/moonhighway/learning-react) Github repo with the code samples for Learning React by Alex Banks and Eve Porcello, published by O'Reilly Media
-
-## [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
-
-* [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
-* [YouTube video: Getting Started with Create React App](https://youtu.be/eCz3rhsDG5s) by Elijah  Manor
-* [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search)
-* [This project was bootstrapped with Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
-  
 
 ## References
 
