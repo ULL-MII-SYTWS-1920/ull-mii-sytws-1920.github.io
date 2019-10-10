@@ -30,7 +30,7 @@ This page describes a few popular React toolchains which help with tasks like:
 
 * [Add React to a Web Site](https://reactjs.org/docs/add-react-to-a-website.html)
 
-### [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
+### Create React App. Set up a modern web app by running one command
 
 * [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
 * [YouTube video: Getting Started with Create React App](https://youtu.be/eCz3rhsDG5s) by Elijah  Manor
