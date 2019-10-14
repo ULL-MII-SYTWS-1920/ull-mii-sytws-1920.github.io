@@ -13,7 +13,7 @@
 
 ## Promises
 
-* [A Gist with a very Simple Example](https://gist.github.com/crguezl/f5c52c8b72b4722e374a8af10e9d2b5d)
+* [A Gist with a very Simple Example of How to make and use a Promise](https://gist.github.com/crguezl/f5c52c8b72b4722e374a8af10e9d2b5d)
 
 ## Códigos Ilustrando el Bucle de Eventos
 
