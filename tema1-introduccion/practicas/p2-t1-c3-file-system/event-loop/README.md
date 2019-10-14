@@ -33,6 +33,8 @@
 
 ### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/callstack.js 
 
+* Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) at https://developer.mozilla.org
+
 ```js
 function multiply(x,y) {
   // console.trace imprime una traza de la pila
@@ -55,6 +57,9 @@ console.log(numberSquared);
 
 ### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/settimeout-does-not-run-inmediately.js 
 
+* Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) at https://developer.mozilla.org
+
+
 ```js
 const s = new Date().getSeconds();
 
@@ -71,6 +76,9 @@ while(true) {
 ```
 
 ### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/order.js 
+
+* Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) at https://developer.mozilla.org
+
 
 ```js
 (function() {
