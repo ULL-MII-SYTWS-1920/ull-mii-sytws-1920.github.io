@@ -27,7 +27,7 @@ En el `README.md` escriba un tutorial sobre lo que ha aprendido. Muestre imágen
 
 ### The JS Event Loop
 
-* [The JS Event Loop](event-loop/README.md)
+* [El bucle de Eventos de JS explicado](event-loop/README.md) Ejemplos
 * Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 * [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/) by Flavio
 
