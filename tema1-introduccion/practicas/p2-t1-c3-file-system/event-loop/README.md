@@ -11,8 +11,11 @@
 
 * [Repo de ejemplo](https://github.com/SYTW/simple-web-worker)
 
+## Promises
 
-## Códigos
+* [A Gist with a very Simple Example](https://gist.github.com/crguezl/f5c52c8b72b4722e374a8af10e9d2b5d)
+
+## Códigos Ilustrando el Bucle de Eventos
 
 
 ### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/callstack.js 
