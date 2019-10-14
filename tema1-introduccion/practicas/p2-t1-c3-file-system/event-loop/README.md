@@ -10,7 +10,7 @@
 ## Códigos
 
 
-### p2-t1-c3-file-system/event-loop(master)]$ cat callstack.js 
+### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/callstack.js 
 
 ```js
 function multiply(x,y) {
@@ -32,7 +32,7 @@ let numberSquared = printSquare(5);
 console.log(numberSquared);
 ```
 
-### [~/.../p2-t1-c3-file-system/event-loop(master)]$ cat settimeout-does-not-run-inmediately.js 
+### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/settimeout-does-not-run-inmediately.js 
 
 ```js
 const s = new Date().getSeconds();
@@ -47,6 +47,28 @@ while(true) {
     break;
   }
 }
+```
+
+### tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/order.js 
+
+```js
+(function() {
+
+  console.log('this is the start');
+
+  setTimeout(function cb() {
+    console.log('Callback 1: this is a msg from call back');
+  }); // has a default time value of 0
+
+  console.log('this is just a message');
+
+  setTimeout(function cb1() {
+    console.log('Callback 2: this is a msg from call back');
+  }, 0);
+
+  console.log('this is the end');
+
+})();
 ```
 
 ## References
