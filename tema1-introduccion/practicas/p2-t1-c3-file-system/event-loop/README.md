@@ -1,5 +1,7 @@
 # The JS Event Loop
 
+![how-the-event-loop-works.png]!(how-the-event-loop-works.png)
+
 ![event-loop.png](event-loop.png)
 
 * Your JavaScript code runs single threaded. There is just one thing happening at a time.
