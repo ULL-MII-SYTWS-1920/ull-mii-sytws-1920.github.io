@@ -7,6 +7,11 @@
     * In most browsers there is an event loop for every browser tab, to avoid a web page with heavy processing to block your entire browser.
     * Web Workers run in their own event loop as well
 
+## Web Workers
+
+* [Repo de ejemplo](https://github.com/SYTW/simple-web-worker)
+
+
 ## Códigos
 
 
