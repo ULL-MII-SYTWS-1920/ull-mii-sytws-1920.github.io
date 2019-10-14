@@ -14,7 +14,7 @@
 
 ```js
 function multiply(x,y) {
-  // console.trace imprimie una traza de la pila
+  // console.trace imprime una traza de la pila
   console.trace("-----------At multiply-----------");
   return x * y;
 }
