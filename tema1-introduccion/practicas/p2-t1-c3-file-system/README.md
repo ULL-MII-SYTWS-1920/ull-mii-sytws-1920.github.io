@@ -2,7 +2,7 @@
 
 * [Aceptemos la asignación de la tarea en el repo de prácticas](https://github.com/ULL-MII-SYTWS-1920/practicas)
 * Autentíquese en [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
-* Una vez autenticado obtendrá acceso al libro [Node.js 8 the Right Way](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781680505344). Jim Wilson. 2018 (Debes estar autenticado via PuntoQ) 
+* Una vez autenticado obtendrá acceso al libro [Node.js 8 the Right Way](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781680505344). Jim Wilson. 2018 (Debes estar autenticado via PuntoQ)
 * Lea el Capítulo 2 "[Wrangling the File System](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-idot-getting-up-to-speed-on-nodedotjs-8/chp_filesystem_html)" de *Node.JS The Right Way*. 
 * Consulte el [repo de bibliografía para la organización](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * Resuelva los problemas en la secciones *Fortifying the code* y *Expanding Functionality* del capítulo *Wrangling the File System*
