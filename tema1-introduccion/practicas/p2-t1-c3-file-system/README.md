@@ -25,6 +25,12 @@ En el `README.md` escriba un tutorial sobre lo que ha aprendido. Muestre imágen
 * [Node.js 8 the Right Way](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781680505344). Jim Wilson. 2018 (Debes estar autenticado via PuntoQ) 
 * [Node.js 8 the Right Way](https://books.google.es/books?id=oA9QDwAAQBAJ&lpg=PT96&ots=-mLQPlvsSj&dq=should%20ldjclient%20emit%20a%20close%20event&hl=es&pg=PP1#v=onepage&q=should%20ldjclient%20emit%20a%20close%20event&f=false) en Google Books
 
+### The JS Event Loop
+
+* Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+* [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/) by Flavio
+
+
 ### VScode
 
 * [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
