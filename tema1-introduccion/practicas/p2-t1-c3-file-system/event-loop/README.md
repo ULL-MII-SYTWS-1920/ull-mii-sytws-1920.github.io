@@ -9,9 +9,20 @@
 
 ## Web Workers
 
+### /local/src/uai/uai2015/simple-web-worker
+
 * [Repo de ejemplo](https://github.com/SYTW/simple-web-worker)
 
+## Race Condition
+
+### /local/src/uai/uai2015/race-condition/index.html
+
+* [Repo de Ejemplo](https://github.com/ULL-MII-SYTWS-1920/js-race)
+
+
 ## Promises
+
+### local/src/uai/uai2015/promise-ejemplo
 
 * [A Gist with a very Simple Example of How to make and use a Promise](https://gist.github.com/crguezl/f5c52c8b72b4722e374a8af10e9d2b5d)
 
