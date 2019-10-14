@@ -18,7 +18,7 @@ En el `README.md` escriba un tutorial sobre lo que ha aprendido. Muestre imágen
 
 ## Recursos
 
-### Node.js 8 the Right Way
+### El Libro Node.js 8 the Right Way
 
 * [Repo de bibliografía para la organización](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
@@ -34,10 +34,14 @@ En el `README.md` escriba un tutorial sobre lo que ha aprendido. Muestre imágen
 
 * [Using Version Control in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol)
 
-### EloquentJS
+### El libro EloquentJS. El capítulo 20 es sobre Node.js
 
 * [Eloquent JS 2nd Edition](http://eloquentjavascript.net/2nd_edition/) Chapter 20
 * [Capítulo 20 de Eloquent JavaScript: Node.js](http://eloquentjavascript.net/2nd_edition/20_node.html) 
+
+### El libro Node.js Beyond the Basics
+
+* [Node.js Beyond the Basics](https://jscomplete.com/learn/node-beyond-basics)
 * [Node.js Child Processes: Everything you need to know How to use spawn(), exec(), execFile(), and fork()](https://medium.freecodecamp.org/node-js-child-processes-everything-you-need-to-know-e69498fe970a)
 
 ### Solución
