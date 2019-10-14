@@ -1,6 +1,6 @@
 # The JS Event Loop
 
-![how-the-event-loop-works.png]!(how-the-event-loop-works.png)
+![how-the-event-loop-works.png](how-the-event-loop-works.png)
 
 ![event-loop.png](event-loop.png)
 
