@@ -4,7 +4,7 @@
 
   setTimeout(function cb() {
     console.log('Callback 1: this is a msg from call back');
-  }); // has a default time value of 0
+  }, 2000); // has a default time value of 0
 
   console.log('this is just a message');
 
