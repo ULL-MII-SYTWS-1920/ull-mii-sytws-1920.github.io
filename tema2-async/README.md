@@ -1,10 +1,10 @@
 # Tema 2: Computación Asíncrona y Distribuida
 
+## [Programación Asíncrona en ECMA 6](async)
+
 ## [Sockets](sockets)
 
 ## [Message Queues](message-queues)
-
-## [Programación Asíncrona en ECMA 6](async)
 
 ## [RPC](rpc)
 
