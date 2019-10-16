@@ -22,6 +22,7 @@
 ### /local/src/uai/uai2015/race-condition/index.html
 
 * [Repo de Ejemplo](https://github.com/ULL-MII-SYTWS-1920/js-race)
+* [Race Condition in JavaScript](https://youtu.be/wNwBzgDm0BI) YouTube Video
 
 
 ## Promises
