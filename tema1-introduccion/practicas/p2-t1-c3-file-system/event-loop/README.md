@@ -31,7 +31,7 @@
 
 * [A Gist with a very Simple Example of How to make and use a Promise](https://gist.github.com/crguezl/f5c52c8b72b4722e374a8af10e9d2b5d)
 
-### apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/promise-job-queue.js
+### apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/promise-ejemplo/promise-job-queue.js
 
 Promises that resolve before the current function ends 
 will be executed right after the current function.
