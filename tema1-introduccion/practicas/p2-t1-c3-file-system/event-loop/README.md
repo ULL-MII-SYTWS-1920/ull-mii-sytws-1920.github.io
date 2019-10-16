@@ -13,7 +13,9 @@
 
 ### /local/src/uai/uai2015/simple-web-worker
 
-* [Repo de ejemplo](https://github.com/SYTW/simple-web-worker)
+* [Repo de ejemplo simple-web-worker](https://github.com/SYTW/simple-web-worker)
+* [Repo de ejemplo fibonacci-worker](https://github.com/ULL-MII-SYTWS-1920/fibonacci-worker)
+* [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
 ## Race Condition
 
