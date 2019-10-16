@@ -37,7 +37,7 @@ Promises that resolve before the current function ends
 will be executed right after the current function.
 
 ```js
-[~/.../p2-t1-c3-file-system/event-loop(master)]$ cat promise-job-queue.js 
+[~/.../p2-t1-c3-file-system/event-loop/promise-ejemplo/(master)]$ cat promise-job-queue.js 
 let promise = new Promise(function(resolve, reject) {
   resolve(1)
 });
