@@ -20,7 +20,7 @@ En el `README.md` escriba un tutorial sobre lo que ha aprendido. Muestre imágen
 
 ### Q & A
 
-### A que se refiere una de las preguntas de la pregunta *"Instead, how would you take the process to spawn from process.argv?"*
+### A que se refiere la pregunta *"Instead, how would you take the process to spawn from process.argv?"*
 
 En el fichero `watcher-spawn.js` se hace un `spawn`del comando `ls`:
 
