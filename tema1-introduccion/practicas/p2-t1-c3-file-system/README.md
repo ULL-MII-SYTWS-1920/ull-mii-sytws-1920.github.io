@@ -48,18 +48,24 @@ fs.watch(filename, function(eventType, fN) {
 console.log("Now watching " + filename + " for changes...");
 ```
 
-lo que pide la pregunta es escribir una variante del programa anterior 
+lo que pide la pregunta es escribir una variante del programa an∫terior 
 en la que el comando a ejecutar en vez de ser `ls` se especifique 
 en la línea de comandos:
 
 ```
-$ watcher-sol.js . 'ls' '-l' 
+$ ./watcher-sol.js 
+Usage:
+  watcher-sol.js <fileName> [command] [args ... ]
+```
+
+```
+$ ./watcher-sol.js . 'ls' '-l' 
 Now watching . for changes...
 -rw-r--r--  1 casiano  staff  1460 18 oct 08:37 watcher-fortifying-code.js
 ```
 
 ```
-$ watcher-sol.js . echo "File change"
+$ ./watcher-sol.js . echo "File change"
 Now watching . for changes...
 File change watcher-fortifying-code.js
 ```
