@@ -59,9 +59,9 @@ Now watching . for changes...
 ```
 
 ```
-$ watcher-sol.js . echo "File $1 changed"
+$ watcher-sol.js . echo "File change"
 Now watching . for changes...
-File  changed watcher-fortifying-code.js
+File change watcher-fortifying-code.js
 ```
 
 ### El Libro Node.js 8 the Right Way
