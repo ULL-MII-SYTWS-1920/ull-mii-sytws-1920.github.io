@@ -48,7 +48,7 @@ fs.watch(filename, function(eventType, fN) {
 console.log("Now watching " + filename + " for changes...");
 ```
 
-lo que pide la pregunta es escribir una variante del programa an∫terior 
+lo que pide la pregunta es escribir una variante del programa anterior 
 en la que el comando a ejecutar en vez de ser `ls` se especifique 
 en la línea de comandos:
 
