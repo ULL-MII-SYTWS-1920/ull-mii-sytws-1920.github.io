@@ -23,6 +23,13 @@ tema1-introduccion/practicas/p2-t1-c3-file-system/remote-node.js
 tema1-introduccion/practicas/p2-t1-vscode/dmsi1920-p2-t1-vscode
 tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/uai2015-workers-promises
 tema1-introduccion/practicas/p2-t1-c3-file-system/uai2015
+tema1-introduccion/practicas/p01-t1-iaas/express-start/
+tema1-introduccion/practicas/p2-t1-c3-file-system/dsi1819-p2-t1-c3-filesystem
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/fibonacci-worker/
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/parallel-js/
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/promise-ejemplo
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/race-condition
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/simple-web-worker
 
 tema2-async/RPC/
 tema2-async/promises/

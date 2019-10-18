@@ -18,6 +18,52 @@ En el `README.md` escriba un tutorial sobre lo que ha aprendido. Muestre imágen
 
 ## Recursos
 
+### Q & A
+
+### A que se refiere una de las preguntas de la pregunta *"Instead, how would you take the process to spawn from process.argv?"*
+
+En el fichero `watcher-spawn.js` se hace un `spawn`del comando `ls`:
+
+```js
+"use strict";
+const
+    fs = require('fs'),
+    // The child_process module provides the ability to spawn child processes in a manner that is similar, but not identical, to popen
+    spawn = require('child_process').spawn,
+    filename = process.argv[2];
+
+if (!filename) {
+    throw Error("A file to watch must be specified!");
+}
+
+fs.watch(filename, function(eventType, fN) {
+   
+    let ls = spawn('ls', ['-lh', fN]);
+    console.log(ls.pid);
+    console.log(eventType, fN);
+   
+    ls.stdout.pipe(process.stdout);
+});
+
+console.log("Now watching " + filename + " for changes...");
+```
+
+lo que pide la pregunta es escribir una variante del anterior 
+en la que el comando a ejecutar en vez de ser `ls` se especifique 
+en la línea de comandos:
+
+```
+$ watcher-sol.js . 'ls' '-l' 
+Now watching . for changes...
+-rw-r--r--  1 casiano  staff  1460 18 oct 08:37 watcher-fortifying-code.js
+```
+
+```
+$ watcher-sol.js . echo "File $1 changed"
+Now watching . for changes...
+File  changed watcher-fortifying-code.js
+```
+
 ### El Libro Node.js 8 the Right Way
 
 * [Repo de bibliografía para la organización](https://github.com/ULL-MII-SYTWS-1920/books-shared)
