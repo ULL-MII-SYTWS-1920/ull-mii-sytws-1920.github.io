@@ -39,6 +39,7 @@ escriba sus propios apuntes con ejemplos y realice los ejercicios que se indican
 * [Eloquent JS 2nd Edition: Chapter 20 HTTP](http://eloquentjavascript.net/2nd_edition/20_node.html)
 * [Repo con las soluciones K.](https://github.com/ULL-ESIT-MII-CA-1718/nodejs-KevMCh) (No disponible ahora)
 * [Repo con las soluciones C.](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter20-node-js) (No disponible ahora)
+* [The fs.promises API provides an alternative set of asynchronous file system methods that return Promise objects rather than using callbacks](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api)
 * [How to Develop Web Application using pure Node.js (HTTP GET and POST, HTTP Server)](https://youtu.be/nuw48-u3Yrg) Vídeo en Youtube. 2015
 * [Anatomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)
 * Documentación:  
