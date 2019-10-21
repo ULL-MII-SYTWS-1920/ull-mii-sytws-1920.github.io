@@ -9,6 +9,8 @@
     * In most browsers there is an event loop for every browser tab, to avoid a web page with heavy processing to block your entire browser.
     * Web Workers run in their own event loop as well
 
+* [Event loop: microtasks and macrotasks](https://javascript.info/microtask-queue) en el libro https://javascript.info
+
 ## Web Workers
 
 ### /local/src/uai/uai2015/simple-web-worker
@@ -129,6 +131,7 @@ while(true) {
 
 ## References
 
+* [Event loop: microtasks and macrotasks](https://javascript.info/microtask-queue) en el libro https://javascript.info
 * Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) at https://developer.mozilla.org
 * [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/) by Flavio
 * [Concurrency and Parallel Computing in JavaScript](https://www.infoq.com/presentations/javascript-concurrency-parallelism/) Stephan Herhut. Strange Loop 2013.
