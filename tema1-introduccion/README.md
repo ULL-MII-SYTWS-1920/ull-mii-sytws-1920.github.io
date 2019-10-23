@@ -114,6 +114,7 @@
 
 ### Debugging NodeJS
 
+* [Debugging in Chrome en javascript.info](https://javascript.info/debugging-chrome)
 * [Debugging NodeJS](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/nodejs/)
 * Debugging in 2017 with Node.js YouTube video https://youtu.be/Xb_0awoShR8
     * [Debugging in 2017 with Node.js](https://youtu.be/Xb_0awoShR8) YouTube
