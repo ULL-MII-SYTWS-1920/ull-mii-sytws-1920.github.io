@@ -2,5 +2,7 @@ title: 'Sistemas y Tecnologías Web: Servidor'
 subtitle: 'Master de Ingeniería Informática'
 theme: jekyll-theme-midnight
 description: '1er cuatrimestre. ULL. Curso 2019/2020'
-exclude: [ 'Arona-winter-course', 'dsi1819', 'dsi1819-introduccion', 'tema0-introduccion-a-pl/practicas/code']
+exclude: 
+  - node_modules
+  - tema3-web/practicas/p10-t3-commanding-databases/eval
 show_downloads: false
