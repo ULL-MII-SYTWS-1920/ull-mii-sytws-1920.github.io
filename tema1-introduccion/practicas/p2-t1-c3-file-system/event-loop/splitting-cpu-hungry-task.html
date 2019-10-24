@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<div id="progress"></div>
+
 <script>
 'use strict';
 
@@ -11,20 +14,19 @@ let chunk = () => {
   do {
     i++;
   } while (i % 1e5 != 0);
+  progress.innerHTML = i;
 };
 
-let stopOrContinue = (task) => {
-  if (i == 1e6) {
-    alert("Done in " + (Date.now() - start) + 'ms');
-  } else {
-    setTimeout(() => count(task)); // schedule the new call (**)
-  }
-}
+let stop = () => (i == 1e7);
 
 function count(task, condition) { 
+  if (condition()) {
+    alert("Done in " + (Date.now() - start) + 'ms');
+  } else {
+    setTimeout(() => count(task, condition)); // schedule the new call (**)
+  };
   task();
-  stopOrContinue(task)
 }
 
-count(chunk, stopOrContinue);
+count(chunk, stop);
 </script>
