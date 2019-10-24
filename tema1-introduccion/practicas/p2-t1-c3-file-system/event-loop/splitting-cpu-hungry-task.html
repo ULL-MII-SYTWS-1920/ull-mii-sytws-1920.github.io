@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<script>
+'use strict';
+
+let start = Date.now();
+
+let i = 0;
+
+let chunk = () => {
+  // do a piece of the heavy job (*)
+  do {
+    i++;
+  } while (i % 1e5 != 0);
+};
+
+let stopOrContinue = (task) => {
+  if (i == 1e6) {
+    alert("Done in " + (Date.now() - start) + 'ms');
+  } else {
+    setTimeout(() => count(task)); // schedule the new call (**)
+  }
+}
+
+function count(task, condition) { 
+  task();
+  stopOrContinue(task)
+}
+
+count(chunk, stopOrContinue);
+</script>
