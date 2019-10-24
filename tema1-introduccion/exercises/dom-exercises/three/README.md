@@ -1,0 +1,1 @@
+I want to create a table with 2 columns and 3 rows, and in the cells I want Text1 and Text2 on every row. 
