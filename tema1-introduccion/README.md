@@ -300,6 +300,11 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
     - [Repository ULL-ESIT-MII-CA-1718/ejs-chapter13-DOM-examples with examples for Chapter13: The Document Object Model](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter13-DOM-examples)
     - [Repo ULL-ESIT-MII-CA-1718/the-document-object-model-KevMCh)](https://github.com/ULL-ESIT-MII-CA-1718/the-document-object-model-KevMCh)
 
+### Ejercicios
+
+* [Ejercicios del DOM](exercises/dom-exercises/)
+
+
 ## Capítulo. Events
 
 - [https://javascript.info/events: Events](https://javascript.info/events)
