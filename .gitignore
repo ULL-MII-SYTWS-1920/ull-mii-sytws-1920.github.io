@@ -4,6 +4,7 @@ Gemfile.lock
 apuntes-ull-esit-1617
 ull-esit-1617
 jewels
+.jekyll-metadata
 
 dsi-1819
 pl1819
@@ -30,6 +31,11 @@ tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/parallel-js/
 tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/promise-ejemplo
 tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/race-condition
 tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/simple-web-worker
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/js-learning-promises
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/promise-basics
+tema1-introduccion/practicas/p3-t1-c3-http/dsi189-p3-t1-c3-http
+tema1-introduccion/practicas/p3-t1-c3-http/the-http-module-chap20-ejs
+
 
 tema2-async/RPC/
 tema2-async/promises/

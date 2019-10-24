@@ -57,8 +57,6 @@ escriba sus propios apuntes con ejemplos y realice los ejercicios que se indican
   * [Strategy Pattern](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/strategypattern.html)
 * `/Users/casiano/local/src/javascript/eloquent-javascript/chapter20-node-js/` (recurso para el profesor)
 
-<!--
 ## Reto
 
 * [Reto para la práctica](reto.md)
-->
