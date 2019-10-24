@@ -302,7 +302,7 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
 
 ### Ejercicios
 
-* [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tema1-introduccion/exercises/dom-exercises)
+* [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema1-introduccion/exercises/dom-exercises)
 
 
 ## Capítulo. Events
