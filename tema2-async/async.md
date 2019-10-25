@@ -1,7 +1,7 @@
-## Programación Asíncrona en ECMA 6
+# Programación Asíncrona en ECMA 6
 
 
-### Event Loop
+## Event Loop
 
 * [Introducción al Bucle de Eventos, Las Race Conditions, Las Promesas y los Web Workers](../tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/)
 * [Callbacks](https://javascript.info/callbacks)
@@ -9,21 +9,21 @@
 * [Philip Roberts: ¿Que diablos es el "event loop" (bucle de eventos) de todos modos? (JSConf EU)](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 * [loupe](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D) a tool n the cloud to see the event loop working
 
-### Handling Events
+## Handling Events
 
 * [Chapter 14: Handling Events](http://eloquentjavascript.net/14_event.html)
 * [How to Create Custom Events in JavaScript](https://www.sitepoint.com/javascript-custom-events/)
 * [Repo ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events con ejemplos y ejercicios](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events)
 * [JavaScript and CSS: Coordinates](https://javascript.info/coordinates)
 
-### Promesas, Async/Await
+## Promesas, Async/Await
 
 * [Promises: Basics](https://javascript.info/promise-basics)
 * [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
 * [Asynchronous Iterators in JavaScript](https://www.codementor.io/tiagolopesferreira/asynchronous-iterators-in-javascript-jl1yg8la1) by Tiago Lopes
 
-#### Referencias
+### Referencias
 
 1. [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
@@ -43,10 +43,10 @@
 10. [Book *The Modern Javascript Tutorial*. Chapter Promises, async/await](https://javascript.info/async)
 10. [Promises Workshop for JavaScript! Learn to wield promises like a master to write clean asynchronous code](https://github.com/stevekane/promise-it-wont-hurt) GitHub Repo. A Workshopper module that teaches you to use promises in javascript
 
-### Ejercicios
+## Ejercicios
 
 * [Ejercicios de Promesas](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema2-async/exercises/promises)
 
-### Prácticas
+## Prácticas
 
 * [Descripción de la práctica Asynchronous Programming with Javascript EdX Course: Modules 1 (Asynchronous Fundamentals) and 2 (Promises) p7-t2-async-js-edx](practicas/p7-t2-async-js-edx)
