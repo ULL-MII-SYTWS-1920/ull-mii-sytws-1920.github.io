@@ -2,11 +2,11 @@
 
 ## Campus Virtual
 
-* [SYTWS](https://campusvirtual.ull.es/1920/course/view.php?id=XXXXXXXX)
+* [SYTWS](https://campusvirtual.ull.es/1920/course/view.php?id=201913778)
 * [Participantes](https://campusvirtual.ull.es/1920/user/index.php?page=0&perpage=20&contextid=0&id=2XXXXXXX)
-* [Calificaciones](https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=2XXXXXXX)
-* [Tareas](https://campusvirtual.ull.es/1920/mod/assign/index.php?id=2XXXXXXX)
-* [Foros](https://campusvirtual.ull.es/1920/mod/forum/index.php?id=2XXXXXXX)
+* [Calificaciones](https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201913778)
+* [Tareas](https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778)
+* [Foros](https://campusvirtual.ull.es/1920/mod/forum/index.php?id=201913778)
 
 ## GitHub
 
