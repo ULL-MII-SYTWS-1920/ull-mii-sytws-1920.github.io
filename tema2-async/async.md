@@ -12,9 +12,12 @@
 
 ## Promesas, Async/Await
 
-* [Promises: Basics](https://javascript.info/promise-basics)
+* [Introducción al Bucle de Eventos, Las Race Conditions, Las Promesas y los Web Workers](../tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/)
+* [Promises: Basics: https://javascript.info/promise-basics](https://javascript.info/promise-basics)
+
 * [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
+
 * [Asynchronous Iterators in JavaScript](https://www.codementor.io/tiagolopesferreira/asynchronous-iterators-in-javascript-jl1yg8la1) by Tiago Lopes
 
 ## Handling Events
