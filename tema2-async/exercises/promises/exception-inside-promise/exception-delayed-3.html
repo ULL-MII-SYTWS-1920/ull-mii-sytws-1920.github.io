@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    new Promise(function(resolve, reject) {
+      setTimeout(() => {
+        try {
+          throw new Error("Whoops!");
+        } catch(e) {
+          reject('rejected '+e);
+        }
+      }, 1000);
+    }).catch(alert);
+  </script>
+</body>
+</html>
