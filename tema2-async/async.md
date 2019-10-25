@@ -23,6 +23,15 @@
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
 * [Asynchronous Iterators in JavaScript](https://www.codementor.io/tiagolopesferreira/asynchronous-iterators-in-javascript-jl1yg8la1) by Tiago Lopes
 
+
+## Ejercicios
+
+* [Ejercicios de Promesas](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema2-async/exercises/promises)
+
+## Prácticas
+
+* [Descripción de la práctica Asynchronous Programming with Javascript EdX Course: Modules 1 (Asynchronous Fundamentals) and 2 (Promises) p7-t2-async-js-edx](practicas/p7-t2-async-js-edx)
+
 ### Referencias
 
 1. [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
@@ -42,11 +51,3 @@
 10. [Curso JavaScript Promises en Udacity](https://classroom.udacity.com/courses/ud898)
 10. [Book *The Modern Javascript Tutorial*. Chapter Promises, async/await](https://javascript.info/async)
 10. [Promises Workshop for JavaScript! Learn to wield promises like a master to write clean asynchronous code](https://github.com/stevekane/promise-it-wont-hurt) GitHub Repo. A Workshopper module that teaches you to use promises in javascript
-
-## Ejercicios
-
-* [Ejercicios de Promesas](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema2-async/exercises/promises)
-
-## Prácticas
-
-* [Descripción de la práctica Asynchronous Programming with Javascript EdX Course: Modules 1 (Asynchronous Fundamentals) and 2 (Promises) p7-t2-async-js-edx](practicas/p7-t2-async-js-edx)
