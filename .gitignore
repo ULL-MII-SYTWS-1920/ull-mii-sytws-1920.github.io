@@ -63,6 +63,11 @@ tema2-async/practicas/p4-t2-networking/networking-with-sockets-chapter-3
 tema2-async/practicas/p4-t2-networking/simpleChatApp
 tema2-async/practicas/p4-t2-networking/sol-nodejs-the-right-way
 
+tema2-async/exercises/async-examples
+tema2-async/exercises/async-js-book
+tema2-async/exercises/event-loop
+tema2-async/exercises/promises/javascript-info-book
+tema2-async/exercises/promises/javascript-info-book-promise-basics
 tema3-web/react-src
 tema3-web/web-workers-src
 tema3-web/websockets-src
