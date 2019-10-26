@@ -16,7 +16,7 @@ function loadScript(src, callback) {
 ```
 
 Rewrite the `loadScript` function using promises.
-Usage:
+Example of usage:
 
 ```js
  let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
