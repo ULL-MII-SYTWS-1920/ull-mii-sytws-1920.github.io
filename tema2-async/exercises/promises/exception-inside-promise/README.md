@@ -9,7 +9,7 @@ new Promise(function(resolve, reject) {
   }, 1000);
 ```
 
-The code of a **promise executor** and **promise handlers** has an "invisible `try..catch`" around it. 
+The code of a **[promise executor](executor.md)** and **promise handlers** has an "invisible `try..catch`" around it. 
 
 If an exception happens, it gets caught and treated as a rejection. So the former code is equivalent to this:
 
