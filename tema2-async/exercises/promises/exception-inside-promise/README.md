@@ -16,7 +16,7 @@ Remember that the code of a **[promise executor](executor.md)** and **promise ha
 
 If an exception happens, it gets caught and treated as a rejection. 
 
-Thus, the former code is equivalent to this:
+Thus, the former code is equivalent to this [exception-delayed-2.html](exception-delayed-2.html):
 
 ```js
  new Promise(function(resolve, reject) {
