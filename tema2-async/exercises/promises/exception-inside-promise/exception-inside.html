@@ -13,13 +13,9 @@
     */
     let p = new Promise((resolve, reject)  => {
       throw (new Error("Que fallo!"));
-    }).catch(console.log("Everything worked!"));
+    }).catch( (e) => console.log("Everything worked! "+e));
     /* Chrome:
-      Everything worked!
-      Uncaught (in promise) Error: Que fallo! exception-inside.html:15 
-        at exception-inside.html:15
-        at new Promise (<anonymous>)
-        at exception-inside.html:14
+      Everything worked! Error: Que fallo!
    */
   </script>
 </body>

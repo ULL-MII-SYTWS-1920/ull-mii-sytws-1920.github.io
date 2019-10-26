@@ -17,10 +17,9 @@
       } catch (e) {
         reject( "tilin!");
       }
-    }).catch(console.log("Everything worked!"));
+    }).catch( (e) => console.log("Everything worked! "+e));
     /* Chrome:
-      Everything worked!
-      exception-inside-2.html:1 Uncaught (in promise) tilin!
+      Everything worked! tilin!
     */
   </script>
 </body>
