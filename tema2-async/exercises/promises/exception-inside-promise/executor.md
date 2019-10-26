@@ -1,4 +1,4 @@
-# `new Promise(executor);``
+# `new Promise(executor);`
 
 ## Parameters
 
