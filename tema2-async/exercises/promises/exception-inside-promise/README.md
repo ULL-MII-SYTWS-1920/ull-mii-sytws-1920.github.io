@@ -1,3 +1,25 @@
+## Exception inside the action of a Promise
+
+**Will the message `"Everything worked!"` appear?** (See [exception-inside.html](exception-inside.html))
+
+```js
+  let p = new Promise((resolve, reject)  => {
+      throw (new Error("Que fallo!"));
+    }).catch(console.log("Everything worked!"));
+```
+
+**What will be the ouput of this variant of the former code?** (See [exception-inside-2.html](exception-inside-2.html))
+
+```js
+    let p = new Promise((resolve, reject)  => {
+      try {
+        throw (new Error("Que fallo!"));
+      } catch (e) {
+        reject( "tilin!");
+      }
+    }).catch(console.log("Everything worked!"));
+```
+
 ##  Exception Delayed with setTimeout inside the action of a Promise
 
 (Blog at [https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/))

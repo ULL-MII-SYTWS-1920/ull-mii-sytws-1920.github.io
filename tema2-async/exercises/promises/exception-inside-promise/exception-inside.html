@@ -14,6 +14,13 @@
     let p = new Promise((resolve, reject)  => {
       throw (new Error("Que fallo!"));
     }).catch(console.log("Everything worked!"));
+    /* Chrome:
+      Everything worked!
+      Uncaught (in promise) Error: Que fallo! exception-inside.html:15 
+        at exception-inside.html:15
+        at new Promise (<anonymous>)
+        at exception-inside.html:14
+   */
   </script>
 </body>
 </html>
