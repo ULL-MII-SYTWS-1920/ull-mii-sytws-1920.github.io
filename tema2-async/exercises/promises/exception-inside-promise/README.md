@@ -1,4 +1,4 @@
-## Exception inside the action of a Promise
+## First Exercise: Exception inside the action of a Promise
 
 (Blog view at [https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/))
 
@@ -28,7 +28,7 @@ If an exception happens, it gets caught and treated as a rejection.
 
 **What will be the rejection value of the promise?**
 
-##  Exception Delayed with setTimeout inside the action of a Promise
+## Second Exercise: Exception Delayed with setTimeout inside the action of a Promise
 
 (Blog at [https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/))
 
