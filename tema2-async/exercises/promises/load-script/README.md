@@ -28,3 +28,6 @@ promise.then(
 
 promise.then(script => alert('Another handler...'));
 ```
+
+## [Solution](index.html)
+
