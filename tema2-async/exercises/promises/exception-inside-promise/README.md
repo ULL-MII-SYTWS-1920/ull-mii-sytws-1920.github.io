@@ -27,9 +27,23 @@ Thus, the former code is equivalent to this [exception-delayed-2.html](exception
       } catch (e) { reject(e); }
     }).catch(alert);
 ```
+What is the sequences of actions taking place when this code executes?
 
+Is the former code equivalent to this one ([exception-delayed-3.html](exception-delayed-3.html))? :
 
-I have this example here:
+```js
+   new Promise(function(resolve, reject) {
+      setTimeout(() => {
+        try {
+          throw new Error("Whoops!");
+        } catch(e) {
+          reject('rejected '+e);
+        }
+      }, 1000);
+    }).catch(alert);
+```
+
+I have these examples here:
 
 ```
 ~/.../promises/exception-inside-promise(master)]$ pwd -P
