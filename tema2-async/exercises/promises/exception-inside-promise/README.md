@@ -1,6 +1,8 @@
+##  Exception Delayed with setTimeout inside the action of a Promise
+
 **What do you think? Will the `.catch` trigger?**
 
-Explain your answer.
+See the code in [exception-delayed.html](exception-delayed.html):
 
 ```js
 new Promise(function(resolve, reject) {
@@ -8,10 +10,13 @@ new Promise(function(resolve, reject) {
     throw new Error("Whoops!");
   }, 1000);
 ```
+Explain your answer.
 
-The code of a **[promise executor](executor.md)** and **promise handlers** has an "invisible `try..catch`" around it. 
+Remember that the code of a **[promise executor](executor.md)** and **promise handlers** has an "invisible `try..catch`" around it. 
 
-If an exception happens, it gets caught and treated as a rejection. So the former code is equivalent to this:
+If an exception happens, it gets caught and treated as a rejection. 
+
+Thus, the former code is equivalent to this:
 
 ```js
  new Promise(function(resolve, reject) {
