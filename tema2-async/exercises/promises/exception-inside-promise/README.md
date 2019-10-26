@@ -1,5 +1,7 @@
 ##  Exception Delayed with setTimeout inside the action of a Promise
 
+(Blog at [https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/))
+
 **What do you think? Will the `.catch` trigger?**
 
 See the code in [exception-delayed.html](exception-delayed.html):
