@@ -2,6 +2,10 @@
 
 (Blog view at [https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/))
 
+Remember that the code of a **[promise executor](executor.md)** and **promise handlers** has an "invisible `try..catch`" around it. 
+
+If an exception happens, it gets caught and treated as a rejection. 
+
 **Will the message `"Everything worked!"` appear?** (See [exception-inside.html](exception-inside.html))
 
 ```js
