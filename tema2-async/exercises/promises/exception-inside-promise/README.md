@@ -1,5 +1,7 @@
 ## Exception inside the action of a Promise
 
+(Blog at [https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/exception-inside-promise/))
+
 **Will the message `"Everything worked!"` appear?** (See [exception-inside.html](exception-inside.html))
 
 ```js
