@@ -135,6 +135,8 @@ Véase también
 [https://javascript.info/microtask-queue#unhandled-rejection](https://javascript.info/microtask-queue#unhandled-rejection)
 para una versión de este programa  en el cliente/browser
 
+### Summarizing
+
 1. `.catch` handles errors in promises of all kinds: be it a `reject()` call, or an error thrown in a handler.
 2. We should place `.catch` exactly in places where we want to handle errors and know how to handle them. 
 3. It’s ok not to use `.catch` at all, if there’s no way to recover from an error.

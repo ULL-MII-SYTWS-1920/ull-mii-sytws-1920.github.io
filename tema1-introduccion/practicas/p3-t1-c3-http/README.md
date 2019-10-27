@@ -1,7 +1,7 @@
 # Descripción de la práctica p3-t1-c3-http
 
-1. Siguiendo el capítulo 20 *Node.JS*  del libro Eloquent JavaScript (EJS) 
-escriba sus propios apuntes con ejemplos y realice los ejercicios que se indican a continuación
+1. Siguiendo el capítulo 20 *Node.JS*  del libro Eloquent JavaScript (EJS) escriba sus propios apuntes con ejemplos y realice los ejercicios que se indican a continuación.
+  En este capítulo se introduce Node.js, la librería para el manejo de archivos (`fs`) y la librería para construir servidores HTTP. Combinando ambas se construye un servicio HTTP que permite el manejo de archivos remoto. 
     - [Eloquent JS: Chapter 20 HTTP](http://eloquentjavascript.net/20_node.html)
     - [Eloquent JS: Chapter 20 HTTP](http://eloquentjavascript.net/2nd_edition/20_node.html) 2nd Edition
 3. Realice el ejercicio *Directory Creation* 
