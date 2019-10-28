@@ -33,7 +33,7 @@ fetch('https://javascript.info/article/promise-chaining/user.json')
 ```
 Once we got the loaded user, we can make one more request to GitHub, load the user profile and show the avatar:
 
-* [github.html](github.html)
+* See code deployed: [github.html](github.html)
 
 ```js
 <!DOCTYPE html><script>
