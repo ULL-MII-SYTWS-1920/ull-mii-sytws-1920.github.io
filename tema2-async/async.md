@@ -14,6 +14,9 @@
 
 * [Introducción al Bucle de Eventos, Las Race Conditions, Las Promesas y los Web Workers](../tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/)
 * [Promises: Basics: https://javascript.info/promise-basics](https://javascript.info/promise-basics)
+* [Promise Chaining](https://javascript.info/promise-chaining)
+
+### EdX: Asynchronous Programming with JS
 
 * [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
