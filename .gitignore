@@ -35,8 +35,12 @@ tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/js-learning-promise
 tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/promise-basics
 tema1-introduccion/practicas/p3-t1-c3-http/dsi189-p3-t1-c3-http
 tema1-introduccion/practicas/p3-t1-c3-http/the-http-module-chap20-ejs
-
-
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/exception-inside-promise
+tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/load-script
+   
+tema2-async/event-loop
+tema2-async/exercises/promises/event-loop
+tema2-async/exercises/promises/exception-inside-promise/event-loop
 tema2-async/RPC/
 tema2-async/promises/
 tema2-async/async-examples
