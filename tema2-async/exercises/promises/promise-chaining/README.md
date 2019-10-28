@@ -13,6 +13,8 @@ The promise resolves with a `response` object when the remote server responds wi
 
 To read the full response, we should call a method `response.text()`: it returns a promise that **resolves when the full text downloaded from the remote server, with that text as a result**.
 
+* [simple-request.html](simple-request.html)
+
 ```js
 <!DOCTYPE html><script>
 'use strict';
