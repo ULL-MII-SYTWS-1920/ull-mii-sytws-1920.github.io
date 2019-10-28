@@ -11,6 +11,50 @@
 
 * [Event loop: microtasks and macrotasks](https://javascript.info/microtask-queue) en el libro https://javascript.info
 
+## Splitting CPU Hungry Tasks
+
+### File [p2-t1-c3-file-system/event-loop/splitting-cpu-hungry-task.html](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/blob/master/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/splitting-cpu-hungry-task.html)
+```
+[~/.../p2-t1-c3-file-system/event-loop(master)]$ pwd -P
+/Users/casiano/campus-virtual/1920/sytws1920/apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop
+[~/.../p2-t1-c3-file-system/event-loop(master)]$ cat splitting-cpu-hungry-task.html 
+```
+
+```js
+<!DOCTYPE html>
+
+<div id="progress"></div>
+
+<script>
+'use strict';
+
+let start = Date.now();
+
+let i = 0;
+
+let chunk = () => {
+  // do a piece of the heavy job (*)
+  do {
+    i++;
+  } while (i % 1e5 != 0);
+  progress.innerHTML = i;
+};
+
+let stop = () => (i == 1e7);
+
+function count(task, condition) { 
+  if (condition()) {
+    alert("Done in " + (Date.now() - start) + 'ms');
+  } else {
+    setTimeout(() => count(task, condition)); // schedule the new call (**)
+  };
+  task();
+}
+
+count(chunk, stop);
+</script>
+```
+
 ## Web Workers
 
 ### /local/src/uai/uai2015/simple-web-worker
