@@ -57,8 +57,8 @@ fetch('https://javascript.info/article/promise-chaining/user.json')
 </script>
 ```
 
-How can we do something after the avatar has finished showing and gets removed? 
+**How can we do something after the avatar has finished showing and gets removed?**
 
-To make the chain extendable, we need to return a promise that resolves when the avatar finishes showing.
+HINT: To make the chain extendable, we need to return a promise that resolves when the avatar finishes showing.
 
 * [solution](solution.html)
