@@ -29,7 +29,6 @@
 
 * [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
-
 * [Asynchronous Iterators in JavaScript](https://www.codementor.io/tiagolopesferreira/asynchronous-iterators-in-javascript-jl1yg8la1) by Tiago Lopes
 
 ## Javascript.info: The Modern JavaScript Tutorial. Chapter [Generators, advanced iteration](https://javascript.info/generators-iterators)
@@ -39,9 +38,9 @@
 
 ## Handling Events
 
-* [Chapter 14: Handling Events](http://eloquentjavascript.net/14_event.html)
-* [How to Create Custom Events in JavaScript](https://www.sitepoint.com/javascript-custom-events/)
-* [Repo ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events con ejemplos y ejercicios](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events)
+* [Eloquent JS. Chapter 14: Handling Events](http://eloquentjavascript.net/14_event.html)
+  * [Repo ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events con ejemplos y ejercicios](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter14-handling-events)
+* [SitePoint Article: How to Create Custom Events in JavaScript](https://www.sitepoint.com/javascript-custom-events/)
 * [JavaScript and CSS: Coordinates](https://javascript.info/coordinates)
 
 
