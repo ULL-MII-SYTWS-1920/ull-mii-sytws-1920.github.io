@@ -31,7 +31,9 @@
     * [GitHub repoULL-MII-CA-1819/async-js](https://github.com/ULL-MII-CA-1819/async-js)
 * [Asynchronous Iterators in JavaScript](https://www.codementor.io/tiagolopesferreira/asynchronous-iterators-in-javascript-jl1yg8la1) by Tiago Lopes
 
-## Javascript.info: The Modern JavaScript Tutorial. Chapter [Generators, advanced iteration](https://javascript.info/generators-iterators)
+## Generators and Iterators
+
+### Javascript.info: The Modern JavaScript Tutorial. Chapter [Generators, advanced iteration](https://javascript.info/generators-iterators)
 
 *   [Generators](https://javascript.info/generators)
 *   [Async iterators and generators](https://javascript.info/async-iterators-generators)
