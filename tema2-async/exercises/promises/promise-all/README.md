@@ -2,6 +2,8 @@
 
 See [https://eloquentjavascript.net/11_async.html](https://eloquentjavascript.net/11_async.html).
 
+The [Github page is here: https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/promise-all/](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/promise-all/).
+
 Given an array of promises, `Promise.all` returns a promise that waits for all of the promises in the array to finish. 
 It then succeeds, yielding an array of result values. 
 If a promise in the array fails, the promise returned by all fails too, with the failure reason from the failing promise.
