@@ -20,7 +20,7 @@
         // wait 3 seconds
         await new Promise((resolve, reject) => setTimeout(resolve, 3000));
 
-        img.remove();
+        img.remove(); // removes the object from the tree it belongs to.
 
         return githubUser;
     }

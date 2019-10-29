@@ -13,8 +13,17 @@
 ## Promesas, Async/Await
 
 * [Introducción al Bucle de Eventos, Las Race Conditions, Las Promesas y los Web Workers](../tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/)
+
+### Javascript.info: The Modern JavaScript Tutorial
+
+* [Introduction: callbacks](https://javascript.info/callbacks)
 * [Promises: Basics: https://javascript.info/promise-basics](https://javascript.info/promise-basics)
 * [Promise Chaining](https://javascript.info/promise-chaining)
+* [Error handling with promises](https://javascript.info/promise-error-handling)
+* [Promise API](https://javascript.info/promise-api)
+* [Promisification](https://javascript.info/promisify)
+* [Microtasks](https://javascript.info/microtask-queue)
+* [Async/await](https://javascript.info/async-await)
 
 ### EdX: Asynchronous Programming with JS
 
