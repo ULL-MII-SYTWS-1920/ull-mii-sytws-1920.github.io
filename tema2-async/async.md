@@ -14,7 +14,7 @@
 
 * [Introducción al Bucle de Eventos, Las Race Conditions, Las Promesas y los Web Workers](../tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/)
 
-### Javascript.info: The Modern JavaScript Tutorial
+### Javascript.info: The Modern JavaScript Tutorial. Chapter Promises, async/await
 
 * [Introduction: callbacks](https://javascript.info/callbacks)
 * [Promises: Basics: https://javascript.info/promise-basics](https://javascript.info/promise-basics)
