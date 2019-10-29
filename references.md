@@ -25,6 +25,8 @@
 
 * <a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781785888960" target="_blank"> Mastering Node.js - Second Edition by: Sandro Pasquali; Kevin Faaborg</a>. Acceda por medio del <a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/"  target="_blank">PuntoQ</a> de la ULL
 
+* [Trasparencias curso de JS de MiriadaX](https://github.com/crguezl/miriada-upm-dsnh5jsnode/blob/master/traspas/transp_modulo2.pdf)
+
 ## RabbitMQ
 
 * [RabbitMQ Essentials By: David Dossot](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781783983209) (Debes estar autenticado via PuntoQ BULL)

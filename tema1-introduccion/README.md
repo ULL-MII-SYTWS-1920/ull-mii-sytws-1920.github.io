@@ -37,12 +37,3 @@
 
 * [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema1-introduccion/exercises/dom-exercises)
 
-## Referencias y Recursos para el Tema 1
-
-* [Org ULL-ESIT-PL-1819](https://github.com/ULL-ESIT-PL-1819)
-* [Org ULL-MII-CA-1819](https://github.com/ULL-MII-CA-1819)
-* [Org ULL-ESIT-DSI-1819](https://github.com/ULL-ESIT-DSI-1819)
-* [Org ULL-ESIT-PL-1718](https://github.com/ULL-ESIT-PL-1718)
-* [Org ULL-ESIT-MII-CA-1718](https://github.com/ULL-ESIT-MII-CA-1718)
-* [Org ULL-ESIT-DSI-1617](https://github.com/ULL-ESIT-DSI-1617)
-* [Trasparencias curso de JS de MiriadaX](https://github.com/crguezl/miriada-upm-dsnh5jsnode/blob/master/traspas/transp_modulo2.pdf)

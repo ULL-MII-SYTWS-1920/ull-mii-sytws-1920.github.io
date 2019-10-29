@@ -8,6 +8,18 @@
 * [Tareas](https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778)
 * [Foros](https://campusvirtual.ull.es/1920/mod/forum/index.php?id=201913778)
 
+### Campus Virtuales de Otras Asignaturas del Profesor
+
+## Referencias y Recursos para el Tema 1
+
+* [Org ULL-ESIT-PL-1819](https://github.com/ULL-ESIT-PL-1819)
+* [Org ULL-MII-CA-1819](https://github.com/ULL-MII-CA-1819)
+* [Org ULL-ESIT-DSI-1819](https://github.com/ULL-ESIT-DSI-1819)
+* [Org ULL-ESIT-PL-1718](https://github.com/ULL-ESIT-PL-1718)
+* [Org ULL-ESIT-MII-CA-1718](https://github.com/ULL-ESIT-MII-CA-1718)
+* [Org ULL-ESIT-DSI-1617](https://github.com/ULL-ESIT-DSI-1617)
+
+
 ## GitHub
 
 * [Página Web de SYTWS](https://ull-esit-sytws-1920.github.io)
