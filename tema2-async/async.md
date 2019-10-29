@@ -32,6 +32,11 @@
 
 * [Asynchronous Iterators in JavaScript](https://www.codementor.io/tiagolopesferreira/asynchronous-iterators-in-javascript-jl1yg8la1) by Tiago Lopes
 
+## Javascript.info: The Modern JavaScript Tutorial. Chapter [Generators, advanced iteration](https://javascript.info/generators-iterators)
+
+*   [Generators](https://javascript.info/generators)
+*   [Async iterators and generators](https://javascript.info/async-iterators-generators)
+
 ## Handling Events
 
 * [Chapter 14: Handling Events](http://eloquentjavascript.net/14_event.html)
