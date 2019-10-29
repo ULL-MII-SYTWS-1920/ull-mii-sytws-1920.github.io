@@ -25,12 +25,6 @@
 
 ## [Pruebas, Integración y Calidad](pruebas)
 
-
-## Capítulo. Programación Funcional
-
-- [Eloquent JS](http://eloquentjavascript.net/index.html): [High Order Functions](http://eloquentjavascript.net/05_higher_order.html)
-- [Repo ULL-ESIT-MII-CA-1718/ejs-chapter05-higher-order-functions](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter05-higher-order-functions)
-
 ## [Object Oriented Programming: OOP](oop)
 
 ## [Módulos](modulos)
@@ -47,21 +41,9 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
 
 
 
-## Capítulo. Diseño: Smells, Strategy Pattern y el Switch Smell
+## [Diseño, Principios, Functional Programming](design)
 
-* [Apuntes del curso 15/16: Code Smells/Código Hediondo](https://casianorodriguezleon.gitbooks.io/pl1516/content/apuntes/codesmell.html)
-* [Apuntes del curso 16/17: Patrones de Diseño](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/)
-* [Apuntes del curso 15/16: Eliminando Switch Smell](https://casianorodriguezleon.gitbooks.io/pl1516/content/practicas/noswitchsmell.html)
-* [Apuntes del curso 16/17: Strategy Pattern](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/strategypattern.html)
-* [Apuntes del curso 16/17: Práctica: Evaluar Strategy Pattern](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaevaluastrategypattern.html)
-* [Apuntes del curso 16/17: Práctica: Creación de Paquetes NPM y Strategy Pattern](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicamodulestrategypattern.html)
-* [JSHint](http://jshint.com/)
-
-## Capítulo. JavaScript and The Browser
-
-- [Eloquent JS](http://eloquentjavascript.net/index.html): [JavaScript and the Browser](http://eloquentjavascript.net/12_browser.html)
-
-## [The DOM, Events, Form Fields](dom)
+## [The Browser, The DOM, Events, Form Fields](dom)
 
 ### Ejercicios del DOM
 
