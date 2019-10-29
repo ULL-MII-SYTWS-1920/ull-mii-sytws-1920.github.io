@@ -37,12 +37,6 @@
 
 * [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema1-introduccion/exercises/dom-exercises)
 
-## Capítulo. Extending Visual Studio Code
-
-- <a href="https://code.visualstudio.com/api" target="_blank">Visual Studio Code Extension API</a>
-- <a href="https://youtu.be/j917FBGfttQ" target="_blank">Visual Studio Code Extension: hello (Youtube, vídeo del profesor)</a>
-- <a href="https://youtu.be/gNTjzcnLJQ4" target="_blank">Depurando una Extensión de Visual Studio Code (Youtube, vídeo del profesor)</a>
-
 ## Referencias y Recursos para el Tema 1
 
 * [Org ULL-ESIT-PL-1819](https://github.com/ULL-ESIT-PL-1819)
