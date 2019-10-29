@@ -292,10 +292,16 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
 
 ## Capítulo. The DOM
 
+### javascript.info: Document
+
 - [https://javascript.info/document: DOM](https://javascript.info/document)
     - [https://javascript.info/loading: Document and resource loading](https://javascript.info/loading)
     - [https://javascript.info/selection-range: Selection and Range](https://javascript.info/selection-range)
     - [https://javascript.info/mutation-observer](https://javascript.info/mutation-observer)
+    * [JavaScript and CSS: Coordinates](https://javascript.info/coordinates)
+
+### Eloquent JS: The Document Object Model
+
 - [Eloquent JS. Chapter13: The Document Object Model](http://eloquentjavascript.net/13_dom.html)
     - [Repository ULL-ESIT-MII-CA-1718/ejs-chapter13-DOM-examples with examples for Chapter13: The Document Object Model](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter13-DOM-examples)
     - [Repo ULL-ESIT-MII-CA-1718/the-document-object-model-KevMCh)](https://github.com/ULL-ESIT-MII-CA-1718/the-document-object-model-KevMCh)
