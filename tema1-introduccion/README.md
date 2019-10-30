@@ -25,7 +25,7 @@
 
 ## [Pruebas, Integración y Calidad](pruebas)
 
-## [Control de Versiones, WorkFlows, Registry](control-version)
+## [Software Development Cycle: Git Submodules, WorkFlows, Registry](control-version)
 
 ## [Object Oriented Programming: OOP](oop)
 
