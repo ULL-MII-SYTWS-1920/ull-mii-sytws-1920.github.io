@@ -19,10 +19,11 @@
     * What happens if the last data event completes a a JSON message, but without the trailing new line?
     * Write a case where the stream object sends a data event containing JSON but no newline, followed by a close event. How will you manage this case?
     * Should `LDJClient` emit a `close` event for its listeners? 
-* Realice el reto que le indique el profesor
+* Realice el [reto](reto) que se indica aquí
 
 ## Recursos
 
+* [Repo de bibliografía](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
 * [Safari. Chapter 3 Networking with Sockets](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-idot-getting-up-to-speed-on-nodedotjs-8/chp_networking_html)
 * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way)
@@ -56,3 +57,4 @@
 * [sol-c](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/tree/master/networking-with-sockets-chapter-3)
   - See the branch `chapter3-exercises`
 * [Sol -ai](https://github.com/ULL-MII-CA-1819/networking-ale-ivan)
+
