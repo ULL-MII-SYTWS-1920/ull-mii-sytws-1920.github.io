@@ -5,10 +5,13 @@ Lea:
 * Capítulo [WebSocket](https://javascript.info/websocket) del libro [The Modern JavaScript Tutorial](https://javascript.info/)
 * [Socket.io Official Guide: a chat](https://socket.io/get-started/chat/)
   - [Associated Repo](https://github.com/socketio/chat-example)
-* [Build a simple chat app with node.js and socket.io](https://medium.com/@noufel.gouirhate/build-a-simple-chat-app-with-node-js-and-socket-io-ea716c093088) By Noufel Gouirhate Dec 24, 2017 Medium.com
-  - [Repo ULL-ESIT-DSI-1819/simpleChatApp](https://github.com/ULL-ESIT-DSI-1819/simpleChatApp)
 
 ## Bibliografía Complementaria
+
+### Build a simple chat app with node.js and socket.io Medium.com
+
+* [Build a simple chat app with node.js and socket.io](https://medium.com/@noufel.gouirhate/build-a-simple-chat-app-with-node-js-and-socket-io-ea716c093088) By Noufel Gouirhate Dec 24, 2017 Medium.com
+  - [Repo ULL-ESIT-DSI-1819/simpleChatApp](https://github.com/ULL-ESIT-DSI-1819/simpleChatApp)
 
 ### Real Time Presentation Slides
 
