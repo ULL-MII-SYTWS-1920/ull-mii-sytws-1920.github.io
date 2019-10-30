@@ -16,6 +16,7 @@ Estudie y desarrolle el ejemplo explicado en:
 
       Session affinity, sometimes referred to as sticky sessions, is a platform feature that associates all HTTP requests coming from an end-user with a single application instance (web dyno).
     * Repo [ULL-ESIT-DSI-1819/websocket-ws-heroku](https://github.com/ULL-ESIT-DSI-1819/websocket-ws-heroku)
+* Realice el [reto](reto)
 
 ## Recursos
 
