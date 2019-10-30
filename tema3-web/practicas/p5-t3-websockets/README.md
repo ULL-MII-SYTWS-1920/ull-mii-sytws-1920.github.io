@@ -1,6 +1,8 @@
 # Práctica p5-t3-websockets
 
-Estudie y desarrolle el ejemplo explicado en:
+Lea el capítulo [WebSocket](https://javascript.info/websocket) del libro [The Modern JavaScript Tutorial](https://javascript.info/) y haga un resumen de lo aprendido.
+
+Estudie también y desarrolle el ejemplo explicado en:
 
 * [Build a simple chat app with node.js and socket.io](https://medium.com/@noufel.gouirhate/build-a-simple-chat-app-with-node-js-and-socket-io-ea716c093088) By Noufel Gouirhate Dec 24, 2017  Medium.com
   - [Repo ULL-ESIT-DSI-1819/simpleChatApp](https://github.com/ULL-ESIT-DSI-1819/simpleChatApp)
@@ -20,6 +22,7 @@ Estudie y desarrolle el ejemplo explicado en:
 
 ## Recursos
 
+* Capítulo [WebSocket](https://javascript.info/websocket) del libro [The Modern JavaScript Tutorial](https://javascript.info/)
 * WebSockets
   * Socket.io
     * [Socket.io Guide: a chat](https://socket.io/get-started/chat/)
