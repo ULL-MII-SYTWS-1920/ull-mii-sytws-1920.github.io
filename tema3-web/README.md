@@ -4,6 +4,10 @@
 
 ## [WebSockets](websockets.md)
 
+## Prácticas
+
+* [Descripción de la práctica p5-t3-websockets](practicas/p5-t3-websockets)
+
 ## [Web Workers](web-workers)
 
 ## [REST](rest.md)
