@@ -8,6 +8,7 @@
   - Though the `DELETE` method is wired up to delete directories (using `fs.rmdir`), 
   the file server currently does not provide any way to create a directory.  Add 
   support for a method `MKCOL`, which should create a directory by calling `fs.mkdir` 
+4. Realice el ejercicio *A public space on the web*
 4. Instale [insomia](https://insomnia.rest/) o [postman](https://www.getpostman.com/) para usarlo como cliente de prueba.
 5. Genere documentación para su código usando algunas de las herramientas que aparecen en la sección recursos
 5. Escriba un gulpfile con tareas usando `curl` para probar el comportamiento del servidor con los diferentes requests. Aquí tiene un ejemplo (incompleto) en gulp 3.9:
