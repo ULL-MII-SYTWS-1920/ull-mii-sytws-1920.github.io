@@ -32,6 +32,11 @@
 ## Executing shell commands with gulp 4.0
 
 ```
+[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ pwd -P
+/Users/casiano/local/src/javascript/eloquent-javascript-3/juanIrache-solutions/20_3_public_space
+```
+
+```
 [~/.../juanIrache-solutions/20_3_public_space(master)]$ cat gulpfile.js 
 ```
 
