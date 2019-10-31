@@ -37,29 +37,46 @@
 
 ## Recursos
 
+### Sobre como hacer esta práctica
+
 * [Eloquent JS 2nd Edition: Chapter 20 HTTP](http://eloquentjavascript.net/2nd_edition/20_node.html)
 * [Vídeo del profesor con sugerencias para la solución de la práctica](https://youtu.be/gxrBEfjgRdM)
   * [![https://img.youtube.com/vi/gxrBEfjgRdM/sddefault.jpg](https://img.youtube.com/vi/gxrBEfjgRdM/sddefault.jpg)](https://youtu.be/gxrBEfjgRdM)
-
-* [Repo con las soluciones K.](https://github.com/ULL-ESIT-MII-CA-1718/nodejs-KevMCh) (No disponible ahora)
-* [Repo con las soluciones C.](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter20-node-js) (No disponible ahora)
-* [The fs.promises API provides an alternative set of asynchronous file system methods that return Promise objects rather than using callbacks](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api)
+* [Lecture 04/11/2019 in GitHub pages](https://ull-mii-sytws-1920.github.io/clases/2019-11-04/)
+* [See this repo with (modified) solutions of Juan Irache to EJS exercises](https://github.com/ULL-MII-SYTWS-1920/eloquent-javascript-exercises)
+  - [Solutions 20_3_a_public_space](https://github.com/ULL-MII-SYTWS-1920/eloquent-javascript-exercises/tree/master/20_3_public_space)
+* [Node.js docs: Anatomy of an HTTP Transaction](https://nodejs.org/es/docs/guides/anatomy-of-an-http-transaction/)
 * [How to Develop Web Application using pure Node.js (HTTP GET and POST, HTTP Server)](https://youtu.be/nuw48-u3Yrg) Vídeo en Youtube. 2015
-* [Anatomy of an HTTP Transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/)
-* Documentación:  
-  * [documentation.js](http://documentation.js.org/), 
-  * [jsdoc](https://www.npmjs.com/package/jsdoc), 
-  * [docco](http://jashkenas.github.io/docco`)
-* Gulp
-  * Véase la sección [Gulp](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/apuntes/gulp/) de los apuntes
-  * [gulp quick start](https://gulpjs.com/docs/en/getting-started/quick-start)
-  * [gulp getting started](https://gulpjs.org/getting-started.html)
-* Diseño
+
+### fs.promises
+
+* [The fs.promises API provides an alternative set of asynchronous file system methods that return Promise objects rather than using callbacks](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api)
+
+### Documentación de Código  
+
+* [documentation.js](http://documentation.js.org/), 
+* [jsdoc](https://www.npmjs.com/package/jsdoc), 
+* [docco](http://jashkenas.github.io/docco`)
+
+### Gulp
+
+* [JavaScript and Gulpfiles](https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles)
+* Véase la sección [Gulp](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/apuntes/gulp/) de los apuntes
+* [gulp quick start](https://gulpjs.com/docs/en/getting-started/quick-start)
+* [gulp getting started](https://gulpjs.org/getting-started.html)
+
+### Diseño
+
   * [Apuntes: Code Smells](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/codesmell.html)
   * [Principios de Diseño](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/designprinciples.html)
   * [Patrones de Diseño](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/)
   * [Strategy Pattern](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/patterns/strategypattern.html)
+
+## Para el profesor
+
 * `/Users/casiano/local/src/javascript/eloquent-javascript/chapter20-node-js/` (recurso para el profesor)
+* [Repo con las soluciones K.](https://github.com/ULL-ESIT-MII-CA-1718/nodejs-KevMCh) (No disponible ahora)
+* [Repo con las soluciones C.](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter20-node-js) (No disponible ahora)
 
 ## Reto
 
