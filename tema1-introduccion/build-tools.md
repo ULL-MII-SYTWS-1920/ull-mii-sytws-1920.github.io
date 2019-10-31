@@ -29,7 +29,9 @@
 *   [Vinyl.isCustomProp()](https://gulpjs.com/docs/en/api/vinyl-iscustomprop)
 
 
-## Executing shell commands with gulp 4.0
+## Executing shell commands with gulp 
+
+### En gulp 4.0
 
 ```
 [~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ pwd -P
@@ -133,6 +135,26 @@ stderr:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  
 ```
 
 
-## Gulp 3.9
+## En Gulp 3.9
 
 * Véase la sección [Gulp](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/apuntes/gulp/) de los apuntes
+
+Aquí tiene un ejemplo (incompleto) en gulp 3.9:
+
+  ```js
+  var gulp = require("gulp");
+  var shell = require("gulp-shell");
+
+  gulp.task("pre-install", shell.task([
+        "npm i -g gulp static-server",
+        "npm install -g nodemon",
+        "npm install -g gulp-shell"
+  ]));
+
+  gulp.task("serve", shell.task("nodemon server.js"));
+
+  gulp.task("lint", shell.task("jshint *.js **/*.js"));
+
+  gulp.task("get", shell.task("curl -v http://localhost:8000/file.txt"));
+  gulp.task("put", shell.task("curl -v -X PUT -d 'Bye world!' http://localhost:8000/file.txt"));
+  ```
