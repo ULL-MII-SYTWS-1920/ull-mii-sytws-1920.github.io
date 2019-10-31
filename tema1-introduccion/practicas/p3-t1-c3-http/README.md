@@ -88,8 +88,6 @@
 *   [Vinyl.isVinyl()](https://gulpjs.com/docs/en/api/vinyl-isvinyl)
 *   [Vinyl.isCustomProp()](https://gulpjs.com/docs/en/api/vinyl-iscustomprop)
 
-* Véase la sección [Gulp](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/apuntes/gulp/) de los apuntes
-
 
 ### Diseño
 
