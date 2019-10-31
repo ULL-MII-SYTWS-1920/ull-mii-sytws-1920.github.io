@@ -60,10 +60,19 @@
 
 ### Gulp
 
-* [JavaScript and Gulpfiles](https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles)
+*   [Quick Start](https://gulpjs.com/docs/en/getting-started/quick-start)
+*   [JavaScript and Gulpfiles](https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles)
+*   [Creating Tasks](https://gulpjs.com/docs/en/getting-started/creating-tasks)
+*   [Async Completion](https://gulpjs.com/docs/en/getting-started/async-completion)
+*   [Working with Files](https://gulpjs.com/docs/en/getting-started/working-with-files)
+*   [Explaining Globs](https://gulpjs.com/docs/en/getting-started/explaining-globs)
+*   [Using Plugins](https://gulpjs.com/docs/en/getting-started/using-plugins)
+*   [Watching Files](https://gulpjs.com/docs/en/getting-started/watching-files)
+
+
+
 * Véase la sección [Gulp](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/apuntes/gulp/) de los apuntes
-* [gulp quick start](https://gulpjs.com/docs/en/getting-started/quick-start)
-* [gulp getting started](https://gulpjs.org/getting-started.html)
+
 
 ### Diseño
 
