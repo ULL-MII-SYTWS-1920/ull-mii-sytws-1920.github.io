@@ -28,6 +28,11 @@ Workflows run in Linux, macOS, Windows, and containers on GitHub-hosted servers.
 *   [Contacting support](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#contacting-support)
 *   [Further reading](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#further-reading)
 
+### Videos about GitHub Actions
+
+* [GitHub Actions: Open Source Workflow Automation by Bas Peters](https://youtu.be/Tl4mbL45PKU) YoutTube video
+* [Introduction to GitHub Actions : my website build & deployment](https://youtu.be/rgxbeIvQj0Q)
+
 ## GitHub Package Registry
 
 GitHub Package Registry is a software package hosting service, similar to npmjs.org, rubygems.org, or hub.docker.com, that allows you to host your packages and code in one place. You can host software packages privately or publicly and use them as dependencies in your projects.
