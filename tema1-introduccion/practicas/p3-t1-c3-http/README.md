@@ -11,27 +11,8 @@
 4. Realice el ejercicio *A public space on the web*
 4. Instale [insomia](https://insomnia.rest/) o [postman](https://www.getpostman.com/) para usarlo como cliente de prueba.
 5. Genere documentación para su código usando algunas de las herramientas que aparecen en la sección recursos
-5. Escriba un gulpfile con tareas usando `curl` para probar el comportamiento del servidor con los diferentes requests. Aquí tiene un ejemplo (incompleto) en gulp 3.9:
+5. Escriba un gulpfile con tareas usando `curl` para probar el comportamiento del servidor con los diferentes requests. 
 
-  ```js
-  var gulp = require("gulp");
-  var shell = require("gulp-shell");
-
-  gulp.task("pre-install", shell.task([
-        "npm i -g gulp static-server",
-        "npm install -g nodemon",
-        "npm install -g gulp-shell"
-  ]));
-
-  gulp.task("serve", shell.task("nodemon server.js"));
-
-  gulp.task("lint", shell.task("jshint *.js **/*.js"));
-
-  gulp.task("get", shell.task("curl -v http://localhost:8000/file.txt"));
-  gulp.task("put", shell.task("curl -v -X PUT -d 'Bye world!' http://localhost:8000/file.txt"));
-
-
-  ```
 
 6. Entregue los enlaces al repositorio en GitHub 
 
