@@ -2,6 +2,8 @@
 
 ## Instalar VirtualBox
 
+VirtualBox is a generic tool for running virtual machines. You can use it to run Ubuntu, Windows, OS X, etc. inside your  operating system host.
+
 ```
 $ brew cask install virtualbox
 ```
@@ -9,6 +11,7 @@ $ brew cask install virtualbox
 ## Instalar minikube
 
 Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
+
 
 ```
 $ brew install minikube
@@ -164,6 +167,11 @@ $ minikube start
 
 ## kubectl api-versions
 
+`kubectl` is the command line application that lets you interact with your Minikube Kubernetes cluster. It sends request to the **Kubernetes API server running on the cluster** to manage your Kubernetes environment. 
+
+`kubectl` is like any other application that runs on your machine: it just makes HTTP requests to the **Kubernetes API** on the cluster.
+
+```
 $ kubectl api-versions
 admissionregistration.k8s.io/v1
 admissionregistration.k8s.io/v1beta1
@@ -197,7 +205,7 @@ scheduling.k8s.io/v1beta1
 storage.k8s.io/v1
 storage.k8s.io/v1beta1
 v1
-
+```
 
 ## Referencias
 
