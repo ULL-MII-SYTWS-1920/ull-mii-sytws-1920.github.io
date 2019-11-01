@@ -3,13 +3,13 @@
 ## Instalar VirtualBox
 
 ```
-[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ brew cask install virtualbox
+$ brew cask install virtualbox
 ```
 
 ## Instalar minikube
 
 ```
-[~/.../juanIrache-solutions/20_3_public_space(master)]$ brew install minikube
+$ brew install minikube
 Updating Homebrew...
 ==> Downloading https://homebrew.bintray.com/bottles/minikube-1.5.2.high_sierra.bottle.tar.gz
 ==> Downloading from https://akamai.bintray.com/5c/5c5d913c4cd18463ab10384d35fc59624e678874d8219cbc5af3b88a17eb89d8?__gda__=exp=15
@@ -23,7 +23,7 @@ zsh completions have been installed to:
   /usr/local/share/zsh/site-functions
 ==> Summary
 🍺  /usr/local/Cellar/minikube/1.5.2: 8 files, 51.5MB
-[~/.../juanIrache-solutions/20_3_public_space(master)]$ minikube start
+$ minikube start
 😄  minikube v1.5.2 on Darwin 10.13.6
 ✨  Automatically selected the '' driver
 💣  Unable to determine a default driver to use. Try specifying --vm-driver, or see https://minikube.sigs.k8s.io/docs/start/
@@ -32,7 +32,7 @@ zsh completions have been installed to:
 ## minikube help
 
 ```
-[~/.../juanIrache-solutions/20_3_public_space(master)]$ minikube help
+$ minikube help
 Minikube is a CLI tool that provisions and manages single-node Kubernetes clusters optimized for development workflows.
 
 Basic Commands:
@@ -77,7 +77,7 @@ Use "minikube <command> --help" for more information about a given command.
 ## Configurar `vm-driver` para minikube
 
 ```
-[~/.../juanIrache-solutions/20_3_public_space(master)]$ minikube help config
+$ minikube help config
 config modifies minikube config files using subcommands like "minikube config set vm-driver kvm"
 Configurable fields: 
 
@@ -141,14 +141,14 @@ Use "minikube config options" for a list of global command-line options (applies
 ```
 
 ```
-[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ minikube config set vm-driver virtualbox
+$ minikube config set vm-driver virtualbox
 ⚠️  These changes will take effect upon a minikube delete and then a minikube start
 ```
 
 ## Start Minikube and create a cluster
 
 ```
-[~/.../juanIrache-solutions/20_3_public_space(master)]$ minikube start
+$ minikube start
 😄  minikube v1.5.2 on Darwin 10.13.6
 🔥  Creating virtualbox VM (CPUs=2, Memory=2000MB, Disk=20000MB) ...
 🐳  Preparing Kubernetes v1.16.2 on Docker '18.09.9' ...
