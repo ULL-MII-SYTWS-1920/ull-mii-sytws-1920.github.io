@@ -250,6 +250,20 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 ## kubectl api-versions
 
 ```
+$ kubectl help api-versions
+Print the supported API versions on the server, in the form of "group/version"
+
+Examples:
+  # Print the supported API versions
+  kubectl api-versions
+
+Usage:
+  kubectl api-versions [flags] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+```
+
+```
 $ kubectl api-versions
 admissionregistration.k8s.io/v1
 admissionregistration.k8s.io/v1beta1
@@ -285,12 +299,6 @@ storage.k8s.io/v1beta1
 v1
 ```
 
-## Referencias
-
-* [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
-* [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/#starting-a-cluster)
-* [Instalar y Configurar kubectl](https://kubernetes.io/es/docs/tasks/tools/install-kubectl/#antes-de-empezar)
-
 ## Stop the cluster: minikube stop
 
 ```
@@ -298,3 +306,20 @@ v1
 ✋  Stopping "minikube" in virtualbox ...
 🛑  "minikube" stopped.
 ```
+
+## Seen the status: minikube status
+
+```
+$ minikube status
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+```
+
+## Referencias
+
+* [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
+* [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/#starting-a-cluster)
+* [Instalar y Configurar kubectl](https://kubernetes.io/es/docs/tasks/tools/install-kubectl/#antes-de-empezar)
+* [Interacting with your cluster](https://kubernetes.io/docs/setup/learning-environment/minikube/#interacting-with-your-cluster)
