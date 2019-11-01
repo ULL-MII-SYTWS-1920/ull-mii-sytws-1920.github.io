@@ -212,3 +212,11 @@ v1
 * [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
 * [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/#starting-a-cluster)
 * [Instalar y Configurar kubectl](https://kubernetes.io/es/docs/tasks/tools/install-kubectl/#antes-de-empezar)
+
+## Stop the cluster: minikube stop
+
+```
+[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ minikube stop
+✋  Stopping "minikube" in virtualbox ...
+🛑  "minikube" stopped.
+```
