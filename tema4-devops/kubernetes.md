@@ -1,4 +1,6 @@
-# Kubernetes
+# Installing Kubernetes with Minikube
+
+Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
 ## [Installation](kubernetes-installation)
 
