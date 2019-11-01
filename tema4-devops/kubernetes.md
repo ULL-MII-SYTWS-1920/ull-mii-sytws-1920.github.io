@@ -2,14 +2,22 @@
 
 Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.
 
+## Minikube Features
+
+*   [Minikube Features](https://kubernetes.io/docs/setup/learning-environment/minikube/#minikube-features)
+
 ## [Installation](kubernetes-installation)
+
+*   [Installation](https://kubernetes.io/docs/setup/learning-environment/minikube/#installation)
 
 ## [Quickstart](kubernetes-quickstart)
 
-*   [Minikube Features](https://kubernetes.io/docs/setup/learning-environment/minikube/#minikube-features)
-*   [Installation](https://kubernetes.io/docs/setup/learning-environment/minikube/#installation)
 *   [Quickstart](https://kubernetes.io/docs/setup/learning-environment/minikube/#quickstart)
+
+## Managing Your Cluster
+
 *   [Managing your Cluster](https://kubernetes.io/docs/setup/learning-environment/minikube/#managing-your-cluster)
+
 *   [Interacting with Your Cluster](https://kubernetes.io/docs/setup/learning-environment/minikube/#interacting-with-your-cluster)
 *   [Networking](https://kubernetes.io/docs/setup/learning-environment/minikube/#networking)
 *   [Persistent Volumes](https://kubernetes.io/docs/setup/learning-environment/minikube/#persistent-volumes)
