@@ -159,3 +159,10 @@ Use "minikube config options" for a list of global command-line options (applies
 ⌛  Waiting for: apiserver
 🏄  Done! kubectl is now configured to use "minikube"
 ```
+
+
+## Referencias
+
+* [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
+* [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/#starting-a-cluster)
+* [Instalar y Configurar kubectl](https://kubernetes.io/es/docs/tasks/tools/install-kubectl/#antes-de-empezar)
