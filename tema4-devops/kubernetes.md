@@ -471,6 +471,14 @@ $ kubectl delete services hello-minikube
 service "hello-minikube" deleted
 ```
 
+Stop the local Minikube cluster:
+
+```
+$ minikube stop
+✋  Stopping "minikube" in virtualbox ...
+🛑  "minikube" stopped.
+```
+
 ## Referencias
 
 * [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
