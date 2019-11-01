@@ -491,6 +491,15 @@ $ minikube stop
 🛑  "minikube" stopped.
 ```
 
+Delete the local Minikube cluster:
+
+```
+$ minikube delete
+🔥  Deleting "minikube" in virtualbox ...
+💔  The "minikube" cluster has been deleted.
+🔥  Successfully deleted profile "minikube"
+```
+
 ## Referencias
 
 * [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
