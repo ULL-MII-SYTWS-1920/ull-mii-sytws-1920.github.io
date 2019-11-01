@@ -1,4 +1,4 @@
-{% include github-actions.html %}
+{% include github-actions.md %}
 
 ## Referencias
 
