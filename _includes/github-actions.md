@@ -1,4 +1,4 @@
-## GitHub Actions
+
 
 GitHub Actions enables you to create custom software development life cycle (SDLC) workflows directly in your GitHub repository.
 
@@ -16,7 +16,3 @@ Workflows run in Linux, macOS, Windows, and containers on GitHub-hosted servers.
 *   [Contacting support](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#contacting-support)
 *   [Further reading](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#further-reading)
 
-### Videos about GitHub Actions
-
-* [GitHub Actions: Open Source Workflow Automation by Bas Peters](https://youtu.be/Tl4mbL45PKU) YoutTube video
-* [Introduction to GitHub Actions : my website build & deployment](https://youtu.be/rgxbeIvQj0Q)
