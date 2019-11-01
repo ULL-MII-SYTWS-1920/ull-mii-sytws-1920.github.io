@@ -415,6 +415,29 @@ Usage:
 Use "kubectl options" for a list of global command-line options (applies to all commands).
 ```
 
+## kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+
+```
+$ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+deployment.apps/hello-minikube created
+```
+
+```
+[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+deployment.apps/hello-minikube created
+[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl expose deployment hello-minikube --type=NodePort --port=8080
+service/hello-minikube exposed
+[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl get pod
+NAME                              READY   STATUS    RESTARTS   AGE
+hello-minikube-797f975945-xqfgp   1/1     Running   0          2m22s
+[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ minikube service hello-minikube --url
+http://192.168.99.100:30861
+```
+
+![kubernetes-local-cluster-info.png](kubernetes-local-cluster-info.png)
+
+
+
 ## Referencias
 
 * [How to Install Kubernetes on Mac](https://matthewpalmer.net/kubernetes-app-developer/articles/guide-install-kubernetes-mac.html) from the Kubernetes for Application Developers Book
