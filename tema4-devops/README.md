@@ -34,6 +34,8 @@ zsh completions have been installed to:
 💣  Unable to determine a default driver to use. Try specifying --vm-driver, or see https://minikube.sigs.k8s.io/docs/start/
 ```
 
+## minikube help
+
 ```
 [~/.../juanIrache-solutions/20_3_public_space(master)]$ minikube help
 Minikube is a CLI tool that provisions and manages single-node Kubernetes clusters optimized for development workflows.
