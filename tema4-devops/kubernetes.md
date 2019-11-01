@@ -417,22 +417,50 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 
 ## kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
 
+Now, you can interact with your cluster using `kubectl`. 
+
+For more information, see [Interacting with Your Cluster](https://kubernetes.io/docs/setup/learning-environment/minikube/#interacting-with-your-cluster).
+
+Let’s create a Kubernetes Deployment using an existing image named `echoserver`, 
+which is a simple HTTP server and expose it on port 8080 using `--port`.
+
 ```
 $ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
 deployment.apps/hello-minikube created
 ```
 
+To access the hello-minikube Deployment, expose it as a Service:
+
 ```
-[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
-deployment.apps/hello-minikube created
 [~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl expose deployment hello-minikube --type=NodePort --port=8080
 service/hello-minikube exposed
+```
+
+The option `--type=NodePort` specifies the type of the Service.
+
+The `hello-minikube` Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.
+
+Check if the Pod is up and running:
+
+```
 [~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl get pod
 NAME                              READY   STATUS    RESTARTS   AGE
 hello-minikube-797f975945-xqfgp   1/1     Running   0          2m22s
+```
+If the output shows the `STATUS` as `ContainerCreating`, the Pod is still being created.
+If the output shows the `STATUS` as `Running`, the Pod is now up and running.
+
+
+Get the URL of the exposed Service to view the Service details:
+
+```
 [~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ minikube service hello-minikube --url
 http://192.168.99.100:30861
 ```
+
+To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.
+
+The output is similar to this:
 
 ![kubernetes-local-cluster-info.png](kubernetes-local-cluster-info.png)
 
