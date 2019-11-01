@@ -464,7 +464,12 @@ The output is similar to this:
 
 ![kubernetes-local-cluster-info.png](kubernetes-local-cluster-info.png)
 
+If you no longer want the Service and cluster to run, you can delete them.
 
+```
+$ kubectl delete services hello-minikube
+service "hello-minikube" deleted
+```
 
 ## Referencias
 
