@@ -471,6 +471,18 @@ $ kubectl delete services hello-minikube
 service "hello-minikube" deleted
 ```
 
+Delete the hello-minikube Deployment:
+
+```
+kubectl delete deployment hello-minikube
+```
+
+The output is similar to this:
+
+```
+deployment.extensions "hello-minikube" deleted
+```
+
 Stop the local Minikube cluster:
 
 ```
