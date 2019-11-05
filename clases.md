@@ -7,7 +7,9 @@
         <h2>{{ currentMonth }}</h2>
          <ul>
       {% endif %}
+
            <li><a href="{{ post.url }}">{{ post.title }}</a> </li>
+      
       {% assign previousMonth = currentMonth %}
   {% endfor %}
          </ul>
