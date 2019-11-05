@@ -8,7 +8,7 @@
   {% endfor %}
 </ul>
 
-<!-->
+<!--
 <div id="posts">
   <h2>Clases</h2>
   {% for post in site.posts %}
