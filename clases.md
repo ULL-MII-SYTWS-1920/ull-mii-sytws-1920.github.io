@@ -1,4 +1,4 @@
-# Clases
+<h1> Clases</h1>
 
   {% assign previousMonth = "0" %}
   {% for post in site.posts %}
