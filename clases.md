@@ -1,15 +1,11 @@
-<h1> Clases</h1>
+# Clases
 
   {% assign previousMonth = "0" %}
   {% for post in site.posts %}
      {% assign currentMonth = post.date | date: "%m" %}
       {% if currentMonth != previousMonth %}
-        <h2>{{ currentMonth }}</h2>
-         <ul>
+## {{ currentMonth }}
       {% endif %}
-
-           <li><a href="{{ post.url }}">{{ post.title }}</a> </li>
-      
+* [{{ post.title }}]({{ post.url }})
       {% assign previousMonth = currentMonth %}
   {% endfor %}
-         </ul>
