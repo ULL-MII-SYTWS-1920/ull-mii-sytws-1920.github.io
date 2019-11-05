@@ -5,7 +5,7 @@
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a> 
       {% capture post_month %}{{post.date | date: "%m"}}{% endcapture %}
-      {{post_month}}
+      Month: {{post_month}}
     </li>
   {% endfor %}
 </ul>
