@@ -10,10 +10,6 @@ un macro-repo que consiste en el repo del módulo y en el programa de uso.
   - [Submódulo https://github.com/ULL-ESIT-DSI-1617/scapegoat](https://github.com/ULL-ESIT-DSI-1617/scapegoat)
   - [Submódulo https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat](https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat)
 
-## GitHub Actions
-
-{% include github-actions.md %}
-
 ### Videos about GitHub Actions
 
 {% include videos-about-github-actions.md %}
