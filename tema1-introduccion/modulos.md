@@ -14,6 +14,7 @@
      var Article = require('../../../models/article');
     ```
    Those suck for maintenance and they're ugly.
+* [Veáse la sección *GitHub Package Registry* de estos apuntes]({{site.baseurl}}/tema4-devops/control-version#github-package-registry)
 
 ## Capítulo. Módulos en ECMA6
 
