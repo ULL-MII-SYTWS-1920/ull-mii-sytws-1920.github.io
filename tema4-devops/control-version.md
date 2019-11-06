@@ -14,6 +14,10 @@ un macro-repo que contiene los  repos acoplados.
   - [Submódulo https://github.com/ULL-ESIT-DSI-1617/scapegoat](https://github.com/ULL-ESIT-DSI-1617/scapegoat)
   - [Submódulo https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat](https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat)
 
+## GitHub Actions
+
+{% include github-actions.md %}
+
 ### Videos about GitHub Actions
 
 {% include videos-about-github-actions.md %}
