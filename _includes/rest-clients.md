@@ -5,13 +5,13 @@ Rest API can be tested with tools like:
 * Postman
 * Curl
 
-##### Example Using Insomnia
+**Example Using Insomnia**
 
 ![request with inmsomnia](/assets/images/insomnia.png)
 
 * [https://insomnia.rest/](https://insomnia.rest/)
 
-##### Example Using Postman
+**Example Using Postman**
 
 ![request with Postman](/assets/images/postman.png)
 
@@ -19,7 +19,7 @@ Rest API can be tested with tools like:
 * [API Building and Testing Made Easier with Postman](https://www.sitepoint.com/api-building-and-testing-made-easier-with-postman/)
 * [Postman docs](https://learning.getpostman.com/docs/postman/launching_postman/installation_and_updates/)
 
-##### Example Using curl
+**Example Using curl**
 
 ```
 ~/.../chapter20-node-js-crguezl/the-http-module(master)]$ curl -d "param1=value1&param2=value2" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://10.150.22.51:8000/data
