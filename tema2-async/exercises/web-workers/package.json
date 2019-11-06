@@ -1,0 +1,23 @@
+{
+  "name": "simple-web-worker",
+  "version": "1.0.0",
+  "description": "Ejemplo de uso de Web Workers.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SYTW/simple-web-worker.git"
+  },
+  "keywords": [],
+  "author": "Casiano Rodriguez-Leon <casiano.rodriguez.leon@gmail.com> (https://github.com/crguezl)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SYTW/simple-web-worker/issues"
+  },
+  "homepage": "https://github.com/SYTW/simple-web-worker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
