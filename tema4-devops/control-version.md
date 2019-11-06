@@ -2,8 +2,12 @@
 
 ## Git Submódulos. Repos con varios Subproyectos
 
-A la hora de hacer un paquete para npm es conveniente tener un repositorio cliente de prueba. Esto nos lleva a crear 
-un macro-repo que consiste en el repo del módulo y en el programa de uso.
+En muchas ocasiones es necesario tener junto a nuestro repo de proyecto otros repos de otros proyectos.
+Por ejemplo, cuando hacemos un paquete para npm es conveniente tener junto al repo del paquete un segundo 
+repositorio con un cliente que nos sirva para probar el correcto uso del paquete en producción. 
+Esto nos lleva a veces a crear 
+un macro-repo que contiene los  repos acoplados.
+
 
 * [Chacon's book on Git: Chapter 7.11 Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 * [Ejemplo en https://github.com/ULL-ESIT-DSI-1617/create-a-npm-module](https://github.com/ULL-ESIT-DSI-1617/create-a-npm-module)
