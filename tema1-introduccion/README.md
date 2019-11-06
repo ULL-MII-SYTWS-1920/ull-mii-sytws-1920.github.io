@@ -27,8 +27,6 @@
 
 ## [Build Tools](build-tools)
 
-## [Software Development Cycle: Git Submodules, WorkFlows, Registry](control-version)
-
 ## [Object Oriented Programming: OOP](oop)
 
 ## [Módulos](modulos)
