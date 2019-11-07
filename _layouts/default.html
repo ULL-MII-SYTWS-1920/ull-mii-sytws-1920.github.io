@@ -68,13 +68,15 @@
 
         </section>
     </div>
-
     <section>
-        <h2>Table of Contents</h2>
-        {% include toc.html html=content %}
-    </section>
+            {% include disqus.html %}
+        </section>
+    
     <section>
-        {% include disqus.html %}
+        <div class="column">
+                <h2>Table of Contents</h2>
+                {% include toc.html html=content %}
+        </div>
     </section>
 
 
