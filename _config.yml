@@ -1,6 +1,6 @@
 title: 'Sistemas y Tecnologías Web: Servidor'
 subtitle: 'Master de Ingeniería Informática'
-theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "plum" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 #theme: jekyll-theme-midnight
 description: '1er cuatrimestre. ULL. Curso 2019/2020'
