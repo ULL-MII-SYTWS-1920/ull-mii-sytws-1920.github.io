@@ -6,6 +6,6 @@
       {% if currentMonth != previousMonth %}
 ### Classes during the month of {{ currentMonth }}
       {% endif %}
-* [{{ post.title }}]({{ post.url }}) path ({{post.path}})
+* [{{ post.title }}]({{ post.url }}) path ({{site.repo_apuntes}}{{post.path}})
       {% assign previousMonth = currentMonth %}
   {% endfor %}
