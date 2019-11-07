@@ -15,55 +15,69 @@ it can’t succeed or fail again, and further calls to the functions that resolv
 This can simplify the way you handle failure of your promise.
 
 
-```js
-function Promise_all(promises) {
-  return new Promise((resolve, reject) => {
-    // Your code here.
-  });
-}
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-// Test code.
-Promise_all([]).then(array => {
-  console.log('This should be []:', array);
-});
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise.all</title>
+</head>
 
-function soon(val) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(val), Math.random() * 500);
-  });
-}
+<body>
+    <h1>Open the Developer tools</h1>
+    <script>
+        function Promise_all(promises) {
+           // Fill the code
+        }
 
-Promise_all([soon(1), soon(2), soon(3)]).then(array => {
-  console.log('This should be [1, 2, 3]:', array);
-});
+        // Test code.
+        Promise_all([]).then(array => {
+            console.log('This should be []:', array);
+        });
 
-Promise_all([soon(5), soon(2), soon("a")]).then(array => {
-  console.log('This should be [5, 2, "a"]:', array);
-});
+        function soon(val) {
+            return new Promise(resolve => {
+                setTimeout(() => resolve(val), Math.random() * 500);
+            });
+        }
 
-Promise_all([soon(1), Promise.reject('X'), soon(3)])
-  .then(array => {
-    console.log('We should not get here');
-  })
-  .catch(error => {
-    if (error === 'X') {
-      console.log('Rejection correctly managed!')
-    } else 
-      console.log('Unexpected failure:', error);
-  });
+        Promise_all([soon(1), soon(2), soon(3)]).then(array => {
+            console.log('This should be [1, 2, 3]:', array);
+        });
 
-Promise_all([
-    soon(1), 
-    new Promise(() => { throw(new Error('Muerto!')) }), 
-    soon(3)
-  ])
-  .then(array => {
-    console.log('We should not get here');
-  })
-  .catch(error => {
-     if (/Muerto!/.test(error.message)) 
-      console.log('Exception correctly managed!:');
-  });
+        Promise_all([soon(5), soon(2), soon("a")]).then(array => {
+            console.log('This should be [5, 2, "a"]:', array);
+        });
+
+        Promise_all([soon(1), Promise.reject('X'), soon(3)])
+            .then(array => {
+                console.log('We should not get here');
+            })
+            .catch(error => {
+                if (error === 'X') {
+                    console.log('Rejection correctly managed!')
+                } else
+                    console.log('Unexpected failure:', error);
+            });
+
+        Promise_all([
+            soon(1),
+            new Promise(() => { throw (new Error('Muerto!')) }),
+            soon(3)
+        ])
+            .then(array => {
+                console.log('We should not get here');
+            })
+            .catch(error => {
+                if (/Muerto!/.test(error.message))
+                    console.log('Exception correctly managed!:');
+            });        
+    </script>
+</body>
+</html>
   ```
 ## Hints
 
