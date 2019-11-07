@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/favicon.ico?">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1"> 
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
@@ -27,7 +27,7 @@
             <li><a href="{{site.baseurl}}/timetables.html">Hor</a></li>
             <li><a href="{{site.baseurl}}/references.html">Refs</a></li>
             <li><a href="{{site.campus_virtual}}">Prác</a></li>
-        
+
             <li><a href="{{site.baseurl}}/clases.html">Clas</a></li>
             <li><a href="{{site.baseurl}}/tema0-presentacion/">T 0</a></li>
             <li><a href="{{site.baseurl}}/tema1-introduccion/">T 1</a></li>
@@ -51,23 +51,36 @@
                 <h1>{{ site.title | default: site.github.repository_name }}</h1>
                 <p> {{ site.description | default: site.github.project_tagline }}</p>
                 <hr>
-                <span class="credits left">Organization <a href="{{ site.github.owner_url }}" target="_blank">{{ site.github.owner_name }}</a></span>
-                <span class="credits left"> &nbsp; Github Classroom <a href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom" target="_blank">SYTWS 19/20</a></span>
-                <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS 19/20</a></span>
-                <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="_blank">Casiano</a></span>
-            </div>      
+                <span class="credits left">Organization <a href="{{ site.github.owner_url }}"
+                        target="_blank">{{ site.github.owner_name }}</a></span>
+                <span class="credits left"> &nbsp; Github Classroom <a
+                        href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+                        target="_blank">SYTWS 19/20</a></span>
+                <span class="credits left"> &nbsp; Campus Virtual <a
+                        href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+                        19/20</a></span>
+                <span class="credits left"> &nbsp; Profesor <a
+                        href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+                        _blank">Casiano</a></span>
+            </div>
 
             {{ content }}
 
         </section>
     </div>
-    
-    
+
+    <section>
+        <h2>Table of Contents</h2>
+        {% include toc.html html=content %}
+        {% include disqus.html %}
+    </section>
+
+
     {% if site.google_analytics %}
     <script type="text/javascript">
-        (function(i, s, o, g, r, a, m) {
+        (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
+            i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
