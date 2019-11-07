@@ -5,54 +5,28 @@ title: Search
 ---
 
 
-  <style media="screen">
-    body {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: -apple-system, BlinkMacSystemFont,
-        "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif;
-    }
-    form {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 300px;
-      width: 20vw;
-    }
-    input {
-      font-family: inherit;
-      font-size: inherit;
-      width: 100%;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-  </style>
+<h1>Search</h1>
 
-    <h1>Search</h1>
-    <form id="search-form" action="">
-      <label class="label" for="search">Search term:</label>
-      <br/>
-      <input class="input" id="search" type="text" name="search" placeholder="e.g. Promise" autocomplete="off">
-      <ul class="list  list--results" id="list">
+<form id="search-form" action="">
+  <label class="label" for="search">Search term:</label>
+  <br/>
+  <input class="input" id="search" type="text" name="search" placeholder="e.g. Promise" autocomplete="off">
+  
+  <ul class="list  list--results" id="list">
+  </ul>
+</form>
 
-      </ul>
-    </form>
-    <script type="text/javascript" src="/assets/src/fetch.js"></script>
-    <script type="text/javascript" src="/assets/src/search.js"></script>
-    <script type="text/javascript">
-      const search = new jekyllSearch(
-        'https://ull-mii-sytws-1920.github.io/assets/src/search.json',
-        '#search',
-        '#list',
-        'https://ull-mii-sytws-1920.github.io/'
-      );
-      search.init(); 
-    </script>
-    <noscript>Please enable JavaScript to use the search form.</noscript>
+<script type="text/javascript" src="/assets/src/fetch.js"></script>
+<script type="text/javascript" src="/assets/src/search.js"></script>
+<script type="text/javascript">
+
+  const search = new jekyllSearch(
+    'https://ull-mii-sytws-1920.github.io/assets/src/search.json',
+    '#search',
+    '#list',
+    'https://ull-mii-sytws-1920.github.io/'
+  );
+  search.init(); 
+  
+</script>
+<noscript>Please enable JavaScript to use the search form.</noscript>
