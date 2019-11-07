@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default 
 permalink: /categories/
 title: Categories
 ---
