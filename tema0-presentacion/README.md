@@ -10,7 +10,9 @@
 
 ## [Contenidos](../)
 
-### [Contenidos por Categorías]({{site.baseurl}}/categories/)
+## [Clases]({{site.baseurl}}clases.html)
+
+### [Clases por Categorías]({{site.baseurl}}/categories/)
 
 ## [Recursos](../resources.md)
 
