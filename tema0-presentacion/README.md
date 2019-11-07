@@ -10,6 +10,8 @@
 
 ## [Contenidos](../)
 
+### [Contenidos por Categorías](categories/)
+
 ## [Recursos](../resources.md)
 
 ## [Calendarios, Horarios y Fechas de Exámenes](../timetables.md)
