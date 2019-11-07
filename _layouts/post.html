@@ -62,9 +62,11 @@
             {{ content }}
 
         </section>
-
-        {% include comments.html %}
-
+        <section>
+            <h2>COMMENTS</h2>
+                {% include comments.html %}
+        </section>
+    
     </div>
 
     {% if site.google_analytics %}
