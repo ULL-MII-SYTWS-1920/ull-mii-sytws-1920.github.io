@@ -1,3 +1,4 @@
+TESTING ...
 {% capture default_slug %}{{ page.slug | default: (page.title | slugify) }}{% endcapture %}
 {% capture slug %}{{ (page.slug | fallback: default_slug) | downcase | replace: '.', '-' | replace: '_' : '-' }}{% endcapture %}
 {% assign comments_map = site.data.comments[slug] %}
