@@ -17,3 +17,22 @@ profesor_name: Casiano
 acronimo: SYTWS
 acronimo_curso: SYTWS 19/20
 emptyArray: []
+comments:
+  receiver: https://{{your-receiver-site}}/api/PostComment}}
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: page
+      author: crguezl
+      commenting: open
+  -
+    scope:
+      path: '_posts'
+      type: posts
+    values:
+      layout: post
+      author: crguezl
+      commenting: open
