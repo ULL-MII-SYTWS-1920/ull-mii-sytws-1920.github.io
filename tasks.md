@@ -1,3 +1,7 @@
+---
+layout: error
+---
+
 # Prácticas Publicadas
 
 {% for practica in site.practicas %}
