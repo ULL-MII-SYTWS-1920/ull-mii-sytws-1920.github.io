@@ -16,6 +16,7 @@ collections:
       - p01-t1-iaas.md
       - p2-t1-vscode.md
       - p2-t1-c3-file-system
+      - p3-t1-c3-http
       - p4-t2-networking.md
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
 github_org: https://github.com/ULL-MII-SYTWS-1920
