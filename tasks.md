@@ -2,6 +2,6 @@
 
 {% for practica in site.practicas %}
 
-##  <a href="{{ practica.myurl }}">Práctica con myurl {{ practica.name }}</a>
+##  <a href="{{ practica.myurl }}">Práctica {{ practica.name }}</a>
 
 {% endfor %}
