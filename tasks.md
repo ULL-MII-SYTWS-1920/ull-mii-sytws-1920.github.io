@@ -1,7 +1,5 @@
-<h1>Prácticas Publicadas</h1>
+# Prácticas Publicadas
 
-<ol>
 {% for practica in site.practicas %}
-<li>  <a href="{{ practica.myurl }}">Práctica con myurl {{ practica.name }}</a></li>
+##  <a href="{{ practica.myurl }}">Práctica con myurl {{ practica.name }}</a>
 {% endfor %}
-</ol>
