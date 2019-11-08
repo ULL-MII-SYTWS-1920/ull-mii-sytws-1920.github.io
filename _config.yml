@@ -10,7 +10,7 @@ exclude:
 show_downloads: false
 live_reload: true
 collections: 
-  - practicas:
+  practicas: 
     output: true
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
 github_org: https://github.com/ULL-MII-SYTWS-1920
