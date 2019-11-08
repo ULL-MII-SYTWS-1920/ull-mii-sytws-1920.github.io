@@ -1,6 +1,10 @@
+
 # Páginas
 
-  {% for page in site.pages %}
+{% for page in site.pages %}
 
-* [{{ page.title }}]({{ page.url }}) ([Clase en el repo]({{site.repo_apuntes}}/tree/master/{{page.path}}))
-  {% endfor %}
+  {% if page.title contains "Práctica" %}
+* [{{ page.title }}]({{ page.url }}) ([Página en el repo]({{site.repo_apuntes}}/tree/master/{{page.path}}))
+  {% endif %}
+
+{% endfor %}
