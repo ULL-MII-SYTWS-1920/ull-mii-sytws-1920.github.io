@@ -1,5 +1,5 @@
 
-# Páginas
+# Prácticas
 
 {% for page in site.pages %}
 
