@@ -1,8 +1,3 @@
----
-layout: default
-title:  "Práctica p4-t2-networking"
-categories: Practicas
----
 
 # Práctica p4-t2-networking
 

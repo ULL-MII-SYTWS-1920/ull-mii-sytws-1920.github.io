@@ -1,8 +1,4 @@
----
-layout: default
-title:  "Práctica p2-t1-vscod"
-categories: Practicas
----
+
 
 # Descripción de la Práctica p2-t1-vscode
 

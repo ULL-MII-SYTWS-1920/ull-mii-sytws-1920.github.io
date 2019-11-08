@@ -1,8 +1,4 @@
----
-layout: default
-title:  "Práctica p01-t1-iaas"
-categories: Practicas
----
+
 
 # Descripción de la Práctica p01-t1-iaas
 
