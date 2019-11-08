@@ -1,8 +1,3 @@
----
-layout: default
-categories: Teoria
----
-
 # Tema 0:Introducción a la Asignatura 
 
 ## [Guías Docentes del Máster Universitario en Ingeniería Informática (2020 - 2021)](https://www.ull.es/apps/guias/guias/view_degree/670) Aún no elaboradas
