@@ -1,6 +1,6 @@
 ---
 layout: error
-permalink: tasks
+permalink: practicas
 ---
 
 # Prácticas Publicadas
