@@ -25,6 +25,7 @@
 ## Recursos
 
 * [Repo con una solución a esta práctica con despliegue usando GitHub Actions](https://github.com/ULL-MII-SYTWS-1920/p4-t2-networking-crguezl)
+* Vea  la clase de SYTWS del [Lunes 11/11/2019](https://ull-mii-sytws-1920.github.io/web/2019/11/11/leccion.html#chapter-3-networking-with-sockets)
 * [Repo de bibliografía](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
 * [Safari. Chapter 3 Networking with Sockets](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-idot-getting-up-to-speed-on-nodedotjs-8/chp_networking_html)
