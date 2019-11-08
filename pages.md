@@ -6,6 +6,8 @@
   {% if (page.title contains "Descripción de la Práctica") 
     or
     (page.title contains "Descripcion de la Práctica")
+    or
+    (page.title contains "Descripcion de la Practica")
     and 
     (page.path contains "/practicas/") 
   %}
