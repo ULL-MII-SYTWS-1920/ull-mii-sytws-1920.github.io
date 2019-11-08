@@ -9,9 +9,9 @@
     or
     (page.title contains "Descripcion de la Practica")
     or
-    (page.title contains "Descripcion de la práctica")
+    (page.title contains "Descripción de la práctica")
     or
-    (page.title contains "descripcion de la práctica")
+    (page.title contains "descripción de la práctica")
     and 
     (page.path contains "/practicas/") 
   %}
