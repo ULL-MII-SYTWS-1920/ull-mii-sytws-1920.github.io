@@ -6,7 +6,8 @@
    * [Book "Node.js 8 the Right Way"](https://books.google.es/books?id=oA9QDwAAQBAJ&lpg=PT96&ots=-mLQPlvsSj&dq=should%20ldjclient%20emit%20a%20close%20event&hl=es&pg=PP1#v=onepage&q=should%20ldjclient%20emit%20a%20close%20event&f=false) 2018 Edition. Google Books
     * [Capítulo 3 "Networking with Sockets" de *Node.JS The Right Way*](https://github.com/iMarcoGovea/books/blob/master/nodejs/Node.js%20the%20Right%20Way.pdf)  old edition
 * Añadan pruebas y documentación
-* Añada Integración Contínua usando Travis (Haga un badge en su README.md)
+* Utilice [GitHub Actions]({{site.baseurl}/tema4-devops/control-version.html#github-actions}) para añadir Integración Contínua y realizar sus pruebas en GitHub
+* Si no la hecho nunca añada también Integración Contínua usando Travis (Haga un badge en su README.md)
 * Escriba en su `README.md`un tutorial con lo que ha aprendido en este capítulo
 * Añada un `gulpfile.js` para facilitar la ejecución de las tareas
 * Testability
