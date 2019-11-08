@@ -11,7 +11,7 @@ permalink: practicas
 
 ##  <a href="{{ practica.myurl }}">Práctica {{ practica.name }}</a>
 
-###  <a href="{{ practica.yurl }}">Esquema Práctica {{ practica.name }}</a>
+###  <a href="{{ practica.url }}">Esquema Práctica {{ practica.name }}</a>
 
 
 
