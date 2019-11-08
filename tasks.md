@@ -6,6 +6,6 @@ layout: error
 
 {% for practica in site.practicas %}
 
-##  <a href="{{ practica.myurl }}">Práctica {{ practica.name }}</a>
+##  <a href="{{ practica.myurl }}">Práctica frontmatter {{ practica.name }}</a>
 
 {% endfor %}
