@@ -8,6 +8,8 @@
     (page.title contains "Descripcion de la Práctica")
     or
     (page.title contains "Descripcion de la Practica")
+    or
+    (page.title contains "Descripcion de la práctica")
     and 
     (page.path contains "/practicas/") 
   %}
