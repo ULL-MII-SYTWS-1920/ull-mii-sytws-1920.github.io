@@ -33,7 +33,7 @@
 
 ## [Tema 4:DevOps](tema4-devops/)
 
-## [Prácticas Publicadas](tasks)
+## [Prácticas Publicadas](practicas)
 
 <!--
 ## [TFA: Creating a Beautiful User Experience](tema3-web/practicas/p12-tfa-user-experience)
