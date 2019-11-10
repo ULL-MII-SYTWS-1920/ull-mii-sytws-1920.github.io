@@ -1,0 +1,2 @@
+* [Serverless: Wikipedia](https://en.wikipedia.org/wiki/Serverless_computing)
+* [Introduction to Serverless Computing with AWS Lambda](https://www.contino.io/files/Contino-Introduction-to-Serverless-Computing-with-AWS-Lambda.pdf)
