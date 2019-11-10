@@ -33,6 +33,6 @@
 
 ## [Extending Visual Studio Code](extending-vscode)
 
-## [WebAssembly](ebassembly)
+## [WebAssembly](webassembly)
 
 
