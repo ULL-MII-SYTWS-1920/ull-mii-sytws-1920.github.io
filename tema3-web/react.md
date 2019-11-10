@@ -13,6 +13,13 @@
 3. [Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
 4. [Components and Props](https://reactjs.org/docs/components-and-props.html)
 5. [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+6.  [Handling Events](/docs/handling-events.html)
+7.  [Conditional Rendering](/docs/conditional-rendering.html)
+8.  [Lists and Keys](/docs/lists-and-keys.html)
+9.  [Forms](/docs/forms.html)
+10. [Lifting State Up](/docs/lifting-state-up.html)
+11. [Composition vs Inheritance](/docs/composition-vs-inheritance.html)
+12. [Thinking In React](/docs/thinking-in-react.html)
 
 ## Creating a React App
 
