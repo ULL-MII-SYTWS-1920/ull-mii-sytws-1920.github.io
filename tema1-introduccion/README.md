@@ -31,7 +31,9 @@
 
 ## [Módulos](modulos)
 
-## [Diseño, Principios, Functional Programming](design)
+## [Functional Programming](functional)
+
+## [Diseño, Principios](design)
 
 ## [The Browser, The DOM, Events, Form Fields](dom)
 

@@ -1,9 +1,3 @@
-## Capítulo. Programación Funcional
-
-- [Eloquent JS](http://eloquentjavascript.net/index.html): [High Order Functions](http://eloquentjavascript.net/05_higher_order.html)
-- [Repo ULL-ESIT-MII-CA-1718/ejs-chapter05-higher-order-functions](https://github.com/ULL-ESIT-MII-CA-1718/ejs-chapter05-higher-order-functions)
-
-
 ## Capítulo. Diseño: Smells, Strategy Pattern y el Switch Smell
 
 * [Apuntes del curso 15/16: Code Smells/Código Hediondo](https://casianorodriguezleon.gitbooks.io/pl1516/content/apuntes/codesmell.html)
