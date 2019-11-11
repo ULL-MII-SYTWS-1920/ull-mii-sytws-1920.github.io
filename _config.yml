@@ -18,6 +18,7 @@ collections:
       - p2-t1-c3-file-system
       - p3-t1-c3-http
       - p4-t2-networking.md
+      - p5-t3-websockets
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
 github_org: https://github.com/ULL-MII-SYTWS-1920
 repo_apuntes: https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/
