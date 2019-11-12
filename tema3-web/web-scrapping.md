@@ -1,6 +1,5 @@
 ## Capítulo: Web Scrapping
 
-
 > **Crawling** refers to the act of going through multiple sites. **Web scrapping** refers to going after content from a website. Scrapping refers to the act of getting the content from the site. See [Stackoverflow](https://stackoverflow.com/questions/4327392/what-is-the-difference-between-web-crawling-and-web-scraping)
 
 * Lea el 
