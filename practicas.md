@@ -5,7 +5,9 @@ permalink: practicas
 
 # Prácticas Publicadas
 
-## [Al Libro de Calificaciones](https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201913778)
+## [Al Libro de Calificaciones]({{site.calificador})
+
+## [A la lista de Prácticas en el Campus]({{site.campus_virtual}})
 
 {% for practica in site.practicas %}
 
