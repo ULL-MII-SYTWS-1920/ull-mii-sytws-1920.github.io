@@ -41,10 +41,10 @@
 
             {{ content }}
 
-            <div class="wrapper">
-                <b><a href="{{page.previous.url}}">Lección Anterior &#x2190;</a></b>
-                <b><a href="{{page.next.url}}">Siguiente Lección &#x2192;</a></b>    
+            <div id="tail">
+                {% include navigation-bar %}
             </div>
+            <!-- end tail -->
             
             <details>
                 <summary>
