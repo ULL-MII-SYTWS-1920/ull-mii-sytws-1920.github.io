@@ -11,6 +11,9 @@ pl1819
 
 *.code-workspace
 
+.sass-cache
+assets/.sass-cache
+
 tema1-introduccion/dmsi-apuntes
 tema1-introduccion/practicas/learning-ecma6
 tema1-introduccion/practicas/p3-t1-c3-http/a-public-space-on-the-web-KevMCh
@@ -127,6 +130,7 @@ tema3-web/graphql-src
 
 
 tema4-graphql/learning-graphql
+tema4-devops/github-actions-learning
 
 tfa
 .vscode
