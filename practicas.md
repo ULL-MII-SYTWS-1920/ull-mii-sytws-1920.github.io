@@ -3,11 +3,13 @@ layout: error
 permalink: practicas
 ---
 
-# Prácticas Publicadas
+
 
 ## [Al Libro de Calificaciones]({{site.calificador}})
 
 ## [A la lista de Prácticas en el Campus]({{site.campus_virtual}})
+
+## Lista de Prácticas Publicadas
 
 {% for practica in site.practicas %}
 
