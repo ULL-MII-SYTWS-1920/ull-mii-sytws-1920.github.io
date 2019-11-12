@@ -3,6 +3,8 @@
 
 // @import "";
 
+@import "{{ site.theme }}";
+
 .bar {
     z-index: 100;
     left:0;
