@@ -100,6 +100,8 @@ this new information.
 Finally, extend the book object produced in `parse-rdf.js` to include
 this data to make the test pass.
 
+## [Reto](reto)
+
 
 ## Recursos
 
