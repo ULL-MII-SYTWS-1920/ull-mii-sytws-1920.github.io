@@ -20,28 +20,8 @@
 
 <body>
     <div id="header">
-        <nav>
-            <li><a href="{{ site.github.repository_url }}" title="GitHub repo">&#x1f419</a></li>
-            <li><a href="{{site.baseurl}}/search" title="search">&#x1F50D;</a></li>
-            <li><a href="{{site.baseurl}}/index.html" title="Home page">&#x1f3e0</a></li>
-            <li><a href="{{site.baseurl}}/resources.html" title="resources">&#x2699</a></li>
-            <li><a href="{{site.baseurl}}/timetables.html" title="horarios">&#x1f5d3</a></li>
-            <li><a href="{{site.baseurl}}/references.html" title="bibliografia">&#x1f4da</a></li>
-            <li><a href="{{site.campus_virtual}}" title="prácticas">&#x270d</a></li>
-
-            <li><a href="{{site.baseurl}}/clases.html" title="clases">👨‍🏫</a></li>
-            <li><a href="{{site.baseurl}}/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
-            <li><a href="{{site.baseurl}}/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
-            <li><a href="{{site.baseurl}}/tema2-async/" title="Tema 2: Async">2</a></li>
-            <li><a href="{{site.baseurl}}/tema3-web/" title="Tema 3: Web">3</a></li>
-            <li><a href="{{site.baseurl}}/tema4-devops/" title="Tema 4: Devops">4</a></li>
-            {% if site.show_downloads %}
-            <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-            <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-            <li class="title">DOWNLOADS</li>
-            {% endif %}
-        </nav>
-    </div>
+            {% include navigation-bar-default.html %}
+            </div>
     <!-- end header -->
 
 
@@ -79,7 +59,10 @@
                 </summary>
                 {% include disqus.html %}
             </details>
-
+            <div class="bar">
+                    {% include navigation-bar-default.html %}
+                </div>
+                <!-- end bar -->
 
         </section>
     </div>
