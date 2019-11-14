@@ -6,6 +6,7 @@
 
 <details>
 <summary>Respuesta</summary>
+
 ```
 Elephant
 elem-attributes.html:9 inner <h1>Attributes</h1>
@@ -14,4 +15,5 @@ elem-attributes.html:13 id = elem
 elem-attributes.html:13 about = Elephant
 elem-attributes.html:13 test = 123
 ```
+
 </details>
