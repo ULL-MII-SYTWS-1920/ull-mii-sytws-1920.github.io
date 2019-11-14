@@ -4,7 +4,7 @@
 
 ### Ejercicios del DOM
 
-* [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema1-introduccion/exercises/dom-exercises)
+* [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema3-we/exercises/dom)
 
 
 ## [HTTP](http)
