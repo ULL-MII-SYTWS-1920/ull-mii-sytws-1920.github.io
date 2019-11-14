@@ -21,7 +21,7 @@
 
 ### Ejercicios del DOM
 
-* [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema1-introduccion/exercises/dom-exercises)
+* [Ejercicios del DOM]({{site.repo_apuntes}}/tree/master/tema3-web/exercises/dom)
 
 ## Capítulo. Events
 
@@ -37,3 +37,4 @@
     - [Repo ULL-ESIT-MII-CA-1718/forms-and-form-fields-KevMCh](https://github.com/ULL-ESIT-MII-CA-1718/forms-and-form-fields-KevMCh)
 - [Developer Moxilla. Sending forms through JavaScript](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
   * [Using FormData bound to a form element](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript#Using_FormData_bound_to_a_form_element)
+
