@@ -5,7 +5,7 @@
 ```
 
 <details>
-<summary>Respuesta</summary>
+<summary><h3>Respuesta</h3></summary>
 
 ```
 Elephant
