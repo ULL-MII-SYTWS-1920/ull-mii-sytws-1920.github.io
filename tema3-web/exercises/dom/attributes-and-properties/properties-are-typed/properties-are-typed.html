@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+
+        <div id="div" style="color:red;font-size:120%">Hello</div>
+
+        <script>
+          // string
+          console.log(div.getAttribute('style')); // color:red;font-size:120%
+        
+          // object
+          console.log(div.style); // [object CSSStyleDeclaration]
+          console.log(div.style.color); // red
+        </script>
+
         <a id="a" href="#hello">link</a>
         <script>
           // attribute
