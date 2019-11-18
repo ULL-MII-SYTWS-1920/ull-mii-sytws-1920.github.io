@@ -2,8 +2,8 @@
 
 Lea los capítulos 
 
-* [Chapter Document of JavaScript.info book](https://javascript.info/document)
-* [Chapter 14 of Eloquent JS: The Document Object Model](http://eloquentjavascript.net/14_dom.html)
+* [Chapter *Document* of JavaScript.info book](https://javascript.info/document)
+* [Chapter 14 of Eloquent JS: *The Document Object Model*](http://eloquentjavascript.net/14_dom.html)
 
 y haga los correspondientes ejercicios.
 
