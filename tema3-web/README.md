@@ -2,6 +2,10 @@
 
 ## [The Browser, The DOM, Events, Form Fields](dom)
 
+### Práctica del DOM p4-t3-dom
+
+* [Descripción de la práctica p4-t3-dom](practicas/p4-t3-dom/)
+
 ### Ejercicios del DOM
 
 * [Ejercicios del DOM](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema3-web/exercises/dom) 
