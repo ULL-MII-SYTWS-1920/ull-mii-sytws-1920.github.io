@@ -13,6 +13,10 @@
     - [https://javascript.info/mutation-observer](https://javascript.info/mutation-observer)
     * [JavaScript and CSS: Coordinates](https://javascript.info/coordinates)
 
+### Práctica del DOM p4-t3-dom
+
+* [Descripción de la práctica p4-t3-dom](practicas/p4-t3-dom/)
+
 ### Eloquent JS: The Document Object Model
 
 - [Eloquent JS. Chapter13: The Document Object Model](http://eloquentjavascript.net/13_dom.html)
