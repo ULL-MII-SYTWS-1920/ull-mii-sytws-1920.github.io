@@ -7,4 +7,4 @@ Lea los capítulos
 
 y haga los correspondientes ejercicios.
 
-elabore un informe en el repo asignado al efecto.
+Elabore un informe en el repo asignado al efecto.
