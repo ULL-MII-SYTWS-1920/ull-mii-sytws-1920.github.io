@@ -23,7 +23,7 @@
 
 ## Creating a React App
 
-This page describes a few popular React toolchains which help with tasks like:
+This page describes a few popular React toolchains (like create-react-app, [gatsby](https://www.gatsbyjs.org/)) which help with tasks like:
 
 - Scaling to many files and components.
 - Using third-party libraries from npm.

@@ -46,6 +46,6 @@
 
 ## [WebAssembly](webassembly)
 
-## [Jekyll](jekyll)
+## [Tools for Static Blogs](static-blogs)
 
 
