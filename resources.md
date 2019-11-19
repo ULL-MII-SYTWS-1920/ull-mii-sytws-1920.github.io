@@ -26,6 +26,13 @@
 * [Organización ULL-ESIT-SYTWS-1920](https://github.com/ULL-ESIT-SYTWS-1920)
   - [Repo ull-esit-sytws-1920.github.io](https://github.com/ULL-ESIT-SYTWS-1920/ull-esit-sytws-1920.github.io)
 
+### Asking GitHub for Educational Discounts
+
+* [Solicitudes a GitHub](https://education.github.com/discount_requests/new)
+* [When you receive then email notifying you that you've been approved for GitHub Education faculty benefits, you may return to](https://education.github.com/benefits) to upgrade your academic GitHub organizations
+
+
+
 ## Google Drive
 
 * [Spreadsheet](https://docs.google.com/spreadsheets/d/123qbWECg5CNWbuIzgGHGvoixnTMYybL8rjVQAqtBYEI/edit?pli=1#gid=1051140367)
