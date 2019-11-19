@@ -1,8 +1,10 @@
-# Jekyll
+# Tools for Static Blogs
+
+## Jekyll
 
 * [Jekyll docs](https://jekyllrb.com/docs/)
 
-## Content 
+### Content 
 
 *   [Pages](https://jekyllrb.com/docs/pages/)
 *   [Posts](https://jekyllrb.com/docs/posts/)
@@ -12,7 +14,7 @@
 *   [Assets](https://jekyllrb.com/docs/assets/)
 *   [Static Files](https://jekyllrb.com/docs/static-files/)
 
-## Site Structure
+### Site Structure
 
 *   [Directory Structure](https://jekyllrb.com/docs/structure/)
 *   [Liquid](https://jekyllrb.com/docs/liquid/)
@@ -22,3 +24,7 @@
 *   [Permalinks](https://jekyllrb.com/docs/permalinks/)
 *   [Themes](https://jekyllrb.com/docs/themes/)
 *   [Pagination](https://jekyllrb.com/docs/pagination/)
+
+## Gatsby
+
+* [https://www.gatsbyjs.org/](https://www.gatsbyjs.org/)
