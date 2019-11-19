@@ -1,6 +1,6 @@
-# Gulp
+# Gulp a tool to Automate and Enhance your Workflow
 
-## Gulp Getting Started
+## Gulp Tutorial Getting Started
 
 *   [Quick Start](https://gulpjs.com/docs/en/getting-started/quick-start)
 *   [JavaScript and Gulpfiles](https://gulpjs.com/docs/en/getting-started/javascript-and-gulpfiles)
@@ -11,7 +11,7 @@
 *   [Using Plugins](https://gulpjs.com/docs/en/getting-started/using-plugins)
 *   [Watching Files](https://gulpjs.com/docs/en/getting-started/watching-files)
 
-## API
+## Gulp API Documentation
 
 *   [Concepts](https://gulpjs.com/docs/en/api/concepts)
 *   [src()](https://gulpjs.com/docs/en/api/src)
@@ -29,7 +29,7 @@
 *   [Vinyl.isCustomProp()](https://gulpjs.com/docs/en/api/vinyl-iscustomprop)
 
 
-## Executing shell commands with gulp 
+## Examples of how to execute shell commands with gulp 
 
 ### En gulp 4.0
 
