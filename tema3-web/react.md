@@ -1,5 +1,9 @@
 # React
 
+## Learning React with Gatsby
+
+{% include gatsby.md %}
+
 ## Intro to React
 
 ###  Learn by Doing
