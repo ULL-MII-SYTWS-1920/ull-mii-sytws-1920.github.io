@@ -35,12 +35,12 @@ disqus: https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js
 bull_permanente: https://puntoq.ull.es/permalink/f
 temas:
   - path: tema0-presentacion
-    title: Presentación
+    title: "Tema 0: Presentación"
   - path: tema1-introduccion
-    title: Introducción
+    title: "Tema 1: Introducción"
   - path: tema2-async
-    title: Computación Asíncrona y Distribuída
+    title: "Tema 2: Computación Asíncrona y Distribuída"
   - path: tema3-web
-    title: Servicios y Aplicaciones Web
+    title: "Tema 3: Servicios y Aplicaciones Web"
   - path: tema4-devops
-    title: DevOps
+    title: "Tema 4: DevOps"
