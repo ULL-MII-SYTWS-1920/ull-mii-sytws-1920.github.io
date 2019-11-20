@@ -1,4 +1,4 @@
-# Tema 2: Computación Asíncrona y Distribuida
+# Computación Asíncrona y Distribuida
 
 ## [Programación Asíncrona en ECMA 6](async)
 
