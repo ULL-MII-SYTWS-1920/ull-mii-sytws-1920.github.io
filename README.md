@@ -10,6 +10,8 @@
 
 ## [Prácticas Publicadas](practicas)
 
+## [Bibliografía](references.html)
+
 <!--
 ## [TFA: Creating a Beautiful User Experience](tema3-web/practicas/p12-tfa-user-experience)
 ### [Descripción del TFA (p12-tfa-user-experience)](tema3-web/practicas/p12-tfa-user-experience)
