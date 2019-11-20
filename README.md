@@ -4,6 +4,7 @@
 
 {% endfor %}
 
+## [Clases](clases.html)
 
 ## [Prácticas Publicadas](practicas)
 
