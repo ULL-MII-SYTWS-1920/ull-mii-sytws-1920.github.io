@@ -32,7 +32,7 @@
 ## TypeScript
 
 * [Programming TypeScript](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000008045440). Boris Cherny.  2019. BULL
-* [TypeScript Deep Dive](https://legacy.gitbook.com/book/basarat/typescript/details). [Basarat Ali Syed](https://github.com/basarat). GitBook (Open Source)
+* [TypeScript Deep Dive](https://legacy.gitbook.com/book/basarat/typescript/details).  GitBook (Open Source). [Basarat Ali Syed](https://github.com/basarat).
 * [Learn React with TypeScript 3](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007189184) Carl Rippon 2018. BULL
 * [Hands-On Functional Programming with TypeScript](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007593897). Remo H. Jansen 2019. BULL
 
