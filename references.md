@@ -26,7 +26,14 @@
 
 * <a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781785888960" target="_blank"> Mastering Node.js - Second Edition by: Sandro Pasquali; Kevin Faaborg</a>. Acceda por medio del <a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/"  target="_blank">PuntoQ</a> de la ULL
 
-* [Trasparencias curso de JS de MiriadaX](https://github.com/crguezl/miriada-upm-dsnh5jsnode/blob/master/traspas/transp_modulo2.pdf)
+* [Trasparencias curso de JS de MiriadaX](https://github.com/crguezl/miriada-upm-dsnh5jsnode/blob/master/traspas/transp_modulo2.pdf) GitBook by [Basarat Ali Syed](https://github.com/basarat)
+
+
+## TypeScript
+
+* [Programming TypeScript](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000008045440). Boris Cherny.  2019. BULL
+* [TypeScript Deep Dive](https://legacy.gitbook.com/book/basarat/typescript/details)
+
 
 ## RabbitMQ
 
