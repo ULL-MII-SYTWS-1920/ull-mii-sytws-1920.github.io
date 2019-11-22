@@ -2,7 +2,7 @@
 
 # Gatsby
 
-* [Waht is Gatsby?](https://www.mediacurrent.com/what-is-gatsby.js) Heard of Gatsby.js, but not sure what to make of it?
+* [What is Gatsby?](https://www.mediacurrent.com/what-is-gatsby.js) Heard of Gatsby.js, but not sure what to make of it?
 
 * [https://www.gatsbyjs.org/](https://www.gatsbyjs.org/)
     * [Examples](https://github.com/gatsbyjs/gatsby/tree/master/examples)
