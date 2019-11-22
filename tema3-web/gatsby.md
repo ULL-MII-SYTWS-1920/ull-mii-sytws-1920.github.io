@@ -34,7 +34,7 @@
 * [Your open source solution to crowd fund your ideas. Powered by Gatsby.js.](https://github.com/rwieruch/open-crowd-fund)
 * [Gatsby Starter Project for Small Businesses ](https://github.com/rwieruch/reisebuero-bergfelde.de) Deployment at [https://www.reisebuero-bergfelde.de](https://www.reisebuero-bergfelde.de)
 
-### GitBook Style
+### Example of Git Book with Gatsby
 
 * [Repo ULL-MII-SYTWS-1920/gatsby-gitbook-starter](https://github.com/ULL-MII-SYTWS-1920/gatsby-gitbook-starter) Generate GitBook style modern docs/tutorial websites using Gatsby + MDX 
 * [MDX](https://mdxjs.com/): JSX in Markdown for ambitious projects [https://github.com/mdx-js/mdx](https://github.com/mdx-js/mdx)
