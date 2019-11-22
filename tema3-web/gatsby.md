@@ -39,7 +39,7 @@
 * [Repo ULL-MII-SYTWS-1920/gatsby-gitbook-starter](https://github.com/ULL-MII-SYTWS-1920/gatsby-gitbook-starter) Generate GitBook style modern docs/tutorial websites using Gatsby + MDX 
 * [MDX](https://mdxjs.com/): JSX in Markdown for ambitious projects [https://github.com/mdx-js/mdx](https://github.com/mdx-js/mdx)
 
-### Personal Blog
+### Example of Personal Blog with Gatsby
 
 * [Repo ULL-MII-SYTWS-1920/gatsby-starter-personal-blog](https://github.com/ULL-MII-SYTWS-1920/gatsby-starter-personal-blog)
   - [How to customize Node.js .env files for different environment stages](https://www.freecodecamp.org/news/nodejs-custom-env-files-in-your-apps-fa7b3e67abe1/)
