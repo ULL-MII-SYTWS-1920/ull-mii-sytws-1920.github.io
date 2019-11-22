@@ -5,6 +5,8 @@
 
 * [Gatsby.js: Adding Markdown Pages](https://www.gatsbyjs.org/docs/adding-markdown-pages/)
 
+* [Creating a Blog with Gatsby](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/)
+
 * [Heard of Gatsby.js, but not sure what to make of it?  ](https://www.mediacurrent.com/what-is-gatsby.js)
 
 * [Getting Started with Surge](https://surge.sh/getting-started-with-surge)
