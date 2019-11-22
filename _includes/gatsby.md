@@ -1,5 +1,6 @@
 * [https://www.gatsbyjs.org/](https://www.gatsbyjs.org/)
 * [Css Modules by Example](https://www.javascriptstuff.com/css-modules-by-example/)
+* [CSS Modules](https://github.com/css-modules/css-modules)
 * [Gatsby.js: Adding Markdown Pages](https://www.gatsbyjs.org/docs/adding-markdown-pages/)
 
 * [Heard of Gatsby.js, but not sure what to make of it?  ](https://www.mediacurrent.com/what-is-gatsby.js)

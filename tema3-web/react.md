@@ -4,6 +4,11 @@
 
 {% include gatsby.md %}
 
+### CSS modules
+
+* [Css Modules by Example](https://www.javascriptstuff.com/css-modules-by-example/)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+
 ## Intro to React
 
 ###  Learn by Doing
