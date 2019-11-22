@@ -1,8 +1,6 @@
 # React
 
-## Learning React with Gatsby
-
-{% include gatsby.md %}
+## [Learning React with Gatsby](gatsby)
 
 ### CSS modules
 
