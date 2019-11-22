@@ -11,9 +11,6 @@
 * [Creating a Blog with Gatsby](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/)
 
 
-
-* [Getting Started with Surge](https://surge.sh/getting-started-with-surge)
-
 ### The Belgian Beers Gatsby hello world
 
 * [Kalin Chernev: Learn Gatsby](https://kalinchernev.github.io/learn-gatsbyjs)
@@ -54,3 +51,7 @@
 * [GitHub Action for Gatsby CLI](https://github.com/marketplace/actions/github-action-for-gatsby-cli)
 * [Repo ULL-MII-SYTWS-1920/gatsby-starter-personal-blog](https://github.com/ULL-MII-SYTWS-1920/gatsby-starter-personal-blog)
   - [How to customize Node.js .env files for different environment stages](https://www.freecodecamp.org/news/nodejs-custom-env-files-in-your-apps-fa7b3e67abe1/)
+
+### Surge
+
+  * [Getting Started with Surge](https://surge.sh/getting-started-with-surge)
