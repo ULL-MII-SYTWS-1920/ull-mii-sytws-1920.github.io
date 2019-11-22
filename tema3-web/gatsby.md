@@ -30,7 +30,7 @@
 
 * [Gatsby.js - A powerful Static Site Generator](https://www.robinwieruch.de/react-gatsby-js) BY ROBIN WIERUCH JULY 08, 2019
 * [Gatsby MDX Blog Starter Project GitHub Repo](https://github.com/rwieruch/gatsby-mdx-blog-starter-project)
-* [Gatsby starter for creating a blog with Preact](https://github.com/rwieruch/gatsby-starter-blog-with-preact)
+* [Gatsby starter for creating a blog with Preact](https://github.com/rwieruch/gatsby-starter-blog-with-preact). ([Preact es similar a React pero ocupa sólo 3kb de tamaño](https://www.imaginanet.com/blog/uso-de-preact-como-una-alternativa-de-react.html))
 * [Your open source solution to crowd fund your ideas. Powered by Gatsby.js.](https://github.com/rwieruch/open-crowd-fund)
 * [Gatsby Starter Project for Small Businesses ](https://github.com/rwieruch/reisebuero-bergfelde.de) Deployment at [https://www.reisebuero-bergfelde.de](https://www.reisebuero-bergfelde.de)
 
