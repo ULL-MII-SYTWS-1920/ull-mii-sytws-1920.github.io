@@ -40,3 +40,4 @@
 
 * [How Gatsby Works with GitHub Pages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/)
 * [Deploy Gatsby sites to GitHub Pages](https://dev.to/flexdinesh/deploy-gatsby-sites-to-github-pages-eed)
+* [GitHub Action to build and deploy your Gatsby site to GitHub Pages ❤️🎩](https://github.com/enriikke/gatsby-gh-pages-action)
