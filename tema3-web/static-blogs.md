@@ -29,8 +29,14 @@
 
 {% include gatsby.md %}
 
+
 ### Dave Ceddia tutorial: Start a Blog in 2019 with Gatsby.js and Netlify
 
 * [Start a Blog in 2019 with Gatsby.js and Netlify](https://daveceddia.com/start-blog-gatsby-netlify/)
 * [How to Write a Blog That People Will Read](https://daveceddia.com/how-to-blog/)
 * [dceddia/demo-blog](https://github.com/dceddia/demo-blog)
+
+### GatsBy and GitHub Pages
+
+* [How Gatsby Works with GitHub Pages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/)
+* [Deploy Gatsby sites to GitHub Pages](https://dev.to/flexdinesh/deploy-gatsby-sites-to-github-pages-eed)
