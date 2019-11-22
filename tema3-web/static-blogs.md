@@ -29,6 +29,10 @@
 
 {% include gatsby.md %}
 
+### The Belgian Beers Gatsby hello world
+
+* [Kalin Chernev: Learn Gatsby](https://kalinchernev.github.io/learn-gatsbyjs)
+* [GitHub repo ULL-MII-SYTWS-1920/belgian-beers](https://github.com/ULL-MII-SYTWS-1920/belgian-beers) and its [deployment in GitHub pages](https://ull-mii-sytws-1920.github.io/belgian-beers/index.html)
 
 ### Dave Ceddia tutorial: Start a Blog in 2019 with Gatsby.js and Netlify
 
