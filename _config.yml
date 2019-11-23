@@ -44,6 +44,3 @@ temas:
     title: "Tema 3: Servicios y Aplicaciones Web"
   - path: tema4-devops
     title: "Tema 4: DevOps"
-url: "https://ull-mii-sytws-1920.github.io" # the base hostname & protocol for your site
-plugins:
-  - jekyll-sitemap
