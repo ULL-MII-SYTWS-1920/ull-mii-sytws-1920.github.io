@@ -26,4 +26,4 @@
 ## Plugins
 
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
-  - [Blog](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
+  - [Blog: Start building your great modern static website with this boilerplate using Jekyll, React and Webapck.](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
