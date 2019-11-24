@@ -86,6 +86,10 @@ By: Parth Ghiya</a>. Acceda por medio del <a href="https://www.ull.es/servicios/
   - [GitHub repo TrainingByPackt/Advanced-JavaScript](https://github.com/TrainingByPackt/Advanced-JavaScript)
   - [At Google Books](https://books.google.es/books?id=XiWGDwAAQBAJ&lpg=PR4&dq=Advanced%20JavaScript.%20Zachary%20Shute.%202019%20github&hl=es&pg=PR4#v=onepage&q=Advanced%20JavaScript.%20Zachary%20Shute.%202019%20github&f=false)
 
+## Journals and Magazines
+
+* [https://www.smashingmagazine.com/](https://www.smashingmagazine.com/)
+
 ## Bibliografía Auxiliar
 
 * <a href="https://ull-mii-ca-1819.github.io/docs/" target="_blank">Página de la Asignatura CA del MII</a>
