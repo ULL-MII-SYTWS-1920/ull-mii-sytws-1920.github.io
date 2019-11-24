@@ -25,6 +25,10 @@
 * [Microtasks](https://javascript.info/microtask-queue)
 * [Async/await](https://javascript.info/async-await)
 
+### Writing Asynchronous Tasks In Modern JavaScript
+
+* [Writing Asynchronous Tasks In Modern JavaScript](https://www.smashingmagazine.com/2019/10/asynchronous-tasks-modern-javascript/) Smashing Magazine
+
 ### EdX: Asynchronous Programming with JS
 
 * [Asynchronous Programming with Javascript](https://courses.edx.org/courses/course-v1:Microsoft+DEV234x+1T2018a/course/) EdX Course

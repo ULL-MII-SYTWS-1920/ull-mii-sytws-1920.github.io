@@ -7,7 +7,7 @@
 * [https://www.gatsbyjs.org/](https://www.gatsbyjs.org/)
     * [Examples](https://github.com/gatsbyjs/gatsby/tree/master/examples)
     * [Video Tutorial](https://www.youtube.com/playlist?list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg)
-    
+
     * [Gatsby.js: Adding Markdown Pages](https://www.gatsbyjs.org/docs/adding-markdown-pages/)
     * [Creating a Blog with Gatsby](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/)
 
@@ -56,3 +56,7 @@
 ### Surge
 
   * [Getting Started with Surge](https://surge.sh/getting-started-with-surge)
+
+### Gatsby vs Next.js
+
+* [Gatsby vs Next.JS - What, Why and When?](https://dev.to/jameesy/gatsby-vs-next-js-what-why-and-when-4al5)
