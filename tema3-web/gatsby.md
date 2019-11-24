@@ -55,7 +55,7 @@
 
 ### Surge
 
-  * [Getting Started with Surge](https://surge.sh/getting-started-with-surge)
+  * [Getting Started with Surge](https://surge.sh)
 
 ### Gatsby vs Next.js
 
