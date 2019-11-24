@@ -42,6 +42,8 @@
 
 ## [GraphQL](graphql)
 
+## [The JAM Stack](jam)
+
 ## [Desktop Apps using Web Technologies](electron)
 
 ## [Extending Visual Studio Code](extending-vscode)

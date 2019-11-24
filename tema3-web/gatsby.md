@@ -55,7 +55,9 @@
 
 ### Surge
 
-  * [Getting Started with Surge](https://surge.sh)
+  * [Getting Started with Surge](https://surge.sh/help/)
+    - [Deploying a Jekyll project](https://surge.sh/help/deploying-a-jekyll-project)
+    - [GastBy](https://www.gatsbyjs.org/docs/deploying-to-surge/)
 
 ### Gatsby vs Next.js
 
