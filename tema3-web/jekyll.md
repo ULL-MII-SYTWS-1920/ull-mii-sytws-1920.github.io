@@ -23,6 +23,10 @@
 *   [Themes](https://jekyllrb.com/docs/themes/)
 *   [Pagination](https://jekyllrb.com/docs/pagination/)
 
+## Blogs
+
+* [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
+
 ## Plugins
 
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
