@@ -23,6 +23,16 @@
 *   [Themes](https://jekyllrb.com/docs/themes/)
 *   [Pagination](https://jekyllrb.com/docs/pagination/)
 
+## Tutorials
+
+*   [Tutorials](https://jekyllrb.com/tutorials/home/)
+*   [Video Walkthroughs](https://jekyllrb.com/tutorials/video-walkthroughs/)
+*   [Navigation](https://jekyllrb.com/tutorials/navigation/)
+*   [Order of interpretation](https://jekyllrb.com/tutorials/orderofinterpretation/)
+*   [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/)
+*   [Convert an HTML site to Jekyll](https://jekyllrb.com/tutorials/convert-site-to-jekyll/)
+*   [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
+
 ## Blogs
 
 * [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
