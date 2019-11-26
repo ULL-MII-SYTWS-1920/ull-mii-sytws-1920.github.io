@@ -18,7 +18,7 @@ collections:
       - p3-t1-c3-http.md
       - p4-t2-networking.md
       - p5-t3-websockets.md
-      - p9-t3-transforming-data
+      - p9-t3-transforming-data.md
       - p8-t3-jekyll-netlify.md
     output: true
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
