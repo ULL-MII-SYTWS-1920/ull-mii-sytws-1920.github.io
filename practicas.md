@@ -15,4 +15,3 @@ permalink: practicas
 
 {% endfor %}
 
-AAAA
