@@ -9,9 +9,10 @@ permalink: practicas
 
 ## Lista de Prácticas Publicadas
 
-{% assign items = site.practicas | sort: 'date' %}
-{% for practica in items %}
+{% for practica in site.practicas %}
 
 ##  <a href="{{ practica.myurl }}">Práctica {{ practica.name }}</a>
 
 {% endfor %}
+
+A
