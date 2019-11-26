@@ -90,6 +90,9 @@ de llegar de un cliente al resto de los clientes:
 del array `sockets`
   * Documentación de [splice](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice)
   * Documentación de [indexOf](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/indexOf)
+
+Puede mejorar mucho la versión descrita aquí siguiendo este tutorial:
+
 * [Real-Time Chat With Node.js' Readline & Socket.io](https://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-readline-socketio--cms-20953)
 
 ## Recursos para el profesor
