@@ -13,5 +13,4 @@ permalink: practicas
 
 ##  <a href="{{ practica.myurl }}">Práctica {{ practica.name }}</a>
 
-
 {% endfor %}
