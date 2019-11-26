@@ -11,7 +11,6 @@ show_downloads: false
 live_reload: true
 collections: 
   practicas: 
-    output: true
     order: 
       - p01-t1-iaas.md
       - p2-t1-vscode.md
@@ -21,6 +20,7 @@ collections:
       - p5-t3-websockets
       - p9-t3-transforming-data
       - p8-t3-jekyll-netlify
+    output: true
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
 calificador: https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201913778
 github_org: https://github.com/ULL-MII-SYTWS-1920
