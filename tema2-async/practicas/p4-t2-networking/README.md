@@ -47,6 +47,7 @@
 * Pruebas
     * [Mocha](https://mochajs.org/)
     * [chai](https://www.chaijs.com/)
+* [Real-Time Chat With Node.js' Readline & Socket.io](https://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-readline-socketio--cms-20953)
 
 ### Recursos para el profesor:
 
