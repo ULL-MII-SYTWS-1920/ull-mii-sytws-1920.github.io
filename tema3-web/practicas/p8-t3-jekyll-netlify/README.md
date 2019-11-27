@@ -20,10 +20,16 @@
 ### Algunos tips si trabaja en la máquina del iaas.ull.es
 
 * [Creating a personal access token for the command line](https://help.github.com/es/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+* Para que als instrucciones anteriores funcionen:
 
-```
-usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec jekyll serve -H 10.6.128.216 -P 8080
-```
+  ```
+  usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ git config --global credential.helper  store
+  ```
+* Ejecutando en una máquina del iaas.ull.es:
+
+    ```
+    usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec jekyll serve -H 10.6.128.216 -P 8080
+    ```
 
 ### Despliegue en GitHub Pages
 
