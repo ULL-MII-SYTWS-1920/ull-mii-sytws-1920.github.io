@@ -2,6 +2,8 @@
 
 ## Jekyll
 
+### Introducción
+
 * Instale [Jekyll](https://jekyllrb.com/docs/) en su máquina o en la máquina del servicio [iaas.ull.es]({{site.baseurl}}/tema1-introduccion/practicas/p01-t1-iaas/) si no dispone de máquina. Instrucciones en [Jekyll Installation](https://jekyllrb.com/docs/installation/)
 * Si no se acuerda de como funciona Ruby le pueden venir las instrucciones en [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
 * Realice el [Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/)
@@ -14,17 +16,30 @@
     *   [Assets](https://jekyllrb.com/docs/step-by-step/07-assets/)
     *   [Blogging](https://jekyllrb.com/docs/step-by-step/08-blogging/)
     *   [Collections](https://jekyllrb.com/docs/step-by-step/09-collections/)
-    *   [Deployment](https://jekyllrb.com/docs/step-by-step/10-deployment/)
-* Despliegue en GitHub Pages. Puede usar la rama `master`, la carpeta `docs` en `master`o bien
+
+
+### Despliegue en GitHub Pages
+
+*   [Section Deployment of the Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/10-deployment/)
+* Despliegue el proyecto en GitHub Pages. Puede usar la rama `master`, la carpeta `docs` en `master`o bien
     * Puede hacerlo usando la rama `gh-pages` con la gema [github-pages](https://jekyllrb.com/docs/github-pages/#deploying-jekyll-to-github-pages) o el paquete npm [gh-pages](https://www.npmjs.com/package/gh-pages)
-* Lea de la sección [Navigation](https://jekyllrb.com/tutorials/navigation/) los escenarios [Basic List](https://jekyllrb.com/tutorials/navigation/#scenario-1-basic-list) y [Sorted List](https://jekyllrb.com/tutorials/navigation/#scenario-2-sorted-list) e implementelos en su site
-* Se puede probar el buen funcionamiento del Blog haciendo pruebas en Travis como se indica en este [tutorial](https://jekyllrb.com/docs/continuous-integration/travis-ci/#1-enabling-travis-and-github)
-  * When testing Jekyll output, there is no better tool than <a href="https://github.com/gjtorikian/html-proofer">html-proofer</a>.
-This tool checks your resulting site to ensure all links and images exist.
-Utilize it either with the convenient <code>htmlproofer</code> command-line executable,
-or write a Ruby script which utilizes the gem
+
+### Navigation
+
+* Lea de el tutorial [Navigation](https://jekyllrb.com/tutorials/navigation/) los escenarios [Basic List](https://jekyllrb.com/tutorials/navigation/#scenario-1-basic-list) y [Sorted List](https://jekyllrb.com/tutorials/navigation/#scenario-2-sorted-list) e implementelos en su site
+
+### 404
 
 * Lea el tutorial [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/) y añada una página 404 personalizada
+
+### Test the Deployment
+
+* Se puede probar el buen funcionamiento del Blog haciendo pruebas en Travis como se indica en este [tutorial](https://jekyllrb.com/docs/continuous-integration/travis-ci/#1-enabling-travis-and-github)
+
+> When testing Jekyll output, there is no better tool than <a href="https://github.com/gjtorikian/html-proofer">html-proofer</a>.
+> This tool checks your resulting site to ensure all links and images exist.
+> Utilize it either with the convenient <code>htmlproofer</code> command-line executable,
+> or write a Ruby script which utilizes the gem
 
 ## Despliegues en Netlify
 
