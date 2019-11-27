@@ -70,6 +70,43 @@ Personaliza tu página de 404.
 > Utilize it either with the convenient <code>htmlproofer</code> command-line executable,
 > or write a Ruby script which utilizes the gem
 
+```
+usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec htmlproofer ./_site --disable-external
+Running ["ImageCheck", "ScriptCheck", "LinkCheck"] on ["./_site"] on *.html... 
+
+
+Ran on 158 files!
+
+
+- ./_site/2019/09/30/leccion.html
+  *  internally linking to /practicas, which does not exist (line 31)
+     <a href="/practicas" title="Prácticas">✍</a>
+  *  internally linking to /practicas, which does not exist (line 129)
+     <a href="/practicas" title="Prácticas">✍</a>
+- ./_site/404.html
+  *  internally linking to /practicas, which does not exist (line 31)
+     <a href="/practicas" title="Prácticas">✍</a>
+```
+
+Let us see if its true. Instead of running with `jekyll serve, I use a static server to see if the build 
+is really consistent:
+
+```
+usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io/_site$ static-server -p 8080
+options.index is now deprecated please use options.templates.index instead.
+* Static server successfully started.
+* Serving files at: http://localhost:8080
+* Press Ctrl+C to shutdown.
+<-- [GET] /2019/09/30/leccion.html
+--> 200 OK /2019/09/30/leccion.html 5.63 KiB (15.964ms)
+...
+<-- [GET] /practicas/
+--> 403 /practicas/ (2.199ms)
+<-- [GET] /favicon.ico
+```
+
+It seems `htmlproofer` is right in spite that it works in `github.io`
+
 ## Despliegues en Netlify
 
 * Lea el tutorial [A Step-by-Step Guide: Jekyll 3.0 on Netlify](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/) y despliegue el correspondiente Jekyll blog en Netlify
