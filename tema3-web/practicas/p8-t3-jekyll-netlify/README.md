@@ -86,6 +86,7 @@ Ran on 158 files!
 - ./_site/404.html
   *  internally linking to /practicas, which does not exist (line 31)
      <a href="/practicas" title="Prácticas">✍</a>
+     ... many more entries
 ```
 
 Let us see if its true. Instead of running with `jekyll serve, I use a static server to see if the build 
