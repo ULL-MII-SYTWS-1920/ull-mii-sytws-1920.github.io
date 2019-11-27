@@ -17,6 +17,10 @@
     *   [Blogging](https://jekyllrb.com/docs/step-by-step/08-blogging/)
     *   [Collections](https://jekyllrb.com/docs/step-by-step/09-collections/)
 
+### Algunos tips si trabaja en la máquina del iaas.ull.es
+
+* [Creating a personal access token for the command line](https://help.github.com/es/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+
 ```
 usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec jekyll serve -H 10.6.128.216 -P 8080
 ```
