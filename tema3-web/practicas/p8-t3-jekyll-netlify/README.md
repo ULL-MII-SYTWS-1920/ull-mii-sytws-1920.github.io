@@ -39,6 +39,12 @@ usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec jekyll serve -H 1
 
 * Lea el tutorial [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/) y añada una página 404 personalizada
 
+Tienes un ejemplo de `404.md` en estos apuntes [404.md](https://raw.githubusercontent.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/master/404.md?token=AAIW6GQY7F2KE5JVJXGD7UC546XEM).
+ 
+### Themes
+
+* [Jekyll Themes](https://jekyllrb.com/docs/themes/)
+
 ### Test the Deployment with html-profer and Travis
 
 * Se puede probar el buen funcionamiento del Blog haciendo pruebas en Travis como se indica en este [tutorial](https://jekyllrb.com/docs/continuous-integration/travis-ci/#1-enabling-travis-and-github)
