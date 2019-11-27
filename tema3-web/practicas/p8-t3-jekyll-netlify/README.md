@@ -23,10 +23,10 @@
 * Para que las instrucciones anteriores funcionen:
 
   ```
-  usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ git config --global credential.helper  store
-  usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ ls -ltr ~/.git-credentials 
+  usuario@ubuntu$ git config --global credential.helper  store
+  usuario@ubuntu$ ls -ltr ~/.git-credentials 
   -rw------- 1 usuario usuario 68 nov 27 13:27 /home/usuario/.git-credentials
-  usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ cat ~/.git-credentials 
+  usuario@ubuntu$ cat ~/.git-credentials 
   https://crguezl:este-no-es-el-token@github.com
   ```
 * Ejecutando en una máquina del iaas.ull.es:
@@ -49,7 +49,8 @@
 
 * Lea el tutorial [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/) y añada una página 404 personalizada
 
-Tienes un ejemplo de `404.md` en estos apuntes [404.md](https://raw.githubusercontent.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/master/404.md?token=AAIW6GQY7F2KE5JVJXGD7UC546XEM).
+Tienes un ejemplo de `404.md` en estos apuntes [404.md](https://raw.githubusercontent.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/master/404.md?token=AAIW6GQY7F2KE5JVJXGD7UC546XEM) que se verá así 
+[{{site.baseurl}}/noexiste]({{site.baseurl}}/noexiste).
 
 La página hace un request a [The Cat API](https://thecatapi.com/) para mostrar una imagen de  gatitos obtenida al azar.
 Existe una API similar para los amantes de los perros [Dog API](https://dog.ceo/dog-api/).
