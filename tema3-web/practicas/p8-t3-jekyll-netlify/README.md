@@ -23,11 +23,14 @@
 This tool checks your resulting site to ensure all links and images exist.
 Utilize it either with the convenient <code>htmlproofer</code> command-line executable,
 or write a Ruby script which utilizes the gem
-* Lea el tutorial [A Step-by-Step Guide: Jekyll 3.0 on Netlify](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/) y despliegue el correspondiente Jekyll blog en Netlify
-
 
 * Lea el tutorial [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/) y añada una página 404 personalizada
 
-## Gatsby
+## Despliegues en Netlify
 
-* Lea el tutorial [A Step-by-Step Guide: Gatsby on Netlify](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) y despliegue las páginas en Netlify
+* Lea el tutorial [A Step-by-Step Guide: Jekyll 3.0 on Netlify](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/) y despliegue el correspondiente Jekyll blog en Netlify
+
+
+### Gatsby
+
+* Lea el tutorial [A Step-by-Step Guide: Gatsby on Netlify](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) y despliegue las páginas en Netlify. También en GitHub pages
