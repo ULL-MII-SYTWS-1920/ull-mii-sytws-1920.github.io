@@ -24,6 +24,10 @@
 
   ```
   usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ git config --global credential.helper  store
+  usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ ls -ltr ~/.git-credentials 
+  -rw------- 1 usuario usuario 68 nov 27 13:27 /home/usuario/.git-credentials
+  usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ cat ~/.git-credentials 
+  https://crguezl:este-no-es-el-token@github.com
   ```
 * Ejecutando en una máquina del iaas.ull.es:
 
