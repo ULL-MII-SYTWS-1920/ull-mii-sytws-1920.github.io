@@ -19,7 +19,7 @@
 
 ### Algunos tips si trabaja en la máquina del iaas.ull.es
 
-* [Creating a personal access token for the command line](https://help.github.com/es/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
+* [Creating a personal access token for the command line](https://help.github.com/es/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) para trabajar con git y GitHub vía https
 * Para que las instrucciones anteriores funcionen:
 
   ```
