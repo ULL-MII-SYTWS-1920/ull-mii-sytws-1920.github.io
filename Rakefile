@@ -10,6 +10,7 @@ end
 
 desc "sytws: bundle exec jekyll serve"
 task :serve do
+  sh "git pull origin master"
   sh "bundle exec jekyll serve -H 10.6.128.216 -P 8080"
 end
 
