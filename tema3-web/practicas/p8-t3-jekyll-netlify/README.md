@@ -18,6 +18,11 @@
 * Despliegue en GitHub Pages. Puede usar la rama `master`, la carpeta `docs` en `master`o bien
     * Puede hacerlo usando la rama `gh-pages` con la gema [github-pages](https://jekyllrb.com/docs/github-pages/#deploying-jekyll-to-github-pages) o el paquete npm [gh-pages](https://www.npmjs.com/package/gh-pages)
 * Lea de la sección [Navigation](https://jekyllrb.com/tutorials/navigation/) los escenarios [Basic List](https://jekyllrb.com/tutorials/navigation/#scenario-1-basic-list) y [Sorted List](https://jekyllrb.com/tutorials/navigation/#scenario-2-sorted-list) e implementelos en su site
+* Se puede probar el buen funcionamiento del Blog haciendo pruebas en Travis como se indica en este [tutorial](https://jekyllrb.com/docs/continuous-integration/travis-ci/#1-enabling-travis-and-github)
+  * When testing Jekyll output, there is no better tool than <a href="https://github.com/gjtorikian/html-proofer">html-proofer</a>.
+This tool checks your resulting site to ensure all links and images exist.
+Utilize it either with the convenient <code>htmlproofer</code> command-line executable,
+or write a Ruby script which utilizes the gem
 * Lea el tutorial [A Step-by-Step Guide: Jekyll 3.0 on Netlify](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/) y despliegue el correspondiente Jekyll blog en Netlify
 
 
