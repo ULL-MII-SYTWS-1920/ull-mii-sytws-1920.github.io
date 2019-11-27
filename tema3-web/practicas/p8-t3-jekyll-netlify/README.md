@@ -17,6 +17,9 @@
     *   [Blogging](https://jekyllrb.com/docs/step-by-step/08-blogging/)
     *   [Collections](https://jekyllrb.com/docs/step-by-step/09-collections/)
 
+```
+usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec jekyll serve -H 10.6.128.216 -P 8080
+```
 
 ### Despliegue en GitHub Pages
 
@@ -32,7 +35,7 @@
 
 * Lea el tutorial [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/) y añada una página 404 personalizada
 
-### Test the Deployment
+### Test the Deployment with html-profer and Travis
 
 * Se puede probar el buen funcionamiento del Blog haciendo pruebas en Travis como se indica en este [tutorial](https://jekyllrb.com/docs/continuous-integration/travis-ci/#1-enabling-travis-and-github)
 
