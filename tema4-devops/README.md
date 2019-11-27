@@ -1,3 +1,7 @@
+---
+categories: Temas
+---
+
 # DevOps
 
 ## [Software Development Cycle: Git Submodules, WorkFlows, Registry](control-version)
