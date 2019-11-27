@@ -53,7 +53,9 @@ Tienes un ejemplo de `404.md` en estos apuntes [404.md](https://raw.githubuserco
 [{{site.baseurl}}/noexiste]({{site.baseurl}}/noexiste).
 
 La página hace un request a [The Cat API](https://thecatapi.com/) para mostrar una imagen de  gatitos obtenida al azar.
-Existe una API similar para los amantes de los perros [Dog API](https://dog.ceo/dog-api/).
+Existe una API similar para los amantes de los perros [Dog API](https://dog.ceo/dog-api/). 
+
+Personaliza tu página de 404.
 
 ### Themes
 
