@@ -40,7 +40,10 @@ usuario@ubuntu:~/src/ull-mii-sytws-1920.github.io$ bundle exec jekyll serve -H 1
 * Lea el tutorial [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/) y añada una página 404 personalizada
 
 Tienes un ejemplo de `404.md` en estos apuntes [404.md](https://raw.githubusercontent.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/master/404.md?token=AAIW6GQY7F2KE5JVJXGD7UC546XEM).
- 
+
+La página hace un request a [The Cat API](https://thecatapi.com/) para mostrar una imagen de  gatitos obtenida al azar.
+Existe una API similar para los amantes de los perros [Dog API](https://dog.ceo/dog-api/).
+
 ### Themes
 
 * [Jekyll Themes](https://jekyllrb.com/docs/themes/)
