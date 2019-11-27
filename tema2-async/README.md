@@ -1,3 +1,7 @@
+---
+categories: Temas
+---
+
 # Computación Asíncrona y Distribuida
 
 ## [Programación Asíncrona en ECMA 6](async)

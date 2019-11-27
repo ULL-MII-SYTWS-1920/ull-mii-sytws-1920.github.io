@@ -1,3 +1,7 @@
+---
+categories: Temas
+---
+
 # Introducción a Sistemas y Tecnologías Web en el Servidor
 
 ## [Uso del iaas.ull.es. Entornos de Trabajo](iaas)
