@@ -1,6 +1,3 @@
----
-categories: Temas
----
 
 # Introducción a la Asignatura 
 
