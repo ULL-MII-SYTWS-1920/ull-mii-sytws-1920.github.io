@@ -110,6 +110,7 @@ See the `403 /practicas/ (2.199ms)` warning.
 
 It seems `htmlproofer` is right in spite that it works in `github.io`
 
+#### CI with Travis
 
 * [Using HTMLProofer From Ruby and Travis](https://github.com/gjtorikian/html-proofer/wiki/Using-HTMLProofer-From-Ruby-and-Travis)
 
