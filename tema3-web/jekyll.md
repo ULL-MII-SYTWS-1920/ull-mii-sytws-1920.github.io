@@ -43,6 +43,7 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
   - [Blog: Start building your great modern static website with this boilerplate using Jekyll, React and Webapck.](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
+* [benbalter/jekyll-auth: A simple way to use GitHub OAuth to serve a protected Jekyll site to your GitHub organization](https://github.com/benbalter/jekyll-auth)
 
 ## Cursos en YouTube de Jekyll and NetlifyCMS por Thomas Bradley
 
