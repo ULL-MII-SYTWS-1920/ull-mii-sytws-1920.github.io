@@ -23,7 +23,7 @@ end
 desc "sytws: build and run with static-server"
 task :build do
   sh "git pull origin master"
-  sh "static-server -p 8000"
+  sh "cd _site && static-server -p 8000"
 end
 
 require 'html-proofer'
