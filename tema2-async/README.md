@@ -2,6 +2,8 @@
 
 ## [Programación Asíncrona en ECMA 6](async)
 
+## [Node.js EventEmitters](event-emitter)
+
 ## [Sockets](sockets)
 
 ## [Message Queues](message-queues)
