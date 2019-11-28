@@ -51,4 +51,4 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 * [Jekyll + NetlifyCMS](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcU8zbZZrr6L1zpf_2Eqt_w) 14 Youtube videos
 * [Jekyll + Patternbot](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcEBngBwpB8F7wtjZ12PIy0)
 
-## [Práctica p8-t3-jekyll-netlify](practicas/ p8-t3-jekyll-netlify)
+## [Práctica p8-t3-jekyll-netlify](practicas/p8-t3-jekyll-netlify)
