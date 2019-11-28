@@ -21,8 +21,9 @@ task :buildj do
 end
 
 desc "sytws: build and run with static-server"
-task :build do
+task :httpserver do
   sh "git pull origin master"
+  sh "bundle exec jekyll build"
   sh "cd _site &&  http-server -p 8080 -a 10.6.128.216"
 end
 
