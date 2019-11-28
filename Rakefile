@@ -30,6 +30,7 @@ end
 require 'html-proofer'
 desc "test links in the build web site"
 task :test do
+  sh "git pull origin master"
   sh "bundle exec jekyll build"
   options = { 
     :assume_extension => true, 
