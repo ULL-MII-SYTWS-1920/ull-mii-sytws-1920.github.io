@@ -89,7 +89,7 @@ Ran on 158 files!
      ... many more entries
 ```
 
-Let us see if its true. Instead of running with `jekyll serve, I use a static server to see if the build 
+Let us see if its true. Instead of running with `jekyll` serve, I use a static server to see if the build 
 is really consistent:
 
 ```
