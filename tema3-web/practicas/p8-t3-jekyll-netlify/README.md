@@ -110,6 +110,15 @@ See the `403 /practicas/ (2.199ms)` warning.
 
 It seems `htmlproofer` is right in spite that it works in `github.io`
 
+## Despliegue en GitHub usando Github Actions
+
+Despliegue su proyecto en GitHub usando GitHub Actions. Véase:
+
+* [A GitHub Action for Custom Jekyll Builds on GitHub Pages](https://github.com/BryanSchuetz/jekyll-deploy-gh-pages)
+
+### Question: Why not just let GitHub Pages build it? 
+### Answer: Because this way we can use our own custom Jekyll plugins and build scripts.
+
 ## Despliegues en Netlify
 
 * Lea el tutorial [A Step-by-Step Guide: Jekyll 3.0 on Netlify](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/) y despliegue el correspondiente Jekyll blog en Netlify
