@@ -106,6 +106,8 @@ options.index is now deprecated please use options.templates.index instead.
 <-- [GET] /favicon.ico
 ```
 
+See the `403 /practicas/ (2.199ms)` warning.
+
 It seems `htmlproofer` is right in spite that it works in `github.io`
 
 ## Despliegues en Netlify
