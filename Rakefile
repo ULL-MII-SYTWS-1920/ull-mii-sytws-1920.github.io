@@ -15,7 +15,7 @@ task :sytws do
 end
 
 desc "sytws: build and run with jekyll"
-task :buildj do
+task :build do
   sh "git pull origin master"
   sh "bundle exec jekyll build"
 end
