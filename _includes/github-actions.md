@@ -15,4 +15,9 @@ Workflows run in Linux, macOS, Windows, and containers on GitHub-hosted servers.
 *   [Requesting to join the limited public beta for GitHub Actions](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#requesting-to-join-the-limited-public-beta-for-github-actions)
 *   [Contacting support](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#contacting-support)
 *   [Further reading](https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#further-reading)
+* [Repo de ejemplo de GitHub Actions: p4-t2-networking-crguezl]({{site.github_org}}/p4-t2-networking-crguezl)
 
+   ```
+    [~/.../github-actions-learning/p4-t2-net-github-actions-crguezl(master)]$ pwd -P
+    /Users/casiano/local/src/github-actions-learning/p4-t2-net-github-actions-crguezl
+   ```
