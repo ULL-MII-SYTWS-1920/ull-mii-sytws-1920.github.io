@@ -110,6 +110,13 @@ See the `403 /practicas/ (2.199ms)` warning.
 
 It seems `htmlproofer` is right in spite that it works in `github.io`
 
+
+* [Using HTMLProofer From Ruby and Travis](https://github.com/gjtorikian/html-proofer/wiki/Using-HTMLProofer-From-Ruby-and-Travis)
+
+Disponga la ejecución de HTMLProofer en Travis
+
+
+<!--
 ## Despliegue en GitHub usando Github Actions
 
 Despliegue su proyecto en GitHub usando GitHub Actions. Véase:
@@ -118,6 +125,7 @@ Despliegue su proyecto en GitHub usando GitHub Actions. Véase:
 
 ### Question: Why not just let GitHub Pages build it? 
 ### Answer: Because this way we can use our own custom Jekyll plugins and build scripts.
+-->
 
 ### Despliegues de Jekyll en Netlify
 
