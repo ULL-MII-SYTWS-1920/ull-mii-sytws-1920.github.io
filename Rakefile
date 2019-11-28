@@ -14,12 +14,17 @@ task :sytws do
   sh "bundle exec jekyll serve -H 10.6.128.216 -P 8080"
 end
 
-desc "sytws: build"
-task :build do
+desc "sytws: build and run with jekyll"
+task :buildj do
   sh "git pull origin master"
   sh "bundle exec jekyll build"
 end
 
+desc "sytws: build and run with static-server"
+task :build do
+  sh "git pull origin master"
+  sh "static-server -p 8000"
+end
 
 require 'html-proofer'
 desc "test links in the build web site"
