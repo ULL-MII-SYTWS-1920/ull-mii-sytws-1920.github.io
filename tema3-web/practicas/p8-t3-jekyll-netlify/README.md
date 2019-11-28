@@ -125,6 +125,6 @@ Despliegue su proyecto en GitHub usando GitHub Actions. Véase:
 * * [Jekyll + NetlifyCMS](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcU8zbZZrr6L1zpf_2Eqt_w) 14 Youtube videos Thomas Bradley
 
 
-### Gatsby
+## Gatsby
 
 * Lea el tutorial [A Step-by-Step Guide: Gatsby on Netlify](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) y despliegue las páginas en Netlify. También en GitHub pages
