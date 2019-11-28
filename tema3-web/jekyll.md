@@ -1,5 +1,7 @@
 # Jekyll
 
+Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHub Pages](https://pages.github.com/)) que se sirven mediante Jekyll.
+
 * [Jekyll docs](https://jekyllrb.com/docs/)
 
 ## Content 
@@ -42,8 +44,10 @@
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
   - [Blog: Start building your great modern static website with this boilerplate using Jekyll, React and Webapck.](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
 
-  # Cursos en YouTube de Jekyll and NetlifyCMS por Thomas Bradley
+## Cursos en YouTube de Jekyll and NetlifyCMS por Thomas Bradley
 
 * [Jekyll](https://www.youtube.com/playlist?list=PLWjCJDeWfDdfVEcLGAfdJn_HXyM4Y7_k-)
 * [Jekyll + NetlifyCMS](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcU8zbZZrr6L1zpf_2Eqt_w) 14 Youtube videos
 * [Jekyll + Patternbot](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcEBngBwpB8F7wtjZ12PIy0)
+
+## [Práctica p8-t3-jekyll-netlify](practicas/ p8-t3-jekyll-netlify)
