@@ -62,3 +62,5 @@
 ### Gatsby vs Next.js
 
 * [Gatsby vs Next.JS - What, Why and When?](https://dev.to/jameesy/gatsby-vs-next-js-what-why-and-when-4al5)
+
+### Práctica: [Gatsby](practicas/p12-t3-gatsby)
