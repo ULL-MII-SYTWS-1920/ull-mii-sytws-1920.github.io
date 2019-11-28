@@ -36,7 +36,7 @@ task :test do
     :assume_extension => true, 
     :disable_external => true, 
     :empty_alt_ignore => true,
-    :url_ignore => [ %r{categories} ]
+    :file_ignore => [ %r{categories} ]
   }
   HTMLProofer.check_directory("./_site", options).run
 end
