@@ -17,8 +17,10 @@ en los apuntes del profesor
    * a [username and password](http://passportjs.org/docs/username-password), 
    * [Facebook](http://passportjs.org/docs/facebook), 
    * [Twitter](http://passportjs.org/docs/twitter), 
-   * [GitHub](https://github.com/cfsghost/passport-github), 
-   * and [more](http://passportjs.org/docs/providers).
+   * [Strategy Passport-GitHub2](http://www.passportjs.org/packages/passport-github2/). The author of Passport-Github has not maintained the original ...
+     - [Passport-GitHub2 Example](https://github.com/cfsghost/passport-github/tree/master/examples/login)
+   * [GitHub strategy documentation](http://www.passportjs.org/packages/passport-github/) and repo [GitHub](https://github.com/jaredhanson/passport-github), 
+   * and [more](http://www.passportjs.org/packages/).
 
 **Passport: Tutoriales**
 
