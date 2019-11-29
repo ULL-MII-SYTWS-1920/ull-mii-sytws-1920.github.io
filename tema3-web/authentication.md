@@ -8,6 +8,7 @@ en los apuntes del profesor
 **OAuth**
 
 * [Introducción a OAuth](http://nereida.deioc.ull.es/~lpp/perlexamples/node773.html) (Apuntes del profesor)
+* [What is OAuth2? How does OAuth2 work? | Tech Primers](https://youtu.be/CPbvxxslDTU) Yotube video
 
 **Passport: Introducción**
 
