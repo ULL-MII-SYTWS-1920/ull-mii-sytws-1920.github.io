@@ -5,11 +5,7 @@ class jekyllSearch {
     this.resultsList = document.querySelector(resultsList)
     this.siteURL = siteURL
 
-    // Casiano
-    (async () => {
-      this.data = await this.fetchedData()
-    })()
-    
+    this.data = '';
     this.displayResults = this.displayResults.bind(this)
   }
 
@@ -19,10 +15,10 @@ class jekyllSearch {
   }
 
   async findResults() {
-    
+    this.data = await this.fetchedData()
     const regex = new RegExp(this.searchField.value, 'gi')
     return this.data.filter(item => {
-           return item.title.match(regex) || item.content.match(regex)
+      return item.title.match(regex) || item.content.match(regex)
     })
   }
 
