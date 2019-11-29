@@ -5,6 +5,11 @@ class jekyllSearch {
     this.resultsList = document.querySelector(resultsList)
     this.siteURL = siteURL
 
+    // Casiano
+    (async () => {
+      this.data = await this.fetchedData()
+    })()
+    
     this.displayResults = this.displayResults.bind(this)
   }
 
@@ -14,10 +19,10 @@ class jekyllSearch {
   }
 
   async findResults() {
-    const data = await this.fetchedData()
-    return data.filter(item => {
-      const regex = new RegExp(this.searchField.value, 'gi')
-      return item.title.match(regex) || item.content.match(regex)
+    
+    const regex = new RegExp(this.searchField.value, 'gi')
+    return this.data.filter(item => {
+           return item.title.match(regex) || item.content.match(regex)
     })
   }
 
@@ -41,7 +46,9 @@ class jekyllSearch {
     }
   }
 
+  // https://stackoverflow.com/questions/43431550/async-await-class-constructor
   init() {
+    
     const url = new URL(document.location)
     if (url.searchParams.get("search")) {
       this.searchField.value = url.searchParams.get("search")

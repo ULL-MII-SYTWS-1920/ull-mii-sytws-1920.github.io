@@ -8,7 +8,7 @@ title: Search
 <h1>Search</h1>
 
 <form id="search-form" action="">
-  <label class="label" for="search">Search term:</label>
+  <label class="label" for="search">Search term (accepts a regex):</label>
   <br/>
   <input class="input" id="search" type="text" name="search" placeholder="e.g. Promise" autocomplete="off">
   
