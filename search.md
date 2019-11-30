@@ -24,10 +24,10 @@ title: Search
 <script type="text/javascript">
 
   const search = new jekyllSearch(
-    '{{site.baseurl}}/assets/src/search.json',
+    '{{site.url}}/assets/src/search.json',
     '#search',
     '#list',
-    '{{site.baseurl}}'
+    '{{site.url}}'
   );
   search.init(); 
   
