@@ -6,7 +6,7 @@ class jekyllSearch {
     this.siteURL = siteURL
 
     this.data = '';
-    this.displayResults = this.displayResults.bind(this)
+    //this.displayResults = this.displayResults.bind(this)
   }
 
   fetchedData() {
@@ -52,9 +52,12 @@ class jekyllSearch {
     }
     this.searchField.addEventListener('keyup', () => {
       this.displayResults()
+      // So that when going back in the browser we keep the search
       url.searchParams.set("search", this.searchField.value)
       window.history.pushState('', '', url.href)
     })
+    
+    // to not send the form each time <enter> is pressed
     this.searchField.addEventListener('keypress', event => {
       if (event.keyCode == 13) {
         event.preventDefault()

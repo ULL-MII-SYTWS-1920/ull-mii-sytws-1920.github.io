@@ -4,6 +4,7 @@ permalink: /search/
 title: Search
 ---
 
+{% capture initSearch %}
 
 <h1>Search</h1>
 
@@ -18,15 +19,22 @@ title: Search
 
 <script type="text/javascript" src="/assets/src/fetch.js"></script>
 <script type="text/javascript" src="/assets/src/search.js"></script>
+
+
 <script type="text/javascript">
 
   const search = new jekyllSearch(
-    'https://ull-mii-sytws-1920.github.io/assets/src/search.json',
+    '{{site.baseurl}}/assets/src/search.json',
     '#search',
     '#list',
-    'https://ull-mii-sytws-1920.github.io/'
+    '{{site.baseurl}}'
   );
   search.init(); 
   
 </script>
+
 <noscript>Please enable JavaScript to use the search form.</noscript>
+
+{% endcapture %}
+
+{{ initSearch | lstrip }}
