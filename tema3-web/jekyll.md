@@ -53,6 +53,9 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 
 ## Themes
 
+With gem-based themes, some of the site’s directories (such as the `assets`, `_layouts`, `_includes`, and `_sass` directories) are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
+
+* [Themes documentation](https://jekyllrb.com/docs/themes/)
 * [Jekyll and Project Documentation Themes](https://jekyllthemes.io/jekyll-documentation-themes)
 
 ## Blog: A Collection of Music Albums
