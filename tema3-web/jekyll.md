@@ -51,6 +51,10 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 * [CloudCannon](https://app.cloudcannon.com/)
 * [Client editable Jekyll sites](https://learn.cloudcannon.com/jekyll/client-editable-jekyll-sites/)
 
+## Themes
+
+* [Jekyll and Project Documentation Themes](https://jekyllthemes.io/jekyll-documentation-themes)
+
 ## Blog: A Collection of Music Albums
 
 * [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
@@ -71,4 +75,6 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 * [Jekyll + NetlifyCMS](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcU8zbZZrr6L1zpf_2Eqt_w) 14 Youtube videos
 * [Jekyll + Patternbot](https://www.youtube.com/playlist?list=PLWjCJDeWfDdcEBngBwpB8F7wtjZ12PIy0)
 
-## [Práctica p8-t3-jekyll-netlify](practicas/p8-t3-jekyll-netlify)
+## Práctica p8-t3-jekyll-netlify
+
+* [Práctica p8-t3-jekyll-netlify](practicas/p8-t3-jekyll-netlify)
