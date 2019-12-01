@@ -55,6 +55,19 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 
 With gem-based themes, some of the site’s directories (such as the `assets`, `_layouts`, `_includes`, and `_sass` directories) are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
 
+You can run `bundle update <THEME>`, replacing `<THEME>` with the theme name, such as `minima`, to just update the theme gem:
+
+```
+~/.../sytws1920/apuntes(master)]$ bundle update jekyll-theme-midnight
+Fetching gem metadata from https://rubygems.org/...........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using concurrent-ruby 1.1.5
+...
+Bundler attempted to update jekyll-theme-midnight but its version stayed the same
+Bundle updated!
+```
+
 * [Themes documentation](https://jekyllrb.com/docs/themes/)
 * [Jekyll and Project Documentation Themes](https://jekyllthemes.io/jekyll-documentation-themes)
 
