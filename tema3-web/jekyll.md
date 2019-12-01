@@ -42,7 +42,14 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 
 ## CloudCannon: The Cloud CMS for Jekyll
 
+CloudCannon is cloud content management system and hosting provider for Jekyll websites. 
+
+1. A developer uploads a Jekyll site in the browser or syncs with GitHub, Bitbucket or Dropbox. 
+2. CloudCannon builds the site, hosts it and
+3. **provides an interface for non-technical people to update content**.
+
 * [CloudCannon](https://app.cloudcannon.com/)
+* [Client editable Jekyll sites](https://learn.cloudcannon.com/jekyll/client-editable-jekyll-sites/)
 
 ## Blog: A Collection of Music Albums
 
