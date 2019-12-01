@@ -14,14 +14,16 @@
   - Instale git si es necesario
   - [Configura git](https://git-scm.com/book/es/v1/Empezando-Configurando-Git-por-primera-vez)
   - Procure que la rama actual aparezca en el prompt de la terminal. 
-     - Ejemplo para una bash:
+     - Ejemplo para una bash. Pon en el fichero `~/.bash_profile` o `~/.bashrc` estas líneas:
+
      ```
      parse_git_branch() {
        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
      }
      export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
      ```
-     - Puede usar [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
+
+     - También puede usar [git prompt](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
      - Puede añadir algo como esto a su PS1: `PS1="\$(git branch 2>/dev/null | sed -n 's/* \(.*\)/\1 /p')$ "`
      - Recuerde que si su prompt es muy largo siempre puede acortarlo con `PROMPT_DIRTRIM=1`
   - [git aliases](https://git-scm.com/book/tr/v2/Git-Basics-Git-Aliases)
