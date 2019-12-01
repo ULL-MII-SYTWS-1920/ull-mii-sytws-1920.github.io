@@ -35,7 +35,16 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 *   [Convert an HTML site to Jekyll](https://jekyllrb.com/tutorials/convert-site-to-jekyll/)
 *   [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
 
-## Blogs
+## The Jekyll Conference
+
+* [The free, online global conference for all things Jekyll](https://jekyllconf.com/)
+Best Practices, Advanced Case Studies, The Future of Jekyll
+
+## CloudCannon: The Cloud CMS for Jekyll
+
+* [CloudCannon](https://app.cloudcannon.com/)
+
+## Blog: A Collection of Music Albums
 
 * [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
 
