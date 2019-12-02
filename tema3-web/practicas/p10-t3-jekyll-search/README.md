@@ -405,11 +405,3 @@ $ tree -I _site
 * [documentation-theme-jekyll](https://github.com/ULL-MII-SYTWS-1920/documentation-theme-jekyll) Un tema muy completo. Tiene de todo
 * [Using HTMLProofer From Ruby and Travis](https://github.com/gjtorikian/html-proofer/wiki/Using-HTMLProofer-From-Ruby-and-Travis). Para testear tus páginas: links, imágenes, etc.
 
-## [Gastby](gatsby)
-
-Gatsby is a React-based, GraphQL powered, static site generator. 
-
-## Práctica p8-t3-jekyll-netlify
-
-* Práctica [p8-t3-jekyll-netlify](/tema3-web/practicas/p8-t3-jekyll-netlify/)
-
