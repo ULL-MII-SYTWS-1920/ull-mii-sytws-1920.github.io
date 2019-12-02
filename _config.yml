@@ -20,6 +20,7 @@ collections:
       - p5-t3-websockets.md
       - p9-t3-transforming-data.md
       - p8-t3-jekyll-netlify.md
+      - p10-t3-commanding-databases.md
     output: true
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
 calificador: https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201913778
