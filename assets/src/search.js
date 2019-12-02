@@ -6,11 +6,10 @@ class JekyllSearch {
     this.siteURL = siteURL
 
     this.data = '';
-    //this.displayResults = this.displayResults.bind(this)
   }
 
   fetchedData() {
-    return fetch(this.dataSource)
+    return fetch(this.dataSource, {mode: 'no-cors'})
       .then(blob => blob.json())
   }
 
