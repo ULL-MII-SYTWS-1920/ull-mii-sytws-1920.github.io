@@ -14,6 +14,12 @@ task :pjs do
   sh "bundle exec jekyll serve -H 10.6.128.216 -P 8080"
 end
 
+desc "build"
+task :b do
+  sh "bundle exec jekyll build"
+end
+
+
 desc "sytws: pull and build"
 task :pb do
   sh "git pull origin master"

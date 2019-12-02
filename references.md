@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/06fd10c1-a01b-4c77-9ea6-f6a46c7516eb/deploy-status)](https://app.netlify.com/sites/nifty-mayer-da2ac6/deploys)
-
 # Bibliografía y Referencias
 
 # See also
