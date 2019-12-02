@@ -5,7 +5,7 @@ class JekyllSearch {
     this.resultsList = document.querySelector(resultsList)
     this.siteURL = siteURL
 
-    this.data = '';
+    this.data = [];
   }
 
   fetchedData() {
@@ -15,7 +15,7 @@ class JekyllSearch {
 
   async findResults() {
     this.data = await this.fetchedData()
-    const regex = new RegExp(this.searchField.value, 'gi')
+    const regex = new RegExp(this.searchField.value, 'i')
     return this.data.filter(item => {
       return item.title.match(regex) || item.content.match(regex)
     })

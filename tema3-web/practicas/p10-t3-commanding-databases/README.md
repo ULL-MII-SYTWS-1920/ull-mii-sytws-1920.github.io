@@ -7,6 +7,9 @@ y resuelva los problemas en la secciónes
 [Deleting and Index](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iidot-working-with-data/chp_databases_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMjA1OThfaHRtbCZxdWVyeT0=) y 
 [adding a Single Document](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iidot-working-with-data/chp_databases_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMjA1OThfaHRtbCZxdWVyeT0=)
 
+## Reto
+
+* [Retos](reto.html)
 
 ## Recursos
 
