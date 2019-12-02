@@ -95,3 +95,4 @@ Bundle updated!
 ## Práctica p8-t3-jekyll-netlify
 
 * [Práctica p8-t3-jekyll-netlify](practicas/p8-t3-jekyll-netlify)
+* [Práctica p10-t3-jekyll-search](practicas/p10-t3-jekyll-search)
