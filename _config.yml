@@ -21,6 +21,7 @@ collections:
       - 07p9-t3-transforming-data.md
       - 08p8-t3-jekyll-netlify.md
       - 09p10-t3-commanding-databases.md
+      - 10p10-t3-jekyll-search.md
     output: true
 campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
 calificador: https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201913778
