@@ -2,7 +2,7 @@
 
 ## Adding a Simple Search to our Jekyll Site
 
-El ejercicio consiste en que añada la capacidad de búsqueda en el sitio de la práctica [p8-t3-jekyll-netlify](/tema3-web/practicas/p8-t3-jekyll-netlify/).
+El ejercicio consiste en que añada la capacidad de búsqueda al sitio asociado a alguna de las prácticas, por ejemplo a [p8-t3-jekyll-netlify](/tema3-web/practicas/p8-t3-jekyll-netlify/).
 
 Estos son algunos requisitos:
 
