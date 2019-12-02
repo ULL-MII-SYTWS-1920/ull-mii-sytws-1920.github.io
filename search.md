@@ -23,7 +23,7 @@ title: Search
 
 <script type="text/javascript">
 
-  const search = new jekyllSearch(
+  const search = new JekyllSearch(
     '{{site.url}}/assets/src/search.json',
     '#search',
     '#list',
