@@ -1,4 +1,4 @@
-# Reto 1: Commanding Databases with yargs (p10-t3-commanding-databases)
+# Retos: Commanding Databases with yargs (p10-t3-commanding-databases)
 
 Reescriba el programa de línea de comandos `esclu` usando `yargs` en vez de `commander`
 
