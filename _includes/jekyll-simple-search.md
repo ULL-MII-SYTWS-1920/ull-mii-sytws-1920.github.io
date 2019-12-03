@@ -193,7 +193,7 @@ title: Search
   - [lstrip Removes all whitespace (tabs, spaces, and newlines) from the left side of a string. It does not affect spaces between words.](https://shopify.github.io/liquid/filters/lstrip/)
 
 * [Clearing Up Confusion Around baseurl](https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/). About `site.url` vs `site.baseurl`
-  - ![https://byparker.com/img/what-is-a-baseurl.jpg](assets/images/what-is-a-baseurl.jpg)
+  - ![https://byparker.com/img/what-is-a-baseurl.jpg](/assets/images/what-is-a-baseurl.jpg)
 
 ### La clase JekyllSearch: Fichero search.js
 
