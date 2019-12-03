@@ -1,3 +1,7 @@
+---
+layout: error
+---
+
 # Clases
 
   {% assign previousMonth = "0" %}
