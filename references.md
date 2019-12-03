@@ -69,7 +69,7 @@ By: Parth Ghiya</a>. Acceda por medio del <a href="https://www.ull.es/servicios/
 
 * <a href="http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter" target="_blank">Book Web Workers: Safari O'Reilly. Usa Acceso ULL</a>
 
-# GraphQL
+## GraphQL
 
 * [Beginning GraphQL. Xavier Decuyper y Brian Kimokoti. Paqt](https://learning.oreilly.com/videos/beginning-graphql/9781789533934) PuntoQ
 * [React Cookbook by Carlos Santana Roldan](https://learning.oreilly.com/library/view/react-cookbook/9781783980727/) PuntoQ
