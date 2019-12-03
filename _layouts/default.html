@@ -14,8 +14,11 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
 </head>
 
 <body>
@@ -28,31 +31,20 @@
     <div class="wrapper">
 
         <section>
-            <div id="title">
-                <h1>{{ site.title | default: site.github.repository_name }}</h1>
-                <p> {{ site.description | default: site.github.project_tagline }}</p>
-                <hr>
-                <span class="credits left">Organization <a href="{{ site.github.owner_url }}"
-                        target="_blank">{{ site.github.owner_name }}</a></span>
-                <span class="credits left"> &nbsp; Github Classroom <a
-                        href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
-                        target="_blank">SYTWS 19/20</a></span>
-                <span class="credits left"> &nbsp; Campus Virtual <a
-                        href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
-                        19/20</a></span>
-                <span class="credits left"> &nbsp; Profesor <a
-                        href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
-                        _blank">Casiano</a></span>
+           {% include title.html %}
+           
+           <details>
+            <summary>
+                <h2>Table of Contents</h2>
+            </summary>
+            {% include toc.html html=content id="sytwstoc" %}
+        </details>
+
+            <div class="container">
+                {{ content }}
             </div>
+            
 
-            {{ content }}
-
-            <details>
-                <summary>
-                    <h2>Table of Contents</h2>
-                </summary>
-                {% include toc.html html=content %}
-            </details>
             <details>
                 <summary>
                     <h2>Your Comments</h2>

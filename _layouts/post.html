@@ -28,26 +28,19 @@
     <div class="wrapper">
 
         <section>
-            <div id="title">
-                <h1>{{ site.title | default: site.github.repository_name }}</h1>
-                <p> {{ site.description | default: site.github.project_tagline }}</p>
-                <hr>
-                <span class="credits left">Organization <a href="{{ site.github.owner_url }}" target="_blank">{{ site.github.owner_name }}</a></span>
-                <span class="credits left"> &nbsp; Github Classroom <a href="{{site.classroom}}" target="_blank">{{site.acronimo_curso}}</a></span>
-                <span class="credits left"> &nbsp; Campus Virtual <a href="{{site.campus_virtual}}" target="_blank">{{site.acronimo_curso}}</a></span>
-                <span class="credits left"> &nbsp; Profesor <a href="{{site.profesor}}" target="_blank">{{site.profesor_name}}</a></span>
-            </div>
-
-
-            {{ content }}
-
+            {% include title.html %}
             
             <details>
                 <summary>
                         <h2>Table of Contents</h2>
                 </summary>
-                {% include toc.html html=content %}
+                {% include toc.html html=content id="sytwstoc" %}
             </details>
+
+            {{ content }}
+
+            
+            
            <details>
                <summary>
                    <h2>Your Comments</h2>
