@@ -86,28 +86,49 @@ sitemap: false
     - The `output` attribute of a collection controls whether the collection's documents will be output as individual files.
 * [iteration in Liquid](https://shopify.github.io/liquid/tags/iteration/)
 * `site.html_pages`: A subset of `site.pages` listing those which end in `.html`.
+
+#### Entendiendo la línea `"content": { { page.content | markdownify | strip_html | jsonify }},`
+
+* `page.content` el contenido de la página todavia sin renderizar (se supone que es fundamentalmente markdown, pero puede contener yml en el front-matter, html, scripts, liquid, etc.)
+* `markdownify`: Convert a Markdown-formatted string into HTML.
 * [strip_html](https://shopify.github.io/liquid/filters/strip_html/): Removes any HTML tags from a string.
-* Markdownify: Convert a Markdown-formatted string into HTML.
-* Jsonify: If the data is an array or hash you can use the jsonify filter to convert it to JSON.
+* `jsonify`: If the data is an array or hash you can use the jsonify filter to convert it to JSON.
 
-  ```yml
-  ---
-  colors:
-    - red
-    - blue
-    - green
-  ---
-  ```
-  ```js
-  <script>
-    var colors = {{ page.colors | jsonify }};
-  </script>
-  ```
-  Which generates a JSON array of colors:
+Por ejemplo, supongamos que tenemos estas definiciones en el front-matter de nuestra página:
 
-  ```js
-  var colors = ["red","blue","green"];
-  ```
+```yml
+chuchu: "Cadena **negritas** e *italicas*"
+html: "<h1>hello</h1> <b>world</b>"
+colors:
+  - red
+  - blue
+  - green
+---
+```
+
+y que en el contenido de nuestra página tenemos algo así:
+
+```html
+Compara <script>{{ page.chuchu }} </script> con su markdownify: <script>{{ page.chuchu | markdownify }}</script>
+
+Compara <script> {{ page.colors}} </script> con su jsonify: <script>{{ page.colors | jsonify }} </script>
+
+Compara <script>{{page.html}}</script> con su `strip_html` <script> {{ page.html | strip_html }} </script>
+```
+
+Esta es la salida que produce jekyll 4.0.0:
+
+```html
+<p>Compara <script>Cadena **negritas** e *italicas* </script> con su markdownify: <script>&lt;p&gt;Cadena <strong>negritas</strong> e <em>italicas</em>&lt;/p&gt;
+</script></p>
+
+<p>Compara <script> redbluegreen </script> con su jsonify: <script>["red","blue","green"] </script></p>
+
+<p>Compara <script>&lt;h1&gt;hello&lt;/h1&gt; <b>world</b></script> con su <code class="highlighter-rouge">strip_html</code> <script> hello world </script></p>
+```
+
+La idea general es que necesitamos suprimir los tags, tanto yml, markdown, HTML, etc. para que no confundan al método de busca. 
+Por eso convertimos el markdown a HTML y después suprimimos los tags HTML. También convertimos el yml a JSON.
 
 
 ### La página de Búsqueda: search.md
