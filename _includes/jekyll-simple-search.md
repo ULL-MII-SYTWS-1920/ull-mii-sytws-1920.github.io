@@ -109,22 +109,22 @@ colors:
 y que en el contenido de nuestra página tenemos algo así:
 
 ```
-Compara <script>{{ page.chuchu }} </script> con su markdownify: <script>{{ page.chuchu | markdownify }}</script>
+Compara < script>{ { page.chuchu }} </script> con su markdownify: < script>{ { page.chuchu | markdownify }}</script>
 
-Compara <script> {{ page.colors}} </script> con su jsonify: <script>{{ page.colors | jsonify }} </script>
+Compara < script> { { page.colors}} </script> con su jsonify: < script>{ { page.colors | jsonify }} </script>
 
-Compara <script>{{page.html}}</script> con su `strip_html` <script> {{ page.html | strip_html }} </script>
+Compara < script>{ {page.html}}</script> con su `strip_html` < script> { { page.html | strip_html }} </script>
 ```
 
 Esta es la salida que produce jekyll 4.0.0:
 
 ```
-<p>Compara <script>Cadena **negritas** e *italicas* </script> con su markdownify: <script>&lt;p&gt;Cadena <strong>negritas</strong> e <em>italicas</em>&lt;/p&gt;
+<p>Compara < script>Cadena **negritas** e *italicas* </script> con su markdownify: < script>&lt;p&gt;Cadena <strong>negritas</strong> e <em>italicas</em>&lt;/p&gt;
 </script></p>
 
-<p>Compara <script> redbluegreen </script> con su jsonify: <script>["red","blue","green"] </script></p>
+<p>Compara < script> redbluegreen </script> con su jsonify: < script>["red","blue","green"] </script></p>
 
-<p>Compara <script>&lt;h1&gt;hello&lt;/h1&gt; <b>world</b></script> con su <code class="highlighter-rouge">strip_html</code> <script> hello world </script></p>
+<p>Compara < script>&lt;h1&gt;hello&lt;/h1&gt; <b>world</b></script> con su <code class="highlighter-rouge">strip_html</code> < script> hello world </script></p>
 ```
 
 La idea general es que necesitamos suprimir los tags, tanto yml, markdown, HTML, etc. para que no confundan al método de busca. 
@@ -179,11 +179,11 @@ title: Search
   </ul>
 </form>
 
-<script type="text/javascript" src="/assets/src/fetch.js"></script>
-<script type="text/javascript" src="/assets/src/search.js"></script>
+< script type="text/javascript" src="/assets/src/fetch.js"></script>
+< script type="text/javascript" src="/assets/src/search.js"></script>
 
 
-<script type="text/javascript">
+< script type="text/javascript">
 
   const search = new JekyllSearch(
     '{ {site.url}  }/assets/src/search.json',
