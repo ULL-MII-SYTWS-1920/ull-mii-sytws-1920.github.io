@@ -108,7 +108,7 @@ colors:
 
 y que en el contenido de nuestra página tenemos algo así:
 
-```html
+```
 Compara <script>{{ page.chuchu }} </script> con su markdownify: <script>{{ page.chuchu | markdownify }}</script>
 
 Compara <script> {{ page.colors}} </script> con su jsonify: <script>{{ page.colors | jsonify }} </script>
@@ -118,7 +118,7 @@ Compara <script>{{page.html}}</script> con su `strip_html` <script> {{ page.html
 
 Esta es la salida que produce jekyll 4.0.0:
 
-```html
+```
 <p>Compara <script>Cadena **negritas** e *italicas* </script> con su markdownify: <script>&lt;p&gt;Cadena <strong>negritas</strong> e <em>italicas</em>&lt;/p&gt;
 </script></p>
 
