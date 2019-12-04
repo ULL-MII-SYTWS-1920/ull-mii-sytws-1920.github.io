@@ -81,11 +81,18 @@ Bundle updated!
 
 * [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
 
-## Plugins
+## React
 
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
   - [Blog: Start building your great modern static website with this boilerplate using Jekyll, React and Webapck.](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
+
+## Auth
+
 * [benbalter/jekyll-auth: A simple way to use GitHub OAuth to serve a protected Jekyll site to your GitHub organization](https://github.com/benbalter/jekyll-auth)
+
+## E-commerce
+
+* [Jekyll E-Commerce Tutorial: Add a Shopping Cart to Your Static Website](https://snipcart.com/blog/jekyll-ecommerce-tutorial)
 
 ## Testing
 
