@@ -93,6 +93,7 @@ Bundle updated!
 ## E-commerce
 
 * [Jekyll E-Commerce Tutorial: Add a Shopping Cart to Your Static Website](https://snipcart.com/blog/jekyll-ecommerce-tutorial)
+* [Headless E-Commerce: What, Why, & How (Tools Included)](https://snipcart.com/blog/headless-ecommerce-guide)
 
 ## Testing
 
