@@ -18,6 +18,7 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 
 *   [Directory Structure](https://jekyllrb.com/docs/structure/)
 *   [Liquid](https://jekyllrb.com/docs/liquid/)
+  * Liquid Sandbox: [You can test your Liquid code here. This sandbox only loads the default Liquid methods ](https://jumpseller.com/support/liquid-sandbox/)
 *   [Variables](https://jekyllrb.com/docs/variables/)
 *   [Includes](https://jekyllrb.com/docs/includes/)
 *   [Layouts](https://jekyllrb.com/docs/layouts/)
@@ -34,10 +35,6 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 *   [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/)
 *   [Convert an HTML site to Jekyll](https://jekyllrb.com/tutorials/convert-site-to-jekyll/)
 *   [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
-
-## Liquid Sandbox
-
-* [You can test your Liquid code here. This sandbox only loads the default Liquid methods ](https://jumpseller.com/support/liquid-sandbox/)
 
 
 ## The Jekyll Conference
@@ -92,8 +89,8 @@ Bundle updated!
 
 ## E-commerce
 
-* [Jekyll E-Commerce Tutorial: Add a Shopping Cart to Your Static Website](https://snipcart.com/blog/jekyll-ecommerce-tutorial)
-* [Headless E-Commerce: What, Why, & How (Tools Included)](https://snipcart.com/blog/headless-ecommerce-guide)
+* [Jekyll E-Commerce Tutorial: Add a Shopping Cart to Your Static Website](https://snipcart.com/blog/jekyll-ecommerce-tutorial) 2019
+* [Headless E-Commerce: What, Why, & How (Tools Included)](https://snipcart.com/blog/headless-ecommerce-guide) 2018
 
 ## Testing
 
