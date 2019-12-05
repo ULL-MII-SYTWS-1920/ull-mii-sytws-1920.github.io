@@ -77,6 +77,9 @@ Bundle updated!
 ## Converting a Jekyll Web Site to PDF
 
 * [Prince](https://www.princexml.com/)
+* [PDFKit](https://github.com/pdfkit/PDFKit)
+* [GitHub repo wkhtmltopdf: Convert HTML to PDF using Webkit (QtWebKit)](https://github.com/wkhtmltopdf/wkhtmltopdf) see [https://wkhtmltopdf.org](https://wkhtmltopdf.org)
+
 
 
 ## Blog: A Collection of Music Albums
