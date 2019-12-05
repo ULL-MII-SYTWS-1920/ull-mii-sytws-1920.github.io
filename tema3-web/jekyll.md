@@ -74,6 +74,11 @@ Bundle updated!
 * [Jekyll and Project Documentation Themes](https://jekyllthemes.io/jekyll-documentation-themes)
 * [documentation-theme-jekyll](https://github.com/ULL-MII-SYTWS-1920/documentation-theme-jekyll) Un tema muy interesante
 
+## Converting a Jekyll Web Site to PDF
+
+* [Prince](https://www.princexml.com/)
+
+
 ## Blog: A Collection of Music Albums
 
 * [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
@@ -91,6 +96,8 @@ Bundle updated!
 
 * [Jekyll E-Commerce Tutorial: Add a Shopping Cart to Your Static Website](https://snipcart.com/blog/jekyll-ecommerce-tutorial) 2019
 * [Headless E-Commerce: What, Why, & How (Tools Included)](https://snipcart.com/blog/headless-ecommerce-guide) 2018
+* [GitHub repo:A Jekyll based shopping cart built with simpleCart(js)](https://github.com/bradonomics/jekyll-cart)
+* [Jekyll Cart Demo](https://youtu.be/jdp_XmogTEo) Video en YouTube
 
 ## Testing
 
