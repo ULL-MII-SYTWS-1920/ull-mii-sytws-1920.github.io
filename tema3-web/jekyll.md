@@ -53,6 +53,10 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 * [CloudCannon](https://app.cloudcannon.com/)
 * [Client editable Jekyll sites](https://learn.cloudcannon.com/jekyll/client-editable-jekyll-sites/)
 
+## Editors
+
+* [forestry.io](https://forestry.io/)
+
 ## Themes
 
 With gem-based themes, some of the site’s directories (such as the `assets`, `_layouts`, `_includes`, and `_sass` directories) are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
@@ -86,14 +90,15 @@ Bundle updated!
 
 * [How to maintain a collection of music albums online, using Jekyll and Github Pages](https://dev.to/adrienjoly/how-to-maintain-a-collection-of-music-albums-online-using-jekyll-and-github-pages-3hd6). See it at [http://adrienjoly.com/album-shelf/](http://adrienjoly.com/album-shelf/)
 
-## React
+## React and Jekyll
 
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
   - [Blog: Start building your great modern static website with this boilerplate using Jekyll, React and Webapck.](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
 
-## Auth
+## Authand Jekyll
 
 * [benbalter/jekyll-auth: A simple way to use GitHub OAuth to serve a protected Jekyll site to your GitHub organization](https://github.com/benbalter/jekyll-auth)
+
 
 ## E-commerce
 
