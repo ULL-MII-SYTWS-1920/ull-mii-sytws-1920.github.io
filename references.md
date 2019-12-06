@@ -133,3 +133,7 @@ By: Parth Ghiya</a>. Acceda por medio del <a href="https://www.ull.es/servicios/
 * <a href="https://campusvirtual.ull.es/1617/mod/url/view.php?id=156597" target="_blank">Apuntes del antiguo curso de PL de la Ingeniería Informática (Open CourseWare ULL) (C, Perl, Yacc, Eyapp)</a>
 * <a href="https://campusvirtual.ull.es/ocw/course/view.php?id=43" target="_blank">Lenguajes y Herramientas Informáticas (Open CourseWare ULL) (C, Perl)</a>
 
+
+# JAM Stack
+
+* [O'Reilly book: Modern Web Development on the JAMstack - Netlify](https://www.netlify.com/pdf/oreilly-modern-web-development-on-the-jamstack.pdf )
