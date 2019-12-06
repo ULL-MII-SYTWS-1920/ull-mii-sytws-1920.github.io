@@ -55,7 +55,7 @@ Best Practices, Advanced Case Studies, The Future of Jekyll
 
 ## Editors
 
-* [forestry.io](https://forestry.io/)
+* [Forestry](https://forestry.io/) is an editor-friendly interface over Git. This means that developers and editors can now use the same workflow and tool set.
 
 ## Themes
 
