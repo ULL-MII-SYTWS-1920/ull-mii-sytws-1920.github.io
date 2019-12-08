@@ -36,6 +36,10 @@
 
 ## [Bases de Datos No Relacionales](mongodb)
 
+## [Jekyll](jekyll)
+
+## [Hugo](hugo)
+
 ## [Gastby](gatsby)
 
 ## [React](react) 

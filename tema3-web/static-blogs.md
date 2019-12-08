@@ -6,7 +6,7 @@
 
 ## [Gatsby](gatsby)
 
-## [Hugo](https://gohugo.io/)
+## [Hugo](hugo)
 
 ## [Spike](https://spike.readme.io/docs/getting-started)
 
