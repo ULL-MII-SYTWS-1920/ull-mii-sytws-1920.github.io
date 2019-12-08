@@ -137,7 +137,7 @@ Por eso convertimos el markdown a HTML y después suprimimos los tags HTML. Tamb
 
 **Fichero `search.md`**:
 
-La idea es que vamos a escribir uan clase `JekyllSearch` que implementa la búsqueda.
+La idea es que vamos a escribir una clase `JekyllSearch` que implementa la búsqueda.
 Debe disponer  de un constructor al que se le pasan cuatro argumentos:
 
 1. La ruta donde esta disponible el fichero .json generado durante la construcción (`jekyll build`)
