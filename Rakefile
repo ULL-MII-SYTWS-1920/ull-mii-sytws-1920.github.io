@@ -3,9 +3,14 @@ task :default do
   sh "git ci -am 2020 && git push"
 end
 
-desc "bundle exec jekyll serve --watch --incremental"
+desc "sytws: bundle exec jekyll serve --watch --incremental"
 task :serve do
   sh "bundle exec jekyll serve --watch --incremental --port 8080 --host 10.6.128.216"
+end
+
+desc "local: bundle exec jekyll serve --watch --incremental"
+task :ls do
+  sh "bundle exec jekyll serve --watch --incremental --port 8080"
 end
 
 desc "sytws: pull and bundle exec jekyll serve -H 10.6.128.216 -P 8080"
