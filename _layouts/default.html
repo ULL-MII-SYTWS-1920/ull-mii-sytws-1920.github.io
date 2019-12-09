@@ -33,12 +33,11 @@
         <section>
            {% include title.html %}
 
-           <details>
-            <summary>
-                <h2 id="sytwstoc">Table of Contents</h2>
-            </summary>
-            {% include toc.html html=content %}
-        </details>
+           
+            <h2 >Table of Contents</h2>
+           
+            {% include toc.html html=content id="sytwstoc" %}
+        
 
             <div class="container">
                 {{ content }}
