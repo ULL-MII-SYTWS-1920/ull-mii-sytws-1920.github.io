@@ -40,9 +40,9 @@ Using your BDD infrastructure built on Mocha and Chai, implement the following:
 Ayuda
 </summary>
 <ul>
-<li>Busca por un elemento con un rdf:resource que termine en /LCC</li>
-<li>Luego vete al apdre</li>
-<li>Encuentra el texto del primer descendiente rdf:value
+<li>Busca por un elemento con un atributo rdf:resource que termine en /LCC</li>
+<li>Luego vete al padre de este elemento</li>
+<li>Encuentra el texto del primer descendiente rdf:value</li>
 </ul>
 </details>
 
