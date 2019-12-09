@@ -15,6 +15,8 @@ called subjects.
 Congress Classification (LCC) single-letter codes. Recall that the
 LCC portion of an RDF file looks like this:
 
+**[data/cache/epub/132/pg132.rdf](/tema3-web/pg132)**
+
 ```xml
 <dcterms:subject>
   <rdf:Description rdf:nodeID="Nfb797557d91f44c9b0cb80a0d207eaa5">
@@ -42,6 +44,8 @@ where each book can be downloaded in various formats.
 For example,
 here’s the part that shows where to download the plain text of The
 Art of War:
+
+**[data/cache/epub/132/pg132.rdf](/tema3-web/pg132)**
 
 ```xml
 <dcterms:hasFormat>
