@@ -13,6 +13,12 @@ task :ls do
   sh "bundle exec jekyll serve --watch --incremental --port 8080"
 end
 
+desc "local: pull and bundle exec jekyll serve --watch --incremental"
+task :pls do
+  sh "git pull origin master"
+  sh "bundle exec jekyll serve --watch --incremental --port 8080"
+end
+
 desc "sytws: pull and bundle exec jekyll serve -H 10.6.128.216 -P 8080"
 task :pjs do
   sh "git pull origin master"
