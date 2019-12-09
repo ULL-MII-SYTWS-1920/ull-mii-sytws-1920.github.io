@@ -35,6 +35,16 @@ Using your BDD infrastructure built on Mocha and Chai, implement the following:
 1. Run the tests to see that they fail.
 2. Add code to your exported module function in `parse-rdf.js` to make the tests pass.
 
+<details>
+<summary>
+Ayuda
+</summary>
+<ul>
+<li>Busca por un elemento con un `rdf:resource` que termine en `/LCC`</li>
+<li>Luego vete al apdre</li>
+<li>Encuentra el texto del primer descendiente `rdf:value`
+</ul>
+</details>
 
 ## Extracting Sources
 
