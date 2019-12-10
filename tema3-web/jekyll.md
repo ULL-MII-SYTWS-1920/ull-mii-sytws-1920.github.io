@@ -95,7 +95,7 @@ Bundle updated!
 * [A npm package providing a Jekyll Boilerplate with React using Webpack](https://www.npmjs.com/package/jekyll-react-webpack) (Not supported by GitHub Pages)
   - [Blog: Start building your great modern static website with this boilerplate using Jekyll, React and Webapck.](https://marcoslombog.com/2019/04/07/jekyll-react-webpack.html)
 
-## Authand Jekyll
+## Auth and Jekyll
 
 * [benbalter/jekyll-auth: A simple way to use GitHub OAuth to serve a protected Jekyll site to your GitHub organization](https://github.com/benbalter/jekyll-auth)
 
@@ -110,6 +110,10 @@ Bundle updated!
 ## Testing
 
 * [Using HTMLProofer From Ruby and Travis](https://github.com/gjtorikian/html-proofer/wiki/Using-HTMLProofer-From-Ruby-and-Travis)
+
+## Jekyll as a Web Service
+
+* [Jekyll JSON API](https://www.techiediaries.com/how-to-use-jekyll-like-a-pro-output-data-as-json/)
 
 ## Cursos en YouTube de Jekyll and NetlifyCMS por Thomas Bradley
 

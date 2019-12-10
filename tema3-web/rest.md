@@ -8,11 +8,9 @@
 *  [REST API Tutorial](https://restfulapi.net/)
 * Libro [Pro REST API Development with Node.js by Fernando Doglio. Apress 2015](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781484209172) Book PuntoQ BULL
 
-## Otras Fuentes Interesantes
+## [REST API concepts and examples](https://youtu.be/7YcW25PHnAA) (Youtube video)
 
-### [REST API concepts and examples](https://youtu.be/7YcW25PHnAA) (Youtube video)
-
-### [API for beginners](https://youtu.be/oBW_VNg4qD0) (Youtube video) por Le Wagon
+## [API for beginners](https://youtu.be/oBW_VNg4qD0) (Youtube video) por Le Wagon
 
 - [programmableweb.com/](https://www.programmableweb.com/)
 - [How to Send an SMS With Node.js Using Twilio](https://www.twilio.com/blog/2016/09/how-to-send-an-sms-with-node-js-using-twilio.html)
@@ -25,29 +23,31 @@
 - [RequestBin](https://requestb.in/) gives you a URL that will collect requests made to it and let you inspect them in a human-friendly way.
 Use RequestBin to see what your HTTP client is sending or to inspect and debug webhook requests.
 
-### [Tutorial: Crear API RESTful utilizando Node.js + Express.js + MongoDB](https://www.programacion.com.py/web/javascript/tutorial-api-rest-usando-node-js-express-mongodb)
+## [Tutorial: Crear API RESTful utilizando Node.js + Express.js + MongoDB](https://www.programacion.com.py/web/javascript/tutorial-api-rest-usando-node-js-express-mongodb)
 
-### Christopher Buecheler tutorial
+## Christopher Buecheler tutorial
 
 * [The Dead-Simple Step-By-Step Guide for Front-End Developers to Getting Up and Running With Node.JS, Express, and MongoDB](https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb) by Christopher Buecheler
     - [Repo ULL-ESIT-MII-CA-1718/node-tutorial-for-frontend-devs](https://github.com/ULL-ESIT-MII-CA-1718/node-tutorial-for-frontend-devs)
 * [Creating a Simple RESTful Web App with Node.js, Express, and MongoDB](https://closebrace.com/tutorials/2017-03-02/creating-a-simple-restful-web-app-with-nodejs-express-and-mongodb)
 
-### [RESTful Web services: The basics](https://www.ibm.com/developerworks/webservices/library/ws-restful/) by Alex Rodríguez
+## [RESTful Web services: The basics](https://www.ibm.com/developerworks/webservices/library/ws-restful/) by Alex Rodríguez
 
-### [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
+## [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
 
 - [GitHub repo ULL-ESIT-MII-CA-1718/node-api](https://github.com/ULL-ESIT-MII-CA-1718/node-api)
 
-### [RESTful API From Scratch Using Node, Express and MongoDB](https://youtu.be/eB9Fq9I5ocs) (YouTube video. Sencillo)
+## [RESTful API From Scratch Using Node, Express and MongoDB](https://youtu.be/eB9Fq9I5ocs) (YouTube video. Sencillo)
 
-### [REST API con Express, Mongodb y Async/Await](https://www.youtube.com/watch?v=0XgRqjAAsaU&list=PLL0TiOXBeDajy0GJ47Ce9dU_iYxddpR4o) 6 vídeos por Fatz
-
+## [REST API con Express, Mongodb y Async/Await](https://www.youtube.com/watch?v=0XgRqjAAsaU&list=PLL0TiOXBeDajy0GJ47Ce9dU_iYxddpR4o) 6 vídeos por Fatz
 
 ## Clientes para APIS REST
 
 {% include rest-clients.md %}
 
+## Pagination in the REST API
+
+* [Pagination in the REST API](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/)
 
 ## Google APIs
 
