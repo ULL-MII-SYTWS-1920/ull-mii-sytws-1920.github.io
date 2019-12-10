@@ -4,6 +4,8 @@
 
 ## [GitHub Actions](github-actions)
 
+## [Performance](performance)
+
 ## [Kubernetes](kubernetes)
 
 ## [Serverless Computing](serverless)
