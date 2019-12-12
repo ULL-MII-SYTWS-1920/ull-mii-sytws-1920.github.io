@@ -40,8 +40,6 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 * [Create a new React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
-
-
 ### Create React App. Set up a modern web app by running one command
 
 * [create-react-app docs](https://create-react-app.dev/docs/getting-started)
@@ -64,6 +62,14 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 * [Creating a React App… From Scratch](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658)
   - Github repo [paradoxinversion/creating-a-react-app-from-scratch](https://github.com/paradoxinversion/creating-a-react-app-from-scratch)
+
+## React Function Components
+
+* [React Function Components](https://www.robinwieruch.de/react-function-component#react-function-component-lifecycle)
+
+>In the past, there have been various React Component Types, but with the introduction of React Hooks it's possible to write your entire application with just functions as React components.
+
+>This in-depth guide shows you everything about React Function Components -- which are basically just JavaScript Functions being React Components which return JSX (React's Syntax) -- so that after you have read this tutorial you should be well prepared to implement modern React applications with them.
 
 ## Learning React by Eve Porcello, Alex Banks 
 
