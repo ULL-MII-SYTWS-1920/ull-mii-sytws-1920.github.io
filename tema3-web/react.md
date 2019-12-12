@@ -40,21 +40,25 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 * [Create a new React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
-### For a Web App
 
-* [Add React to a Web Site](https://reactjs.org/docs/add-react-to-a-website.html)
 
 ### Create React App. Set up a modern web app by running one command
 
+* [create-react-app docs](https://create-react-app.dev/docs/getting-started)
 * [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
 * [YouTube video: Getting Started with Create React App](https://youtu.be/eCz3rhsDG5s) by Elijah  Manor
 * [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search)
 * [This project was bootstrapped with Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
+
   
 ### React in Visual Studio Code
 
 * [Using React in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
 * [Visual studio code changes format (React-JSX)](https://stackoverflow.com/questions/44993808/visual-studio-code-changes-format-react-jsx)
+
+### For a Web App
+
+* [Add React to a Web Site](https://reactjs.org/docs/add-react-to-a-website.html)
 
 ### From Scratch
 
@@ -70,3 +74,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 * [How to pass props to components in React](https://www.robinwieruch.de/react-pass-props-to-component#react-props) blog by ROBIN WIERUCH
  
+
+## Práctica p11-t3-react-tic: Tutorial "Intro to React". Tic-Tac-Toe 
+
+* [Descripción de la práctica](p11-t3-react-tic)
