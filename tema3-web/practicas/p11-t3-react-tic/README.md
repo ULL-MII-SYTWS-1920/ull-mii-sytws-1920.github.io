@@ -1,6 +1,6 @@
 # Práctica p11-t3-react-tic: Tutorial "Intro to React". Tic-Tac-Toe
 
-Realice el tutorial: [Intro to React](https://reactjs.org/tutorial/tutorial.html) y, usando Jekyll, elabore el correspondiente informe
+Realice el tutorial: [Intro to React](https://reactjs.org/tutorial/tutorial.html) y, usando Jekyll, elabore el correspondiente informe en el repo asignado a esta práctica
 
 *   [Before We Start the Tutorial](https://reactjs.org/tutorial/tutorial.html#before-we-start-the-tutorial)
     *   [What Are We Building?](https://reactjs.org/tutorial/tutorial.html#what-are-we-building)
