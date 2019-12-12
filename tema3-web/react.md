@@ -77,4 +77,4 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 ## Práctica p11-t3-react-tic: Tutorial "Intro to React". Tic-Tac-Toe 
 
-* [Descripción de la práctica](p11-t3-react-tic)
+* [Descripción de la práctica](practicas/p11-t3-react-tic)
