@@ -7,6 +7,7 @@
 * [https://www.gatsbyjs.org/](https://www.gatsbyjs.org/)
     * [Examples](https://github.com/gatsbyjs/gatsby/tree/master/examples)
     * [Video Tutorial](https://www.youtube.com/playlist?list=PLLnpHn493BHHfoINKLELxDch3uJlSapxg)
+    * [Gatsby JS Crash Course](https://youtu.be/6YhqQ2ZW1sc) YouTube
 
     * [Gatsby.js: Adding Markdown Pages](https://www.gatsbyjs.org/docs/adding-markdown-pages/)
     * [Creating a Blog with Gatsby](https://www.gatsbyjs.org/blog/2017-07-19-creating-a-blog-with-gatsby/)
