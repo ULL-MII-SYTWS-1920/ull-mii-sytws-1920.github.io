@@ -3,7 +3,7 @@
 * Lea el  [Chapter 8. Creating a Beautiful  User Experience]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL).
 En este capítulo se construye una aplicación Web utilizando:
 
-- Webpack
+- Webpack: Nos permite procesar todo nuestro código para el front-end y sus dependencias para encarpetarlos en un pequeño número de ficheros
 - Bootstrap
 - TypeScript
 - Promesas y Await/Async
