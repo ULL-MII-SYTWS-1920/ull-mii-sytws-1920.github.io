@@ -1,7 +1,6 @@
 # Práctica: Developing RESTful Web Services (p11-t3-restful)
 
-* Lea el  [Chapter 7. Developing RESTful Web Services](* [Node.js 8 the Right Way]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287). Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL)) 
-y resuelva los problemas planteados en la secciones:
+Lea el  [Chapter 7. Developing RESTful Web Services]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL) y resuelva los problemas planteados en la secciones:
 
 ## Deleting a Bundle Entirely 
 
