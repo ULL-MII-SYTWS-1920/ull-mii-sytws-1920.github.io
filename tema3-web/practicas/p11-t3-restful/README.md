@@ -58,12 +58,16 @@ Inside the `try{}` block you’ll need to do a few things:
 
 * Use `await` with `rp()` to retrieve the bundle object from Elasticsearch.
 * Find the index of the book within the bundle.books list.
-* Remove the book from the list. (Hint: use `Array.splice()`.)
+* Remove the book from the list. Hint: use `Array.splice()`.
 * `PUT` the updated bundle object back into the Elasticsearch index, again
 with `await` and `rp()`.
 
 Note that if the bundle doesn’t contain the book whose removal is being requested, your handler should return a `409` Conflict HTTP status code. You can make this happen by throwing an object with a statusCode property set to `409` and an error object that contains information about what went wrong. This will be caught by the catch block and used to finish the Express response.
 If you get stuck, [check out the code with the solutions](https://github.com/ULL-MII-SYTWS-1920/book-solution-nodejs-the-right-way).
+
+## Reto
+
+* [Descripción del Reto](reto)
 
 ## Recursos
 

@@ -1,6 +1,6 @@
 # TFA: Creating a Beautiful User Experience (p12-tfa-user-experience)
 
-* Lea el  [Chapter 8. Creating a Beautiful  User Experience](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iiidot-creating-an-application-from-the-ground-up/d24e21014_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZjaHBfdXhfaHRtbCZxdWVyeT0=) y resuelva los problemas en las secciones 
+* Lea el  [Chapter 8. Creating a Beautiful  User Experience]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL) y resuelva los problemas en las secciones 
 
   - [*Extracting Text*](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/6dot-commanding-databases/d24e20598_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMzIzODZfaHRtbCZxdWVyeT0=)
   - [*Deleting  Bundles*](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/6dot-commanding-databases/d24e20598_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMzIzODZfaHRtbCZxdWVyeT0=)
