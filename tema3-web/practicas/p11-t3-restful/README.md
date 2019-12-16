@@ -74,9 +74,6 @@ If you get stuck, [check out the code with the solutions](https://github.com/ULL
 * [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
 * [Repo con los recursos de referencia](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way)
-
-#### References
-
 * [http://nodejs.org/api/http.html](http://nodejs.org/api/http.html)
 * [http://expressjs.com/](http://expressjs.com/)
 * [http://www.sinatrarb.com/](http://www.sinatrarb.com/)
