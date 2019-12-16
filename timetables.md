@@ -42,6 +42,30 @@ Nos comunican que las clases comenzarán el Lunes 30/09/2019.
 
 - [Exámenes de la Convocatoria de Enero](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
 
+### Enero
+
+Sistemas y Tecnología Web: Servidor
+24/1/2020
+16:00
+2.2
+31/1/2020
+16:00
+2.2
+
+### Junio
+
+Sistemas y Tecnología Web: Servidor
+3/7/2020
+16:00
+2.2
+
+### Septiembre
+ 
+Sistemas y Tecnología Web: Servidor
+4/9/2020
+16:00
+2.2
+
 ## Revisión de Calificaciones
 
 ## Cierre de actas 
