@@ -5,6 +5,11 @@
 - <a href="https://www.ull.es/estudios-docencia/calendario-academico/" target="_blank">Calendario Académico 2019/2020</a>
 - <a href="https://drive.google.com/file/d/1YtPNm4vS73N21QHzstcYqEzPKJQHCKeD/view" target="_blank">Calendario Académico 2018/2019</a>
 
+![/assets/images/enero2020.png](/assets/images/enero2020.png)
+
+![](/assets/images/instrucciones-calendario.png)
+
+
 ## Horarios
 
 El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos G2) son siempre presenciales. La planificación consiste en la alternancia cíclica de semanas (de tipo A, B o C) con  diferentes patrones de distribución de clases de grupos de teoría (Grupos G2) y prácticas (Grupos PE201). El orden de la secuenciación de los diferentes tipos de semanas será C, A, B, C, A, B, …
