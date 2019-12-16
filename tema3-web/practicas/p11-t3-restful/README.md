@@ -1,10 +1,14 @@
 # Práctica: Developing RESTful Web Services (p11-t3-restful)
 
-Lea el  [Chapter 7. Developing RESTful Web Services]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL) y resuelva los problemas planteados en la secciones:
+Lea el  [Chapter 7. Developing RESTful Web Services]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL).
+
+En este capítulo se crea - utilizando Express.js - un servicio Web que permite crear y administrar colecciones de libros que en el libro denominan *bundles*.
+
+Lea el capítulo y  resuelva los problemas planteados en la secciones:
 
 ## Deleting a Bundle Entirely 
 
-Your task is to add an entry to the file `web-services/b4/lib/bundle.js` for deleting a bundle:
+La tarea es añadir una entrada al fichero `web-services/b4/lib/bundle.js` para suprimir un bunlde o colección:
 
 ```js
  app.delete("/api/bundle/:id", async (req, res) => {
@@ -33,7 +37,7 @@ Inside the Express route handler callback function, you should do the following:
 
 ## Removing a Book from a Bundle
 
-La tarea consiste en añadir en el fichero `web-services/b4/lib/bundle.js` una entrrada para suprimir un libro
+La tarea consiste en añadir en el fichero `web-services/b4/lib/bundle.js` una entrada para suprimir un libro
 
 ```js
   app.delete("/api/bundle/:id/book/:pgid", async (req, res) => {
