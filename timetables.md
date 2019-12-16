@@ -5,9 +5,6 @@
 - <a href="https://www.ull.es/estudios-docencia/calendario-academico/" target="_blank">Calendario Académico 2019/2020</a>
 - <a href="https://drive.google.com/file/d/1YtPNm4vS73N21QHzstcYqEzPKJQHCKeD/view" target="_blank">Calendario Académico 2018/2019</a>
 
-![/assets/images/enero2020.png](/assets/images/enero2020.png)
-
-![](/assets/images/instrucciones-calendario.png)
 
 
 ## Horarios
@@ -42,6 +39,8 @@ Nos comunican que las clases comenzarán el Lunes 30/09/2019.
 * [Normativa de Compensación](https://riull.ull.es/xmlui/bitstream/handle/915/8580/acuerdo12.pdf?sequence=1&isAllowed=y)
 
 ## Exámenes de convocatoria
+
+- [Exámenes de la Convocatoria de Enero](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
 
 ## Revisión de Calificaciones
 
