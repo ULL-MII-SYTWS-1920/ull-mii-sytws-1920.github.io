@@ -76,7 +76,6 @@ If you get stuck, [check out the code with the solutions](https://github.com/ULL
 * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way)
 * [http://nodejs.org/api/http.html](http://nodejs.org/api/http.html)
 * [http://expressjs.com/](http://expressjs.com/)
-* [http://www.sinatrarb.com/](http://www.sinatrarb.com/)
 * [https://www.npmjs.com/package/nconf](https://www.npmjs.com/package/nconf)
 * [https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-request-body.html ](https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-request-body.html )
 * [https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-suggesters.html](https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-suggesters.html)

@@ -95,7 +95,7 @@ A fecha de Mayo de 2019 la página de Hiperdino para una categoría de producto
 `https://online.hiperdino.es/c9495/alimentacion/categoria-de-alimento.html`
 tiene una estructura como sigue:
 
-* Cada producto se describe en un elemento `div` con la clase `.product-list-item`
+* Cada producto se describe en un elemento `li` con la clase `.product-list-item`
 
   ![item](item.png)
 
