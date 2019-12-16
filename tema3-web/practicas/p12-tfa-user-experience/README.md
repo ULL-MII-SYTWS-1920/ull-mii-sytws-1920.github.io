@@ -52,6 +52,7 @@ $ cat /etc/hosts
 ## Recursos
 
 * [Chapter 8. Creating a Beautiful  User Experience]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287)
+* [Repo con los recursos de referencia](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way)
 * [GitHub repo ULL-MII-CA-1819/tutorial-hello-node-typescript](https://github.com/ULL-MII-CA-1819/tutorial-hello-node-typescript)
 

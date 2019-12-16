@@ -71,10 +71,8 @@ If you get stuck, [check out the code with the solutions](https://github.com/ULL
 
 ## Recursos
 
-#### Libro
-
 * [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
-* [Safari. Chapter 7. Developing RESTful Web Services](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781680505344/sec_using_request_to_fetch_html?sessionid=#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZjaHBfd2ViX3NlcnZpY2VzX2h0bWwmcXVlcnk9)
+* [Repo con los recursos de referencia](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way)
 
 #### References
