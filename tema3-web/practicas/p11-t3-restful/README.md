@@ -37,7 +37,7 @@ Inside the Express route handler callback function, you should do the following:
 
 ## Removing a Book from a Bundle
 
-La tarea consiste en añadir en el fichero `web-services/b4/lib/bundle.js` una entrada para suprimir un libro
+La tarea consiste en añadir en el fichero `web-services/b4/lib/bundle.js` una entrada para suprimir un libro de una determinada colección/bundle.
 
 ```js
   app.delete("/api/bundle/:id/book/:pgid", async (req, res) => {
