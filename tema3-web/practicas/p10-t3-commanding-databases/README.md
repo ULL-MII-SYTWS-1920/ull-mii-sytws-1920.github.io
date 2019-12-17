@@ -37,3 +37,5 @@ y resuelva los problemas en la secciónes
 * [Chrome Plugin ElasticSearch Head](https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm)
 
 ![/assets/images/chrom-elasticsearch-plugins.png](/assets/images/chrom-elasticsearch-plugins.png)
+
+![/assets/images/chrom-elasticsearch-plugins-quey.png](/assets/images/chrom-elasticsearch-plugins-quey.png)
