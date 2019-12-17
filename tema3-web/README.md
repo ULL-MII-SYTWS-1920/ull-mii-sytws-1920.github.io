@@ -34,7 +34,7 @@
 
 ## [Web Scrapping](web-scrapping)
 
-## [Bases de Datos No Relacionales](nosql.md)
+## [Bases de Datos No Relacionales](nosql)
 
 ## [Jekyll](jekyll)
 
