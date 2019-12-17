@@ -34,3 +34,6 @@ y resuelva los problemas en la secciónes
 
 * [A Practical Introduction to Elasticsearch By Ismael Hasan Romero](https://www.elastic.co/es/blog/a-practical-introduction-to-elasticsearch)
 * [Node Js Elastic Search Tutorial Example](https://appdividend.com/2018/06/29/node-js-elastic-search-tutorial-example/)
+* [Chrome Plugin ElasticSearch Head](https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm)
+
+![/assets/images/chrom-elasticsearch-plugins.png](assets/images/chrom-elasticsearch-plugins.png)
