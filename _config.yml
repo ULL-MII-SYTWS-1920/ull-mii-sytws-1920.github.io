@@ -4,6 +4,7 @@ subtitle: 'Master de Ingeniería Informática'
 #minimal_mistakes_skin: "plum" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 theme: jekyll-theme-midnight
 description: 'Master de II. ULL. 1er cuatrimestre. 2019/2020'
+future: true
 exclude: 
   - node_modules
   - tema3-web/practicas/p10-t3-commanding-databases/eval
