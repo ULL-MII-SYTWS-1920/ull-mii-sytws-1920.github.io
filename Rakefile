@@ -3,43 +3,43 @@ task :default do
   sh "git ci -am 2020 && git push"
 end
 
-desc "sytws: bundle exec jekyll serve --watch --incremental"
+desc "sytws: bundle exec jekyll serve --watch"
 task :serve do
-  sh "bundle exec jekyll serve --watch --incremental --port 8080 --host 10.6.128.216"
+  sh "bundle exec jekyll serve --future --watch --port 8080 --host 10.6.128.216"
 end
 
-desc "local: bundle exec jekyll serve --watch --incremental"
+desc "local: bundle exec jekyll serve --watch"
 task :ls do
-  sh "bundle exec jekyll serve --watch --incremental --port 8080"
+  sh "bundle exec jekyll serve --future --watch --port 8080"
 end
 
 desc "local serve drafts: bundle exec jekyll serve  --drafts --watch --incremental"
-task :lsd do
-  sh "bundle exec jekyll serve --drafts --watch --incremental --port 8080"
+task :lsd do--future 
+  sh "bundle exec jekyll serve --future --drafts --watch --incremental --port 8080"
 end
 
 desc "local: pull and bundle exec jekyll serve --watch --incremental"
 task :pls do
   sh "git pull origin master"
-  sh "bundle exec jekyll serve --watch --incremental --port 8080"
+  sh "bundle exec jekyll serve --future --watch --incremental --port 8080"
 end
 
 desc "sytws: pull and bundle exec jekyll serve -H 10.6.128.216 -P 8080"
 task :pjs do
   sh "git pull origin master"
-  sh "bundle exec jekyll serve -H 10.6.128.216 -P 8080"
+  sh "bundle exec jekyll serve --future -H 10.6.128.216 -P 8080"
 end
 
 desc "build"
 task :b do
-  sh "bundle exec jekyll build"
+  sh "bundle exec jekyll build --future"
 end
 
 
 desc "sytws: pull and build"
 task :pb do
   sh "git pull origin master"
-  sh "bundle exec jekyll build"
+  sh "bundle exec jekyll build --future"
 end
 
 desc "sytws: pull and build and run with static-server"
