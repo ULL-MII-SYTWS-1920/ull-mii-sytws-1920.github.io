@@ -146,7 +146,7 @@ Or, if you don't want/need a background service you can just run:
 This installs the most recently released default distribution of Elasticsearch. To install the OSS distribution, specify `elastic/tap/elasticsearch-oss`.
 
 
-### Next steps
+#### Next steps
 
 You now have a test Elasticsearch environment set up. Before you start serious development or go into production with Elasticsearch, you must do some additional setup:
 
@@ -291,3 +291,8 @@ When you install Kibana with `brew install`, the config files, logs, and data di
     </tr>
 </tbody>
 </table>
+
+## Referencias
+
+* [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601)
+* [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082)
