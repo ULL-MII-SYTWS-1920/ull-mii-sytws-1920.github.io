@@ -1,4 +1,6 @@
-## Install Elasticsearch on macOS with Homebrew
+## [Installing Elastic Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
+
+### Install Elasticsearch on macOS with Homebrew
 
 Apuntes tomados de [https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/brew.html)
 
@@ -37,6 +39,9 @@ Or, if you don't want/need a background service you can just run:
 ==> Summary
 🍺  /usr/local/Cellar/elasticsearch-full/7.5.0: 921 files, 451.1MB, built in 1 minute 44 seconds
 ```
+
+#### Directory layout for Homebrew installs
+
 <table cellpadding="4px" border="1">
     <colgroup>
         <col class="col_1">
@@ -151,8 +156,11 @@ You now have a test Elasticsearch environment set up. Before you start serious d
 
 [«  Install Elasticsearch with Docker](docker.html)   [Configuring Elasticsearch  »](settings.html)
 
+## [Setup Kibana](https://www.elastic.co/guide/en/kibana/current/setup.html)
 
-## Installing Kibana on MacOS with Homebrew
+## [Installing Kibana](https://www.elastic.co/guide/en/kibana/current/install.html)
+
+### Installing Kibana on MacOS with Homebrew
 
 This  text is a copy of [https://www.elastic.co/guide/en/kibana/current/brew.html#brew](https://www.elastic.co/guide/en/kibana/current/brew.html#brew).
 
@@ -189,7 +197,7 @@ Or, if you don't want/need a background service you can just run:
 
 This installs the most recently released default distribution of Kibana. To install the OSS distribution, specify `elastic/tap/kibana-oss`.
 
-### Directory layout for Homebrew installs
+#### Directory layout for Homebrew installs
 
 When you install Kibana with `brew install`, the config files, logs, and data directory are stored in the following locations.
 
