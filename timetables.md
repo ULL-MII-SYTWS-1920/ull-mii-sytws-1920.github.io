@@ -40,7 +40,7 @@ Nos comunican que las clases comenzarán el Lunes 30/09/2019.
 
 ## Exámenes de convocatoria
 
-- [Exámenes de la Convocatoria de Enero](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
+- [Documentos con los Exámenes de la Convocatorias](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
 
 ### Enero
 
