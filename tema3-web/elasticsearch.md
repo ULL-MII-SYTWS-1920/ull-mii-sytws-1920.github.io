@@ -81,6 +81,7 @@ La idea es parecida a los índices de referencias cruzadas que habitualmente apa
       - Es importante aquí que hagamos las mismas transformaciones y en el mismo orden tanto en indexación como en búsqueda
 
 * **Queries**: Elasticsearch utiliza Query DSL (Lenguaje de dominio específico) para realizar las consultas a los documentos indexados. Es un lenguaje sumamente flexible y de gran alcance, además de simple, que permite conocer y explorar los datos de la mejor manera. Al ser utilizado a través de una interfaz de tipo JSON, las consultas son muy sencillas de leer y, lo más importante, de depurar.
+  * [Elastic Query DSL 7.5](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/query-dsl.html)
   * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 
 ## [Installing Elastic Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
@@ -466,8 +467,10 @@ Now we can use insomnia or any other HTTP REST client to make queries to the ela
 
 ## Referencias para Elasticsearch
 
-* [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601)
+* [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601) Libro en PuntoQ BULL
 * [Curso de Elastic Search](https://www.youtube.com/playlist?list=PL2yjEVbRSX7Wi8knN-difCHVYNtvPGYt7) en Paradigma Digital. Vídeos de Youtube
+* [Elastic Query DSL 7.5](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/query-dsl.html)
+* [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 
 
 # Kibana
