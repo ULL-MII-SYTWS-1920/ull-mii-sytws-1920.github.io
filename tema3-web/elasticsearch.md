@@ -109,8 +109,7 @@ Una forma de instalarse ElasticSearch es ir a la página de descargas:
 
 La versión que se usa en el libro es la 5.2 que se puede descargar desde aquí:
 
-* [https://www.elastic.co/es/downloads/past-releases/elasticsearch-5-2-2](https://www.elastic.co/es/downloads/past-releases/elasticsearch-5-2-2
-)
+* [https://www.elastic.co/es/downloads/past-releases/elasticsearch-5-2-2](https://www.elastic.co/es/downloads/past-releases/elasticsearch-5-2-2)
 
 Aquí se puede encontrar una [guía de inicio rápido.](https://www.elastic.co/es/start).
 
