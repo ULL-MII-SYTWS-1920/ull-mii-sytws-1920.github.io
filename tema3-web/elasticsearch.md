@@ -232,7 +232,7 @@ This installs the most recently released default distribution of Elasticsearch. 
 
 ### Running Elasticsearch
 
-```
+```log
 $ which elasticsearch
 /usr/local/bin/elasticsearch
 $ elasticsearch --version
@@ -251,7 +251,7 @@ $ elasticsearch
 
 Para arreglar el `WARN`he editado el fichero de configuración `elasticsearch.yml` añadiendo la línea `cluster.routing.allocation.disk.watermark.high: 95%`:
 
-```
+```yml
 [.../etc/elasticsearch]$ sed -ne '/cluster\./p' elasticsearch.yml 
 # the most important settings you may want to configure for a production cluster.
 cluster.name: elasticsearch_casiano
@@ -261,12 +261,14 @@ cluster.routing.allocation.disk.watermark.high: 95%
 
 Aunque ahora salen otros warnings y algun `INFO` quejumbroso:
 
-```
+```log
 ...
 [2019-12-18T10:26:03,369][WARN ][o.e.b.BootstrapChecks    ] [sanclemente-2.local] the default discovery settings are unsuitable for production use; at least one of [discovery.seed_hosts, discovery.seed_providers, cluster.initial_master_nodes] must be configured
 ... 
 [2019-12-18T10:27:04,078][INFO ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] low disk watermark [85%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.2gb[8.2%], replicas will not be assigned to this node
 ```
+
+![/assets/images/elasticsearch-root-page-9200.png](/assets/images/elasticsearch-root-page-9200.png)
 
 ## Referencias para Elasticsearch
 
