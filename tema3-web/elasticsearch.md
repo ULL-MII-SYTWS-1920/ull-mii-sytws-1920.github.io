@@ -247,6 +247,7 @@ $ elasticsearch
 [2019-12-18T09:52:58,833][WARN ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] high disk watermark [90%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.3gb[8.2%], shards will be relocated away from this node
 ```
 
+* [High disk watermark exceeded: settings that can be configured in the elasticsearch.yml config file ](https://www.elastic.co/guide/en/elasticsearch/reference/current/disk-allocator.html)
 ## Referencias para Elasticsearch
 
 * [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601)
