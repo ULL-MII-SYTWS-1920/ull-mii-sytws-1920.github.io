@@ -1,5 +1,15 @@
 #  REST
 
+REST is an acronym that stands for Representational State Transfer.
+
+* [REST en http://crguezl.github.io/apuntes-ruby/](http://crguezl.github.io/apuntes-ruby/node566.html)
+
+When an API is RESTful, it is HTTP-based and its resources are identified by their URLs.
+
+Requesting or making a change to a resource comes down to issuing an HTTP request using the particular method that matches your intent.
+
+For example, the HTTP GET method retrieves a resource, and HTTP PUT sends a resource to be saved.
+
 ## Bibliografía Básica
 
 * [Safari. Chapter 6. Commanding Databases](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iidot-working-with-data/chp_databases_html)

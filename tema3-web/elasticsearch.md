@@ -50,20 +50,23 @@ La idea es parecida a los índices de referencias cruzadas que habitualmente apa
 *   **Doc types**: A doc type in Elasticsearch represents a class of similar documents. A type consists of a name, such as a user or a blog post, and a mapping, including data types and the Lucene configurations for each field. (An index can contain more than one type.). Con el tiempo va en desuso.
 *   **Shard**: Es un fragmento de un índice. An index is divided into one or more shards to make the data distributable. Shards can be stored on a single node or multiple nodes and are composed of Lucene segments. 
     
-    ### Note
+    ### Notes
     
-    A shard can be either primary or secondary. A primary shard is the one where all the operations that change the index are directed. A secondary shard is the one that contains duplicate data of the primary shard and helps in quickly searching the data as well as for high availability; in a case where the machine that holds the primary shard goes down, then the secondary shard becomes the primary automatically.
-
-    * [Shard en la Wikipedia](https://en.wikipedia.org/wiki/Shard_(database_architecture))
+    - [Shard en la Wikipedia](https://en.wikipedia.org/wiki/Shard_(database_architecture))
+    - A shard can be either primary or secondary. A primary shard is the one where all the operations that change the index are directed. A secondary shard is the one that contains duplicate data of the primary shard and helps in quickly searching the data as well as for high availability; in a case where the machine that holds the primary shard goes down, then the secondary shard becomes the primary automatically.
     - A database shard is a horizontal partition of data in a database or search engine. Each individual partition is referred to as a shard or database shard. Each shard is held on a separate database server instance, to spread load.
     - Some data within a database remains present in all shards but some appears only in a single shard. Each shard (or server) acts as the single source for this subset of data
     - ![sharding in mongodb](https://docs.mongodb.com/v3.0/_images/sharded-collection.png)
     -  [¿Cómo se reparten? Usando las llamadas "*shard keys*" o *claves de repartición*. Cada partición contiene un intervalo de claves (Clave Mínima, Clave Máxima). Se habla de "*partición basada en rangos*". La *Index Big Table* de Google utiliza una idea similar. ](http://gpd.sip.ucm.es/rafa/docencia/nosql/Sharding.html)
     - [Tutorial MongoDB. Explicando el sharding con una baraja de cartas](https://charlascylon.com/2014-01-30-tutorial-mongodb-explicando-el-sharding-con-una)
 *   **Replica**: A duplicate copy of the data living in a shard for high availability. Proporciona alta disponibilidad y escalabilidad.
-* **Settings**: Define la configuración de un *índice* y sus características específicas (por ejemplo, el número de réplicas y shards). Se define a nivel de cluster y algunos parámetros se pueden modificar una vez creado el índice
+* **Settings**: Define la configuración de un *índice* y sus características específicas (por ejemplo, el número de réplicas y shards). Se define a nivel de cluster y algunos parámetros se pueden modificar una vez creado el índice. Por ejemplo, si yo defino que un índice va a tener replicación de 2, lo va a tener en todos los nodos del cluster. Eso sí, dentro de distintos índices puedo tener diferentes números de replicación. El número de réplicas se puede cambiar a posteriori pero el número de shards no (al menos no fácilmente).
 * **Mappings**: Es la definición del modelo de datos de un *índice* (Puede definirse de manera explícita o dejar que lo genere Elasticsearch). Por cada campo se puede definir su tipo, propiedades y analizadores
 * **Analizadores de texto**: Procesadores de texto que realizan transformaciones del contenido de los diferentes campos para permitir funcionalidades adicionales de búsqueda
+
+   ### Notes
+   * ![](/assets/images/lucene-text-analyzer.jpg)
+   
 * **Queries**: Elasticsearch utiliza Query DSL (Lenguaje de dominio específico) para realizar las consultas a los documentos indexados. Es un lenguaje sumamente flexible y de gran alcance, además de simple, que permite conocer y explorar los datos de la mejor manera. Al ser utilizado a través de una interfaz de tipo JSON, las consultas son muy sencillas de leer y, lo más importante, de depurar.
   * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 
