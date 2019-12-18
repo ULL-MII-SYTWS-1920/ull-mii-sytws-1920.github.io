@@ -611,7 +611,30 @@ When you install Kibana with `brew install`, the config files, logs, and data di
 
 ## Haciendo Consultas a Elasticsearch con Kibana
 
+Una vez instalado, arrancamos Kibana.
+
+```log
+[.../etc/elasticsearch]$ kibana
+  log   [11:08:38.205] [info][plugins-system] Setting up [15] plugins: [timelion,features,code,security,licensing,spaces,uiActions,newsfeed,expressions,inspector,embeddable,advancedUiActions,data,eui_utils,translations]
+  ...
+  log   [11:08:38.225] [warning][config][plugins][security] Generating a random key for xpack.security.encryptionKey. To prevent sessions from being invalidated on restart, please set xpack.security.encryptionKey in kibana.yml
+  log   [11:08:38.227] [warning][config][plugins][security] Session cookies will be transmitted over insecure connections. This is not recommended.
+  ...
+  log   [11:09:12.590] [warning][licensing][plugins] License information could not be obtained from Elasticsearch for the [data] cluster. Error: Request Timeout after 30000ms
+  log   [11:09:13.610] [warning][legacy-plugins] Skipping non-plugin directory at /usr/local/Cellar/kibana-full/7.5.0/libexec/src/legacy/core_plugins/visualizations
+  ...
+  log   [11:09:20.088] [warning][config][deprecation] Environment variable "DATA_PATH" will be removed.  It has been replaced with kibana.yml setting "path.data"
+  ...
+  log   [11:09:24.245] [warning][encrypted_saved_objects] Generating a random key for xpack.encrypted_saved_objects.encryptionKey. To be able to decrypt encrypted saved objects attributes after restart, please set xpack.encrypted_saved_objects.encryptionKey in kibana.yml
+  ... from failing on restart, please set xpack.reporting.encryptionKey in kibana.yml
+  log   [11:09:29.003] [info][status][plugin:reporting@7.5.0] Status changed from uninitialized to green - Ready
+  log   [11:09:29.151] [info][listening] Server running at http://localhost:5601
+  log   [11:09:29.917] [info][server][Kibana][http] http server running at http://localhost:5601
+```
+
+
 Por defecto Kibana corre en el puerto 5601.
+
 Abrimos el navegador en [http://localhost:5601](http://localhost:5601) y hacemos click en las herramientas de desarrollo (la llave inglesa) en el menú de la izquierda. Esto nos abre un panel como este en el que podemos hacer requests al servidor de Elasticsearch:
 
 ![/assets/images/kibana-query-2-elastic-search.png](/assets/images/kibana-query-2-elastic-search.png)
