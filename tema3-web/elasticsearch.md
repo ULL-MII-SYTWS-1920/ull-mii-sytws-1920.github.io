@@ -609,6 +609,14 @@ When you install Kibana with `brew install`, the config files, logs, and data di
 </tbody>
 </table>
 
+## Haciendo Consultas a Elasticsearch con Kibana
+
+![/assets/images/kibana-query-2-elastic-search.png](/assets/images/kibana-query-2-elastic-search.png)
+
+
 ## Referencias para Kibana
+
+Por defecto Kibana corre en el puerto 5601.
+Abrimos el navegador en [http://localhost:5601]() y hacemos click en las herramientas de desarrollo (la llave inglesa) en el menú de la izquierda. Esto nos abre un panel como este en el que podemos hacer requests al servidor de Elasticsearch:
 
 * [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082). Libro. PuntoQ ULL
