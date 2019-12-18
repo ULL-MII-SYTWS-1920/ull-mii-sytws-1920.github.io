@@ -78,7 +78,7 @@ La idea es parecida a los índices de referencias cruzadas que habitualmente apa
       - Quedarnos con la raíz de las palabras (**stemming** is the process of reducing inflected (or sometimes derived) words to their word **stem**, base or root form)
     * **Proceso**:
     * ![](/assets/images/reciob-query-processed.png)
-      - Es importante aquí que hagamos las mismas transformaciones tanto en indexación como en búsqueda
+      - Es importante aquí que hagamos las mismas transformaciones y en el mismo orden tanto en indexación como en búsqueda
 
 * **Queries**: Elasticsearch utiliza Query DSL (Lenguaje de dominio específico) para realizar las consultas a los documentos indexados. Es un lenguaje sumamente flexible y de gran alcance, además de simple, que permite conocer y explorar los datos de la mejor manera. Al ser utilizado a través de una interfaz de tipo JSON, las consultas son muy sencillas de leer y, lo más importante, de depurar.
   * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
