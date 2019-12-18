@@ -471,7 +471,7 @@ Now we can use insomnia or any other HTTP REST client to make queries to the ela
 * [Curso de Elastic Search](https://www.youtube.com/playlist?list=PL2yjEVbRSX7Wi8knN-difCHVYNtvPGYt7) en Paradigma Digital. Vídeos de Youtube. Minuto 39 empieza con Kibana
 * [Elastic Query DSL 7.5](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/query-dsl.html)
 * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
-
+* [npm: Official Elasticsearch client library for Node.js](https://github.com/elastic/elasticsearch-js    )
 
 # Kibana
 
