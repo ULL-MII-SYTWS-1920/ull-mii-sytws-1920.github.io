@@ -268,7 +268,53 @@ Aunque ahora salen otros warnings y algun `INFO` quejumbroso:
 [2019-12-18T10:27:04,078][INFO ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] low disk watermark [85%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.2gb[8.2%], replicas will not be assigned to this node
 ```
 
+#### Ruta root Elasticsearch
+
+Si visitamos con el navegador `http://localhost:9200`:
+
 ![/assets/images/elasticsearch-root-page-9200.png](/assets/images/elasticsearch-root-page-9200.png)
+
+#### La [ruta _cat](https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html)
+
+* `curl localhost:9200/_cat` da una serie de endpoints 
+
+    ```
+    .../etc/elasticsearch]$ curl localhost:9200/_cat
+    =^.^=
+    /_cat/allocation
+    /_cat/shards
+    /_cat/shards/{index}
+    /_cat/master
+    /_cat/nodes
+    /_cat/tasks
+    /_cat/indices
+    /_cat/indices/{index}
+    /_cat/segments
+    /_cat/segments/{index}
+    /_cat/count
+    /_cat/count/{index}
+    /_cat/recovery
+    /_cat/recovery/{index}
+    /_cat/health
+    /_cat/pending_tasks
+    /_cat/aliases
+    /_cat/aliases/{alias}
+    /_cat/thread_pool
+    /_cat/thread_pool/{thread_pools}
+    /_cat/plugins
+    /_cat/fielddata
+    /_cat/fielddata/{fields}
+    /_cat/nodeattrs
+    /_cat/repositories
+    /_cat/snapshots/{repository}
+    /_cat/templates
+    ```
+* Modo verboso: `$ curl localhost:9200/_cat/master?v``
+
+    ```
+    id                     host      ip        node
+    VK6QoFsVQeGBAcAKIC3vLA 127.0.0.1 127.0.0.1 sanclemente-2.local
+    ```
 
 ## Referencias para Elasticsearch
 
