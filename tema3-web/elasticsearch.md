@@ -315,6 +315,31 @@ Si visitamos con el navegador `http://localhost:9200`:
     id                     host      ip        node
     VK6QoFsVQeGBAcAKIC3vLA 127.0.0.1 127.0.0.1 sanclemente-2.local
     ```
+* Help: `$ curl localhost:9200/_cat/master?help``
+
+    ```
+    id   |   | node id    
+    host | h | host name  
+    ip   |   | ip address 
+    node | n | node name 
+    ```
+* Each of the commands accepts a query string parameter `h` which forces only those columns to appear: `curl localhost:9200/_cat/nodes?h=ip,port,heapPercent,name`
+
+    ```
+    [.../etc/elasticsearch]$ curl localhost:9200/_cat/nodes
+    127.0.0.1 28 99 24 2.56   dilm * sanclemente-2.local
+    [.../etc/elasticsearch]$ curl localhost:9200/_cat/nodes?help | head -n 5
+    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                    Dload  Upload   Total   Spent    Left  Speed
+    100 17533  100 17533    0     0   903k      0 --:--:-- --:--:-- --:--:--  951k
+    id                                 | id,nodeId                                   | unique node id                                                                                                   
+    pid                                | p                                           | process id                                                                                                       
+    ip                                 | i                                           | ip address                                                                                                       
+    port                               | po                                          | bound transport port                                                                                             
+    http_address                       | http                                        | bound http address                                                                                               
+    [.../etc/elasticsearch]$ curl localhost:9200/_cat/nodes?h=ip,port,heapPercent,name
+    127.0.0.1 9300 28 sanclemente-2.local
+    ```
 
 ## Referencias para Elasticsearch
 
