@@ -428,60 +428,27 @@ Si visitamos con el navegador `http://localhost:9200`:
 
 ### Running ElasticSearch 6.4.2
 
-Let us see where `elasticsearch` is installed:
+Let us see where `elasticsearch` 6.4.2 is installed:
 
 ```
 [~]$ which elasticsearch
 /Users/casiano/Applications/elasticsearch-6.4.2/bin/elasticsearch
 ```
 
-Let us execute `elasticsearch`in development mode.
+Let us execute `elasticsearch` 6.4.2 in development mode.
 The flow of output when executed is overwhelming:
 
 ```
 [~/sol-nodejs-the-right-way(master)]$ elasticsearch
 [Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
 [2019-12-15T11:28:46,903][INFO ][o.e.n.Node               ] [] initializing ...
-[2019-12-15T11:28:47,442][INFO ][o.e.e.NodeEnvironment    ] [9jAGWs_] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [19.5gb], net total_space [233.5gb], types [apfs]
-[2019-12-15T11:28:47,445][INFO ][o.e.e.NodeEnvironment    ] [9jAGWs_] heap size [990.7mb], compressed ordinary object pointers [true]
-[2019-12-15T11:28:47,740][INFO ][o.e.n.Node               ] [9jAGWs_] node name derived from node ID [9jAGWs_uQGmUPF4RyFkjTw]; set [node.name] to override
-[2019-12-15T11:28:47,740][INFO ][o.e.n.Node               ] [9jAGWs_] version[6.4.2], pid[84005], build[default/tar/04711c2/2018-09-26T13:34:09.098244Z], OS[Mac OS X/10.13.6/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/9.0.4/9.0.4+11]
-[2019-12-15T11:28:47,741][INFO ][o.e.n.Node               ] [9jAGWs_] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/var/folders/5g/l7k4y5112612gk6qxzy6jwv40000gn/T/elasticsearch.JiyCf7BF, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.locale.providers=COMPAT, -Des.path.home=/Users/casiano/Applications/elasticsearch-6.4.2, -Des.path.conf=/Users/casiano/Applications/elasticsearch-6.4.2/config, -Des.distribution.flavor=default, -Des.distribution.type=tar]
+  ...
 [2019-12-15T11:28:53,337][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [aggs-matrix-stats]
 [2019-12-15T11:28:53,338][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [analysis-common]
-[2019-12-15T11:28:53,339][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [ingest-common]
-[2019-12-15T11:28:53,342][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [lang-expression]
-[2019-12-15T11:28:53,342][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [lang-mustache]
-[2019-12-15T11:28:53,343][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [lang-painless]
-[2019-12-15T11:28:53,343][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [mapper-extras]
-[2019-12-15T11:28:53,343][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [parent-join]
-[2019-12-15T11:28:53,344][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [percolator]
-[2019-12-15T11:28:53,344][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [rank-eval]
-[2019-12-15T11:28:53,344][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [reindex]
-[2019-12-15T11:28:53,345][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [repository-url]
-[2019-12-15T11:28:53,346][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [transport-netty4]
-[2019-12-15T11:28:53,346][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [tribe]
-[2019-12-15T11:28:53,347][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-core]
-[2019-12-15T11:28:53,348][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-deprecation]
-[2019-12-15T11:28:53,348][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-graph]
-[2019-12-15T11:28:53,348][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-logstash]
-[2019-12-15T11:28:53,348][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-ml]
-[2019-12-15T11:28:53,349][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-monitoring]
-[2019-12-15T11:28:53,350][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-rollup]
-[2019-12-15T11:28:53,350][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-security]
-[2019-12-15T11:28:53,351][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-sql]
-[2019-12-15T11:28:53,351][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-upgrade]
-[2019-12-15T11:28:53,351][INFO ][o.e.p.PluginsService     ] [9jAGWs_] loaded module [x-pack-watcher]
-[2019-12-15T11:28:53,352][INFO ][o.e.p.PluginsService     ] [9jAGWs_] no plugins loaded
-[2019-12-15T11:29:05,189][INFO ][o.e.x.s.a.s.FileRolesStore] [9jAGWs_] parsed [0] roles from file [/Users/casiano/Applications/elasticsearch-6.4.2/config/roles.yml]
-[2019-12-15T11:29:06,667][INFO ][o.e.x.m.j.p.l.CppLogMessageHandler] [controller/84063] [Main.cc@109] controller (64 bit): Version 6.4.2 (Build 660eefe6f2ea55) Copyright (c) 2018 Elasticsearch BV
-[2019-12-15T11:29:08,149][DEBUG][o.e.a.ActionModule       ] Using REST wrapper from plugin org.elasticsearch.xpack.security.Security
-[2019-12-15T11:29:08,701][INFO ][o.e.d.DiscoveryModule    ] [9jAGWs_] using discovery type [zen]
-[2019-12-15T11:29:10,495][INFO ][o.e.n.Node               ] [9jAGWs_] initialized
-[2019-12-15T11:29:10,496][INFO ][o.e.n.Node               ] [9jAGWs_] starting ...
-[2019-12-15T11:29:10,938][INFO ][o.e.t.TransportService   ] [9jAGWs_] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
-[2019-12-15T11:29:14,113][INFO ][o.e.c.s.MasterService    ] [9jAGWs_] zen-disco-elected-as-master ([0] nodes joined)[, ], reason: new_master {9jAGWs_}{9jAGWs_uQGmUPF4RyFkjTw}{2g1w5LQXSZ6gPKwgps9psw}{127.0.0.1}{127.0.0.1:9300}{ml.machine_memory=8589934592, xpack.installed=true, ml.max_open_jobs=20, ml.enabled=true}
-[2019-12-15T11:29:14,121][INFO ][o.e.c.s.ClusterApplierService] [9jAGWs_] new_master {9jAGWs_}{9jAGWs_uQGmUPF4RyFkjTw}{2g1w5LQXSZ6gPKwgps9psw}{127.0.0.1}{127.0.0.1:9300}{ml.machine_memory=8589934592, xpack.installed=true, ml.max_open_jobs=20, ml.enabled=true}, reason: apply cluster state (from master [master {9jAGWs_}{9jAGWs_uQGmUPF4RyFkjTw}{2g1w5LQXSZ6gPKwgps9psw}{127.0.0.1}{127.0.0.1:9300}{ml.machine_memory=8589934592, xpack.installed=true, ml.max_open_jobs=20, ml.enabled=true} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)[, ]]])
+  ...
+  
+ [2019-12-15T11:29:10,938][INFO ][o.e.t.TransportService   ] [9jAGWs_] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+  ...
 [2019-12-15T11:29:14,175][INFO ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [9jAGWs_] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
 ```
 
