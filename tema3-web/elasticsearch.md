@@ -468,7 +468,7 @@ Now we can use insomnia or any other HTTP REST client to make queries to the ela
 ## Referencias para Elasticsearch
 
 * [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601) Libro en PuntoQ BULL
-* [Curso de Elastic Search](https://www.youtube.com/playlist?list=PL2yjEVbRSX7Wi8knN-difCHVYNtvPGYt7) en Paradigma Digital. Vídeos de Youtube
+* [Curso de Elastic Search](https://www.youtube.com/playlist?list=PL2yjEVbRSX7Wi8knN-difCHVYNtvPGYt7) en Paradigma Digital. Vídeos de Youtube. Minuto 39 empieza con Kibana
 * [Elastic Query DSL 7.5](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/query-dsl.html)
 * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 
@@ -652,11 +652,88 @@ Abrimos el navegador en [http://localhost:5601](http://localhost:5601) y hacemos
 
 Algunos ejemplos de queries:
 
-1. `GET _cat/indices?v`: Obtener los índices
-2. `DELETE books/`: borrar el index books
+```
+
+GET _cat/indices?v
+
+
+GET books/_search
+{
+  "query": {
+    "match": { 
+      "authors": "Twain" 
+    }
+  }
+}
+
+GET books/_search
+{
+  "query": {
+    "query_string": {
+      "query": "authors:Twain AND subjects:Missouri AND title:Sawyer" 
+    }
+  }
+}
+
+GET books/_search
+{
+  "query": {
+    "query_string": {
+      "fields": ["authors", "subjects", "title"], 
+      "query": "Twain AND Missouri AND Sawyer" 
+    }
+  }
+}
+
+POST test/test/1
+{
+  "title": "hello world"
+}
+
+GET test/test/1
+
+POST test/_doc/2
+{
+  "title": "hola mundo"
+}
+
+GET test/_doc/2
+
+PUT test/_doc/2
+{
+    "title" : "bonjour monde",
+    "tags" : ["red", "blue"]
+}
+
+PUT test/_doc/2
+{
+    "tags" : ["green", "orange"]
+}
+
+
+POST test/_doc/3
+{
+    "title" : "SYTWS",
+    "tags" : ["red", "blue"]
+}
+
+POST test/_update/3
+{
+    "script" : {
+        "source": "ctx._source.tags = params.colors",
+        "params" : {
+            "colors" : ["green"]
+        }
+    }
+}
+
+GET test/_doc/3
+
+DELETE test/
+```
 
 ## Referencias para Kibana
 
-
+* [Curso de Elastic Search](https://youtu.be/UIN2NeMb7xc?t=2345) en Paradigma Digital. Vídeos de Youtube. Minuto 39 empieza con Kibana
 * [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082). Libro. PuntoQ ULL
 * [Video: Primeros pasos con Kibana](https://www.elastic.co/es/webinars/getting-started-kibana?elektra=startpage)
