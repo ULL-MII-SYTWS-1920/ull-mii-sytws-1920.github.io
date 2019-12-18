@@ -472,7 +472,7 @@ Now we can use insomnia or any other HTTP REST client to make queries to the ela
 * [Elastic Query DSL 7.5](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/query-dsl.html)
 * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 * [npm: Official Elasticsearch client library for Node.js](https://github.com/elastic/elasticsearch-js    )
-
+* [Entire list of the Elasticsearch API supported by the client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html)
 # Kibana
 
 
