@@ -247,6 +247,16 @@ $ elasticsearch
 [2019-12-18T09:52:58,833][WARN ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] high disk watermark [90%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.3gb[8.2%], shards will be relocated away from this node
 ```
 
+Para arreglar el `WARN`he editado el fichero de configuración `elasticsearch.yml` añadiendo la línea `cluster.routing.allocation.disk.watermark.high: 95%`:
+
+```
+[.../etc/elasticsearch]$ sed -ne '/cluster\./p' elasticsearch.yml 
+# the most important settings you may want to configure for a production cluster.
+cluster.name: elasticsearch_casiano
+cluster.routing.allocation.disk.watermark.high: 95%
+#cluster.initial_master_nodes: ["node-1", "node-2"]
+```
+
 * [High disk watermark exceeded: settings that can be configured in the elasticsearch.yml config file ](https://www.elastic.co/guide/en/elasticsearch/reference/current/disk-allocator.html)
 ## Referencias para Elasticsearch
 
