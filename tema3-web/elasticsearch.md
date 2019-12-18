@@ -247,6 +247,8 @@ $ elasticsearch
 [2019-12-18T09:52:58,833][WARN ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] high disk watermark [90%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.3gb[8.2%], shards will be relocated away from this node
 ```
 
+* [High disk watermark exceeded: settings that can be configured in the elasticsearch.yml config file ](https://www.elastic.co/guide/en/elasticsearch/reference/current/disk-allocator.html)
+
 Para arreglar el `WARN`he editado el fichero de configuración `elasticsearch.yml` añadiendo la línea `cluster.routing.allocation.disk.watermark.high: 95%`:
 
 ```
@@ -257,7 +259,15 @@ cluster.routing.allocation.disk.watermark.high: 95%
 #cluster.initial_master_nodes: ["node-1", "node-2"]
 ```
 
-* [High disk watermark exceeded: settings that can be configured in the elasticsearch.yml config file ](https://www.elastic.co/guide/en/elasticsearch/reference/current/disk-allocator.html)
+Aunque ahora salen otros warnings y algun `INFO` quejumbroso:
+
+```
+...
+[2019-12-18T10:26:03,369][WARN ][o.e.b.BootstrapChecks    ] [sanclemente-2.local] the default discovery settings are unsuitable for production use; at least one of [discovery.seed_hosts, discovery.seed_providers, cluster.initial_master_nodes] must be configured
+... 
+[2019-12-18T10:27:04,078][INFO ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] low disk watermark [85%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.2gb[8.2%], replicas will not be assigned to this node
+```
+
 ## Referencias para Elasticsearch
 
 * [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601)
