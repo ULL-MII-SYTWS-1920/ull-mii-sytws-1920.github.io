@@ -64,13 +64,14 @@ La idea es parecida a los índices de referencias cruzadas que habitualmente apa
 * **Mappings**: Es la definición del modelo de datos de un *índice* (Puede definirse de manera explícita o dejar que lo genere Elasticsearch). Por cada campo se puede definir su tipo, propiedades y analizadores
 * **Analizadores de texto**: Procesadores de texto que realizan transformaciones del contenido de los diferentes campos para permitir funcionalidades adicionales de búsqueda
 
-   ### Notes
-   * ![](/assets/images/lucene-text-analyzer.jpg)
-   *   **Character Filters**: The job of character filters is to do cleanup tasks such as stripping out HTML tags.
-    *   **Tokenizers**: The next step is to split the text into terms that are called tokens. This is done by a tokenizer. The splitting can be done based on any rule such as whitespace. More details about tokenizers can be found at this URL: [https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html).
-    *   **Token filters**: Once the tokens are created, they are passed to token filters that normalize the tokens. Token filters can change the tokens, remove the terms, or add terms to new tokens.
-    * **Queries**: Elasticsearch utiliza Query DSL (Lenguaje de dominio específico) para realizar las consultas a los documentos indexados. Es un lenguaje sumamente flexible y de gran alcance, además de simple, que permite conocer y explorar los datos de la mejor manera. Al ser utilizado a través de una interfaz de tipo JSON, las consultas son muy sencillas de leer y, lo más importante, de depurar.
-    
+  ### Notes
+
+  * ![](/assets/images/lucene-text-analyzer.jpg)
+  *   **Character Filters**: The job of character filters is to do cleanup tasks such as stripping out HTML tags.
+  *   **Tokenizers**: The next step is to split the text into terms that are called tokens. This is done by a tokenizer. The splitting can be done based on any rule such as whitespace. More details about tokenizers can be found at this URL: [https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html).
+  *   **Token filters**: Once the tokens are created, they are passed to token filters that normalize the tokens. Token filters can change the tokens, remove the terms, or add terms to new tokens.
+  * **Queries**: Elasticsearch utiliza Query DSL (Lenguaje de dominio específico) para realizar las consultas a los documentos indexados. Es un lenguaje sumamente flexible y de gran alcance, además de simple, que permite conocer y explorar los datos de la mejor manera. Al ser utilizado a través de una interfaz de tipo JSON, las consultas son muy sencillas de leer y, lo más importante, de depurar.
+
   * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 
 
