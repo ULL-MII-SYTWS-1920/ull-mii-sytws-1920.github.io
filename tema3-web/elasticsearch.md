@@ -1,4 +1,32 @@
-# Elasticseach y Kibana
+# Elasticseach
+
+## Que es Elastic Search
+
+Elasticsearch es  **un motor de búsqueda**:
+* Desarrollado en Java
+* Open Source
+* Distribuido
+* Escalable
+* Basado en [lucene](https://lucene.apache.org/core/8_3_1/index.html)
+
+### Lucene
+
+Lucene es una librería que implementa un full-text search engine. No es una aplicación sino una API 
+que da capacidades de búsqueda.
+
+* Desarrollado en Java
+* Open Source
+* No es Distribuido
+* Escalable
+* Basado en **Índices Invertidos**
+
+## Índices Invertidos
+
+ An **inverted index** (also referred to as a postings file or inverted file) is a database index storing a mapping from content, such as words or numbers, to its locations in a table, or in a document or a set of documents (named in contrast to a forward index, which maps from documents to content). The purpose of an inverted index is to allow fast full-text searches, at a cost of increased processing when a document is added to the database.
+
+![indices-invertidos.png](/assets/images/indices-invertidos.png)
+
+La idea es parecida a los índices de referencias cruzadas que habitualmente aparecen al final de los libros.
 
 ## [Installing Elastic Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
 
@@ -158,6 +186,15 @@ You now have a test Elasticsearch environment set up. Before you start serious d
 
 [«  Install Elasticsearch with Docker](docker.html)   [Configuring Elasticsearch  »](settings.html)
 
+## Referencias para Elasticsearch
+
+* [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601)
+* [Curso de Elastic Search](https://www.youtube.com/playlist?list=PL2yjEVbRSX7Wi8knN-difCHVYNtvPGYt7) en Paradigma Digital. Vídeos de Youtube
+
+
+# Kibana
+
+
 ## [Setup Kibana](https://www.elastic.co/guide/en/kibana/current/setup.html)
 
 ## [Installing Kibana](https://www.elastic.co/guide/en/kibana/current/install.html)
@@ -294,7 +331,6 @@ When you install Kibana with `brew install`, the config files, logs, and data di
 </tbody>
 </table>
 
-## Referencias
+## Referencias para Kibana
 
-* [Elasticsearch Essentials. Bharvi Dixit 2016](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601)
 * [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082)
