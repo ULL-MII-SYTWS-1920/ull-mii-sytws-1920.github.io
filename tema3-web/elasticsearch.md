@@ -488,4 +488,4 @@ When you install Kibana with `brew install`, the config files, logs, and data di
 
 ## Referencias para Kibana
 
-* [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082)
+* [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082). Libro. PuntoQ ULL
