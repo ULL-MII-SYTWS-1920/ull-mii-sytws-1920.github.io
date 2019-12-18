@@ -312,7 +312,7 @@ Or, if you don't want/need a background service you can just run:
 
 This installs the most recently released default distribution of Elasticsearch. To install the OSS distribution, specify `elastic/tap/elasticsearch-oss`.
 
-### Running Elasticsearch
+### Running Elasticsearch 7.5.0
 
 ```log
 $ which elasticsearch
@@ -426,7 +426,7 @@ Si visitamos con el navegador `http://localhost:9200`:
 
 
 
-### Running ElasticSearch
+### Running ElasticSearch 6.4.2
 
 Let us see where `elasticsearch` is installed:
 
