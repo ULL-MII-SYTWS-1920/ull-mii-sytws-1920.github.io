@@ -614,7 +614,14 @@ When you install Kibana with `brew install`, the config files, logs, and data di
 
 ## Haciendo Consultas a Elasticsearch con Kibana
 
-Una vez instalado, arrancamos Kibana.
+Creamos para la versión 7.5. de Elasticsearch el index de libros de Guttenberg con el fichero que habíamos preparado en la  práctica
+anterior:
+
+```
+[~/.../t3-p8-commanding-databases-marreA/esclu(master)]$ ./esclu bulk ../t1-p7-transforming-data-and-testing-continuously-marreA/data/bulk_pg.ldj -i books -t book 
+```
+
+Una vez instalado Kibana lo arrancamos:
 
 ```log
 [.../etc/elasticsearch]$ kibana
@@ -643,7 +650,13 @@ Abrimos el navegador en [http://localhost:5601](http://localhost:5601) y hacemos
 ![/assets/images/kibana-query-2-elastic-search.png](/assets/images/kibana-query-2-elastic-search.png)
 
 
+Algunos ejemplos de queries:
+
+1. `GET _cat/indices?v`: Obtener los índices
+2. `DELETE books/`: borrar el index books
+
 ## Referencias para Kibana
 
 
 * [Kibana 7 Quick Start Guide. Anurag Srivastava 2019](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082). Libro. PuntoQ ULL
+* [Video: Primeros pasos con Kibana](https://www.elastic.co/es/webinars/getting-started-kibana?elektra=startpage)
