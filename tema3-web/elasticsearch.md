@@ -11,7 +11,7 @@ Elasticsearch es  **un motor de búsqueda**:
 
 ### Lucene
 
-Lucene es una librería que implementa un full-text search engine. No es una aplicación sino una API 
+<img src="https://lucene.apache.org/core/8_3_1/lucene_green_300.gif"> es una librería que implementa un full-text search engine. No es una aplicación sino una API 
 que da capacidades de búsqueda.
 
 * Desarrollado en Java
