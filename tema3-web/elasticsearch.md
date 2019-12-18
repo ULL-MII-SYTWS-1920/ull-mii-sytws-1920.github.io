@@ -28,6 +28,34 @@ que da capacidades de búsqueda.
 
 La idea es parecida a los índices de referencias cruzadas que habitualmente aparecen al final de los libros.
 
+* Ventajas
+  - Velocidad de Búsqueda
+  - Facilidad para aplicar algoritmos de relevancia
+  - Facilidad para aplicar analizadores de texto
+* Desventajas
+  - Velocidad de indexación
+  - Algunas búsquedas son mas costosas (por ejemplo el Not lógico)
+
+## Funcionalidades aportadas por Lucene y Funcionalidades aportadas por Elasticsearch
+
+![/assets/images/lucene-vs-elasticsearch.png](/assets/images/lucene-vs-elasticsearch.png)
+
+## Términos usuales
+
+*   **Node**: A single instance of Elasticsearch running on a machine.
+*   **Cluster**: A cluster is the single name under which one or more nodes/instances of Elasticsearch are connected to each other.
+*   **Document**: A document is a JSON object that contains the actual data in key value pairs.
+*   **Index**: A logical namespace under which Elasticsearch stores data, and may be built with more than one Lucene index using shards and replicas.
+*   **Doc types**: A doc type in Elasticsearch represents a class of similar documents. A type consists of a name, such as a user or a blog post, and a mapping, including data types and the Lucene configurations for each field. (An index can contain more than one type.)
+*   **Shard**: Shards are containers that can be stored on a single node or multiple nodes and are composed of Lucene segments. An index is divided into one or more shards to make the data distributable.
+    
+    ### Note
+    
+    A shard can be either primary or secondary. A primary shard is the one where all the operations that change the index are directed. A secondary shard is the one that contains duplicate data of the primary shard and helps in quickly searching the data as well as for high availability; in a case where the machine that holds the primary shard goes down, then the secondary shard becomes the primary automatically.
+    
+*   **Replica**: A duplicate copy of the data living in a shard for high availability.
+
+
 ## [Installing Elastic Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
 
 ### Install Elasticsearch on macOS with Homebrew
