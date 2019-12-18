@@ -83,9 +83,6 @@ La idea es parecida a los índices de referencias cruzadas que habitualmente apa
 * **Queries**: Elasticsearch utiliza Query DSL (Lenguaje de dominio específico) para realizar las consultas a los documentos indexados. Es un lenguaje sumamente flexible y de gran alcance, además de simple, que permite conocer y explorar los datos de la mejor manera. Al ser utilizado a través de una interfaz de tipo JSON, las consultas son muy sencillas de leer y, lo más importante, de depurar.
   * [Useful Elasticsearch Example Queries](https://dzone.com/articles/23-useful-elasticsearch-example-queries) DZone
 
-
-
-
 ## [Installing Elastic Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
 
 ### Install Elasticsearch on macOS with Homebrew
@@ -233,16 +230,22 @@ Or, if you don't want/need a background service you can just run:
 
 This installs the most recently released default distribution of Elasticsearch. To install the OSS distribution, specify `elastic/tap/elasticsearch-oss`.
 
+### Running Elasticsearch
 
-#### Next steps
-
-You now have a test Elasticsearch environment set up. Before you start serious development or go into production with Elasticsearch, you must do some additional setup:
-
-*   Learn how to [configure Elasticsearch](settings.html "Configuring Elasticsearch").
-*   Configure [important Elasticsearch settings](important-settings.html "Important Elasticsearch configuration").
-*   Configure [important system settings](system-config.html "Important System Configuration").
-
-[«  Install Elasticsearch with Docker](docker.html)   [Configuring Elasticsearch  »](settings.html)
+```
+$ which elasticsearch
+/usr/local/bin/elasticsearch
+$ elasticsearch --version
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+Version: 7.5.0, Build: default/tar/e9ccaed468e2fac2275a3761849cbee64b39519f/2019-11-26T01:06:52.518245Z, JVM: 13.0.1
+$ elasticsearch
+...
+[2019-12-18T09:52:26,489][INFO ][o.e.t.TransportService   ] [sanclemente-2.local] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+...
+[2019-12-18T09:52:28,853][INFO ][o.e.h.AbstractHttpServerTransport] [sanclemente-2.local] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+...
+[2019-12-18T09:52:58,833][WARN ][o.e.c.r.a.DiskThresholdMonitor] [sanclemente-2.local] high disk watermark [90%] exceeded on [VK6QoFsVQeGBAcAKIC3vLA][sanclemente-2.local][/usr/local/var/lib/elasticsearch/nodes/0] free: 19.3gb[8.2%], shards will be relocated away from this node
+```
 
 ## Referencias para Elasticsearch
 
