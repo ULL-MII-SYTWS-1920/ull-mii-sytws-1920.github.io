@@ -7,7 +7,7 @@ y resuelva los problemas en la secciónes
 [Deleting and Index](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iidot-working-with-data/chp_databases_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMjA1OThfaHRtbCZxdWVyeT0=) y 
 [adding a Single Document](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iidot-working-with-data/chp_databases_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMjA1OThfaHRtbCZxdWVyeT0=)
 
-## Variantes: Commanding Databases with yargs (p10-t3-commanding-databases)
+## Variantes: yargs, node-fetch, @elastic/elasticsearch
 
 En vez de seguir el capítulo del libro al pie de la letra, puede realizar cualquiera de las variantes que se mencionan a continuación o intentar combinaciones de ellas. 
 
