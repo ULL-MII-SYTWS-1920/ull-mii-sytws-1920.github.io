@@ -43,7 +43,6 @@ Por ejemplo, puede usar `yargs` en vez de `commander` y usar el cliente de Elast
 * [A Practical Introduction to Elasticsearch By Ismael Hasan Romero](https://www.elastic.co/es/blog/a-practical-introduction-to-elasticsearch)
 * [Node Js Elastic Search Tutorial Example](https://appdividend.com/2018/06/29/node-js-elastic-search-tutorial-example/)
 * [Chrome Plugin ElasticSearch Head](https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm) es una herramienta mas simple que Kibana para acceder desde Chrome a ElasticSearch
-  <ul>
-      <li><img src="/assets/images/chrom-elasticsearch-plugins.png" alt="/assets/images/chrom-elasticsearch-plugins.png" style="max-width:25%" /></li>
-      <li><img src="/assets/images/chrom-elasticsearch-plugins-quey.png" alt="/assets/images/chrom-elasticsearch-plugins-quey.png" style="max-width:25%" /></li>
-    </ul>
+  - <img src="/assets/images/chrom-elasticsearch-plugins.png" alt="/assets/images/chrom-elasticsearch-plugins.png" style="max-width:30%;" />
+      <img src="/assets/images/chrom-elasticsearch-plugins-quey.png" alt="/assets/images/chrom-elasticsearch-plugins-quey.png" style="max-width:30%;"/>
+   
