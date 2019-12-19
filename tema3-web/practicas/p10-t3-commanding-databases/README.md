@@ -15,32 +15,6 @@ Por ejemplo, puede usar `yargs` en vez de `commander` y usar el cliente de Elast
 
 * [Descripción de las variantes](variantes)
 
-#### Elasticsearch Node.js client
-
-* [Elasticsearch Node.js client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html)
-*   [Introduction](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/introduction.html)
-*   [Usage](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-usage.html)
-*   [Client configuration](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-configuration.html)
-*   [API Reference](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html)
-*   [Breaking changes coming from the old client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/breaking-changes.html)
-*   [Authentication](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/auth-reference.html)
-*   [Observability](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/observability.html)
-*   [Creating a child client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/child-client.html)
-*   [Extend the client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/extend-client.html)
-*   [TypeScript support](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/typescript.html)
-*   [Examples](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/examples.html)
-    *   [asStream](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/as_stream_examples.html)
-    *   [Bulk](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/bulk_examples.html)
-    *   [Exists](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/exists_examples.html)
-    *   [Get](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/get_examples.html)
-    *   [Ignore](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/ignore_examples.html)
-    *   [MSearch](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/msearch_examples.html)
-    *   [Scroll](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/scroll_examples.html)
-    *   [Search](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/search_examples.html)
-    *   [Suggest](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/suggest_examples.html)
-    *   [transport.request](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/transport_request_examples.html)
-    *   [Typescript](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/typescript_examples.html)
-
 ## Reto
 
 * [Retos](reto.html)
