@@ -1,54 +1,27 @@
 # Retos: Commanding Databases with yargs (p10-t3-commanding-databases)
 
-Reescriba el programa de línea de comandos `esclu` usando `yargs` en vez de `commander`
+## Reto 1
 
-## yargs
+Publique el programa de línea de comandos `esclu` desarrollado en esta práctica como un módulo npm en el npm registry
 
-* [yargs en npm](https://www.npmjs.com/package/yargs)
-* [yargs home page](https://yargs.js.org/)
-* [Yargs' API](https://github.com/yargs/yargs/blob/master//docs/api.md)
-* [Examples](https://github.com/yargs/yargs/blob/master//docs/examples.md)
-* [Parsing Tricks](https://github.com/yargs/yargs/blob/master//docs/tricks.md)
-  * [Stop the Parser](https://github.com/yargs/yargs/blob/master//docs/tricks.md#stop)
-  * [Negating Boolean Arguments](https://github.com/yargs/yargs/blob/master//docs/tricks.md#negate)
-  * [Numbers](https://github.com/yargs/yargs/blob/master//docs/tricks.md#numbers)
-  * [Arrays](https://github.com/yargs/yargs/blob/master//docs/tricks.md#arrays)
-  * [Objects](https://github.com/yargs/yargs/blob/master//docs/tricks.md#objects)
-* [Advanced Topics](https://github.com/yargs/yargs/blob/master//docs/advanced.md)
-  * [Composing Your App Using Commands](https://github.com/yargs/yargs/blob/master//docs/advanced.md#commands)
-  * [Building Configurable CLI Apps](https://github.com/yargs/yargs/blob/master//docs/advanced.md#configuration)
-  * [Customizing Yargs' Parser](https://github.com/yargs/yargs/blob/master//docs/advanced.md#customizing)
+### Referencias
 
-# Reto 2: Commanding Databases with node-fetch (p10-t3-commanding-databases)
+Vea la sección [Módulos en NPM](/tema1-introduccion/modulos.html#capítulo-módulos-en-npm) en estos apuntes
 
-Re-escriba `esclu` usando `node-fetch`en vez de `request`
+## Reto 2
 
-* [node-fetch](https://www.npmjs.com/package/node-fetch)
-* [Motivation](https://github.com/bitinn/node-fetch/blob/master/README.md#motivation)
-* [Features](https://github.com/bitinn/node-fetch/blob/master/README.md#features)
-* [Difference from client-side fetch](https://github.com/bitinn/node-fetch/blob/master/README.md#difference-from-client-side-fetch)
-* [Installation](https://github.com/bitinn/node-fetch/blob/master/README.md#installation)
-* [Loading and configuring the module](https://github.com/bitinn/node-fetch/blob/master/README.md#loading-and-configuring-the-module)
-* [Common Usage](https://github.com/bitinn/node-fetch/blob/master/README.md#common-usage)
-    * [Plain text or HTML](https://github.com/bitinn/node-fetch/blob/master/README.md#plain-text-or-html)
-    * [JSON](https://github.com/bitinn/node-fetch/blob/master/README.md#json)
-    * [Simple Post](https://github.com/bitinn/node-fetch/blob/master/README.md#simple-post)
-    * [Post with JSON](https://github.com/bitinn/node-fetch/blob/master/README.md#post-with-json)
-    * [Post with form parameters](https://github.com/bitinn/node-fetch/blob/master/README.md#post-with-form-parameters)
-    * [Handling exceptions](https://github.com/bitinn/node-fetch/blob/master/README.md#handling-exceptions)
-    * [Handling client and server errors](https://github.com/bitinn/node-fetch/blob/master/README.md#handling-client-and-server-errors)
-* [Advanced Usage](https://github.com/bitinn/node-fetch/blob/master/README.md#advanced-usage)
-    * [Streams](https://github.com/bitinn/node-fetch/blob/master/README.md#streams)
-    * [Buffer](https://github.com/bitinn/node-fetch/blob/master/README.md#buffer)
-    * [Accessing Headers and other Meta data](https://github.com/bitinn/node-fetch/blob/master/README.md#accessing-headers-and-other-meta-data)
-    * [Post data using a file stream](https://github.com/bitinn/node-fetch/blob/master/README.md#post-data-using-a-file-stream)
-    * [Post with form-data (https://github.com/bitinn/node-fetch/blob/master/README.mddetect multipart)](https://github.com/bitinn/node-fetch/blob/master/README.md#post-with-form-data-detect-multipart)
-    * [Request cancellation with AbortSignal](https://github.com/bitinn/node-fetch/blob/master/README.md#request-cancellation-with-abortsignal)
-* [API](https://github.com/bitinn/node-fetch/blob/master/README.md#api)
-    * [fetch(url[, options])](https://github.com/bitinn/node-fetch/blob/master/README.md#fetchurl-options)
-    * [Options](https://github.com/bitinn/node-fetch/blob/master/README.md#options)
-    * [Class: Request](https://github.com/bitinn/node-fetch/blob/master/README.md#class-request)
-    * [Class: Response](https://github.com/bitinn/node-fetch/blob/master/README.md#class-response)
-    * [Class: Headers](https://github.com/bitinn/node-fetch/blob/master/README.md#class-headers)
-    * [Interface: Body](https://github.com/bitinn/node-fetch/blob/master/README.md#interface-body)
-    * [Class: FetchError](https://github.com/bitinn/node-fetch/blob/master/README.md#class-fetcherror)
+Publique el programa de línea de comandos `esclu` desarrollado en esta práctica como un módulo npm en Github packages
+
+### Referencias
+
+Vea la sección [GitHub Package Registry](/tema4-devops/control-version#github-package-registry) en estos apuntes.
+
+Siga también este tutorial de GitHub:
+
+#### Configuring npm for use with GitHub Packages
+
+*   [Authenticating to GitHub Packages](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#authenticating-to-github-packages)
+*   [Publishing a package](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#publishing-a-package)
+*   [Publishing multiple packages to the same repository](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#publishing-multiple-packages-to-the-same-repository)
+*   [Installing a package](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#installing-a-package)
+*   [Further reading](https://help.github.com/en/github/managing-packages-with-github-packages/configuring-npm-for-use-with-github-packages#further-reading)
