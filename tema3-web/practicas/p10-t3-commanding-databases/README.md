@@ -9,7 +9,7 @@ y resuelva los problemas en la secciónes
 
 ## Variantes: Commanding Databases with yargs (p10-t3-commanding-databases)
 
-Puede realizar cualquiera e estas variantes o combinaciones de ellas a la hora de realizar esta práctica.
+En vez de seguir el capítulo del libro al pie de la eltra, puede realizar cualquiera de las variantes que se mencionan a continuación o intentar combinaciones de ellas. 
 Por ejemplo, puede usar `yargs` en vez de `commander` y usar el cliente de Elasticsearch `@elastic/elasticsearch` para Node en vez de `request`
 
 ### Variante 1: Reescriba el programa de línea de comandos `esclu` usando `yargs` en vez de `commander`
