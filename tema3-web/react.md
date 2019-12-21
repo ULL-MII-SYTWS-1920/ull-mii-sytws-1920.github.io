@@ -79,7 +79,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 ## References
 
-* [How to pass props to components in React](https://www.robinwieruch.de/react-pass-props-to-component#react-props) blog by ROBIN WIERUCH
+{% include references-react.md %}
  
 
 ## Práctica p11-t3-react-tic: Tutorial "Intro to React". Tic-Tac-Toe 
