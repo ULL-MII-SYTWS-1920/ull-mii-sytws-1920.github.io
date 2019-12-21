@@ -1,6 +1,3 @@
----
----
-
 # Descripción de la práctica p14-t3-react-components
 
 1. Use `create-react-app`to create the initial structure of your app.
