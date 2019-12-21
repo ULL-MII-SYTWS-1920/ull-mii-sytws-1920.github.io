@@ -1,3 +1,3 @@
 ## References
 
-{% include references-webpack %}
+{% include references-webpack.md %}
