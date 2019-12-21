@@ -81,6 +81,10 @@ By: Parth Ghiya</a>. Acceda por medio del <a href="https://www.ull.es/servicios/
 * <a href="https://git-scm.com/book/en/v2/" target="_blank">Chacon's book on Git</a>
 * <a href="https://campusvirtual.ull.es/ocw/course/view.php?id=136" target="_blank">OCW ULL: Integración de las Herramientas "GitHub Education" en el Aula</a> Casiano et Al.
 
+## Webpack
+
+{% include references-webpack.md %}
+
 ## React
 
 {% include references-react.md %}
