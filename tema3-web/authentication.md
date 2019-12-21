@@ -1,16 +1,28 @@
-## Capítulo: Authentication
+# Authentication
 
-**Sessions y Authentication**
+## Sessions y Authentication
 
 Véase la sección [Cookies y Autenticación](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/cookies/)
 en los apuntes del profesor
 
-**OAuth**
+## JSON Web Tokens
+
+* [jwt.io](https://jwt.io/)
+* [JWT Handbook]({{site.books_shared}}/jwt-handbook-v0_14_1.pdf) (pdf) Sebastian E. Peyrrot
+* [Implementar JSON Web Tokens con NodeJS](https://www.oscarblancarteblog.com/2018/01/16/implementar-json-web-tokens-nodejs/) Oscar Blancarte Blog
+  - [Construir un API REST con NodeJS (Tercera parte)](https://www.oscarblancarteblog.com/2018/01/15/construir-api-rest-nodejs-tercera-parte/)
+  - [Segunda parte](https://www.oscarblancarteblog.com/2018/01/12/construir-api-rest-nodejs-segunda-parte/)
+  - [Primera Parte](https://www.oscarblancarteblog.com/2018/01/11/construir-api-rest-nodejs-primera-parte/)
+
+
+## OAuth
 
 * [Introducción a OAuth](http://nereida.deioc.ull.es/~lpp/perlexamples/node773.html) (Apuntes del profesor)
 * [What is OAuth2? How does OAuth2 work? | Tech Primers](https://youtu.be/CPbvxxslDTU) Yotube video
 
-**Passport: Introducción**
+## Passport
+
+### Passport: Introducción
 
 * [Passport](http://passportjs.org/) is authentication middleware for Node.js. 
 * Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. 
@@ -23,7 +35,7 @@ en los apuntes del profesor
    * [GitHub strategy documentation](http://www.passportjs.org/packages/passport-github/) and repo [GitHub](https://github.com/jaredhanson/passport-github), 
    * and [more](http://www.passportjs.org/packages/).
 
-**Passport: Tutoriales**
+### Passport: Tutoriales
 
 * [Example of how to use Express 4.x and Passport to authenticate users using GitHub](https://github.com/ULL-ESIT-SYTW-1617/express-4.x-github-example)
 
@@ -50,7 +62,7 @@ en los apuntes del profesor
   - [GitHub repo](https://github.com/bradtraversy/loginapp) 
   - [Fork at ULL-ESIT-CA-1718](https://github.com/ULL-ESIT-MII-CA-1718/loginapp)
 
-**Passport: Notas sobre como Configurar una WebApp en Facebook**
+### Passport: Notas sobre como Configurar una WebApp en Facebook
 
 * [Facebook App Development Guide](https://developers.facebook.com/docs/apps/)
   - [Facebook: Register and Configure an App](https://developers.facebook.com/docs/apps/register)
@@ -64,6 +76,6 @@ en los apuntes del profesor
     This will allow you to test your facebook plugins locally.
 * StackOverflow: [Facebook Site URL?](http://stackoverflow.com/questions/8107911/facebook-site-url)
 
-### Prácticas
+## Prácticas
 
 * [Práctica: Cookies, Sesiones, Autenticación y Módulos npm (p8-t3-sessions-and-modules)](practicas/p8-t3-sessions-and-modules)
