@@ -15,4 +15,4 @@
 Here is a solution to the problem:
 
 * [p14-t3-react-components-solution]({{site.github_org}}/p14-t3-react-components-solution/)
-* [The solution deployed at GitHub pages]({{despliegue_apuntes}}/p14-t3-react-components-solution/)
+* [The solution deployed at GitHub pages]({{site.despliegue_apuntes}}/p14-t3-react-components-solution/)
