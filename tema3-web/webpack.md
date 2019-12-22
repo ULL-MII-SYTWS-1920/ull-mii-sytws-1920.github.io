@@ -1,6 +1,6 @@
 # Survive.js Webpack book
 
-*   [Foreword](https://survivejs.com/webpack/forewwod)
+*   [Foreword](https://survivejs.com/webpack/foreword)
 *   [Preface](https://survivejs.com/webpack/preface/)
 *   [Introduction](https://survivejs.com/webpack/introduction/)
 *   [What is Webpack](https://survivejs.com/webpack/what-is-webpack/)
