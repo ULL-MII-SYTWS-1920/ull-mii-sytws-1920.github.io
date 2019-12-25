@@ -3,7 +3,7 @@
 1.  Introduce an `input` field inside the `App` component with a `change` listener which ouputs in a paragraph the `length` of the entered text
 2. Introduce a `ValidationComponent` which receives the `length`of the entered text as a `prop`.
 3. The `ValidationComponent` should conditionally output `Text too short` or `Text long enough` in a paragraph dpeneding whether the text length is less than or greater than some number, let us say 5.
-4. Create another component `Charcomponent` with a `div` and style it as a inline box. Here is a suggestion:
+4. Create another component `CharComponent` with a `div` and style it as a inline box. Here is a suggestion:
 
   ```css
   {
