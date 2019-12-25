@@ -25,7 +25,7 @@
 
 ## References
 
-* [Assignment 2: Time to Practice. Lists and Conditionals](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/practice/16066/introduction#bookmarks)
-* [Assignment 2: Solution. Practice. Lists and Conditionals](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/12982502#bookmarks)
+* Udemy course: React the Complete Guide. [Assignment 2: Time to Practice. Lists and Conditionals](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/practice/16066/introduction#bookmarks)
+* Udemy course: React the Complete Guide. [Assignment 2: Solution. Practice. Lists and Conditionals](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/12982502#bookmarks)
 * [React: Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
 * [React: Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
