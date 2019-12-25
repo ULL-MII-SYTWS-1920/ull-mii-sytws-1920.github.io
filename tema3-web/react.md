@@ -89,3 +89,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 ## Práctica p14-t3-react-components
 
 * [Descripción de la práctica](practicas/p14-t3-react-components/index.html)
+
+## Práctica p15-t3-react-lists-and-conditionals
+
+* [Descripción de la práctica](practicas/p15-t3-react-lists-and-conditionals/index.html)
