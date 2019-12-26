@@ -24,6 +24,8 @@
 
 ## References
 
+* [Repo con una solucion a la práctica](https://github.com/ULL-MII-SYTWS-1920/p15-t3-react-lists-and-conditionals-solution)
+* [Solución desplegada en GH pages](https://ull-mii-sytws-1920.github.io/p15-t3-react-lists-and-conditionals-solution/)
 * Udemy course: React the Complete Guide. [Assignment 2: Time to Practice. Lists and Conditionals](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/practice/16066/introduction#bookmarks)
 * Udemy course: React the Complete Guide. [Assignment 2: Solution. Practice. Lists and Conditionals](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/12982502#bookmarks)
 * [React: Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
