@@ -14,6 +14,7 @@
     border: 1px solid black;
   }
   ```
+  
 5. Inside the `App`component render a list of `CharComponent`, where each `CharComponent` receives - as a `prop` - a different letter of the entered  text from the initial `input`field
   - You'll  need to transform a string into a real array and then join it back into a string again
     - You can split a string into an array of its characters with the `split('')`  method. By passing just an empty string, it's split after every character.
