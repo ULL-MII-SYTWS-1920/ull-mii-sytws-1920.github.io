@@ -10,6 +10,7 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 *   [Posts](https://jekyllrb.com/docs/posts/)
 *   [Front Matter](https://jekyllrb.com/docs/front-matter/)
 *   [Collections](https://jekyllrb.com/docs/collections/)
+   *   [Page Sections in Jekyll - Separating Content from Layout](https://dev-notes.eu/2016/08/page-sections-in-jekyll-seperating-content-from-layout/)
 *   [Data Files](https://jekyllrb.com/docs/datafiles/)
 *   [Assets](https://jekyllrb.com/docs/assets/)
 *   [Static Files](https://jekyllrb.com/docs/static-files/)
@@ -35,7 +36,6 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 *   [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/)
 *   [Convert an HTML site to Jekyll](https://jekyllrb.com/tutorials/convert-site-to-jekyll/)
 *   [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
-
 
 ## The Jekyll Conference
 
