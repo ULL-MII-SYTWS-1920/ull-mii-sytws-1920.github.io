@@ -864,7 +864,7 @@ gulp.task("c7-b4-get-sawyer", shell.task(
 #### Example of request to the Elasticsearch suggest API with `curl`
 
 
-[Code in gulpfile for task c7-es-suggest](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/gulpfile.js#L358-L396):
+**[Code in gulpfile for task c7-es-suggest](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/gulpfile.js#L358-L396)**:
 
 ```js
 let trimnl = (s) => s.replace(/\s+/g,"");
