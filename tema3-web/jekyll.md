@@ -11,7 +11,9 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 *   [Front Matter](https://jekyllrb.com/docs/front-matter/)
 *   [Collections](https://jekyllrb.com/docs/collections/)
    *   [Page Sections in Jekyll - Separating Content from Layout](https://dev-notes.eu/2016/08/page-sections-in-jekyll-seperating-content-from-layout/)
+   * [Explain like I’m five: Jekyll collections](https://ben.balter.com/2015/02/20/jekyll-collections/)
 *   [Data Files](https://jekyllrb.com/docs/datafiles/)
+   * [Why I love Jekyll Data Files - Chen Hui Jing // JekyllConf 2019](https://youtu.be/CERXESTZ5w4) YouTube
 *   [Assets](https://jekyllrb.com/docs/assets/)
 *   [Static Files](https://jekyllrb.com/docs/static-files/)
 
@@ -36,6 +38,8 @@ Recuerda que GitHub provee un servicio de Hosting de páginas estáticas ([GitHu
 *   [Custom 404 Page](https://jekyllrb.com/tutorials/custom-404-page/)
 *   [Convert an HTML site to Jekyll](https://jekyllrb.com/tutorials/convert-site-to-jekyll/)
 *   [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
+* [Chen Hui Jing talks on Jekyll](https://www.chenhuijing.com/blog/jekyll/#%F0%9F%91%BE
+  * [Chen Hui Jing talks](https://www.chenhuijing.com/talks/#%F0%9F%8F%80) Slides in reveal.js
 
 ## The Jekyll Conference
 
