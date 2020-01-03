@@ -8,7 +8,7 @@ Lea el capítulo y  resuelva los problemas planteados en la secciones:
 
 ## Deleting a Bundle Entirely 
 
-La tarea es añadir una entrada al fichero `web-services/b4/lib/bundle.js` para suprimir un bunlde o colección:
+La tarea es añadir una entrada al fichero `web-services/b4/lib/bundle.js` para suprimir un bundle o colección:
 
 ```js
  app.delete("/api/bundle/:id", async (req, res) => {
