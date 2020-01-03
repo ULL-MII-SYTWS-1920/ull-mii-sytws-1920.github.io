@@ -1,6 +1,7 @@
 # Reto: Developing RESTful Web Services (p11-t3-restful)
 
 En la versión actual los bundles guardan de un libro su `id` y el `title`:
+
 ```
 ./esclu -i b4 -t bundle get _search | jq '.hits.hits'
 ```
@@ -54,4 +55,5 @@ En la versión actual los bundles guardan de un libro su `id` y el `title`:
   }
 ]
 ```
+
 Modifique el programa para que se guarde también el campo `authors`
