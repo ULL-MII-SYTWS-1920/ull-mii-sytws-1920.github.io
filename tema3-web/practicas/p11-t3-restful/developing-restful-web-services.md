@@ -626,7 +626,97 @@ $ node
 { hello: 4 }
 >
 ```
-* [web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)
+
+**[web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)**
+
+```js
+/**
+  * Provides API endpoints for searching the book index
+*/
+'use strict';
+const request = require('request');
+const rp = require('request-promise');
+
+module.exports = (app, es) => {
+  const url = `http://${es.host}:${es.port}/${es.books_index}/book/_search`;
+  /**
+   * Search for books matching a particular field value
+   * Example: /api/search/books/authors/Twain
+   */
+  app.get('/api/search/books/:field/:query', (req, res) => {
+    const esReqBody = {
+      size: 10, // limits the number of documents that will be sent back
+      query: {  // describes what kind of objects we want to find
+        match: {
+          [req.params.field]: req.params.query
+        }
+      }
+    };
+    const options = {url, json: true, body: esReqBody };
+
+    request.get(options, (err, esRes, esResBody) => {
+      if (err) {
+        res.status(502).json({
+          error: 'bad_gateway',
+          reason: err.code
+        });
+      }
+      if (esRes.statusCode !== 200) {
+        res.status(esRes.statusCode).json(esResBody);
+        return;
+      }
+      res.status(200).json(esResBody.hits.hits.map(({_source}) => _source));
+    });
+  });
+
+  /**
+   * Collect suggested terms for a given field based on a given query
+   * Example: /api/suggest/authors/lipman
+  */
+  app.get('/api/suggest/:field/:query', (req, res) => {
+    const esReqBody = {
+      size: 0, // We don’t want any matching documents returned, just the suggestions
+      suggest: {
+        suggestions: { // Elasticsearch’s Suggest API allows you to request multiple
+                       // kinds of suggestions in the same request,
+                       // but here we’re submitting only one. 
+          text: req.params.query,
+          term: {
+            field: req.params.field,
+            suggest_mode: 'always'
+          }
+        }
+      }
+    };
+    const options = { url, json: true, body: esReqBody };
+    const promise = rp(options);
+    /*
+    // Version from section: "Using a Promise with request", pages 162-166
+    const promise = new Promise((resolve, reject) => {
+      request.get(options, (err, esRes, esResBody) => {
+        if (err) {
+          reject({error: err});
+          return;
+        }
+        if (esRes.statusCode !== 200) {
+          reject({error: esResBody});
+          return;
+        }
+        resolve(esResBody);
+      });
+    });
+    */
+    promise
+      .then(esResBody =>
+        res.status(200).json(esResBody.suggest.suggestions)
+      )
+      .catch(
+        ({error}) => res.status(error.status || 502).json(error)
+      );
+  });
+};
+```
+
 * [Elasticsearch Match Query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html)
 ```js
 app.get('/api/search/books/:field/:query', (req, res) => {
@@ -655,10 +745,52 @@ app.get('/api/search/books/:field/:query', (req, res) => {
   });
 });
 ```
+
 * [Status 502: Puerta de enlace no válida](https://developer.mozilla.org/es/docs/Web/HTTP/Status/502)
 * [Elasticsearch errors](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/errors.html)
-* [web-services/b4/server.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/server.js)
-* [web-services/b4/config.json](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/config.json)
+
+**[web-services/b4/server.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/server.js)**
+
+```js
+'use strict';
+
+const express = require('express');
+const morgan = require('morgan');
+const nconf = require('nconf');
+                  // b4  web-services chapter-7
+const pkg = require('../../../package.json');
+
+nconf.argv().env('__');
+nconf.defaults({conf: `${__dirname}/config.json`});
+nconf.file(nconf.get('conf'));
+
+const app = express();
+app.use(morgan('dev'));
+
+app.get('/api/version', (req, res) => {
+  res.status(200).send(pkg.version);
+});
+
+require('./lib/search.js')(app, nconf.get('es'));
+require('./lib/bundle.js')(app, nconf.get('es'));
+app.listen(nconf.get('port'), () => console.log('Listening on port '+nconf.get('port')));
+```
+
+**[web-services/b4/config.json](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/config.json)**
+
+```json
+{
+  "port": 60702,
+  "es": {
+    "host": "localhost",
+    "port": 9200,
+    "books_index": "books",
+    "bundles_index": "b4"
+  }
+}
+```
+
+**Executions:**
 
 ```
 [~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ grep b4-server ../../../package.json
