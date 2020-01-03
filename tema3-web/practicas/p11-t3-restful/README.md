@@ -1,6 +1,7 @@
 # Práctica: Developing RESTful Web Services (p11-t3-restful)
 
-Lea el  [Chapter 7. Developing RESTful Web Services]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL).
+Lea el  [Chapter 7. Developing RESTful Web Services]({{site.bull_permanente}}/15vbjs7/ullsfx4340000000247287) del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL) y
+[lea también las notas del profesor sobre este capítulo](developing-restful-web-services.html).
 
 En este capítulo se crea - utilizando Express.js - un servicio Web que permite crear y administrar colecciones de libros que en el libro denominan *bundles*.
 
@@ -71,6 +72,7 @@ If you get stuck, [check out the code with the solutions](https://github.com/ULL
 
 ## Recursos
 
+* [Notas del profesor sobre el capítulo](developing-restful-web-services.html)
 * [BULL PuntoQ](https://www.ull.es/servicios/biblioteca/servicios/puntoq/)
 * [Repo con los recursos de referencia](https://github.com/ULL-MII-SYTWS-1920/books-shared)
 * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way)
