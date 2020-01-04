@@ -1,6 +1,8 @@
 
 ## How to GraphQL
 
+* [What is GraphQL?](https://youtu.be/X3QM6Ap6u-4)
+
 ###  GRAPHQL FUNDAMENTALS
 
 * [Basics Tutorial - Introduction](https://www.howtographql.com/basics/0-introduction/)
