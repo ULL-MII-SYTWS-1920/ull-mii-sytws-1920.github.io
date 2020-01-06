@@ -57,6 +57,8 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 ### For a Web App
 
+The majority of websites aren’t, and don’t need to be, single-page apps. With a few lines of code and no build tooling, try React in a small part of your website. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+
 * [Add React to a Web Site](https://reactjs.org/docs/add-react-to-a-website.html)
 
 ### From Scratch
@@ -77,6 +79,22 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
 * [MoonHighway/learning-react](https://github.com/moonhighway/learning-react) Github repo with the code samples for Learning React by Alex Banks and Eve Porcello, published by O'Reilly Media
 
+## React Router
+
+### The Problem
+
+The biggest difference with traditional multi-page apps is that navigating a single-page app doesn't involve going to an entirely new page. Instead, your pages (commonly known as **views** in this context) typically load inline within the same page itself.
+
+When you are loading content inline, things get a little challenging. The hard part is not loading the content itself. That is relatively easy. The hard part is making sure that single-page apps behave in a way that is consistent with what your users are used to. More specifically, when users navigate your app, they expect that:
+
+1. The URL displayed in the address bar always reflects the thing that they are viewing.
+2. They can use the browser's back and forward buttons...successfully.
+3. They can navigate to a particular view (aka deep link) directly using the appropriate URL.
+
+With multi-page apps, these three things come for free. There is nothing extra you have to do for any of it. With single-page apps, because you aren't navigating to an entirely new page, you have to do real work to deal with these three things that your users expect to just work.
+
+To deal with all of this, you have a bucket full of techniques commonly known as **routing**.
+
 ## References
 
 {% include references-react.md %}
@@ -93,3 +111,6 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 ## Práctica p15-t3-react-lists-and-conditionals
 
 * [Descripción de la práctica](practicas/p15-t3-react-lists-and-conditionals/index.html)
+
+for more see [Creating a Single-Page App in React: using React Router](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm) 
+by kirupa  
