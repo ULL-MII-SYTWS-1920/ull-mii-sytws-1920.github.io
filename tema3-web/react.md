@@ -1,12 +1,5 @@
 # React
 
-## [Learning React with Gatsby](gatsby)
-
-### CSS modules
-
-* [Css Modules by Example](https://www.javascriptstuff.com/css-modules-by-example/)
-* [CSS Modules](https://github.com/css-modules/css-modules)
-
 ## Intro to React
 
 ###  Learn by Doing
@@ -74,6 +67,12 @@ The majority of websites aren’t, and don’t need to be, single-page apps. Wit
 
 >This in-depth guide shows you everything about React Function Components -- which are basically just JavaScript Functions being React Components which return JSX (React's Syntax) -- so that after you have read this tutorial you should be well prepared to implement modern React applications with them.
 
+### CSS modules
+
+* [Css Modules by Example](https://www.javascriptstuff.com/css-modules-by-example/)
+* [CSS Modules](https://github.com/css-modules/css-modules)
+
+
 ## Learning React by Eve Porcello, Alex Banks 
 
 * Table of contents of the book [Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ](learning-react.md)
@@ -99,6 +98,10 @@ To deal with all of this, you have a bucket full of techniques commonly known as
 
 See [Creating a Single-Page App in React: using React Router](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm) 
 by kirupa  
+
+## GatsBy: A Static Site Generator Using React
+
+* [Gatsby](gatsby)
 
 ## References
 
