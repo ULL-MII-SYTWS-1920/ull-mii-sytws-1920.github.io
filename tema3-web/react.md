@@ -95,6 +95,11 @@ With multi-page apps, these three things come for free. There is nothing extra y
 
 To deal with all of this, you have a bucket full of techniques commonly known as **routing**.
 
+### The Solution 
+
+See [Creating a Single-Page App in React: using React Router](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm) 
+by kirupa  
+
 ## References
 
 {% include references-react.md %}
@@ -112,5 +117,3 @@ To deal with all of this, you have a bucket full of techniques commonly known as
 
 * [Descripción de la práctica](practicas/p15-t3-react-lists-and-conditionals/index.html)
 
-for more see [Creating a Single-Page App in React: using React Router](https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm) 
-by kirupa  
