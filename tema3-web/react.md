@@ -83,7 +83,7 @@ The majority of websites aren’t, and don’t need to be, single-page apps. Wit
 
 ### The Problem
 
-The biggest difference with traditional multi-page apps is that navigating a single-page app doesn't involve going to an entirely new page. Instead, your pages (commonly known as **views** in this context) typically load inline within the same page itself.
+The biggest difference of Single Page Apps (SPA) with traditional multi-page apps is that navigating a single-page app doesn't involve going to an entirely new page. Instead, your pages (commonly known as **views** in this context) typically load inline within the same page itself.
 
 When you are loading content inline, things get a little challenging. The hard part is not loading the content itself. That is relatively easy. The hard part is making sure that single-page apps behave in a way that is consistent with what your users are used to. More specifically, when users navigate your app, they expect that:
 
