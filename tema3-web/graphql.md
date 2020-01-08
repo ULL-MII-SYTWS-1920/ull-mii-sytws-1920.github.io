@@ -58,8 +58,7 @@
 * [Hands-On Full-Stack Web Development with GraphQL and React](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651096) Sebastian Grebe 2019. Libro. PuntoQ ULL
 * [React Quickly: Painless web apps with React, JSX, Redux, and GraphQL](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000000880800) by Azat Mardan. Manning. 2017. Libro. PuntoQ ULL
 * [Beginning GraphQL by Brian Kimokoti.  Packt 2018](https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000005599314) PuntoQ BULL Safari
-* [REST with Hypermedia - Hot or Not?](https://reflectoring.io/rest-hypermedia/) blog by Tom Hombergs
-  - [mikekelly/hal-browser](https://github.com/mikekelly/hal-browser)
+
 * [Por qué API REST está muerto y debemos usar APIs GraphQL - José María Rodríguez Hurtado](https://youtu.be/cUIhcgtMvGc) YouTube
 * [GraphQL ha muerto: Vivan las APIs REST con Hypermedia - Jorge Ferrer y José Manuel Navarro](https://youtu.be/yr7Tvr9dVNY) YouTube
 * [Learning GraphQL and Relay by Samer Buna. Pack. 2016](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781786465757) PuntoQ BULL Safari
