@@ -17,7 +17,9 @@ For example, the HTTP GET method retrieves a resource, and HTTP PUT sends a reso
   * [GitHub repo ULL-MII-CA-1819/nodejs-the-right-way](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way) con las soluciones (privado)
 *  [REST API Tutorial](https://restfulapi.net/)
 * Libro [Pro REST API Development with Node.js by Fernando Doglio. Apress 2015](https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781484209172) Book PuntoQ BULL
-
+* [REST with Hypermedia - Hot or Not?](https://reflectoring.io/rest-hypermedia/) blog by Tom Hombergs
+  - [mikekelly/hal-browser](https://github.com/mikekelly/hal-browser)
+  
 ## [REST API concepts and examples](https://youtu.be/7YcW25PHnAA) (Youtube video)
 
 ## [API for beginners](https://youtu.be/oBW_VNg4qD0) (Youtube video) por Le Wagon
