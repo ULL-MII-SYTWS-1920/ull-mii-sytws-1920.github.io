@@ -36,7 +36,7 @@
 
 ## [Web Scrapping](web-scrapping)
 
-## [Bases de Datos](bases-de-datos)
+## [Bases de Datos y Motores de Búsqueda](bases-de-datos)
 
 ## [Jekyll](jekyll)
 

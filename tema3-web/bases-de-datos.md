@@ -10,10 +10,12 @@
 
 ## Bases de Datos no Relacionales
 
-### Elasticsearch
-
-* [Elasticsearch](elasticsearch)
-
 ### MongoDB
 
 * [MongoDB](mongodb)
+
+## Search Engines
+
+### Elasticsearch
+
+* [Elasticsearch](elasticsearch)
