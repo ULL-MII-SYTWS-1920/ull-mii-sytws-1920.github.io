@@ -32,16 +32,18 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 - Live-editing CSS and JS in development.
 - Optimizing the output for production.
 
-* [Create a new React App](https://reactjs.org/docs/create-a-new-react-app.html)
+
 
 ### Create React App. Set up a modern web app by running one command
 
+* [Create a new React App](https://reactjs.org/docs/create-a-new-react-app.html)
 * [create-react-app docs](https://create-react-app.dev/docs/getting-started)
 * [Create React App. Set up a modern web app by running one command](https://create-react-app.dev/)
 * [YouTube video: Getting Started with Create React App](https://youtu.be/eCz3rhsDG5s) by Elijah  Manor
-* [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search)
+* [Emoji Search. Created with create-react-app](https://github.com/ahfarmer/emoji-search) GitHub Example Repo
 * [This project was bootstrapped with Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md)
 
+* [How to get "create-react-app" to work with your API](https://www.newline.co/fullstack-react/articles/using-create-react-app-with-a-server/) by Anthony Accomazzo. A simple food nutrition lookup table. The data driving the app is supplied by the [USDA's National Nutrient Database](https://www.ars.usda.gov/northeast-area/beltsville-md/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/).
   
 ### React in Visual Studio Code
 
