@@ -4,6 +4,10 @@
 
 * [dbngin](https://dbngin.com/)
 
+### SQLite
+
+* [SQLite](sqlite)
+
 ### MySQL
 
 * [MySQL](mysql)
