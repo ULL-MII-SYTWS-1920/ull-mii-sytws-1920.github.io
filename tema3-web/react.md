@@ -49,7 +49,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 * [How to get "create-react-app" to work with your API](https://www.newline.co/fullstack-react/articles/using-create-react-app-with-a-server/) by Anthony Accomazzo. A simple food nutrition lookup table. The data driving the app is supplied by the [USDA's National Nutrient Database](https://www.ars.usda.gov/northeast-area/beltsville-md/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/).
 * [npm concurrently package](https://github.com/kimmobrunfeldt/concurrently#readme)
   - > **Why?**: I like [task automation with npm](http://substack.net/task_automation_with_npm_run) but the usual way to run multiple commands concurrently is `npm run watch-js & npm run watch-css`. That's fine but it's hard to keep on track of different outputs. Also if one process fails, others still keep running and you won't even notice the difference. Another option would be to just run all commands in separate terminals. I got tired of opening terminals and made **concurrently**.
-  - Section [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/) in the Create React App docs
+* Section [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/) in the Create React App docs
   
 ### React in Visual Studio Code
 
