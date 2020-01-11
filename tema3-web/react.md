@@ -50,6 +50,9 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 * [npm concurrently package](https://github.com/kimmobrunfeldt/concurrently#readme)
   - > **Why?**: I like [task automation with npm](http://substack.net/task_automation_with_npm_run) but the usual way to run multiple commands concurrently is `npm run watch-js & npm run watch-css`. That's fine but it's hard to keep on track of different outputs. Also if one process fails, others still keep running and you won't even notice the difference. Another option would be to just run all commands in separate terminals. I got tired of opening terminals and made **concurrently**.
 * Section [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/) in the Create React App docs
+* [Deploying in Heroku](https://github.com/fullstackreact/food-lookup-demo#deploying)
+  * [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) article
+
   
 ### React in Visual Studio Code
 
