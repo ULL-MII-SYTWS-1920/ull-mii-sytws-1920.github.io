@@ -52,7 +52,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 * Section [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/) in the Create React App docs
 * [Deploying in Heroku](https://github.com/fullstackreact/food-lookup-demo#deploying)
   * [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) article
-
+* [sql.js](https://github.com/kripken/sql.js)
   
 ### React in Visual Studio Code
 
