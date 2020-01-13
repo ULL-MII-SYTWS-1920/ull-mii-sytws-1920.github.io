@@ -145,7 +145,7 @@ Client ---- request ---> Our b4 REST service ---> Elastic Search Engine
 ```    
 
 For example if the client request for info about a book, the b4 REST web service will
-prepare the apropriate request for Elasticsearch, get the answer from ES and after some 
+prepare the apropriate request for Elasticsearch, get the answer from ES and after some
 filtering pass it back to the client
 
 ## How **nconf** manages configuration settings
