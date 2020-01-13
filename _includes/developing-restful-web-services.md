@@ -544,6 +544,8 @@ app.get('/api/search/books/:field/:query', (req, res) => {
 * Finally, if there were no errors, we extract just the `_source` objects (the underlying documents) from the Elasticsearch response, and report these to the caller as JSON. 
   - The `resBody.hits.hits.map(({_source}) => _source)` this is how Elasticsearch response is structured.
 
+![](/assets/images/es-response-books-authors-twain.png)
+
 **[web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)**
 
 ```js
