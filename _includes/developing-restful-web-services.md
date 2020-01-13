@@ -405,6 +405,8 @@ gulp.task("c7-b4-version", shell.task(
 
 First we’ll add APIs for searching the `books` index, and then we’ll add APIs for creating and manipulating book bundles.
 
+Add empty files `search.js` and `bundle.js`inside the `lib` folder:
+
 ```
 [~/.../web-services/b4(master)]$ tree
 .
@@ -537,8 +539,8 @@ With the request body ready to go, add this code underneath to issue the request
   - This could be for any of a variety of reasons, such as a `404` Not Found if, say, the `books` index has not been created
   - Or during development, while you’re experimenting to get the right request body for Elasticsearch, you may receive a `400` Bad Request. In any of these cases, we just pass the response more or less straight through to the caller with the same `status` code and `response` body.
 * Finally, if there were no errors, we extract just the `_source` objects (the underlying documents) from the Elasticsearch response, and report these to the caller as JSON. 
-  - The `resBody.hits.hits.map(({_source}) => _source)` this is how Elasticsearch responseis structured.
-  
+  - The `resBody.hits.hits.map(({_source}) => _source)` this is how Elasticsearch response is structured.
+
 **[web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)**
 
 ```js
