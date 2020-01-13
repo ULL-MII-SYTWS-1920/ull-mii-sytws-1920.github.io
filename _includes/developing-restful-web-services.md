@@ -454,16 +454,6 @@ loads `lib/search.js` and immediately invokes the imported function by passing t
 Let us start by giving support to requests as this one:
 
 ```
-[~/local/src/CA/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ sed -ne '/c7-b4-get/,/));/p' ../../../gulpfile.js
-gulp.task("c7-b4-get-shakespeare", shell.task(
-  `curl -s localhost:60702/api/search/books/authors/Shakespeare | jq .[].title`
-));
-gulp.task("c7-b4-get-sawyer", shell.task(
-  `curl -s localhost:60702/api/search/books/title/sawyer | jq .[].title`
-));
-```
-
-```
 [~/local/src/CA/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ curl -s localhost:60702/api/search/books/authors/Shakespeare | jq .[].title
 "Venus and Adonis"
 "The Second Part of King Henry the Sixth"
