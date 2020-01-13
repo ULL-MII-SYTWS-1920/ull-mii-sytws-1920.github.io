@@ -172,17 +172,6 @@ nconf.argv() // Loads process.argv using yargs. If options is supplied it is pas
 // See "node hello-nconf.js --conf='./config-2.json'"
 nconf.get('conf') && nconf.file(nconf.get('conf'));
 
-/*
-  nconf.env()
-   .file({ file: './config.json' })
-   .argv();
-*/
-/*
-  nconf
-   .file({ file: './config.json' })
-   .argv()
-   .env() ;
-*/
 //
 // Set a few variables on `nconf`.
 //
