@@ -96,7 +96,7 @@ gulp.task("c7-express-client", shell.task(
 [12:33:33] Finished 'c7-express-client' after 51 ms
 ```
 
-## Writing Modular Express Services
+## Our Goal in this Chapter: Writing Modular Express Services
 
 We’re going to build a RESTful web service with Express for creating and managing book bundles. Here’s an example of a book bundle:
 
@@ -135,6 +135,14 @@ yellow open   b4       Wt45klL2TA-p-VvYRWegoA   5   1          0            0   
 yellow open   accounts 9TNc0k0LQ1e4y97yFX8_vg   5   1          2            0     10.4kb         10.4kb
 yellow open   books    wP3DgQPZQZq0qBtH_dd0LA   5   1      58159            3     23.2mb         23.2mb
 ```
+
+Our REST service is going to use ES as a service:
+
+```
+
+Client ---- request ---> Our b4 REST service ---> Elastic Search Engine
+       <----response----           <--- response ---
+```    
 
 ## How **nconf** manages configuration settings
 
