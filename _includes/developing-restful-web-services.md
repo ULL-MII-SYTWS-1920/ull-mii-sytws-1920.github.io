@@ -135,106 +135,8 @@ yellow open   b4       Wt45klL2TA-p-VvYRWegoA   5   1          0            0   
 yellow open   accounts 9TNc0k0LQ1e4y97yFX8_vg   5   1          2            0     10.4kb         10.4kb
 yellow open   books    wP3DgQPZQZq0qBtH_dd0LA   5   1      58159            3     23.2mb         23.2mb
 ```
-### Separating Server Code into Modules
 
-To start, create a directory called `b4` to house the B4 project. to optimize storage we use the `package.json` at the root project level:
-
-
-```
-[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services(master)]$ mkdir b4
-[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services(master)]$ cd b4
-[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ npm i nconf
-+ nconf@0.10.0
-added 13 packages from 17 contributors and audited 511 packages in 4.154s
-found 0 vulnerabilities
-
-[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ sed -ne '/dep/,/}/p' ~/sol-nodejs-the-right-way/package.json
-  "dependencies": {
-    "chai": "^4.2.0",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "nconf": "^0.10.0",
-    "node-dir": "^0.1.17",
-    "zeromq": "^5.0.0",
-    "zerorpc": "^0.9.8"
-  }
-```
-
-This is our configuration file:
-
-**[Contents of web-services/b4/config.json](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/config.json#L10)**
-
-```json
-{
-  "port": 60702,
-  "es": {
-    "host": "localhost",
-    "port": 9200,
-    "books_index": "books",
-    "bundles_index": "b4"
-  }
-}
-```
-
-**[Contents of web-services/b4/server.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/server.js)**
-
-```js
-'use strict';
-
-const express = require('express');
-const morgan = require('morgan');
-const nconf = require('nconf');
-                  // b4  web-services chapter-7
-const pkg = require('../../../package.json');
-
-nconf.argv().env('__');
-nconf.defaults({conf: `${__dirname}/config.json`});
-nconf.file(nconf.get('conf'));
-
-const app = express();
-app.use(morgan('dev'));
-
-app.get('/api/version', (req, res) => {
-  res.status(200).send(pkg.version);
-});
-
-require('./lib/search.js')(app, nconf.get('es'));
-require('./lib/bundle.js')(app, nconf.get('es'));
-app.listen(nconf.get('port'), () => console.log('Listening on port '+nconf.get('port')));
-```
-
-Run the server:
-
-```
-[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ npm run b4-server
-
-> nodejs-8-the-right-way@1.0.0 b4-server /Users/casiano/local/src/CA/sol-nodejs-the-right-way
-> node developing-restful-web-services-chapter-7/web-services/b4/server.js
-
-Listening on port 60702
-GET /api/version 200 3.857 ms - 5
-```
-
-Run a client:
-```
-[~/local/src/CA/sol-nodejs-the-right-way(master)]$ curl -s localhost:60702/api/version
-1.0.0
-```
-or use `gulp`:
-
-```
-gulp.task("c7-b4-version", shell.task(
-  `curl -s localhost:60702/api/version`
-));
-
-[~/local/src/CA/sol-nodejs-the-right-way(master)]$ gulp c7-b4-version
-[10:20:46] Using gulpfile ~/local/src/CA/sol-nodejs-the-right-way/gulpfile.js
-[10:20:46] Starting 'c7-b4-version'...
-1.0.0[10:20:46] Finished 'c7-b4-version' after 63 ms
-```
-
-### How **nconf** manages configuration settings
+## How **nconf** manages configuration settings
 
 The [nconf](https://www.npmjs.com/package/nconf) module manages configuration settings through a customizable hierarchy of
 
@@ -403,6 +305,107 @@ See the tutorial [Using nconf to configure a Node.js application](http://blog.os
     "zerorpc": "^0.9.8"
   }
 ```
+
+### Separating Server Code into Modules
+
+To start, create a directory called `b4` to house the B4 project. to optimize storage we use the `package.json` at the root project level:
+
+
+```
+[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services(master)]$ mkdir b4
+[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services(master)]$ cd b4
+[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ npm i nconf
++ nconf@0.10.0
+added 13 packages from 17 contributors and audited 511 packages in 4.154s
+found 0 vulnerabilities
+
+[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ sed -ne '/dep/,/}/p' ~/sol-nodejs-the-right-way/package.json
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nconf": "^0.10.0",
+    "node-dir": "^0.1.17",
+    "zeromq": "^5.0.0",
+    "zerorpc": "^0.9.8"
+  }
+```
+
+This is our configuration file:
+
+**[Contents of web-services/b4/config.json](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/config.json#L10)**
+
+```json
+{
+  "port": 60702,
+  "es": {
+    "host": "localhost",
+    "port": 9200,
+    "books_index": "books",
+    "bundles_index": "b4"
+  }
+}
+```
+
+**[Contents of web-services/b4/server.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/server.js)**
+
+```js
+'use strict';
+
+const express = require('express');
+const morgan = require('morgan');
+const nconf = require('nconf');
+                  // b4  web-services chapter-7
+const pkg = require('../../../package.json');
+
+nconf.argv().env('__');
+nconf.defaults({conf: `${__dirname}/config.json`});
+nconf.file(nconf.get('conf'));
+
+const app = express();
+app.use(morgan('dev'));
+
+app.get('/api/version', (req, res) => {
+  res.status(200).send(pkg.version);
+});
+
+require('./lib/search.js')(app, nconf.get('es'));
+require('./lib/bundle.js')(app, nconf.get('es'));
+app.listen(nconf.get('port'), () => console.log('Listening on port '+nconf.get('port')));
+```
+
+Run the server:
+
+```
+[~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ npm run b4-server
+
+> nodejs-8-the-right-way@1.0.0 b4-server /Users/casiano/local/src/CA/sol-nodejs-the-right-way
+> node developing-restful-web-services-chapter-7/web-services/b4/server.js
+
+Listening on port 60702
+GET /api/version 200 3.857 ms - 5
+```
+
+Run a client:
+```
+[~/local/src/CA/sol-nodejs-the-right-way(master)]$ curl -s localhost:60702/api/version
+1.0.0
+```
+or use `gulp`:
+
+```
+gulp.task("c7-b4-version", shell.task(
+  `curl -s localhost:60702/api/version`
+));
+
+[~/local/src/CA/sol-nodejs-the-right-way(master)]$ gulp c7-b4-version
+[10:20:46] Using gulpfile ~/local/src/CA/sol-nodejs-the-right-way/gulpfile.js
+[10:20:46] Starting 'c7-b4-version'...
+1.0.0[10:20:46] Finished 'c7-b4-version' after 63 ms
+```
+
+
 ## Adding Search APIs
 
 ### Using Requests with Express
