@@ -506,6 +506,34 @@ $ node
 >
 ```
 
+With the request body ready to go, add this code underneath to issue the request to Elasticsearch and handle the response:
+
+**web-services/b4/lib/search.js**
+
+```js
+   const options = {url, json: true, body: esReqBody };
+
+    request.get(options, (err, esRes, esResBody) => {
+      if (err) {
+        res.status(502).json({
+          error: 'bad_gateway',
+          reason: err.code
+        });
+      }
+      if (esRes.statusCode !== 200) {
+        res.status(esRes.statusCode).json(esResBody);
+        return;
+      }
+      res.status(200).json(esResBody.hits.hits.map(({_source}) => _source));
+    });
+  });
+```
+
+* In the first error-handling block, we deal with the case where the connection couldn’t be made at all. 
+  - If the `err` object is not `null`, this means that the connection to Elasticsearch failed before a response could be retrieved. 
+  - Typically this would be because the Elasticsearch cluster is unreachable — maybe it’s down, or the hostname has been misconfigured. 
+  - The correct HTTP code to send back to the caller is 502 Bad Gateway.
+
 **[web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)**
 
 ```js
