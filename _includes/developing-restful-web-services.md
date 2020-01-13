@@ -420,7 +420,8 @@ First we’ll add APIs for searching the `books` index, and then we’ll add API
 ```
 
 Next, open visual code and enter the following skeleton code for the search APIs.
-web-services/b4/lib/search.js
+
+**web-services/b4/lib/search.js**
 
 ```js
 /**
