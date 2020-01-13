@@ -35,16 +35,22 @@ found 0 vulnerabilities
 ```
 
 ```
-~/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7(master)]$ sed -ne '/depen/,/}/p' ../package.json
-  "dependencies": {
-    "chai": "^4.2.0",
-    "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "node-dir": "^0.1.17",
-    "zeromq": "^5.0.0",
-    "zerorpc": "^0.9.8"
-  }
+[~/.../web-services/b4(master)]$ jq .dependencies ~/sol-nodejs-the-right-way/package.json
+{
+  "chai": "^4.2.0",
+  "cheerio": "^1.0.0-rc.2",
+  "commander": "^2.19.0",
+  "express": "^4.16.4",
+  "morgan": "^1.9.1",
+  "nconf": "^0.10.0",
+  "node-dir": "^0.1.17",
+  "node-red": "^0.19.5",
+  "nodemon": "^1.18.7",
+  "request": "^2.88.0",
+  "request-promise": "^4.2.2",
+  "zeromq": "^5.0.0",
+  "zerorpc": "^0.9.8"
+}
 ```
 
 **Code of hello/server.js**
