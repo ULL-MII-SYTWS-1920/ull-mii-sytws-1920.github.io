@@ -513,6 +513,8 @@ With the request body ready to go, add this code underneath to issue the request
 **web-services/b4/lib/search.js**
 
 ```js
+app.get('/api/search/books/:field/:query', (req, res) => {
+   ...
    const options = {url, json: true, body: esReqBody };
 
     request.get(options, (err, esRes, esResBody) => {
@@ -529,6 +531,7 @@ With the request body ready to go, add this code underneath to issue the request
       res.status(200).json(esResBody.hits.hits.map(({_source}) => _source));
     });
   });
+}
 ```
 
 * In the first error-handling block, we deal with the case where the connection couldn’t be made at all. 
