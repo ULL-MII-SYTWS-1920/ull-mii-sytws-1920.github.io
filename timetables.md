@@ -52,6 +52,34 @@ Sistemas y Tecnología Web: Servidor
 16:00
 2.2
 
+
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th, td {
+  padding: 1px;
+}
+</style>
+<table>
+  <tr>
+    <td>
+    <img alt="/assets/images/enero2020.png" src="/assets/images/enero2020.png">
+    </td>
+    <td>
+    <img src="/assets/images/instrucciones-calendario.png">
+    </td>
+  </tr>
+</table>
+
+
 ### Junio
 
 Sistemas y Tecnología Web: Servidor
@@ -81,11 +109,56 @@ Sistemas y Tecnología Web: Servidor
 
 En una primera publicación de calificaciones aparecerá una lista con los alumnos que tienen las prácticas **APTAS** o **NO APTAS**.
 
-Los exámenes de convocatoria incluyen una serie de apartados especiales para los alumnos que no tienen las prácticas aptas en el momento de la convocatoria.
-
 ## Q&A
 
-## Instrucciones para los exámenes de Convocatoria
+## Evaluación
+
+### Importante
+
+* Cuando creas que tienes el número suficiente de prácticas elaboradas **solicita hora con el profesor** para una presentación presencial de tus prácticas
+* La calificación aparecerá en la  convocatoria siguiente ∫a la presentación presencial de tus prácticas
+
+
+### Fechas de los cierres de actas
+
+  * Viernes 14 de Febrero 2020
+  * Viernes 27 de Marzo 2020
+  * Jueves 25 de Junio 2020
+  * Miércoles 22 de Julio 2020
+  * Jueves 25 de Septiembre 2020
+
+### Exámenes
+
+* [Descripción del calendario](https://drive.google.com/file/d/1EBVRMo7LwDQYdQ4-d7Pbzw84XQeqIa-C/view)
+* Entiendo que las clases se acaban el 17/01/2019
+* Los exámenes aparece del 20/01 al 01/02. Los de la Web ULL no han actualizado el enlace, pero es este:
+  - [Fichero en docs.google con las Fechas de los Exámenes](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
+  - Enero: 
+     - 24/1/2020
+    - 16:00
+    - Aula 2.2
+    - 31/1/2020
+    - 16:00
+    - 2.2
+    - Cierre de actas de Enero: Viernes 7 de Febrero de 2020 
+  - Junio
+    - 3/7/2020
+    - 16:00
+    - Aula 2.2
+    - Cierre de actas: Jueves 25 de Junio 2020
+  - Septiembre
+    - 4/9/2020
+    - 16:00
+    - Aula 2.2
+    - Cierre de actas: Jueves 25 de Septiembre 2020
+
+
+### Lista de Prácticas a Entregar
+
+* Consulta la lista de [prácticas](practicas) y el Trabajo Fin de Asignatura [p12-tfa-user-experience]({{site.base_url}}/tema3-web/practicas/p12-tfa-user-experience/)
+  * Recuerda: Pueden encontrar las soluciones a las prácticas del autor del libro en este repo [ULL-MII-SYTWS-1920/book-solution-nodejs-the-right-way](https://github.com/ULL-MII-SYTWS-1920/book-solution-nodejs-the-right-way). Debería tener permisos de acceso
+
+### Instrucciones para los exámenes de Convocatoria
 
 1. El examen de convocatoria consiste en una prueba escrita
 2. Deberán traer un bolígrafo con carga suficiente. El papel será proporcionado por el profesor. No se permite el uso de dispositivos móviles ni electrónicos, libros, apuntes, etc.  durante el examen
@@ -97,6 +170,3 @@ Los exámenes de convocatoria incluyen una serie de apartados especiales para lo
 8. El empleo por parte del alumnado de medios ilícitos o fraudulentos en la realización de la prueba conducirá a la calificación numérica de 0, debiendo abandonar el lugar de la prueba y quedando sujeto a las consecuencias disciplinarias que se pudieran derivar de su conducta.
 9. Iniciada la prueba no se permitirá al alumnado la entrada al lugar de realización, salvo por razones excepcionales que habrán de ser valoradas por el profesor. El alumnado solo podrá abandonarlo durante la realización de la misma, si está autorizado o acompañado por el profesorado responsable de la vigilancia. En otro caso, el abandono del recinto implicará la finalización del examen, que ha de ser entregado por el estudiante al profesorado.
 10. En el caso de que el alumnado que se presente a la realización de la prueba no conste en el acta en la asignatura, se le permitirá que la lleve a cabo, quedando pendiente su evaluación de la posible subsanación de su situación administrativa.
-
-
-
