@@ -451,6 +451,11 @@ loads `lib/search.js` and immediately invokes the imported function by passing t
 
 ### Using Requests with Express
 
+1. We construct a request body — an object that will be serialized as JSON and sent to Elasticsearch.
+2. In the second part, we’ll fire off the request to Elasticsearch, handle the eventual response, and forward the results to the upstream requester that hit the API:
+
+**web-services/b4/lib/search.js**
+
 ```js
 app.get('/api/search/books/:field/:query', (req, res) => {
   const esReqBody = {
@@ -463,6 +468,10 @@ app.get('/api/search/books/:field/:query', (req, res) => {
   };
   ...
 ```
+
+* The Elasticsearch request body that we’re constructing conforms to Elastic-search’s Request Body Search API. It includes:
+  - a `size` parameter that limits the number of documents that will be sent back, and 
+  - a `query` object describing what kinds of documents we want to find.
 
 * When a JavaScript object literal key is surrounded with brackets, like `[req.params.field]` is here, this is called a **computed property name**
 * The expression inside the brackets is evaluated at runtime, and the result is used as the key.
