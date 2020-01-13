@@ -543,8 +543,7 @@ app.get('/api/search/books/:field/:query', (req, res) => {
   - Or during development, while you’re experimenting to get the right request body for Elasticsearch, you may receive a `400` Bad Request. In any of these cases, we just pass the response more or less straight through to the caller with the same `status` code and `response` body.
 * Finally, if there were no errors, we extract just the `_source` objects (the underlying documents) from the Elasticsearch response, and report these to the caller as JSON. 
   - The `resBody.hits.hits.map(({_source}) => _source)` this is how Elasticsearch response is structured. See the response of ES to the Kibana client for the query of documents matching as author `Twain`:
-
-![](/assets/images/es-response-books-authors-twain.png)
+  - ![](/assets/images/es-response-books-authors-twain.png)
 
 **[web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)**
 
