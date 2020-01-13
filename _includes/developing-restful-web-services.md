@@ -451,6 +451,32 @@ loads `lib/search.js` and immediately invokes the imported function by passing t
 
 ### Using Requests with Express
 
+Let us start by giving support to requests as this one:
+
+```
+[~/local/src/CA/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ sed -ne '/c7-b4-get/,/));/p' ../../../gulpfile.js
+gulp.task("c7-b4-get-shakespeare", shell.task(
+  `curl -s localhost:60702/api/search/books/authors/Shakespeare | jq .[].title`
+));
+gulp.task("c7-b4-get-sawyer", shell.task(
+  `curl -s localhost:60702/api/search/books/title/sawyer | jq .[].title`
+));
+```
+
+```
+[~/local/src/CA/sol-nodejs-the-right-way/developing-restful-web-services-chapter-7/web-services/b4(master)]$ curl -s localhost:60702/api/search/books/authors/Shakespeare | jq .[].title
+"Venus and Adonis"
+"The Second Part of King Henry the Sixth"
+"King Richard the Second"
+"The Tragedy of Romeo and Juliet"
+"A Midsummer Night's Dream"
+"Much Ado about Nothing"
+"The Tragedy of Julius Caesar"
+"As You Like It"
+"The Tragedy of Othello, Moor of Venice"
+"The Tragedy of Macbeth"
+```
+
 1. We construct a request body — an object that will be serialized as JSON and sent to Elasticsearch.
 2. In the second part, we’ll fire off the request to Elasticsearch, handle the eventual response, and forward the results to the upstream requester that hit the API:
 
