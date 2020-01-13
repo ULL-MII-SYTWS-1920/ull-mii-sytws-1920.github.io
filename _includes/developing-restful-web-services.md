@@ -467,6 +467,8 @@ Let us start by giving support to requests as this one:
 "The Tragedy of Macbeth"
 ```
 
+To achieve it:
+
 1. We construct a request body — an object that will be serialized as JSON and sent to Elasticsearch.
 2. In the second part, we’ll fire off the request to Elasticsearch, handle the eventual response, and forward the results to the upstream requester that hit the API:
 
