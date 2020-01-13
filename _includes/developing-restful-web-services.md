@@ -69,204 +69,6 @@ app.listen(60701, ()=> console.log("Listening on 60701"));
 
 ```
 
-**Gulpfile tasks**
-
-```js
-/********************* CHAPTER 7 *********************/
-
-gulp.task("c7-http-server", shell.task(
-    `node developing-restful-web-services-chapter-7/web-services/server.js`
-));
-
-gulp.task("c7-http-client", shell.task(
-    `curl localhost:60700`
-));
-
-gulp.task("c7-express-server", shell.task(
-    `node developing-restful-web-services-chapter-7/web-services/hello/server.js`
-));
-
-gulp.task("c7-express-client-verbose", shell.task(
-    `curl -i localhost:60701/hello/ivan`
-));
-
-gulp.task("c7-express-client", shell.task(
-    `curl -s localhost:60701/hello/ivan | jq`
-));
-
-// Server listening in port 60702
-gulp.task("c7-b4-server", shell.task(
-    `node developing-restful-web-services-chapter-7/web-services/b4/server.js`
-));
-
-gulp.task("c7-b4-server-debug", shell.task(
-    `node --inspect-brk developing-restful-web-services-chapter-7/web-services/b4/server.js`
-));
-
-gulp.task("c7-b4-server-nodemon", shell.task(
-    `nodemon developing-restful-web-services-chapter-7/web-services/b4/server.js`
-));
-
-gulp.task("c7-get-shakespeare", shell.task(
-    `curl -s localhost:60702/api/search/books/authors/Shakespeare | jq .[].title`
-));
-
-gulp.task("c7-get-sawyer", shell.task(
-    `curl -s localhost:60702/api/search/books/title/sawyer | jq .[].title`
-));
-
-gulp.task("c7-suggest", shell.task(
-    //`curl -s localhost:60702/api/suggest/authors/twayn | jq '.[].options[].text'`
-    `curl -s localhost:60702/api/suggest/authors/twayn | jq '.'`
-));
-
-gulp.task("c7-create-b4-index", shell.task(
-    `commanding-databases-chapter-6/esclu/esclu create-index -i b4`
-));
-
-// Communicate directly to es to create the bundle
-gulp.task("c7-es-create-a-bundle", shell.task(
-    `curl -H 'Content-Type: application/json' -X POST localhost:9200/b4/bundle -d '{"name":"nutrition","books":[]}'`
-    // CKPgeWcB2Cwi_q-mx5lC
-));
-
-gulp.task("c7-esclu-list", shell.task(` echo "
-   ./esclu li
-   ./esclu get _search  | jq .
-   ./esclu get '_search' | jq '.hits.hits[]._source' | head -n 20
-   ./esclu get '_search/?q=authors:Twain' | jq '.' | head -n 30
-   ./esclu get '_search?q=authors:Twain&_source=title' | jq '.' | head -n 30
-   ./esclu get '_search?q=authors:Twain&_source=title' | jq '.hits.hits[]._source.title'
-   ./esclu q authors:Twain AND subjects:children
-   ./esclu q | jq '.' | head -n 30
-   ./esclu q -f title,authors | jq '.' | head -n 30
-   ./esclu q -f title,authors | jq '.hits.hits[]._source' | head -n 30
-   ./esclu q authors:Shakespeare AND subjects:Drama -f title | jq '.hits.hits[]._source.title'
-   ./esclu get pg132 --index books --type book | jq '.'
-   ./esclu get pg132 -i books -t book | jq '._source' > ../data/art_of_war.json
-   ./esclu put ../data/art_of_war.json -i books -t book --id pg132 # Warning put
-  "`
-));
-
-// Get the bundle created by the former task
-gulp.task('c7-request-es-bundle-by-id', shell.task(
-    `BUNDLE_ID=CKPgeWcB2Cwi_q-mx5lC && curl -s localhost:9200/b4/bundle/$BUNDLE_ID | jq .`
-));
-
-gulp.task('c7-create-a-bundle', shell.task(
-    `curl -s -X POST localhost:60702/api/bundle/?name=light%20reading | jq .`
-));
-
-gulp.task('c7-bundle-id', shell.task(
-    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && echo $BUNDLE_ID`
-));
-
-gulp.task('c7-bundle-another-id', shell.task(
-    `BUNDLE_ID=WpBEamcBVH6YJQy3-NQF && echo $BUNDLE_ID`
-));
-
-gulp.task('c7-request-bundle-by-id', shell.task(
-    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s localhost:9200/b4/bundle/$BUNDLE_ID | jq .`
-));
-
-gulp.task('c7-change-bundle-name', shell.task(
-    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s -X PUT localhost:60702/api/bundle/$BUNDLE_ID/name/lectura%20ligera | jq .`
-));
-
-const header = '"Content-Type: application/json"';
-let trimnl = (s) => s.replace(/\s+/g, "");
-
-/*
-  We are adding now to the index named accounts
-  a document of type person
-  having the id 1;
-  since the index does not exist yet, Elasticsearch will automatically create it.
-*/
-let request = trimnl(`
-  {
-        "size": 0,
-        "suggest": {
-                "suggestions": {
-                        "text": "twayn",
-                        "term": {
-                                "field": "authors",
-                                "suggest_mode": "always"
-                        }
-                }
-        }
-  }
-`);
-
-/*
-console.log(request);
-curl -X GET "localhost:9200/twitter/_search" -H 'Content-Type: application/json' -d'
-{
-    "query" : {
-        "term" : { "user" : "kimchy" }
-    }
-}
-'
-*/
-
-
-gulp.task('c7-es-suggest', shell.task(
-    `curl -s  -H 'Content-Type: application/json' -d '${request}' -X GET localhost:9200/books/book/_search | jq .suggest.suggestions`
-));
-
-gulp.task('c7-change-bundle-name-foo', shell.task(
-    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s -X PUT localhost:60702/api/bundle/$BUNDLE_ID/name/foo | jq .`
-));
-
-gulp.task('c7-insert-book-into-bundle', shell.task(
-    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s -X PUT localhost:60702/api/bundle/$BUNDLE_ID/book/pg132 | jq .`
-));
-
-gulp.task("c7-b4-version", shell.task(
-    `curl -s localhost:60702/api/version`
-));
-```
-
-```bash
-~/sol-nodejs-the-right-way(master)]$ gulp -T | grep c7
-[12:58:56] ├── c7-http-server
-[12:58:56] ├── c7-http-client
-[12:58:56] ├── c7-express-server
-[12:58:56] ├── c7-express-client-verbose
-[12:58:56] ├── c7-express-client
-[12:58:56] ├── c7-b4-server
-[12:58:56] ├── c7-b4-server-debug
-[12:58:56] ├── c7-b4-server-nodemon
-[12:58:56] ├── c7-get-shakespeare
-[12:58:56] ├── c7-get-sawyer
-[12:58:56] ├── c7-suggest-lipman
-[12:58:56] ├── c7-create-b4-index
-[12:58:56] ├── c7-create-a-bundle
-[12:58:56] ├── c7-bundle-id
-[12:58:56] ├── c7-bundle-another-id
-[12:58:56] ├── c7-request-bundle-by-id
-[12:58:56] ├── c7-change-bundle-name
-[12:58:56] ├── c7-change-bundle-name-foo
-[12:58:56] ├── c7-insert-book-into-bundle
-[12:58:56] └── c7-b4-version
-```
-
-**Starting the Server**:
-
-```
-gulp.task("c7-express-server", shell.task(
-  `node developing-restful-web-services-chapter-7/web-services/hello/server.js`
-));
-```
-
-```
-[~/sol-nodejs-the-right-way(master)]$  gulp c7-express-server
-[12:31:01] Using gulpfile ~/local/src/CA/sol-nodejs-the-right-way/gulpfile.js
-[12:31:01] Starting 'c7-express-server'...
-Listening on 60701
-GET / 404 5.228 ms - 139
-GET /hello/ivan 200 6.316 ms - 16
-GET /hello/ivan 200 0.637 ms - 16
-```
 
 
 **Starting the Client**:
@@ -1505,6 +1307,205 @@ by Domenic Denicola](https://nodejs.org/en/blog/npm/peer-dependencies/)
 + request-promise@4.2.2
 added 4 packages from 2 contributors and audited 2821 packages in 7.391s
 found 0 vulnerabilities
+```
+
+## Gulpfile tasks
+
+```js
+/********************* CHAPTER 7 *********************/
+
+gulp.task("c7-http-server", shell.task(
+    `node developing-restful-web-services-chapter-7/web-services/server.js`
+));
+
+gulp.task("c7-http-client", shell.task(
+    `curl localhost:60700`
+));
+
+gulp.task("c7-express-server", shell.task(
+    `node developing-restful-web-services-chapter-7/web-services/hello/server.js`
+));
+
+gulp.task("c7-express-client-verbose", shell.task(
+    `curl -i localhost:60701/hello/ivan`
+));
+
+gulp.task("c7-express-client", shell.task(
+    `curl -s localhost:60701/hello/ivan | jq`
+));
+
+// Server listening in port 60702
+gulp.task("c7-b4-server", shell.task(
+    `node developing-restful-web-services-chapter-7/web-services/b4/server.js`
+));
+
+gulp.task("c7-b4-server-debug", shell.task(
+    `node --inspect-brk developing-restful-web-services-chapter-7/web-services/b4/server.js`
+));
+
+gulp.task("c7-b4-server-nodemon", shell.task(
+    `nodemon developing-restful-web-services-chapter-7/web-services/b4/server.js`
+));
+
+gulp.task("c7-get-shakespeare", shell.task(
+    `curl -s localhost:60702/api/search/books/authors/Shakespeare | jq .[].title`
+));
+
+gulp.task("c7-get-sawyer", shell.task(
+    `curl -s localhost:60702/api/search/books/title/sawyer | jq .[].title`
+));
+
+gulp.task("c7-suggest", shell.task(
+    //`curl -s localhost:60702/api/suggest/authors/twayn | jq '.[].options[].text'`
+    `curl -s localhost:60702/api/suggest/authors/twayn | jq '.'`
+));
+
+gulp.task("c7-create-b4-index", shell.task(
+    `commanding-databases-chapter-6/esclu/esclu create-index -i b4`
+));
+
+// Communicate directly to es to create the bundle
+gulp.task("c7-es-create-a-bundle", shell.task(
+    `curl -H 'Content-Type: application/json' -X POST localhost:9200/b4/bundle -d '{"name":"nutrition","books":[]}'`
+    // CKPgeWcB2Cwi_q-mx5lC
+));
+
+gulp.task("c7-esclu-list", shell.task(` echo "
+   ./esclu li
+   ./esclu get _search  | jq .
+   ./esclu get '_search' | jq '.hits.hits[]._source' | head -n 20
+   ./esclu get '_search/?q=authors:Twain' | jq '.' | head -n 30
+   ./esclu get '_search?q=authors:Twain&_source=title' | jq '.' | head -n 30
+   ./esclu get '_search?q=authors:Twain&_source=title' | jq '.hits.hits[]._source.title'
+   ./esclu q authors:Twain AND subjects:children
+   ./esclu q | jq '.' | head -n 30
+   ./esclu q -f title,authors | jq '.' | head -n 30
+   ./esclu q -f title,authors | jq '.hits.hits[]._source' | head -n 30
+   ./esclu q authors:Shakespeare AND subjects:Drama -f title | jq '.hits.hits[]._source.title'
+   ./esclu get pg132 --index books --type book | jq '.'
+   ./esclu get pg132 -i books -t book | jq '._source' > ../data/art_of_war.json
+   ./esclu put ../data/art_of_war.json -i books -t book --id pg132 # Warning put
+  "`
+));
+
+// Get the bundle created by the former task
+gulp.task('c7-request-es-bundle-by-id', shell.task(
+    `BUNDLE_ID=CKPgeWcB2Cwi_q-mx5lC && curl -s localhost:9200/b4/bundle/$BUNDLE_ID | jq .`
+));
+
+gulp.task('c7-create-a-bundle', shell.task(
+    `curl -s -X POST localhost:60702/api/bundle/?name=light%20reading | jq .`
+));
+
+gulp.task('c7-bundle-id', shell.task(
+    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && echo $BUNDLE_ID`
+));
+
+gulp.task('c7-bundle-another-id', shell.task(
+    `BUNDLE_ID=WpBEamcBVH6YJQy3-NQF && echo $BUNDLE_ID`
+));
+
+gulp.task('c7-request-bundle-by-id', shell.task(
+    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s localhost:9200/b4/bundle/$BUNDLE_ID | jq .`
+));
+
+gulp.task('c7-change-bundle-name', shell.task(
+    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s -X PUT localhost:60702/api/bundle/$BUNDLE_ID/name/lectura%20ligera | jq .`
+));
+
+const header = '"Content-Type: application/json"';
+let trimnl = (s) => s.replace(/\s+/g, "");
+
+/*
+  We are adding now to the index named accounts
+  a document of type person
+  having the id 1;
+  since the index does not exist yet, Elasticsearch will automatically create it.
+*/
+let request = trimnl(`
+  {
+        "size": 0,
+        "suggest": {
+                "suggestions": {
+                        "text": "twayn",
+                        "term": {
+                                "field": "authors",
+                                "suggest_mode": "always"
+                        }
+                }
+        }
+  }
+`);
+
+/*
+console.log(request);
+curl -X GET "localhost:9200/twitter/_search" -H 'Content-Type: application/json' -d'
+{
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+'
+*/
+
+
+gulp.task('c7-es-suggest', shell.task(
+    `curl -s  -H 'Content-Type: application/json' -d '${request}' -X GET localhost:9200/books/book/_search | jq .suggest.suggestions`
+));
+
+gulp.task('c7-change-bundle-name-foo', shell.task(
+    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s -X PUT localhost:60702/api/bundle/$BUNDLE_ID/name/foo | jq .`
+));
+
+gulp.task('c7-insert-book-into-bundle', shell.task(
+    `BUNDLE_ID=zLkMWmcB1uX03maR3vEQ && curl -s -X PUT localhost:60702/api/bundle/$BUNDLE_ID/book/pg132 | jq .`
+));
+
+gulp.task("c7-b4-version", shell.task(
+    `curl -s localhost:60702/api/version`
+));
+```
+
+```bash
+~/sol-nodejs-the-right-way(master)]$ gulp -T | grep c7
+[12:58:56] ├── c7-http-server
+[12:58:56] ├── c7-http-client
+[12:58:56] ├── c7-express-server
+[12:58:56] ├── c7-express-client-verbose
+[12:58:56] ├── c7-express-client
+[12:58:56] ├── c7-b4-server
+[12:58:56] ├── c7-b4-server-debug
+[12:58:56] ├── c7-b4-server-nodemon
+[12:58:56] ├── c7-get-shakespeare
+[12:58:56] ├── c7-get-sawyer
+[12:58:56] ├── c7-suggest-lipman
+[12:58:56] ├── c7-create-b4-index
+[12:58:56] ├── c7-create-a-bundle
+[12:58:56] ├── c7-bundle-id
+[12:58:56] ├── c7-bundle-another-id
+[12:58:56] ├── c7-request-bundle-by-id
+[12:58:56] ├── c7-change-bundle-name
+[12:58:56] ├── c7-change-bundle-name-foo
+[12:58:56] ├── c7-insert-book-into-bundle
+[12:58:56] └── c7-b4-version
+```
+
+**Starting the Server**:
+
+```
+gulp.task("c7-express-server", shell.task(
+  `node developing-restful-web-services-chapter-7/web-services/hello/server.js`
+));
+```
+
+```
+[~/sol-nodejs-the-right-way(master)]$  gulp c7-express-server
+[12:31:01] Using gulpfile ~/local/src/CA/sol-nodejs-the-right-way/gulpfile.js
+[12:31:01] Starting 'c7-express-server'...
+Listening on 60701
+GET / 404 5.228 ms - 139
+GET /hello/ivan 200 6.316 ms - 16
+GET /hello/ivan 200 0.637 ms - 16
 ```
 
 ## References
