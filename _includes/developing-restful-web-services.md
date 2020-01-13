@@ -261,6 +261,8 @@ database: {"host":"chuchu.deioc.ull.edu.es","port":4000}
   database: { host: '127.0.0.1', port: 4000 } }
 ```
 
+An yet another execution using the `--conf` argument in the command line:
+
 ```
 [~/local/src/javascript/learning/learning-nconf(master)]$ cat config.json
 {
