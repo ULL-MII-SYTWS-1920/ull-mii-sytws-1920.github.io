@@ -440,6 +440,14 @@ Save this file as `lib/search.js`.
 - The `app` parameter will be the Express application object, and 
 - `es` will contain the configuration parameters relevant to Elasticsearch, as provided through `nconf`
 
+The code in the server file `web-services/b4/server.js`:
+
+```js
+require('./lib/search.js')(app, nconf.get('es'));
+```
+
+loads `lib/search.js` and immediately invokes the imported function by passing the `app` object and the Elastic- search configuration.
+
 ### Using Requests with Express
 
 ```js
