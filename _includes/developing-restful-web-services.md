@@ -419,6 +419,26 @@ First we’ll add APIs for searching the `books` index, and then we’ll add API
 1 directory, 6 files
 ```
 
+Next, open visual code and enter the following skeleton code for the search APIs.
+web-services/b4/lib/search.js
+
+```js
+/**
+ * Provides API endpoints for searching the books index.
+ */
+'use strict';
+const request = require('request');
+const rp = require('request-promise');
+
+module.exports = (app, es) => {
+  const url = `http://${es.host}:${es.port}/${es.books_index}/book/_search`;
+};  
+```
+
+Save this file as lib/search.js. At the top, we pull in the Request module, which you may recall from Chapter 6, Commanding Databases, on page 111, where it was central to the development of the esclu program.
+Next, we assign a function to module.exports that takes two parameters. The app parameter will be the Express application object, and es will contain the configuration parameters relevant to Elasticsearch, as provided through nconf.
+Inside the function, all we’re doing currently is establishing the URL that will be key to performing searches against the books index. Shortly we’ll be adding additional code to this file to implement the APIs.
+
 ### Using Requests with Express
 
 ```js
