@@ -241,6 +241,8 @@ database: {"host":"127.0.0.1","port":4000}
   database: { host: '127.0.0.1', port: 4000 } }
 ```
 
+Another execution:
+
 ```
 [~/local/src/javascript/learning/learning-nconf(master)]$ cat config.json
 {
