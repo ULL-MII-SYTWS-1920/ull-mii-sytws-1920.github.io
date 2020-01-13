@@ -403,6 +403,22 @@ gulp.task("c7-b4-version", shell.task(
 
 ## Adding Search APIs
 
+First we’ll add APIs for searching the `books` index, and then we’ll add APIs for creating and manipulating book bundles.
+
+```
+[~/.../web-services/b4(master)]$ tree
+.
+├── config.json
+├── esclu -> ../../../commanding-databases-chapter-6/esclu/esclu
+├── lib
+│   ├── bundle.js
+│   └── search.js
+├── package-lock.json
+└── server.js
+
+1 directory, 6 files
+```
+
 ### Using Requests with Express
 
 ```js
