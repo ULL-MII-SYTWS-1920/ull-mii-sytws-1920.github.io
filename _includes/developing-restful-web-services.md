@@ -210,6 +210,8 @@ nconf.save(function (err) {
 
 ```
 
+Another example:
+
 ```js
   nconf.argv()     // Loads process.argv using yargs. If options is supplied it is passed along to yargs.
    .env('__')      // Loads process.env into the hierarchy
