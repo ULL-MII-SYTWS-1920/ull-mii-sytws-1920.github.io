@@ -136,13 +136,17 @@ yellow open   accounts 9TNc0k0LQ1e4y97yFX8_vg   5   1          2            0   
 yellow open   books    wP3DgQPZQZq0qBtH_dd0LA   5   1      58159            3     23.2mb         23.2mb
 ```
 
-Our REST service is going to use ES as a service:
+Our REST service is going to use ES as a service. This is the way it will work:
 
 ```
 
 Client ---- request ---> Our b4 REST service ---> Elastic Search Engine
        <----response----           <--- response ---
 ```    
+
+For example if the client request for info about a book the b4 REST web service will
+prepare the apropriate request for Elasticsearch, get the answer from ES and after some 
+filtering pass it back to the client
 
 ## How **nconf** manages configuration settings
 
