@@ -533,7 +533,12 @@ With the request body ready to go, add this code underneath to issue the request
   - If the `err` object is not `null`, this means that the connection to Elasticsearch failed before a response could be retrieved. 
   - Typically this would be because the Elasticsearch cluster is unreachable — maybe it’s down, or the hostname has been misconfigured. 
   - The correct HTTP code to send back to the caller is 502 Bad Gateway.
-
+* In the second error-handling block, we’ve received a response from Elastic- search, but it came with some HTTP status code other than `200 OK` 
+  - This could be for any of a variety of reasons, such as a `404` Not Found if, say, the `books` index has not been created
+  - Or during development, while you’re experimenting to get the right request body for Elasticsearch, you may receive a `400` Bad Request. In any of these cases, we just pass the response more or less straight through to the caller with the same `status` code and `response` body.
+* Finally, if there were no errors, we extract just the `_source` objects (the underlying documents) from the Elasticsearch response, and report these to the caller as JSON. 
+  - The `resBody.hits.hits.map(({_source}) => _source)` this is how Elasticsearch responseis structured.
+  
 **[web-services/b4/lib/search.js](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/developing-restful-web-services-chapter-7/web-services/b4/lib/search.js)**
 
 ```js
