@@ -435,9 +435,10 @@ module.exports = (app, es) => {
 };  
 ```
 
-Save this file as lib/search.js. At the top, we pull in the Request module, which you may recall from Chapter 6, Commanding Databases, on page 111, where it was central to the development of the esclu program.
-Next, we assign a function to module.exports that takes two parameters. The app parameter will be the Express application object, and es will contain the configuration parameters relevant to Elasticsearch, as provided through nconf.
-Inside the function, all we’re doing currently is establishing the URL that will be key to performing searches against the books index. Shortly we’ll be adding additional code to this file to implement the APIs.
+Save this file as `lib/search.js`. 
+
+- The `app` parameter will be the Express application object, and 
+- `es` will contain the configuration parameters relevant to Elasticsearch, as provided through `nconf`
 
 ### Using Requests with Express
 
