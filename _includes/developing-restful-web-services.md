@@ -210,7 +210,8 @@ nconf.save(function (err) {
 
 ```
 
-Another example:
+The double underscore string passed to `env` means that two underscores should be used to denote object hierarchy when reading from environment variables. This is because many shell programs do not allow colon characters in variable names.
+
 
 ```js
   nconf.argv()     // Loads process.argv using yargs. If options is supplied it is passed along to yargs.
@@ -218,7 +219,6 @@ Another example:
    .file({ file: './config.json' });
 ```
 
-The double underscore string passed to `env` means that two underscores should be used to denote object hierarchy when reading from environment variables. This is because many shell programs do not allow colon characters in variable names.
 
 **Ejecución:**
 
