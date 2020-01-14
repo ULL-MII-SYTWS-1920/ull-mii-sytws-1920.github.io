@@ -139,18 +139,17 @@ yellow open   books    wP3DgQPZQZq0qBtH_dd0LA   5   1      58159            3   
 Our REST service is going to use ES as a service. This is the way it will work:
 
 ```
-
 +-------------------+                     +------------------+                      +------------------+
 |                   |                     |                  |                      |                  |
 |                   |                     |                  |                      |                  |
-|                   |   +  request        |       OUR        |   +  request         |                  |   +
-|      CLIENT       |   +-------------->  |        b4        |   +-------------->   |    ELASTICSEARCH |   +
+|                   |      request        |       OUR        |      request         |                  |
+|      CLIENT       |   +-------------->  |        b4        |   +-------------->   |    ELASTICSEARCH |
 |                   |                     |       REST       |                      |    ENGINE        |
-|                   |   <---------------+ |   web service    |   <---------------+  |                  |   <
+|                   |   <---------------+ |   web service    |   <---------------+  |                  |
 |                   |      response       |                  |      response        |                  |
 |                   |                     |                  |                      |                  |
 +-------------------+                     +------------------+                      +------------------+
-```    
+```
 
 For example if the client request for info about a book, the b4 REST web service will
 prepare the apropriate request for Elasticsearch, get the answer from ES and after some
