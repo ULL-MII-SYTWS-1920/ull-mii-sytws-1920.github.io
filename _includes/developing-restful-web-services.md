@@ -140,8 +140,17 @@ Our REST service is going to use ES as a service. This is the way it will work:
 
 ```
 
-Client ---- request ---> Our b4 REST service ---> Elastic Search Engine
-       <----response----           <--- response ---
++-------------------+                     +------------------+                      +------------------+
+|                   |                     |                  |                      |                  |
+|                   |                     |                  |                      |                  |
+|                   |   +  request        |       OUR        |   +  request         |                  |   +
+|      CLIENT       |   +-------------->  |        b4        |   +-------------->   |    ELASTICSEARCH |   +
+|                   |                     |       REST       |                      |    ENGINE        |
+|                   |   <---------------+ |   web service    |   <----------------+ |                  |   <
+|                   |      response       |                  |      response        |                  |
+|                   |                     |                  |                      |                  |
++-------------------+                     |                  |                      |                  |
+                                          +------------------+                      +------------------+
 ```    
 
 For example if the client request for info about a book, the b4 REST web service will
