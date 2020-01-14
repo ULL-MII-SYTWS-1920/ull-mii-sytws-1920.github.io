@@ -1,4 +1,10 @@
-# Survive.js Webpack book
+# Webpack
+
+## Webpack: Getting Started
+
+* [Getting Started](https://webpack.js.org/guides/getting-started/)
+
+## Survive.js Webpack book
 
 *   [Foreword](https://survivejs.com/webpack/foreword)
 *   [Preface](https://survivejs.com/webpack/preface/)
@@ -55,7 +61,10 @@
 *   [Glossary](https://survivejs.com/webpack/appendices/glossary/)
 
 
-
 ## References
 
 {% include references-webpack.md %}
+
+# Parcel
+
+* [Parceljs: Getting Started](https://parceljs.org/getting_started.html)
