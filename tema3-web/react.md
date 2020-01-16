@@ -57,6 +57,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 ### React Tutorial How to build React App in few minutes
 
 * [React Tutorial How to build React App in few minutes](https://youtu.be/SPM4xyYd9MI) YouTube
+* [GitHub Repo](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app)
 
 ### React in Visual Studio Code
 
