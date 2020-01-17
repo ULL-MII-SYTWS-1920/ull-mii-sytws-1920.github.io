@@ -54,19 +54,18 @@ This page describes a few popular React toolchains (like create-react-app, [gats
   * [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) article
 * [sql.js](https://github.com/kripken/sql.js)
   
-### React Tutorial How to build React App in few minutes
-
-* [React Tutorial How to build React App in few minutes](https://youtu.be/SPM4xyYd9MI) YouTube
-* [GitHub Repo](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app) (Using react-bootstrap)
-
-### React-Boostrap
-
+### React and Boostrap. React-Boostrap
 
 * [React Bootstrap](https://react-bootstrap.github.io/)
 * [Getting Started](https://react-bootstrap.github.io/getting-started/introduction)
-* [ButtonGroup](https://react-bootstrap.github.io/components/button-group/)
-* [Buttons](https://react-bootstrap.github.io/components/buttons/)
-* [GitHub Repo](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app) for *How to build React App in few minutes* using react-bootstrap
+
+#### React Tutorial How to build React App in few minutes
+
+* [React Tutorial How to build React App in few minutes](https://youtu.be/SPM4xyYd9MI) YouTube
+  * [GitHub Repo](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app) for *How to build React App in few minutes* using react-bootstrap
+  * [ButtonGroup](https://react-bootstrap.github.io/components/button-group/)
+  * [Buttons](https://react-bootstrap.github.io/components/buttons/)
+
 
 ### React in Visual Studio Code
 
