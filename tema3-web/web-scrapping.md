@@ -12,9 +12,12 @@ y resuelva los problemas en la secciónes
 
 * [Práctica Transforming Data and Testing Continuously (p9-t3-transfoming-data)](practicas/p9-t3-transforming-data/)
 
+### Puppeteer
+
+* [Web Scraping made simple with JAVASCRIPT tutorial](https://youtu.be/TzZ3YOUhCxo) YouTube video. Using puppeteer the author scrapes the information about a book in amazon. Pretty nice basic introduction to puppeteer
+
 ### Referencias
 
-* [Web Scraping made simple with JAVASCRIPT tutorial](https://youtu.be/TzZ3YOUhCxo) YouTube video. Using puppeteer the author scrapes the information about a book in amazon. Pretty nice introduction to puppeteer
 * [Cheerio. Introducción al Web Scraping con Nodejs, Javascript, y Async/await](https://youtu.be/dJpSTPUVKQU) YouTube Video de Fazt Code
 * How to Perform Web-Scraping using Node.js- Part 1
   * [How to Perform Web-Scraping using Node.js- Part 1](https://blog.bitsrc.io/https-blog-bitsrc-io-how-to-perform-web-scraping-using-node-js-5a96203cb7cb)
