@@ -63,6 +63,25 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 
 * [React Tutorial How to build React App in few minutes](https://youtu.be/SPM4xyYd9MI) YouTube
   * [GitHub Repo](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app) for *How to build React App in few minutes* using react-bootstrap
+      - [React Tutorial: How to build React App in few minutes](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#react-tutorial-how-to-build-react-app-in-few-minutes)
+        - [Index](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#index)
+        - [References](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#references)
+        - [Installing create-react-app](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#installing-create-react-app)
+        - [Creating API Call](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#creating-api-call)
+          - [Trying the fake API](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#trying-the-fake-api)
+          - [Adding `componentDidMount`](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#adding-componentdidmount)
+        - [Styling with Boostrap](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-boostrap)
+        - [Adding Pagination](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#adding-pagination)
+        - [Factorizing Components](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#factorizing-components)
+        - [Styling with react-boostrap](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-react-boostrap)
+          - [React-Bootstrap References](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#react-bootstrap-references)
+        - [Rewriting the App using Only Functional Components](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#rewriting-the-app-using-only-functional-components)
+          - [useState](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#usestate)
+          - [useEffect](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#useeffect)
+            - [Cleaning up an effect](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#cleaning-up-an-effect)
+            - [Conditionally firing an effect](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#conditionally-firing-an-effect)
+            - [Mount and Unmount Effects](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#mount-and-unmount-effects)
+          - [The result](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#the-result)
   * [ButtonGroup](https://react-bootstrap.github.io/components/button-group/)
   * [Buttons](https://react-bootstrap.github.io/components/buttons/)
 
