@@ -20,7 +20,7 @@ In a similar way,
 
 are also different origins. The **path** or **query** parameters  are ignored when considering the origin.
 
-## The reason for Cross-Origin Resource Sharing 
+## The reason for The Same-Origin Policy
 
 You, like many websites, may use cookies to keep track of authentication or session info. Those cookies are bounded to a certain domain when they are created. On every HTTP call to that domain, **the browser will attach the cookies that were created for that domain**. This is on _every_ HTTP call, which could be for static images, HTML pages, or even AJAX calls.
 
@@ -32,6 +32,15 @@ This means when you log into <em>https://examplebank.com</em>, a cookie is store
 This is due to the browser behavior of automatically attaching any cookies bounded to <em>https://examplebank.com</em> for any HTTP calls to that domain, including AJAX calls from <em>https://evilunicorns.com</em> to <em>https://examplebank.com</em>. 
 
 By restricting HTTP calls to only ones to the same origin (i.e. the browser tab’s domain), same-origin policy closes some hacker backdoors such as around <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank" rel="noopener noreferrer">Cross-Site Request Forgery (CSRF)</a> (Although not all. Mechanisms like CSRF tokens are still necessary).
+
+## The Reasons for Cross-Origin Resource Sharing
+
+There are legitimate reasons for a website to make cross-origin HTTP requests:
+
+*  Maybe a single-page app at <em>https://mydomain.com</em> needs to make AJAX calls to <em>https://api.mydomain.com</em>; 
+*  or maybe <em>https://mydomain.com</em> incorporates some 3rd party fonts or analytics providers like Google Analytics or MixPanel.
+*  
+<em>Cross-Origin Resource Sharing</em> (CORS) enables these cross-domain requests.
 
 ## Ejemplo
 
