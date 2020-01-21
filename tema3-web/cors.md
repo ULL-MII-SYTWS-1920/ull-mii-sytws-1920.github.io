@@ -56,8 +56,16 @@ There are legitimate reasons for a website to make cross-origin HTTP requests:
   ```
 
 3. The server checks the `Origin` request header. If the Origin value is allowed, it sets the `Access-Control-Allow-Origin` to the value in the request header `Origin`.
-
-
+   
+  ```http
+     HTTP/1.1 200 OK  
+     Access-Control-Allow-Origin: https://www.mydomain.com  
+     Content-Type: application/json
+     [Rest of response...]  
+  ```
+4. When the browser receives the response, the browser checks the `Access-Control-Allow-Origin` header to see if it matches the origin of the tab. If not, the response is blocked. The check passes such as in this example if either the `Access-Control-Allow-Origin` matches the single origin exactly or contains the wildcard **\*** operator.
+   
+   
 ## Ejemplo
 
 Para entender mejor esta sección 
