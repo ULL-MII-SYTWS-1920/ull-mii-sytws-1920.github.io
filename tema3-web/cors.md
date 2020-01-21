@@ -44,6 +44,8 @@ There are legitimate reasons for a website to make cross-origin HTTP requests:
 
 ## How CORS works
 
+This is how a **simple CORS request** works:
+
 1.  A browser tab open to `https://www.mydomain.com` initiates AJAX request `GET https://api.mydomain.com/widgets`
     
 2.  Along with adding headers like `Host`, the browser automatically adds the `Origin` Request Header for cross-origin requests:
@@ -67,14 +69,13 @@ There are legitimate reasons for a website to make cross-origin HTTP requests:
    * A server that responds `Access-Control-Allow-Origin: *` allows all origins **which can be a large security risk**.
    * Only use **\*** if your application absolutely requires it such as creating an open/public API.
    
-
 ## Ejemplo
 
 Para entender mejor esta sección 
 **Véase la rama/branch: `10-crguezl-master-cors-01`** del repositorio 
 [ULL-MII-SYTWS-1920/food-lookup-demo](https://github.com/ULL-MII-SYTWS-1920/food-lookup-demo/tree/10-crguezl-master-cors-01)
 
-Si en `Client-js`cambiamos el `fetch` para solicitar al server en 3001:
+Si en `Client-js` cambiamos el `fetch` para solicitar al server en 3001:
 
 
 ```js
@@ -91,11 +92,16 @@ function search(query, cb) {
 
 Obtenemos una respuesta:
 
-```
-Access to fetch at 'http://localhost:3001/api/food?q=r' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 
-localhost/:1 Uncaught (in promise) TypeError: Failed to fetch
-```
+Access to fetch at 'http://localhost:3001/api/food?q=r' from origin 'http://localhost:3000' has been blocked by CORS policy:
+
+No `Access-Control-Allow-Origin` header is present on the requested resource. 
+
+If an **opaque response** serves your needs, set the request's mode to `no-cors` to fetch the resource with CORS disabled.
+
+`localhost/:1` Uncaught (in promise) TypeError: Failed to fetch
+
+
 ## The CORS npm module
 
 If you want to avoid the blocking, the server that hosts the resource needs to have CORS enabled. 
