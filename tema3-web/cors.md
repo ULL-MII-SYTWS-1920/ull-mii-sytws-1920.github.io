@@ -22,7 +22,7 @@ are also different origins. The **path** or **query** parameters  are ignored wh
 
 ## The reason for Cross-Origin Resource Sharing 
 
-You, like many websites, may use cookies to keep track of authentication or session info. Those cookies are bounded to a certain domain when they are created. On every HTTP call to that domain, the browser will attach the cookies that were created for that domain. This is on _every_ HTTP call, which could be for static images, HTML pages, or even AJAX calls.
+You, like many websites, may use cookies to keep track of authentication or session info. Those cookies are bounded to a certain domain when they are created. On every HTTP call to that domain, **the browser will attach the cookies that were created for that domain**. This is on _every_ HTTP call, which could be for static images, HTML pages, or even AJAX calls.
 
 This means when you log into <em>https://examplebank.com</em>, a cookie is stored for <em>https://examplebank.com</em>. If that bank is a single-page React app, they may have created a REST API at <em>https://examplebank.com/api</em> for the SPA to communicate via AJAX.
 
