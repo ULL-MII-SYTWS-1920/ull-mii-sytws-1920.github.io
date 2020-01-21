@@ -79,7 +79,6 @@ Si en `Client-js` cambiamos el `fetch` para solicitar al server en 3001:
 
 
 ```js
-* eslint-disable no-undef */
 function search(query, cb) {
   return fetch(`http://localhost:3001/api/food?q=${query}`, {
     accept: "application/json"
@@ -91,7 +90,6 @@ function search(query, cb) {
 ```
 
 Obtenemos una respuesta:
-
 
 Access to fetch at 'http://localhost:3001/api/food?q=r' from origin 'http://localhost:3000' has been blocked by CORS policy:
 
