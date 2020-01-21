@@ -49,6 +49,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
 * [How to get "create-react-app" to work with your API](https://www.newline.co/fullstack-react/articles/using-create-react-app-with-a-server/) by Anthony Accomazzo. A simple food nutrition lookup table. The data driving the app is supplied by the [USDA's National Nutrient Database](https://www.ars.usda.gov/northeast-area/beltsville-md/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/).
 * [npm concurrently package](https://github.com/kimmobrunfeldt/concurrently#readme)
   - > **Why?**: I like [task automation with npm](http://substack.net/task_automation_with_npm_run) but the usual way to run multiple commands concurrently is `npm run watch-js & npm run watch-css`. That's fine but it's hard to keep on track of different outputs. Also if one process fails, others still keep running and you won't even notice the difference. Another option would be to just run all commands in separate terminals. I got tired of opening terminals and made **concurrently**.
+  - [Blog: 4 Solutions To Run Multiple Node.js or NPM Commands Simultaneously by Paige Niedringhaus](https://itnext.io/4-solutions-to-run-multiple-node-js-or-npm-commands-simultaneously-9edaa6215a93)
 * Section [Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development/) in the Create React App docs
 * [Deploying in Heroku](https://github.com/fullstackreact/food-lookup-demo#deploying)
   * [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) article
@@ -73,7 +74,7 @@ This page describes a few popular React toolchains (like create-react-app, [gats
         - [Styling with Boostrap](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-boostrap)
         - [Adding Pagination](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#adding-pagination)
         - [Factorizing Components](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#factorizing-components)
-        - [Styling with react-boostrap](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-react-boostrap)
+        - [Styling with react-bootstrap](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-react-boostrap)
           - [React-Bootstrap References](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#react-bootstrap-references)
         - [Rewriting the App using Only Functional Components](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#rewriting-the-app-using-only-functional-components)
           - [useState](https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#usestate)

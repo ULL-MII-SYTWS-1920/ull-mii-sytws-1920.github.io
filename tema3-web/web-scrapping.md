@@ -17,7 +17,7 @@ y resuelva los problemas en la secciónes
 * [Web Scraping made simple with JAVASCRIPT tutorial](https://youtu.be/TzZ3YOUhCxo) YouTube video. Using puppeteer the author scrapes the information about a book in amazon. Pretty nice basic introduction to puppeteer
 * [Web Scraping with Puppeteer in 10 minutes - IMDB Movie Scraping NodeJs](https://youtu.be/4q9CNtwdawA)
 * [Web Scraping using Node.js and Puppeteer. A short introductory tutorial to Web Scraping](https://flaviocopes.com/web-scraping/)
-* [Web Scraping with Puppeteer… And some more useful JavaScript nuances](https://blog.bitsrc.io/web-scraping-with-puppeteer-e73e5fee7474)
+* [Web Scraping with Puppeteer… And some more useful JavaScript nuances](https://blog.bitsrc.io/web-scraping-with-puppeteer-e73e5fee7474) Blog
 
 
 ### Referencias
