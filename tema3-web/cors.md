@@ -89,7 +89,7 @@ function search(query, cb) {
 }
 ```
 
-Obtenemos una respuesta:
+Obtenemos una respuestasimilar a esta:
 
 > Access to fetch at `http://localhost:3001/api/food?q=r` from origin `http://localhost:3000` has been blocked **by CORS policy**:
 
