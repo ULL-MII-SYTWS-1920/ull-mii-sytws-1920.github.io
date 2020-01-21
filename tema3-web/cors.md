@@ -42,6 +42,18 @@ There are legitimate reasons for a website to make cross-origin HTTP requests:
 *  
 <em>Cross-Origin Resource Sharing</em> (CORS) enables these cross-domain requests.
 
+## How CORS works
+
+*   A browser tab open to `https://www.mydomain.com` initiates AJAX request `GET https://api.mydomain.com/widgets`
+    
+*   Along with adding headers like `Host`, the browser automatically adds the `Origin` Request Header for cross-origin requests:
+
+  ```http
+  GET /widgets/ HTTP/1.1
+  Host: api.mydomain.com
+  Origin: https://www.mydomain.com
+  [Rest of request...]
+  ```
 ## Ejemplo
 
 Para entender mejor esta sección 
