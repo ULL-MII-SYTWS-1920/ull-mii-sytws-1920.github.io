@@ -158,6 +158,7 @@ Possible values:
 
 ## CORS references
 
+* [Authoritative guide to CORS (Cross-Origin Resource Sharing) for REST APIs](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs)
 * [Using CORS in Express](https://medium.com/@alexishevia/using-cors-in-express-cac7e29b005b) by Alexis Hevia
   * [Repo with examples of use](https://github.com/alexishevia/blogExamples/tree/cors)
 * [fetch](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)
