@@ -277,3 +277,5 @@ app.listen(app.get("port"), () => {
   - [Referrer Policies](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies)
   - [W3C](https://www.w3.org/TR/referrer-policy/)
 * [cors is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.](https://expressjs.com/en/resources/middleware/cors.html)
+* [Multiple Ways of API Integration in your JAMStack](https://www.raymondcamden.com/2019/07/25/multiple-ways-of-api-integration-in-your-jamstack)
+  * Associated GitHub repo [https://github.com/cfjedimaster/jamstack_api_approaches](https://github.com/cfjedimaster/jamstack_api_approaches)
