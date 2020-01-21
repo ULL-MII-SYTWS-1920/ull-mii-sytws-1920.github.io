@@ -91,13 +91,13 @@ function search(query, cb) {
 
 Obtenemos una respuesta:
 
-Access to fetch at `http://localhost:3001/api/food?q=r` from origin `http://localhost:3000` has been blocked **by CORS policy**:
+> Access to fetch at `http://localhost:3001/api/food?q=r` from origin `http://localhost:3000` has been blocked **by CORS policy**:
 
-No `Access-Control-Allow-Origin` header is present on the requested resource. 
+> No `Access-Control-Allow-Origin` header is present on the requested resource. 
 
-If an **opaque response** serves your needs, set the request's mode to `no-cors` to fetch the resource with CORS disabled.
+> If an **opaque response** serves your needs, set the request's mode to `no-cors` to fetch the resource with CORS disabled.
 
-`localhost/:1` Uncaught (in promise) TypeError: Failed to fetch
+> `localhost/:1` Uncaught (in promise) TypeError: Failed to fetch
 
 
 ## The CORS npm module
