@@ -69,36 +69,6 @@ This is how a **simple CORS request** works:
    * A server that responds `Access-Control-Allow-Origin: *` allows all origins **which can be a large security risk**.
    * Only use **\*** if your application absolutely requires it such as creating an open/public API.
    
-## Ejemplo
-
-Para entender mejor esta sección 
-**Véase la rama/branch: `10-crguezl-master-cors-01`** del repositorio 
-[ULL-MII-SYTWS-1920/food-lookup-demo](https://github.com/ULL-MII-SYTWS-1920/food-lookup-demo/tree/10-crguezl-master-cors-01)
-
-Si en `Client-js` cambiamos el `fetch` para solicitar al server en 3001:
-
-
-```js
-function search(query, cb) {
-  return fetch(`http://localhost:3001/api/food?q=${query}`, {
-    accept: "application/json"
-  })
-    .then(checkStatus)
-    .then(parseJSON)
-    .then(cb);
-}
-```
-
-Obtenemos una respuestasimilar a esta:
-
-> Access to fetch at `http://localhost:3001/api/food?q=r` from origin `http://localhost:3000` has been blocked **by CORS policy**:
-
-> No `Access-Control-Allow-Origin` header is present on the requested resource. 
-
-> If an **opaque response** serves your needs, set the request's mode to `no-cors` to fetch the resource with CORS disabled.
-
-> `localhost/:1` Uncaught (in promise) TypeError: Failed to fetch
-
 
 ## The CORS npm module
 
@@ -185,6 +155,118 @@ Possible values:
 *   `RegExp` - set `origin` to a regular expression pattern which will be used to test the request origin. If it’s a match, the request origin will be reflected. For example the pattern `/example\.com$/` will reflect any request that is coming from an origin ending with “example.com”.
 *   `Array` - set `origin` to an array of valid origins. Each origin can be a `String` or a `RegExp`. For example `["http://example1.com", /\.example2\.com$/]` will accept any request from “http://example1.com” or from a subdomain of “example2.com”.
 *   `Function` - set `origin` to a function implementing some custom logic. The function takes the request origin as the first parameter and a callback (which expects the signature `err [object], allow [bool]`) as the second.
+
+## Ejemplo: server en ULL-MII-SYTWS-1920/food-lookup-demo
+
+Para entender mejor esta sección 
+**Véase la rama/branch: `10-crguezl-master-cors-01`** del repositorio 
+[ULL-MII-SYTWS-1920/food-lookup-demo](https://github.com/ULL-MII-SYTWS-1920/food-lookup-demo/tree/10-crguezl-master-cors-01)
+
+Si en `Client-js` cambiamos el `fetch` para solicitar al server en 3001 que es donde escucha nuestro servidor:
+
+
+```js
+function search(query, cb) {
+  return fetch(`http://localhost:3001/api/food?q=${query}`, {
+    accept: "application/json"
+  })
+    .then(checkStatus)
+    .then(parseJSON)
+    .then(cb);
+}
+```
+
+Obtenemos una respuesta similar a esta:
+
+> Access to fetch at `http://localhost:3001/api/food?q=r` from origin `http://localhost:3000` has been blocked **by CORS policy**:
+
+> No `Access-Control-Allow-Origin` header is present on the requested resource. 
+
+> If an **opaque response** serves your needs, set the request's mode to `no-cors` to fetch the resource with CORS disabled.
+
+> `localhost/:1` Uncaught (in promise) TypeError: Failed to fetch
+
+Usando el middleware `cors`arreglamos el problema:
+
+```js
+const express = require("express");
+const fs = require("fs");
+const sqlite = require("sql.js");
+const cors = require("cors");
+const filebuffer = fs.readFileSync("db/usda-nnd.sqlite3");
+
+const db = new sqlite.Database(filebuffer);
+
+const app = express();
+
+app.set("port", process.env.PORT || 3001);
+
+// Express only serves static assets in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+const COLUMNS = [
+  "carbohydrate_g",
+  "protein_g",
+  "fa_sat_g",
+  "fa_mono_g",
+  "fa_poly_g",
+  "kcal",
+  "description"
+];
+
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
+app.get("/api/food", cors(corsOptions), (req, res) => {
+  const param = req.query.q;
+
+  if (!param) {
+    res.json({
+      error: "Missing required parameter `q`"
+    });
+    return;
+  }
+
+  // WARNING: Not for production use! The following statement
+  // is not protected against SQL injections.
+  const r = db.exec(
+    `
+    select ${COLUMNS.join(", ")} from entries
+    where description like '%${param}%'
+    limit 100
+  `
+  );
+
+  if (r[0]) {
+    res.json(
+      r[0].values.map(entry => {
+        const e = {};
+        COLUMNS.forEach((c, idx) => {
+          // combine fat columns
+          if (c.match(/^fa_/)) {
+            e.fat_g = e.fat_g || 0.0;
+            e.fat_g = (parseFloat(e.fat_g, 10) +
+              parseFloat(entry[idx], 10)).toFixed(2);
+          } else {
+            e[c] = entry[idx];
+          }
+        });
+        return e;
+      })
+    );
+  } else {
+    res.json([]);
+  }
+});
+
+app.listen(app.get("port"), () => {
+  console.log(`Find the server at: http://localhost:${app.get("port")}/`); // eslint-disable-line no-console
+});
+```
 
 ## CORS references
 
