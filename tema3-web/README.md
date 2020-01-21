@@ -23,6 +23,7 @@
 
 ## [Web Workers](web-workers)
 
+## [CORS](cors)
 ## [REST](rest.md)
 
 ## [Authentication](authentication.md)
