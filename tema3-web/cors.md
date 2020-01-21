@@ -8,7 +8,7 @@ CORS is a relaxation of the [same-origin policy](https://en.wikipedia.org/wiki/S
 ## Origin
 
 <em>Origin</em> includes the combination of <strong>protocol, domain,</strong> and <strong>port.</strong> This means <em>https://</em><strong><em>api</em></strong><em>.mydomain.com</em> and <em>https://mydomain.com</em> are actually different origins and thus impacted by same-origin policy.
-In a similar way, <em>http://localhost:</em><strong><em>9000</em></strong> and <em>http://localhost:</em><strong><em>8080</em></strong> are also different origins. The **path** or **query** parameters  are ignored when considering the origin."
+In a similar way, <em>http://localhost:</em><strong><em>9000</em></strong> and <em>http://localhost:</em><strong><em>8080</em></strong> are also different origins. The **path** or **query** parameters  are ignored when considering the origin.
 
 ## The reason for Cross-Origin Resource Sharing 
 
