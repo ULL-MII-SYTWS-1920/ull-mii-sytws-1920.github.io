@@ -29,7 +29,9 @@ This means when you log into <em>https://examplebank.com</em>, a cookie is store
 1. Let’s say you browse to a malicious website  <em>https://evilunicorns.com</em> while logged into <em>https://examplebank.com</em>. 
 2. Without same-origin policy, that hacker website could make **authenticated** malicious AJAX calls to <em>https://examplebank.com/api</em> to <code class="highlighter-rouge">POST /withdraw</code> even though the hacker website doesn’t have direct access to the bank’s cookies.
 
-This is due to the browser behavior of automatically attaching any cookies bounded to <em>https://examplebank.com</em> for any HTTP calls to that domain, including AJAX calls from <em>https://evilunicorns.com</em> to <em>https://examplebank.com</em>. By restricting HTTP calls to only ones to the same origin (i.e. the browser tab’s domain), same-origin policy closes some hacker backdoors such as around <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank" rel="noopener noreferrer">Cross-Site Request Forgery (CSRF)</a> (Although not all. Mechanisms like CSRF tokens are still necessary).
+This is due to the browser behavior of automatically attaching any cookies bounded to <em>https://examplebank.com</em> for any HTTP calls to that domain, including AJAX calls from <em>https://evilunicorns.com</em> to <em>https://examplebank.com</em>. 
+
+By restricting HTTP calls to only ones to the same origin (i.e. the browser tab’s domain), same-origin policy closes some hacker backdoors such as around <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank" rel="noopener noreferrer">Cross-Site Request Forgery (CSRF)</a> (Although not all. Mechanisms like CSRF tokens are still necessary).
 
 ## Ejemplo
 
