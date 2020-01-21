@@ -64,7 +64,7 @@ There are legitimate reasons for a website to make cross-origin HTTP requests:
      [Rest of response...]  
   ```
 4. When the browser receives the response, the browser checks the `Access-Control-Allow-Origin` header to see if it matches the origin of the tab. If not, the response is blocked. The check passes such as in this example if either the `Access-Control-Allow-Origin` matches the single origin exactly or contains the wildcard **\*** operator.
-   * A server that responds `Access-Control-Allow-Origin: \*` allows all origins which can be a large security risk.
+   * A server that responds `Access-Control-Allow-Origin: *` allows all origins which can be a large security risk.
    * Only use **\*** if your application absolutely requires it such as creating an open/public API.
    
 
