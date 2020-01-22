@@ -24,6 +24,7 @@
 ## [Web Workers](web-workers)
 
 ## [CORS](cors)
+
 ## [REST](rest.md)
 
 ## [Authentication](authentication.md)
@@ -50,6 +51,8 @@
 ## [GraphQL](graphql)
 
 ## [The JAM Stack](jam)
+
+## [Serverless](serverless)
 
 ## [Desktop Apps using Web Technologies](electron)
 
