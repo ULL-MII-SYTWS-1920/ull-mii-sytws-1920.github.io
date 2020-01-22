@@ -66,7 +66,7 @@ const app = new Vue({
 
 The second option is pretty similar to the first, with the main difference being that your code hits an API running on _your_ server. The *server* could be just that, an app server running somewhere in house, but typically will be a [serverless](serverless) platform instead. Basically, instead of your code making an HTTP request to some remote domain, it requests your code which then itself requests data from the remote domain.
 
-Consider this example using the [Weather API](https://developer.here.com/documentation/weather/topics/overview.html) from HERE. Their API requires two specific authentication values, an `app_id` and `app_code`. If I put that in my client-side code, anyone could use it, which wouldn’t be desirable. I’m going to use a serverless proxy set up with [Netlify Functions](https://www.netlify.com/docs/functions/) to proxy requests to HERE’s API from my client side code.
+Consider this example using the [Weather API](https://developer.here.com/documentation/weather/topics/overview.html) from https://developer.here.com/documentation/examples/rest/auto_weather/weather-forecast-7days-astronomy. Their API requires two specific authentication values, an `app_id` and `app_code`. If I put that in my client-side code, anyone could use it, which wouldn’t be desirable. I’m going to use a serverless proxy set up with [Netlify Functions](https://www.netlify.com/docs/functions/) to proxy requests to HERE’s API from my client side code.
 
 ```js
 const fetch = require("node-fetch");
@@ -158,3 +158,11 @@ const app = new Vue({
 </body>
 </html>
 ```
+
+So, this one is a bit more work, but depending on your app platform, it could be easy. As I said, I used Netlify Functions, and outside of a configuration issue I had, it was trivial. What does this give us?
+
+*   We have the ability to hide any required keys.
+*   We have the ability to shape the result. This could include removing data we don’t need, changing data for our needs, or heck, we could even add data too if it would be useful to the client.
+*   We could even switch providers. If I need to use someone besides [https://weather.ls.hereapi.com/](https://weather.ls.hereapi.com/) for my data, I can change it at the server and the front-end code won’t have to know. I’d just ensure the result data matches what I used before.
+*   You could also add caching. Some API providers ask that you don’t do this, but you could store data locally and only fetch when you need to.
+*   The only real *drawback* I can see is that it’s definitely a bit more work. To me this was rather easy, but I’ve got experience writing code on the server and working with serverless platforms. I don’t want to minimize the fact that not having these skills would be a bit of a jump if your only JavaScript experience is in client-side code.
