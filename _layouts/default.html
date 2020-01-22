@@ -43,12 +43,16 @@
                 {{ content }}
             </div>
             
-
+            <div class="utterances utterances-frame">
+                {% include utterances.html %}
+            </div>
+            
             <details>
                 <summary>
                     <h2>Your Comments</h2>
                 </summary>
                 {% include disqus.html %}
+                
             </details>
 
             <!--
