@@ -130,8 +130,7 @@ In general this is just some trivial Node code, but I want to point out some spe
 	<h1>Moon Data for Lafayette, LA</h1>
 	<ul>
 		<li v-for="result in results">
-			On {{result.time | formatDate}}, the moon will rise at {{result.moonRise}} and set at {{result.moonSet}}. 
-			It is in {{result.moonPhaseDesc}}. 
+			On {{result.time | formatDate}}, the moon will rise at {{result.moonRise}} and set at {{result.moonSet}}. It is in {{result.moonPhaseDesc}}. 
 		</li>
 	</ul>
 </div>
@@ -155,8 +154,7 @@ const app = new Vue({
 		});
 	}
 });
-
 </script>
-
 </body>
 </html>
+```
