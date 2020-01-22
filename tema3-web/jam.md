@@ -33,7 +33,7 @@ But there’s multiple ways of using those APIs, and JavaScript, that may not be
 <div id="app">
   <h1>Star Wars Films</h1>
   <ul>
-    <li v-for="film in films">{{film.title}}</li>
+    <li v-for="film in films">{% raw %}{{ film.title }}{% endraw %}</li>
   </ul>
 </div>
 
