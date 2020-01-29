@@ -10,8 +10,6 @@
 
 ### Campus Virtuales de Otras Asignaturas del Profesor
 
-## Referencias y Recursos para el Tema 1
-
 * [Org ULL-ESIT-PL-1819](https://github.com/ULL-ESIT-PL-1819)
 * [Org ULL-MII-CA-1819](https://github.com/ULL-MII-CA-1819)
 * [Org ULL-ESIT-DSI-1819](https://github.com/ULL-ESIT-DSI-1819)
@@ -30,8 +28,6 @@
 
 * [Solicitudes a GitHub](https://education.github.com/discount_requests/new)
 * [When you receive then email notifying you that you've been approved for GitHub Education faculty benefits, you may return to](https://education.github.com/benefits) to upgrade your academic GitHub organizations
-
-
 
 ## Google Drive
 
