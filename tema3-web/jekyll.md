@@ -117,6 +117,11 @@ Bundle updated!
 
 * [Jekyll JSON API](https://www.techiediaries.com/how-to-use-jekyll-like-a-pro-output-data-as-json/)
 
+## Maths y Jekyll
+
+* [Adding MathJax to a GitHub Pages Jekyll Blog](http://sgeos.github.io/github/jekyll/2016/08/21/adding_mathjax_to_a_jekyll_github_pages_blog.html)
+
+
 ## Cursos en YouTube de Jekyll and NetlifyCMS por Thomas Bradley
 
 * [Jekyll](https://www.youtube.com/playlist?list=PLWjCJDeWfDdfVEcLGAfdJn_HXyM4Y7_k-)
