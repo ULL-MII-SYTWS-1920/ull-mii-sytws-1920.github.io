@@ -15,6 +15,8 @@
     ```
    Those suck for maintenance and they're ugly.
 * [Veáse la sección *GitHub Package Registry* de estos apuntes]({{site.baseurl}}/tema4-devops/control-version#github-package-registry)
+* [Using npm update and npm outdated to update dependencies](https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-dependencies/)
+
 
 ## Capítulo. Módulos en ECMA6
 
