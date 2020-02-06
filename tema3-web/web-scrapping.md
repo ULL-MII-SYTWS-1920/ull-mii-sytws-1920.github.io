@@ -18,6 +18,7 @@ y resuelva los problemas en la secciónes
 * [Web Scraping with Puppeteer in 10 minutes - IMDB Movie Scraping NodeJs](https://youtu.be/4q9CNtwdawA)
 * [Web Scraping using Node.js and Puppeteer. A short introductory tutorial to Web Scraping](https://flaviocopes.com/web-scraping/)
 * [Web Scraping with Puppeteer… And some more useful JavaScript nuances](https://blog.bitsrc.io/web-scraping-with-puppeteer-e73e5fee7474) Blog
+* [Check out this tutorial how to use headless Chrome and Puppeteer to automatically scrape Craigslist.org and turn that data into a JSON API!](https://youtu.be/aRXzW-o-zqs) YouTube video
 
 
 ### Referencias
