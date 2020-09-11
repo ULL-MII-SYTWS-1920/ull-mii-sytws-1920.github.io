@@ -137,3 +137,6 @@ tema4-devops/github-actions-learning
 
 tfa
 .vscode
+
+*.DS_Store*
+*.swp
