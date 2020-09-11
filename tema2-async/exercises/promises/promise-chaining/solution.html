@@ -25,7 +25,7 @@
     }
     
     // Use them:
-    loadJson('/article/promise-chaining/user.json')
+    loadJson('https://javascript.info/article/promise-chaining/user.json')
       .then(user => loadGithubUser(user.name))
       .then(showAvatar)
       .then(githubUser => alert(`Finished showing ${githubUser.name}`));
