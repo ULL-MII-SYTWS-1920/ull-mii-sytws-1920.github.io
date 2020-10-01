@@ -13,7 +13,7 @@ layout: error
         {% if currentMonth != previousMonth %}
 ### Classes during the month of {{ currentMonth }}
         {% endif %}
-* [{{ post.title }}]({{ post.url }}) ([Clase en el repo]({{site.repo_apuntes}}/tree/master/{{post.path}})) {{ posttime }}
+* [{{ post.title }}]({{ post.url }}) ([Clase en el repo]({{site.repo_apuntes}}/tree/master/{{post.path}})) 
       {% assign previousMonth = currentMonth %}
      {% endif%}
   {% endfor %}
