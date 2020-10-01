@@ -11,7 +11,8 @@ permalink: practicas
 
 {% for practica in site.practicas reversed %}
 
+  {% if practica.visible %}
 ##  <a href="{{ practica.myurl }}">{{ practica.title | slice: 0, 2  }}: Práctica {{ practica.name }}</a>
-
+  {% endif %}
 {% endfor %}
 

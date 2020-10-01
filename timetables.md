@@ -2,7 +2,8 @@
 
 ## Calendario Académico
 
-- <a href="https://www.ull.es/estudios-docencia/calendario-academico/" target="_blank">Calendario Académico 2019/2020</a>
+- <a href="https://www.ull.es/estudios-docencia/calendario-academico/" target="_blank">Calendario Académico</a>
+- <a href="https://drive.google.com/open?id=1VGZXc0K6iK2Kg-8dTotm_Jqu7dwv_Tu5" target="_blank">Calendario Académico 2019/2020</a>
 - <a href="https://drive.google.com/file/d/1YtPNm4vS73N21QHzstcYqEzPKJQHCKeD/view" target="_blank">Calendario Académico 2018/2019</a>
 
 

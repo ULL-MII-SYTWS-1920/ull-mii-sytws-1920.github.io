@@ -3,13 +3,21 @@ subtitle: 'Master de Ingeniería Informática'
 #remote_theme: mmistakes/minimal-mistakes
 #minimal_mistakes_skin: "plum" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 theme: jekyll-theme-midnight
-description: 'Master de II. ULL. 1er cuatrimestre. 2019/2020'
+description: 'Master de II. ULL. 1er cuatrimestre. 2020/2021'
 future: true
 exclude: 
   - node_modules
   - tema3-web/practicas/p10-t3-commanding-databases/eval
 show_downloads: false
 live_reload: true
+organization: 
+  url: https://github.com/ULL-MII-SYTWS-2021
+  name: ULL-MII-SYTWS-2021
+  master: https://github.com/ULL-MII-SYTWS-2021/tree/master/
+chat: https://chat.google.com/
+classroom:
+  url: https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021
+  name: ULL-MII-SYTWS-2021
 collections: 
   practicas: 
     order: 
@@ -24,18 +32,19 @@ collections:
       #- 09p10-t3-commanding-databases.md
       #- 10p10-t3-jekyll-search.md
     output: true
-campus_virtual: https://campusvirtual.ull.es/1920/mod/assign/index.php?id=201913778
-calificador: https://campusvirtual.ull.es/1920/grade/report/grader/index.php?id=201913778
-github_org: https://github.com/ULL-MII-SYTWS-1920
+campus_virtual: https://campusdoctoradoyposgrado.ull.es/mod/assign/index.php?id=2020111300
+calificador: https://campusdoctoradoyposgrado.ull.es/grade/report/grader/index.php?id=2020111300
+github_org: https://github.com/ULL-MII-SYTWS-2021
 repo_apuntes: https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/
 repo_url_master: https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/
 despliegue_apuntes: https://ull-mii-sytws-1920.github.io/
-classroom: https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom
-profesor: https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/
+#classroom: https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom
+profesor: https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/
 profesor_name: Casiano
 acronimo: SYTWS
 acronimo_curso: SYTWS 19/20
 comments: true
+start_date: "September 28, 2020"
 disqus: https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js
 bull_permanente: https://puntoq.ull.es/permalink/f
 temas:
