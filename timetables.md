@@ -10,8 +10,8 @@
 
 ## Horarios
 
-El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos G2) son siempre presenciales. La planificación consiste en la alternancia cíclica de semanas (de tipo A, B o C) con  diferentes patrones de distribución de clases de grupos de teoría (Grupos G2) y prácticas (Grupos PE201). El orden de la secuenciación de los diferentes tipos de semanas será C, A, B, C, A, B, …
-* Semana A: Lunes de 17 a 17:50. Grupo G2 (Teoría). Aula 2.2
+El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos G2) son siempre presenciales online vía Google Meet. La planificación consiste en la alternancia cíclica de semanas (de tipo A, B o C) con  diferentes patrones de distribución de clases de grupos de teoría (Grupos G2) y prácticas (Grupos PE201). El orden de la secuenciación de los diferentes tipos de semanas será C, A, B, C, A, B, …
+* Semana A: Lunes de 17 a 17:50. Grupo G2 (Teoría). 
 * Semana B: 
     * Lunes de 17 a 17:50. Grupo G2. Aula 2.2
     * Miércoles 
@@ -20,17 +20,18 @@ El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos
         * de 18 a 18:50. Grupo G2. Sala 1.3
 * Semana C: Lunes de 17 a 17:50. Grupo G2. Aula 2.2
 
-Nos comunican que las clases comenzarán el Lunes 30/09/2019.
+Nos comunican que las clases comenzarán el Lunes 05/10/2020.
  
 * [Calendario Google de SYTWS](https://calendar.google.com/calendar/b/1?cid=dWxsLmVkdS5lc19oM2FiN3AzcmxmYW1qY25zbmhsdDZ1aGI0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t) (Por si lo quieres añadir a tu Google Calendar)
 
+{% include embeded-calendar-iframe.html %}
 ### Horarios del Master de II 
 
 * <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios completos del curso 19/20 del Master de II</a>
 
 ### Horarios de Tutorías
 
-* 1ºC: L y M de 9:00 a 12:00. 2ºC Lunes de 11:30 a 14:00, Martes de 10:30 a 11:30 y Miércoles  de 11:30 a 14:00
+* <a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUd1YlJSLURtcE5JfGRlZmF1bHR8ZmNiMWNmMTE4MjNjNzk1MWQwZGQyYTI4ZjZjYjZjY2E" target="_blank">Reserva de Tutoría</a>  (Calendario de citas. Haz clic en una hora disponible. Si no hay ninguna, prueba en un intervalo de tiempo diferente. Para cancelar una hora ya reservada, sal de la página de registro y elimina el evento de tu propio calendario.)
 * <a href="https://docs.google.com/spreadsheets/d/1ZTGvLA70qCYEsBwcA8dCiUZby3ZOM9oHt8kmiNNKId0/edit#gid=0" target="_blank">Horarios de tutorías del Departamento de Ingeniería Informática</a>
 
 
