@@ -1,7 +1,7 @@
 
 # Introducción a la Asignatura 
 
-## [Guías Docentes del Máster Universitario en Ingeniería Informática (2020 - 2021)](https://www.ull.es/apps/guias/guias/view_degree/670) Aún no elaboradas
+## [Guías Docentes del Máster Universitario en Ingeniería Informática (2020 - 2021)](https://www.ull.es/apps/guias/guias/view_degree/670) 
 
 * [Guía Docente de SYTWS](guia-docente-sytws.pdf) (provisional, a 3 de Octubre de 2019)
 
@@ -11,7 +11,7 @@
 
 ## [Contenidos](../)
 
-## [Clases Impartidas]({{site.baseurl}}clases.html)
+## [Clases Impartidas]({{site.baseurl}}/clases.html)
 
 ### [Clases Impartidas por Categorías]({{site.baseurl}}/categories/)
 

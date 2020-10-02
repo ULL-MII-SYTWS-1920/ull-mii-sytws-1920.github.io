@@ -32,7 +32,9 @@ collections:
       #- 09p10-t3-commanding-databases.md
       #- 10p10-t3-jekyll-search.md
     output: true
-campus_virtual: https://campusdoctoradoyposgrado.ull.es/mod/assign/index.php?id=2020111300
+campus_virtual:
+  home: https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300 
+  tareas: https://campusdoctoradoyposgrado.ull.es/mod/assign/index.php?id=2020111300
 calificador: https://campusdoctoradoyposgrado.ull.es/grade/report/grader/index.php?id=2020111300
 github_org: https://github.com/ULL-MII-SYTWS-2021
 repo_apuntes: https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/

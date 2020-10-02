@@ -20,11 +20,12 @@ El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos
         * de 18 a 18:50. Grupo G2. Sala 1.3
 * Semana C: Lunes de 17 a 17:50. Grupo G2. Aula 2.2
 
-Nos comunican que las clases comenzarán el Lunes 05/10/2020.
+Nos comunican que las clases comenzarán el Lunes 05/10/2020 de forma telemática.
  
 * [Calendario Google de SYTWS](https://calendar.google.com/calendar/b/1?cid=dWxsLmVkdS5lc19oM2FiN3AzcmxmYW1qY25zbmhsdDZ1aGI0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t) (Por si lo quieres añadir a tu Google Calendar)
 
 {% include embeded-calendar-iframe.html %}
+
 ### Horarios del Master de II 
 
 * <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios completos del curso 19/20 del Master de II</a>
@@ -42,73 +43,17 @@ Nos comunican que las clases comenzarán el Lunes 05/10/2020.
 
 ## Exámenes de convocatoria
 
-- [Documentos con los Exámenes de la Convocatorias](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
+- [Documentos con los Exámenes de la Convocatorias 20/21](https://drive.google.com/file/d/1I693fh0oBt-zpki1r63FqJPmOisA7Oxs/view)
 
-### Enero
-
-Sistemas y Tecnología Web: Servidor
-24/1/2020
-16:00
-2.2
-31/1/2020
-16:00
-2.2
-
-
-<style>
-table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-table {
-  border-collapse: collapse;
-  width: 60%;
-}
-
-th, td {
-  padding: 1px;
-}
-</style>
-<table>
-  <tr>
-    <td>
-    <img alt="/assets/images/enero2020.png" src="/assets/images/enero2020.png">
-    </td>
-    <td>
-    <img src="/assets/images/instrucciones-calendario.png">
-    </td>
-  </tr>
-</table>
-
-
-### Junio
-
-Sistemas y Tecnología Web: Servidor
-3/7/2020
-16:00
-2.2
-
-### Septiembre
- 
-Sistemas y Tecnología Web: Servidor
-4/9/2020
-16:00
-2.2
-
-## Revisión de Calificaciones
+- [Documentos con los Exámenes de la Convocatorias 19/20](https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit)
 
 ## Cierre de actas 
 
-* Viernes 14 de Febrero 2020
-* Viernes 27 de Marzo 2020
-* Jueves 25 de Junio 2020
-* Miércoles 22 de Julio 2020
-* Jueves 25 de Septiembre 2020
+*  7 de Febrero
+*  20 de Marzo
+*  18 de Junio
+*  15 de Julio
+*  18 de Septiembre
 
-
-## Sobre las Calificaciones de Prácticas 
-
-En una primera publicación de calificaciones aparecerá una lista con los alumnos que tienen las prácticas **APTAS** o **NO APTAS**.
 
 ## Q&A
