@@ -28,12 +28,15 @@ Nos comunican que las clases comenzarán el Lunes 05/10/2020 de forma telemátic
 
 ### Horarios del Master de II 
 
+* <a href="https://drive.google.com/file/d/1j97jIXuJ3fEXYLD8XA0HZG2WtV_Vo0vp/view" target="_blank">Horarios completos del curso 20/21 del Master de II</a>
 * <a href="https://docs.google.com/document/d/1RprRwWi3BD2tMkWzrxFlCHMDpajECqg97Tom8-tpog4/edit?ts=5d7a7ae4" target="_blank">Horarios completos del curso 19/20 del Master de II</a>
 
 ### Horarios de Tutorías
 
-* <a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUd1YlJSLURtcE5JfGRlZmF1bHR8ZmNiMWNmMTE4MjNjNzk1MWQwZGQyYTI4ZjZjYjZjY2E" target="_blank">Reserva de Tutoría</a>  (Calendario de citas. Haz clic en una hora disponible. Si no hay ninguna, prueba en un intervalo de tiempo diferente. Para cancelar una hora ya reservada, sal de la página de registro y elimina el evento de tu propio calendario.)
-* <a href="https://docs.google.com/spreadsheets/d/1ZTGvLA70qCYEsBwcA8dCiUZby3ZOM9oHt8kmiNNKId0/edit#gid=0" target="_blank">Horarios de tutorías del Departamento de Ingeniería Informática</a>
+* Primer Cuatrimestre: L, M, X de 8:30 a 10:30
+* <a href="https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUd1YlJSLURtcE5JfGRlZmF1bHR8ZmNiMWNmMTE4MjNjNzk1MWQwZGQyYTI4ZjZjYjZjY2E" target="_blank">Reserva de Tutoría</a>  (Enlace al calendario de solicitud de citas. Haz clic en una hora disponible. Si no hay ninguna, prueba en un intervalo de tiempo diferente. Para cancelar una hora ya reservada, sal de la página de registro y elimina el evento de tu propio calendario.).
+A la hora acordada inicie un chat usando <a href="https://chat.google.com" target="_blank">Google Chat</a> para arrancar la videoconferencia
+* <a href="https://docs.google.com/spreadsheets/d/1Ib_pSZcnagKwWyLvLmX5Hzref0JeLX0mKcVPnGrOglQ/edit#gid=0" target="_blank">Página de Horarios de tutorías del Departamento de Ingeniería Informática y de Sistemas de la ULL</a>
 
 
 ## Normativa de Evaluación
