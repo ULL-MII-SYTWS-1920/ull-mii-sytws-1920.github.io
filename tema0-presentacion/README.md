@@ -1,9 +1,14 @@
 
 # Introducción a la Asignatura 
 
-## [Guías Docentes del Máster Universitario en Ingeniería Informática (2020 - 2021)](https://www.ull.es/apps/guias/guias/view_degree/670) 
+## El contexto de la Pandemia
 
-* [Guía Docente de SYTWS](guia-docente-sytws.pdf) (provisional, a 3 de Octubre de 2019)
+* [Adaptación a la Docencia y Evaluación No Presencial]({{site.baseurl}}/covid19)
+
+## Guías Docentes del Máster Universitario en Ingeniería Informática
+
+* [Guías Docentes del Máster Universitario en Ingeniería Informática (2020 - 2021)](https://www.ull.es/apps/guias/guias/view_degree/670) 
+* [Guía Docente de SYTWS](https://www.ull.es/apps/guias/guias/view_guide/22284/) 
 
 ## [El Master: Módulos y Asignaturas](../degree.md)
 
@@ -13,7 +18,9 @@
 
 ## [Clases Impartidas]({{site.baseurl}}/clases.html)
 
+<!--
 ### [Clases Impartidas por Categorías]({{site.baseurl}}/categories/)
+-->
 
 ## [Recursos](../resources.md)
 
