@@ -1,7 +1,7 @@
 ---
-name: p01-t1-iaas
+name: 02p01-t1-iaas
 myurl: /tema1-introduccion/practicas/p01-t1-iaas/
-visible: false
+visible: true
 ---
 
 Práctica inicial
