@@ -37,14 +37,7 @@
 
             {{ content }}
 
-            
-            
-           <details>
-               <summary>
-                   <h2>Your Comments</h2>
-               </summary>
-               {% include disqus.html %}
-           </details>   
+            {% include comments.html %}
            <!---
                 <div class="bar" id="footer">
                         {% include navigation-bar.html %}

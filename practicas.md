@@ -1,5 +1,5 @@
 ---
-layout: error
+layout: default
 permalink: practicas
 ---
 
@@ -9,10 +9,9 @@ permalink: practicas
 
 ## Lista de Prácticas Publicadas
 
-{% for practica in site.practicas reversed %}
-
-  {% if practica.visible %}
-##  <a href="{{ practica.myurl }}">{{ practica.name | slice: 0, 2  }}: Práctica {{ practica.name }}</a>
-  {% endif %}
-{% endfor %}
+{%- for practica in site.practicas reversed %}
+  {%- if practica.visible %}
+{{ practica.name | slice: 0, 2  }}.  <a href="{{ practica.myurl }}">Práctica {{ practica.name }}</a>
+  {%- endif %}
+{%- endfor %}
 

@@ -42,17 +42,7 @@
             <div class="container">
                 {{ content }}
             </div>
-            <details>
-                <summary><h2>Comment with GitHub Utterances</h2></summary>
-                {% include utterances.html %}
-            </details>
-            
-            <details>
-                <summary>
-                   <h2>Comment with Disqus</h2> 
-                </summary>              
-                {% include disqus.html %}
-            </details>
+            {% include comments.html %}
 
             <!-- -->
             <!-- end bar -->
