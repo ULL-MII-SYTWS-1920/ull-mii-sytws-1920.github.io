@@ -2,7 +2,7 @@
 
 ## Resources for the Student
 
-* [Repo de Bibliografía en ULL-MII-SYTWS-1920](https://github.com/ULL-MII-SYTWS-1920/books-shared)
+* [Repo de Bibliografía en ULL-MII-SYTWS-2021](https://github.com/ULL-MII-SYTWS-2021/books-shared)
 
 
 ## Development and Management of Information Systems
