@@ -6,7 +6,7 @@
 
 1. Instale VSCode en su máquina
 2. Siga los tutoriales de VSCode
-2. Instale el plugin SSH FS y aprenda a usarlo con el sistema de archivo de una máquina remota via SSH
+2. Instale el plugin [Remote SSH](https://code.visualstudio.com/docs/remote/ssh) y aprenda a usarlo con el sistema de archivo de una máquina remota via SSH
 3. Use Live Share para colaborar con un compañero
 4. Elabore un informe con la experiencia adquirida
 
@@ -77,15 +77,39 @@
 - [Introducing Visual Studio Live Share](https://code.visualstudio.com/blogs/2017/11/15/live-share)
 - <a href="https://youtu.be/fWXe1HQ1wVA" target="_blank">Vídeo Visual Studio Live Share Demo on VS Code</a>
 
-### SSH FS
+### SSH 
 
-- Editando con VSCode en la máquina iaas.ull.es con SSH FS extension
-    - Use un plugin para Visual Studio Code que permita montar un sistema de archivos sobre SSH
-      - [SSH FS: File system provider using SSH](https://marketplace.visualstudio.com/items?itemName=Kelvin.vscode-sshfs)
-      - [SSHExtension](https://marketplace.visualstudio.com/items?itemName=kondratiev.sshextension) This extension allows you to open an SSH connection in the integrated terminal. The extension was created in order to have access to the SSH in conjunction with the already available access to the FTP.
-      - [Remote FS](https://marketplace.visualstudio.com/items?itemName=liximomo.remotefs)
+Editando con VSCode en la máquina iaas.ull.es con [Remote SSH](https://code.visualstudio.com/docs/remote/ssh)
 
-### Multi-Root Worksapces
+Vaya a paquetes:
+
+* <img src="{{site.baseurl}}/assets/images/remote-ssh-vscode/13.06.52.png " width="60%"/>
+
+Busque por SSH:
+
+* <img src="{{site.baseurl}}/assets/images/remote-ssh-vscode/13.07.05.png " width="60%"/>
+
+Una vez instalado active la command palette Ctrl-Shift-P y escriba SSH:
+
+* <img src="{{site.baseurl}}/assets/images/remote-ssh-vscode/13.10.42.png " width="60%"/>
+
+Elige REMOTE-SSH: connect to host ...
+
+* <img src="{{site.baseurl}}/assets/images/remote-ssh-vscode/13.11.16.png " width="60%"/>
+
+Ahora escribimos el nombre del host. Por ejemplo `sytws`. Previamente hemos puesto una entrada en `~/.ssh/config` como esta:
+
+````
+Host sytws sytws2021
+HostName 10.6.129.111
+User usuario
+IdentityFile /Users/casianorodriguezleon/.ssh/claveprivada
+ServerAliveInterval 240
+```
+
+* <img src="{{site.baseurl}}/assets/images/remote-ssh-vscode/13.17.04.png" width="60%"/>
+
+### Multi-Root Workspaces
 
 - [Multi-Root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces)
 
