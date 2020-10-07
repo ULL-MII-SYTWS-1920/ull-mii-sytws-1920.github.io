@@ -5,7 +5,6 @@
 * Siguiendo las instrucciones en el  [repositorio SYTW/iaas-ull-es](https://github.com/SYTW/iaas-ull-es) despliegue un ejemplo como el que aparece en [crguezl/express-start](https://github.com/crguezl/express-start) en su máquina virtual del servicio [iaas.ull.es](iaas.ull.es).
 * Puede encontrar un vídeo del profesor introduciendo el [iaas.ull.es aquí](https://youtu.be/qKHgbV0lYbA).
     - [![iaas.ull.es](http://i3.ytimg.com/vi/qKHgbV0lYbA/hqdefault.jpg)](https://youtu.be/qKHgbV0lYbA)
-    - [Como instalar X11 en las máquinas de iaas.ull.es](https://youtu.be/m2y0gq35Ujc) Vídeo en Youtube
 * Añada en el `README.md` un pequeño tutorial de como usar y desplegar una aplicación web en [iaas.ull.es](iaas.ull.es).
   - Haga capturas de pantalla que muestren que su máquina esta bien configurada y funcionando
 * La IP dinámica de su máquina virtual no debería cambiar si no la apaga. Publique la URL de despliegue en su máquina
@@ -27,20 +26,26 @@
      - Puede añadir algo como esto a su PS1: `PS1="\$(git branch 2>/dev/null | sed -n 's/* \(.*\)/\1 /p')$ "`
      - Recuerde que si su prompt es muy largo siempre puede acortarlo con `PROMPT_DIRTRIM=1`
   - [git aliases](https://git-scm.com/book/tr/v2/Git-Basics-Git-Aliases)
-  - Instale [hub](https://github.com/github/hub)
-  - [ghi](https://github.com/stephencelis/ghi)
+  - [Instale GitHub CLI](https://github.com/cli/cli)
   - Instale [nvm](https://github.com/creationix/nvm)
-  - install nodeJS usando nvm
-  - [jshint](http://jshint.com/install/) y [jshint on vim](https://coderwall.com/p/zfhquw/jshint-in-vim)
-  - Instale [rvm](https://github.com/rvm/ubuntu_rvm)
-  - Instale [NERDTree](https://github.com/scrooloose/nerdtree) para vim
+  - Instale nodeJS usando nvm
+  - [jshint](http://jshint.com/install/) y [jshint on vim](https://coderwall.com/p/zfhquw/jshint-in-vim) o JSLint
+    - Instale [NERDTree](https://github.com/scrooloose/nerdtree) para vim
   - Instale Express.js
       - [Express Web Framework (Node.js/JavaScript)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs) (Mozilla)
-  - Instale [ctags](https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html)
-  - [ag](http://conqueringthecommandline.com/book/ack_ag) o [ack](http://conqueringthecommandline.com/book/ack_ag)
-  - etc. 
+  
 * [Hágase miembro de la comunidad Google+ SYTWS](https://plus.google.com/u/1/communities/104629784252354892324)  (Asegúrate de estar identificado con tu cuenta de Gmail de la ULL)
 
+### Software Opcional a Estudiar si Instala
+
+- Instale [rvm](https://github.com/rvm/ubuntu_rvm) o rbenv o similar y alguna versión moderna de Ruby
+- [Como instalar X11 en las máquinas de iaas.ull.es](https://youtu.be/m2y0gq35Ujc) Vídeo en Youtube. Esto es opcional. 
+- [hub](https://github.com/github/hub). Obsoleto. 
+- [ghi](https://github.com/stephencelis/ghi) Obsoleto
+- Instale [ctags](https://courses.cs.washington.edu/courses/cse451/10au/tutorials/tutorial_ctags.html)
+- [ag](http://conqueringthecommandline.com/book/ack_ag) o [ack](http://conqueringthecommandline.com/book/ack_ag)
+- etc. 
+  
 ### GitHub Classroom: Outside Colaborators and members
 
 * Una vez acepte la tarea en GitHub Classroom, pasará a ser *outside collaborator* de la organización de la asignatura,
@@ -50,4 +55,4 @@
 
 ### Formulario
 
-Rellene el [formulario solicitado con la relación aluXX-GitHub](https://docs.google.com/forms/d/1mCcxXPrz-ySxotIvzOZXO4hvVMni1pj2O73XrLL-Oqw/edit) si no lo ha hecho ya
+Rellene el [formulario solicitado con la relación aluXX-GitHub](https://docs.google.com/forms/d/e/1FAIpQLSe3l-XOWurbsHbgtzv4giCNMF15TMwlxsP_2yMDXnDYMt71dw/viewform) si no lo ha hecho ya
