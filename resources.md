@@ -86,6 +86,8 @@ GitHub Classroom integrates with learning management systems (LMS) such as Brigh
 
 - [Servicio de vpn: guías de configuración](https://www.ull.es/servicios/stic/2016/05/10/servicio-de-vpn-de-la-ull/)
 
+- [Instrucciones para acceder a la VPN de la ULL en un Mac sin usar GlobalProtect]({{site.baseurl}}/vpn-ull)
+
 ### Mapa de Recursos
 
 - [Mapa de recursos de la ULL](https://www.ull.es/donde/)

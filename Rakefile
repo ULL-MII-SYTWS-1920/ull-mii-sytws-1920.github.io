@@ -10,7 +10,7 @@ end
 
 desc "local: bundle exec jekyll serve --watch"
 task :ls do
-  sh "bundle exec jekyll serve --future --watch --port 8080"
+  sh "bundle exec jekyll serve --host 0.0.0.0 --future --watch --port 8080"
 end
 
 desc "local serve drafts: bundle exec jekyll serve  --drafts --watch --incremental"
