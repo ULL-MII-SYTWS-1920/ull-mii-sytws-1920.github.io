@@ -1,5 +1,7 @@
 # Programación Asíncrona en ECMA 6
 
+{% include event-loop.md %}
+
 
 ## Event Loop
 
