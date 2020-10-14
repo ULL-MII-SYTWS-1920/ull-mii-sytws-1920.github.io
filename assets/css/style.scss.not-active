@@ -5,6 +5,7 @@
 
 @import "{{ site.theme }}";
 
+/*
 .bar {
     z-index: 100;
     left:0;
@@ -21,7 +22,7 @@
       margin: 0 auto;
       padding: 0 10px;
 
-      /* background: blue; */
+      // background: blue; 
       background: #5c068c;
 
       margin: 6px auto;
@@ -177,6 +178,7 @@ section  {
     position:relative;
     padding: 0 20px;
   }
+*/
 
   #sytwstoc {
     text-align: left;
