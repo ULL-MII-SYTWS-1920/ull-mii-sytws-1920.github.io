@@ -32,22 +32,17 @@
             
             
 
-            {{ content }}
 
-            <!--
+
             <h2 >Table of Contents</h2>
             
             {% include toc.html html=content id="sytwstoc" %}
           
-            -->
 
+            <div class="container">
+                {{ content }}
+            </div>
             {% include comments.html %}
-           <!---
-                <div class="bar" id="footer">
-                        {% include navigation-bar.html %}
-                </div>
-            --->
-            <!-- end bar -->
         </section>
     
     </div>
