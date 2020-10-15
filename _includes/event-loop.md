@@ -60,7 +60,7 @@
   var hoist = 'The variable has been hoisted.';
   ```
 
-  Para responder a esta pregunta es conveniente tener claro el concepto de [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS. Hoisting is a JavaScript mechanism where **variables, function declarations and classes** are moved to the top of their scope before code execution. Hoisting  only moves the declaration. The assignments are left in place.
+  Para responder a esta pregunta es conveniente tener claro el concepto de [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS. Hoisting is a JavaScript mechanism where **variables, function and class declarationses** are moved to the top of their scope before code execution. Hoisting  only moves the declaration. The assignments are left in place.
 
   The scope of a variable declared with the keyword `var` is its current execution context. This is either the enclosing `function` or for variables declared outside any function, `global`.
 
