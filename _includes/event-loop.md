@@ -52,6 +52,20 @@
   - Si se omite este parámetro se usa el valor 0. 
   - El valor retornado identifica el temporizador creado con la llamada a `setTimeout()`; este valor puede pasarse a `clearTimeout()` para cancelar el temporizador.
 
+* ¿Cual es la salida?
+
+  ```js
+  console.log(hoist); // Output: undefined
+
+  var hoist = 'The variable has been hoisted.';
+  ```
+
+  Para responder a esta pregunta es conveniente tener claro el concepto de [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS. Hoisting is a JavaScript mechanism where **variables and function declarations** are moved to the top of their scope before code execution. Hoisting  only moves the declaration. The assignments are left in place.
+
+  The scope of a variable declared with the keyword `var` is its current execution context. This is either the enclosing `function` or for variables declared outside any function, `global`.
+
+  Véase [Understanding Hoisting in JavaScript by Mabishi Wakio](https://www.digitalocean.com/community/tutorials/understanding-hoisting-in-javascript)
+
 * ¿Cual es la salida? (`tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/var.js`)
 
   ```js
@@ -60,9 +74,6 @@
   }
   ```
 
-Para responder a esta pregunta es conveniente tener claro el concepto de [Hosting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS. Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Hoisting  only moves the declaration. The assignments are left in place.
-
-The scope of a variable declared with the keyword `var` is its current execution context. This is either the enclosing `function` or for variables declared outside any function, `global`.
 
 * ¿Cual es la salida?
    
