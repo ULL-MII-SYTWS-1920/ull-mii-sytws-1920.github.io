@@ -1,7 +1,7 @@
 ## Unas Preguntas
 
 * ¿Cual es la salida de las llamadas a `console.trace`? 
-  (`console.trace` muestra la [stack trace](https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces) en la consola)
+  (`console.trace` muestra la [stack trace](https://developer.mozilla.org/en-US/docs/Web/API/console#Stack_traces) en la consola. la stack trace es el camino de las llamadas hasta el punto: `{ nombre-de-rutina, fichero-del-programa, nº de línea, nº de columna}`)
 
 ```js
      1	function multiply(x,y) {
@@ -22,6 +22,8 @@
     16	let numberSquared = printSquare(5);
     17	console.log(numberSquared);
 ```
+
+[Output from execution]({{site.baseurl}}/tema2-async/callstack-js-execution)
 
 
 * ¿En que orden ocurren las salidas?
@@ -142,7 +144,7 @@ let numberSquared = printSquare(5);
 console.log(numberSquared);
 ```
 
-[Output from execution](callstack-js-execution)
+[Output from execution]({{site.baseurl}}/tema2-async/callstack-js-execution)
 
 
 ### Orden de Ejecución
