@@ -59,6 +59,14 @@
 
   var hoist = 'The variable has been hoisted.';
   ```
+ 
+  ¿Cual sería la salida de esta variante?
+
+  ```js
+  console.log(hoist);
+
+  hoist = 'The variable has been hoisted.'
+  ```
 
   Para responder a esta pregunta es conveniente tener claro el concepto de [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS. Hoisting is a JavaScript mechanism where **variables, function and class declarations** are moved to the top of their scope before code execution. Hoisting  only moves the declaration. The assignments are left in place.
 
@@ -92,6 +100,8 @@
   }
   ```
 
+  * Si no proporciona argumentos, el constructor `new Date()`  crea un objeto `Date` con la hora y fecha de hoy según la hora local.
+  * El método `getSeconds()` devuelve un número entre 0 y 59 representando los segundos en la fecha especificada de acuerdo a la hora local.
 
 ## Unas Figuras
 
