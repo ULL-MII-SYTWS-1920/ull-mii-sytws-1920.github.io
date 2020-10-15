@@ -60,6 +60,8 @@
   }
   ```
 
+Para responder a esta pregunta es conveniente tener claro el concepto de [Hosting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS
+
 * ¿Cual es la salida?
    
   ```js
