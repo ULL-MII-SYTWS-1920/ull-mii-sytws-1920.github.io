@@ -55,7 +55,7 @@
 * ¿Cual es la salida?
 
   ```js
-  console.log(hoist); // Output: undefined
+  console.log(hoist); 
 
   var hoist = 'The variable has been hoisted.';
   ```
