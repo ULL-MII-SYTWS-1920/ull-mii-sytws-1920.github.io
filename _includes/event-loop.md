@@ -60,7 +60,9 @@
   }
   ```
 
-Para responder a esta pregunta es conveniente tener claro el concepto de [Hosting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS
+Para responder a esta pregunta es conveniente tener claro el concepto de [Hosting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting) en JS. Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Hoisting  only moves the declaration. The assignments are left in place.
+
+The scope of a variable declared with the keyword `var` is its current execution context. This is either the enclosing `function` or for variables declared outside any function, `global`.
 
 * ¿Cual es la salida?
    
