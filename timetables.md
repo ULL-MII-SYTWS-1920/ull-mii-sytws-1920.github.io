@@ -11,14 +11,16 @@
 ## Horarios
 
 El máster contempla un 50% de no presencialidad y las clases de teoría (Grupos G2) son siempre presenciales online vía Google Meet. La planificación consiste en la alternancia cíclica de semanas (de tipo A, B o C) con  diferentes patrones de distribución de clases de grupos de teoría (Grupos G2) y prácticas (Grupos PE201). El orden de la secuenciación de los diferentes tipos de semanas será C, A, B, C, A, B, …
-* Semana A: Lunes de 17 a 17:50. Grupo G2 (Teoría). 
+* Semana A: Lunes de 17 a 17:50. Grupo G2 (Teoría). [Telemático][meet]
 * Semana B: 
-    * Lunes de 17 a 17:50. Grupo G2. Aula 2.2
+    * Lunes de 17 a 17:50. Grupo G2. [Telemático][meet]
     * Miércoles 
         * de 16 a 16:50. Grupo G2. Sala 1.3
         * de 17 a 17:50. Grupo G2. Sala 1.3
         * de 18 a 18:50. Grupo G2. Sala 1.3
-* Semana C: Lunes de 17 a 17:50. Grupo G2. Aula 2.2
+* Semana C: Lunes de 17 a 17:50. Grupo G2. [Telemático][meet]
+
+[meet]: https://meet.google.com/bhv-togn-ynm
 
 Nos comunican que las clases comenzarán el Lunes 05/10/2020 de forma telemática.
  
