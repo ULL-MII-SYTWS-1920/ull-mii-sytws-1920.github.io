@@ -1,8 +1,7 @@
 ---
-name: p2-t1-c3-file-system
+name: 04p2-t1-c3-file-system
 myurl: /tema1-introduccion/practicas/p2-t1-c3-file-system/
+visible: true
 ---
 
-Lea el Capítulo 2 “Wrangling the File System” de Node.JS The Right Way.
-
-PREVIOUS: {{ page.previous }} NEXT: {{ page.next }}
+{% include practicas/p2-t1-c3-filesystem.md %}

@@ -1,6 +1,10 @@
 
 # Descripción de la Práctica p2-t1-vscode
 
+## Acepte la tarea
+
+* [Asignación p2-t1-vscode](https://classroom.github.com/a/L0PUJIfV)
+
 ## Objetivos
 
 1. Instale VSCode en su máquina
