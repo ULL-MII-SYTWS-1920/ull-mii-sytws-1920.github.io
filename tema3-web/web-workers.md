@@ -2,6 +2,11 @@
 
 ## Code to create a worker from a String
 
+```
+➜  jsday-canarias-2019-examples-multithreading git:(master) ✗ pwd
+/Users/casianorodriguezleon/campus-virtual/2021/learning/jsday-canarias-2019-examples-multithreading
+```
+
 ```js
 /**
  * Create a new worker from JavaScript code instead of a URL
@@ -43,12 +48,16 @@ Transferable objects are instances of classes like [`ArrayBuffer`](https://devel
 
 Void.
 
+## Examples of Web Worker Threads in Node.js
+
+See the folder [nodejs-threads](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading/tree/master/nodejs-threads) inside the repo
+[ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading)
 
 ## References
 
 * [fibonacci-worker](https://github.com/ULL-MII-SYTWS-1920/fibonacci-worker) A web worker that calculates fibonacci numbers.
 * [Chinenye Onuegbu: Code examples for JSDay Canarias 2019](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading)
   * [Video](https://youtu.be/YYfhuudsfFM)
-* [JS Day Canarias. Multithreading in JS](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading) Chinenye
+  * `/Users/casianorodriguezleon/campus-virtual/2021/learning/jsday-canarias-2019-examples-multithreading`
 * [Book Web Workers: Safari O'Reilly. Usa Acceso ULL](http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter)
 * [parallel-js-examples repo](https://github.com/ULL-MII-SYTWS-1920/parallel-js-examples) Parallel.js is a lib for parallel programming
