@@ -4,6 +4,8 @@ Esta práctica tiene por objetivo mejorar las competencias transversales.
 La realización es opcional. 
 **La puntuación obtenida en esta práctica puede usarse para sustituir la nota mas baja que haya obtenido en el resto de prácticas realizadas en la asignatura.**
 
+* [Acepte la asignación](https://classroom.github.com/a/kMErKg-F)
+
 Estas son las tareas a realizar:
 
 1. [Realice el curso *Become a Campus Expert*](https://githubcampus.expert/training) de GitHub. Si está cerrado subscríbase a la lista y siga el curso cuando se abra.
