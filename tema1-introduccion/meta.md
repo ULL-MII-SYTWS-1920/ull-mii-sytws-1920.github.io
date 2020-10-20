@@ -4,7 +4,48 @@
 
 In [revision control systems](https://en.wikipedia.org/wiki/Revision_control "Revision control"), a **monorepo** ("mono" from Greek μόνος, mónos, 'single, alone' and "repo" short for [repository](https://en.wikipedia.orgwiki/Repository_(version_control) "Repository (version control)")) is a software development strategy where code for many projects is stored in the same repository.
 
+A mono-repo is a repository containing all of the source for an organization. It presents source in a single, hierarchical directory structure. A mono-repo supports standard operations such as atomic commits and merges across the code it contains.
+
+Critically, in order to host all source for an organization, the performance of a mono-repo must not degrade as it grows in terms of:
+
+* history (number of commits)
+* amount of code (number of files and bytes)
+* number of developers
+
+### Why doesn't everyone have a mono-repo?
+
+Most organizations do not have a mono-repo because existing DVCS systems (e.g., Git and Mercurial) suffer performance degradation as the size of the repository and the number of users increase. Over time, basic operations such as `git status`, `git fetch`, etc. become slow enough that developers, given the opportunity, will begin splitting code into multiple repositories. Also may be some members are not allowed to have visibility access to some organization projects.
+
 * [Wikipedia on Mono Repo](https://en.wikipedia.org/wiki/Monorepo)
+
+## meta git
+
+To clone in step a meta-repo and all the sub repos yo do somthing like this:
+
+```
+➜  my-first-plugin git:(master) ✗ meta git clone git@github.com:mateodelnorte/meta.git
+meta:
+Cloning into 'meta'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 1096 (delta 0), reused 1 (delta 0), pack-reused 1092
+Receiving objects: 100% (1096/1096), 1.21 MiB | 2.48 MiB/s, done.
+Resolving deltas: 100% (698/698), done.
+meta ✓
+
+/Users/casianorodriguezleon/campus-virtual/2021/learning/learning-meta/my-first-plugin/meta/plugins/symlink-meta-dependencies:
+Cloning into 'plugins/symlink-meta-dependencies'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 111 (delta 0), reused 1 (delta 0), pack-reused 107
+Receiving objects: 100% (111/111), 159.40 KiB | 1.01 MiB/s, done.
+Resolving deltas: 100% (50/50), done.
+
+...
+
+```
 
 ## Plugins for Meta
 
