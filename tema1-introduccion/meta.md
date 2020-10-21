@@ -18,6 +18,23 @@ Most organizations do not have a mono-repo because existing DVCS systems (e.g., 
 
 * [Wikipedia on Mono Repo](https://en.wikipedia.org/wiki/Monorepo)
 
+## meta project
+
+* `meta project import` will add an existing project to your `.meta` file and clone it
+* `meta project create` will add a new directory and git initialize it, and add the given remote
+
+```
+➜  meta git:(master) ✗ meta project help create
+Usage: meta-project-create <destFolder> <childRepoUrl>
+
+Creates a new folder and initializes git with provided remote.
+➜  meta git:(master) ✗ meta project help import
+Usage: meta-project-import <destFolder> <childRepoUrl>
+
+Configures .meta file and imports a project from provided 'childRepoUrl' using git clone into 'destFolder'.
+```
+
+I think we need to extend create with only a directory
 ## meta git
 
 To clone in step a meta-repo and all the sub repos yo do somthing like this:
@@ -50,3 +67,4 @@ Resolving deltas: 100% (50/50), done.
 ## Plugins for Meta
 
 * [Developing a Plugin for Meta](https://medium.com/@patrickleet/developing-a-plugin-for-meta-bd2e9c39882d) by Patrick Lee Scott
+* [Issue 144: How to write a plugin](https://github.com/mateodelnorte/meta/issues/144)
