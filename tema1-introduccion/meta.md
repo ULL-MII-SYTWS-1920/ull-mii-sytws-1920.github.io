@@ -35,6 +35,7 @@ Configures .meta file and imports a project from provided 'childRepoUrl' using g
 ```
 
 I think we need to extend create with only a directory
+
 ## meta git
 
 To clone in step a meta-repo and all the sub repos yo do somthing like this:
