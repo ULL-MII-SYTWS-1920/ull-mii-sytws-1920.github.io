@@ -2,12 +2,46 @@
 
 ## gh api
 
- Go to [github.com/settings/tokens](https://github.com/settings/tokens)
- to generate a new token for `gh` and set then environment variable 
- `GITHUB_TOKEN` (`export GITHUB_TOKEN= ...`)
+### Authentication Token
+
+Go to [github.com/settings/tokens](https://github.com/settings/tokens)
+to generate a new token for `gh` and set then environment variable 
+`GITHUB_TOKEN` (`export GITHUB_TOKEN= ...`)
+
+### Pagination
 
 The option `--paginate`allow us to make additional HTTP requests to fetch 
-all pages of results. Here is an example. Let ask for the repos in the PL organization for the course 19/20:
+all pages of results. Here is an example. 
+
+```
+➜  to-meta git:(master) ✗ gh alias set get-repos 'api /orgs/$1/repos'
+- Adding alias for get-repos: api /orgs/$1/repos
+✓ Added alias.
+➜  to-meta git:(master) ✗ gh alias list
+co:         pr checkout
+get-repos:  api /orgs/$1/repos
+``` 
+
+```
+➜  to-meta git:(master) ✗ gh get-repos ULL-MII-SYTWS-2021
+```
+
+![]({{site.baseurl}}/assets/images/gh-alias-repos.png)
+
+Now  we can pipe the output to [jq](jq) to get the names of the repos:
+
+```
+➜  to-meta git:(master) ✗ gh get-repos ULL-MII-SYTWS-2021 | jq '.[].full_name' -
+"ULL-MII-SYTWS-2021/sytws-2021-meta"
+"ULL-MII-SYTWS-2021/sytws2021-private"
+"ULL-MII-SYTWS-2021/books-shared"
+"ULL-MII-SYTWS-2021/p01-t1-iaas-fcohdezc"
+"ULL-MII-SYTWS-2021/p01-t1-iaas-crguezl"
+"ULL-MII-SYTWS-2021/p01-t1-iaas-alu0100886870"
+...
+```
+
+Let ask for the repos in the PL organization for the course 19/20:
 
 ```
 ➜  to-meta git:(master) ✗ gh api /orgs/ULL-ESIT-PL-1920/repos | jq '.[] | .name' | wc
@@ -124,33 +158,6 @@ Next  we can pipe the output to [jq](jq) to get the names of the repos and the d
 "2020-10-06T18:01:16Z"
 ```
 
-```
-➜  to-meta git:(master) ✗ gh alias set get-repos 'api /orgs/$1/repos'
-- Adding alias for get-repos: api /orgs/$1/repos
-✓ Added alias.
-➜  to-meta git:(master) ✗ gh alias list
-co:         pr checkout
-get-repos:  api /orgs/$1/repos
-``` 
-
-```
-➜  to-meta git:(master) ✗ gh get-repos ULL-MII-SYTWS-2021
-```
-
-![]({{site.baseurl}}/assets/images/gh-alias-repos.png)
-
-Now  we can pipe the output to [jq](jq) to get the names of the repos:
-
-```
-➜  to-meta git:(master) ✗ gh get-repos ULL-MII-SYTWS-2021 | jq '.[].full_name' -
-"ULL-MII-SYTWS-2021/sytws-2021-meta"
-"ULL-MII-SYTWS-2021/sytws2021-private"
-"ULL-MII-SYTWS-2021/books-shared"
-"ULL-MII-SYTWS-2021/p01-t1-iaas-fcohdezc"
-"ULL-MII-SYTWS-2021/p01-t1-iaas-crguezl"
-"ULL-MII-SYTWS-2021/p01-t1-iaas-alu0100886870"
-...
-```
 
 ### LEARN MORE
 
