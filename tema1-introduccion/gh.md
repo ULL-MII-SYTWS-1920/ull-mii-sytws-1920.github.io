@@ -118,6 +118,8 @@ Let us search for repos inside our organization using GitHub API v3:
 
 ![]({{site.baseurl}}/assets/images/gh-api-search-for-repos.png) 
 
+In this [link](gh-get-labs-output.json) you'll find the full output.
+
 See the [SEARCH](https://docs.github.com/en/free-pro-team@latest/rest/reference/search)
 section of the REST API GitHub docs to know more about the API.
 
@@ -138,8 +140,6 @@ And now we can use it:
 ➜  to-meta git:(master) ✗ gh get-labs ULL-MII-SYTWS-2021 iaas
 ```
 
-In this [link](gh-get-labs-output.json) you'll find the output.
-
 Next  we can pipe the output to [jq](jq) to get the names of the repos and the date of the last push:
 
 ```
@@ -157,7 +157,56 @@ Next  we can pipe the output to [jq](jq) to get the names of the repos and the d
 "p01-t1-iaas-lardabi"
 "2020-10-06T18:01:16Z"
 ```
+We can improve it by writing a script:
 
+```
+➜  to-meta git:(master) ✗ cat ~/bin/repos
+```
+
+```bash
+#!/bin/bash
+
+ORG=ULL-MII-SYTWS-2021;
+ASSIGNMENT="iaas";
+if [[ $# -gt 0 ]] ; then
+  ORG="$1";
+else
+	if [[ $# -gt 1 ]] ; then
+    ASSIGNMENT=$2;
+  fi
+fi
+gh api --paginate /search/repositories?q=$ASSIGNMENT+org:$ORG+in:name | \
+                          jq '.items[] | .name, .pushed_at'| \
+                          sed 'N;s/\n/ => /'
+```
+
+Let us make an alias for `gh`:
+
+```
+➜  to-meta git:(master) ✗ gh alias set --shell get-repos 'repos $1 $2'
+- Adding alias for get-repos: repos $1 $2
+✓ Changed alias get-repos from !repos to !repos $1 $2
+```
+
+Watch the use of single quotes.
+
+Let us use our new alias:
+
+```
+➜  to-meta git:(master) ✗ gh get-repos ULL-ESIT-PL-1920 TFA
+"p1-t1-iaas-daviddvg7" => "2020-02-20T20:45:48Z"
+"p1-t1-iaas-miguelbravo7" => "2020-02-26T16:19:51Z"
+...
+"p1-t1-iaas-reto-alu0101049151" => "2020-02-24T17:08:27Z"
+"p1-t1-iaas-reto-alu0100906813" => "2020-03-05T22:49:17Z"
+```
+
+There are 93 repos related with the TFA assignment:
+
+```
+➜  to-meta git:(master) ✗ gh get-repos ULL-ESIT-PL-1920 TFA | wc
+      93     279    5100
+```
 
 ### LEARN MORE
 
