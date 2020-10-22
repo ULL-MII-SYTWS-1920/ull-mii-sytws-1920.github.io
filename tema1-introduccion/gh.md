@@ -6,7 +6,7 @@
  to generate a new token for `gh` and set then environment variable 
  `GITHUB_TOKEN` (`export GITHUB_TOKEN= ...`)
 
-The option `--paginate`allow us to make additional HTTP requeststo fetch 
+The option `--paginate`allow us to make additional HTTP requests to fetch 
 all pages of results. Here is an example. Let ask for the repos in the PL organization for the course 19/20:
 
 ```
