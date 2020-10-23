@@ -38,4 +38,6 @@
 
 ## [Diseño, Principios](design)
 
+## [Extending v8](v8)
+
 

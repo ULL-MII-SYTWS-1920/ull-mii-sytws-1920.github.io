@@ -70,4 +70,6 @@ Resolving deltas: 100% (50/50), done.
 * [Developing a Plugin for Meta](https://medium.com/@patrickleet/developing-a-plugin-for-meta-bd2e9c39882d) by Patrick Lee Scott
 * [Issue 144: How to write a plugin](https://github.com/mateodelnorte/meta/issues/144)
 
-## Práctica [Meta](practicas/meta)
+## Práctica p5-t1-meta
+
+* [Descripción de la práctica p5-t1-meta](practicas/p5-t1-meta/)
