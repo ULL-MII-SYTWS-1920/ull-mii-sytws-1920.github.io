@@ -167,17 +167,17 @@ We can improve it by writing a script:
 ```bash
 #!/bin/bash
 
-ORG=ULL-MII-SYTWS-2021;
-ASSIGNMENT="iaas";
+ORG=ULL-MII-SYTWS-2021
+ASSIGNMENT=iaas
 if [[ $# -gt 0 ]] ; then
-  ASSIGNMENT=$1;
+  ASSIGNMENT=$1
 fi
 if [[ $# -gt 1 ]] ; then
-    ORG="$2";
+    ORG=$2
 fi
 # echo $ASSIGNMENT $ORG
-gh api --paginate /search/repositories?q=$ASSIGNMENT+org:$ORG+in:name | \
-                          jq '.items[] | .name, .pushed_at'| \
+gh api --paginate /search/repositories?q=$ASSIGNMENT+org:$ORG+in:name |
+                          jq '.items[] | .name, .pushed_at'           |
                           sed 'N;s/\n/ => /'
 ```
 
@@ -194,19 +194,15 @@ Watch the use of single quotes.
 Let us use our new alias:
 
 ```
-➜  to-meta git:(master) ✗ gh get-repos TFA ULL-ESIT-PL-1920 
-"p1-t1-iaas-daviddvg7" => "2020-02-20T20:45:48Z"
-"p1-t1-iaas-miguelbravo7" => "2020-02-26T16:19:51Z"
+➜  apuntes git:(curso2021) gh get-repos TFA ULL-ESIT-PL-1920
+"tfa-module-miguel-tfa" => "2020-09-04T09:40:57Z"
+"tfa-daniel-tfa" => "2020-06-02T14:00:30Z"
+"tfa-manuel-jorge-tfa" => "2020-09-13T21:40:24Z"
+"tfa-basilio-tfa" => "2020-07-14T06:49:29Z"
+"tfa-alien-tfa" => "2020-09-05T07:35:52Z"
+"tfa-miguel-angel-tfa" => "2020-09-15T13:19:47Z"
+"tfa-esther-sergio-tfa" => "2020-07-10T08:53:04Z"
 ...
-"p1-t1-iaas-reto-alu0101049151" => "2020-02-24T17:08:27Z"
-"p1-t1-iaas-reto-alu0100906813" => "2020-03-05T22:49:17Z"
-```
-
-There are 93 repos related with the TFA assignment:
-
-```
-➜  to-meta git:(master) ✗ gh get-repos TFA ULL-ESIT-PL-1920 | wc
-      93     279    5100
 ```
 
 ### LEARN MORE
