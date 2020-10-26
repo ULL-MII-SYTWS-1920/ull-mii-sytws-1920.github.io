@@ -69,6 +69,8 @@ and let us adapt to `gh api`. We use `-X` or `--method string`to set the HTTP me
 ➜  /tmp gh api -X POST -f name=repo-prueba-gh-api -f private=true /user/repos
 ```
 
+![]({{site.baseurl}}/assets/images/gh-api-post-create-repo.png)
+
 ### Pagination
 
 The option `--paginate`allow us to make additional HTTP requests to fetch 
