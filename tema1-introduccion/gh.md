@@ -275,6 +275,148 @@ Let us use our new alias:
   Use `gh <command> <subcommand> --help` for more information about a command.
   Read the manual at https://cli.github.com/manual
 
+## GraphQL Example
+
+Follows an example of query using GraphQL.
+
+We can set the GraphQL query in a separated file:
+
+```
+➜  bin git:(master) cat gh-api-example.graphql
+```
+```graphql
+query {
+  repository(owner:"ULL-MII-SYTWS-2021", name:"p01-t1-iaas-alu0101040882") {
+    issues(last:2, states:OPEN) {
+      edges {
+        node {
+          title
+          url
+          labels(first:5) {
+            edges {
+              node {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+To learn more, see the tutorial [Forming calls with GraphQL
+](https://docs.github.com/en/free-pro-team@latest/graphql/guides/forming-calls-with-graphql).
+
+
+Looking at the composition line by line:
+
+```
+query {
+```
+
+Because we want to read data from the server, not modify it, `query` is the root operation. (If you don't specify an operation, `query` is also the default.)
+
+```
+repository(owner:"ULL-MII-SYTWS-2021", name:"p01-t1-iaas-alu0101040882") 
+```
+
+To begin the query, we want to find a [repository object](https://docs.github.com/en/free-pro-team@latest/v4/object/repository). The `schema` validation indicates this object requires an `owner` and a `name` argument. A `schema` defines a **GraphQL API's type system**. It describes the complete set of possible data (objects, fields, relationships, everything) that a client can access
+
+```
+issues(last:2, states:OPEN) {
+```
+
+A **field** is a unit of data you can retrieve from an object. As the official GraphQL docs say: *The GraphQL query language is basically about selecting fields on objects*.
+
+To account for all issues in the repository, we call the `issues` object. 
+
+Some details about the `issues` object:
+
+The docs tell us this object has the type [IssueConnection](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#issueconnection).
+
+Schema validation indicates this object requires a `last` or `first` number of results as an argument, so we provide `2`.
+
+The docs also tell us this object accepts a `states` argument, which is an `IssueState` enum that accepts `OPEN` or `CLOSED` values. 
+
+To find only open issues, we give the states key a value of `OPEN`.
+
+```
+edges {
+```
+
+**Edges** represent connections between nodes. When you query a **connection**, you traverse its edges to get to its nodes.
+
+We know **issues** is a *connection** because the Doc says it has the `IssueConnection` type. 
+
+**Connections** let us query related objects as part of the same call. With connections, we can use a single GraphQL call where we would have to use multiple calls to a REST API. 
+
+To retrieve data about individual issues, we have to access the node via edges.
+
+```graphql
+node {
+```
+
+Here we retrieve the node at the end of the edge. 
+The [IssueConnection docs](https://docs.github.com/en/free-pro-team@latest/v4/object/issueconnection) indicate the node at the end of the `IssueConnection` type is an `Issue` object.
+
+Now that we know we're retrieving an `Issue` object, we can look at the [docs for issue](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#issue)  and specify the fields we want to return:
+
+```graphql
+title
+url
+labels(first:5) {
+  edges {
+    node {
+      name
+    }
+  }
+}
+```
+
+Here we specify the `title`, `url`, and `labels` fields of the `Issue` object.
+
+The `labels` field has the type [LabelConnection](https://docs.github.com/en/free-pro-team@latest/v4/object/labelconnection). As with the `issues` object, because `labels` is a connection, we must travel its `edges` to a connected `node`: the `label` object. At the node, we can specify the `label` object fields we want to return, in this case, `name`.
+
+In `gh`, the `--field` flag behaves like `--raw-field` with magic type conversion based on the format of the value:
+
+* literal values "true", "false", "null", and integer numbers get converted to appropriate JSON types;
+* placeholder values ":owner", ":repo", and ":branch" get populated with values from the repository of the current directory;
+* if the value starts with "@", the rest of the value is interpreted as a filename to read the value from. Pass "-" to read from standard input.
+
+For GraphQL requests, all fields other than "query" and "operationName" are interpreted as GraphQL variables.
+
+
+```
+➜  bin git:(master) gh api graphql --paginate -F query=@gh-api-example.graphql | jq .
+{
+  "data": {
+    "repository": {
+      "issues": {
+        "edges": [
+          {
+            "node": {
+              "title": "Revisión",
+              "url": "https://github.com/ULL-MII-SYTWS-2021/p01-t1-iaas-alu0101040882/issues/2",
+              "labels": {
+                "edges": [
+                  {
+                    "node": {
+                      "name": "enhancement"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
 ## Descripción de la práctica p6-t1-gh-cli
 
 [Descripción de la práctica p6-t1-gh-cli]({{site.baseurl}}/practicas/p6-t1-gh-cli)
