@@ -35,6 +35,7 @@ Placeholder values `:owner`, `:repo`, and `:branch` in the endpoint argument wil
 ```
 
 We can pipe the output to [jq](jq):
+
 ```
 [~/.../sytws2021/apuntes(master)]$  gh api repos/:owner/:repo/issues | jq '.[0] | .title'
 "tema0-presentacion/practicas/pb-gh-campus-expert/"
