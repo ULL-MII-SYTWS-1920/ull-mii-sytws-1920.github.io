@@ -275,6 +275,13 @@ Let us use our new alias:
   Use `gh <command> <subcommand> --help` for more information about a command.
   Read the manual at https://cli.github.com/manual
 
+## Exercise
+
+Using `gh api` and `gh alias --shell' add an extension `gh create-repo` that creates the repo in the given organization:
+
+```
+gh create-repo prueba-repo ULL-MII-SYTWS-2021
+```
 
 ## References
 
