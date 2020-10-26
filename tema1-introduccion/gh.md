@@ -49,6 +49,26 @@ Of course, we can explicit the repo and owner. For example:
 "Hola @alu0101040882, \r\n\r\nVeo que alguno ya está trabajando en la práctica de
 ```
 
+Let us see an example using the `POST` method. We will start from this `curl` example 
+in the [GitHub API getting started guide](https://docs.github.com/en/free-pro-team@latest/rest/guides/getting-started-with-the-rest-api):
+
+```
+$ curl -i -H "Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4" \
+    -d '{ \
+        "name": "blog", \
+        "auto_init": true, \
+        "private": true, \
+        "gitignore_template": "nanoc" \
+      }' \
+    https://api.github.com/user/repos
+```
+
+and let us adapt to `gh api`. We use `-X` or `--method string`to set the HTTP method for the request (default `GET`) and `-f`to set the fields:
+
+```
+➜  /tmp gh api -X POST -f name=repo-prueba-gh-api -f private=true /user/repos
+```
+
 ### Pagination
 
 The option `--paginate`allow us to make additional HTTP requests to fetch 
