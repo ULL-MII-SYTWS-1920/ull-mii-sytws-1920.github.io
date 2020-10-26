@@ -50,7 +50,7 @@ Of course, we can explicit the repo and owner. For example:
 ```
 
 Let us see an example using the `POST` method. We will start from this `curl` example 
-in the [GitHub API getting started guide](https://docs.github.com/en/free-pro-team@latest/rest/guides/getting-started-with-the-rest-api):
+in the [GitHub API getting started guide](https://docs.github.com/en/free-pro-team@latest/rest/guides/getting-started-with-the-rest-api#repositories):
 
 ```
 $ curl -i -H "Authorization: token 5199831f4dd3b79e7c5b7e0ebe75d67aa66e79d4" \
