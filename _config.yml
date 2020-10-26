@@ -24,6 +24,8 @@ collections:
       - 01p01-t1-iaas.md
       - 02p2-t1-vscode.md
       - 03p2-t1-c3-file-system.md
+      - 05p5-t1-meta.md
+      - 06p6-t1-gh-cli.md
       #- 04p3-t1-c3-http.md
       #- 05p4-t2-networking.md
       #- 06p5-t3-websockets.md
