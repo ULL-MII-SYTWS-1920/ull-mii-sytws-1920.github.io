@@ -72,4 +72,4 @@ Resolving deltas: 100% (50/50), done.
 
 ## Práctica p5-t1-meta
 
-* [Descripción de la práctica p5-t1-meta](practicas/p5-t1-meta/)
+* [Descripción de la práctica p5-t1-meta]({{site.baseurl}}(practicas/p5-t1-meta/)
