@@ -170,12 +170,12 @@ We can improve it by writing a script:
 ORG=ULL-MII-SYTWS-2021;
 ASSIGNMENT="iaas";
 if [[ $# -gt 0 ]] ; then
-  ORG="$1";
-else
-	if [[ $# -gt 1 ]] ; then
-    ASSIGNMENT=$2;
-  fi
+  ASSIGNMENT=$1;
 fi
+if [[ $# -gt 1 ]] ; then
+    ORG="$2";
+fi
+# echo $ASSIGNMENT $ORG
 gh api --paginate /search/repositories?q=$ASSIGNMENT+org:$ORG+in:name | \
                           jq '.items[] | .name, .pushed_at'| \
                           sed 'N;s/\n/ => /'
@@ -194,7 +194,7 @@ Watch the use of single quotes.
 Let us use our new alias:
 
 ```
-➜  to-meta git:(master) ✗ gh get-repos ULL-ESIT-PL-1920 TFA
+➜  to-meta git:(master) ✗ gh get-repos TFA ULL-ESIT-PL-1920 
 "p1-t1-iaas-daviddvg7" => "2020-02-20T20:45:48Z"
 "p1-t1-iaas-miguelbravo7" => "2020-02-26T16:19:51Z"
 ...
@@ -205,7 +205,7 @@ Let us use our new alias:
 There are 93 repos related with the TFA assignment:
 
 ```
-➜  to-meta git:(master) ✗ gh get-repos ULL-ESIT-PL-1920 TFA | wc
+➜  to-meta git:(master) ✗ gh get-repos TFA ULL-ESIT-PL-1920 | wc
       93     279    5100
 ```
 
