@@ -356,7 +356,7 @@ We know **issues** is a *connection** because the Doc says it has the `IssueConn
 
 To retrieve data about individual issues, we have to access the node via edges.
 
-```graphql
+```
 node {
 ```
 
