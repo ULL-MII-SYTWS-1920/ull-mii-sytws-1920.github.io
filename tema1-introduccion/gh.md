@@ -8,6 +8,38 @@ Go to [github.com/settings/tokens](https://github.com/settings/tokens)
 to generate a new token for `gh` and set then environment variable 
 `GITHUB_TOKEN` (`export GITHUB_TOKEN= ...`)
 
+### Example
+
+Placeholder values `:owner`, `:repo`, and `:branch` in the endpoint argument will get replaced with values from the repository of the current directory.
+
+```
+[~/.../sytws2021/apuntes(master)]$  gh api repos/:owner/:repo/issues
+[
+  {
+    "url": "https://api.github.com/repos/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/issues/5",
+    "repository_url": "https://api.github.com/repos/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io",
+    "labels_url": "https://api.github.com/repos/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/issues/5/labels{/name}",
+    "comments_url": "https://api.github.com/repos/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/issues/5/comments",
+    "events_url": "https://api.github.com/repos/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/issues/5/events",
+    "html_url": "https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/issues/5",
+    "id": 715027457,
+    "node_id": "MDU6SXNzdWU3MTUwMjc0NTc=",
+    "number": 5,
+    "title": "tema0-presentacion/practicas/pb-gh-campus-expert/",
+    "user": {
+      ...
+    }
+    ...
+  }
+]
+```
+
+We can pipe the output to [jq](jq):
+```
+[~/.../sytws2021/apuntes(master)]$  gh api repos/:owner/:repo/issues | jq '.[0] | .title'
+"tema0-presentacion/practicas/pb-gh-campus-expert/"
+```
+
 ### Pagination
 
 The option `--paginate`allow us to make additional HTTP requests to fetch 
