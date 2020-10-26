@@ -120,8 +120,9 @@ Let us search for repos inside our organization using GitHub API v3:
 
 In this [link](gh-get-labs-output.json) you'll find the full output.
 
-See the [SEARCH](https://docs.github.com/en/free-pro-team@latest/rest/reference/search)
+* See the [SEARCH](https://docs.github.com/en/free-pro-team@latest/rest/reference/search)
 section of the REST API GitHub docs to know more about the API.
+* See section [Search Repositories](https://docs.github.com/en/free-pro-team@latest/rest/reference/search#search-repositories) for more info on how to search for repos
 
 Now we can use `gh alias set` to make an alias `get-lab` to get the repos:
 
