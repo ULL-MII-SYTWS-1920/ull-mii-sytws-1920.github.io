@@ -41,6 +41,14 @@ We can pipe the output to [jq](jq):
 "tema0-presentacion/practicas/pb-gh-campus-expert/"
 ```
 
+Of course, we can explicit the repo and owner. for example:
+
+```
+➜  learning git:(master) gh api repos/ULL-MII-SYTWS-2021/p01-t1-iaas-alu0101040882/issues | jq '.[0] | .user.login, .body'
+"crguezl"
+"Hola @alu0101040882, \r\n\r\nVeo que alguno ya está trabajando en la práctica de
+```
+
 ### Pagination
 
 The option `--paginate`allow us to make additional HTTP requests to fetch 
