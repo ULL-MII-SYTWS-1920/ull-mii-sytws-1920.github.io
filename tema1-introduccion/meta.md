@@ -74,6 +74,11 @@ Resolving deltas: 100% (50/50), done.
 
 ```
 
+### NOTE
+
+`meta git clone` lacks the capacility to recursively clone nested meta projects.
+[See](https://github.com/mateodelnorte/meta/issues/203)
+
 ## Plugins for Meta
 
 * [Developing a Plugin for Meta](https://medium.com/@patrickleet/developing-a-plugin-for-meta-bd2e9c39882d) by Patrick Lee Scott
