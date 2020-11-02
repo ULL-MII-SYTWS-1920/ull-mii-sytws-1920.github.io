@@ -109,6 +109,15 @@
 
 As long as there’s something left to do, JSs event loop will keep spinning. Whenever an event occurs, JS invokes any *callbacks* (event handlers) that are listening for that event.
 
+The general algorithm of the JS Engine is like this:
+
+```js
+executeSequentially(mainTask);
+while (thereArePendingTasks()) do
+  let oldestFinishedTask = waitUntilSomeTaskIsReady();
+  executeSequentially(oldestFinishedTask);
+end do
+```
 
 {% include image.html url="/assets/images/event-loop.png" description="<i>There’s an endless loop, when JavaScript engine waits for tasks, executes them and then sleeps waiting for more tasks</i>" %}
 
