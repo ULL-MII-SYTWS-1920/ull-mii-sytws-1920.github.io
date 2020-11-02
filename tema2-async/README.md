@@ -1,6 +1,6 @@
 # {{site.temas[2].title}}
 
-## [Event Loop, Race Conditions y Web Workers](event-loop/)
+## [Event Loop, Race Conditions y Web Workers](event-loop/index.html)
 
 ## [The Async module](async-js)
 
