@@ -82,7 +82,6 @@
   }
   ```
 
-
 * ¿Cual es la salida?
    
   ```js
@@ -121,11 +120,28 @@ end do
 
 {% include image.html url="/assets/images/event-loop.png" description="<i>There’s an endless loop, when JavaScript engine waits for tasks, executes them and then sleeps waiting for more tasks</i>" %}
 
+When JS runs in the browser:
+
+*   Rendering never happens while the engine executes a task. Doesn’t matter if the task takes a long time. Changes to DOM are painted only after the task is complete.
+*   If a task takes too long, the browser can’t do other tasks, process user events, so after a time it raises an alert like **Page Unresponsive** suggesting to kill the task with the whole page. That happens when there are a lot of complex calculations or a programming error leading to infinite loop.
+
+
 
 * Your JavaScript code runs single threaded. There is just one thing happening at a time.
     * Pay attention to how you write your code and avoid anything that could block the thread, like synchronous network calls or long loops.
     * In most browsers there is an event loop for every browser tab, to avoid a web page with heavy processing to block your entire browser.
     * Web Workers run in their own event loop as well
+
+Quote from [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Runtime_concepts):
+
+> Each message is processed completely before any other message is processed \[...\]
+> A downside of this model is that if a message takes too long to complete, the web application is unable to process user interactions like click or scroll. The browser mitigates this with the "**a script is taking too long to run**" dialog. A good practice to follow is to make message processing short and if possible cut down one message into several messages.
+
+MDN utiliza la terminología *cola de mensajes* para la *cola de callbacks*:
+
+> A JavaScript runtime uses a message queue, which is a list of messages to be processed. 
+> Each message has an associated function which gets called in order to handle the message.
+
 
 ## The Event Loop en el libro [The Modern JavaScript Tutorial](https://javascript.info)
 
@@ -229,6 +245,23 @@ Tomado del tutorial:
 
 * Tutorial [Concurrency model and Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop) at https://developer.mozilla.org
 
+Primero, un ejemplo, para entender el funcionamiento de `Date`y `getSeconds`:
+
+```js
+[~/.../p2-t1-c3-file-system/event-loop(master)]$ node
+Welcome to Node.js v12.10.0.
+Type ".help" for more information.
+> d = new Date()
+2020-02-16T10:07:51.682Z
+> s = d.getSeconds()
+51
+> e = new Date()
+2020-02-16T10:07:57.992Z
+> e.getSeconds()-d.getSeconds()
+6
+```
+
+¿Cual es la salida?
 
 ```js
 const s = new Date().getSeconds();
@@ -251,7 +284,7 @@ See [https://javascript.info/event-loop#use-case-1-splitting-cpu-hungry-tasks](h
 
 To demonstrate the approach, for the sake of simplicity, let’s take a function that counts from 1 to a big number.
 
-If you [run the code below with a very large number](https://plnkr.co/edit/?p=preview), the engine will *hang* for some time.
+If you [run the code below with a very large number](https://plnkr.co/edit/pq6j9xQ0GYKSQXSs?p=options), the engine will *hang* for some time.
 
 When running it in-browser,  try to click other buttons on the page – you’ll see that no other events get handled until the counting finishes.
 
@@ -283,7 +316,7 @@ We can evade problems by splitting the big task into pieces. Do the first piece,
 [~/.../tema2-async/event-loop(master)]$ cat splitting-cpu-hungry-task.html
 ```
 
-```js
+```html
 <!DOCTYPE html>
 
 <div id="progress"></div>
@@ -325,11 +358,18 @@ count(chunk, stop);
 ```
 
 * [Repo de ejemplo simple-web-worker](https://github.com/SYTW/simple-web-worker)
+  * `/Users/casiano/local/src/uai/uai2015/simple-web-worker`
 * [Repo de ejemplo fibonacci-worker](https://github.com/ULL-MII-SYTWS-1920/fibonacci-worker)
+  * `/Users/casiano/campus-virtual/1920/sytws1920/apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/fibonacci-worker`
+  * Can you create a web worker inside a web worker? Answer: **yes!**
+* [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+
+* [Book Web Workers: Safari O'Reilly. Usa Acceso ULL](http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter)
+
 * [JS Day Canarias. Multithreading in JS](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading) Chinenye
 * [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
-## Async.js
+* [parallel-js-examples repo](https://github.com/ULL-MII-SYTWS-1920/parallel-js-examples) Parallel.js is a lib for parallel programming
 
 * [Introducción al Módulo Async]({{site.baseurl}}/tema1-introduccion-a-javascript/event-loop/async-js)
 

@@ -6,7 +6,7 @@
 * [Introducción al Bucle de Eventos, Las Race Conditions, Las Promesas y los Web Workers](event-loop/)
 
 
-## Promises. Asycn/Await
+## Promises. Async/Await
 
 ### Javascript.info: The Modern JavaScript Tutorial. Chapter Promises, async/await
 
