@@ -353,14 +353,19 @@ count(chunk, stop);
 
 ## Web Workers
 
+See [meta repo ULL-MII-SYTWS-1920/uai2015](https://github.com/ULL-MII-SYTWS-1920/uai2015)
+
+in my machine is allocated in:
+
 ```
-/local/src/uai/uai2015/simple-web-worker
+~/local/src/uai/uai2015/
 ```
 
 * [Repo de ejemplo simple-web-worker](https://github.com/SYTW/simple-web-worker)
   * `/Users/casiano/local/src/uai/uai2015/simple-web-worker`
 * [Repo de ejemplo fibonacci-worker](https://github.com/ULL-MII-SYTWS-1920/fibonacci-worker)
-  * `/Users/casiano/campus-virtual/1920/sytws1920/apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/fibonacci-worker`
+  * `~/local/src/uai/uai2015`
+  * `~/campus-virtual/1920/sytws1920/apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/fibonacci-worker`
   * Can you create a web worker inside a web worker? Answer: **yes!**
 * [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
@@ -370,8 +375,6 @@ count(chunk, stop);
 * [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
 * [parallel-js-examples repo](https://github.com/ULL-MII-SYTWS-1920/parallel-js-examples) Parallel.js is a lib for parallel programming
-
-* [Introducción al Módulo Async]({{site.baseurl}}/tema1-introduccion-a-javascript/event-loop/async-js)
 
 ## Race Condition
 
