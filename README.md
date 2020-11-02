@@ -8,7 +8,11 @@
 
 ## [Clases](clases.html)
 
+{% include clases-impartidas.md %}
+
 ## [Prácticas Publicadas](practicas)
+
+{% include practicas-publicadas.md %}
 
 ## [Horarios y Calendarios](timetables.html)
 
