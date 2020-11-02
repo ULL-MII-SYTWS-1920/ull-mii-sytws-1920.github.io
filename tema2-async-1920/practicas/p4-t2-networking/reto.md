@@ -1,4 +1,4 @@
-# Reto 1 para la práctica p4-t2-networking
+# Reto para la práctica p4-t2-networking
 
 Escriba un servidor que permita un *chat*&nbsp; donde los clientes se conectan
 via `telnet` o `netcat`.
@@ -91,56 +91,11 @@ del array `sockets`
   * Documentación de [splice](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice)
   * Documentación de [indexOf](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/indexOf)
 
+Puede mejorar mucho la versión descrita aquí siguiendo este tutorial:
 
-# Reto 2: Using Names for the Clients
+* [Real-Time Chat With Node.js' Readline & Socket.io](https://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-readline-socketio--cms-20953)
 
-
-Una posible extensión del chat anterior es hacer que el cliente al comienzo de la 
-conexión indique su nombre:
-
-## Arrancando el server
-
-```
-[~/.../networking-with-sockets-chapter-3/chat-tcp-server(master)]$ node index.js
-Listening on port 4000
-```
-
-## Cliente: Julio Cesar
-
-```
-[~/.../p2-t1-testing-crguezl(master)]$ telnet localhost 4000
-Trying ::1...
-Connected to localhost.
-Escape character is '^]'.
-Please enter your name (Press twice enter to send the message)
-Julio Cesar
-- Welcome to the Chatbox, There are 1 active users: [Julio Cesar ]
-```
-
-## Cliente: Marco Antonio
-
-```
-[~/.../p1-t1-iaas-Jorge-Acevedo(master)]$ telnet localhost 4000
-Trying ::1...
-Connected to localhost.
-Escape character is '^]'.
-Please enter your name (Press twice enter to send the message)
-Marco Antonio
-- Welcome to the Chatbox, There are 2 active users: [Julio Cesar ,Marco Antonio ]
-Hola Julito!
-```
-
-```
-...
-Please enter your name (Press twice enter to send the message)
-Julio Cesar
-- Welcome to the Chatbox, There are 1 active users: [Julio Cesar ]
-> Marco Antonio : Hola Julito!
-```
-
-# Recursos para el profesor
+## Recursos para el profesor
 
 * [sol c](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/networking-with-sockets-chapter-3/chat-server.js)
-  * Path: `/Users/casiano/local/src/CA/sol-nodejs-the-right-way/networking-with-sockets-chapter-3`
-* [Second solution with user names](https://github.com/ULL-MII-CA-1819/nodejs-the-right-way-private/tree/master/networking-with-sockets-chapter-3/chat-tcp-server)
-  * Path: `/Users/casiano/local/src/CA/sol-nodejs-the-right-way/networking-with-sockets-chapter-3/chat-tcp-server`
+* Path: `/Users/casiano/local/src/CA/sol-nodejs-the-right-way/networking-with-sockets-chapter-3`

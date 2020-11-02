@@ -1,12 +1,10 @@
 # Node.js EventEmitters
 
-**EventEmitter** is a very important class in Node.js. It provides a **channel** for events to be **dispatched** and **listeners** to be notified. Many objects you’ll encounter in Node.js inherit from EventEmitter, like the **Streams** class.
-
 ### The Observer Pattern
 
 > The **observer pattern** is a software design pattern in which an object, called the **subject**, maintains a list of its dependents, called **observers**, and notifies them automatically of any state changes, usually by calling one of their methods.
 
-![]({{site.baseurl}}/assets/images/observer-design-pattern.png)
+![](/assets/images/observer-design-pattern.png)
 
 See also 
 
@@ -16,7 +14,7 @@ See also
 
 * Algunos métodos de los objetos de la clase [EventEmitter](https://nodejs.org/api/events.html#events_class_eventemitter):
 
-![]({{site.baseurl}}/assets/images/event-emitter-methods.png)
+![](/assets/images/event-emitter-methods.png)
 
 #### on
 
