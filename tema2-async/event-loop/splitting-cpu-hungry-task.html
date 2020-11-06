@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 
-<div id="progress"></div>
+<style>
+  #progress {color:green;}
+</style>
+
+<input type="checkbox" id="checkResponsive">
+<button disabled="disabled" id="progress">Click me!</button>
 
 <script>
 'use strict';
 
+const checkResponsive = document.getElementById("checkResponsive");
+const progress = document.getElementById("progress");
+
 let start = Date.now();
 
-let i = 0;
+const Big   = 1e9;
+const Small = 1e5;
 
-let chunk = () => {
-  // do a piece of the heavy job (*)
-  do {
+let counter = 0;
+
+let processChunk = (chunk) => {
+  let i = chunk;
+  do { // do a piece of the heavy job (*)
     i++;
-  } while (i % 1e5 != 0);
+  } while (i % Small != 0);
   progress.innerHTML = i;
+  return i;
 };
 
-let stop = () => (i == 1e7);
+let stop = () => (counter == Big);
 
-function count(task, condition) { 
-  if (condition()) {
-    alert("Done in " + (Date.now() - start) + 'ms');
+function count() { 
+  if (stop()) {
+    progress.innerHTML = "Done in " + (Date.now() - start) + 'ms';
   } else {
-    setTimeout(() => count(task, condition)); // schedule the new call (**)
+    setTimeout(count); // schedule the new call (**)
   };
-  task();
+  counter = processChunk(counter);
 }
 
-count(chunk, stop);
+count();
+
+checkResponsive.addEventListener("change", (checkbox) => {
+    if (checkResponsive.checked) {
+        progress.style.color = "red";
+    } else{
+        progress.style.color = "green";
+   }
+  }
+);
 </script>
