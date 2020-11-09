@@ -1,6 +1,6 @@
 # Race Conditions
 
-## index.html
+## Loading an image with some delay
 
 Consider this file `index.html`: 
 
@@ -35,16 +35,35 @@ index.html          infinity-loop.png   instructions.md     not-race-example.js 
 
 ## File race-example.js
 
-https://medium.com/@ubershmekel/yes-there-are-race-conditions-in-javascript-ba044571a914
+This other example is taken from this blog:
 
-An example race condition in JavaScript
+* [Yes, there are race conditions in JavaScript](https://medium.com/@ubershmekel/yes-there-are-race-conditions-in-javascript-ba044571a914) by [Yuval Greenfield](https://medium.com/@ubershmekel)
+
+```js
+{% include_relative race-example.js %}
+```
+
+An example of race condition in JavaScript.
 When you run this script using Node or in a browser, it
 does not print "Ended with 0", but a random number.
+
+```
+➜  race-condition git:(curso2021) ✗ node race-example.js 
+Started with 0
+Ended with 3
+All done
+➜  race-condition git:(curso2021) ✗ node race-example.js
+Started with 0
+Ended with 20
+```
+
 Even though the functions running
 simply loop 100 iterations of adding and subtracting.
 The reason the end result is random is because the
 sleeps are of random duration and the time between the read
 of the variable causes the eventual write to be incorrect
 when `adder` and `subber` interleave.
+
 This problem is similar to:
-https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use
+
+[Time-of-check to time-of-use](https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use)
