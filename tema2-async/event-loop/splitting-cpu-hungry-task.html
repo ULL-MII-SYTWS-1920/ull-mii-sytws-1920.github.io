@@ -3,6 +3,7 @@
   #progress {color:green;}
 </style>
 
+<h1>Splitting CPU Hungry Tasks:When you check the checkbox, the  text will change color</h1>
 <input type="checkbox" id="checkResponsive">
 <button disabled="disabled" id="progress">Click me!</button>
 
@@ -11,6 +12,14 @@
 
 const checkResponsive = document.getElementById("checkResponsive");
 const progress = document.getElementById("progress");
+checkResponsive.addEventListener("change", (checkbox) => {
+    if (checkResponsive.checked) {
+        progress.style.color = "red";
+    } else{
+        progress.style.color = "green";
+   }
+  }
+);
 
 let start = Date.now();
 
@@ -40,13 +49,4 @@ function count() {
 }
 
 count();
-
-checkResponsive.addEventListener("change", (checkbox) => {
-    if (checkResponsive.checked) {
-        progress.style.color = "red";
-    } else{
-        progress.style.color = "green";
-   }
-  }
-);
 </script>
