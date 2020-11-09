@@ -28,7 +28,7 @@ Where is it:
 index.html          infinity-loop.png   instructions.md     not-race-example.js race-example.js
 ```
 
-### See 
+### References 
 
 * [Meta repo de la Charla UAI2015](https://github.com/ULL-MII-SYTWS-1920/uai2015)
   * [Repo de Ejemplo ULL-MII-SYTWS-1920/js-race](https://github.com/ULL-MII-SYTWS-1920/js-race)
