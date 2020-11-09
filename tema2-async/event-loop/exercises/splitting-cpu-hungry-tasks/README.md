@@ -24,7 +24,7 @@ We can evade problems by splitting the big task into pieces. Do the first piece,
 ```
 
 ```html
-{% include splitting-cpu-hungry-task.html %}
+{% include_relative splitting-cpu-hungry-task.html %}
 ```
 
 **[RUN IT!!!!](splitting-cpu-hungry-task.html)**
