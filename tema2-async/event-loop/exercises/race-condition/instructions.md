@@ -1,23 +1,25 @@
+# Race Conditions
+
 ## index.html
+
+Consider this file `index.html`: 
+
+```html
+{% include_relative index.html %}
+```
 
 ### Experiment
 
 Open the file [index.html](index.html).
 Can you see the infinite loop image?
 
-Now comment the line
+Now  comment the line where `waitFor` is initialized and uncomment the other:
 
 ```js
 let waitFor = 0;
 ```
 
-and uncomment the line
-
-```js
-let waitFor = 1000;
-```
-
-What is going on here?
+What do you think it will happen?
 
 ### See 
 
