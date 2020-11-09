@@ -30,8 +30,19 @@ index.html          infinity-loop.png   instructions.md     not-race-example.js 
 
 ### See 
 
-* https://www.infoq.com/presentations/javascript-concurrency-parallelism/
-* https://crguezl.github.io/_book/uai2015/
+
+* [Meta repo de la charla UAI2015](https://crguezl.github.io/_book/uai2015/)
+  * [Repo de Ejemplo ULL-MII-SYTWS-1920/js-race](https://github.com/ULL-MII-SYTWS-1920/js-race)
+* [Race Condition in JavaScript](https://youtu.be/wNwBzgDm0BI) YouTube Video
+* Charla en InfoQ: [https://www.infoq.com/presentations/javascript-concurrency-parallelism/](https://www.infoq.com/presentations/javascript-concurrency-parallelism/)
+* Folders:
+
+  ```
+  ~/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/race-condition
+  ~/local/src/uai/uai2015/race-condition/index.html
+  ```
+
+
 
 ## Manually Interleaving Promises
 
@@ -70,3 +81,4 @@ when `adder` and `subber` interleave.
 This problem is similar to:
 
 [Time-of-check to time-of-use](https://en.wikipedia.org/wiki/Time-of-check_to_time-of-use)
+
