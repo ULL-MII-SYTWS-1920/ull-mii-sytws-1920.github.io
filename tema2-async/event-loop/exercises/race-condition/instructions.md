@@ -30,10 +30,8 @@ index.html          infinity-loop.png   instructions.md     not-race-example.js 
 
 ### See 
 
-
-* [Meta repo de la charla UAI2015](https://crguezl.github.io/_book/uai2015/)
+* [Meta repo de la Charla UAI2015](https://github.com/ULL-MII-SYTWS-1920/uai2015)
   * [Repo de Ejemplo ULL-MII-SYTWS-1920/js-race](https://github.com/ULL-MII-SYTWS-1920/js-race)
-* [Race Condition in JavaScript](https://youtu.be/wNwBzgDm0BI) YouTube Video
 * Charla en InfoQ: [https://www.infoq.com/presentations/javascript-concurrency-parallelism/](https://www.infoq.com/presentations/javascript-concurrency-parallelism/)
 * Folders:
 
@@ -41,8 +39,8 @@ index.html          infinity-loop.png   instructions.md     not-race-example.js 
   ~/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/race-condition
   ~/local/src/uai/uai2015/race-condition/index.html
   ```
-
-
+* [Abstract de la charla UAI2015](https://crguezl.github.io/_book/uai2015/)
+* [Race Condition in JavaScript](https://youtu.be/wNwBzgDm0BI) YouTube Video
 
 ## Manually Interleaving Promises
 
