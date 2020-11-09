@@ -325,86 +325,14 @@ We can evade problems by splitting the big task into pieces. Do the first piece,
 ```
 
 ```html
-<!DOCTYPE html>
-<style>
-  #progress {color:green;}
-</style>
-
-<h1>Splitting CPU Hungry Tasks:When you check the checkbox, the  text will change color</h1>
-<input type="checkbox" id="checkResponsive">
-<button disabled="disabled" id="progress">Click me!</button>
-
-<script>
-'use strict';
-
-const checkResponsive = document.getElementById("checkResponsive");
-const progress = document.getElementById("progress");
-checkResponsive.addEventListener("change", (checkbox) => {
-    if (checkResponsive.checked) {
-        progress.style.color = "red";
-    } else{
-        progress.style.color = "green";
-   }
-  }
-);
-
-let start = Date.now();
-
-const Big   = 1e9;
-const Small = 1e5;
-
-let counter = 0;
-
-let processChunk = (chunk) => {
-  let i = chunk;
-  do { // do a piece of the heavy job (*)
-    i++;
-  } while (i % Small != 0);
-  progress.innerHTML = i;
-  return i;
-};
-
-let stop = () => (counter == Big);
-
-function count() { 
-  if (stop()) {
-    progress.innerHTML = "Done in " + (Date.now() - start) + 'ms';
-  } else {
-    setTimeout(count); // schedule the new call (**)
-  };
-  counter = processChunk(counter);
-}
-
-count();
-</script>
+{% include splitting-cpu-hungry-task.html %}
 ```
 
 **[RUN IT!](http://localhost:8080/tema2-async/event-loop/splitting-cpu-hungry-task.html)**
 
 ## Web Workers
 
-See [meta repo ULL-MII-SYTWS-1920/uai2015](https://github.com/ULL-MII-SYTWS-1920/uai2015)
-
-in my machine is allocated in:
-
-```
-~/local/src/uai/uai2015/
-```
-
-* [Repo de ejemplo simple-web-worker](https://github.com/SYTW/simple-web-worker)
-  * `/Users/casiano/local/src/uai/uai2015/simple-web-worker`
-* [Repo de ejemplo fibonacci-worker](https://github.com/ULL-MII-SYTWS-1920/fibonacci-worker)
-  * `~/local/src/uai/uai2015`
-  * `~/campus-virtual/1920/sytws1920/apuntes/tema1-introduccion/practicas/p2-t1-c3-file-system/event-loop/fibonacci-worker`
-  * Can you create a web worker inside a web worker? Answer: **yes!**
-* [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-
-* [Book Web Workers: Safari O'Reilly. Usa Acceso ULL](http://proquest.safaribooksonline.com/book/programming/javascript/9781449322120/firstchapter)
-
-* [JS Day Canarias. Multithreading in JS](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading) Chinenye
-* [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-
-* [parallel-js-examples repo](https://github.com/ULL-MII-SYTWS-1920/parallel-js-examples) Parallel.js is a lib for parallel programming
+[A Simple Example]({{site.baseurl}}/tema2-async/event-loop/exercises/web-workers/instructions.html)
 
 
 ### Race Condition Resources
