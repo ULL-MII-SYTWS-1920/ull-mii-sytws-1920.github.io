@@ -10,7 +10,7 @@ Consider this file `index.html`:
 
 ### Experiment
 
-Open the file [index.html](index.html).
+Copy and open this file [index.html](index.html) with your browser.
 Can you see the infinite loop image?
 
 Now  comment the line where `waitFor` is initialized and uncomment the other:
@@ -19,7 +19,14 @@ Now  comment the line where `waitFor` is initialized and uncomment the other:
 let waitFor = 0;
 ```
 
-What do you think it will happen?
+What do you think it will happen? Can you explain it?
+
+Where is it:
+
+```
+➜  race-condition git:(curso2021) ✗ ls ~/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/race-condition
+index.html          infinity-loop.png   instructions.md     not-race-example.js race-example.js
+```
 
 ### See 
 
