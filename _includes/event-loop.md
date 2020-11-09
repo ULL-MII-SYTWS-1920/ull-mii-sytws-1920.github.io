@@ -293,7 +293,7 @@ See the examples:
 
 ## Web Workers
 
-[A Simple Example]({{site.baseurl}}/tema2-async/event-loop/exercises/web-workers/instructions.html)
+[Web Workers]({{site.baseurl}}/tema2-async/event-loop/exercises/web-workers/instructions.html)
 
 ## References
 
