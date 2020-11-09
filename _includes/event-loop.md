@@ -278,6 +278,13 @@ while(true) {
 }
 ```
 
+## Race Condition
+
+See the examples:
+
+* [A Simple Example]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html)
+
+
 ## Splitting CPU Hungry Tasks
 
 See [https://javascript.info/event-loop#use-case-1-splitting-cpu-hungry-tasks](https://javascript.info/event-loop#use-case-1-splitting-cpu-hungry-tasks)
@@ -397,12 +404,6 @@ in my machine is allocated in:
 * [MDN Tutorial: Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
 * [parallel-js-examples repo](https://github.com/ULL-MII-SYTWS-1920/parallel-js-examples) Parallel.js is a lib for parallel programming
-
-## Race Condition
-
-See this simple example:
-
-* [A Simple Example]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html)
 
 
 ### Race Condition Resources
