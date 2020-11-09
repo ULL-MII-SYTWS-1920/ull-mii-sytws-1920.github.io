@@ -282,7 +282,7 @@ while(true) {
 
 See the examples:
 
-* [A Simple Example]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html)
+* [A Simple Example: Loading an Image with Some Delay ]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html#loading-an-image-with-some-delay)
 
 
 ## Splitting CPU Hungry Tasks

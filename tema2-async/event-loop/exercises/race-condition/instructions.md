@@ -33,11 +33,13 @@ index.html          infinity-loop.png   instructions.md     not-race-example.js 
 * https://www.infoq.com/presentations/javascript-concurrency-parallelism/
 * https://crguezl.github.io/_book/uai2015/
 
-## File race-example.js
+## Manually Interleaving Promises
 
 This other example (using promises instead of callbacks) is taken from this blog:
 
 * [Yes, there are race conditions in JavaScript](https://medium.com/@ubershmekel/yes-there-are-race-conditions-in-javascript-ba044571a914) by [Yuval Greenfield](https://medium.com/@ubershmekel)
+
+**File race-example.js**
 
 ```js
 {% include_relative race-example.js %}
