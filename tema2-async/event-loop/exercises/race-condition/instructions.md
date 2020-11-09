@@ -48,6 +48,8 @@ This other example (using promises instead of callbacks) is taken from this blog
 
 * [Yes, there are race conditions in JavaScript](https://medium.com/@ubershmekel/yes-there-are-race-conditions-in-javascript-ba044571a914) by [Yuval Greenfield](https://medium.com/@ubershmekel)
 
+Promises are a (relatively) new way to handle asynchronous programming in JS. For an introduction see the section:
+
 * [Callbacks Problems]({{site.baseurl}}/tema2-async/promises#callbacks-problems) and Promise Introduction
 
 **File race-example.js**
