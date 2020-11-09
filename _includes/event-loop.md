@@ -318,38 +318,60 @@ We can evade problems by splitting the big task into pieces. Do the first piece,
 
 ```html
 <!DOCTYPE html>
+<style>
+  #progress {color:green;}
+</style>
 
-<div id="progress"></div>
+<h1>Splitting CPU Hungry Tasks:When you check the checkbox, the  text will change color</h1>
+<input type="checkbox" id="checkResponsive">
+<button disabled="disabled" id="progress">Click me!</button>
 
 <script>
 'use strict';
 
+const checkResponsive = document.getElementById("checkResponsive");
+const progress = document.getElementById("progress");
+checkResponsive.addEventListener("change", (checkbox) => {
+    if (checkResponsive.checked) {
+        progress.style.color = "red";
+    } else{
+        progress.style.color = "green";
+   }
+  }
+);
+
 let start = Date.now();
 
-let i = 0;
+const Big   = 1e9;
+const Small = 1e5;
 
-let chunk = () => {
-  // do a piece of the heavy job (*)
-  do {
+let counter = 0;
+
+let processChunk = (chunk) => {
+  let i = chunk;
+  do { // do a piece of the heavy job (*)
     i++;
-  } while (i % 1e5 != 0);
+  } while (i % Small != 0);
   progress.innerHTML = i;
+  return i;
 };
 
-let stop = () => (i == 1e7);
+let stop = () => (counter == Big);
 
-function count(task, condition) { 
-  if (condition()) {
-    alert("Done in " + (Date.now() - start) + 'ms');
+function count() { 
+  if (stop()) {
+    progress.innerHTML = "Done in " + (Date.now() - start) + 'ms';
   } else {
-    setTimeout(() => count(task, condition)); // schedule the new call (**)
+    setTimeout(count); // schedule the new call (**)
   };
-  task();
+  counter = processChunk(counter);
 }
 
-count(chunk, stop);
+count();
 </script>
 ```
+
+**[RUN IT!](http://localhost:8080/tema2-async/event-loop/splitting-cpu-hungry-task.html)**
 
 ## Web Workers
 
