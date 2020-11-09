@@ -400,12 +400,21 @@ in my machine is allocated in:
 
 ## Race Condition
 
-```
-/local/src/uai/uai2015/race-condition/index.html
-```
+See this simple example:
+
+* [A Simple Example]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html)
+
+
+### Race Condition Resources
 
 * [Repo de Ejemplo](https://github.com/ULL-MII-SYTWS-1920/js-race)
 * [Race Condition in JavaScript](https://youtu.be/wNwBzgDm0BI) YouTube Video
+* Folders:
+
+  ```
+  ~/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/race-condition
+  ~/local/src/uai/uai2015/race-condition/index.html
+  ```
 
 
 
