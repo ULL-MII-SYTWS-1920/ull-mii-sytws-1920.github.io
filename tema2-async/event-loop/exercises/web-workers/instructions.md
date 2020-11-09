@@ -54,6 +54,7 @@ Can you create a web worker inside a web worker? Answer: **yes!**
 
 * Fork en SYTWS-1920 del repo de la charla impartida por [Chinenye Onuegbu: Code examples for JSDay Canarias 2019](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading)
   * [Video](https://youtu.be/YYfhuudsfFM)
+* En la carpeta [example-1](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading/tree/master/talk/example-1) encontramos un ejemplo minimal de web worker
 * En este repo podemos encontrar ejemplos de uso de web-workers en Node.js (denominados worker threads). Véase la carpeta [nodejs-threads](https://github.com/ULL-MII-SYTWS-1920/jsday-canarias-2019-examples-multithreading/tree/master/nodejs-threads)
 
 ## Parallel.js
