@@ -283,6 +283,7 @@ while(true) {
 See the examples:
 
 * [A Simple Example: Loading an Image with Some Delay ]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html#loading-an-image-with-some-delay)
+* [Manually Interleaving Promises]({{site.baseul}}/tema2-async/event-loop/exercises/race-condition/instructions.html#manually-interleaving-promises)
 
 
 ## Splitting CPU Hungry Tasks

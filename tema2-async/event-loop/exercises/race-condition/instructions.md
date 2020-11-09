@@ -61,6 +61,7 @@ Ended with 20
 
 Even though the functions running
 simply loop 100 iterations of adding and subtracting.
+
 The reason the end result is random is because the
 sleeps are of random duration and the time between the read
 of the variable causes the eventual write to be incorrect
