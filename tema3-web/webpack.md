@@ -3,6 +3,7 @@
 ## Webpack: Getting Started
 
 * [Getting Started](https://webpack.js.org/guides/getting-started/)
+* Tutorial del profesor en [ULL-ESIT-PL/async-js-series-webpack](https://github.com/ULL-ESIT-PL/async-js-series-webpack)
 
 ## Survive.js Webpack book
 
