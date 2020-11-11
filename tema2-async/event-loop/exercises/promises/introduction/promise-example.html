@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+   <h1> <div id="joke"></div> </h1>
+    <br/>
+    <hr />
+    See <a href="http://www.sitepoint.com/overview-javascript-promises/">An Overview of JavaScript Promises by Sandeep Panda Sandeep Panda</a>.<br/>
+    <hr />
+    <p>A <code>Promise</code> object represents a value that may not
+    be available yet, but will be resolved at some point in future. It
+    allows you to write asynchronous code in a more synchronous fashion.
+    <br/>
+    For example, if you use the Promise API to make an asynchronous
+    call to a remote web service you will create a <code>Promise</code>
+    object which represents the data that will be returned by the web
+    service in future. The caveat being that the actual data is not
+    available yet. It will become available when the request completes
+    and a response comes back from the web service. In the meantime the
+    <code>Promise</code> object acts like a proxy to the actual data.
+    Further, you can attach callbacks to the <code>Promise</code> object
+    which will be called once the actual data is available ...</p>
+
+    Simply refresh the page to view a new random joke. Also, open up
+    your browser console so that you can see the order in which the
+    different parts of the code are executed. Also, note that a
+    <code>Promise</code> can have three states:</p>
+    <ul>
+      <li>pending (not fulfilled or rejected)</li>
+      <li>fulfilled</li>
+      <li>rejected</li>
+    </ul>
+<p>The <code>Promise.status</code> property, which is code-inaccessible and private, gives information about these states. Once a Promise is rejected or fulfilled, this status gets permanently associated with it. This means a Promise can succeed or fail only once. If the Promise has already been fulfilled and later you attach a <code>then()</code> to it with two callbacks the success callback will be correctly called. So, in the world of Promises, we are not interested in knowing when the Promise is settled. We are only concerned with the final outcome of the Promise.</p>
+  </body>
+
+</html>
