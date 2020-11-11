@@ -8,6 +8,7 @@ future: true
 exclude: 
   - node_modules
   - tema3-web/practicas/p10-t3-commanding-databases/eval
+  - tema2-async/practicas/p7-t2-asyncmap/sol-reto-async-reading-multiple-files
 show_downloads: false
 live_reload: true
 organization: 
