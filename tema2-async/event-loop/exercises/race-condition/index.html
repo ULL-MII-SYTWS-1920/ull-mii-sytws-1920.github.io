@@ -23,10 +23,10 @@
       // If 1000 the handler is inserted in the event queue too late
       // If an EventListener is added to an EventTarget while it is 
       // processing an event, that event does not trigger the listener.
-      image.onload = function() {
+      image.addEventListener("load", function() {
         console.trace();
         container.appendChild(image)
-      };
+      });
     }, waitFor);
   </script>
   <a href="http://www.infoq.com/presentations/javascript-concurrency-parallelism">Concurrency and Parallel Computing in JavaScript (Recorded at: StrangeLoop) by Stephan Herhut on Mar 05, 2014 </a>
