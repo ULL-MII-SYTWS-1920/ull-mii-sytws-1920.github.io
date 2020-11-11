@@ -1,7 +1,8 @@
-import fs from 'fs';
+//import fs from 'fs';
+import * as fs from 'fs';
 import program from 'commander';
 import async from 'async';
-import * as pkg from '../../package.json';
+import * as pkg from '../package.json';
 
 const { version, description } = pkg;
 

@@ -1,0 +1,16 @@
+node_modules
+.nyc_output
+.DS_Store
+*.log
+.vscode
+.idea
+dist
+compiled
+.awcache
+.rpt2_cache
+docs
+*.ini
+*.env
+.directory
+*.txt
+concat.out
