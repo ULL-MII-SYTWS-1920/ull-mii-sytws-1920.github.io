@@ -1,0 +1,23 @@
+{
+  "name": "p2-t1-c3-filesystem-reto-eduardobritosan",
+  "version": "1.0.0",
+  "description": "## First question",
+  "main": "concat-file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1920/p2-t1-c3-filesystem-reto-eduardobritosan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1920/p2-t1-c3-filesystem-reto-eduardobritosan/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-DSI-1920/p2-t1-c3-filesystem-reto-eduardobritosan#readme",
+  "dependencies": {
+    "async": "^3.1.1",
+    "commander": "^4.1.1"
+  }
+}
