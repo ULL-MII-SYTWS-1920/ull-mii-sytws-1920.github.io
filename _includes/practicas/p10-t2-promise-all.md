@@ -1,4 +1,4 @@
-# Reto 1: Building Promise.all
+# Building Promise.all
 
 Given an array of promises, `Promise.all` returns a promise that waits for all of the promises in the array to finish. 
 It then succeeds, yielding an array of result values. 
