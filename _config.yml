@@ -10,6 +10,7 @@ exclude:
   - tema3-web/practicas/p10-t3-commanding-databases/eval
   - tema2-async/practicas/p7-t2-asyncmap/sol-reto-async-reading-multiple-files
   - tema2-async/practicas/p9-t2-promise-readfile/solution
+  - tema2-async/practicas/p10-t2-promise-all/solution
 show_downloads: false
 live_reload: true
 organization: 
