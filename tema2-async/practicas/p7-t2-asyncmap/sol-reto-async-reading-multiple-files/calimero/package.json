@@ -35,7 +35,6 @@
       "eslint --fix"
     ]
   },
-  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
@@ -47,8 +46,8 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@rollup/plugin-json": "^4.0.2",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
@@ -79,7 +78,7 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@types/async": "^3.0.7",
+    "@types/async": "^3.2.4",
     "async": "^3.1.1",
     "commander": "^4.1.1"
   }
