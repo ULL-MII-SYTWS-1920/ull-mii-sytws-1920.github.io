@@ -1,4 +1,4 @@
-# DEscripción de la práctica p8-t2-async-webpack-esmodule
+# Descripción de la práctica p8-t2-async-webpack-esmodule
 
 1. Lea el tutorial [Getting Started
 ](https://webpack.js.org/guides/getting-started/)
