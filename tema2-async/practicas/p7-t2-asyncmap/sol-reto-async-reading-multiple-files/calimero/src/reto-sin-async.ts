@@ -14,7 +14,7 @@ export default () => {
       (value, previous) => previous.concat([value]),
       []
     )
-    .option('-o, --output <file>', 'output file', 'concat.out')
+    .option('-o, --output <file>', 'output file', null)
     .parse(process.argv);
 
   if (!program.file || program.file.length < 1) {
@@ -26,19 +26,25 @@ export default () => {
   const concatResult: string[] = [];
 
   const writeOutputFile = () => {
-    fs.writeFile(program.output, concatResult.join(''), err => {
-      if (err) {
-        console.error(
-          `Error writting to output file '${program.output}': ${err.message}`
-        );
-        process.exit(1);
-      }
+    if (program.output) {
+      fs.writeFile(program.output, concatResult.join(''), err => {
+        if (err) {
+          console.error(
+            `Error writting to output file '${program.output}': ${err.message}`
+          );
+          process.exit(1);
+        }
+  
+        console.log(`Concat saved on ${program.output}`);
+      });
+    }
+    else { 
+      console.log( concatResult.join(''));
+    }
 
-      console.log(`Concat saved on ${program.output}`);
-    });
   };
 
-  program.file.forEach((file: string) => {
+  program.file.forEach((file: string, index: bigint) => {
     fs.readFile(file, (err, result) => {
       if (err) {
         console.error(`Error: ${err.message}`);

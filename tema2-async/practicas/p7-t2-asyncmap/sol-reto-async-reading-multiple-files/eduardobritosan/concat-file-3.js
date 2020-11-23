@@ -14,9 +14,7 @@ function file(value, previous){
 
 //Pregunta 3
 
-function asyncMap(coll, 
-    iteratee,
-    finalCallback){
+function asyncMap(coll, iteratee, finalCallback){
     let arrayValues = []
     let counter = {i:0};
     coll.forEach((element, index) => {
