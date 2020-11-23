@@ -32,7 +32,7 @@ promise.then(
 promise.then(script => alert('Another handler...'));
 ```
 
-## [Solution](index.html)
+## Solution
 
 * [Run the solution](index.html)
 * [Solution](solution.html)
