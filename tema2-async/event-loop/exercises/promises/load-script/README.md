@@ -22,7 +22,7 @@ Rewrite the `loadScript` function using promises.
 Example of usage:
 
 ```js
- let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
+let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
 
 promise.then(
   script => alert(`${script.src} is loaded!`),
