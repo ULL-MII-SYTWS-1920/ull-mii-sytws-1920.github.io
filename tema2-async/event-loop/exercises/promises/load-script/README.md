@@ -34,5 +34,5 @@ promise.then(script => alert('Another handler...'));
 
 ## [Solution](index.html)
 
-* [Source](index.html)
-* [Deployed](https://ull-mii-sytws-1920.github.io/tema2-async/exercises/promises/load-script/index.html)
+* [Run the solution](index.html)
+* [Solution](solution.html)
