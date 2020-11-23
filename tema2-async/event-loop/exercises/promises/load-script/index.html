@@ -10,28 +10,38 @@
   <p id="out"></p>
   <script>
     'use strict';
-    
+    let script = document.createElement('script');
+    let out = document.getElementById('out');
+
     function loadScript(src) {
-      return new Promise(function(resolve, reject) {
-        let script = document.createElement('script');
+      return new Promise(function(resolve, reject) {  
         script.src = src;
     
-        script.onload = () => resolve(script);
-        script.onerror = () => reject(new Error(`Script load error for ${src}`));
-    
-        document.head.append(script);
+        script.onload = (e) => resolve(script);
+        script.onerror = (Err) => reject(new Error(`Script load error for ${src}`));     
+        document.head.append(script); 
       });
     }
     
-    let out = document.getElementById('out');
+    
     let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
     
     promise.then(
-      script => out.innerHTML = `Promise solved: script ${script.src} is loaded!`,
-      error => out.innerHTML = `Promise rejected: Error!<br/> ${error.message}`
-    );
+      script => {  
+        out.innerHTML = `<br/>Promise solved: script ${script.src} is loaded!`;
+      }
+    ).catch(
+      error => {
+         out.innerHTML += `<br/>Promise rejected: Error!<br/> Error Message: ${error.message}`
+      });
     
-    promise.then(script => out.innerHTML += '<br/>Another handler for the same promise ...');
+    promise.then(script => {
+      out.innerHTML += '<br/>Another handler for the same promise ... '
+     }).catch(
+      error => {
+         out.innerHTML += `<br/>Another Handler!<br/>Promise rejected: Error!<br/> Error Message: ${error.message}`
+      }
+    );
     </script>
     
 </body>
