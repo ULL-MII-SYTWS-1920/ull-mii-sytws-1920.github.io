@@ -1,4 +1,4 @@
-# Reto Async Serialize
+# Descripción de la Práctica p8-t2-async-serialize
 
 Se dispone de una función `loadScript` que permite la carga de un script:
 
