@@ -11,15 +11,15 @@
   <script>
     'use strict';
     let script = document.createElement('script');
+    document.head.append(script); 
     let out = document.getElementById('out');
 
     function loadScript(src) {
       return new Promise(function(resolve, reject) {  
         script.src = src;
-    
         script.onload = (e) => resolve(script);
         script.onerror = (Err) => reject(new Error(`Script load error for ${src}`));     
-        document.head.append(script); 
+        
       });
     }
     
@@ -29,6 +29,7 @@
     promise.then(
       script => {  
         out.innerHTML = `<br/>Promise solved: script ${script.src} is loaded!`;
+        console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
       }
     ).catch(
       error => {
@@ -37,6 +38,7 @@
     
     promise.then(script => {
       out.innerHTML += '<br/>Another handler for the same promise ... '
+      console.log(_.times(3, String)); // => ['0', '1', '2']
      }).catch(
       error => {
          out.innerHTML += `<br/>Another Handler!<br/>Promise rejected: Error!<br/> Error Message: ${error.message}`
