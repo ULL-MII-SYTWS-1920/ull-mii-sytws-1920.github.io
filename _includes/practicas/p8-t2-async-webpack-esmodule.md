@@ -23,7 +23,7 @@
     ```js
       import { loadScript, loadScripts, mySeries } from "./lib/solution.js";
     ```
-4. En Webpack cuando estamos aplicando una serie de loaders o de transformaciones a nuestro código, este código que genera esas transformaciones en un código que difiere mucho del que nosotros hemos programado. Por este motivo el debugging de este código se convierte en un problema.  Para facilitar la depuración es conveniente  configurar `/webpack.config.js` con  la opción `devtool` puesta a `eval-cheap-module-source-map`
+4. En Webpack cuando estamos aplicando una serie de loaders o de transformaciones a nuestro código, el código generado dista mucho del original: El debugging se convierte en un problema.  Para facilitar la depuración es conveniente  configurar `/webpack.config.js` con  la opción `devtool` puesta a `eval-cheap-module-source-map`
 
     ```js
     +  devtool: 'eval-cheap-module-source-map',
@@ -39,7 +39,7 @@
     };
    ```
    Un *source map* es una correspondencia que se realiza entre el código original y el código transformado.
-   
+
    Véase [source-map-loader](https://webpack.js.org/loaders/source-map-loader/)
 5. Entregue esta práctica en el mismo repo de la asignación de la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/08p8-t2-async-serialize.html) en una rama `p8-t2-async-webpack-esmodule`
 
