@@ -9,7 +9,7 @@
   *   [Handling errors](https://javascript.info/callbacks#handling-errors)
   *   [Pyramid of Doom](https://javascript.info/callbacks#pyramid-of-doom)
 * [Promises: Basics: https://javascript.info/promise-basics](https://javascript.info/promise-basics)
-  * [load-script con promesas](https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema2-async/exercises/promises/load-script)
+  * [load-script con promesas]({{site.baseurl}}/tema2-async/event-loop/exercises/promises/load-script/README.html)
   * Chuck Norris jokes example (UAI 2015):
     * [index.html](https://github.com/ULL-MII-SYTWS-1920/promise-example/blob/master/index.html)
     * [script.js](https://github.com/ULL-MII-SYTWS-1920/promise-example/blob/master/script.js)

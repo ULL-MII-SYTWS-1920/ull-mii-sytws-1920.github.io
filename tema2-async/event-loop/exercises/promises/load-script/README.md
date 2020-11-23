@@ -1,3 +1,6 @@
+---
+permalink: /tema2-async/event-loop/exercises/promises/load-script/README.html
+---
 # loadScript
 
 Here’s a callback-based function that loads a script from a specified `src` and adds it 
