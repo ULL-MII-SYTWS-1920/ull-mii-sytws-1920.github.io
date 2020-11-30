@@ -2,7 +2,7 @@
 
 In frontend programming promises are often used for network requests. 
 
-We’ll use the `fetch` method to load the information about the user from the remote server. It has a lot of optional parameters covered in separate chapters, but the basic syntax is quite simple:
+We’ll use the `fetch` method to load the information about the user from the remote server. It has a lot of optional parameters covered [here](https://javascript.info/fetch), but the basic syntax is quite simple:
 
 ```js
 let promise = fetch(url);
