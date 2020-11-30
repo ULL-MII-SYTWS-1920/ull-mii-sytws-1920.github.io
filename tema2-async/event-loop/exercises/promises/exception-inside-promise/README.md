@@ -84,7 +84,7 @@ I have these examples here:
 /Users/casiano/campus-virtual/1920/sytws1920/apuntes/tema2-async/exercises/promises/exception-inside-promise
 ```
 
-### Third Exercise: Unhandled Rejection Event
+## Third Exercise: Unhandled Rejection Event
 
 **The "Unhandled rejection" event occurs when a promise error is not handled at the end of the microtask queue.**
 
@@ -135,7 +135,7 @@ Véase también
 [https://javascript.info/microtask-queue#unhandled-rejection](https://javascript.info/microtask-queue#unhandled-rejection)
 para una versión de este programa  en el cliente/browser
 
-### Summarizing
+## Summarizing
 
 1. `.catch` handles errors in promises of all kinds: be it a `reject()` call, or an error thrown in a handler.
 2. We should place `.catch` exactly in places where we want to handle errors and know how to handle them. 
