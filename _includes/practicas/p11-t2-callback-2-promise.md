@@ -1,4 +1,4 @@
-# Reto 3: Convert a function that accepts a callback into a function returning a promise
+# Descripción de la Práctica p11-t2-callback-2-promise
 
 Promisification it’s the conversion of a function that accepts a callback into a function returning a promise.
 
