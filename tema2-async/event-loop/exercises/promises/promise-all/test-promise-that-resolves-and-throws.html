@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        new Promise(function(resolve, reject) {
+            setTimeout(() => {
+                resolve(1)
+            }, 2000);
+            setTimeout(() => {
+                throw Error("Whoops!");
+            }, 1000);
+        }).then(alert) // 1
+        .catch(alert); // Never occurs but after 1s in console appears "Whoops!"
+    </script>
+    
+</body>
+</html>
