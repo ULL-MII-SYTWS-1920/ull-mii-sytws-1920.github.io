@@ -40,12 +40,14 @@
 
         let loadScriptPromise = promisify(loadScript);
 
-        loadScriptPromise("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js").then(
+        let p = loadScriptPromise("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js").then(
             (r) => {
                 console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
                 alert("script loaded");
             }
         ).catch(alert);
+
+        console.log(p);
 
     </script>
 </body>
