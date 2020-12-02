@@ -1,4 +1,4 @@
-# Descripción de la Práctica p10-t2-promise-all
+# Descripción de la Práctica p10-t2-promise-allsettled
 
 `Promise.all` rejects as a whole if any promise rejects. That’s good for *all or nothing* cases, when we need all results successful to proceed:
 
