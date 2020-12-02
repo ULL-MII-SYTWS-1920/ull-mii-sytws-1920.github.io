@@ -37,10 +37,11 @@ and  returns a function that returns the equivalent `Promise` object
 
         let loadScriptPromise = promisify(loadScript);
 
-        loadScriptPromise("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js").then(
+        loadScriptPromise(
+         "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"
+        ).then(
             (r) => alert("script loaded")
         ).catch(alert);
-
     </script>
 </body>
 
