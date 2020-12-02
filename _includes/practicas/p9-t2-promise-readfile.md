@@ -8,3 +8,6 @@ readFilePromise(programName, 'utf8')
   .catch(error => console.log('Error:\n'+error));
 ```
 
+## See
+
+`tema2-async/practicas/p9-t2-promise-readfile/solution`
