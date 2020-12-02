@@ -91,4 +91,5 @@ Handling failure requires some thought but turns out to be extremely simple. Jus
 
 ## See
 
-`tema2-async/practicas/p10-t2-promise-all/`
+* `tema2-async/practicas/p10-t2-promise-all/`
+* This lab is duplicated at [Reto 1: Building Promise.all]({{site.baseurl}}/tema2-async/practicas/p3-t2-handling-events/reto2.html)
