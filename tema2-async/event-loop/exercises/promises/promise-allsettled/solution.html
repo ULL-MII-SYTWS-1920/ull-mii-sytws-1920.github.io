@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise.allSettled</title>
+</head>
+
+<body>
+    <h1>Open the Developer tools</h1>
+    <script>
+        const rejectHandler = reason => ({
+            status: 'rejected',
+            reason
+        });
+
+        const resolveHandler = value => ({
+            status: 'fulfilled',
+            value
+        });
+
+        const PromiseAllSettled = function (promises) {
+            const convertedPromises = promises.map(
+                p => Promise.resolve(p).then(
+                    resolveHandler,
+                    rejectHandler)
+            );
+            return Promise.all(convertedPromises);
+        };
+
+        let urls = [
+            'https://api.github.com/users/iliakan',
+            'https://api.github.com/users/remy',
+            'https://no-such-url'
+        ];
+
+        PromiseAllSettled(urls.map(url => fetch(url)))
+            .then(results => { // (*)
+                results.forEach((result, num) => {
+                    if (result.status == "fulfilled") {
+                        console.log(`${urls[num]}: ${result.value.status}`);
+                    }
+                    if (result.status == "rejected") {
+                        console.log(`Uhm! "${urls[num]}" not reachable:\n${result.reason}`);
+                    }
+                });
+            });
+    </script>
+</body>
+
+</html>
