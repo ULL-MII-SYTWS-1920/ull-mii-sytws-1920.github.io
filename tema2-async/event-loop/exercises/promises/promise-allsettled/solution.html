@@ -24,8 +24,7 @@
         const PromiseAllSettled = function (promises) {
             const convertedPromises = promises.map(
                 p => Promise.resolve(p).then(
-                    resolveHandler,
-                    rejectHandler)
+                    resolveHandler, rejectHandler)
             );
             return Promise.all(convertedPromises);
         };
