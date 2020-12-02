@@ -98,3 +98,7 @@ undefined
 7
 undefined
 ```
+
+## See
+
+`tema2-async/event-loop/exercises/promises/promisify/`
