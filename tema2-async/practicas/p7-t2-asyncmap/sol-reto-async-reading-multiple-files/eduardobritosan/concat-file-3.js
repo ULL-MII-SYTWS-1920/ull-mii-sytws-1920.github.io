@@ -18,14 +18,20 @@ function asyncMap(coll, iteratee, finalCallback){
     let arrayValues = []
     let counter = {i:0};
     coll.forEach((element, index) => {
-        iterateeReadFile(element, iteratee, arrayValues, index, counter, coll.length, finalCallback);
+        iterateeReadFile(element, 
+          iteratee, 
+          arrayValues, 
+          index, 
+          counter, 
+          coll.length, 
+          finalCallback);
     });
 }
 
 function iterateeReadFile(item, cb, arrayOfParent, loopIndex, counter, collSize, finalCallback){
     cb(item, (err, data) => {
         if (err){
-            finalCallback(err, null)
+            return finalCallback(err, null)
         }
         arrayOfParent[loopIndex] = data;
         counter.i += 1;
