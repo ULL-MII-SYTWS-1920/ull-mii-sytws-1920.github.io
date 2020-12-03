@@ -136,8 +136,12 @@ Puede simular que los scripts son de distinto tamaño **retrasando la iniciació
 * [A pure ESM version of Async](https://www.npmjs.com/package/async-es)
 * [Webpack: Getting started](https://webpack.js.org/guides/getting-started/)
 * [Webpack devserver](https://webpack.js.org/configuration/dev-server/)
+
+## Soluciones
+
 * [Solución](https://github.com/ULL-ESIT-PL/async-js-series-webpack-private/blob/private/load-scripts.html)
-  * ```
+* ```
       [~/.../load-script-seq(private)]$ pwd -P
       /Users/casiano/local/src/javascript/learning/async/load-script-seq
-    ```
+  ```
+* `/Volumes/2020/sytws/sytws2021/p8-t2-async-serialize-12-03-2020-09-16-48/alu0101040882` Daniel Labena
