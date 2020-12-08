@@ -665,7 +665,7 @@ jobs:
 
 ## References
 
-* [A quick demo showing how to use GitHub Actions to build, package, and publish Node.js modules to the NPM and GitHub package registries]({{site.baseurl}}/tema1-introduccion-a-javascript/github-action-npm-publish) 
+* [A quick demo showing how to use GitHub Actions to build, package, and publish Node.js modules to the NPM and GitHub package registries](github-action-npm-publish) 
 * [An Introduction to Github Actions](https://gabrieltanner.org/blog/an-introduction-to-github-actions)
 * [Using GitHub Actions](/https://youtu.be/9O2sLm1Boxc) Youtube video explainig how to test and publish an npm module to both GH Registry and npm Registry
 * [About the editor for GitHub Actions](https://github.blog/2019-10-01-new-workflow-editor-for-github-actions/)
