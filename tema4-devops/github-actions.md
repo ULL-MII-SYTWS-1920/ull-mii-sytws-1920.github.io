@@ -171,7 +171,7 @@ The metadata filename must be either `action.yml` or `action.yaml`.
 
 ### The `release` event
 
-* See [GitHub Releases]({{site.baseurl}}/tema1-introduccion-a-javascript/releases.html)
+* See [GitHub Releases](releases.html)
 
 ## Runner
 
