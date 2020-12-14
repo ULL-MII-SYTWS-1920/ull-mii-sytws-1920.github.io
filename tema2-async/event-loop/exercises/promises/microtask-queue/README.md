@@ -39,7 +39,7 @@ Will produce as output: `"0\n1\n2\n"`
 
 Microtasks are used *under the cover* of `await` as well, as it's another form of promise handling.
 
-## Question
+## Question 1
 
 What is the output of this program?
 
@@ -47,9 +47,9 @@ What is the output of this program?
 {% include_relative promise-job-queue.js %}
 ```
 
-## Solution
+## Solution 1
 
-* [Solution](solution.md)
+* [Solution 1](solution.md)
 
 ## Explanations
 
@@ -74,3 +74,14 @@ All microtasks are completed before any other event handling or **rendering** or
 
 
 That's important, **as it guarantees that the application environment is basically the same (no mouse coordinate changes, no new network data, etc) between microtasks**.
+
+## Question 2
+
+What is the output of this program?
+
+```js
+{% include_relative promise-job-queue-2.js %}
+```
+## Solution 2
+
+* [Solution 2](solution-2.md)
