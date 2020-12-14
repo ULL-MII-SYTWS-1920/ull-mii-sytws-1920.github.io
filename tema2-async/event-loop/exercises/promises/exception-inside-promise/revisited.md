@@ -29,11 +29,10 @@ Now we can see exactly how JavaScript finds out that there was an unhandled reje
 
 Normally, if we expect an error, we add `.catch` to the promise chain to handle it:
 
-```js run
+```js
 let promise = Promise.reject(new Error("Promise Failed!"));
-*!*
+
 promise.catch(err => alert('caught'));
-*/!*
 
 // doesn't run: error handled
 window.addEventListener('unhandledrejection', event => alert(event.reason));
