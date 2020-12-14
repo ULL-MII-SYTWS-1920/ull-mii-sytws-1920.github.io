@@ -85,3 +85,10 @@ What is the output of this program?
 ## Solution 2
 
 * [Solution 2](solution-2.md)
+
+## Referencias (Read also)
+
+* [Stack Overflow: macrotask queue and microtask queue priority](https://stackoverflow.com/questions/55200324/macrotask-queue-and-microtask-queue-priority)
+* [The JavaScript event loop: micro-tasks and macro-tasks](https://www.imaginea.com/the-javascript-event-loop-micro-tasks-and-macro-tasks/)  by Siddharth Jain (2019)
+* [The blog ddcode.net: Analysis of Microtask and Macrotask in JS event cycle. 2019](https://ddcode.net/2019/06/20/analysis-of-microtask-and-macrotask-in-js-event-cycle/)
+* [Chapter Event loop: microtasks and macrotasks](https://javascript.info/event-loop#macrotasks-and-microtasks) from the javascript.info book
