@@ -71,6 +71,8 @@ promise.then(function(resolve) {console.log(3)});
 console.log('b');
 ```
 
+For more see []()
+
 ### Unhandled Promise Rejection
 
 `unhandled-promise-rejection.js`
