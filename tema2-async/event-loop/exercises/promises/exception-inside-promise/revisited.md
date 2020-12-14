@@ -1,4 +1,4 @@
-Remember the `unhandledrejection` event from the [exercise](index.html) ?
+Remember the `unhandledrejection` event from the [exceptions exercise](index.html)?
 
 ```js
 #!/usr/bin/env node
