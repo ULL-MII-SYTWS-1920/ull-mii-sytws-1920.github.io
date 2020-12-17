@@ -77,7 +77,7 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
 
 * Chapter [Generators](https://javascript.info/generators) of JavaScript.info
 * See the Node.js doc [Modules: Packages](https://nodejs.org/api/packages.html#packages_determining_module_system) for more details on the use of ECMA 6 Modules in Node.js.
-* [ULL-MII-SYTWS-2021/learning-generators](https://github.com/ULL-MII-SYTWS-2021/learning-generators)
+* [ULL-MII-SYTWS-2021/learning-generators](https://github.com/ULL-MII-SYTWS-2021/learning-generators) (Private)
   * campus-virtual/2021/learning/asyncjs-learning/learning-generators
 * [How Can I use en es6 Import in Node.JS](https://stackoverflow.com/questions/45854169/how-can-i-use-an-es6-import-in-node-js#:~:text=You%20can%20also%20use%20npm,import%20in%20your%20JavaScript%20files.
 ) Stackoverflow
