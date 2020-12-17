@@ -36,6 +36,9 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
 └── package.json
 ```
 
+Surely you are going to have a look at the chapter [Iterables](https://javascript.info/iterable)
+
+
 ## Additionally:
 
 1. Study and solve the exercise [Groups](https://eloquentjavascript.net/06_object.html#group_iterator) in the book EloquentJS Chapter 6
@@ -109,6 +112,7 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
 
 ## See
 
+* Chapter [Iterables](https://javascript.info/iterable)
 * Chapter [Generators](https://javascript.info/generators) of JavaScript.info
 * See the Node.js doc [Modules: Packages](https://nodejs.org/api/packages.html#packages_determining_module_system) for more details on the use of ECMA 6 Modules in Node.js.
 * [ULL-MII-SYTWS-2021/learning-generators](https://github.com/ULL-MII-SYTWS-2021/learning-generators) (Private)
