@@ -2,7 +2,7 @@
 
 ## Description
 
-Read the chapter [Generators](https://javascript.info/generators) of JavaScript.info reproducing the examples and exercises. Submit a report. Here is an example of how to organize the report:
+Read the chapter [Generators](https://javascript.info/generators) of JavaScript.info reproducing the examples and exercises. Submit a report. Here is an example of how to organize your report:
 
 ```
 ➜  learning-generators git:(master) tree 
@@ -106,7 +106,7 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
     ```
 
   Leave your solution in the folder `03-using-generators-for-iterables`
-  
+
 ## See
 
 * Chapter [Generators](https://javascript.info/generators) of JavaScript.info
