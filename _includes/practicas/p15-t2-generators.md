@@ -33,10 +33,9 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
     ```
 
     See the Node.js doc [Modules: Packages](https://nodejs.org/api/packages.html#packages_determining_module_system) for more details on the use of ECMA 6 Modules in Node.js.
-3. Simplify the solution to making the `Group` class iterable using a generator instead of a plain iterator as suggested in [Chapter 11 of the book Eloquent JS](https://eloquentjavascript.net/11_async.html#h_o+cFzGGhnz)
-4. Here is a template for the class `Group`:
+3. Here is a template for the class `Group`:
 
-  ```js
+    ```js
     class Group {
         constructor() {
             // ... your code 
@@ -61,7 +60,18 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
     }
 
     export { Group };
-  ```
+    ```
+3. Simplify the solution to making the `Group` class iterable using a generator instead of a plain iterator as suggested in [Chapter 11 of the book Eloquent JS](https://eloquentjavascript.net/11_async.html#h_o+cFzGGhnz)
+
+    > Writing iterators is often much easier when you use generator functions. The iterator for the Group class  can be written with this generator:
+
+    ```js
+    Group.prototype[Symbol.iterator] = function*() {
+    for (let i = 0; i < this.members.length; i++) {
+        yield this.members[i];
+    }
+    };
+    ```
 
 ## See
 
