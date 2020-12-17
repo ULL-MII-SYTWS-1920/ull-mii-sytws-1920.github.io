@@ -31,9 +31,13 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
     // → b
     // → c
     ```
+
+    See the Node.js doc [Modules: Packages](https://nodejs.org/api/packages.html#packages_determining_module_system) for more details on the use of ECMA 6 Modules in Node.js.
 3. Simplify the solution to making the `Group` class iterable using a generator instead of a plain iterator as suggested in [Chapter 11 of the book Eloquent JS](https://eloquentjavascript.net/11_async.html#h_o+cFzGGhnz)
 
 ## See
 
 * Chapter [Generators](https://javascript.info/generators) of JavaScript.info
 * See the Node.js doc [Modules: Packages](https://nodejs.org/api/packages.html#packages_determining_module_system) for more details on the use of ECMA 6 Modules in Node.js.
+* [ULL-MII-SYTWS-2021/learning-generators](https://github.com/ULL-MII-SYTWS-2021/learning-generators)
+  * campus-virtual/2021/learning/asyncjs-learning/learning-generators
