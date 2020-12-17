@@ -36,7 +36,7 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
 └── package.json
 ```
 
-Surely you are going to have a look at the chapter [Iterables](https://javascript.info/iterable)
+Surely you are going to have a look at the chapter [Iterables](https://javascript.info/iterable). You can add the examples and exercises of the [Iterables](https://javascript.info/iterable) chapter to the report.
 
 
 ## Additionally:
