@@ -2,7 +2,39 @@
 
 ## Description
 
-Read the chapter [Generators](https://javascript.info/generators) of JavaScript.info reproducing the examples and exercises.
+Read the chapter [Generators](https://javascript.info/generators) of JavaScript.info reproducing the examples and exercises. Submit a report. Here is an example of how to organize the report:
+
+```
+➜  learning-generators git:(master) tree 
+.
+├── 00-symbol-iterator
+│   └── hello-symbol-iterator.js
+├── 01-generator-functions
+│   └── hello-generators.js
+├── 02-generators-are-iterable
+│   ├── hello-generators-2.js
+│   └── spread.js
+├── 03-using-generators-for-iterables
+│   ├── README.md
+│   ├── eloquent-js-6-2-group-with-generators.js
+│   ├── iterator-revisited.js
+│   ├── main-eloquent-js-6-2-group-with-generators.js
+│   └── package.json
+├── 04-generator-composition
+│   └── hello-composition.js
+├── 05-yield-is-a-two-way-street
+│   └── hello-entry-argument.js
+├── 06-yield-is-a-two-way-street
+│   └── hello-entry-argument.js
+├── 07-generator-throw
+│   └── hello-throw.js
+├── 08-tasks-pseudo-random-generator
+│   ├── README.md
+│   ├── package.json
+│   └── solution.js
+├── README.md
+└── package.json
+```
 
 ## Additionally:
 
@@ -73,6 +105,8 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
     };
     ```
 
+  Leave your solution in the folder `03-using-generators-for-iterables`
+  
 ## See
 
 * Chapter [Generators](https://javascript.info/generators) of JavaScript.info
