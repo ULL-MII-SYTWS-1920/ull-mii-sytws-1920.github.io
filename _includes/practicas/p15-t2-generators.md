@@ -7,9 +7,9 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
 ```
 ➜  learning-generators git:(master) tree 
 .
-├── 00-symbol-iterator
+├── 00-symbol-iterator # For lesson https://javascript.info/iterable
 │   └── hello-symbol-iterator.js
-├── 01-generator-functions
+├── 01-generator-functions # Section "Generator Functions"
 │   └── hello-generators.js
 ├── 02-generators-are-iterable
 │   ├── hello-generators-2.js
