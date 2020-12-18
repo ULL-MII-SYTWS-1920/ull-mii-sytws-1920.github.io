@@ -104,7 +104,7 @@ Surely you are going to have a look at the chapter [Iterables](https://javascrip
     Group.prototype[Symbol.iterator] = function*() {
         for (let i = 0; i < this.members.length; i++) {
             yield this.members[i];
-    }
+        }
     };
     ```
 
