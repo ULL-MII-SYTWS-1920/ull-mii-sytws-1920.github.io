@@ -39,7 +39,7 @@ Read the chapter [Generators](https://javascript.info/generators) of JavaScript.
 Surely you are going to have a look at the chapter [Iterables](https://javascript.info/iterable). You can add the examples and exercises of the [Iterables](https://javascript.info/iterable) chapter at the beginning of the report.
 
 
-## Additionally:
+## Exercise *Groups* in the book EloquentJS Chapter 6
 
 1. Study and solve the exercise [Groups](https://eloquentjavascript.net/06_object.html#group_iterator) in the book EloquentJS Chapter 6
 2. Study an solve the **Iterable groups** extension of the exercise [Groups in EloquentJS Chapter 6](https://eloquentjavascript.net/06_object.html#group_iterator) making the `Group` class from the previous exercise iterable
@@ -108,7 +108,7 @@ Surely you are going to have a look at the chapter [Iterables](https://javascrip
     };
     ```
 
-  Leave your solution in the folder `03-using-generators-for-iterables`
+  Leave your solution to this exercise inside the folder corresponding to section `03-using-generators-for-iterables`
 
 ## See
 
