@@ -60,7 +60,7 @@ Surely you are going to have a look at the chapter [Iterables](https://javascrip
     // → false
 
     for (let value of Group.from(['a', 'b', 'c'])) {
-    console.log(value);
+      console.log(value);
     }
     // → a
     // → b
