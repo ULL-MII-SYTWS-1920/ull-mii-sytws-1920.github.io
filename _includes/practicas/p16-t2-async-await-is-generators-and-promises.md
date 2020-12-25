@@ -121,7 +121,7 @@ We need a function `waiter` that can control the iterator of this generator func
 
 ## Write the Function Controlling the Execution of the Generator
 
-Write the `waiter` function:
+Write the `waiter(generator, arg)` function that that creates the `iterator` from the `generator` and returns a function  that traverses the `iterator` but proceeding with an iteration only when the promise returned by the previous call to `iterator.next()` has been fulfilled. It will be used like this:
 
 ```js
 function waiter(genFun, arg) {
