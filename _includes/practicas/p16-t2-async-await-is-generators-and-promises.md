@@ -109,7 +109,7 @@ function* init(arg) {
 }
 ```
 
-Notice how this generator function resembles our async function! If you change yield` for `await` is the same code!
+Notice how this generator function resembles our async function! If you change `yield` for `await` is the same code!
 
 ## A Function Controlling the Execution of the Generator
 
