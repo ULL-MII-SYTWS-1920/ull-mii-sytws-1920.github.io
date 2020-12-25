@@ -143,7 +143,7 @@ So that, when we run it with the generator above, we obtain:
 8
 ```
 
-Heres is a [solution](example.js)
+Heres is a [solution](solutions/p16-t2-async-await-is-generators-and-promises)
 
 ## See
 
