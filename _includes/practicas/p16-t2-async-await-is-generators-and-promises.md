@@ -148,3 +148,5 @@ Heres is a [solution](solutions/p16-t2-async-await-is-generators-and-promises)
 ## See
 
 * [Async-Await ≈ Generators + Promises](https://hackernoon.com/async-await-generators-promises-51f1a6ceede2) at [https://hackernoon.com/](https://hackernoon.com/)  Cha on July 26th 2017
+* [Solution](solutions/p16-t2-async-await-is-generators-and-promises) to this problem
+* [Folder `07-async-await-equal-generators-plus-promises` at Repo ULL-MII-SYTWS-2021/learning-async-iteration-and-generators](https://github.com/ULL-MII-SYTWS-2021/learning-async-iteration-and-generators/tree/main/07-async-await-equal-generators-plus-promises)
