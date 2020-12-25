@@ -121,7 +121,7 @@ We need a function `waiter` that can control the iterator of this generator func
 
 It sounds complicated, but takes only a few lines to implement.
 
-## Write the `waiter` function
+## Write the Function Controlling the Execution of the Generator
 
 Write the `waiter` function:
 
