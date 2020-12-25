@@ -119,8 +119,6 @@ We need a function `waiter` that can control the iterator of this generator func
 1. Halt every time a promise is yielded and 
 2. Proceeds once the promise resolves (or rejects). 
 
-It sounds complicated, but takes only a few lines to implement.
-
 ## Write the Function Controlling the Execution of the Generator
 
 Write the `waiter` function:
@@ -142,6 +140,8 @@ So that, when we run it with the generator above, we obtain:
 5
 8
 ```
+
+It sounds complicated, but takes only a few lines to implement.
 
 Heres is a [solution](solutions/p16-t2-async-await-is-generators-and-promises)
 
