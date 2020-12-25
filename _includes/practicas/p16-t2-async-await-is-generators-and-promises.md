@@ -75,6 +75,7 @@ Well, the most important insight here is that the **generator-functions can yiel
 
 This pattern of weaving a an iterator with yielded promises allows us to model our requirement like this:
 
+<a id="generator"></a>
 ```js
 function doTask1(arg) {
     return new Promise((resolve, reject) => {
@@ -108,7 +109,7 @@ function* init(arg) {
 }
 ```
 
-Notice how this generator function resembles our async function!
+Notice how this generator function resembles our async function! If you change yield` for `await` is the same code!
 
 ## A Function Controlling the Execution of the Generator
 
@@ -121,7 +122,7 @@ We need a function `waiter` that can control the iterator of this generator func
 
 ## Write the Function Controlling the Execution of the Generator
 
-Write the `waiter(generator, arg)` function that that creates the `iterator` from the `generator` and returns a function  that traverses the `iterator` but proceeding with an iteration only when the promise returned by the previous call to `iterator.next()` has been fulfilled. It will be used like this:
+Write a function `waiter(generator, arg)` that creates and `iterator`  by calling `generator(arg)` and returns a function  that traverses the `iterator` but proceeding with an iteration only when the promise returned by the previous call to `iterator.next()` has been fulfilled. It will be used like this:
 
 ```js
 function waiter(genFun, arg) {
@@ -132,7 +133,7 @@ const doIt = waiter(init, 3);
 doIt();
 ```
 
-So that, when we run it with the generator above, we obtain:
+So that, when we run it with the [generator above](#generator), we obtain:
 
 ```
 ➜  learning-async-iteration-and-generators git:(main) ✗ node 07-async-await-equal-generators-plus-promises/example.js 
