@@ -1,6 +1,6 @@
 ---
 layout: post
-name: 05p5-t1-meta
+name: p5-t1-meta
 myurl: /tema1-introduccion/practicas/p5-t1-meta/
 visible: true
 date: 0000-01-05

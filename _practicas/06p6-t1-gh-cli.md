@@ -1,6 +1,6 @@
 ---
 layout: post
-name: 06p6-t1-gh-cli
+name: p6-t1-gh-cli
 myurl: /tema1-introduccion/practicas/p6-t1-gh-cli/
 visible: true
 date: 0000-01-06

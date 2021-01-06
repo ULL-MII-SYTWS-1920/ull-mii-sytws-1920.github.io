@@ -2,12 +2,12 @@
 
 1. Lea el tutorial [Getting Started
 ](https://webpack.js.org/guides/getting-started/)
-2. Aplique lo aprendido en el tutorial a la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/08p8-t2-async-serialize.html) para cargar el módulo [async.js](https://caolan.github.io/async/v3/)
+2. Aplique lo aprendido en el tutorial a la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/p8-t2-async-serialize.html) para cargar el módulo [async.js](https://caolan.github.io/async/v3/)
    
       ```js
       import async from 'async-es';
       ```
-3. Reescriba su solución a la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/08p8-t2-async-serialize.html) en un módulo `src/lib/solution.js`
+3. Reescriba su solución a la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/p8-t2-async-serialize.html) en un módulo `src/lib/solution.js`
 
     ```
       [~/.../async/load-script-seq(private)]$ tree src
@@ -42,7 +42,7 @@
    Un *source map* es una correspondencia que se realiza entre el código original y el código transformado.
 
    Véase [source-map-loader](https://webpack.js.org/loaders/source-map-loader/)
-6. Entregue esta práctica en el mismo repo de la asignación de la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/08p8-t2-async-serialize.html) en una rama `p8-t2-async-webpack-esmodule`
+6. Entregue esta práctica en el mismo repo de la asignación de la práctica [anterior p8-t2-async-serialize]({{site.baseurl}}/practicas/p8-t2-async-serialize.html) en una rama `p8-t2-async-webpack-esmodule`
 
 ## Referencias
 
