@@ -131,7 +131,7 @@ item =  { value: 'a', index: 0, status: 'fulfilled' }
 item =  { reason: 'Ohhh:\n', index: 4, status: 'rejected' }
 ```
 
- ## Compare the Performance of your solution with the performance of  allSettled
+## Compare the Performance of your solution with the performance of  allSettled
 
  Write  a program to compare the performance of your solution with the performance of [Promise.allSettled](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled). 
 
