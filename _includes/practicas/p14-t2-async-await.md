@@ -118,8 +118,14 @@ demoGithubUser();
 * See [The Error Class at MDN: The constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#constructor)
 * The GitHub API doc for the end-point to get the public info for an user is here [GitHub API REST Docs: Get a User](https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-a-user)
 
+  ```
+  gh api /users/crguezl | jq .name
+  ```
+
+  or
+
    ```
-   url \
+   curl \
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/users/crguezl
   ```
