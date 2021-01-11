@@ -146,18 +146,18 @@ demoGithubUser();
   }
 
   getUsername('crguezl').then(r => console.log(r.data.name));
-```
+  ```
 
-when we run it:
+  when we run it:
 
-```
+  ```
   ➜  hello-octokit git:(master) pwd
   /Users/casianorodriguezleon/campus-virtual/2021/learning/octokit-learning/hello-octokit
   ➜  hello-octokit git:(master) node --version         
   v14.4.0
   ➜  hello-octokit git:(master) node octokit-example.js
   Casiano Rodriguez-Leon
-```
+  ```
 * Solution at `/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/solution-more-complex-example.html`
 
 ## Call async from non-async
