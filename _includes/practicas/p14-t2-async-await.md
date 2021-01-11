@@ -12,6 +12,8 @@ What is the output of this program?
 
 Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take photos of them and upload them to the assignment repo
 
+* Solution at: `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue/promise-job-queue-2.js`
+
 ## Rewrite a `fetch` using async/await instead of promises
 
 Rewrite this example code from the [Javascript.info book](https://javascript.info/promise-chaining#bigger-example-fetch) using `async/await` instead of `.then/catch`:
