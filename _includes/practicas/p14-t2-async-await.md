@@ -20,7 +20,7 @@ Explain the changes in the stack, the running environment, the macrotask queue a
 
 The following example is taken from a stackoverflow question
 
-* [setTimeout / Promise.resolve: Macrotask vs Microtask](stackoverflow-promise-resolve-and-queues.js)
+* [setTimeout / Promise.resolve: Macrotask vs Microtask](https://stackoverflow.com/questions/51793906/settimeout-promise-resolve-macrotask-vs-microtask)
 
 Don't look at the debate yet.
 Also, try to answer this question before running the code.
