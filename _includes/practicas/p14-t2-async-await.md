@@ -122,7 +122,7 @@ demoGithubUser();
   gh api /users/crguezl | jq .name
   ```
 
-  or
+  or with `curl`
 
    ```
    curl \
@@ -147,6 +147,8 @@ demoGithubUser();
 
   getUsername('crguezl').then(r => console.log(r.data.name));
 ```
+
+when we run it:
 
 ```
   ➜  hello-octokit git:(master) pwd
