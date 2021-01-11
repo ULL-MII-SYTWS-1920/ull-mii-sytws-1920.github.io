@@ -115,6 +115,7 @@ function f() {
 ## See
 
 * [JavaScript.Info book: Bigger example: fetch](https://javascript.info/promise-chaining#bigger-example-fetch)
-* `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue`
-* `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await`
+* For the solutions:
+  * `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue`
+  * `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await`
 
