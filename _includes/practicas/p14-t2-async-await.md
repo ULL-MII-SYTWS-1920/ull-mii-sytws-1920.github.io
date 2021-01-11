@@ -12,7 +12,7 @@ What is the output of this program?
 {% include practicas/promise-job-queue-2.js %}
 ```
 
-Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take photos of them and upload them to the assignment repo
+Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take screenshots of them and upload them to the assignment repo
 
 * Code at: `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue/promise-job-queue-2.js`
 
@@ -41,9 +41,9 @@ for (let i = 0; i < 2; i++) {
 }
 ```
 
-Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take photos of them and upload them to the assignment repo
+Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take screenshots of them and upload them to the assignment repo
 
-* Solution at: `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue/promise-job-queue-2.js`
+* Solution at: `tema2-async/event-loop/exercises/promises/async-await/stackoverflow-promise-resolve-and-queues.js`
 
 ## Rewrite a `fetch` using async/await instead of promises
 
