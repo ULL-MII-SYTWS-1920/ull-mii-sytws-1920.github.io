@@ -23,7 +23,7 @@ async function loadJson(url) {
 async function demoGithubUser() {
   let user;
   while(true) {
-    let name = prompt("Enter a name?", "iliakan") || "iliakan" ;
+    let name = prompt("Enter a name?", "iliakan") || "iliakan" /* in case you press cancel */;
 
     try {
       user = await loadJson(`https://api.github.com/users/${name}`);
