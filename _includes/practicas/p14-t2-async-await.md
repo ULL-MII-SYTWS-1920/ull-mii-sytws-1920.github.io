@@ -1,5 +1,7 @@
 # Descripción de la Práctica p14-t2-async-await
 
+Read chapter [Async/Await](https://javascript.info/async-await) and make a report using the GitHub Classroom assigned repo. Solve the exercises.
+
 ## Exercise: MicroTask and MacroTask Queues
 
 Answer this question before running the program.
@@ -32,6 +34,9 @@ function loadJson(url) {
 
 loadJson('no-such-user.json').catch(console.log); // Error: 404
 ```
+
+* Solution at `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/solution-2-rewrite-loadjson-using-async-await.html`
+
 ## Simplify a more complex example with async/await
 
 Below you can find another exercise from the [book javascript.info](https://javascript.info/promise-chaining#bigger-example-fetch). 
