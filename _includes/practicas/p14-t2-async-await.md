@@ -135,17 +135,17 @@ demoGithubUser();
   ```js
   const { Octokit } = require("@octokit/core");
 
-const octokit = new Octokit({ 
-  // auth: `personal-access-token123` 
- });
+  const octokit = new Octokit({ 
+    // auth: `personal-access-token123` 
+  });
 
-async function getUsername(name) {
-  return await octokit.request('GET /users/{username}', {
-    username: name
-  })
-}
+  async function getUsername(name) {
+    return await octokit.request('GET /users/{username}', {
+      username: name
+    })
+  }
 
-getUsername('crguezl').then(r => console.log(r.data.name));
+  getUsername('crguezl').then(r => console.log(r.data.name));
 ```
 * Solution at `/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/solution-more-complex-example.html`
 
