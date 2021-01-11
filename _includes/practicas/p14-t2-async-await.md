@@ -85,6 +85,8 @@ function demoGithubUser() {
 demoGithubUser();
 ```
 
+* Solution at `/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/github.html``
+
 ## Call async from non-async
 
 Here is another exercise from the [JavaScript.Info book](https://javascript.info/async-await#call-async-from-non-async). As the book says, it is a task that solves a quite common for developers new to async/await.
@@ -106,6 +108,8 @@ function f() {
   // remember, we can't use "await"
 }
 ```
+
+* Solution at `tema2-async/event-loop/exercises/promises/async-await/solution-call-async-from-nonasync.html`
 
 ## See
 
