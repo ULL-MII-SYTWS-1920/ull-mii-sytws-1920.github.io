@@ -28,7 +28,17 @@ Also, try to answer this question before running the code.
 What is the output of this program?
 
 ```js
-{% include practicas/stackoverflow-promise-resolve-and-queues.js %}
+// See https://stackoverflow.com/questions/51793906/settimeout-promise-resolve-macrotask-vs-microtask
+for (let i = 0; i < 2; i++) {
+	setTimeout(() => {
+		console.log("Timeout ", i);
+		Promise.resolve().then(() => {
+			console.log("Promise 1 ", i);
+		}).then(() => {
+			console.log("Promise 2 ", i);
+		});
+	})
+}
 ```
 
 Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take photos of them and upload them to the assignment repo
