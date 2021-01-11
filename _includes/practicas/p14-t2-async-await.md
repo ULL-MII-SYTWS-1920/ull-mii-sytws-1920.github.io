@@ -116,7 +116,7 @@ demoGithubUser();
 
 * See Section [Custom errors, extending Error](https://javascript.info/custom-errors). It is worth to read the [full chapter Error Handling](https://javascript.info/error-handling)
 * See [The Error Class at MDN: The constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#constructor)
-* The GitHub API doc for the end-point to get the public info for an user is here [GitHub API REST Docs: Get a User](https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-a-user)
+* The GitHub API doc for the end-point to get the public info for an user is here [GitHub API REST Docs: Get a User](https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-a-user). Here are several examples of how to get the info:
 
   ```
   gh api /users/crguezl | jq .name
@@ -129,6 +129,24 @@ demoGithubUser();
   -H "Accept: application/vnd.github.v3+json" \
   https://api.github.com/users/crguezl
   ```
+
+  or using the `@octokit/core`module:
+
+  ```js
+  const { Octokit } = require("@octokit/core");
+
+const octokit = new Octokit({ 
+  // auth: `personal-access-token123` 
+ });
+
+async function getUsername(name) {
+  return await octokit.request('GET /users/{username}', {
+    username: name
+  })
+}
+
+getUsername('crguezl').then(r => console.log(r.data.name));
+```
 * Solution at `/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/solution-more-complex-example.html`
 
 ## Call async from non-async
