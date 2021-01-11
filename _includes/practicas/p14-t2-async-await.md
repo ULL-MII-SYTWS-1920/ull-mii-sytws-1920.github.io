@@ -2,7 +2,7 @@
 
 Read chapter [Async/Await](https://javascript.info/async-await) and make a report using the GitHub Classroom assigned repo. Solve the exercises.
 
-## Exercise: MicroTask and MacroTask Queues
+## Exercise 1: MicroTask and MacroTask Queues
 
 Answer this question before running the program.
 
@@ -10,6 +10,25 @@ What is the output of this program?
 
 ```js
 {% include practicas/promise-job-queue-2.js %}
+```
+
+Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take photos of them and upload them to the assignment repo
+
+* Code at: `campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue/promise-job-queue-2.js`
+
+## Exercise 2: MicroTask and MacroTask Queues
+
+The following example is taken from a stackoverflow question
+
+* [setTimeout / Promise.resolve: Macrotask vs Microtask](stackoverflow-promise-resolve-and-queues.js)
+
+Don't look at the debate yet.
+Also, try to answer this question before running the code.
+
+What is the output of this program?
+
+```js
+{% include practicas/stackoverflow-promise-resolve-and-queues.js %}
 ```
 
 Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take photos of them and upload them to the assignment repo
