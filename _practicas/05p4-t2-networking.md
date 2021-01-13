@@ -1,7 +1,10 @@
 ---
 name: p4-t2-networking
 myurl: /tema2-async/practicas/p4-t2-networking/
-date: 3000-01-02
+layout: post
+visible: true
+date: 0000-01-19
 ---
 
-Lea el Capítulo 3 “Networking with Sockets” de Node.JS The Right Way y resuelva los problemas en la secciónes Testability y Robustness
+{% include practicas/p4-t2-networking.md %}
+
