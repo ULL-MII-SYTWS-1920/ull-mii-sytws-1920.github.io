@@ -24,7 +24,7 @@ Estudie también y desarrolle el ejemplo explicado en:
 
 * Add *{user} is typing ...* functionality.
 
-![user is typing](reto-user-is-typing.png)
+![user is typing]({{site.baseurl}}/assets/images/reto-user-is-typing.png)
 
 ### Tip: Decida en que lugar del documento saldrá el mensaje `... is typing`
 
