@@ -57,6 +57,12 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
 
 {% include rest-clients.md %}
 
+## Moleculer
+
+* [Moleculer services](https://moleculer.services/)
+* [Repo de TFM de Alexis](https://github.com/PAL-ULL/tfm-2021-alexrcas) (Usamos Moleculer)
+
+
 ## Pagination in the REST API
 
 * [Pagination in the REST API](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/)
