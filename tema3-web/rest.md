@@ -62,6 +62,24 @@ Use RequestBin to see what your HTTP client is sending or to inspect and debug w
 * [Moleculer services](https://moleculer.services/)
 * [Repo de TFM de Alexis](https://github.com/PAL-ULL/tfm-2021-alexrcas) (Usamos Moleculer)
 
+Es una maravilla: 
+
+* Implementa automáticamente un [API Gateway](https://moleculer.services/docs/0.12/moleculer-web.html) 
+  - [moleculer-web](https://github.com/moleculerjs/moleculer-web) 
+* Implementa un patrón de publicador / suscriptor a eventos
+  - [Events](https://moleculer.services/docs/0.14/events.html)
+* [Examples](https://moleculer.services/docs/0.12/examples.html)
+
+* [YouTube video: An Introduction to Moleculer JS](https://youtu.be/t4YR6MWrugw)
+
+
+API Gateway es un servicio para la creación, publicación, mantenimiento, monitoreo y protección de API REST, HTTP y WebSocket a cualquier escala. 
+
+Un API Gateway es la pieza encargada de unificar la publicación de APIs para que sean consumidas por otras aplicaciones o por los desarrolladores. 
+
+* Intercambiador de APIs: Componente cuya principal función es la de habilitar la conexión entre los servicios y los clientes.
+* Gestor de APIs: Permite la configuración y publicación de APIs en el componente API Gateway.
+* Dashboard de APIs: Recopila toda la información necesaria para los clientes sobre las APIs publicadas.
 
 ## Pagination in the REST API
 
