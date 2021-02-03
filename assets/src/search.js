@@ -9,8 +9,8 @@ class JekyllSearch {
   }
 
   fetchedData() {
-    return fetch(this.dataSource, {mode: 'no-cors'})
-      .then(blob => blob.json())
+    return fetch(this.dataSource, 
+      {mode: 'no-cors'}).then(blob => blob.json());
   }
 
   async findResults() {
