@@ -1,6 +1,3 @@
-### Atom
-
-- [Vídeo del profesor explicando el GitHub Package](https://youtu.be/kFtGxyyLRTc)
 
 ### Visual Studio Code
 
@@ -87,6 +84,19 @@
 - <a href="https://youtu.be/3owknsJy-iE" target="_blank">Vídeo de Jesús Torres: Breve intro de cómo programar y depurar C++ con Visual Studio Code + Gatos</a>
 - <a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a> 
 <a href="https://github.com/ULL-ESIT-GRADOII-TFG/tfg-alejandro-gonzalez-alonso" target="_blank">(TFG de II de la ULL)</a>
+
+### StackEdit
+
+* [stackedit.io](https://stackedit.io/)
+
+StackEdit is an  editor in the cloud: it can sync your files with Google Drive, Dropbox and GitHub. It can also publish them as blog posts to Blogger, WordPress and Zendesk. You can choose whether to upload in Markdown format, HTML, or to format the output using the Handlebars template engine.
+
+![]({{site.baseurl}}/assets/images/stackedit.io)
+
+
+### Atom
+
+- [Vídeo del profesor explicando el GitHub Package](https://youtu.be/kFtGxyyLRTc)
 
 ### Herramientas Útiles
 
