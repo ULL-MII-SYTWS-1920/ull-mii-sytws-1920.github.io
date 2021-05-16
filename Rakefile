@@ -2,7 +2,7 @@ desc "Publicar en GitHub los apuntes de PL"
 task :default do # trabajamos en la rama curso2021
   sh "git ci -am '2020-2021' && git push -u origin curso2021:master"
 end
-# testting ...
+
 desc "sytws: bundle exec jekyll serve --watch"
 task :serve do
   sh "bundle exec jekyll serve --future --watch --port 8080 --host 10.6.128.216"
