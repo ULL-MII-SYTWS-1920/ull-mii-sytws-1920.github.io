@@ -5,7 +5,7 @@ end
 
 desc "sytws: bundle exec jekyll serve --watch"
 task :serve do
-  sh "bundle exec jekyll serve --future --watch --port 8080 --host 10.6.128.216"
+  sh "bundle exec jekyll serve --future --watch --port 8080 --host 0.0.0.0"
 end
 
 desc "local: bundle exec jekyll serve --watch"
