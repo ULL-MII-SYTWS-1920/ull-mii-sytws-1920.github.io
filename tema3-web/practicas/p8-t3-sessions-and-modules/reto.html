@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/practicas/p8-t3-sessions-and-modules/reto.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#reto-cookies-sesiones-autenticación-y-módulos-npm-p8-t3-sessions-and-modules">Reto: Cookies, Sesiones, Autenticación y Módulos npm (p8-t3-sessions-and-modules)</a>
+    <ul>
+      <li><a href="#requisitos-básicos">Requisitos Básicos</a></li>
+      <li><a href="#la-vista">La Vista</a></li>
+      <li><a href="#middlewares-a-usar">Middlewares a usar</a></li>
+      <li><a href="#rutas-que-deberá-implementar">Rutas que deberá implementar</a></li>
+      <li><a href="#requisito-adicional--implementar-middleware-contador-de-nº-de-visitas">Requisito adicional:  Implementar Middleware Contador de Nº de Visitas</a></li>
+      <li><a href="#requisito-adicional-guardar-los-datos-de-las-sesiones">Requisito adicional: Guardar los datos de las sesiones</a></li>
+      <li><a href="#recursos-para-el-reto">Recursos para el Reto</a></li>
+      <li><a href="#solución-al-reto">Solución al Reto</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Indice de Contenidos</strong></p>
+
+<ul>
+  <li><a href="#reto-cookies-sesiones-autenticaci%C3%B3n-y-m%C3%B3dulos-npm-p8-t3-sessions-and-modules">Reto: Cookies, Sesiones, Autenticación y Módulos npm (p8-t3-sessions-and-modules)</a>
+    <ul>
+      <li><a href="#requisitos-b%C3%A1sicos">Requisitos Básicos</a></li>
+      <li><a href="#la-vista">La Vista</a></li>
+      <li><a href="#middlewares-a-usar">Middlewares a usar</a></li>
+      <li><a href="#rutas-que-deber%C3%A1-implementar">Rutas que deberá implementar</a></li>
+      <li><a href="#requisito-adicional--implementar-middleware-contador-de-n%C2%BA-de-visitas">Requisito adicional:  Implementar Middleware Contador de Nº de Visitas</a></li>
+      <li><a href="#requisito-adicional-guardar-los-datos-de-las-sesiones">Requisito adicional: Guardar los datos de las sesiones</a></li>
+      <li><a href="#recursos-para-el-reto">Recursos para el Reto</a></li>
+      <li><a href="#solución-al-reto">Solución al Reto</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h2 id="reto-cookies-sesiones-autenticación-y-módulos-npm-p8-t3-sessions-and-modules">Reto: Cookies, Sesiones, Autenticación y Módulos npm (p8-t3-sessions-and-modules)</h2>
+
+<p>Cree una web app usando express que gestione una lista <em>TODO</em> de cosas que hacer.
+El cliente puede añadir y suprimir tareas a hacer.</p>
+
+<h3 id="requisitos-básicos">Requisitos Básicos</h3>
+
+<ul>
+  <li>Podemos añadir elementos a la lista usando el formulario.</li>
+  <li>Podemos suprimir items haciendo click en las cruces que aparecen en cada elemento de la lista.</li>
+  <li>La lista es almacenada en la session del visitante.  Si otro visitante se conecta al site, tendrá su propia lista por cuanto está guardada en la session.</li>
+</ul>
+
+<h3 id="la-vista">La Vista</h3>
+
+<p>Esta es la vista principal:</p>
+
+<p><img src="/tema3-web/practicas/p8-t3-sessions-and-modules/todo.png" alt="todo.png" /></p>
+
+<p>Este es el código de la vista en <code class="language-plaintext highlighter-rouge">ejs</code>:</p>
+
+<p><strong>[~/javascript/expressjs/todo/my-todolist(master)]$ cat views/todo.ejs</strong></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td><td class="rouge-code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+      <span class="nt">&lt;title&gt;&lt;</span><span class="err">%=</span> <span class="na">title</span> <span class="err">%</span><span class="nt">&gt;&lt;/title&gt;</span>
+        <span class="nt">&lt;style&gt;</span>
+            <span class="nt">a</span> <span class="p">{</span><span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;}</span>
+        <span class="nt">&lt;/style&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+
+    <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;h1&gt;&lt;</span><span class="err">%=</span> <span class="na">title</span> <span class="err">%</span><span class="nt">&gt;&lt;/h1&gt;</span>
+
+        <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;</span><span class="err">%</span> <span class="na">todolist.forEach</span><span class="err">(</span><span class="na">function</span><span class="err">(</span><span class="na">todo</span><span class="err">,</span> <span class="na">index</span><span class="err">)</span> <span class="err">{</span> <span class="err">%</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/todo/delete/&lt;%= index %&gt;"</span><span class="nt">&gt;</span>✘<span class="nt">&lt;/a&gt;</span> <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">todo</span> <span class="err">%</span><span class="nt">&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;</span><span class="err">%</span> <span class="err">});</span> <span class="err">%</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+
+        <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/todo/add/"</span> <span class="na">method=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"newtodo"</span><span class="nt">&gt;</span>Que más?<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"newtodo"</span> <span class="na">id=</span><span class="s">"newtodo"</span> <span class="na">autofocus</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="middlewares-a-usar">Middlewares a usar</h3>
+
+<p>Podemos usar express para el servidor, 
+<a href="https://ejs.co/#docs">EJS</a> para las vistas y como middlewares</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/express-session">express-session</a> y</li>
+  <li><a href="https://www.npmjs.com/package/body-parser">body-parser</a>:</li>
+</ul>
+
+<h3 id="rutas-que-deberá-implementar">Rutas que deberá implementar</h3>
+
+<p>Su aplicación deberá tener estas rutas:</p>
+
+<ul>
+  <li>Listar las tareas: <code class="language-plaintext highlighter-rouge">/todo</code>
+    <ul>
+      <li>Cuando el request sea con <code class="language-plaintext highlighter-rouge">GET </code> mostraremos la vista con la lista de tareas y el formulario</li>
+      <li>Cuando el request sea con <code class="language-plaintext highlighter-rouge">POST </code> es que el formulario ha sido rellenado y enviado. Crearemos la tarea  y actualizaremos la vista</li>
+    </ul>
+  </li>
+  <li>Añadir tareas: <code class="language-plaintext highlighter-rouge">/todo/add</code></li>
+  <li>Suprimir la tarea nº <code class="language-plaintext highlighter-rouge">id</code>:  <code class="language-plaintext highlighter-rouge">/todo/delete/:id:</code></li>
+  <li>Cualquier otra ruta será redirigida a <code class="language-plaintext highlighter-rouge">/todo</code> (<a href="http://expressjs.com/es/api.html#res.redirect">vea el método <code class="language-plaintext highlighter-rouge">redirect</code> del objeto <code class="language-plaintext highlighter-rouge">response</code></a>)</li>
+</ul>
+
+<h3 id="requisito-adicional--implementar-middleware-contador-de-nº-de-visitas">Requisito adicional:  Implementar Middleware Contador de Nº de Visitas</h3>
+
+<p>Añada a su app un middleware que lleve la cuenta de los caminos de las rutas visitadas. Cada vez que una ruta es visitada muestre la cuenta en al consola del servidor</p>
+
+<p>Puede que le sea útil alguno de estos módulos:</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/url-parse">url-parse</a></li>
+  <li><a href="https://www.npmjs.com/package/parseurl">parseurl</a></li>
+</ul>
+
+<h3 id="requisito-adicional-guardar-los-datos-de-las-sesiones">Requisito adicional: Guardar los datos de las sesiones</h3>
+
+<ul>
+  <li>Guarde los datos de las sesiones en un fichero JSON</li>
+</ul>
+
+<p>Puede ayudarle este módulo:</p>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/session-file-store">session-file-store</a></li>
+</ul>
+
+<h3 id="recursos-para-el-reto">Recursos para el Reto</h3>
+
+<ul>
+  <li><a href="http://expressjs.com/en/api.html">Documentación de Express</a></li>
+  <li><a href="https://ejs.co/#docs">EJS</a></li>
+  <li><a href="https://www.npmjs.com/package/express-session">express-session</a> y</li>
+  <li><a href="https://www.npmjs.com/package/cookie-session">cookie-session</a>
+    <ul>
+      <li>A user session can be stored in two main ways with cookies: on the server or on the client.</li>
+    </ul>
+  </li>
+  <li><a href="https://www.npmjs.com/package/parseurl">parseurl</a></li>
+  <li><a href="https://www.npmjs.com/package/url-parse">url-parse</a>
+    <ul>
+      <li>cookie-session stores the session data on the client within a cookie, while a module like <a href="https://www.npmjs.com/package/express-session">express-session</a> stores only a session identifier on the client within a cookie and stores the session data on the server, typically in a database.</li>
+    </ul>
+  </li>
+  <li><a href="https://www.npmjs.com/package/body-parser">body-parser</a></li>
+  <li>Repo de ejemplo <a href="https://github.com/ULL-ESIT-DSI-1819/hello-cookies-and-sessions">ULL-ESIT-DSI-1819/hello-cookies-and-sessions</a></li>
+  <li><a href="https://www.npmjs.com/package/session-file-store">session-file-store</a></li>
+  <li><a href="https://www.npmjs.com/package/session-file-store">session-file-store</a></li>
+</ul>
+
+<h3 id="solución-al-reto">Solución al Reto</h3>
+
+<ul>
+  <li><a href="https://github.com/ULL-ESIT-DSI-1819/reto-p8-t3-sessions-todolist">Solución al reto</a> (No accesible)</li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

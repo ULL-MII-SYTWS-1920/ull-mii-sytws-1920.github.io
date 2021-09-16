@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/practicas/p12-tfa-user-experience/README.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#tfa-creating-a-beautiful-user-experience-p12-tfa-user-experience">TFA: Creating a Beautiful User Experience (p12-tfa-user-experience)</a>
+    <ul>
+      <li><a href="#extracting-text">Extracting Text</a></li>
+      <li><a href="#deleting--bundles">Deleting  Bundles</a></li>
+      <li><a href="#reto-opcional-añadir-autenticación">Reto Opcional: Añadir autenticación</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="tfa-creating-a-beautiful-user-experience-p12-tfa-user-experience">TFA: Creating a Beautiful User Experience (p12-tfa-user-experience)</h1>
+
+<ul>
+  <li>
+    <p>Lea el  <a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4340000000247287">Chapter 8. Creating a Beautiful  User Experience</a> del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL).
+En este capítulo se construye una aplicación Web que actúa como cliente  del servicio web creado en el capítulo anterior. Se aplican las siguientes tecnologías:</p>
+  </li>
+  <li>Webpack, para procesar nuestro código para el front-end y sus dependencias para encarpetarlos en un pequeño número de ficheros</li>
+  <li>Bootstrap para las hojas de estilo</li>
+  <li>TypeScript, un superconjunto de JavaScript que permite la especificación e inferencia de tipos</li>
+  <li>Promesas y Await/Async</li>
+  <li>Handlebars (para los Templates)</li>
+</ul>
+
+<p>y resuelva los problemas en las secciones</p>
+
+<h2 id="extracting-text">Extracting Text</h2>
+
+<p>El proyecto tal y como  está en el capítulo pone todo el CSS en una etiqueta  <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> 
+al comienzo del fichero  <code class="language-plaintext highlighter-rouge">index.html</code>. Se pide poner el CSS en un fichero apartey cargarlo con una etiqueta <code class="language-plaintext highlighter-rouge">&lt;link&gt;</code>.</p>
+
+<p>El paquete  npm <a href="https://www.npmjs.com/package/mini-css-extract-plugin"><code class="language-plaintext highlighter-rouge">mini-css-extract-plugin</code></a> puede ser de ayuda.</p>
+
+<h2 id="deleting--bundles">Deleting  Bundles</h2>
+
+<p>Se trata de añadir a la aplicación botones para suprimir Colecciones/bundles y el código para manejar la eliminación de los mismos</p>
+
+<h2 id="reto-opcional-añadir-autenticación">Reto Opcional: Añadir autenticación</h2>
+
+<ul>
+  <li>Intente usar el módulo <a href="http://www.passportjs.org/">passport</a> para la autenticación</li>
+  <li>Sería interesante que intentara hacer su autenticación usando una <a href="http://www.passportjs.org/packages/">estrategia passport OAuth</a>, autenticando por ejemplo con <a href="http://www.passportjs.org/packages/passport-twitter/">Twitter</a> o <a href="http://www.passportjs.org/packages/passport-github/">GitHub</a></li>
+  <li>Si tiene problemas  a la hora de implantar autenticación con las <a href="http://www.passportjs.org/packages/">estrategias passport OAuth</a> (problemas con el proveedor, etc.) 
+o si se encuentra con ánimos y ganas de aprender, puede experimentar como alternativa con la estrategia <a href="http://www.passportjs.org/packages/passport-local/">passport-local</a></li>
+  <li>Para hacer esta tarea  le será muy útil estudiar también el capítulo 9 <a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781680505344/sec_using_request_to_fetch_html?sessionid=#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2ODA1MDUzNDQlMkZkMjRlMzQyMjdfaHRtbCZxdWVyeT0=">Fortifying Your Application</a></li>
+  <li>Algunos proveedores OAuth quieren que proveas el dominio de tu aplicación. Hay varias soluciones que pueden funcionar o no</li>
+  <li>Desplegar tu app en Heroku o similar</li>
+  <li>Crear un falso dominio en  el fichero <code class="language-plaintext highlighter-rouge">/etc/hosts</code> apuntando a <code class="language-plaintext highlighter-rouge">localhost</code>:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>$ cat /etc/hosts
+...
+127.0.0.1	localhost b4.example.com www.example.com test.example.com app.test local.foobar3000.com
+...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Otra posibilidad es usar lvh.me que apunta a  127.0.0.1.  Y puedes testear subdominios usando xxx.lvh.me sin que tengas que tocar  DNS o <code class="language-plaintext highlighter-rouge">/etc/hosts</code>.
+Mira en:
+    <ul>
+      <li><a href="http://fionavoss.blog/2018/10/25/subdomains-in-rails/">Testing subdomains in Ruby on Rails, with and without lvh.me</a> por Fionna Voss 2018</li>
+      <li><a href="https://superuser.com/questions/1289159/how-does-lvh-me-localtest-me-vcap-me-works?noredirect=1&amp;lq=1">How does lvh.me (localtest.me, vcap.me) works?</a></li>
+      <li><a href="https://superuser.com/questions/1280827/why-does-the-registered-domain-name-localtest-me-resolve-to-127-0-0-1">Why does the registered domain name “localtest.me” resolve to 127.0.0.1?</a></li>
+    </ul>
+  </li>
+  <li><a href="https://stackoverflow.com/questions/26564961/how-to-set-up-local-subdomains-for-node-js-app">How to set up local subdomains for Node.js app</a> Stackoverflow</li>
+</ul>
+
+<h2 id="recursos">Recursos</h2>
+
+<ul>
+  <li><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4340000000247287">Chapter 8. Creating a Beautiful  User Experience</a></li>
+  <li><a href="https://github.com/ULL-MII-SYTWS-1920/books-shared">Repo con los recursos de referencia</a></li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a></li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/tutorial-hello-node-typescript">GitHub repo ULL-MII-CA-1819/tutorial-hello-node-typescript</a></li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/practicas/p11-t3-restful/README.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#práctica-developing-restful-web-services-p11-t3-restful">Práctica: Developing RESTful Web Services (p11-t3-restful)</a>
+    <ul>
+      <li><a href="#deleting-a-bundle-entirely">Deleting a Bundle Entirely</a></li>
+      <li><a href="#removing-a-book-from-a-bundle">Removing a Book from a Bundle</a></li>
+      <li><a href="#reto">Reto</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="práctica-developing-restful-web-services-p11-t3-restful">Práctica: Developing RESTful Web Services (p11-t3-restful)</h1>
+
+<p>Lea el  <a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4340000000247287">Chapter 7. Developing RESTful Web Services</a> del libro de Jim Wilson. 2018 (Debes estar autenticado via PuntoQ BULL) y
+<a href="developing-restful-web-services.html">lea también las notas del profesor sobre este capítulo</a>.</p>
+
+<p>En este capítulo se crea - utilizando Express.js - un servicio Web que permite crear y administrar colecciones de libros que en el libro denominan <em>bundles</em>.</p>
+
+<p>Lea el capítulo y  resuelva los problemas planteados en la secciones:</p>
+
+<h2 id="deleting-a-bundle-entirely">Deleting a Bundle Entirely</h2>
+
+<p>La tarea es añadir una entrada al fichero <code class="language-plaintext highlighter-rouge">web-services/b4/lib/bundle.js</code> para suprimir un bundle o colección:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre> <span class="nx">app</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">/api/bundle/:id</span><span class="dl">"</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="cm">/**
+    * Delete a bundle entirely.
+    * curl -X DELETE http://&lt;host&gt;:&lt;port&gt;/api/bundle/&lt;id&gt;
+    */</span>
+    <span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="p">...</span>
+    <span class="p">};</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="p">...</span>
+    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">esResErr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">...</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Inside the Express route handler callback function, you should do the following:</p>
+
+<ul>
+  <li>Determine the bundle’s URL based on the es config object and the request parameters.</li>
+  <li>Use await with a call to <code class="language-plaintext highlighter-rouge">rp()</code> to suspend until the deletion is completed.</li>
+  <li>Wrap your await call in a <code class="language-plaintext highlighter-rouge">try/catch</code> block to handle any errors.</li>
+</ul>
+
+<p><strong>Nota</strong>: Usa el método <code class="language-plaintext highlighter-rouge">rp.delete()</code> para enviar un request <code class="language-plaintext highlighter-rouge">HTTP DELETE</code>a  Elasticsearch.</p>
+
+<h2 id="removing-a-book-from-a-bundle">Removing a Book from a Bundle</h2>
+
+<p>La tarea consiste en añadir en el fichero <code class="language-plaintext highlighter-rouge">web-services/b4/lib/bundle.js</code> una entrada para suprimir un libro de una determinada colección/bundle.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>  <span class="nx">app</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="dl">"</span><span class="s2">/api/bundle/:id/book/:pgid</span><span class="dl">"</span><span class="p">,</span> <span class="k">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="cm">/**
+    * Remove a book from a bundle.
+    * curl -X DELETE http://&lt;host&gt;:&lt;port&gt;/api/bundle/&lt;id&gt;/book/&lt;pgid&gt;
+    */</span>
+    <span class="kd">const</span> <span class="nx">bundleUrl</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">url</span><span class="p">}</span><span class="s2">/</span><span class="p">${</span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+    <span class="k">try</span> <span class="p">{</span>
+      <span class="p">...</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">esResErr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="nx">esResErr</span><span class="p">.</span><span class="nx">statusCode</span> <span class="o">||</span> <span class="mi">502</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">esResErr</span><span class="p">.</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Inside the <code class="language-plaintext highlighter-rouge">try{}</code> block you’ll need to do a few things:</p>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">await</code> with <code class="language-plaintext highlighter-rouge">rp()</code> to retrieve the bundle object from Elasticsearch.</li>
+  <li>Find the index of the book within the bundle.books list.</li>
+  <li>Remove the book from the list. Hint: use <code class="language-plaintext highlighter-rouge">Array.splice()</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">PUT</code> the updated bundle object back into the Elasticsearch index, again
+with <code class="language-plaintext highlighter-rouge">await</code> and <code class="language-plaintext highlighter-rouge">rp()</code>.</li>
+</ul>
+
+<p>Note that if the bundle doesn’t contain the book whose removal is being requested, your handler should return a <code class="language-plaintext highlighter-rouge">409</code> Conflict HTTP status code. You can make this happen by throwing an object with a statusCode property set to <code class="language-plaintext highlighter-rouge">409</code> and an error object that contains information about what went wrong. This will be caught by the catch block and used to finish the Express response.
+If you get stuck, <a href="https://github.com/ULL-MII-SYTWS-1920/book-solution-nodejs-the-right-way">check out the code with the solutions</a>.</p>
+
+<h2 id="reto">Reto</h2>
+
+<ul>
+  <li><a href="reto">Descripción del Reto</a></li>
+</ul>
+
+<h2 id="recursos">Recursos</h2>
+
+<ul>
+  <li><a href="developing-restful-web-services.html">Notas del profesor sobre el capítulo</a></li>
+  <li><a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/">BULL PuntoQ</a></li>
+  <li><a href="https://github.com/ULL-MII-SYTWS-1920/books-shared">Repo con los recursos de referencia</a></li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a></li>
+  <li><a href="http://nodejs.org/api/http.html">http://nodejs.org/api/http.html</a></li>
+  <li><a href="http://expressjs.com/">http://expressjs.com/</a></li>
+  <li><a href="https://www.npmjs.com/package/nconf">https://www.npmjs.com/package/nconf</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-request-body.html">https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-request-body.html </a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-suggesters.html">https://www.elastic.co/guide/en/elasticsearch/reference/5.2/search-suggesters.html</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols</a></li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

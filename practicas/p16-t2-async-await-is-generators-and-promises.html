@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+      
+    <li><a href="/practicas/p15-t2-generators.html" title="Previous">&#x2190;</a></li>
+    
+    
+    <li><a href="/practicas/p17-t2-async-iteration-and-generators.html" title="Next">&#x2192;</a></li>
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_practicas/p16-t2-async-await-is-generators-and-promises.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#descripción-de-la-práctica-p16-t2-async-await-is-generators-and-promises">Descripción de la Práctica p16-t2-async-await-is-generators-and-promises</a>
+    <ul>
+      <li><a href="#goal-async-await--generators--promises">Goal: Async-Await ≈ Generators + Promises</a></li>
+      <li><a href="#remember-generators">Remember Generators</a></li>
+      <li><a href="#first-idea-generators-can-yield-promises">First Idea: Generators can yield Promises</a></li>
+      <li><a href="#rewriting-the-async-function-as-a-generator">Rewriting the Async Function as a Generator</a></li>
+      <li><a href="#a-function-controlling-the-execution-of-the-generator">A Function Controlling the Execution of the Generator</a></li>
+      <li><a href="#write-the-function-controlling-the-execution-of-the-generator">Write the Function Controlling the Execution of the Generator</a></li>
+      <li><a href="#see">See</a></li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="descripción-de-la-práctica-p16-t2-async-await-is-generators-and-promises">Descripción de la Práctica p16-t2-async-await-is-generators-and-promises</h1>
+
+<h2 id="goal-async-await--generators--promises">Goal: Async-Await ≈ Generators + Promises</h2>
+
+<p>Imagine we are given a piece of code like the one below that uses async functions, how can we rewrite it using only promises and generator functions?</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">doTask1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">doTask2</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">arg</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">doTask3</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">arg</span><span class="o">+</span><span class="mi">3</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">res1</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">doTask1</span><span class="p">();</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res1</span><span class="p">);</span>
+    
+    <span class="kd">const</span> <span class="nx">res2</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">doTask2</span><span class="p">(</span><span class="nx">res1</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res2</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">res3</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">doTask3</span><span class="p">(</span><span class="nx">res2</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res3</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">res3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">init</span><span class="p">();</span> <span class="c1">// 1\n3\n6</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>It performs three asynchronous tasks, one after the other where each task depends on the completion of the previous task. Finally, it returns the result of the last task.</p>
+
+<p>How can we rewrite it using generators?</p>
+
+<h2 id="remember-generators">Remember Generators</h2>
+
+<p>Remember:</p>
+
+<ul>
+  <li>When a generator function is called, its body is not executed right away.</li>
+  <li>Instead it returns an iterator-object which adheres to the iterator protocol i.e. it has a <code class="language-plaintext highlighter-rouge">next</code> method.</li>
+  <li>The only way to execute the body of the generator is by calling the <code class="language-plaintext highlighter-rouge">next</code> method on its iterator-object.</li>
+  <li>Every time the <code class="language-plaintext highlighter-rouge">next</code> method is called, its body is executed until the next <code class="language-plaintext highlighter-rouge">yield</code> expression.</li>
+  <li>The result of <code class="language-plaintext highlighter-rouge">next()</code> is always an object with two properties:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">value</code>: the yielded value.</li>
+      <li><code class="language-plaintext highlighter-rouge">done</code>: <code class="language-plaintext highlighter-rouge">true</code> if the function code has finished, otherwise <code class="language-plaintext highlighter-rouge">false</code></li>
+    </ul>
+  </li>
+  <li>This <code class="language-plaintext highlighter-rouge">next</code> method also accepts an <code class="language-plaintext highlighter-rouge">argument</code>.</li>
+  <li>Calling it with an <code class="language-plaintext highlighter-rouge">argument</code>
+    <ul>
+      <li>Makes the <code class="language-plaintext highlighter-rouge">argument</code>the value of the current yield expression and</li>
+      <li>Resumes the execution till the next <code class="language-plaintext highlighter-rouge">yield</code> expression</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="first-idea-generators-can-yield-promises">First Idea: Generators can yield Promises</h2>
+
+<p>By now you would be wondering, how do the generator functions help to achieve our goal?</p>
+
+<p>We need to model an asynchronous flow where we have to wait for certain tasks to finish before proceeding ahead. How can we do that?</p>
+
+<p>Well, the most important insight here is that the <strong>generator-functions can yield promises too</strong>.</p>
+
+<ul>
+  <li>A generator function can yield a promise (for example an async task), and</li>
+  <li>its iterator can be controlled to halt for this promise to resolve (or reject), and then</li>
+  <li>recursively proceed with the resolved (or rejected) value to ask for the next iteration.</li>
+</ul>
+
+<h2 id="rewriting-the-async-function-as-a-generator">Rewriting the Async Function as a Generator</h2>
+
+<p>This pattern of weaving a an iterator with yielded promises allows us to model our requirement like this:</p>
+
+<p><a id="generator"></a></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">doTask1</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">arg</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">doTask2</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">arg</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">doTask3</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="nx">arg</span><span class="o">+</span><span class="mi">3</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="o">*</span> <span class="nx">init</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">res1</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">doTask1</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res1</span><span class="p">);</span>
+    
+    <span class="kd">const</span> <span class="nx">res2</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">doTask2</span><span class="p">(</span><span class="nx">res1</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res2</span><span class="p">);</span>
+
+    <span class="kd">const</span> <span class="nx">res3</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">doTask3</span><span class="p">(</span><span class="nx">res2</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res3</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="nx">res3</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Notice how this generator function resembles our async function!</p>
+
+<p>If you change <code class="language-plaintext highlighter-rouge">yield</code> for <code class="language-plaintext highlighter-rouge">await</code> is the same code!</p>
+
+<h2 id="a-function-controlling-the-execution-of-the-generator">A Function Controlling the Execution of the Generator</h2>
+
+<p>But this is only half the story. Now <strong>we need a way to execute its body</strong>.</p>
+
+<p>We need a function <code class="language-plaintext highlighter-rouge">waiter</code> that can control the iterator of this generator function to “<em>wait for the fulfillment of the promise yielded on each iteration</em>”. It has to:</p>
+
+<ol>
+  <li>Halt every time a promise is yielded and</li>
+  <li>Proceeds once the promise resolves (or rejects).</li>
+</ol>
+
+<h2 id="write-the-function-controlling-the-execution-of-the-generator">Write the Function Controlling the Execution of the Generator</h2>
+
+<p>Write a function <code class="language-plaintext highlighter-rouge">waiter(generator, arg)</code> that creates and <code class="language-plaintext highlighter-rouge">iterator</code>  by calling <code class="language-plaintext highlighter-rouge">generator(arg)</code> and returns a function  that traverses the <code class="language-plaintext highlighter-rouge">iterator</code> but proceeding with an iteration only when the promise returned by the previous call to <code class="language-plaintext highlighter-rouge">iterator.next()</code> has been fulfilled. It will be used like this:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">waiter</span><span class="p">(</span><span class="nx">genFun</span><span class="p">,</span> <span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+   <span class="c1">// ... your code here</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">doIt</span> <span class="o">=</span> <span class="nx">waiter</span><span class="p">(</span><span class="nx">init</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="nx">doIt</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>So that, when we run it with the <a href="#generator">generator above</a>, we obtain:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>➜  learning-async-iteration-and-generators git:(main) ✗ node 07-async-await-equal-generators-plus-promises/example.js 
+3
+5
+8
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>It sounds complicated, but takes only a few lines to implement.</p>
+
+<p>Heres is a <a href="solutions/p16-t2-async-await-is-generators-and-promises">solution</a></p>
+
+<h2 id="see">See</h2>
+
+<ul>
+  <li><a href="https://hackernoon.com/async-await-generators-promises-51f1a6ceede2">Async-Await ≈ Generators + Promises</a> at <a href="https://hackernoon.com/">https://hackernoon.com/</a>  Cha on July 26th 2017</li>
+  <li><a href="solutions/p16-t2-async-await-is-generators-and-promises">Solution</a> to this problem</li>
+  <li><a href="https://github.com/ULL-MII-SYTWS-2021/async-await-equal-generators-plus-promises">Repo ULL-MII-SYTWS-2021/async-await-equal-generators-plus-promises</a> (private)</li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

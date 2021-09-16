@@ -1,0 +1,1598 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+    
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_posts/2019-12-09-leccion.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#clase-del-lunes-09122019">Clase del Lunes 09/12/2019</a>
+    <ul>
+      <li><a href="#anuncio">Anuncio</a></li>
+      <li><a href="#transforming-data-and-testing-continuously-chapter-5-of-the-book-nodejs-the-right-way">Transforming Data and Testing Continuously. Chapter 5 of the Book Node.js the Right Way</a></li>
+      <li><a href="#line-delimited-json">Line Delimited JSON</a></li>
+      <li><a href="#estructura-de-directorios">Estructura de directorios</a></li>
+      <li><a href="#descarga-de-los-datos">Descarga de los datos</a></li>
+      <li><a href="#analizando-la-estructura-de-los-ficheros-rdf">Analizando la estructura de los ficheros RDF</a></li>
+      <li><a href="#las-pruebas">Las Pruebas</a>
+        <ul>
+          <li><a href="#mocha-y-chai">Mocha y Chai</a></li>
+          <li><a href="#setting-up-tests-with-mocha-and-chai">Setting Up Tests with Mocha and Chai</a></li>
+          <li><a href="#ejecución-de-las-pruebas">Ejecución de las Pruebas</a></li>
+          <li><a href="#bdd-tdd-and-the-red-green-refactor-cycle">BDD, TDD and The Red-Green-Refactor cycle</a></li>
+          <li><a href="#código-de-las-pruebas">Código de las Pruebas</a></li>
+          <li><a href="#depurando-las-pruebas">Depurando las Pruebas</a></li>
+        </ul>
+      </li>
+      <li><a href="#extracting-data-from-xml-with-cheerio">Extracting Data from XML with Cheerio</a>
+        <ul>
+          <li><a href="#getting-started-with-cheerio">Getting Started with Cheerio</a></li>
+          <li><a href="#reading-data-from-an-attribute">Reading Data from an Attribute</a></li>
+          <li><a href="#reading-the-text-of-a-node">Reading the Text of a Node</a></li>
+          <li><a href="#collecting-an-array-of-values">Collecting an Array of Values</a></li>
+          <li><a href="#traversing-the-document-the-list-of-subjects">Traversing the Document: The List of Subjects</a></li>
+          <li><a href="#anticipating-format-changes">Anticipating Format Changes</a></li>
+          <li><a href="#recapping-data-extraction-with-cheerio">Recapping Data Extraction with Cheerio</a></li>
+        </ul>
+      </li>
+      <li><a href="#processing-data-files-sequentially">Processing Data Files Sequentially</a></li>
+      <li><a href="#la-práctica-p9-t3-transforming-data-extracting-classigication-codes-and-sources">La práctica p9-t3-transforming-data: Extracting Classigication Codes and Sources</a></li>
+      <li><a href="#el-reto-precios-de-hiperdino">El Reto: Precios de Hiperdino</a></li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="clase-del-lunes-09122019">Clase del Lunes 09/12/2019</h1>
+
+<h2 id="anuncio">Anuncio</h2>
+
+<p>Incidencia en el servicio IaaS y sistemas de cómputo. Contacto: http://soporte.ull.es/stic (soporte@ull.es). 
+Máquinas apagadas.</p>
+
+<h2 id="transforming-data-and-testing-continuously-chapter-5-of-the-book-nodejs-the-right-way">Transforming Data and Testing Continuously. Chapter 5 of the Book Node.js the Right Way</h2>
+
+<p>Este es el primer capítulo de una serie que cubre los capítulos del 5 al 9 en el que se construye una aplicación Web.</p>
+
+<p>En este capítulos 5 vamos a obtener los datos con los que vamos a cargar nuestra base de datos para la web app:</p>
+
+<ul>
+  <li>
+    <p>Descargar desde el Proyecto Gutenberg (ebooks gratuitos) el catálogo de libros en <a href="https://en.wikipedia.org/wiki/Resource_Description_Framework">Resource Description Framework RDF</a>.</p>
+
+    <p><a href="http://www.gutenberg.org/"><img src="/assets/images/guttenberg.png" alt="Guttenberg project" /></a></p>
+  </li>
+</ul>
+
+<p>El RDF es una familia de especificaciones de la World Wide Web Consortium (W3C) para describir en XML los datos que aparecen en un recurso web.</p>
+
+<p>We will be treating the RDF files like regular, undifferentiated XML files for parsing and for data extraction.</p>
+
+<ul>
+  <li><a href="https://es.wikipedia.org/wiki/Resource_Description_Framework">RDF</a>
+    <ul>
+      <li>El Marco de Descripción de Recursos (del inglés Resource Description Framework, RDF) es una familia de especificaciones de la World Wide Web Consortium (W3C) originalmente diseñado como un modelo de datos para metadatos</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://en.wikipedia.org/wiki/JSON-LD">JavaScript Object Notation for Linked Data, JSON_LD</a></p>
+  </li>
+  <li>Extraeremos del fichero RDF/XML la información que nos interesa, produciendo como salida un fichero JSON con la misma
+    <ul>
+      <li>La idea es escribir algo así como un programa <code class="language-plaintext highlighter-rouge">rdf-to-json.js</code> que funcione así:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> ~/.../transforming-data-and-testing-continuously-chapter-5/databases(master)]$ ./rdf-to-json.js ../data/cache/epub/12/pg12.rdf 
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+      </li>
+      <li>Que deberá producir una  salida parecida a esta:</li>
+    </ul>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="w">      </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Through the Looking-Glass"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Carroll, Lewis"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"subjects"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"Fantasy literature"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Estos JSON van a guardarse en una base de Datos denominada Elastic Search que va a ser usada en el capítulo 6 del libro (Commanding Databases).
+    <ul>
+      <li>Elasticsearch es una base de datos NoSQL que funciona como un servicio REST a la que se accede vía HTTP  y que almacena e indexa documentos JSON. En el capítulo 6 se construye un programa de línea de comandos que permite interactuar con la base de datos que se crea en el capítulo 5.</li>
+    </ul>
+  </li>
+  <li>Este es el esquema de trabajo para los dos capítulos:</li>
+  <li><img src="/assets/images/ch5-xml-2-json-ch6-2-es.png" alt="xml 2 json and json 2 elastic search" /></li>
+</ul>
+
+<h2 id="line-delimited-json">Line Delimited JSON</h2>
+
+<p>No vamos a usar JSON como formato de salida, sino Line Delimited JSON.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON">Line Delimited JSON (JDL)</a>, newline-delimited <strong>JSON</strong> (<strong>NDJSON</strong>), and <strong>JSON lines</strong> (<strong>JSONL</strong>) are three terms for equivalent formats of JSON streaming.</p>
+
+<p>Streaming makes use of the fact that the JSON format does not allow newline and return characters within primitive values (in strings those must be escaped as <code class="language-plaintext highlighter-rouge">\n</code> and <code class="language-plaintext highlighter-rouge">\r</code>, respectively) and that most JSON formatters default to not including any whitespace, including newlines and returns.
+These features allow the <u>newline</u> and/or return characters to be used as a delimiter.</p>
+
+<p>This format is documented at the <a href="http://jsonlines.org/">JSON Lines website</a>.</p>
+
+<p>This example shows two JSON objects (the implicit newline characters at the end of each line are not shown):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="nl">"some"</span><span class="p">:</span><span class="s2">"thing</span><span class="se">\n</span><span class="s2">"</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="nl">"may"</span><span class="p">:{</span><span class="nl">"include"</span><span class="p">:</span><span class="s2">"nested"</span><span class="p">,</span><span class="nl">"objects"</span><span class="p">:[</span><span class="s2">"and"</span><span class="p">,</span><span class="s2">"arrays"</span><span class="p">]}}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The use of a newline as a delimiter enables this format to work very well with <a href="https://en.wikipedia.org/wiki/Pipeline_(Unix)">traditional line-oriented Unix tools</a>.</p>
+
+<h2 id="estructura-de-directorios">Estructura de directorios</h2>
+
+<p>Este es un ejemplo de como estructurar este proyecto:</p>
+
+<p>⇐
+LEFTWARDS DOUBLE ARROW
+Unicode: U+21D0, UTF-8: E2 87 90</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre>$ tree -s  -I 'node_modules*|epub*|jim*|images'
+.
+├── [        192]  data
+│   ├── [        294]  README.md
+│   ├── [   13005066]  bulk_pg.ldj       ⇐ Fichero en formato LDJ con todo el catálogo
+│   ├── [   10809492]  bulk_result.json  ⇐ Lo generaremos en el capítulo 6
+│   └── [         96]  cache             ⇐ Donde quedarán los ficheros RDF de la descarga
+└── [        256]  databases
+    ├── [      38863]  README.md
+    ├── [         96]  lib
+    │   └── [       3665]  parse-rdf.js
+    ├── [        786]  rdf-to-bulk.js
+    ├── [        338]  rdf-to-json.js
+    └── [        128]  test
+        ├── [       1101]  parse-rdf-test.js
+        └── [      12393]  pg132.rdf
+
+5 directories, 9 files
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>En el directorio <code class="language-plaintext highlighter-rouge">data</code> guardaremos los datos  descargados de Guttenberg y en el directorio <code class="language-plaintext highlighter-rouge">databases</code> nuestro código: ejecutables, librerías y las pruebas.</p>
+
+<h2 id="descarga-de-los-datos">Descarga de los datos</h2>
+
+<p>En esta página  encontrará el catálogo completo de Guttenberg en formato RDF/XML:</p>
+
+<p><a href="https://www.gutenberg.org/wiki/Gutenberg:Feeds#The_Complete_Project_Gutenberg_Catalog"><img src="/assets/images/guttenberg-catalog.png" alt="" /></a></p>
+
+<p>Para descargarlo nos  posicionamos en el directorio adecuado y podemos usar <code class="language-plaintext highlighter-rouge">curl</code>. El fichero está compactado:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>~/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5(master)]$ sed -ne '/c5-get/,/^$/p'  ~/sol-nodejs-the-right-way/gulpfile.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">"</span><span class="s2">c5-get-guttenberg</span><span class="dl">"</span><span class="p">,</span> <span class="nx">shell</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span>
+  
+    <span class="dl">'</span><span class="s1">cd transforming-data-and-testing-continuously-chapter-5/data &amp;&amp; </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">curl -O https://www.gutenberg.org/cache/epub/feeds/rdf-files.tar.bz2 &amp;&amp;</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">tar -xvjf rdf-files.tar.bz2</span><span class="dl">'</span>
+<span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">curl option -O, --remote-name</code>
+    <ul>
+      <li>Write  output to a local file named like the remote file we get. (Only the file part of the remote file is used, the path is cut off.) The file will be saved in the current working directory. If you want the file saved in a different directory,  make  sure        you change the current working directory before invoking curl with this option.  The remote file name to use for saving is extracted from the given URL, nothing else, and if it already exists it will be overwritten.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">tar -xvjf rdf-files.tar.bz2</code></li>
+  <li><code class="language-plaintext highlighter-rouge">-x</code>      Extract to disk from the archive.  If a file with the same name appears more than once in the archive, each copy will be extracted, with later copies overwriting (replacing) earlier copies.</li>
+  <li><code class="language-plaintext highlighter-rouge">-j</code>  (c mode only) Compress the resulting archive with bzip2(1).  In extract or list modes, this option is ignored.  Note that unlike other tar implementations, this implementation recognizes bzip2 compression automatically when reading archives.</li>
+  <li><code class="language-plaintext highlighter-rouge">-f file</code>  Read the archive from or write the archive to the specified file.  The filename can be for standard input or standard output.</li>
+  <li><code class="language-plaintext highlighter-rouge">-v</code>  Produce verbose output.  In create and extract modes, tar will list each file name as it is read from or written to the archive.  In list mode, tar will produce output similar to that of ls(1).  Additional -v options will provide additional detail.</li>
+</ul>
+
+<p>Cuando ejecutamos esta secuencia de comandos crearemos en el directorio <code class="language-plaintext highlighter-rouge">data</code> los ficheros <code class="language-plaintext highlighter-rouge">*.rdf</code>, una por libro:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>x cache/epub/0/pg0.rdf
+x cache/epub/1/pg1.rdf
+x cache/epub/10/pg10.rdf
+...
+x cache/epub/9998/pg9998.rdf
+x cache/epub/9999/pg9999.rdf
+x cache/epub/999999/pg999999.rdf
+...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Esto nos deja en <code class="language-plaintext highlighter-rouge">cache/epub/</code> un montón de directorios numerados:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>$ ls data/cache/epub/ | head -n 4
+0
+1
+10
+100
+$ ls data/cache/epub/ | tail -n 4
+9999
+999999
+DELETE-52276
+DELETE-55495
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="analizando-la-estructura-de-los-ficheros-rdf">Analizando la estructura de los ficheros RDF</h2>
+
+<p>Por ejemplo, aquí están los contenidos de <a href="/tema3-web/pg132">data/cache/epub/132/pg132.rdf</a></p>
+
+<p>The important pieces of information that we’d like to extract are as follows:</p>
+
+<ul>
+  <li>The Gutenberg ID (132)</li>
+  <li>The book’s title</li>
+  <li>The list of authors (agents)</li>
+  <li>The list of subjects</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$  ./rdf-to-json.js ../data/cache/epub/132/pg132.rdf
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Art of War"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Sunzi, active 6th century B.C."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Giles, Lionel"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"subjects"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"Military art and science -- Early works to 1800"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"War -- Early works to 1800"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="las-pruebas">Las Pruebas</h2>
+
+<h3 id="mocha-y-chai">Mocha y Chai</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ cd databases
+$ npm init -y
+$ npm install --save-dev --save-exact mocha chai
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Chai supports several different styles of assertions, each with their own pros and cons.
+Here We’ll use Chai’s expect style.</p>
+
+<p>Here is an example, first using Node.js’s built-in assert module,</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">assert</span><span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="nx">book</span><span class="p">.</span><span class="nx">authors</span><span class="p">,</span> <span class="err">​</span><span class="dl">'</span><span class="s1">book should have authors</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+<span class="err">​</span>   <span class="nx">assert</span><span class="p">.</span><span class="nx">ok</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">book</span><span class="p">.</span><span class="nx">authors</span><span class="p">),</span> <span class="err">​</span><span class="dl">'</span><span class="s1">authors should be an array</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+<span class="err">​</span>   <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">book</span><span class="p">.</span><span class="nx">authors</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="err">​</span><span class="dl">'</span><span class="s1">authors length should be 2</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>If you read the code carefully, you can deconstruct that it’s confirming that the <code class="language-plaintext highlighter-rouge">book</code> object
+has a property called <code class="language-plaintext highlighter-rouge">authors</code> that is an <code class="language-plaintext highlighter-rouge">Array</code> of length 2.</p>
+
+<p>By contrast, check out this example using Chai’s expect method:</p>
+
+<p>… and the same using Chai’s expect style:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">authors</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+<span class="err">​</span>   <span class="p">.</span><span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="err">​</span><span class="kd">with</span><span class="err">​</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>By comparison to the native Node.js assert code, this reads like English.</p>
+
+<h3 id="setting-up-tests-with-mocha-and-chai">Setting Up Tests with Mocha and Chai</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nv">$ </span>​​cd​​ ​​databases​
+​<span class="nv">$ </span>​​npm​​ ​​init​​ ​​-y​
+<span class="nv">$ </span>​​npm​​ ​​install​​ ​​--save-dev​​ ​​--save-exact​​ ​​mocha​​ ​​chai
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="ejecución-de-las-pruebas">Ejecución de las Pruebas</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/sol-nodejs-the-right-way(master)]$ jq .scripts package.json 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"test-databases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mocha transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"test-debug-databases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mocha --inspect-brk --no-timeouts transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"test:watch-databases"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mocha --watch --reporter min transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="bdd-tdd-and-the-red-green-refactor-cycle">BDD, TDD and The Red-Green-Refactor cycle</h3>
+
+<ol>
+  <li>Add new criteria to the test.</li>
+  <li>Run the test and see that it fails.</li>
+  <li>Modify the code being tested.</li>
+  <li>Run the test and see that it passes.</li>
+</ol>
+
+<p><a href="https://medium.com/@sukorenomw/why-tdd-test-driven-development-a1bc983a2cc0"><img src="https://files.realpython.com/media/tdd.0904607f8ec9.png" alt="https://files.realpython.com/media/tdd.0904607f8ec9.png" /></a></p>
+
+<p>We keep this cycle going over and over again:</p>
+
+<ol>
+  <li>We write the test before a single line of implementation code is written.
+    <ul>
+      <li>That test will serve as a guideline what to build and to make sure we don’t break anything in the future that prevents the regular flow from working.</li>
+      <li>We describe each unit of the system through a failing test</li>
+    </ul>
+  </li>
+  <li>We write the code to make it pass</li>
+  <li>Then, we can refactor it if necessary</li>
+</ol>
+
+<h3 id="código-de-las-pruebas">Código de las Pruebas</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>cp ../data/cache/epub/132/pg132.rdf test/
+[~/.../Capitulo5/databases(master)]$ tree test/
+test/
+├── parse-rdf-test.js
+└── pg132.rdf
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$ cat databases/test/parse-rdf-test.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">chai</span><span class="dl">'</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">parseRDF</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../lib/parse-rdf.js</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">rdf</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">__dirname</span><span class="p">}</span><span class="s2">/pg132.rdf`</span><span class="p">);</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="dl">"</span><span class="s2">Chapter 5: Transforming Data and Testing Continuously</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">parseRDF</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should be a function</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">debugger</span><span class="p">;</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">parseRDF</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="dl">'</span><span class="s1">function</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should parse RDF content</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">parseRDF</span><span class="p">(</span><span class="nx">rdf</span><span class="p">);</span>
+      <span class="c1">// https://www.chaijs.com/api/bdd/#method_language-chains</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="dl">'</span><span class="s1">object</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">,</span> <span class="mi">132</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">The Art of War</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">authors</span><span class="dl">'</span><span class="p">).</span><span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="p">).</span><span class="kd">with</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">Sunzi, active 6th century B.C.</span><span class="dl">'</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">Giles, Lionel</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">subjects</span><span class="dl">'</span><span class="p">).</span><span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="p">).</span><span class="kd">with</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">Military art and science -- Early works to 1800</span><span class="dl">'</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">War -- Early works to 1800</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="depurando-las-pruebas">Depurando las Pruebas</h3>
+
+<p>Mocha options for debugging. The options:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>--debug, --inspect, --debug-brk, --inspect-brk, debug, inspect
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Enables Node.js’ debugger or inspector.</p>
+
+<p>Use <code class="language-plaintext highlighter-rouge">--inspect / --inspect-brk / --debug / --debug-brk</code>  to launch the V8 inspector for use with Chrome Dev Tools.</p>
+
+<p>Use <code class="language-plaintext highlighter-rouge">inspect / debug</code> to launch Node.js’ internal debugger.</p>
+
+<p>All of these options are mutually exclusive.</p>
+
+<p>Implies <code class="language-plaintext highlighter-rouge">--no-timeout</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>[~/.../p9-t3-transforming-data/transforming-data-and-testing-continuously-chapter-5(master)]$ npm run test-debug-databases
+
+&gt; nodejs-8-the-right-way@1.0.0 test-debug-databases /Users/casiano/local/src/CA/sol-nodejs-the-right-way
+&gt; mocha --inspect-brk --no-timeouts transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js
+
+Debugger listening on ws://127.0.0.1:9229/db1b1cee-1632-4541-9ef9-608b2943c3a3
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/chrome-debug-mocha.png" alt="/assets/images/chrome-debug-mocha.png" /></p>
+
+<h2 id="extracting-data-from-xml-with-cheerio">Extracting Data from XML with Cheerio</h2>
+
+<p>Cheerio is a fast Node.js module that provides a jQuery-like API for working with HTML and XML documents.</p>
+
+<ul>
+  <li><a href="https://github.com/cheeriojs/cheerio">cheerio</a> GitHub</li>
+  <li><a href="https://cheerio.js.org/">https://cheerio.js.org/</a></li>
+</ul>
+
+<p>Cheerio uses CSS selectors as a Domain specific Language (DSL) to traverse and modify the Abstract Syntax Tree (AST) of te XML document. 
+The AST of a HTML or XML document is usually referred as the DOM.</p>
+
+<p>Other popular alternatives include</p>
+
+<ul>
+  <li><a href="https://github.com/jsdom/jsdom">jsdom</a></li>
+  <li><a href="https://github.com/jindw/xmldom">xmldom</a></li>
+</ul>
+
+<p>both of which are based on the W3C’s DOM specification.</p>
+
+<p>In your own projects, if the XML files that you’re working with are quite large, then you’re probably going to want a streaming SAX  (parser instead. SAX, which stands for <strong>Simple API for XML</strong>, treats XML as a stream of tokens that your program digests in sequence. Unlike a DOM parser, which considers the document as a whole, a SAX parser operates on only a small piece at a time.</p>
+
+<p>Compared to DOM parsers, SAX parsers can be quite fast and memory-efficient. But the downside of using a SAX parser is that your program will have to keep track of the document structure in flight</p>
+
+<ul>
+  <li><a href="https://github.com/isaacs/sax-js">sax-js</a></li>
+</ul>
+
+<h3 id="getting-started-with-cheerio">Getting Started with Cheerio</h3>
+
+<p>To get started with Cheerio, install it with npm and save the dependency.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​   ​$ ​​npm​​ ​​install​​ ​​--save​​ ​​--save-exact​​ ​​cheerio
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Before we start using Cheerio, let’s create some BDD tests that we can make pass by doing so.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​   ​<span class="nv">$ </span>​​npm​​ ​​run​​ ​​test:watch​
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>It should clear the screen and report two passing tests:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​   2 passing (44ms)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now let’s require that the book object returned by <code class="language-plaintext highlighter-rouge">parseRDF</code> has the correct numeric <code class="language-plaintext highlighter-rouge">ID</code> for <em>The Art of War</em>.</p>
+
+<p>Open your <code class="language-plaintext highlighter-rouge">parse-rdf-test.js</code> file and expand the second test by adding a check that the book object has an <code class="language-plaintext highlighter-rouge">id</code> property containing the number 132.</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js">test/parse-rdf-test.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>  <span class="nx">it</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">should parse RDF content</span><span class="dl">'</span><span class="err">​</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="err">​</span>   <span class="kd">const</span><span class="err">​</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">parseRDF</span><span class="p">(</span><span class="nx">rdf</span><span class="p">);</span>
+  <span class="err">​</span>   <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">object</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+  <span class="err">​</span>   <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="err">​</span><span class="p">,</span> <span class="mi">132</span><span class="p">);</span>
+<span class="err">​</span>   <span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This code takes advantage of Chai’s sentence-like BDD API</p>
+
+<p>Since we have not yet implemented the code to include the ‘id‘ in the returned ‘book‘ object, as soon as you save the file, your Mocha terminal should report this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>1 passing (4ms)
+1 failing
+​
+1) parseRDF should parse RDF content:
+   AssertionError: expected {} to have a property 'id'
+​   at Context.it (test/parse-rdf-test.js:32:28)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The test is failing exactly as we expect it should.</p>
+
+<p>Now it’s time to use <a href="https://github.com/cheeriojs/cheerio">Cheerio</a> to pull out the four fields we want:</p>
+
+<ol>
+  <li>the book’s ID,</li>
+  <li>the title,</li>
+  <li>the authors, and</li>
+  <li>the subjects.</li>
+</ol>
+
+<h3 id="reading-data-from-an-attribute">Reading Data from an Attribute</h3>
+
+<p>The first piece of information we hope to extract using <a href="https://github.com/cheeriojs/cheerio">Cheerio</a><br />
+is the book’s ID. 
+Recall that we’re trying to grab the number 132 out of this XML tag:</p>
+
+<p><strong>File <a href="/tema3-web/pg132">pg132.rdf</a></strong>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​   <span class="nt">&lt;pgterms:ebook</span> <span class="na">rdf:about=</span><span class="s">​"ebooks/132"​</span><span class="nt">&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Open your <code class="language-plaintext highlighter-rouge">lib/parse-rdf.js</code> file and make it look like the following:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="err">​</span><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="err">​</span><span class="p">;</span>
+<span class="err">​</span><span class="kd">const</span><span class="err">​</span> <span class="nx">cheerio</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">cheerio</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">rdf</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<span class="err">​</span>  <span class="kd">const</span><span class="err">​</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">cheerio</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">rdf</span><span class="p">);</span>
+<span class="err">​</span>
+<span class="err">​</span>  <span class="kd">const</span><span class="err">​</span> <span class="nx">book</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="nx">book</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="o">+</span><span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">pgterms​​</span><span class="se">\\</span><span class="s1">​​:ebook</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">rdf:about</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">ebooks/</span><span class="dl">'</span><span class="err">​</span><span class="p">,</span> <span class="err">​</span><span class="dl">''</span><span class="err">​</span><span class="p">);</span>
+
+ <span class="err">​</span><span class="k">return</span><span class="err">​</span> <span class="nx">book</span><span class="p">;</span>
+<span class="err">​</span><span class="p">};</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In CSS, the colon character (<code class="language-plaintext highlighter-rouge">:</code>) has special meaning—it is used to introduce pseudo selectors like <code class="language-plaintext highlighter-rouge">:hover</code> for links that are hovered over.</p>
+
+<p>In our case, we need a literal colon character for the <code class="language-plaintext highlighter-rouge">&lt;pgterms:ebook&gt;</code> tag name, so we have to escape it with a backslash.</p>
+
+<p>But since the backslash is a special character in JavaScript string literals, that too needs to be escaped-. Thus, our query selector for finding the tag is <code class="language-plaintext highlighter-rouge">pgterms\\:ebook</code>.</p>
+
+<p>Lo ilustramos en esta sesión de node:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nx">s</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">pgterms</span><span class="se">\</span><span class="s1">:ebook</span><span class="se">\n</span><span class="dl">'</span>
+<span class="dl">'</span><span class="s1">pgterms:ebook</span><span class="se">\n</span><span class="dl">'</span>
+<span class="o">&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`-</span><span class="p">${</span><span class="nx">s</span><span class="p">}</span><span class="s2">-`</span><span class="p">)</span>
+<span class="o">-</span><span class="nx">pgterms</span><span class="p">:</span><span class="nx">ebook</span>
+<span class="o">-</span>
+<span class="o">&gt;</span> <span class="nx">t</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">pgterms</span><span class="se">\\</span><span class="s1">:ebook</span><span class="se">\n</span><span class="dl">'</span>
+<span class="dl">'</span><span class="s1">pgterms</span><span class="se">\\</span><span class="s1">:ebook</span><span class="se">\n</span><span class="dl">'</span>
+<span class="o">&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`-</span><span class="p">${</span><span class="nx">t</span><span class="p">}</span><span class="s2">-`</span><span class="p">)</span>
+<span class="o">-</span><span class="nx">pgterms</span><span class="err">\</span><span class="p">:</span><span class="nx">ebook</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="reading-the-text-of-a-node">Reading the Text of a Node</h3>
+
+<p>Next, let’s add a test for the <code class="language-plaintext highlighter-rouge">title</code> of the book. 
+Insert the following code:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/databases/test/parse-rdf-test.js">test/parse-rdf-test.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="err">​</span><span class="p">,</span> <span class="err">​</span><span class="dl">'</span><span class="s1">The Art of War</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Your continuous testing terminal should read as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>   1 passing (3ms)
+   1 failing
+
+​   1) parseRDF should parse RDF content:
+ ​     AssertionError: expected { id: 132 } to have a property 'title'
+​      at Context.it (test/parse-rdf-test.js:35:28)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Now let’s grab the title and add it to the returned book object. Recall that the <a href="/tema3-web/pg132">XML</a> containing the title looks like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​   <span class="nt">&lt;dcterms:title&gt;</span>The Art of War<span class="nt">&lt;/dcterms:title&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Add the following to your <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a> file, after the line where we set book.id:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">book</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">dcterms​​</span><span class="se">\\</span><span class="s1">​​:title</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Using Cheerio, we select the tag named <code class="language-plaintext highlighter-rouge">dcterms:title</code> and used the <code class="language-plaintext highlighter-rouge">text()</code>method of the element to save its text contents to the <code class="language-plaintext highlighter-rouge">book.title</code> property.</p>
+
+<h3 id="collecting-an-array-of-values">Collecting an Array of Values</h3>
+
+<p>Now, let’s tests the array of book authors:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js">test/parse-rdf-test.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>  <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">authors</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+<span class="err">​</span>   <span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="err">​</span><span class="kd">with</span><span class="err">​</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="err">​</span>  <span class="p">.</span><span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">Sunzi, active 6th century B.C.</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+<span class="err">​</span>  <span class="p">.</span><span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">Giles, Lionel</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In Chai’s language-chaining DSL, words like</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">and</code>,</li>
+  <li><code class="language-plaintext highlighter-rouge">that</code>, and</li>
+  <li><code class="language-plaintext highlighter-rouge">which</code></li>
+</ul>
+
+<p>are largely interchangeable. 
+This let us write clauses like</p>
+
+<p><code class="language-plaintext highlighter-rouge">.and.contains(’X’)</code> or <code class="language-plaintext highlighter-rouge">.that.contains(’X’)</code>,</p>
+
+<p>depending on which version reads better in your test case.</p>
+
+<p>Our continuous testing reports a failure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>​   1 passing (11ms)
+​   1 failing
+​   
+​   1) parseRDF should parse RDF content:
+​   AssertionError: expected { id: 132, title: 'The Art of War' } to have a
+​   property 'authors' at Context.it (test/parse-rdf-test.js:39:28)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To make the test pass, recall that we will need to pull out the content from these tags:</p>
+
+<p><strong><a href="/tema3-web/pg132">data/cache/epub/132/pg132.rdf</a></strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>​   <span class="nt">&lt;pgterms:agent</span> <span class="na">rdf:about=</span><span class="s">​"2009/agents/4349"​</span><span class="nt">&gt;</span>
+  ​   <span class="nt">&lt;pgterms:name&gt;</span>Sunzi, active 6th century B.C.<span class="nt">&lt;/pgterms:name&gt;</span>
+​   <span class="nt">&lt;/pgterms:agent&gt;</span>
+​   <span class="nt">&lt;pgterms:agent</span> <span class="na">rdf:about=</span><span class="s">​"2009/agents/5101"​</span><span class="nt">&gt;</span>
+  ​   <span class="nt">&lt;pgterms:name&gt;</span>Giles, Lionel<span class="nt">&lt;/pgterms:name&gt;</span>
+​   <span class="nt">&lt;/pgterms:agent&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>We’re looking to extract the text of each <code class="language-plaintext highlighter-rouge">&lt;pgterms:name&gt;</code> tag that’s a child of a <code class="language-plaintext highlighter-rouge">&lt;pgterms:agent&gt;</code>.</p>
+
+<p>The CSS selector <code class="language-plaintext highlighter-rouge">pgterms:agent pgterms:name</code> finds the elements we need, so we can start with this:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">pgterms​​</span><span class="se">\\</span><span class="s1">​​:agent pgterms​​</span><span class="se">\\</span><span class="s1">​​:name</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>You might be tempted to grab the text straight away like this:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">book</span><span class="p">.</span><span class="nx">authors</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">pgterms​​</span><span class="se">\\</span><span class="s1">​​:agent pgterms​​</span><span class="se">\\</span><span class="s1">​​:name</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>But unfortunately, this won’t give us what we want, because Cheerio’s <code class="language-plaintext highlighter-rouge">text</code> method returns a single string and we need an array of strings.</p>
+
+<p>Instead, we use a <code class="language-plaintext highlighter-rouge">map</code>:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nx">book</span><span class="p">.</span><span class="nx">authors</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">pgterms​​</span><span class="se">\\</span><span class="s1">​​:agent pgterms​​</span><span class="se">\\</span><span class="s1">​​:name</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">toArray</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="nx">elem</span> <span class="o">=&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Calling Cheerio’s <code class="language-plaintext highlighter-rouge">.toArray</code> method converts the collection object into a true JavaScript <code class="language-plaintext highlighter-rouge">Array</code>.</p>
+
+<p>Unfortunately, the collection of objects that comes out of <code class="language-plaintext highlighter-rouge">toArray</code> doesn’t consist of Cheerio-wrapped objects, but rather <code class="language-plaintext highlighter-rouge">document</code> nodes.</p>
+
+<p>To extract the text using Cheerio’s <code class="language-plaintext highlighter-rouge">text</code>, we need to wrap each node with the <code class="language-plaintext highlighter-rouge">$</code> function, then call text on it.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> <span class="nx">elem</span> <span class="o">=&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">).</span><span class="nx">text</span><span class="p">().</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="traversing-the-document-the-list-of-subjects">Traversing the Document: The List of Subjects</h3>
+
+<p>Finally, we want to obtain the list of subjects.</p>
+
+<p><strong>File: <a href="/tema3-web/pg132">pg132.rdf</a></strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>​   <span class="nt">&lt;dcterms:subject&gt;</span>
+  ​   <span class="nt">&lt;rdf:Description</span> <span class="na">rdf:nodeID=</span><span class="s">​"N26bb21da0c924e5abcd5809a47f231e7"​</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;dcam:memberOf</span> <span class="na">rdf:resource=</span><span class="s">​"http://purl.org/dc/terms/LCSH"​/</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;rdf:value&gt;</span>Military art and science -- Early works to 1800<span class="nt">&lt;/rdf:value&gt;</span>
+  ​   <span class="nt">&lt;/rdf:Description&gt;</span>
+​   <span class="nt">&lt;/dcterms:subject&gt;</span>
+​   <span class="nt">&lt;dcterms:subject&gt;</span>
+  ​   <span class="nt">&lt;rdf:Description</span> <span class="na">rdf:nodeID=</span><span class="s">​"N269948d6ecf64b6caf1c15139afd375b"​</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;rdf:value&gt;</span>War -- Early works to 1800<span class="nt">&lt;/rdf:value&gt;</span>
+    ​   <span class="nt">&lt;dcam:memberOf</span> <span class="na">rdf:resource=</span><span class="s">​"http://purl.org/dc/terms/LCSH"​/</span><span class="nt">&gt;</span>
+  ​   <span class="nt">&lt;/rdf:Description&gt;</span>
+​   <span class="nt">&lt;/dcterms:subject&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>As with previous examples, let’s start by adding a test:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js">test/parse-rdf-test.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">subjects</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="err">​</span><span class="p">).</span><span class="err">​</span><span class="kd">with</span><span class="err">​</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="err">​</span>   <span class="p">.</span><span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">Military art and science -- Early works to 1800</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+<span class="err">​</span>   <span class="p">.</span><span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">War -- Early works to 1800</span><span class="dl">'</span><span class="err">​</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>It would be nice if we could use the tag structure to craft a simple CSS selector like this:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">dcterms​​</span><span class="se">\\</span><span class="s1">​​:subject rdf​​</span><span class="se">\\</span><span class="s1">​​:value</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>However, this selector would match another tag that is in the document, which we don’t want.</p>
+
+<p><strong>File: <a href="/tema3-web/pg132">pg132.rdf</a></strong></p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>​  <span class="nt">&lt;dcterms:subject&gt;</span>
+  ​  <span class="nt">&lt;rdf:Description</span> <span class="na">rdf:nodeID=</span><span class="s">​"Nfb797557d91f44c9b0cb80a0d207eaa5"​</span><span class="nt">&gt;</span>
+    ​  <span class="nt">&lt;dcam:memberOf</span> <span class="na">rdf:resource=</span><span class="s">​"http://purl.org/dc/terms/LCC"​/</span><span class="nt">&gt;</span>
+    ​  <span class="nt">&lt;rdf:value&gt;</span>U<span class="nt">&lt;/rdf:value&gt;</span>
+  ​  <span class="nt">&lt;/rdf:Description&gt;</span>
+​  <span class="nt">&lt;/dcterms:subject&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To spot the difference, look at the <code class="language-plaintext highlighter-rouge">&lt;dcam:memberOf&gt;</code> tags’ <code class="language-plaintext highlighter-rouge">rdf:resource</code> URLs.</p>
+
+<p>The ones we want end in <code class="language-plaintext highlighter-rouge">LCSH</code>, which stands for <strong>Library of Congress Subject Headings</strong>.</p>
+
+<p>These headings are a collection of rich indexing terms used in bibliographic records.</p>
+
+<p>Contrast that with the tag we don’t want to match, which ends in <code class="language-plaintext highlighter-rouge">LCC</code>.
+This stands for <strong>Library of Congress Classification</strong>.</p>
+
+<p>These are <em>codes</em> (C) that divide all knowledge into 21 top-level classes (like U for Military Science) with many subclasses.</p>
+
+<p>Right now we only want the <em>Subject Headings</em> (SH).</p>
+
+<p>Here’s the code:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="err">​</span>   <span class="nx">book</span><span class="p">.</span><span class="nx">subjects</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">[rdf​​</span><span class="se">\\</span><span class="s1">​​:resource$="/LCSH"]</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+<span class="err">​</span>   <span class="p">.</span><span class="nx">parent</span><span class="p">().</span><span class="nx">find</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">rdf​​</span><span class="se">\\</span><span class="s1">​​:value</span><span class="dl">'</span><span class="err">​</span><span class="p">)</span>
+<span class="err">​</span>   <span class="p">.</span><span class="nx">toArray</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="nx">elem</span> <span class="o">=&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nx">elem</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>First, we select the <code class="language-plaintext highlighter-rouge">&lt;dcam:memberOf&gt;</code> tags of interest with the CSS selector <code class="language-plaintext highlighter-rouge">[rdf\:resource$="/LCSH"]</code>.</p>
+<ul>
+  <li>The brackets introduce a CSS attribute selector, and the</li>
+  <li><code class="language-plaintext highlighter-rouge">$=</code> indicates that we want elements whose <code class="language-plaintext highlighter-rouge">rdf:resource</code> attribute <strong>ends</strong> with <code class="language-plaintext highlighter-rouge">/LCSH</code>.</li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">.parent</code> method traverses up to our currently selected elements’ parents.</p>
+
+<p>In this case, those are the <code class="language-plaintext highlighter-rouge">&lt;rdf:Description&gt;</code> tags.</p>
+
+<p>Then we traverse back down using <code class="language-plaintext highlighter-rouge">.find</code> to locate all of their <code class="language-plaintext highlighter-rouge">&lt;rdf:value&gt;</code> tags.</p>
+
+<p>We convert the Cheerio selection object into a true Array and use <code class="language-plaintext highlighter-rouge">.map</code> to get each element’s <code class="language-plaintext highlighter-rouge">text</code>.</p>
+
+<h3 id="anticipating-format-changes">Anticipating Format Changes</h3>
+
+<p>A problem with parsing external files are the chances that the format will change over time.
+An older version of the Project Gutenberg RDF format had its subjects listed like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>​   <span class="nt">&lt;dcterms:subject&gt;</span>
+    <span class="nt">&lt;rdf:Description&gt;</span>
+    ​   <span class="nt">&lt;dcam:memberOf</span> <span class="na">rdf:resource=</span><span class="s">​"http://purl.org/dc/terms/LCSH"​/</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;rdf:value&gt;</span>Military art and science -- Early works to 1800<span class="nt">&lt;/rdf:value&gt;</span>
+    ​   <span class="nt">&lt;rdf:value&gt;</span>War -- Early works to 1800<span class="nt">&lt;/rdf:value&gt;</span>
+  ​   <span class="nt">&lt;/rdf:Description&gt;</span>
+​   <span class="nt">&lt;/dcterms:subject&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Compare with the current one:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>​   <span class="nt">&lt;dcterms:subject&gt;</span>
+  ​   <span class="nt">&lt;rdf:Description</span> <span class="na">rdf:nodeID=</span><span class="s">​"N26bb21da0c924e5abcd5809a47f231e7"​</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;dcam:memberOf</span> <span class="na">rdf:resource=</span><span class="s">​"http://purl.org/dc/terms/LCSH"​/</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;rdf:value&gt;</span>Military art and science -- Early works to 1800<span class="nt">&lt;/rdf:value&gt;</span>
+  ​   <span class="nt">&lt;/rdf:Description&gt;</span>
+​   <span class="nt">&lt;/dcterms:subject&gt;</span>
+​   <span class="nt">&lt;dcterms:subject&gt;</span>
+  ​   <span class="nt">&lt;rdf:Description</span> <span class="na">rdf:nodeID=</span><span class="s">​"N269948d6ecf64b6caf1c15139afd375b"​</span><span class="nt">&gt;</span>
+    ​   <span class="nt">&lt;rdf:value&gt;</span>War -- Early works to 1800<span class="nt">&lt;/rdf:value&gt;</span>
+    ​   <span class="nt">&lt;dcam:memberOf</span> <span class="na">rdf:resource=</span><span class="s">​"http://purl.org/dc/terms/LCSH"​/</span><span class="nt">&gt;</span>
+  ​   <span class="nt">&lt;/rdf:Description&gt;</span>
+​   <span class="nt">&lt;/dcterms:subject&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Instead of finding each subject’s <code class="language-plaintext highlighter-rouge">&lt;rdf:value&gt;</code> living in its own <code class="language-plaintext highlighter-rouge">&lt;dcterms:subject&gt;</code> tag, we find them bunched together under a single one.</p>
+
+<p>Now consider the traversal code we just wrote.</p>
+
+<ol>
+  <li>By finding the <code class="language-plaintext highlighter-rouge">/LCSH tag</code>,</li>
+  <li>going up to its parent <code class="language-plaintext highlighter-rouge">&lt;rdf:Description&gt;</code>, and then</li>
+  <li>searching down for <code class="language-plaintext highlighter-rouge">&lt;rdf:value&gt;</code> tags,</li>
+</ol>
+
+<p>our code would work with both this earlier data format and the current one (at the time of this writing, anyway).</p>
+
+<p>Whenever you work with third-party data, there’s a chance that it could change over time.</p>
+
+<p>When it does, your code may or may not continue to work as expected.</p>
+
+<p>The beauty of testing in these scenarios is that when a data format changes, you can add more tests.</p>
+
+<p>This gives you confidence that you’re meeting the new demands of the updated data format while still honoring past data.</p>
+
+<h3 id="recapping-data-extraction-with-cheerio">Recapping Data Extraction with Cheerio</h3>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/test/parse-rdf-test.js">test/parse-rdf-test.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="err">​</span> <span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">expect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">chai</span><span class="dl">'</span><span class="p">).</span><span class="nx">expect</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">parseRDF</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">../lib/parse-rdf.js</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">rdf</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">__dirname</span><span class="p">}</span><span class="s2">/pg132.rdf`</span><span class="p">);</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="dl">"</span><span class="s2">Chapter 5: Transforming Data and Testing Continuously</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">parseRDF</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should be a function</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">debugger</span><span class="p">;</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">parseRDF</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="dl">'</span><span class="s1">function</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">should parse RDF content</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">parseRDF</span><span class="p">(</span><span class="nx">rdf</span><span class="p">);</span>
+      <span class="c1">// https://www.chaijs.com/api/bdd/#method_language-chains</span>
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nx">a</span><span class="p">(</span><span class="dl">'</span><span class="s1">object</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">id</span><span class="dl">'</span><span class="p">,</span> <span class="mi">132</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">The Art of War</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">authors</span><span class="dl">'</span><span class="p">).</span><span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="p">).</span><span class="kd">with</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">Sunzi, active 6th century B.C.</span><span class="dl">'</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">Giles, Lionel</span><span class="dl">'</span><span class="p">);</span>
+
+      <span class="nx">expect</span><span class="p">(</span><span class="nx">book</span><span class="p">).</span><span class="nx">to</span><span class="p">.</span><span class="nx">have</span><span class="p">.</span><span class="nx">a</span><span class="p">.</span><span class="nx">property</span><span class="p">(</span><span class="dl">'</span><span class="s1">subjects</span><span class="dl">'</span><span class="p">).</span><span class="nx">that</span><span class="p">.</span><span class="nx">is</span><span class="p">.</span><span class="nx">an</span><span class="p">(</span><span class="dl">'</span><span class="s1">array</span><span class="dl">'</span><span class="p">).</span><span class="kd">with</span><span class="p">.</span><span class="nx">lengthOf</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">Military art and science -- Early works to 1800</span><span class="dl">'</span><span class="p">).</span>
+      <span class="nx">and</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="dl">'</span><span class="s1">War -- Early works to 1800</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">cheerio</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">cheerio</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">rdf</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">cheerio</span><span class="p">.</span><span class="nx">load</span><span class="p">(</span><span class="nx">rdf</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="cm">/* We're trying to grab the number 132  out of this XML tag:
+    &lt;pgterms:ebook rdf:about="ebooks/132"&gt;
+  */</span>
+  <span class="nx">book</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="o">+</span>  <span class="c1">// Convert to a number</span>
+     <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">pgterms</span><span class="se">\\</span><span class="s1">:ebook</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// In CSS, the colon : is used for pseudo selectors (like :hover) that is why we have to escape it</span>
+    <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">rdf:about</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// get the rdf:about attribute</span>
+    <span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="dl">'</span><span class="s1">ebooks/</span><span class="dl">'</span><span class="p">,</span><span class="dl">''</span><span class="p">);</span>
+  <span class="c1">// Find   &lt;dcterms:title&gt;The Art of War&lt;/dcterms:title&gt;</span>
+  <span class="nx">book</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">dcterms</span><span class="se">\\</span><span class="s1">:title</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+
+  <span class="nx">book</span><span class="p">.</span><span class="nx">authors</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">pgterms</span><span class="se">\\</span><span class="s1">:agent pgterms</span><span class="se">\\</span><span class="s1">:name</span><span class="dl">'</span><span class="p">)</span>
+                 <span class="p">.</span><span class="nx">toArray</span><span class="p">()</span> <span class="c1">// The collection object returned is not a true Array we have to convert it</span>
+                 <span class="p">.</span><span class="nx">map</span><span class="p">(</span>
+                   <span class="p">(</span><span class="nx">e</span><span class="p">)</span>  <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// e is a document node has no text method</span>
+                             <span class="c1">// that is why we wrap it $(e) to a cheerio object</span>
+                     <span class="k">return</span> <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
+                   <span class="p">}</span>
+                 <span class="p">);</span>
+
+
+  <span class="nx">book</span><span class="p">.</span><span class="nx">subjects</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[rdf</span><span class="se">\\</span><span class="s1">:resource$="/LCSH"]</span><span class="dl">'</span><span class="p">).</span>
+                  <span class="nx">parent</span><span class="p">()</span> <span class="c1">// https://api.jquery.com/parent/</span>
+                  <span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="dl">'</span><span class="s1">rdf</span><span class="se">\\</span><span class="s1">:value</span><span class="dl">'</span><span class="p">)</span> <span class="c1">// https://api.jquery.com/find/</span>
+                  <span class="p">.</span><span class="nx">toArray</span><span class="p">()</span>
+                  <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">text</span><span class="p">());</span>
+  <span class="k">return</span> <span class="nx">book</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Using this, we can now quickly put together a command-line program to explore some of the other RDF files. Open your editor and enter this:</p>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/rdf-to-json.js">rdf-to-json.js</a></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="cp">#!/usr/bin/env node
+</span><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">parseRDF</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lib/parse-rdf.js</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">rdf</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="kd">const</span> <span class="nx">book</span> <span class="o">=</span> <span class="nx">parseRDF</span><span class="p">(</span><span class="nx">rdf</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">book</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="dl">'</span><span class="s1">  </span><span class="dl">'</span><span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>When calling <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON/stringify"><code class="language-plaintext highlighter-rouge">JSON.stringify</code></a> we’re passing three arguments:</p>
+<ol>
+  <li>The second argument (<code class="language-plaintext highlighter-rouge">null</code>) is an optional replacer function that can be used for filtering</li>
+  <li>The last argument (<code class="language-plaintext highlighter-rouge">' '</code>) is used to indent nested objects, making the output more human-readable.</li>
+</ol>
+
+<p>Let’s open a terminal in our databases project directory and run it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5(master)]$ cd databases/
+[~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5/databases(master)]$ ls -l rdf-to-json.js 
+-rw-r--r--  1 casiano  staff  217  7 nov 13:36 rdf-to-json.js
+[~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5/databases(master)]$ chmod a+x rdf-to-json.js 
+[~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5/databases(master)]$ ls -l rdf-to-json.js 
+-rwxr-xr-x  1 casiano  staff  217  7 nov 13:36 rdf-to-json.js
+[~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5/databases(master)]$ ./rdf-to-json.js ../data/cache/epub//11/pg11.rdf 
+{
+  "id": 11,
+  "title": "Alice's Adventures in Wonderland",
+  "authors": [
+    "Carroll, Lewis"
+  ],
+  "subjects": [
+    "Fantasy literature"
+  ]
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="processing-data-files-sequentially">Processing Data Files Sequentially</h2>
+
+<p>Our <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/lib/parse-rdf.js">lib/parse-rdf.js</a>  converts RDF content into JSON documents.</p>
+
+<p>All that remains is to walk through the Project Gutenberg catalog directory and collect all the JSON documents.</p>
+
+<p>More concretely, we need to do the following:</p>
+
+<ol>
+  <li>Traverse down the <code class="language-plaintext highlighter-rouge">data/cache/epub</code> directory looking for files ending in <code class="language-plaintext highlighter-rouge">rdf</code>.</li>
+  <li>Read each RDF file.</li>
+  <li>Run the RDF content through <code class="language-plaintext highlighter-rouge">parseRDF</code>.</li>
+  <li>Collect the JSON serialized objects into a single, bulk file for insertion.</li>
+</ol>
+
+<p>The NoSQL database we’ll be using is Elasticsearch, a document datastore that indexes JSON objects.</p>
+
+<p><strong>GOAL</strong>: We want to transform the Gutenberg data into an intermediate form for bulk import.</p>
+
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html">Elasticsearch has a bulk-import API that lets you pull in many records at once</a></p>
+
+<p>Although we could insert them one at a time, it is significantly faster to use the bulk-insert API.</p>
+
+<p><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html">The format of the file we need to create is described on Elasticsearch’s Bulk API page</a></p>
+
+<p>It’s an LDJ file consisting of</p>
+<ol>
+  <li><strong>actions</strong> and</li>
+  <li>the <strong>source objects on which to perform each action</strong>.</li>
+</ol>
+
+<p>In our case, we’re performing <code class="language-plaintext highlighter-rouge">index</code> operations—that is, 
+<strong>inserting new documents into an index</strong>.</p>
+
+<p>Each source object is the book object returned by <code class="language-plaintext highlighter-rouge">parseRDF</code>.
+Here’s an example of an action followed by its source object:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>​  {​"index"​:{​"_id"​:​"pg11"​}}
+​  {​"id"​:11,​"title"​:​"Alice's Adventures in Wonderland"​,​"authors"​:...}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>And here’s another one:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>​   {​"index"​:{​"_id"​:​"pg132"​}}
+​   {​"id"​:132,​"title"​:​"The Art of War"​,​"authors"​:...}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>In each case,</p>
+<ol>
+  <li>an action is a JSON object on a line by itself, and</li>
+  <li>the source object is another JSON object on the next line.</li>
+</ol>
+
+<p>Elasticsearch’s bulk API allows you to chain any number of these together like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>  {​"index"​:{​"_id"​:​"pg11"​}}
+​  {​"id"​:11,​"title"​:​"Alice's Adventures in Wonderland"​,​"authors"​:...}
+​  {​"index"​:{​"_id"​:​"pg132"​}}
+​  {​"id"​:132,​"title"​:​"The Art of War"​,​"authors"​:...}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To find and open each of the <code class="language-plaintext highlighter-rouge">RDF</code> files under the <code class="language-plaintext highlighter-rouge">data/cache/epub</code> directory, we will use a module called <a href="https://github.com/fshost/node-dir">node-dir</a>.</p>
+
+<p>Install it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​​$ ​​npm​​ ​​install​​ ​​​​node-dir
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This module comes with a handful of useful methods for walking a directory tree.</p>
+
+<p>The method we’ll use is 
+<code class="language-plaintext highlighter-rouge">readFiles</code>, 
+which sequentially operates on files as it encounters them while walking a directory tree.</p>
+<details>
+ <summary>
+ <b>Argumentos de readFiles</b>
+ </summary>
+  <ul>
+    <li>encoding: file encoding (defaults to 'utf8')</li>
+    <li>exclude: a regex pattern or array to specify filenames to ignore</li>
+    <li>excludeDir: a regex pattern or array to specify directories to ignore</li>
+    <li>match: a regex pattern or array to specify filenames to operate on</li>
+    <li>matchDir: a regex pattern or array to specify directories to recurse</li>
+    <li>recursive: whether to recurse subdirectories when reading files (defaults to true)</li>
+    <li>reverse: sort files in each directory in descending order</li>
+    <li>shortName: whether to aggregate only the base filename rather than the full filepath</li>
+    <li>sort: sort files in each directory in ascending order (defaults to true)</li>
+    <li>doneOnErr: control if done function called on error (defaults to true)</li>
+  </ul>
+</details>
+
+<p><strong><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/transforming-data-and-testing-continuously-chapter-5/databases/rdf-to-bulk.js">rdf-to-bulk</a></strong></p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="c1">// Run as:</span>
+<span class="c1">//          node rdf-to-bulk.js ../data/cache/epub | head</span>
+<span class="c1">// or       gulp c5-rdf-to-json-11</span>
+<span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">dir</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-dir</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">parseRDF</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="dl">'</span><span class="s1">/lib/parse-rdf.js</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">dirname</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">match</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">rdf$/</span><span class="p">,</span>
+  <span class="na">exclude</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">pg0.rdf</span><span class="dl">'</span><span class="p">]</span>
+<span class="p">};</span>
+
+<span class="c1">// Because the head command closes the pipe after echoing the beginning lines</span>
+<span class="c1">// we capture error events on the process.stdout stream</span>
+<span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">());</span>
+
+<span class="nx">dir</span><span class="p">.</span><span class="nx">readFiles</span><span class="p">(</span><span class="nx">dirname</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">content</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">parseRDF</span><span class="p">(</span><span class="nx">content</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span> <span class="na">index</span><span class="p">:</span> <span class="p">{</span> <span class="na">_id</span><span class="p">:</span> <span class="s2">`pg</span><span class="p">${</span><span class="nx">doc</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">}</span> <span class="p">}));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">doc</span><span class="p">));</span>
+  <span class="nx">next</span><span class="p">();</span>
+<span class="p">});</span>
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">_id</code> field of each index operation is the unique identifier that Elasticsearch will use for the document.</p>
+
+<p>Here the author has chosen to use the string <code class="language-plaintext highlighter-rouge">pg</code> followed by the Project Gutenberg ID. This way, if we ever wanted to store documents from another source in the same index, they shouldn’t collide with the Project Gutenberg book data.</p>
+
+<p>Run the program like that:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5/databases(master)]$ node rdf-to-bulk.js ../data/cache/epub | head
+{"index":{"_id":"pg1"}}
+{"id":1,"title":"The Declaration of Independence of the United States of America","authors":["Jefferson, Thomas"],"subjects":["United States -- History -- Revolution, 1775-1783 -- Sources","United States. Declaration of Independence"]}
+{"index":{"_id":"pg10"}}
+{"id":10,"title":"The King James Version of the Bible","authors":[],"subjects":["Bible"]}
+{"index":{"_id":"pg100"}}
+{"id":100,"title":"The Complete Works of William Shakespeare","authors":["Shakespeare, William"],"subjects":["English drama -- Early modern and Elizabethan, 1500-1600"]}
+{"index":{"_id":"pg1000"}}
+{"id":1000,"title":"La Divina Commedia di Dante: Complete","authors":["Dante Alighieri"],"subjects":[]}
+{"index":{"_id":"pg10000"}}
+{"id":10000,"title":"The Magna Carta","authors":["Anonymous"],"subjects":["Constitutional history -- England -- Sources","Magna Carta"]}
+[~/local/src/CA/sol-nodejs-the-right-way/transforming-data-and-testing-continuously-chapter-5/databases(master)]$ 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Because the head command closes the pipe after echoing the beginning lines, this can sometimes cause Node.js to throw an exception.
+We can capture error events on the <code class="language-plaintext highlighter-rouge">process.stdout</code> stream. That is why we have added  the following line to <code class="language-plaintext highlighter-rouge">rdf-to-bulk.js</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">​</span> 	<span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="err">​</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="err">​</span><span class="p">,</span> <span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">());</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Use the following command to capture the output in a new file called <code class="language-plaintext highlighter-rouge">bulk_pg.ldj</code>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> ​​node​​ ​​rdf-to-bulk.js​​ ​​../data/cache/epub/​​ ​​&gt;​​ ​​../data/bulk_pg.ldj​
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Esto lleva su tiempo, en mi máquina ocupa mas de 12MB:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>$ ls -lh data/
+total 46664
+-rw-r--r--  1 casiano  staff   294B 29 oct  2018 README.md
+-rw-r--r--  1 casiano  staff    12M 11 mar  2019 bulk_pg.ldj
+-rw-r--r--  1 casiano  staff    10M 20 nov  2018 bulk_result.json
+drwxr-xr-x  3 casiano  staff    96B 25 oct  2018 cache
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="la-práctica-p9-t3-transforming-data-extracting-classigication-codes-and-sources">La práctica p9-t3-transforming-data: Extracting Classigication Codes and Sources</h2>
+
+<ul>
+  <li><a href="/tema3-web/practicas/p9-t3-transforming-data/">La práctica p9-t3-transforming-data</a></li>
+</ul>
+
+<h2 id="el-reto-precios-de-hiperdino">El Reto: Precios de Hiperdino</h2>
+
+<ul>
+  <li><a href="/tema3-web/practicas/p9-t3-transforming-data/reto">Escriba un programa que liste los precios de Hiperdino por categoría del producto</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

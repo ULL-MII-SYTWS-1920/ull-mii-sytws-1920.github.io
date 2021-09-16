@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema4-devops/performance.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#performance-of-web-apps">Performance of Web Apps</a>
+    <ul>
+      <li><a href="#article-by-joe-colantonio-founder-testtalks-tools-for-understanding-server-side-performance">Article by Joe Colantonio, Founder, TestTalks: Tools for understanding server-side performance</a>
+        <ul>
+          <li><a href="#the-value-of-performance">The value of performance</a></li>
+          <li><a href="#tools-for-understanding-server-side-performance">Tools for understanding server-side performance</a></li>
+          <li><a href="#tools-for-understanding-client-side-performance">Tools for understanding client-side performance</a></li>
+          <li><a href="#tools-for-understanding-real-world-performance">Tools for understanding real-world performance</a></li>
+          <li><a href="#choices-and-tradeoffs">Choices and tradeoffs</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="performance-of-web-apps">Performance of Web Apps</h1>
+
+<h2 id="article-by-joe-colantonio-founder-testtalks-tools-for-understanding-server-side-performance">Article by Joe Colantonio, Founder, TestTalks: Tools for understanding server-side performance</h2>
+
+<p>Reade the original <a href="https://techbeacon.com/app-dev-testing/web-performance-testing-top-12-free-open-source-tools-consider">here</a></p>
+
+<p>The performance of your web application affects your business more than you might think. <a href="https://content.microfocus.com/software-test-automation-tb/high-perf-continuous-delivery?utm_source=techbeacon&amp;utm_medium=techbeacon&amp;utm_campaign=00134846">Top engineering organizations</a> consider performance not as nice-to-have, but as a crucial feature of their products. Unfortunately, most engineering teams do not regularly <a href="http://techbeacon.com/5-best-practices-realistic-performance-testing">test the performance</a> and scalability of their infrastructure, and most lack the tools to properly do so. Although you can find plenty of commercial tool options out there, for the right organization, free and open source tools may be a good alternative—or the perfect complement to your commercial tool set.</p>
+
+<h3 id="the-value-of-performance">The value of performance</h3>
+
+<p>Before talking tools, let’s consider load times and the value of performance. When you understand that performance is key to a great user experience, you need tools that will do one thing very well, and that’s to measure the user’s perceived load time. There are many <a href="http://techbeacon.com/23-front-end-performance-rules-web-applications">performance rules</a> out there, but ultimately, that’s the only performance metric that matters.</p>
+
+<p>How fast is fast enough for a web application? Here’s a quick overview of <a href="http://www.nngroup.com/articles/website-response-times/">key performance metrics</a>:</p>
+
+<ul>
+  <li>Under 100 milliseconds is perceived as instantaneous</li>
+  <li>A 100 ms to 300 ms delay is perceptible</li>
+  <li><a href="http://www.nngroup.com/articles/response-times-3-important-limits/">One second is about the limit for the user’s flow of thought to stay uninterrupted</a></li>
+  <li>Users expect a site to load in 2 seconds</li>
+  <li>After 3 seconds, 40% of visitors will abandon your site</li>
+  <li><a href="http://www.webperformancetoday.com/2010/06/15/everything-you-wanted-to-know-about-web-performance/">10 seconds is about the limit for keeping the user’s attention</a></li>
+</ul>
+
+<p>Engineering teams should <a href="http://www.nngroup.com/articles/website-response-times/">treat performance as a feature</a>.</p>
+
+<p>The goal of performance testing is to understand how your applications behave under heavy load conditions. To get started, you need to understand the baseline performance of your application and that the performance of each transaction is unique. For example, in an e-commerce application, a home page transaction is likely highly cached and very fast, whereas a checkout transaction is more complicated and must talk to a payment service, shipping service, etc. To ensure that users have a great experience, you must test the most common flows for your users and understand performance both in the browser and on the server.</p>
+
+<p>To get the job done, you’ll need <a href="https://content.microfocus.com/software-test-automation-tb/buyers-guide-software-test-automation?utm_source=techbeacon&amp;utm_medium=techbeacon&amp;utm_campaign=00134846">server-side, client-side, and performance tools</a>, and you can find free and open source options that fall into each of these categories.</p>
+
+<h3 id="tools-for-understanding-server-side-performance">Tools for understanding server-side performance</h3>
+
+<p><a href="https://httpd.apache.org/docs/2.4/programs/ab.html">Apache Bench</a> and <a href="https://www.joedog.org/siege-home/">Siege</a> are great for quick load tests from a single endpoint. If you just need to get a sense of the requests per second for an endpoint, these are great solutions. A more advanced approach—and my personal preference—is <a href="http://locust.io/">Locust.io</a>, an open source load-testing framework that enables complex transactions and can generate high levels of concurrency with ease. I’ve included it in the list below, along with a few other tools to consider.</p>
+
+<p><img src="http://techbeacon.com/sites/default/files/locustio_0.png" alt="" /></p>
+
+<p><em>Locust.io</em></p>
+
+<ul>
+  <li><a href="http://locust.io/"><strong>Locust.io</strong></a> – This is a great tool for understanding the performance on the server side.</li>
+  <li><a href="https://github.com/newsapps/beeswithmachineguns"><strong>Bees with Machine Guns</strong></a> – The authors describe it as “a utility for arming (creating) many bees (micro EC2 instances) to attack (load test) targets (web applications).”</li>
+  <li><a href="https://github.com/cgoldberg/multi-mechanize"><strong>Multi-Mechanize</strong></a> – This is an open source framework for performance and load testing that runs concurrent Python scripts to generate load (synthetic transactions) against a remote site or service. It’s commonly used for web performance and scalability testing, but you can also use Multi-Mechanize to generate a workload against any remote API accessible from Python.</li>
+  <li><strong><a href="http://www.joedog.org/siege-home/">Siege</a> </strong>– This http load-testing and benchmarking utility was designed to let web developers measure code under duress, to see how it will stand up to load on the Internet. Siege supports basic authentication, cookies, and HTTP and HTTPS protocols, and lets the user hit a web server with a configurable number of simulated web browsers. Those browsers place the server “under siege.”</li>
+  <li><a href="https://httpd.apache.org/docs/2.4/programs/ab.html"><strong>Apache Bench</strong></a> – Use this tool for benchmarking your Apache HTTP server, to get an idea of how Apache performs.</li>
+  <li><a href="https://code.google.com/p/httperf/"><strong>Httperf</strong></a> – This tool measures web server performance and provides a flexible facility for generating varied HTTP workloads and measuring server performance. The focus is not on implementing a particular benchmark but on providing a robust, high-performance tool that facilitates the construction of both micro- and macro-level benchmarks. The three distinguishing characteristics of httperf are its robustness, which includes the ability to generate and sustain server overload; support for the HTTP/1.1 and SSL protocols; and its extensibility to new workload generators and performance measurements.</li>
+  <li><strong><a href="https://jmeter.apache.org/">JMeter</a> </strong>– Use Apache JMeter to test performance both on static and dynamic resources (files, servlets, Perl scripts, Java objects, databases and queries, FTP servers, and more). You can also use it to simulate a heavy load on a server, network, or object to test its strength or analyze overall performance under different load types. Finally, consider using it to make a graphical analysis of performance or to test your server/script/object behavior under a heavy concurrent load.</li>
+</ul>
+
+<h3 id="tools-for-understanding-client-side-performance">Tools for understanding client-side performance</h3>
+
+<p>Modern applications spend more time in the browser than on the server side. The best tool to use to understand client-side performance is …</p>
+
+<ul>
+  <li><a href="https://developers.google.com/speed/pagespeed/insights/"><strong>Google PageSpeed Insights</strong></a>, a service that analyzes the content of a web page and generates suggestions to make your pages load faster. Reducing page load times reduces bounce rates and increases conversion rates.</li>
+</ul>
+
+<p><img src="http://techbeacon.com/sites/default/files/pagespeed_0.png" alt="" /></p>
+
+<p><em>Google PageSpeed Insights</em></p>
+
+<h3 id="tools-for-understanding-real-world-performance">Tools for understanding real-world performance</h3>
+
+<p><a href="https://www.sitespeed.io/">Sitespeed.io</a> is my favorite tool for evaluating client-side performance from real browsers. <a href="https://www.sitespeed.io/">This</a> open source tool analyzes your website’s speed and performance based on performance best practices and timing metrics. You can analyze one site, analyze and compare multiple sites, or let your continuous integration server break your build when you have exceeded your performance budget.</p>
+
+<p><img src="http://techbeacon.com/sites/default/files/sitespeed_0.png" alt="" /></p>
+
+<p><em>Sitespeed.io</em></p>
+
+<p>It is not always possible for teams to modify the applications to optimize client-side performance. Fortunately, Google invested in making <a href="https://ngxpagespeed.com/">ngx_pagespeed</a> and <a href="https://developers.google.com/speed/pagespeed/module/">mod_pagespeed</a> as web server extensions to automate performance improvements without the need for code changes. Here’s a description of each, as well as one other useful tool:</p>
+
+<ul>
+  <li><a href="https://developers.google.com/speed/pagespeed/ngx"><strong>Google ngx_pagespeed</strong></a> speeds up your site and reduces page load time. This open-source <a href="http://nginx.org/en/">nginx</a> server module automatically applies web performance best practices to pages and associated assets (CSS, JavaScript, images) without requiring you to modify your existing content or workflow.</li>
+  <li><a href="https://developers.google.com/speed/pagespeed/mod"><strong>Google mod_pagespeed</strong></a> speeds up your site and reduces page load time. This open-source Apache HTTP server module automatically applies web performance best practices to pages and associated assets (CSS, JavaScript, images) without requiring that you modify your existing content or workflow.</li>
+  <li><a href="http://www.webpagetest.org/"><strong>WebPagetest.org</strong></a> provides deep insights into the performance of the client side in a variety of real browsers. This utility will test a web page in any browser, from any location, over any network condition—and it’s free.</li>
+</ul>
+
+<p><img src="http://techbeacon.com/sites/default/files/webpagetest_0.png" alt="" /></p>
+
+<p><em>WebPagetest.org</em></p>
+
+<h3 id="choices-and-tradeoffs">Choices and tradeoffs</h3>
+
+<p>While you have a wide choice of open source tools from which to choose for performance management, it’s not always wise to build and manage your own performance testing tools and infrastructure. You may determine that it’s not worth the engineering resources required to load test when you can pay for a proven commercial product or service. Such tools let you more easily build, execute, and analyze performance tests, but you have to be willing to pay for it.</p>
+
+<p>Should you go with open source, or will a commercial tool provide more value? Only you can decide if it makes sense to use open source—and if your organization has the engineering resources required. If you do, many of the tools I’ve discussed above should go right into your toolbox.</p>
+
+<p>Taken together, these free and open source tools offer a path to get started on capacity planning and load testing on the server side, optimizing and performance testing the client side, and monitoring performance from end to end to derive meaningful insights from performance tests. What are your favorite tools? <strong>Add your comment below.</strong></p>
+
+<p><em>Image credit: <a href="https://flic.kr/p/aofRfd">Flickr</a></em></p>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

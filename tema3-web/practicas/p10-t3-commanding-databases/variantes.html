@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/practicas/p10-t3-commanding-databases/variantes.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#variantes-commanding-databases-with-yargs-p10-t3-commanding-databases">Variantes: Commanding Databases with yargs (p10-t3-commanding-databases)</a>
+    <ul>
+      <li><a href="#variante-1-reescriba-el-programa-de-línea-de-comandos-esclu-usando-yargs-en-vez-de-commander">Variante 1: Reescriba el programa de línea de comandos <code class="language-plaintext highlighter-rouge">esclu</code> usando <code class="language-plaintext highlighter-rouge">yargs</code> en vez de <code class="language-plaintext highlighter-rouge">commander</code></a>
+        <ul>
+          <li><a href="#yargs">yargs</a></li>
+        </ul>
+      </li>
+      <li><a href="#variante-2-commanding-databases-with-node-fetch-p10-t3-commanding-databases">Variante 2: Commanding Databases with node-fetch (p10-t3-commanding-databases)</a>
+        <ul>
+          <li><a href="#node-fetch">node-fetch</a></li>
+        </ul>
+      </li>
+      <li><a href="#variante-3-usar-el-cliente-de-elasticsearch-elasticelasticsearch-para-node-en-vez-de-request">Variante 3: Usar el cliente de Elasticsearch <code class="language-plaintext highlighter-rouge">@elastic/elasticsearch</code> para Node en vez de <code class="language-plaintext highlighter-rouge">request</code></a>
+        <ul>
+          <li><a href="#elasticsearch-nodejs-client">Elasticsearch Node.js client</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                
+<h2 id="variantes-commanding-databases-with-yargs-p10-t3-commanding-databases">Variantes: Commanding Databases with yargs (p10-t3-commanding-databases)</h2>
+
+<p>En vez de seguir el capítulo del libro al pie de la letra, puede realizar cualquiera de las variantes que se mencionan a continuación o intentar combinaciones de ellas. 
+Por ejemplo, puede usar <code class="language-plaintext highlighter-rouge">yargs</code> en vez de <code class="language-plaintext highlighter-rouge">commander</code> y usar el cliente de Elasticsearch <code class="language-plaintext highlighter-rouge">@elastic/elasticsearch</code> para Node en vez de <code class="language-plaintext highlighter-rouge">request</code></p>
+
+<h3 id="variante-1-reescriba-el-programa-de-línea-de-comandos-esclu-usando-yargs-en-vez-de-commander">Variante 1: Reescriba el programa de línea de comandos <code class="language-plaintext highlighter-rouge">esclu</code> usando <code class="language-plaintext highlighter-rouge">yargs</code> en vez de <code class="language-plaintext highlighter-rouge">commander</code></h3>
+
+<h4 id="yargs">yargs</h4>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/yargs">yargs en npm</a></li>
+  <li><a href="https://yargs.js.org/">yargs home page</a></li>
+  <li><a href="https://github.com/yargs/yargs/blob/master//docs/api.md">Yargs’ API</a></li>
+  <li><a href="https://github.com/yargs/yargs/blob/master//docs/examples.md">Examples</a></li>
+  <li><a href="https://github.com/yargs/yargs/blob/master//docs/tricks.md">Parsing Tricks</a>
+    <ul>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/tricks.md#stop">Stop the Parser</a></li>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/tricks.md#negate">Negating Boolean Arguments</a></li>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/tricks.md#numbers">Numbers</a></li>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/tricks.md#arrays">Arrays</a></li>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/tricks.md#objects">Objects</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/yargs/yargs/blob/master//docs/advanced.md">Advanced Topics</a>
+    <ul>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/advanced.md#commands">Composing Your App Using Commands</a></li>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/advanced.md#configuration">Building Configurable CLI Apps</a></li>
+      <li><a href="https://github.com/yargs/yargs/blob/master//docs/advanced.md#customizing">Customizing Yargs’ Parser</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variante-2-commanding-databases-with-node-fetch-p10-t3-commanding-databases">Variante 2: Commanding Databases with node-fetch (p10-t3-commanding-databases)</h3>
+
+<p>Re-escriba <code class="language-plaintext highlighter-rouge">esclu</code> usando <code class="language-plaintext highlighter-rouge">node-fetch</code>en vez de <code class="language-plaintext highlighter-rouge">request</code></p>
+
+<h4 id="node-fetch">node-fetch</h4>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/node-fetch">node-fetch</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#motivation">Motivation</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#features">Features</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#difference-from-client-side-fetch">Difference from client-side fetch</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#installation">Installation</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#loading-and-configuring-the-module">Loading and configuring the module</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#common-usage">Common Usage</a>
+    <ul>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#plain-text-or-html">Plain text or HTML</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#json">JSON</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#simple-post">Simple Post</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#post-with-json">Post with JSON</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#post-with-form-parameters">Post with form parameters</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#handling-exceptions">Handling exceptions</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#handling-client-and-server-errors">Handling client and server errors</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#advanced-usage">Advanced Usage</a>
+    <ul>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#streams">Streams</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#buffer">Buffer</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#accessing-headers-and-other-meta-data">Accessing Headers and other Meta data</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#post-data-using-a-file-stream">Post data using a file stream</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#post-with-form-data-detect-multipart">Post with form-data (https://github.com/bitinn/node-fetch/blob/master/README.mddetect multipart)</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#request-cancellation-with-abortsignal">Request cancellation with AbortSignal</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#api">API</a>
+    <ul>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#fetchurl-options">fetch(url[, options])</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#options">Options</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#class-request">Class: Request</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#class-response">Class: Response</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#class-headers">Class: Headers</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#interface-body">Interface: Body</a></li>
+      <li><a href="https://github.com/bitinn/node-fetch/blob/master/README.md#class-fetcherror">Class: FetchError</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variante-3-usar-el-cliente-de-elasticsearch-elasticelasticsearch-para-node-en-vez-de-request">Variante 3: Usar el cliente de Elasticsearch <code class="language-plaintext highlighter-rouge">@elastic/elasticsearch</code> para Node en vez de <code class="language-plaintext highlighter-rouge">request</code></h3>
+
+<h4 id="elasticsearch-nodejs-client">Elasticsearch Node.js client</h4>
+
+<ul>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html">Elasticsearch Node.js client</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/introduction.html">Introduction</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-usage.html">Usage</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/client-configuration.html">Client configuration</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html">API Reference</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/breaking-changes.html">Breaking changes coming from the old client</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/auth-reference.html">Authentication</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/observability.html">Observability</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/child-client.html">Creating a child client</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/extend-client.html">Extend the client</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/typescript.html">TypeScript support</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/examples.html">Examples</a>
+    <ul>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/as_stream_examples.html">asStream</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/bulk_examples.html">Bulk</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/exists_examples.html">Exists</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/get_examples.html">Get</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/ignore_examples.html">Ignore</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/msearch_examples.html">MSearch</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/scroll_examples.html">Scroll</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/search_examples.html">Search</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/suggest_examples.html">Suggest</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/transport_request_examples.html">transport.request</a></li>
+      <li><a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/typescript_examples.html">Typescript</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

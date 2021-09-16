@@ -1,9 +1,6 @@
----
----
-
 // @import "";
 
-@import "{{ site.theme }}";
+@import "jekyll-theme-midnight";
 
 /*
 .bar {

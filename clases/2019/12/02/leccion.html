@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+    
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_posts/2019-12-02-leccion.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#clase-del-lunes-02122019">Clase del Lunes 02/12/2019</a>
+    <ul>
+      <li><a href="#adding-a-simple-search-to-our-jekyll-site">Adding a Simple Search to our Jekyll Site</a>
+        <ul>
+          <li><a href="#como-hacerlo">¿Como hacerlo?</a></li>
+          <li><a href="#liquid-template-searchjson-to-generate-at-build-time-the-_siteassetssrcsearchjson">Liquid template search.json to generate at build time the _site/assets/src/search.json</a>
+            <ul>
+              <li><a href="#entendiendo-la-línea-content---pagecontent--markdownify--strip_html--jsonify-">Entendiendo la línea <code class="language-plaintext highlighter-rouge">"content": { { page.content \| markdownify \| strip_html \| jsonify }},</code></a></li>
+            </ul>
+          </li>
+          <li><a href="#la-página-de-búsqueda-searchmd">La página de Búsqueda: search.md</a></li>
+          <li><a href="#la-clase-jekyllsearch-fichero-searchjs">La clase JekyllSearch: Fichero search.js</a>
+            <ul>
+              <li><a href="#urlsearchparams">url.searchParams</a></li>
+              <li><a href="#live-collections">Live collections</a></li>
+              <li><a href="#windowhistorypushstate">window.history.pushState</a></li>
+            </ul>
+          </li>
+          <li><a href="#caching">Caching</a></li>
+          <li><a href="#fetch-polyfill">Fetch Polyfill</a></li>
+          <li><a href="#estructura-del-sitio">Estructura del sitio</a></li>
+          <li><a href="#referencias">Referencias</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="clase-del-lunes-02122019">Clase del Lunes 02/12/2019</h1>
+
+<p>Recuerda que GitHub provee un servicio de Hosting de páginas estáticas (<a href="https://pages.github.com/">GitHub Pages</a>) que se sirven mediante Jekyll.</p>
+
+<p>En las prácticas que siguen, práctica a usar Jekyll desplegando el proyecto en GitHub Pages.</p>
+
+<p>For more details, see <a href="/tema3-web/jekyyl">section Jekyll</a></p>
+
+<h2 id="adding-a-simple-search-to-our-jekyll-site">Adding a Simple Search to our Jekyll Site</h2>
+
+<p>El ejercicio consiste en que añada la capacidad de búsqueda al sitio asociado a alguna de las prácticas, por ejemplo a <a href="/tema3-web/practicas/p8-t3-jekyll-netlify/">p8-t3-jekyll-netlify</a>.</p>
+
+<p>Estos son algunos requisitos:</p>
+
+<ul>
+  <li>Queremos que busque en todos los ficheros, no solo los  de los posts sino también los de las páginas</li>
+  <li>Que admita expresiones regulares</li>
+  <li>Queremos que los resultados vayan apareciendo conforme tecleamos</li>
+  <li>Se mostrará una lista de enlaces a los ficheros que contienen la expresión buscada y un resumen de las primeros caracteres del fichero</li>
+</ul>
+
+<h3 id="como-hacerlo">¿Como hacerlo?</h3>
+
+<ol>
+  <li>Since Jekyll has no server side execution, we have to rely on storing all the required content in a single file and search our keyword from that file.</li>
+  <li>
+    <p>We will be creating a JSON file in which we will store  <code class="language-plaintext highlighter-rouge">title</code>,  <code class="language-plaintext highlighter-rouge">url</code>, <code class="language-plaintext highlighter-rouge">content</code>, <code class="language-plaintext highlighter-rouge">excerpt</code>, etc., <u>at building time</u></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> $ bundle exec jekyll build
+ $ head -n 30 _site/assets/src/search.json 
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clase del Lunes 30/09/2019"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"excerpt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clase del Lunes 30/09/2019</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">,</span><span class="w">         </span><span class="err">⇐</span><span class="w"> </span><span class="err">Resumen</span><span class="w">
+         </span><span class="nl">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Clase del Lunes 30/09/2019</span><span class="se">\n\n\n</span><span class="s2">  ..."</span><span class="p">,</span><span class="w">  </span><span class="err">⇐</span><span class="w"> </span><span class="err">Contenido</span><span class="w"> </span><span class="err">del</span><span class="w"> </span><span class="err">fichero</span><span class="w">
+         </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/clases/2019/09/30/leccion.html"</span><span class="w">
+     </span><span class="p">},</span><span class="w">
+     </span><span class="err">...</span><span class="w">
+ </span><span class="p">]</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="liquid-template-searchjson-to-generate-at-build-time-the-_siteassetssrcsearchjson">Liquid template search.json to generate at build time the _site/assets/src/search.json</h3>
+
+<p>Para lograrlo usaremos este template Liquid: <a href="https://raw.githubusercontent.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/master/assets/src/search.json?token=AAIW6GWXQOTDJ7VYDKDGBWK55YN74">search.json</a> (protected)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre>- - -
+layout: null
+sitemap: false
+- - -
+
+{ % capture json % }
+[
+  { % assign collections = site.collections | where_exp:'collection','collection.output != false' %}
+  { % for collection in collections %}
+    { % assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}
+    { % for doc in docs %}
+      {
+        "title": { { doc.title | jsonify }},
+        "excerpt": { { doc.excerpt | markdownify | strip_html | jsonify }},
+        "content": { { doc.content | markdownify | strip_html | jsonify }},
+        "url": { { site.baseurl | append: doc.url | jsonify }}
+      },
+    { % endfor %}
+  { % endfor %}
+  { % assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' %}
+  { % for page in pages % }
+  {
+    "title": { { page.title | jsonify }},
+    "excerpt": { { page.excerpt | markdownify | strip_html | jsonify }},
+    "content": { { page.content | markdownify | strip_html | jsonify }},
+    "url": { { site.baseurl | append: page.url | jsonify }}
+  }{ % unless forloop.last %},{ % endunless %}
+  { % endfor %}
+]
+{ % endcapture %}
+
+{ { json | lstrip }}
+
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">layout: null</code>: To disable layout in Jekyll.</li>
+  <li><code class="language-plaintext highlighter-rouge">sitemap: false</code>:
+    <ul>
+      <li>A Sitemap is an XML file that lists the URLs for a site. This allows search engines to crawl the site more efficiently and to find URLs that may be isolated from rest of the site’s content. The <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol is a URL inclusion protocol</a> and complements <code class="language-plaintext highlighter-rouge">robots.txt</code>, a URL exclusion protocol. We can use the  front-matter to set the <code class="language-plaintext highlighter-rouge">sitemap</code> property to <code class="language-plaintext highlighter-rouge">false</code></li>
+      <li><a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> is a Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site</li>
+    </ul>
+  </li>
+  <li>Liquid: <code class="language-plaintext highlighter-rouge">{ % capture json % } ... { % endcapture %}</code> <a href="https://help.shopify.com/en/themes/liquid/tags/variable-tags#capture">Captures the string inside of the opening and closing tags and assigns it to a variable. Variables that you create using capture are stored as strings.</a></li>
+  <li><code class="language-plaintext highlighter-rouge">{ { json | lstrip }}</code>:
+    <ul>
+      <li>Filters are simple methods that modify the output of numbers, strings, variables and objects. They are placed within an output tag <code class="language-plaintext highlighter-rouge">{ { } }</code> and are denoted by a pipe character <code class="language-plaintext highlighter-rouge">|</code>.</li>
+      <li><a href="https://shopify.github.io/liquid/filters/lstrip/">lstrip: Removes all whitespace (tabs, spaces, and newlines) from the left side of a string. It does not affect spaces between words.</a></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">{ % assign collections = site.collections ...</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">site.collections</code>: Collections are also available under <code class="language-plaintext highlighter-rouge">site.collections</code>. Posts are considered a collections by Jekyll.</li>
+      <li>… <code class="language-plaintext highlighter-rouge">where_exp:'collection','collection.output != false'</code>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">site.collections</code> is an array. With <code class="language-plaintext highlighter-rouge">where_exp</code> we select all the objects in the array with the elements for which the attribute <code class="language-plaintext highlighter-rouge">collection</code> has its <code class="language-plaintext highlighter-rouge">output</code> attribute to <code class="language-plaintext highlighter-rouge">true</code>.</li>
+          <li>The <code class="language-plaintext highlighter-rouge">output</code> attribute of a collection controls whether the collection’s documents will be output as individual files.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://shopify.github.io/liquid/tags/iteration/">iteration in Liquid</a></li>
+  <li><code class="language-plaintext highlighter-rouge">site.html_pages</code>: A subset of <code class="language-plaintext highlighter-rouge">site.pages</code> listing those which end in <code class="language-plaintext highlighter-rouge">.html</code>.</li>
+</ul>
+
+<h4 id="entendiendo-la-línea-content---pagecontent--markdownify--strip_html--jsonify-">Entendiendo la línea <code class="language-plaintext highlighter-rouge">"content": { { page.content | markdownify | strip_html | jsonify }},</code></h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">page.content</code> el contenido de la página todavia sin renderizar (se supone que es fundamentalmente markdown, pero puede contener yml en el front-matter, html, scripts, liquid, etc.)</li>
+  <li><code class="language-plaintext highlighter-rouge">markdownify</code>: Convert a Markdown-formatted string into HTML.</li>
+  <li><a href="https://shopify.github.io/liquid/filters/strip_html/">strip_html</a>: Removes any HTML tags from a string.</li>
+  <li><code class="language-plaintext highlighter-rouge">jsonify</code>: If the data is an array or hash you can use the jsonify filter to convert it to JSON.</li>
+</ul>
+
+<p>Por ejemplo, supongamos que tenemos estas definiciones en el front-matter de nuestra página:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="na">chuchu</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Cadena</span><span class="nv"> </span><span class="s">**negritas**</span><span class="nv"> </span><span class="s">e</span><span class="nv"> </span><span class="s">*italicas*"</span>
+<span class="na">html</span><span class="pi">:</span> <span class="s2">"</span><span class="s">&lt;h1&gt;hello&lt;/h1&gt;</span><span class="nv"> </span><span class="s">&lt;b&gt;world&lt;/b&gt;"</span>
+<span class="na">colors</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">red</span>
+  <span class="pi">-</span> <span class="s">blue</span>
+  <span class="pi">-</span> <span class="s">green</span>
+<span class="nn">---</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>y que en el contenido de nuestra página tenemos algo así:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>Compara &lt; script&gt;{ { page.chuchu }} &lt;/script&gt; con su markdownify: &lt; script&gt;{ { page.chuchu | markdownify }}&lt;/script&gt;
+
+Compara &lt; script&gt; { { page.colors}} &lt;/script&gt; con su jsonify: &lt; script&gt;{ { page.colors | jsonify }} &lt;/script&gt;
+
+Compara &lt; script&gt;{ {page.html}}&lt;/script&gt; con su `strip_html` &lt; script&gt; { { page.html | strip_html }} &lt;/script&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Esta es la salida que produce jekyll 4.0.0:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>&lt;p&gt;Compara &lt; script&gt;Cadena **negritas** e *italicas* &lt;/script&gt; con su markdownify: &lt; script&gt;&amp;lt;p&amp;gt;Cadena &lt;strong&gt;negritas&lt;/strong&gt; e &lt;em&gt;italicas&lt;/em&gt;&amp;lt;/p&amp;gt;
+&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Compara &lt; script&gt; redbluegreen &lt;/script&gt; con su jsonify: &lt; script&gt;["red","blue","green"] &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Compara &lt; script&gt;&amp;lt;h1&amp;gt;hello&amp;lt;/h1&amp;gt; &lt;b&gt;world&lt;/b&gt;&lt;/script&gt; con su &lt;code class="highlighter-rouge"&gt;strip_html&lt;/code&gt; &lt; script&gt; hello world &lt;/script&gt;&lt;/p&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>La idea general es que necesitamos suprimir los tags, tanto yml, markdown, HTML, etc. para que no confundan al método de busca. 
+Por eso convertimos el markdown a HTML y después suprimimos los tags HTML. También convertimos el yml a JSON.</p>
+
+<h3 id="la-página-de-búsqueda-searchmd">La página de Búsqueda: search.md</h3>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/master/search.md?token=AAIW6GSTWVSQTT272LOFILK55YPFU">search.md</a> (protected)</li>
+</ul>
+
+<p><strong>Fichero <code class="language-plaintext highlighter-rouge">search.md</code></strong>:</p>
+
+<p>La idea es que vamos a escribir una clase <code class="language-plaintext highlighter-rouge">JekyllSearch</code> que implementa la búsqueda.
+Debe disponer  de un constructor al que se le pasan cuatro argumentos:</p>
+
+<ol>
+  <li>La ruta donde esta disponible el fichero .json generado durante la construcción (<code class="language-plaintext highlighter-rouge">jekyll build</code>)</li>
+  <li>El <code class="language-plaintext highlighter-rouge">id</code> del objeto del DOM en la página en la que está el tag <code class="language-plaintext highlighter-rouge">input</code> de la búsqueda</li>
+  <li>El <code class="language-plaintext highlighter-rouge">id</code>del objeto del DOM en el que se deben volcar los resultados</li>
+  <li>La <code class="language-plaintext highlighter-rouge">url</code> del lugar en el que está el deployment (pudiera ser que el site en el que queremos buscar fuera una subcarpeta de todo el site)</li>
+</ol>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JekyllSearch</span><span class="p">(</span>
+    <span class="dl">'</span><span class="s1">/assets/src/search.json</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">#search</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">#list</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">''</span>
+  <span class="p">);</span>
+  <span class="nx">search</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span> 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Los objetos <code class="language-plaintext highlighter-rouge">JekyllSearch</code> deben disponer de un método <code class="language-plaintext highlighter-rouge">init</code> que realiza la búsqueda especificada en el elemento del DOM <code class="language-plaintext highlighter-rouge">#search</code> y añade los resultados en en el elemento del DOM <code class="language-plaintext highlighter-rouge">#list</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="rouge-code"><pre>- - -
+layout: error 
+permalink: /search/
+title: Search
+- - -
+
+{ % capture initSearch % }
+
+<span class="nt">&lt;h1&gt;</span>Search<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">"search-form"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"label"</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search term (accepts a regex):<span class="nt">&lt;/label&gt;</span>
+  <span class="nt">&lt;br/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input"</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">autofocus</span> <span class="na">placeholder=</span><span class="s">"e.g. Promise"</span> <span class="na">autocomplete=</span><span class="s">"off"</span><span class="nt">&gt;</span>
+  
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list  list--results"</span> <span class="na">id=</span><span class="s">"list"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt; script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/assets/src/fetch.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt; script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/assets/src/search.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+
+<span class="nt">&lt; script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+
+  <span class="kd">const</span> <span class="nx">search</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">JekyllSearch</span><span class="p">(</span>
+    <span class="dl">'</span><span class="s1">{ {site.url}  }/assets/src/search.json</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">#search</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">#list</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">{ {site.url}  }</span><span class="dl">'</span>
+  <span class="p">);</span>
+  <span class="nx">search</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span> 
+  
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;noscript&gt;</span>Please enable JavaScript to use the search form.<span class="nt">&lt;/noscript&gt;</span>
+
+{ % endcapture % }
+
+{ { initSearch | lstrip } }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">autocomplete="off"</code>
+    <ul>
+      <li>En algunos casos, el navegador continuará sugiriendo valores de autocompletado incluso si el atributo autocompletar está desactivado. Este comportamiento inesperado puede resultar bastante confuso para los desarrolladores. El truco para realmente no aplicar el autocompletado es asignar un valor no válido al atributo, por ejemplo:</li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>autocomplete="nope"
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+    <p>Dado que este valor no es válido para el atributo autocompletar, el navegador no tiene forma de reconocerlo y deja de intentar autocompletarlo.</p>
+  </li>
+  <li>Filters are simple methods that modify the output of numbers, strings, variables and objects. They are placed within an output tag <code class="language-plaintext highlighter-rouge">{ { } }</code> and are denoted by a pipe character <code class="language-plaintext highlighter-rouge">|</code>.
+    <ul>
+      <li><a href="https://shopify.github.io/liquid/filters/lstrip/">lstrip Removes all whitespace (tabs, spaces, and newlines) from the left side of a string. It does not affect spaces between words.</a></li>
+    </ul>
+  </li>
+  <li><a href="https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/">Clearing Up Confusion Around baseurl</a>. About <code class="language-plaintext highlighter-rouge">site.url</code> vs <code class="language-plaintext highlighter-rouge">site.baseurl</code></li>
+</ul>
+
+<p><img src="/assets/images/what-is-a-baseurl.jpg" alt="https://byparker.com/img/what-is-a-baseurl.jpg" /></p>
+
+<h3 id="la-clase-jekyllsearch-fichero-searchjs">La clase JekyllSearch: Fichero search.js</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+</pre></td><td class="rouge-code"><pre><span class="kd">class</span> <span class="nx">JekyllSearch</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">,</span> <span class="nx">searchField</span><span class="p">,</span> <span class="nx">resultsList</span><span class="p">,</span> <span class="nx">siteURL</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span> <span class="o">=</span> <span class="nx">dataSource</span>                           <span class="c1">// ruta al fichero json</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">searchField</span><span class="p">)</span> <span class="c1">// DOM el. del input</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">resultsList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">resultsList</span><span class="p">)</span> <span class="c1">// DOM el. para el output</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">siteURL</span> <span class="o">=</span> <span class="nx">siteURL</span>                                 <span class="c1">// folder</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">fetchedData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">blob</span> <span class="o">=&gt;</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">}</span>
+
+  <span class="k">async</span> <span class="nx">findResults</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">fetchedData</span><span class="p">()</span>
+    <span class="kd">const</span> <span class="nx">regex</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="dl">'</span><span class="s1">gi</span><span class="dl">'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">regex</span><span class="p">)</span> <span class="o">||</span> <span class="nx">item</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">regex</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="k">async</span> <span class="nx">displayResults</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">findResults</span><span class="p">()</span>
+    <span class="kd">const</span> <span class="nx">html</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="s2">`
+        &lt;li class="result"&gt;
+            &lt;article class="result__article  article"&gt;
+                &lt;h4&gt;
+                  &lt;a href="</span><span class="p">${</span><span class="k">this</span><span class="p">.</span><span class="nx">siteURL</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">url</span><span class="p">}</span><span class="s2">"&gt;</span><span class="p">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="s2">&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;p&gt;</span><span class="p">${</span><span class="nx">item</span><span class="p">.</span><span class="nx">excerpt</span><span class="p">}</span><span class="s2">&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/li&gt;`</span>
+    <span class="p">}).</span><span class="nx">join</span><span class="p">(</span><span class="dl">''</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">((</span><span class="nx">results</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">value</span> <span class="o">==</span> <span class="dl">''</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">resultsList</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`&lt;p&gt;Sorry, nothing was found&lt;/p&gt;`</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">resultsList</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">html</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// https://stackoverflow.com/questions/43431550/async-await-class-constructor</span>
+  <span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">search</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">search</span><span class="dl">"</span><span class="p">)</span> <span class="c1">// Update the attribute</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">displayResults</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">keyup</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">displayResults</span><span class="p">()</span>
+      <span class="c1">// So that when going back in the browser we keep the search</span>
+      <span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">"</span><span class="s2">search</span><span class="dl">"</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span><span class="dl">''</span><span class="p">,</span> <span class="dl">''</span><span class="p">,</span> <span class="nx">url</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span>
+    <span class="p">})</span>
+    
+    <span class="c1">// to not send the form each time &lt;enter&gt; is pressed</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">keypress</span><span class="dl">'</span><span class="p">,</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">==</span> <span class="mi">13</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="urlsearchparams">url.searchParams</h4>
+
+<p>If the URL of your page is <code class="language-plaintext highlighter-rouge">https://example.com/?name=Jonathan%20Smith&amp;age=18</code> you could parse out the <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">age</code> parameters using:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">)).</span><span class="nx">searchParams</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">params</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// is the string "Jonathan Smith".</span>
+<span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">params</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">age</span><span class="dl">'</span><span class="p">));</span> <span class="c1">// is the number 18</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="live-collections">Live collections</h4>
+
+<p>All methods <code class="language-plaintext highlighter-rouge">getElementsBy*</code> return a live collection. 
+Such collections always reflect the current state of the document and <em>auto-update</em> when it changes. 
+In contrast, <code class="language-plaintext highlighter-rouge">querySelectorAll</code> returns a static collection. 
+It’s like a fixed array of elements.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="kd">constructor</span><span class="p">(</span><span class="nx">dataSource</span><span class="p">,</span> <span class="nx">searchField</span><span class="p">,</span> <span class="nx">resultsList</span><span class="p">,</span> <span class="nx">siteURL</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span> <span class="o">=</span> <span class="nx">dataSource</span>                           <span class="c1">// ruta al fichero json</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">searchField</span><span class="p">)</span> <span class="c1">// DOM el. del input</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">resultsList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="nx">resultsList</span><span class="p">)</span> <span class="c1">// DOM el. para el output</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">siteURL</span> <span class="o">=</span> <span class="nx">siteURL</span>                                 <span class="c1">// folder</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="windowhistorypushstate">window.history.pushState</h4>
+
+<p>The  <code class="language-plaintext highlighter-rouge">window</code> object provides access to the browser’s session history through the <code class="language-plaintext highlighter-rouge">history</code> object. 
+The <code class="language-plaintext highlighter-rouge">history.pushState(state, title, url)</code> method adds a state to the browser’s session history stack.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>   <span class="p">...</span> <span class="c1">// inside init</span>
+   <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">keyup</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">displayResults</span><span class="p">()</span>
+      <span class="c1">// So that when going back in the browser we keep the search</span>
+      <span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="dl">"</span><span class="s2">search</span><span class="dl">"</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">searchField</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+      <span class="nb">window</span><span class="p">.</span><span class="nx">history</span><span class="p">.</span><span class="nx">pushState</span><span class="p">(</span><span class="dl">''</span><span class="p">,</span> <span class="dl">''</span><span class="p">,</span> <span class="nx">url</span><span class="p">.</span><span class="nx">href</span><span class="p">)</span>
+    <span class="p">})</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="caching">Caching</h3>
+
+<p>The resources downloaded through <code class="language-plaintext highlighter-rouge">fetch()</code>, similar to other resources that the browser downloads, are subject to the <a href="https://developer.mozilla.org/en/docs/Web/HTTP/Caching_FAQ">HTTP cache</a>.  </p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nx">fetchedData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">dataSource</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">blob</span> <span class="o">=&gt;</span> <span class="nx">blob</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This is usually fine, since it means that <strong>if your browser has a cached copy of the response to the HTTP request, it can use the cached copy instead of wasting time and bandwidth re-downloading from a remote server</strong>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">search.json</code> is not going to change until the next <code class="language-plaintext highlighter-rouge">push</code></p>
+
+<h3 id="fetch-polyfill">Fetch Polyfill</h3>
+
+<dl>
+<dt>Polyfill</dt>
+<dd>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Polyfill">A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it. The polyfill uses non-standard features in a certain browser to give JavaScript a standards-complaint way to access the feature</a>
+</dd>
+</dl>
+
+<ul>
+  <li>El código del polyfill que he usado: <a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/blob/master/assets/src/fetch.js">assets/src/fetch.js</a></li>
+  <li>Para mas información podemos leer este blog: <a href="https://desarrolloweb.com/articulos/polyfill-fetch.html">Polyfill para Fetch</a>
+    <ul>
+      <li><a href="https://github.com/github/fetch">whatwg-fetch: polyfill de Fetch que ha creado el equipo de Github</a></li>
+      <li>Para agregar este polyfill a nuestro proyecto podemos descargarnos su archivo js desde github,</li>
+      <li>pero también podríamos instalarlo usando cualquiera de los gestores de dependencias más habituales:</li>
+      <li><code class="language-plaintext highlighter-rouge">npm install whatwg-fetch --save</code></li>
+      <li>o bien:</li>
+      <li><code class="language-plaintext highlighter-rouge">bower install fetch --save</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="estructura-del-sitio">Estructura del sitio</h3>
+
+<p>Esta imagen muestra los ficheros implicados en este ejercicio dentro de 
+la estructura del sitio de estos apuntes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="rouge-code"><pre>$ tree -I _site
+.
+├── 404.md
+├── assets
+│   ├── css
+│   │   └── style.scss
+│   ├── images
+│   │   ├── event-emitter-methods.png
+│   │   └── ,,,
+│   └── src
+│       ├── fetch.js          ⇐ Polyfill for fetch
+│       ├── search.js         ⇐ Librería con la Clase JekyllSearch que implementa el Código de búsqueda
+│       └── search.json       ⇐ Plantilla Liquid para generar el fichero JSON 
+├── search.md                 ⇐ Página de la búsqueda. Formulario y script de arranque 
+├── clases.md
+├── _config.yml               ⇐ Fichero de configuración de Jekyll
+├── degree.md
+├── favicon.ico
+├── Gemfile
+├── Gemfile.lock
+├── _includes                 ⇐ The include tag allows to include the content of files stored here
+│   ├── navigation-bar.html
+│   └── ...
+├── _layouts                  ⇐ templates that wrap around your content
+│   ├── default.html
+│   ├── error.html
+│   └── post.html
+├── _posts                    ⇐ File names must follow YEAR-MONTH-DAY-title.MARKUP and  must begin with front matter 
+│   ├── ...
+│   └── 2019-12-02-leccion.md
+├── _practicas                ⇐ Folder for the collection "practicas" (list of published "practicas") 
+│   ├── ...
+│   └── p9-t3-transfoming-data.md 
+├── practicas.md              ⇐ { % for practica in site.practicas % } ... { % endfor % }
+├── Rakefile                  ⇐ For tasks
+├── README.md
+├── references.md
+├── resources.md
+├── tema0-presentacion        ⇐  Pages folders 
+│   ├── README.md
+│   └── ...
+├── tema ...
+├── tfa
+│   └── README.md
+└── timetables.md
+
+58 directories, 219 files
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="referencias">Referencias</h3>
+
+<ul>
+  <li><a href="/tema3-web/jekyll.html">Sección Jekyll en estos apuntes</a></li>
+  <li><a href="https://shopify.github.io/liquid/">Liquid</a></li>
+  <li><a href="https://github.com/allejo/jekyll-toc">A GitHub Pages compatible <strong>Table of Contents</strong> generator without a plugin or JavaScript </a> The code is here: <a href="https://github.com/allejo/jekyll-toc/blob/master/_includes/toc.html">toc.html</a></li>
+  <li><a href="https://app.cloudcannon.com/">CloudCannon</a> is cloud content management system and hosting provider for Jekyll websites</li>
+  <li><a href="https://github.com/ULL-MII-SYTWS-1920/documentation-theme-jekyll">documentation-theme-jekyll</a> Un tema muy completo. Tiene de todo</li>
+  <li><a href="https://github.com/gjtorikian/html-proofer/wiki/Using-HTMLProofer-From-Ruby-and-Travis">Using HTMLProofer From Ruby and Travis</a>. Para testear tus páginas: links, imágenes, etc.</li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

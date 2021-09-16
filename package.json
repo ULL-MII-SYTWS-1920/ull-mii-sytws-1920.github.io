@@ -1,0 +1,26 @@
+{
+  "name": "apuntes",
+  "version": "1.0.0",
+  "description": "{% for tema in site.temas %}",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages-deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "_site"
+   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io.git"
+  },
+  "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/issues"
+  },
+  "homepage": "https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io#readme",
+  "devDependencies": {
+    "gh-pages-deploy": "^0.5.1"
+  }
+}
