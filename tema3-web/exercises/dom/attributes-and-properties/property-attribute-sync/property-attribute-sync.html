@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input>
+
+    <script>
+        let input = document.querySelector('input');
+
+        // attribute => property
+        input.setAttribute('id', 'id');
+        console.log(input.id); // id (updated)
+
+        // property => attribute
+        input.id = 'newId';
+        console.log(input.getAttribute('id')); // newId (updated)
+
+        // attribute => property
+        input.setAttribute('value', 'text');
+        console.log(input.value); // text
+
+        // NOT property => attribute
+        input.value = 'newValue';
+        console.log(input.getAttribute('value')); // text (not updated!)
+
+    </script>
+</body>
+
+</html>

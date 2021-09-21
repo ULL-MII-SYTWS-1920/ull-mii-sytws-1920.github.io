@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/react.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#react">React</a>
+    <ul>
+      <li><a href="#intro-to-react">Intro to React</a>
+        <ul>
+          <li><a href="#learn-by-doing">Learn by Doing</a></li>
+          <li><a href="#hello-world-react-learning-concepts-from-the-ground-up">Hello World React (Learning Concepts from the Ground Up)</a></li>
+        </ul>
+      </li>
+      <li><a href="#creating-a-react-app">Creating a React App</a>
+        <ul>
+          <li><a href="#create-react-app-set-up-a-modern-web-app-by-running-one-command">Create React App. Set up a modern web app by running one command</a></li>
+          <li><a href="#how-to-get-create-react-app-to-work-with-your-api">How to get “create-react-app” to work with your API</a></li>
+          <li><a href="#react-and-boostrap-react-boostrap">React and Boostrap. React-Boostrap</a>
+            <ul>
+              <li><a href="#react-tutorial-how-to-build-react-app-in-few-minutes">React Tutorial How to build React App in few minutes</a></li>
+            </ul>
+          </li>
+          <li><a href="#react-in-visual-studio-code">React in Visual Studio Code</a></li>
+          <li><a href="#for-a-web-app">For a Web App</a></li>
+          <li><a href="#from-scratch">From Scratch</a></li>
+        </ul>
+      </li>
+      <li><a href="#react-function-components">React Function Components</a>
+        <ul>
+          <li><a href="#css-modules">CSS modules</a></li>
+        </ul>
+      </li>
+      <li><a href="#learning-react-by-eve-porcello-alex-banks">Learning React by Eve Porcello, Alex Banks</a></li>
+      <li><a href="#react-router">React Router</a>
+        <ul>
+          <li><a href="#the-problem">The Problem</a></li>
+          <li><a href="#the-solution">The Solution</a></li>
+        </ul>
+      </li>
+      <li><a href="#gatsby-a-static-site-generator-using-react">GatsBy: A Static Site Generator Using React</a></li>
+      <li><a href="#references">References</a></li>
+      <li><a href="#práctica-p11-t3-react-tic-tutorial-intro-to-react-tic-tac-toe">Práctica p11-t3-react-tic: Tutorial “Intro to React”. Tic-Tac-Toe</a></li>
+      <li><a href="#práctica-p14-t3-react-components">Práctica p14-t3-react-components</a></li>
+      <li><a href="#práctica-p15-t3-react-lists-and-conditionals">Práctica p15-t3-react-lists-and-conditionals</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="react">React</h1>
+
+<h2 id="intro-to-react">Intro to React</h2>
+
+<h3 id="learn-by-doing">Learn by Doing</h3>
+
+<ul>
+  <li><a href="https://reactjs.org/tutorial/tutorial.html">Tutorial: Intro to React</a></li>
+</ul>
+
+<h3 id="hello-world-react-learning-concepts-from-the-ground-up">Hello World React (Learning Concepts from the Ground Up)</h3>
+
+<ol>
+  <li><a href="https://reactjs.org/docs/hello-world.html">React: Hello World</a></li>
+  <li><a href="https://reactjs.org/docs/introducing-jsx.html">Introducing JSX</a></li>
+  <li><a href="https://reactjs.org/docs/rendering-elements.html">Rendering Elements</a></li>
+  <li><a href="https://reactjs.org/docs/components-and-props.html">Components and Props</a></li>
+  <li><a href="https://reactjs.org/docs/state-and-lifecycle.html">State and Lifecycle</a></li>
+  <li><a href="https://reactjs.org/docs/handling-events.html">Handling Events</a></li>
+  <li><a href="https://reactjs.org/docs/conditional-rendering.html">Conditional Rendering</a></li>
+  <li><a href="https://reactjs.org/docs/lists-and-keys.html">Lists and Keys</a></li>
+  <li><a href="https://reactjs.org/docs/forms.html">Forms</a></li>
+  <li><a href="https://reactjs.org/docs/lifting-state-up.html">Lifting State Up</a></li>
+  <li><a href="https://reactjs.org/docs/composition-vs-inheritance.html">Composition vs Inheritance</a></li>
+  <li><a href="https://reactjs.org/docs/thinking-in-react.html">Thinking In React</a></li>
+  <li><a href="https://reactjs.org/docs/events.html">Listenable Events</a></li>
+</ol>
+
+<h2 id="creating-a-react-app">Creating a React App</h2>
+
+<p>This page describes a few popular React toolchains (like create-react-app, <a href="https://www.gatsbyjs.org/">gatsby</a>) which help with tasks like:</p>
+
+<ul>
+  <li>Scaling to many files and components.</li>
+  <li>Using third-party libraries from npm.</li>
+  <li>Detecting common mistakes early.</li>
+  <li>Live-editing CSS and JS in development.</li>
+  <li>Optimizing the output for production.</li>
+</ul>
+
+<h3 id="create-react-app-set-up-a-modern-web-app-by-running-one-command">Create React App. Set up a modern web app by running one command</h3>
+
+<ul>
+  <li><a href="https://reactjs.org/docs/create-a-new-react-app.html">Create a new React App</a></li>
+  <li><a href="https://create-react-app.dev/docs/getting-started">create-react-app docs</a></li>
+  <li><a href="https://create-react-app.dev/">Create React App. Set up a modern web app by running one command</a></li>
+  <li><a href="https://youtu.be/eCz3rhsDG5s">YouTube video: Getting Started with Create React App</a> by Elijah  Manor</li>
+  <li><a href="https://github.com/ahfarmer/emoji-search">Emoji Search. Created with create-react-app</a> GitHub Example Repo</li>
+  <li><a href="https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md">This project was bootstrapped with Create React App</a></li>
+</ul>
+
+<h3 id="how-to-get-create-react-app-to-work-with-your-api">How to get “create-react-app” to work with your API</h3>
+
+<ul>
+  <li><a href="https://www.newline.co/fullstack-react/articles/using-create-react-app-with-a-server/">How to get “create-react-app” to work with your API</a> by Anthony Accomazzo. A simple food nutrition lookup table. The data driving the app is supplied by the <a href="https://www.ars.usda.gov/northeast-area/beltsville-md/beltsville-human-nutrition-research-center/nutrient-data-laboratory/docs/usda-national-nutrient-database-for-standard-reference/">USDA’s National Nutrient Database</a>.</li>
+  <li><a href="https://github.com/kimmobrunfeldt/concurrently#readme">npm concurrently package</a>
+    <ul>
+      <li>
+        <blockquote>
+          <p><strong>Why?</strong>: I like <a href="http://substack.net/task_automation_with_npm_run">task automation with npm</a> but the usual way to run multiple commands concurrently is <code class="language-plaintext highlighter-rouge">npm run watch-js &amp; npm run watch-css</code>. That’s fine but it’s hard to keep on track of different outputs. Also if one process fails, others still keep running and you won’t even notice the difference. Another option would be to just run all commands in separate terminals. I got tired of opening terminals and made <strong>concurrently</strong>.</p>
+        </blockquote>
+      </li>
+      <li><a href="https://itnext.io/4-solutions-to-run-multiple-node-js-or-npm-commands-simultaneously-9edaa6215a93">Blog: 4 Solutions To Run Multiple Node.js or NPM Commands Simultaneously by Paige Niedringhaus</a></li>
+    </ul>
+  </li>
+  <li>Section <a href="https://create-react-app.dev/docs/proxying-api-requests-in-development/">Proxying API Requests in Development</a> in the Create React App docs</li>
+  <li><a href="https://github.com/fullstackreact/food-lookup-demo#deploying">Deploying in Heroku</a>
+    <ul>
+      <li><a href="https://devcenter.heroku.com/articles/heroku-cli">The Heroku CLI</a> article</li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/kripken/sql.js">sql.js</a></li>
+</ul>
+
+<h3 id="react-and-boostrap-react-boostrap">React and Boostrap. React-Boostrap</h3>
+
+<ul>
+  <li><a href="https://react-bootstrap.github.io/">React Bootstrap</a></li>
+  <li><a href="https://react-bootstrap.github.io/getting-started/introduction">Getting Started</a></li>
+</ul>
+
+<h4 id="react-tutorial-how-to-build-react-app-in-few-minutes">React Tutorial How to build React App in few minutes</h4>
+
+<ul>
+  <li><a href="https://youtu.be/SPM4xyYd9MI">React Tutorial How to build React App in few minutes</a> YouTube
+    <ul>
+      <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app">GitHub Repo</a> for <em>How to build React App in few minutes</em> using react-bootstrap
+        <ul>
+          <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#react-tutorial-how-to-build-react-app-in-few-minutes">React Tutorial: How to build React App in few minutes</a>
+            <ul>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#index">Index</a></li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#references">References</a></li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#installing-create-react-app">Installing create-react-app</a></li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#creating-api-call">Creating API Call</a>
+                <ul>
+                  <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#trying-the-fake-api">Trying the fake API</a></li>
+                  <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#adding-componentdidmount">Adding <code class="language-plaintext highlighter-rouge">componentDidMount</code></a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-boostrap">Styling with Boostrap</a></li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#adding-pagination">Adding Pagination</a></li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#factorizing-components">Factorizing Components</a></li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#styling-with-react-boostrap">Styling with react-bootstrap</a>
+                <ul>
+                  <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#react-bootstrap-references">React-Bootstrap References</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#rewriting-the-app-using-only-functional-components">Rewriting the App using Only Functional Components</a>
+                <ul>
+                  <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#usestate">useState</a></li>
+                  <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#useeffect">useEffect</a>
+                    <ul>
+                      <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#cleaning-up-an-effect">Cleaning up an effect</a></li>
+                      <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#conditionally-firing-an-effect">Conditionally firing an effect</a></li>
+                      <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#mount-and-unmount-effects">Mount and Unmount Effects</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ULL-MII-SYTWS-1920/how-to-build-a-react-app#the-result">The result</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://react-bootstrap.github.io/components/button-group/">ButtonGroup</a></li>
+      <li><a href="https://react-bootstrap.github.io/components/buttons/">Buttons</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="react-in-visual-studio-code">React in Visual Studio Code</h3>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/docs/nodejs/reactjs-tutorial">Using React in Visual Studio Code</a></li>
+  <li><a href="https://stackoverflow.com/questions/44993808/visual-studio-code-changes-format-react-jsx">Visual studio code changes format (React-JSX)</a></li>
+</ul>
+
+<h3 id="for-a-web-app">For a Web App</h3>
+
+<p>The majority of websites aren’t, and don’t need to be, single-page apps. With a few lines of code and no build tooling, try React in a small part of your website. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.</p>
+
+<ul>
+  <li><a href="https://reactjs.org/docs/add-react-to-a-website.html">Add React to a Web Site</a></li>
+</ul>
+
+<h3 id="from-scratch">From Scratch</h3>
+
+<ul>
+  <li><a href="https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658">Creating a React App… From Scratch</a>
+    <ul>
+      <li>Github repo <a href="https://github.com/paradoxinversion/creating-a-react-app-from-scratch">paradoxinversion/creating-a-react-app-from-scratch</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="react-function-components">React Function Components</h2>
+
+<ul>
+  <li><a href="https://www.robinwieruch.de/react-function-component#react-function-component-lifecycle">React Function Components</a></li>
+</ul>
+
+<blockquote>
+  <p>In the past, there have been various React Component Types, but with the introduction of React Hooks it’s possible to write your entire application with just functions as React components.</p>
+</blockquote>
+
+<blockquote>
+  <p>This in-depth guide shows you everything about React Function Components – which are basically just JavaScript Functions being React Components which return JSX (React’s Syntax) – so that after you have read this tutorial you should be well prepared to implement modern React applications with them.</p>
+</blockquote>
+
+<h3 id="css-modules">CSS modules</h3>
+
+<ul>
+  <li><a href="https://www.javascriptstuff.com/css-modules-by-example/">Css Modules by Example</a></li>
+  <li><a href="https://github.com/css-modules/css-modules">CSS Modules</a></li>
+</ul>
+
+<h2 id="learning-react-by-eve-porcello-alex-banks">Learning React by Eve Porcello, Alex Banks</h2>
+
+<ul>
+  <li>Table of contents of the book <a href="/tema3-web/learning-react.html">Learning React by Eve Porcello, Alex Banks Index. Be sure you are authenticated in PuntoQ</a></li>
+  <li><a href="https://github.com/moonhighway/learning-react">MoonHighway/learning-react</a> Github repo with the code samples for Learning React by Alex Banks and Eve Porcello, published by O’Reilly Media</li>
+</ul>
+
+<h2 id="react-router">React Router</h2>
+
+<h3 id="the-problem">The Problem</h3>
+
+<p>The biggest difference of Single Page Apps (SPA) with traditional multi-page apps is that navigating a single-page app doesn’t involve going to an entirely new page. Instead, your pages (commonly known as <strong>views</strong> in this context) typically load inline within the same page itself.</p>
+
+<p>When you are loading content inline, things get a little challenging. The hard part is not loading the content itself. That is relatively easy. The hard part is making sure that single-page apps behave in a way that is consistent with what your users are used to. More specifically, when users navigate your app, they expect that:</p>
+
+<ol>
+  <li>The URL displayed in the address bar always reflects the thing that they are viewing.</li>
+  <li>They can use the browser’s back and forward buttons…successfully.</li>
+  <li>They can navigate to a particular view (aka deep link) directly using the appropriate URL.</li>
+</ol>
+
+<p>With multi-page apps, these three things come for free. There is nothing extra you have to do for any of it. With single-page apps, because you aren’t navigating to an entirely new page, you have to do real work to deal with these three things that your users expect to just work.</p>
+
+<p>To deal with all of this, you have a bucket full of techniques commonly known as <strong>routing</strong>.</p>
+
+<h3 id="the-solution">The Solution</h3>
+
+<p>See <a href="https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm">Creating a Single-Page App in React: using React Router</a> 
+by kirupa</p>
+
+<h2 id="gatsby-a-static-site-generator-using-react">GatsBy: A Static Site Generator Using React</h2>
+
+<ul>
+  <li><a href="gatsby">Gatsby</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://survivejs.com/react/introduction/">Survive.JS: React book</a></li>
+  <li><a href="https://learning.oreilly.com/library/view/learning-react/9781491954614/">Learning React. O’Reilly. Eve Porcello, Alex Banks</a></li>
+  <li><a href="https://puntoq-ull-es.accedys2.bbtk.ull.es/primo-explore/fulldisplay?docid=ullsfx4100000007593934&amp;context=L&amp;vid=ull&amp;lang=es_ES&amp;search_scope=ull_sfxebooks&amp;adaptor=Local%20Search%20Engine&amp;tab=default_tab&amp;query=any,contains,javascript&amp;sortby=date&amp;offset=0">Advanced JavaScript. Zachary Shute. 2019</a> PuntoQ ULL
+    <ul>
+      <li><a href="https://github.com/TrainingByPackt/Advanced-JavaScript">GitHub repo TrainingByPackt/Advanced-JavaScript</a></li>
+      <li><a href="https://books.google.es/books?id=XiWGDwAAQBAJ&amp;lpg=PR4&amp;dq=Advanced%20JavaScript.%20Zachary%20Shute.%202019%20github&amp;hl=es&amp;pg=PR4#v=onepage&amp;q=Advanced%20JavaScript.%20Zachary%20Shute.%202019%20github&amp;f=false">At Google Books</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/">React - The Complete Guide (incl Hooks, React Router, Redux)</a> Udemy Course</li>
+  <li><a href="https://www.udemy.com/course/typescript-with-react-hooks-and-context/">Typescript with modern React (i.e. hooks, context, suspense)</a> Udemy. Free</li>
+  <li><a href="https://www.robinwieruch.de/react-pass-props-to-component#react-props">How to pass props to components in React</a> blog by ROBIN WIERUCH</li>
+  <li><a href="https://formidable.com/open-source/radium/">radium</a> npm: A set of tools to manage inline styles on React</li>
+</ul>
+
+<h2 id="práctica-p11-t3-react-tic-tutorial-intro-to-react-tic-tac-toe">Práctica p11-t3-react-tic: Tutorial “Intro to React”. Tic-Tac-Toe</h2>
+
+<ul>
+  <li><a href="practicas/p11-t3-react-tic">Descripción de la práctica</a></li>
+</ul>
+
+<h2 id="práctica-p14-t3-react-components">Práctica p14-t3-react-components</h2>
+
+<ul>
+  <li><a href="practicas/p14-t3-react-components/index.html">Descripción de la práctica</a></li>
+</ul>
+
+<h2 id="práctica-p15-t3-react-lists-and-conditionals">Práctica p15-t3-react-lists-and-conditionals</h2>
+
+<ul>
+  <li><a href="practicas/p15-t3-react-lists-and-conditionals/index.html">Descripción de la práctica</a></li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

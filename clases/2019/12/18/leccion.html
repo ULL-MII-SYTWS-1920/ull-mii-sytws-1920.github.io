@@ -1,0 +1,1719 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+    
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_posts/2019-12-18-leccion.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#clase-del-miércoles-18122019">Clase del Miércoles 18/12/2019</a>
+    <ul>
+      <li><a href="#final-de-curso">Final de Curso</a></li>
+      <li><a href="#chapter-6-commanding-databases">Chapter 6: Commanding DataBases</a>
+        <ul>
+          <li><a href="#elasticsearch-y-kibana">Elasticsearch y Kibana</a></li>
+          <li><a href="#creating-a-command-line-program-in-nodejs-with-commander">Creating a Command-Line Program in Node.js with Commander</a></li>
+          <li><a href="#introducing-the-commander-and-request-modules">Introducing the Commander and Request Modules</a>
+            <ul>
+              <li><a href="#alternatives-to-commander-and-request">Alternatives to Commander and Request</a></li>
+            </ul>
+          </li>
+          <li><a href="#adding-a-command-to-your-program">Adding a Command to Your program</a>
+            <ul>
+              <li><a href="#urls-in-elasticsearch-restful-search-engine">URLs in Elasticsearch RESTful Search Engine</a></li>
+              <li><a href="#adding-a-command-in-commanderjs">Adding a command in Commander.js</a></li>
+            </ul>
+          </li>
+          <li><a href="#testing-web-services-with-json-server-and-postman">Testing web services with json-server and Postman</a></li>
+          <li><a href="#using-request-to-fetch-json-over-http">Using request to Fetch JSON over HTTP</a>
+            <ul>
+              <li><a href="#creating-an-elastic-index">Creating an Elastic Index</a></li>
+              <li><a href="#listing-elasticsearch-indices">Listing Elasticsearch indices</a></li>
+            </ul>
+          </li>
+          <li><a href="#shaping-json-with-jq">Shaping JSON with jq</a></li>
+          <li><a href="#inserting-elasticsearch-documents-in-bulk">Inserting Elasticsearch Documents in Bulk</a></li>
+          <li><a href="#implementing-an-elasticsearch-query-command">Implementing an Elasticsearch Query Command</a>
+            <ul>
+              <li><a href="#finding-the-schema-of-a-json-file-with-jq">Finding the Schema of a JSON FILE with jq</a></li>
+              <li><a href="#the-result-of-a-search">The result of a Search</a>
+                <ul>
+                  <li><a href="#by-default-the-_search-api-will-return-only-the-top-10-results">By default the <code class="language-plaintext highlighter-rouge">_search</code> API will return only the top 10 results</a></li>
+                  <li><a href="#searching-for-all-books">Searching for all books</a></li>
+                  <li><a href="#queries-with-q">Queries with <code class="language-plaintext highlighter-rouge">q</code></a></li>
+                  <li><a href="#query-syntax-features">Query Syntax Features</a></li>
+                  <li><a href="#source-filtering">Source Filtering</a></li>
+                </ul>
+              </li>
+              <li><a href="#implementing-an-elasticsearch-query-command-esclu-q-authorstwain">Implementing an Elasticsearch Query Command: <code class="language-plaintext highlighter-rouge">esclu q authors:Twain</code></a></li>
+            </ul>
+          </li>
+          <li><a href="#challenge-deleting-an-index">Challenge: Deleting an Index</a></li>
+          <li><a href="#challenge-adding-a-single-document">Challenge: Adding a Single Document</a></li>
+          <li><a href="#references">References</a>
+            <ul>
+              <li><a href="#commander">Commander</a></li>
+              <li><a href="#yargs">Yargs</a></li>
+              <li><a href="#jq">jq</a></li>
+              <li><a href="#elasticsearch">Elasticsearch</a></li>
+              <li><a href="#chrome-plugin-elasticsearch-head"><a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm">Chrome Plugin ElasticSearch Head</a></a></li>
+              <li><a href="#kibana">Kibana</a></li>
+              <li><a href="#java">Java</a></li>
+              <li><a href="#http-nodejs">HTTP Nodejs</a></li>
+              <li><a href="#fetch-y-node-fetch">fetch y node-fetch</a></li>
+              <li><a href="#streams-en-nodejs">Streams en Node.js</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="clase-del-miércoles-18122019">Clase del Miércoles 18/12/2019</h1>
+
+<h2 id="final-de-curso">Final de Curso</h2>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/1EBVRMo7LwDQYdQ4-d7Pbzw84XQeqIa-C/view">Descripción del calendario</a></li>
+  <li>Entiendo que las clases se acaban el 17/01/2019</li>
+  <li>Los exámenes aparece del 20/01 al 01/02. Los de la Web ULL no han actualizado el enlace, pero es este:
+    <ul>
+      <li><a href="https://docs.google.com/document/d/1L1vcYHPtowuP_v-1HLMtJms7S_efD3jHt9H4zrND1IU/edit">Exámenes de la Convocatoria de Enero</a></li>
+      <li>Enero:
+        <ul>
+          <li>24/1/2020</li>
+          <li>16:00</li>
+          <li>2.2</li>
+          <li>31/1/2020</li>
+          <li>16:00</li>
+          <li>2.2</li>
+        </ul>
+      </li>
+      <li>Junio
+        <ul>
+          <li>3/7/2020</li>
+          <li>16:00</li>
+          <li>2.2</li>
+        </ul>
+      </li>
+      <li>Septiembre
+        <ul>
+          <li>4/9/2020</li>
+          <li>16:00</li>
+          <li>2.2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Cierre de actas: Viernes 7 de Febrero de 2020</li>
+  <li>Hemos añadido una práctica nueva y el Trabajo Fin de Asignatura
+    <ul>
+      <li><a href="/tema3-web/practicas/p11-t3-restful/">p11-t3-restful</a></li>
+      <li><a href="/tema3-web/practicas/p12-tfa-user-experience/">p12-tfa-user-experience</a></li>
+    </ul>
+  </li>
+  <li>Pueden encontrar las soluciones a las prácticas del autor del libro en este repo <a href="https://github.com/ULL-MII-SYTWS-1920/book-solution-nodejs-the-right-way">ULL-MII-SYTWS-1920/book-solution-nodejs-the-right-way</a>. Debería tener permisos de acceso</li>
+  <li>Para cada convocatoria, las prácticas deberían estar entregadas en su mayoría 5 días antes antes de los cierres de actas, que son estos días:
+    <ul>
+      <li>Viernes 14 de Febrero 2020</li>
+      <li>Viernes 27 de Marzo 2020</li>
+      <li>Jueves 25 de Junio 2020</li>
+      <li>Miércoles 22 de Julio 2020</li>
+      <li>Jueves 25 de Septiembre 2020</li>
+    </ul>
+  </li>
+</ul>
+
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+th, td {
+  padding: 1px;
+}
+</style>
+
+<table>
+  <tr>
+    <td>
+    <img alt="/assets/images/enero2020.png" src="/assets/images/enero2020.png" />
+    </td>
+    <td>
+    <img src="/assets/images/instrucciones-calendario.png" />
+    </td>
+  </tr>
+</table>
+
+<h2 id="chapter-6-commanding-databases">Chapter 6: Commanding DataBases</h2>
+
+<p>En este capítulo del libro 
+(<a href="/tema3-web/practicas/p10-t3-commanding-databases/">práctica p10-t3-commanding-databases/</a>)
+construiremos un programa de línea de comandos <code class="language-plaintext highlighter-rouge">esclu</code> 
+para interactuar con la base de datos Elasticsearch.</p>
+
+<p>Elasticsearch is a schema-free, RESTful, NoSQL database that stores and indexes JSON documents over HTTP.</p>
+
+<p>Nuestro programa <code class="language-plaintext highlighter-rouge">esclu</code> hará requests REST al servidor de ElasticSearch y este retornará un JSON con la respuesta al 
+request. Sigue un ejemplo de ejecución.</p>
+
+<p>Puesto que la salida es un JSON muy grande, la hemos canalizado a un programa 
+<a href="https://stedolan.github.io/jq/tutorial/"><code class="language-plaintext highlighter-rouge">jq</code></a> (JSON query language):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre>$ ./esclu query authors:Twain AND subjects:children | jq .hits.hits[1]._source
+{
+  "id": 1837,
+  "title": "The Prince and the Pauper",
+  "authors": [
+    "Twain, Mark"
+  ],
+  "subjects": [
+    "Edward VI, King of England, 1537-1553 -- Fiction",
+    "Lookalikes -- Fiction",
+    "London (England) -- Fiction",
+    "Historical fiction",
+    "Impostors and imposture -- Fiction",
+    "Boys -- Fiction",
+    "Princes -- Fiction",
+    "Social classes -- Fiction",
+    "Poor children -- Fiction"
+  ]
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Lo que nos permite el DSL <code class="language-plaintext highlighter-rouge">jq</code> es navegar a través del JSON y obtener el campo en el que estamos interesados. En
+el ejemplo anterior la salida del comando <code class="language-plaintext highlighter-rouge">./esclu query authors:Twain AND subjects:children</code> es un JSON  como este:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre>{
+  "took": 37,
+  ...
+  "hits": {
+    "total": 41,
+    "max_score": 9.074243,
+    "hits": [
+      { ... },
+      {
+        ...
+        "_id": "pg7195",
+        "_source": {
+            "id": 1837,
+            "title": "The Prince and the Pauper",
+          ...
+        }
+      },
+      ...
+  }
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>De manera que con la expresión  <code class="language-plaintext highlighter-rouge">jq .hits.hits[1]._source</code> describimos un elemento concreto del JSON.</p>
+
+<p><a href="https://es.wikipedia.org/wiki/Elasticsearch">Elasticsearch</a> es un servidor de búsqueda basado en Lucene. Provee un motor de búsqueda de texto completo, distribuido y con <a href="https://es.wikipedia.org/wiki/Tenencia_m%C3%BAltiple">capacidad de multi-tenencia</a> con una interfaz web RESTful y con documentos JSON. Elasticsearch está desarrollado en Java y está publicado como código abierto bajo las condiciones de la licencia Apache.</p>
+
+<p>Usando el comando <code class="language-plaintext highlighter-rouge">esclu bulk</code> cargaremos los documentos JSON generados en el capítulo
+anterior en la base de datos de Elasticsearch:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$ ./esclu bulk ../data/bulk_pg.ldj -i books -t book &gt; ../data/bulk_result.json
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/ch6-xml-2-json-ch6-2-es.png" alt="/assets/images/ch6-xml-2-json-ch6-2-es.png" /></p>
+
+<h3 id="elasticsearch-y-kibana">Elasticsearch y Kibana</h3>
+
+<ul>
+  <li>Vea la sección <a href="/tema3-web/elasticsearch">Elasticsearch</a> y <a href="/tema3-web/elasticsearch#kibana">Kibana</a> de los apuntes</li>
+</ul>
+
+<h3 id="creating-a-command-line-program-in-nodejs-with-commander">Creating a Command-Line Program in Node.js with Commander</h3>
+
+<p>Now, we are going to start to build a command-line program that provides access to the  Elasticsearch
+server.</p>
+
+<p>We’ll start by creating a <code class="language-plaintext highlighter-rouge">package.json</code> inside the folder <code class="language-plaintext highlighter-rouge">esclu</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ mkdir esclu
+$ cd esclu
+$ npm init -f
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="introducing-the-commander-and-request-modules">Introducing the Commander and Request Modules</h3>
+
+<p>We’re going to use a module called <code class="language-plaintext highlighter-rouge">Commander</code>, which makes it easy to construct elaborate and powerful command-line tools in Node.js. We will use the module <code class="language-plaintext highlighter-rouge">request</code> to write our requests to the elasticsearch server:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>npm i commander request
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><a href="https://github.com/tj/commander.js">Commander at GitHub</a></li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/commander-examples">Commander: Teacher examples</a></li>
+  <li><a href="https://github.com/tj/commander.js/tree/master/examples">Commander: Examples of use</a></li>
+  <li>YouTube Video <a href="https://youtu.be/jj_B4e6F454">commander.js, npm scopes, and node.js cli’s (part 1)</a></li>
+</ul>
+
+<h4 id="alternatives-to-commander-and-request">Alternatives to Commander and Request</h4>
+
+<ul>
+  <li><a href="https://github.com/yargs/yargs">yargs</a></li>
+  <li><a href="https://github.com/bitinn/node-fetch">node-fetch</a>This module implements the Fetch API</li>
+</ul>
+
+<h3 id="adding-a-command-to-your-program">Adding a Command to Your program</h3>
+
+<h4 id="urls-in-elasticsearch-restful-search-engine">URLs in Elasticsearch RESTful Search Engine</h4>
+
+<p>In Elasticsearch, the RESTful resources are JSON documents.</p>
+
+<p>Each Elasticsearch document:</p>
+
+<ul>
+  <li>lives in an <strong>index</strong> and</li>
+  <li>has a <strong>type</strong>, which defines a class of related documents.</li>
+</ul>
+
+<p>To construct a URL for an Elasticsearch document,</p>
+<ul>
+  <li>first you append which index you’re interested in (if any) and then</li>
+  <li>optionally the type of object you’re interested in, separated by slashes.</li>
+</ul>
+
+<p>To get information about your whole cluster, you could make an HTTP <code class="language-plaintext highlighter-rouge">GET</code> request to the root: http://localhost:9200/.</p>
+
+<p>To request information about the index named <code class="language-plaintext highlighter-rouge">books</code>, you would <code class="language-plaintext highlighter-rouge">GET</code> http://localhost:9200/books.</p>
+
+<ul>
+  <li>See <a href="https://www.elastic.co/blog/index-vs-type">Index vs. Type</a> article:
+    <ul>
+      <li><em>In the past we tried to make elasticsearch easier to understand by building an analogy with relational databases: *indices</em> would be like a database, and <em>types</em> like a table in a database.*</li>
+      <li><em>This was a mistake: the way data is stored is so different that any comparisons can hardly make sense, and this ultimately led to an overuse of types in cases where they were more harmful than helpful.</em></li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/8cced9a5546c794a08a3670674aabcc9602e20dd/commanding-databases-chapter-6/esclu/index.js#L8-L17">See the code of <code class="language-plaintext highlighter-rouge">fullUrl</code></a></p>
+
+<h4 id="adding-a-command-in-commanderjs">Adding a command in Commander.js</h4>
+
+<p>Adding a command in commander.js consists of three steps:</p>
+
+<ol>
+  <li>Specifying the command name and parameters <code class="language-plaintext highlighter-rouge">url [path]</code>
+    <ol>
+      <li>Required arguments should be surrounded by angle brackets <code class="language-plaintext highlighter-rouge">&lt;file&gt;</code></li>
+      <li>Optional arguments should be surrounded by square brackets <code class="language-plaintext highlighter-rouge">[path]</code></li>
+    </ol>
+  </li>
+  <li>Providing a description <code class="language-plaintext highlighter-rouge">'generate the URL for the options and path (default is /)'</code></li>
+  <li>Setting up an action callback <code class="language-plaintext highlighter-rouge">(path= "/") =&gt; console.log(fullUrl(path))</code></li>
+</ol>
+
+<p>See the code that <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/commanding-databases-chapter-6/esclu/index.js#L40-L43">adds the command <code class="language-plaintext highlighter-rouge">esclu url path</code></a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu
+Usage: esclu [options] &lt;command&gt; [...]
+
+Elasticsearch command line utilities
+
+Options:
+  -V, --version          output the version number
+  -o, --host &lt;hostname&gt;  hostname [localhost] (default: "localhost")
+  -p, --port &lt;number&gt;    port number [9200] (default: "9200")
+  -j, --json             format output as json
+  -i, --index &lt;name&gt;     which index to use
+  -t, --type &lt;type&gt;      default type for bulk operations
+  -h, --help             output usage information
+
+Commands:
+  url [path]             generate the URL for the options and path (default is /)
+  get [path]             perform and HTTP GET request for path (default is /)
+  create-index           create an index
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu url
+http://localhost:9200/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu url 'some/path' -p 8080 -o mymachine.ull.es
+http://mymachine.ull.es:8080/some/path
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="testing-web-services-with-json-server-and-postman">Testing web services with json-server and Postman</h3>
+
+<ul>
+  <li><a href="https://github.com/typicode/json-server">json-server</a></li>
+  <li><a href="https://youtu.be/1zkgdLZEdwM">Video Create a Fake REST API with JSON-Server</a> Usa postman para los requests</li>
+  <li><a href="https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server">Video en egg-head describiendo el uso de json-server</a></li>
+  <li><a href="https://www.getpostman.com/">postman</a></li>
+  <li><a href="https://youtu.be/x3NAo8zqdmo">Video Create A REST API With JSON Server</a></li>
+</ul>
+
+<h3 id="using-request-to-fetch-json-over-http">Using request to Fetch JSON over HTTP</h3>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/request">request npm</a></li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/commanding-databases-chapter-6/esclu/index.js#L46-L55">Código de <code class="language-plaintext highlighter-rouge">get path</code></a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu -o api.github.com -p 80 -j get /repos/stedolan/jq/commits?per_page=5 | jq '.[0] | {message: .commit.message, name: .commit.committer.name}'
+{
+  "message": "Minor website fixes for 1.6",
+  "name": "William Langford"
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="creating-an-elastic-index">Creating an Elastic Index</h4>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/commanding-databases-chapter-6/esclu/index.js#L63-L80">Code of create-index</a></li>
+  <li><strong>Why PUT and no POST?</strong>
+    <ul>
+      <li><a href="https://stackoverflow.com/questions/630453/put-vs-post-in-rest">PUT vs. POST in REST</a> Stack Overflow</li>
+      <li>Better is to choose between <code class="language-plaintext highlighter-rouge">PUT</code> and <code class="language-plaintext highlighter-rouge">POST</code> based on idempotence of the action.</li>
+      <li><code class="language-plaintext highlighter-rouge">PUT</code> implies putting a resource - completely replacing whatever is available at the given URL with a different thing. By definition, a <code class="language-plaintext highlighter-rouge">PUT</code> is idempotent. Do it as many times as you like, and the result is the same. <code class="language-plaintext highlighter-rouge">x=5</code> is idempotent. You can <code class="language-plaintext highlighter-rouge">PUT</code> a resource whether it previously exists, or not (eg, to Create, or to Update)!</li>
+      <li><code class="language-plaintext highlighter-rouge">POST</code> updates a resource, adds a subsidiary resource, or causes a change. A <code class="language-plaintext highlighter-rouge">POST</code> is not idempotent, in the way that <code class="language-plaintext highlighter-rouge">x++</code> is not idempotent.</li>
+      <li>By this argument, <code class="language-plaintext highlighter-rouge">PUT</code> is for creating when you know the URL of the thing you will create. <code class="language-plaintext highlighter-rouge">POST</code> can be used to create when you know the URL of the “factory” or manager for the category of things you want to create.</li>
+      <li>so: <code class="language-plaintext highlighter-rouge">POST /expense-report</code></li>
+      <li>or: <code class="language-plaintext highlighter-rouge">PUT  /expense-report/10929</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="listing-elasticsearch-indices">Listing Elasticsearch indices</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu li -h
+Usage: list-indices|li [options]
+
+get a list of indices in this cluster
+
+Options:
+  -h, --help  output usage information
+
+[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu li
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   prueba   HdtW7qEZTP-2Wx78ICygEA   5   1          0            0      1.2kb          1.2kb
+yellow open   accounts 9TNc0k0LQ1e4y97yFX8_vg   5   1          2            0     10.4kb         10.4kb
+yellow open   books    wP3DgQPZQZq0qBtH_dd0LA   5   1          0            0      1.2kb          1.2kb
+
+[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu -j li | jq
+{
+  "accounts": {
+    "aliases": {},
+    "mappings": {
+      "person": {
+        "properties": {
+          "job_description": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "lastname": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings": {
+      "index": {
+        "creation_date": "1541679750244",
+        "number_of_shards": "5",
+        "number_of_replicas": "1",
+        "uuid": "9TNc0k0LQ1e4y97yFX8_vg",
+        "version": {
+          "created": "6040299"
+        },
+        "provided_name": "accounts"
+      }
+    }
+  },
+  "books": {
+    "aliases": {},
+    "mappings": {},
+    "settings": {
+      "index": {
+        "creation_date": "1542216727600",
+        "number_of_shards": "5",
+        "number_of_replicas": "1",
+        "uuid": "wP3DgQPZQZq0qBtH_dd0LA",
+        "version": {
+          "created": "6040299"
+        },
+        "provided_name": "books"
+      }
+    }
+  },
+  "prueba": {
+    "aliases": {},
+    "mappings": {},
+    "settings": {
+      "index": {
+        "creation_date": "1542217420653",
+        "number_of_shards": "5",
+        "number_of_replicas": "1",
+        "uuid": "HdtW7qEZTP-2Wx78ICygEA",
+        "version": {
+          "created": "6040299"
+        },
+        "provided_name": "prueba"
+      }
+    }
+  }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="shaping-json-with-jq">Shaping JSON with jq</h3>
+
+<ul>
+  <li><a href="https://stedolan.github.io/jq/manual/">jq manual</a></li>
+  <li><a href="https://shapeshed.com/jq-json/">JSON on the command line with jq</a></li>
+  <li>YouTube vídeo <a href="https://youtu.be/_ZTibHotSew">JSON: Like a Boss</a>. Bob Tiernay explores the fascinating world of jq, “the JSON Processor”. Starting with a motivation, he then covers the language, provides helpful tips, showcases a real world example, cautions some things to avoid and finishes with a discussion of the ecosystem.</li>
+  <li><a href="https://remysharp.com/drafts/jq-recipes">jq recipes</a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ jq -V
+jq-1.5
+[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ jq --help
+</pre></td></tr></tbody></table></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre>jq - commandline JSON processor [version 1.5]
+Usage: jq [options] &lt;jq filter&gt; [file...]
+
+	jq is a tool for processing JSON inputs, applying the
+	given filter to its JSON text inputs and producing the
+	filter's results as JSON on standard output.
+	The simplest filter is ., which is the identity filter,
+	copying jq's input to its output unmodified (except for
+	formatting).
+	For more advanced filters see the jq(1) manpage ("man jq")
+	and/or https://stedolan.github.io/jq
+
+	Some of the options include:
+	 -c		compact instead of pretty-printed output;
+	 -n		use `null` as the single input value;
+	 -e		set the exit status code based on the output;
+	 -s		read (slurp) all inputs into an array; apply filter to it;
+	 -r		output raw strings, not JSON texts;
+	 -R		read raw strings, not JSON texts;
+	 -C		colorize JSON;
+	 -M		monochrome (don't colorize JSON);
+	 -S		sort keys of objects on output;
+	 --tab	use tabs for indentation;
+	 --arg a v	set variable $a to value &lt;v&gt;;
+	 --argjson a v	set variable $a to JSON value &lt;v&gt;;
+	 --slurpfile a f	set variable $a to an array of JSON texts read from &lt;f&gt;;
+	See the manpage for more options.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>See also the man pages:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ man jq
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu li -j | jq '.books | keys'
+[
+  "aliases",
+  "mappings",
+  "settings"
+]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _stats | jq keys
+[
+  "_all",
+  "_shards",
+  "indices"
+]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _stats | jq -r 'path(..)| map(tostring) |join(".")' | head -n 20
+
+_shards
+_shards.total
+_shards.successful
+_shards.failed
+_all
+_all.primaries
+_all.primaries.docs
+_all.primaries.docs.count
+_all.primaries.docs.deleted
+_all.primaries.store
+_all.primaries.store.size_in_bytes
+_all.primaries.indexing
+_all.primaries.indexing.index_total
+_all.primaries.indexing.index_time_in_millis
+_all.primaries.indexing.index_current
+_all.primaries.indexing.index_failed
+_all.primaries.indexing.delete_total
+_all.primaries.indexing.delete_time_in_millis
+_all.primaries.indexing.delete_current
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _stats | jq '._all.primaries | { count: .docs.count, size: .store.size_in_bytes}'
+{
+  "count": 58161,
+  "size": 24424474
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ &lt;  ../../transforming-data-and-testing-continuously-chapter-5/data/bulk_result.json jq .items[0,1,2]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="inserting-elasticsearch-documents-in-bulk">Inserting Elasticsearch Documents in Bulk</h3>
+
+<p>Recall that in ​chapter <em>Processing Data Files Sequentially​</em>, we developed an LDJ data file containing interleaved commands and documents for Elasticsearch’s bulk API:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way(master)]$ head transforming-data-and-testing-continuously-chapter-5/data/bulk_pg.ldj
+{"index":{"_id":"pg1"}}
+{"id":1,"title":"The Declaration of Independence of the United States of America","authors":["Jefferson, Thomas"],"subjects":["United States -- History -- Revolution, 1775-1783 -- Sources","United States. Declaration of Independence"]}
+{"index":{"_id":"pg10"}}
+{"id":10,"title":"The King James Version of the Bible","authors":[],"subjects":["Bible"]}
+{"index":{"_id":"pg100"}}
+{"id":100,"title":"The Complete Works of William Shakespeare","authors":["Shakespeare, William"],"subjects":["English drama -- Early modern and Elizabethan, 1500-1600"]}
+{"index":{"_id":"pg1000"}}
+{"id":1000,"title":"La Divina Commedia di Dante: Complete","authors":["Dante Alighieri"],"subjects":[]}
+{"index":{"_id":"pg10000"}}
+{"id":10000,"title":"The Magna Carta","authors":["Anonymous"],"subjects":["Constitutional history -- England -- Sources","Magna Carta"]}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Code for command <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/commanding-databases-chapter-6/esclu/index.js#L119-L146"><code class="language-plaintext highlighter-rouge">bulk &lt;file&gt;</code></a></li>
+</ul>
+
+<p>Unlike the <code class="language-plaintext highlighter-rouge">get</code> and <code class="language-plaintext highlighter-rouge">url</code> commands that took an optional parameter, the <code class="language-plaintext highlighter-rouge">bulk</code> command’s <code class="language-plaintext highlighter-rouge">&lt;file&gt;</code> parameter is <strong>required</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu bulk -h
+Usage: bulk [options] &lt;file&gt;
+
+read and perform bulk operations from the specified file
+
+Options:
+  -h, --help  output usage information
+[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu bulk
+error: missing required argument `file'
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Inside the action callback, the first thing we do is use <a href="https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback">fs.stat</a> to asynchronously check on the provided file. This asserts that the file exists and can be reached by the user running the process.</p>
+
+<p>Using the <a href="https://nodejs.org/api/fs.html#fs_class_fs_stats">size information from the stat call</a>, we can specify the HTTP header <code class="language-plaintext highlighter-rouge">content-length</code>.</p>
+
+<p>This is important because we’ll be streaming the file content to the server rather than handing all the content at once.</p>
+
+<p>Using <code class="language-plaintext highlighter-rouge">request.post</code>, we initialize an <strong>HTTP POST request</strong> to Elasticsearch, capturing the returned object in a variable called <code class="language-plaintext highlighter-rouge">req</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>    <span class="kd">const</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This object can be used as a <a href="https://nodejs.org/dist/latest-v8.x/docs/api/stream.html#stream_writable_streams">writable stream (stream.Writable)</a> for sending content,</p>
+
+<p>We open a read stream to the file using <a href="https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_createreadstream_path_options">fs.createReadStream</a> and pipe that into the <code class="language-plaintext highlighter-rouge">req</code>uest object.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+<span class="nx">stream</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">req</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>and also as a readable stream (stream.Readable) for receiving the server’s response.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>      <span class="nx">req</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>The task <code class="language-plaintext highlighter-rouge">c6-build-books</code> in the <code class="language-plaintext highlighter-rouge">gulpfile.js</code> performs the bulk insertion:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="dl">"</span><span class="s2">c6-build-books</span><span class="dl">"</span><span class="p">,</span> <span class="nx">shell</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span>
+  <span class="s2">`commanding-databases-chapter-6/esclu/esclu bulk `</span><span class="o">+</span>
+  <span class="s2">`transforming-data-and-testing-continuously-chapter-5/data/bulk_pg.ldj `</span><span class="o">+</span>
+  <span class="s2">`-i books -t book &gt; transforming-data-and-testing-continuously-chapter-5/data/bulk_result.json`</span>
+<span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ jq keys  ../../transforming-data-and-testing-continuously-chapter-5/data/bulk_result.json
+[
+  "errors",
+  "items",
+  "took"
+]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ jq '.items | length '  ../../transforming-data-and-testing-continuously-chapter-5/data/bulk_result.json
+58161
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="implementing-an-elasticsearch-query-command">Implementing an Elasticsearch Query Command</h3>
+
+<p>First we’ll take a look around using the existing <code class="language-plaintext highlighter-rouge">get</code> command, and then we’ll implement a specific command just for querying.</p>
+
+<h4 id="finding-the-schema-of-a-json-file-with-jq">Finding the Schema of a JSON FILE with jq</h4>
+
+<p>Let us write a <code class="language-plaintext highlighter-rouge">jq</code> module with a function <code class="language-plaintext highlighter-rouge">schemas</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> [~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ cat ~/.jq
+def schemas: path(..) | map(tostring) | join(".");
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>It is saved in <code class="language-plaintext highlighter-rouge">~/.jq</code></p>
+
+<p>And use it:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _search | jq -r 'schemas' | head -n 20
+
+took
+timed_out
+_shards
+_shards.total
+_shards.successful
+_shards.skipped
+_shards.failed
+hits
+hits.total
+hits.max_score
+hits.hits
+hits.hits.0
+hits.hits.0._index
+hits.hits.0._type
+hits.hits.0._id
+hits.hits.0._score
+hits.hits.0._source
+hits.hits.0._source.id
+hits.hits.0._source.title
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="the-result-of-a-search">The result of a Search</h4>
+
+<ol>
+  <li>We see a <code class="language-plaintext highlighter-rouge">took</code> field, which indicates how long the request took to execute in milliseconds.</li>
+  <li>The results of the query are in the <code class="language-plaintext highlighter-rouge">hits</code> object, which contains three fields:
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">hits.total</code></li>
+      <li><code class="language-plaintext highlighter-rouge">hits.max_score</code>
+        <ul>
+          <li>The <code class="language-plaintext highlighter-rouge">max_score</code> field indicates the score value of the highest-scoring match.</li>
+          <li>Lucene (and thus Elasticsearch) uses the Boolean model to find matching documents, and</li>
+          <li>a formula called the <strong>practical scoring function</strong> to calculate relevance.</li>
+          <li>This formula borrows concepts from
+            <ul>
+              <li>term frequency/inverse document frequency and</li>
+              <li>the vector space model but</li>
+            </ul>
+          </li>
+          <li>adds more-modern features like
+            <ul>
+              <li>a coordination factor,</li>
+              <li>field length</li>
+              <li>normalization, and</li>
+              <li>term or query clause boosting.</li>
+            </ul>
+          </li>
+          <li>See <a href="https://www.elastic.co/guide/en/elasticsearch/guide/current/scoring-theory.html">scoring theory</a></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">hits.hits</code>
+        <ul>
+          <li>The hits key points to an array of individual results.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h5 id="by-default-the-_search-api-will-return-only-the-top-10-results">By default the <code class="language-plaintext highlighter-rouge">_search</code> API will return only the top 10 results</h5>
+
+<p>Note that by default the <code class="language-plaintext highlighter-rouge">_search</code> API will return only the top 10 results. This can be increased by specifying the <code class="language-plaintext highlighter-rouge">size</code> URL parameter.</p>
+
+<h5 id="searching-for-all-books">Searching for all books</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _search | jq '[.hits.hits[]._source][0,1]'
+{
+  "id": 100,
+  "title": "The Complete Works of William Shakespeare",
+  "authors": [
+    "Shakespeare, William"
+  ],
+  "subjects": [
+    "English drama -- Early modern and Elizabethan, 1500-1600"
+  ]
+}
+{
+  "id": 1000,
+  "title": "La Divina Commedia di Dante: Complete",
+  "authors": [
+    "Dante Alighieri"
+  ],
+  "subjects": []
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h5 id="queries-with-q">Queries with <code class="language-plaintext highlighter-rouge">q</code></h5>
+
+<p>Through the <code class="language-plaintext highlighter-rouge">_search</code> API, if you pass a query parameter, <code class="language-plaintext highlighter-rouge">q</code>,
+Elasticsearch will use its value to find documents.</p>
+
+<p>Say we were interested in books by Mark Twain. We could search for documents whose authors array includes the substring <code class="language-plaintext highlighter-rouge">Twain</code> using the query expression <code class="language-plaintext highlighter-rouge">q="authors:Twain"</code>, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre>[~/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _search?q="authors:Twain" | jq '.hits.hits[0]'
+{
+  "_index": "books",
+  "_type": "book",
+  "_id": "pg1837",
+  "_score": 6.9273376,
+  "_source": {
+    "id": 1837,
+    "title": "The Prince and the Pauper",
+    "authors": [
+      "Twain, Mark"
+    ],
+    "subjects": [
+      "Edward VI, King of England, 1537-1553 -- Fiction",
+      "Lookalikes -- Fiction",
+      "London (England) -- Fiction",
+      "Historical fiction",
+      "Impostors and imposture -- Fiction",
+      "Boys -- Fiction",
+      "Princes -- Fiction",
+      "Social classes -- Fiction",
+      "Poor children -- Fiction"
+    ]
+  }
+}
+
+[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _search?q="authors:Twain" | jq '.hits.hits[] | ._source.title'
+"The Prince and the Pauper"
+"Chapters from My Autobiography"
+"The Awful German Language"
+"Personal Recollections of Joan of Arc — Volume 1"
+"Personal Recollections of Joan of Arc — Volume 2"
+"In Defence of Harriet Shelley"
+"The Innocents Abroad"
+"The Mysterious Stranger, and Other Stories"
+"The Curious Republic of Gondour, and Other Whimsical Sketches"
+"The Innocents Abroad — Volume 03"
+</pre></td></tr></tbody></table></code></pre></div></div>
+<h5 id="query-syntax-features">Query Syntax Features</h5>
+
+<p>Elasticsearch’s query string syntax is a DSL with many useful features like</p>
+
+<ol>
+  <li>wildcards,</li>
+  <li>Boolean AND/OR operators,</li>
+  <li>negation, and</li>
+  <li>even regular expressions.</li>
+</ol>
+
+<h5 id="source-filtering">Source Filtering</h5>
+
+<p>Elasticsearch supports <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-source-filtering.html">source filtering</a>.</p>
+
+<p>We could use the source filter expression <code class="language-plaintext highlighter-rouge">_source=title</code>. It is a bit like ecma6 selecting only the field <code class="language-plaintext highlighter-rouge">title</code> of the corresponding object.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>[~/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu get _search?q="authors:Twain&amp;_source=title" | jq '.hits.hits[0]'
+{
+  "_index": "books",
+  "_type": "book",
+  "_id": "pg1837",
+  "_score": 6.9273376,
+  "_source": {
+    "title": "The Prince and the Pauper"
+  }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Now the <code class="language-plaintext highlighter-rouge">_source</code> objects contain only the <code class="language-plaintext highlighter-rouge">title</code> key.</p>
+
+<h4 id="implementing-an-elasticsearch-query-command-esclu-q-authorstwain">Implementing an Elasticsearch Query Command: <code class="language-plaintext highlighter-rouge">esclu q authors:Twain</code></h4>
+
+<ol>
+  <li>The command will be called <code class="language-plaintext highlighter-rouge">query</code>, with the alias <code class="language-plaintext highlighter-rouge">q</code> for short.</li>
+  <li>It will take any number of optional query parts, so the user won’t have to wrap the query in quotes.</li>
+  <li>It can be specified an optional source filter expression to limit the output documents.</li>
+</ol>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>​ 	​$ ​​./esclu​​ ​​q​​ ​​authors:Twain​​ ​​AND​​ ​​subjects:children​
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/commanding-databases-chapter-6/esclu/index.js#L149-L165">Solution</a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu q authors:Twain AND subjects:children | jq .hits.hits[0,1]
+{
+  "_index": "books",
+  "_type": "book",
+  "_id": "pg7195",
+  "_score": 9.074243,
+  "_source": {
+    "id": 7195,
+    "title": "The Adventures of Tom Sawyer, Part 3.",
+    "authors": [
+      "Twain, Mark"
+    ],
+    "subjects": [
+      "Humorous stories",
+      "Child witnesses -- Fiction",
+      "Boys -- Fiction",
+      "Sawyer, Tom (Fictitious character) -- Fiction",
+      "Male friendship -- Fiction",
+      "Mississippi River Valley -- Fiction",
+      "Bildungsromans",
+      "Adventure stories",
+      "Missouri -- Fiction",
+      "Runaway children -- Fiction"
+    ]
+  }
+}
+{
+  "_index": "books",
+  "_type": "book",
+  "_id": "pg1837",
+  "_score": 8.96923,
+  "_source": {
+    "id": 1837,
+    "title": "The Prince and the Pauper",
+    "authors": [
+      "Twain, Mark"
+    ],
+    "subjects": [
+      "Edward VI, King of England, 1537-1553 -- Fiction",
+      "Lookalikes -- Fiction",
+      "London (England) -- Fiction",
+      "Historical fiction",
+      "Impostors and imposture -- Fiction",
+      "Boys -- Fiction",
+      "Princes -- Fiction",
+      "Social classes -- Fiction",
+      "Poor children -- Fiction"
+    ]
+  }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre>~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu q authors:Shakespeare AND subjects:drama -f title,authors,subjects | jq '.hits.hits | first, last | ._source'
+{
+  "subjects": [
+    "Spirits -- Drama",
+    "Tragicomedy",
+    "Political refugees -- Drama",
+    "Magicians -- Drama",
+    "Shipwreck victims -- Drama",
+    "Islands -- Drama",
+    "Fathers and daughters -- Drama"
+  ],
+  "title": "The Tempest",
+  "authors": [
+    "Shakespeare, William"
+  ]
+}
+{
+  "subjects": [
+    "Tragedies",
+    "Denmark -- Drama",
+    "Hamlet (Legendary character) -- Drama",
+    "Princes -- Drama",
+    "Revenge -- Drama",
+    "Kings and rulers -- Succession -- Drama",
+    "Fathers -- Death -- Drama",
+    "Murder victims' families -- Drama"
+  ],
+  "title": "Hamlet",
+  "authors": [
+    "Shakespeare, William"
+  ]
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="challenge-deleting-an-index">Challenge: Deleting an Index</h3>
+
+<p>Any database you work with will offer at least the following four CRUD operations:</p>
+<ol>
+  <li>Create,</li>
+  <li>Read,</li>
+  <li>Update, and</li>
+  <li>Delete</li>
+</ol>
+
+<p>RESTful datastores like Elasticsearch use a different HTTP method (or verb) for each operation:</p>
+<ol>
+  <li>You use POST to create,</li>
+  <li>GET to read,</li>
+  <li>PUT to update, and</li>
+  <li>DELETE to delete</li>
+</ol>
+
+<p>Implement a new command called <code class="language-plaintext highlighter-rouge">delete-index</code>,
+which checks for an index specified with the <code class="language-plaintext highlighter-rouge">--index</code>
+flag and issues an <code class="language-plaintext highlighter-rouge">HTTP DELETE</code> request to remove it.</p>
+
+<h3 id="challenge-adding-a-single-document">Challenge: Adding a Single Document</h3>
+
+<p>Add a new command called <code class="language-plaintext highlighter-rouge">put</code>, which inserts a new document for indexing (or overwrites the existing document if there’s a collision).</p>
+
+<p>With the <code class="language-plaintext highlighter-rouge">get</code> command, you can already retrieve a book by its <code class="language-plaintext highlighter-rouge">_id</code>.
+For example, here’s how to look up <code class="language-plaintext highlighter-rouge">The Art of War</code> by its ID:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre>[~/local/src/CA/sol-nodejs-the-right-way/commanding-databases-chapter-6/esclu(master)]$ ./esclu  get pg132 --index books --type book | jq .
+{
+  "_index": "books",
+  "_type": "book",
+  "_id": "pg132",
+  "_version": 1,
+  "found": true,
+  "_source": {
+    "id": 132,
+    "title": "The Art of War",
+    "authors": [
+      "Sunzi, active 6th century B.C.",
+      "Giles, Lionel"
+    ],
+    "subjects": [
+      "Military art and science -- Early works to 1800",
+      "War -- Early works to 1800"
+    ]
+  }
+}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>For example, say we save the document part of the above response to a file, like so:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$ ./esclu  get pg132 --index books --type book | jq '._source' &gt; ../data/art_of_war.json
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Ideally, we should be able to reinsert the document from the file using the following command:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$ ./esclu  put ../data/art_of_war.json -i books -t book --id pg132
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To make this work, you’ll need to do the following:</p>
+
+<ol>
+  <li>Add a new, optional, <code class="language-plaintext highlighter-rouge">--id</code> flag.</li>
+  <li>Update the <code class="language-plaintext highlighter-rouge">fullUrl</code> function to append the <code class="language-plaintext highlighter-rouge">ID</code> in the returned URL.</li>
+  <li>Add a new command called <code class="language-plaintext highlighter-rouge">put</code> that takes a single required parameter <code class="language-plaintext highlighter-rouge">file</code></li>
+  <li>Inside the action callback of your new command, assert that an <code class="language-plaintext highlighter-rouge">ID</code> was specified, or fail loudly.</li>
+  <li>Stream the contents of the file to Elasticsearch through the <code class="language-plaintext highlighter-rouge">request</code> object and stream the results to standard output.</li>
+</ol>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="/tema3-web/practicas/p10-t3-commanding-databases/">La práctica p10-t3-commanding-databases/</a></li>
+</ul>
+
+<h4 id="commander">Commander</h4>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-CA-1819/commander-examples">Commander examples</a></li>
+</ul>
+
+<h4 id="yargs">Yargs</h4>
+
+<ul>
+  <li><a href="https://www.npmjs.com/package/yargs">https://www.npmjs.com/package/yargs</a></li>
+  <li><a href="https://www.npmjs.com/package/superagent">https://www.npmjs.com/package/superagent</a></li>
+</ul>
+
+<h4 id="jq">jq</h4>
+
+<ul>
+  <li><a href="https://stedolan.github.io/jq/manual/">jq manual</a></li>
+  <li><a href="https://shapeshed.com/jq-json/">JSON on the command line with jq</a></li>
+  <li><a href="https://github.com/fadado/JBOL/blob/master/doc/JQ-language-grammar.md">jq simplified grammar extracted from the files parser.y and lexer.l in the jq sources</a></li>
+  <li><a href="https://stedolan.github.io/jq/">https://stedolan.github.io/jq/</a></li>
+  <li><a href="https://stedolan.github.io/jq/manual/v1.5/#Builtinoperatorsandfunctions">https://stedolan.github.io/jq/manual/v1.5/#Builtinoperatorsandfunctions</a></li>
+  <li><a href="https://stedolan.github.io/jq/manual/v1.5/#Basicfilters">https://stedolan.github.io/jq/manual/v1.5/#Basicfilters</a></li>
+  <li><a href="https://stedolan.github.io/jq/manual/v1.5/">https://stedolan.github.io/jq/manual/v1.5/</a></li>
+</ul>
+
+<h4 id="elasticsearch">Elasticsearch</h4>
+
+<ul>
+  <li><a href="https://www.elastic.co/es/blog/a-practical-introduction-to-elasticsearch">A Practical Introduction to Elasticsearch By Ismael Hasan Romero</a></li>
+  <li><a href="https://appdividend.com/2018/06/29/node-js-elastic-search-tutorial-example/">Node Js Elastic Search Tutorial Example</a></li>
+  <li><a href="https://www.sitepoint.com/search-engine-node-elasticsearch/">Build a Search Engine with Node.js and Elasticsearch
+September 27, 2016, By Behrooz Kamali</a> SitePoint</li>
+  <li><a href="https://medium.com/@siddharthac6/elasticsearch-node-js-b16ea8bec427">Elasticsearch &amp; Node.js Getting Started</a></li>
+  <li><a href="http://lucene.apache.org/">http://lucene.apache.org/</a></li>
+  <li><a href="https://www.elastic.co/downloads/past-releases/elasticsearch-5-2-2">https://www.elastic.co/downloads/past-releases/elasticsearch-5-2-2</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.2/system-config.html">https://www.elastic.co/guide/en/elasticsearch/reference/5.2/system-config.html</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.2/query-dsl-query-string-query.html#query-string-syntax">https://www.elastic.co/guide/en/elasticsearch/reference/5.2/query-dsl-query-string-query.html#query-string-syntax</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-source-filtering.html">https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-source-filtering.html</a></li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/5.2/docs-index_.html">https://www.elastic.co/guide/en/elasticsearch/reference/5.2/docs-index_.html</a></li>
+  <li><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx3710000000587601">Elasticsearch Essentials. Bharvi Dixit 2016</a></li>
+</ul>
+
+<h4 id="chrome-plugin-elasticsearch-head"><a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm">Chrome Plugin ElasticSearch Head</a></h4>
+
+<ul>
+  <li><img src="/assets/images/chrom-elasticsearch-plugins.png" alt="/assets/images/chrom-elasticsearch-plugins.png" /></li>
+  <li><img src="/assets/images/chrom-elasticsearch-plugins-quey.png" alt="/assets/images/chrom-elasticsearch-plugins-quey.png" /></li>
+  <li>YouTube video: <a href="https://youtu.be/RvK8RK6wNdw?t=411">How To Use Sense And Head ElasticSearch Chrome Extensions</a></li>
+</ul>
+
+<h4 id="kibana">Kibana</h4>
+
+<ul>
+  <li><a href="https://www.elastic.co/guide/en/kibana/current/brew.html">Install Kibana on macOS with Homebrew</a></li>
+  <li><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651082">Kibana 7 Quick Start Guide. Anurag Srivastava 2019</a> Libro en PuntoQ</li>
+</ul>
+
+<h4 id="java">Java</h4>
+
+<ul>
+  <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html">http://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html</a></li>
+</ul>
+
+<h4 id="http-nodejs">HTTP Nodejs</h4>
+
+<ul>
+  <li><a href="https://nodejs.org/api/http.html">https://nodejs.org/api/http.html</a></li>
+</ul>
+
+<h4 id="fetch-y-node-fetch">fetch y node-fetch</h4>
+
+<ul>
+  <li>
+    <p><a href="https://www.npmjs.com/package/node-fetch">https://www.npmjs.com/package/node-fetch</a></p>
+  </li>
+  <li>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch</a></p>
+  </li>
+</ul>
+
+<h4 id="streams-en-nodejs">Streams en Node.js</h4>
+
+<ul>
+  <li><a href="https://nodejs.org/api/stream.html">https://nodejs.org/api/stream.html</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema1-introduccion/practicas/p2-t1-vscode/README.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#descripción-de-la-práctica-p2-t1-vscode">Descripción de la Práctica p2-t1-vscode</a>
+    <ul>
+      <li><a href="#acepte-la-tarea">Acepte la tarea</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#tutoriales">Tutoriales</a>
+        <ul>
+          <li><a href="#guía-de-usuario">Guía de Usuario</a></li>
+          <li><a href="#collaboration-con-visual-studio-share">Collaboration con Visual Studio Share</a></li>
+          <li><a href="#ssh">SSH</a></li>
+          <li><a href="#multi-root-workspaces">Multi-Root Workspaces</a></li>
+          <li><a href="#using-react-in-vscode">Using React in VSCode</a></li>
+          <li><a href="#integrate-with-external-tools-via-tasks">Integrate with External Tools via Tasks</a></li>
+          <li><a href="#web-bookmarks">Web Bookmarks</a></li>
+        </ul>
+      </li>
+      <li><a href="#localización-del-fichero-de-configuración-settingsjson">Localización del Fichero de Configuración <code class="language-plaintext highlighter-rouge">settings.json</code></a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                
+<h1 id="descripción-de-la-práctica-p2-t1-vscode">Descripción de la Práctica p2-t1-vscode</h1>
+
+<h2 id="acepte-la-tarea">Acepte la tarea</h2>
+
+<ul>
+  <li><a href="https://classroom.github.com/a/L0PUJIfV">Asignación p2-t1-vscode</a></li>
+</ul>
+
+<h2 id="objetivos">Objetivos</h2>
+
+<ol>
+  <li>Instale VSCode en su máquina</li>
+  <li>Siga los tutoriales de VSCode</li>
+  <li>Instale el plugin <a href="https://code.visualstudio.com/docs/remote/ssh">Remote SSH</a> y aprenda a usarlo con el sistema de archivo de una máquina remota via SSH</li>
+  <li>Use Live Share para colaborar con un compañero</li>
+  <li>Elabore un informe con la experiencia adquirida</li>
+</ol>
+
+<h2 id="tutoriales">Tutoriales</h2>
+
+<h3 id="guía-de-usuario">Guía de Usuario</h3>
+<ul id="editor-articles" class="collapse ">
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/codebasics">Basic Editing</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/extension-gallery">Extension Marketplace</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/intellisense">IntelliSense</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/editingevolved">Code Navigation</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/refactoring">Refactoring</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/debugging">Debugging</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/versioncontrol">Version Control</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/integrated-terminal">Integrated Terminal</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/multi-root-workspaces">Multi-root Workspaces</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/tasks">Tasks</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">Snippets</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/emmet">Emmet</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/command-line">Command Line</a>
+    </li>
+  
+    <li>
+      <a href="https://code.visualstudio.com/docs/editor/accessibility">Accessibility</a>
+    </li>
+  
+</ul>
+
+<h3 id="collaboration-con-visual-studio-share">Collaboration con Visual Studio Share</h3>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/blogs/2017/11/15/live-share">Introducing Visual Studio Live Share</a></li>
+  <li><a href="https://youtu.be/fWXe1HQ1wVA" target="_blank">Vídeo Visual Studio Live Share Demo on VS Code</a></li>
+</ul>
+
+<h3 id="ssh">SSH</h3>
+
+<p>Editando con VSCode en la máquina iaas.ull.es con <a href="https://code.visualstudio.com/docs/remote/ssh">Remote SSH</a></p>
+
+<p>Vaya a paquetes:</p>
+
+<ul>
+  <li><img src="/assets/images/remote-ssh-vscode/13.06.52.png " width="60%" /></li>
+</ul>
+
+<p>Busque por SSH:</p>
+
+<ul>
+  <li><img src="/assets/images/remote-ssh-vscode/13.07.05.png " width="60%" /></li>
+</ul>
+
+<p>Una vez instalado active la command palette Ctrl-Shift-P y escriba SSH:</p>
+
+<ul>
+  <li><img src="/assets/images/remote-ssh-vscode/13.10.42.png " width="60%" /></li>
+</ul>
+
+<p>Elige REMOTE-SSH: connect to host …</p>
+
+<ul>
+  <li><img src="/assets/images/remote-ssh-vscode/13.11.16.png " width="60%" /></li>
+</ul>
+
+<p>Ahora escribimos el nombre del host. Por ejemplo <code class="language-plaintext highlighter-rouge">sytws</code>. Previamente hemos puesto una entrada en <code class="language-plaintext highlighter-rouge">~/.ssh/config</code> como esta:</p>
+
+<pre><code class="language-`">Host sytws sytws2021
+HostName 10.6.129.111
+User usuario
+IdentityFile /Users/casianorodriguezleon/.ssh/claveprivada
+ServerAliveInterval 240
+</code></pre>
+
+<ul>
+  <li><img src="/assets/images/remote-ssh-vscode/13.17.04.png" width="60%" /></li>
+</ul>
+
+<h3 id="multi-root-workspaces">Multi-Root Workspaces</h3>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/docs/editor/multi-root-workspaces">Multi-Root Workspaces</a></li>
+</ul>
+
+<h3 id="using-react-in-vscode">Using React in VSCode</h3>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/docs/nodejs/reactjs-tutorial">Using React in VSCode</a></li>
+</ul>
+
+<h3 id="integrate-with-external-tools-via-tasks">Integrate with External Tools via Tasks</h3>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/docs/editor/tasks">Integrate with External Tools via Tasks</a></li>
+</ul>
+
+<h3 id="web-bookmarks">Web Bookmarks</h3>
+
+<ul>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">MarketPlace: Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a></li>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=alu0100997910.webbookmarks" target="_blank">GitHub Repo: Web Bookmarks a VSCode Extension by Alejandro Gonzalez Alonso</a></li>
+</ul>
+
+<h2 id="localización-del-fichero-de-configuración-settingsjson">Localización del Fichero de Configuración <code class="language-plaintext highlighter-rouge">settings.json</code></h2>
+
+<p>Depending on your platform, the user settings file is located here:</p>
+
+<ul>
+  <li>Windows %APPDATA%\Code\User\settings.json</li>
+  <li>macOS $HOME/Library/ApplicationSupport/Code/User/settings.json</li>
+  <li>Linux $HOME/.config/Code/User/settings.json</li>
+  <li>The workspace setting file is located under the .vscode folder in your root folder.</li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

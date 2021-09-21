@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema2-async/practicas/p6-t2-microservices/README.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#práctica-connecting-robust-microservices-p6-t2-microservices">Práctica Connecting Robust Microservices (p6-t2-microservices)</a>
+    <ul>
+      <li><a href="#recursos">Recursos</a>
+        <ul>
+          <li><a href="#nodejs-0mq-api">Node.js 0MQ API</a></li>
+          <li><a href="#la-guía-de-zeromq">La Guía de ZeroMQ</a></li>
+          <li><a href="#tutoriales">Tutoriales</a></li>
+          <li><a href="#parallel-computing">Parallel Computing</a></li>
+        </ul>
+      </li>
+      <li><a href="#retos-para-el-capítulo-connectiong-robust--microservices">Retos para el Capítulo <em>Connectiong Robust  Microservices</em></a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="práctica-connecting-robust-microservices-p6-t2-microservices">Práctica Connecting Robust Microservices (p6-t2-microservices)</h1>
+
+<ul>
+  <li>
+    <p>Lea el <a href="https://github.com/iMarcoGovea/books/blob/master/nodejs/Node.js%20the%20Right%20Way.pdf">Capítulo 4 “Connecting Robust Microservices” de <em>Node.JS The Right Way</em></a> ` ` y resuelva los problemas en la secciones</p>
+  </li>
+  <li><em>Error Handling</em>,</li>
+  <li><em>Robustness</em><code class="language-plaintext highlighter-rouge"> </code> y</li>
+  <li>
+    <p><em>Bidirectional Messaging</em>:</p>
+  </li>
+  <li><strong>Error Handling</strong>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">zmq-filer-rep.js</code> program uses <code class="language-plaintext highlighter-rouge">fs.readfile()</code> to serve up file contents. However it doesn’t handle error cases.
+        <ul>
+          <li>What should the program do in the case of error?</li>
+          <li>How would you change the JSON object structure of messages to support  sending an error to the requester?</li>
+        </ul>
+      </li>
+      <li>Later in the same program we listen for the Unix signal <code class="language-plaintext highlighter-rouge">SIGINT</code> to detect the user’s <code class="language-plaintext highlighter-rouge">Ctrl-C</code> in the terminal
+        <ul>
+          <li>What happens if the program ends in some other way , like <code class="language-plaintext highlighter-rouge">SIGTERM</code> (the termination signal)?</li>
+          <li>What happens if there is an unhandled Node.js exception, and how should we deal with it?
+            <ul>
+              <li><em>Hint</em>: you can listen for the <code class="language-plaintext highlighter-rouge">uncaughtException</code> event on the process object</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Robustness</strong>
+    <ul>
+      <li>In <em>Building a Cluster</em> we created a Node.js cluster that spins up a pool of worker processes.</li>
+      <li>In the master process we listened for <code class="language-plaintext highlighter-rouge">online</code> events and logged a message when the workers came up.</li>
+      <li>But we didn’t specify what should happen when a worker ends.
+        <ul>
+          <li>What happens when you kill a worker process from the command line?
+            <ul>
+              <li><em>Hint</em>: Use <code class="language-plaintext highlighter-rouge">kill [pid]</code>from the command line</li>
+            </ul>
+          </li>
+          <li>How would you change the <code class="language-plaintext highlighter-rouge">zmq-filer-rep-cluster.js</code> program to fork a new worker whenever one dies?</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Bidirectional Messaging</strong>
+    <ul>
+      <li>For this project you’ll need to use 0MQ PUSH/PULL sockets and the Node.js clustering techniques.</li>
+      <li>Your clustered program will spin up a pool of workers and distribute 30 jobs.</li>
+      <li>The master process should:
+        <ul>
+          <li>Create a <code class="language-plaintext highlighter-rouge">PUSH</code> socket and bind it to an IPC endpoint. This socket will be for sending jobs to the workers</li>
+          <li>Create a <code class="language-plaintext highlighter-rouge">PULL</code> socket and bind it to a different IPC endpoint. This socket will receive messages from the workers</li>
+          <li>Keep a count of ready workers</li>
+          <li>Listen for messages on the PULL socket, and
+            <ul>
+              <li>If the message is a <code class="language-plaintext highlighter-rouge">ready</code> message, increment the ready counter, or</li>
+              <li>If the message is a <code class="language-plaintext highlighter-rouge">result</code> message , output it to the console</li>
+            </ul>
+          </li>
+          <li>Spin up the worker processes</li>
+          <li>When the ready counter reaches 3 send 30 <code class="language-plaintext highlighter-rouge">job</code> messages out through the push socket</li>
+        </ul>
+      </li>
+      <li>The worker process should:
+        <ul>
+          <li>Create a <code class="language-plaintext highlighter-rouge">PULL</code> socket and connect it to the master ‘s <code class="language-plaintext highlighter-rouge">PUSH</code> endpoint</li>
+          <li>Create a <code class="language-plaintext highlighter-rouge">PUSH</code> socket and connect it to the master ‘s <code class="language-plaintext highlighter-rouge">PULL</code> endpoint</li>
+          <li>Listen for <code class="language-plaintext highlighter-rouge">job</code> messages on the <code class="language-plaintext highlighter-rouge">PULL</code> socket, and respond by sending a <code class="language-plaintext highlighter-rouge">result</code> message out on the <code class="language-plaintext highlighter-rouge">PUSH</code> socket</li>
+          <li>Send a <code class="language-plaintext highlighter-rouge">ready</code> message out on the <code class="language-plaintext highlighter-rouge">PUSH</code> socket.</li>
+        </ul>
+      </li>
+      <li>Make sure your <code class="language-plaintext highlighter-rouge">result</code>  messages include at least the process ID of the worker. 
+  This way you can inspect the console output and confirm that the workload is being <em>balanced</em> among the worker processes.</li>
+      <li>See <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/tree/master/connecting-robust-microservices-chapter-4/microservices/ventilator-worker-sink">the example in directory ventilator-worker-sink</a></li>
+      <li>See section PUSH-PULL in file <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/blob/master/connecting-robust-microservices-chapter-4/microservices/README.md">Readme.md</a> in the folder <code class="language-plaintext highlighter-rouge">connecting-robust-microservices-chapter-4/microservices</code> in our repo <code class="language-plaintext highlighter-rouge">ULL-MII-CA-1819/nodejs-the-right-way</code></li>
+    </ul>
+  </li>
+  <li>Añada documentación</li>
+</ul>
+
+<h2 id="recursos">Recursos</h2>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a>.
+    <ul>
+      <li>Mira el <a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/tree/master/connecting-robust-microservices-chapter-4">directorio connecting-robust-microservices-chapter-4</a></li>
+      <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/tree/master/connecting-robust-microservices-chapter-4/microservices">El subdirectorio  connecting-robust-microservices-chapter-4/microservices contiene los ejemplos del libro</a></li>
+    </ul>
+  </li>
+  <li><a href="https://www.youtube.com/watch?v=zgDjaJdAB9c">YouTube vídeo: Building Distributed Systems with Node.js and 0MQ</a>.
+    <ul>
+      <li>Jim R. Wilson, author of Node.js the Right Way, explains how to build distributed systems using ØMQ at a Node.js in the Wild meetup]</li>
+      <li><a href="https://ull-mii-ca-1819.github.io/node-zmq-talk/">Slides</a> at ull-mii-ca-1819</li>
+      <li><a href="https://github.com/jimbojw/node-zmq-talk">Slides</a> at jimbojw-zmq-talk</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nodejs-0mq-api">Node.js 0MQ API</h3>
+
+<ul>
+  <li><a href="http://zeromq.github.io/zeromq.js/">http://zeromq.github.io/zeromq.js/</a></li>
+</ul>
+
+<h3 id="la-guía-de-zeromq">La Guía de ZeroMQ</h3>
+
+<ul>
+  <li><a href="http://zguide.zeromq.org/page:all">0MQ - The Guide. HTML</a></li>
+  <li><a href="https://campusvirtual.ull.es/1819/pluginfile.php/29606/mod_folder/content/0/0mq-guide-book-pdf.pdf?forcedownload=1">0MQ - The Guide. PDF</a></li>
+  <li><a href="https://github.com/booksbyus/zguide/tree/master/examples">0MQ -Examples in all languages</a> zguide github ØMQ - The Guide. Written by Pieter Hintjens ph@imatix.com, CEO iMatix Corporation.
+    <ul>
+      <li><a href="https://github.com/booksbyus/zguide/tree/master/examples/Node.js">0MQ Examples in Node.js</a></li>
+    </ul>
+  </li>
+  <li><a href="http://zeromq.org/community">0MQ community</a></li>
+  <li><a href="https://github.com/zeromq/zeromq.js/tree/master/examples">zeromq.js examples in the node.js distribution</a> in zeromq GitHub repo</li>
+  <li><a href="http://zguide.zeromq.org/js:_start">ZGuide examples in Node.JS</a></li>
+  <li><a href="http://zguide.zeromq.org/page:all#toc14">ZMQ guide: Divide and Conquer</a></li>
+  <li><a href="http://zguide.zeromq.org/page:all#The-Load-Balancing-Pattern">ZMQ Guide: The Load Balancing Pattern</a></li>
+</ul>
+
+<h3 id="tutoriales">Tutoriales</h3>
+
+<ul>
+  <li><a href="https://pin3da.github.io/slides/zeromq_node.html#1">ZeroMQ + Node.js (or How to connect your backend)</a> Manuel Pineda @pin3da_ pin3da at github</li>
+  <li><a href="https://campusvirtual.ull.es/1819/pluginfile.php/29606/mod_folder/content/0/zeromqwithnodejs-130616181649-phpapp01.pdf?forcedownload=1">Trasparencias ZeroMQ with NodeJS</a> por Fernando D. Alonso
+    <ul>
+      <li><a href="https://github.com/krakatoa/node_zmq_workshop">krakatoa/node_zmq_workshop</a> Examples</li>
+      <li><a href="http://zguide.zeromq.org/page:all">zguide.zeromq.org/</a></li>
+      <li><a href="http://api.zeromq.org/3-2:zmq-socket">api.zeromq.org/3-2:zmq-socket</a></li>
+      <li><a href="http://api.zeromq.org/3-2:zmq-setsockopt">api.zeromq.org/3-2:zmq-setsockopt</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="parallel-computing">Parallel Computing</h3>
+
+<ul>
+  <li><a href="https://campusvirtual.ull.es/1819/pluginfile.php/29606/mod_folder/content/0/oslo_zmq_for_parallel_computing.pdf?forcedownload=1">ZeroMQ for Massivelly Parallel Codes</a> Anthony Scemama</li>
+  <li><a href="http://zeromq.org/tutorials:butterfly">ZeroMQ Tutoriasl: Butterfly</a></li>
+  <li><a href="http://mdup.fr/blog/easy-cluster-parallelization-wit">Easy cluster parallelization with ZeroMQ</a></li>
+</ul>
+
+<h2 id="retos-para-el-capítulo-connectiong-robust--microservices">Retos para el Capítulo <em>Connectiong Robust  Microservices</em></h2>
+
+<ul>
+  <li><a href="reto">Retos para el Capítulo <em>Connectiong Robust  Microservices</em></a></li>
+</ul>
+
+<!--
+* ZeroMQ is the answer: https://youtu.be/v6AGUeZOVSU
+    * [ZeroMQ is the answer](https://youtu.be/v6AGUeZOVSU)
+-->
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

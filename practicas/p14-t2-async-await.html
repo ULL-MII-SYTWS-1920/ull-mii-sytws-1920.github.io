@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+      
+    <li><a href="/practicas/p11-t2-callback-2-promise.html" title="Previous">&#x2190;</a></li>
+    
+    
+    <li><a href="/practicas/p15-t2-generators.html" title="Next">&#x2192;</a></li>
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_practicas/p14-t2-async-await.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#descripción-de-la-práctica-p14-t2-async-await">Descripción de la Práctica p14-t2-async-await</a>
+    <ul>
+      <li><a href="#exercise-1-microtask-and-macrotask-queues">Exercise 1: MicroTask and MacroTask Queues</a></li>
+      <li><a href="#exercise-2-microtask-and-macrotask-queues">Exercise 2: MicroTask and MacroTask Queues</a></li>
+      <li><a href="#rewrite-a-fetch-using-asyncawait-instead-of-promises">Rewrite a <code class="language-plaintext highlighter-rouge">fetch</code> using async/await instead of promises</a></li>
+      <li><a href="#simplify-a-more-complex-example-with-asyncawait">Simplify a more complex example with async/await</a></li>
+      <li><a href="#call-async-from-non-async">Call async from non-async</a></li>
+      <li><a href="#see">See</a></li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="descripción-de-la-práctica-p14-t2-async-await">Descripción de la Práctica p14-t2-async-await</h1>
+
+<p>Read chapter <a href="https://javascript.info/async-await">Async/Await</a> and make a report using the GitHub Classroom assigned repo. Solve the exercises.</p>
+
+<h2 id="exercise-1-microtask-and-macrotask-queues">Exercise 1: MicroTask and MacroTask Queues</h2>
+
+<p>Answer this question before running the program.</p>
+
+<p>What is the output of this program?</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">macrotask 1</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">microtask 1</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">macrotask 2</span><span class="dl">'</span><span class="p">);</span>
+        <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span>
+            <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Nested microtask 3</span><span class="dl">'</span><span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">microtask 2</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take screenshots of them and upload them to the assignment repo</p>
+
+<ul>
+  <li>Code at: <code class="language-plaintext highlighter-rouge">campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue/promise-job-queue-2.js</code></li>
+</ul>
+
+<h2 id="exercise-2-microtask-and-macrotask-queues">Exercise 2: MicroTask and MacroTask Queues</h2>
+
+<p>The following example is taken from a stackoverflow question</p>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/51793906/settimeout-promise-resolve-macrotask-vs-microtask">setTimeout / Promise.resolve: Macrotask vs Microtask</a></li>
+</ul>
+
+<p>Don’t look at the debate yet.
+Also, try to answer this question before running the code.</p>
+
+<p>What is the output of this program?</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="c1">// See https://stackoverflow.com/questions/51793906/settimeout-promise-resolve-macrotask-vs-microtask</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Timeout </span><span class="dl">"</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+		<span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Promise 1 </span><span class="dl">"</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+		<span class="p">}).</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Promise 2 </span><span class="dl">"</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+		<span class="p">});</span>
+	<span class="p">})</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Explain the changes in the stack, the running environment, the macrotask queue and the microtask queue. Make pictures of the way the callbacks and handlers go and leave the queues. Take screenshots of them and upload them to the assignment repo</p>
+
+<ul>
+  <li>Solution at: <code class="language-plaintext highlighter-rouge">tema2-async/event-loop/exercises/promises/async-await/stackoverflow-promise-resolve-and-queues.js</code></li>
+</ul>
+
+<h2 id="rewrite-a-fetch-using-asyncawait-instead-of-promises">Rewrite a <code class="language-plaintext highlighter-rouge">fetch</code> using async/await instead of promises</h2>
+
+<p>Rewrite this example code from the <a href="https://javascript.info/promise-chaining#bigger-example-fetch">Javascript.info book</a> using <code class="language-plaintext highlighter-rouge">async/await</code> instead of <code class="language-plaintext highlighter-rouge">.then/catch</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="kd">function</span> <span class="nx">loadJson</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">loadJson</span><span class="p">(</span><span class="dl">'</span><span class="s1">no-such-user.json</span><span class="dl">'</span><span class="p">).</span><span class="k">catch</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span> <span class="c1">// Error: 404</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Solution at <code class="language-plaintext highlighter-rouge">campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/solution-2-rewrite-loadjson-using-async-await.html</code></li>
+</ul>
+
+<h2 id="simplify-a-more-complex-example-with-asyncawait">Simplify a more complex example with async/await</h2>
+
+<p>Below you can find another exercise from the <a href="https://javascript.info/promise-chaining#bigger-example-fetch">book javascript.info</a>.</p>
+
+<p>Rewrite it using <code class="language-plaintext highlighter-rouge">async/await</code> instead of <code class="language-plaintext highlighter-rouge">.then/catch</code> and get rid of the recursion in favour of a loop in <code class="language-plaintext highlighter-rouge">demoGithubUser</code>: with <code class="language-plaintext highlighter-rouge">async/await</code>.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="rouge-code"><pre><span class="kd">class</span> <span class="nx">HttpError</span> <span class="kd">extends</span> <span class="nb">Error</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">}</span><span class="s2"> for </span><span class="p">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">url</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">HttpError</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">response</span> <span class="o">=</span> <span class="nx">response</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">loadJson</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nx">HttpError</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// Ask for a user name until github returns a valid user</span>
+<span class="kd">function</span> <span class="nx">demoGithubUser</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="dl">"</span><span class="s2">Enter a name?</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">iliakan</span><span class="dl">"</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="nx">loadJson</span><span class="p">(</span><span class="s2">`https://api.github.com/users/</span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s2">`Full name: </span><span class="p">${</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span><span class="s2">.`</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">user</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">err</span> <span class="k">instanceof</span> <span class="nx">HttpError</span> <span class="o">&amp;&amp;</span> <span class="nx">err</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">404</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">No such user, please reenter.</span><span class="dl">"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">demoGithubUser</span><span class="p">();</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">demoGithubUser</span><span class="p">();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>See Section <a href="https://javascript.info/custom-errors">Custom errors, extending Error</a>. It is worth to read the <a href="https://javascript.info/error-handling">full chapter Error Handling</a></li>
+  <li>See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#constructor">The Error Class at MDN: The constructor</a></li>
+  <li>
+    <p>The GitHub API doc for the end-point to get the public info for an user is here <a href="https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-a-user">GitHub API REST Docs: Get a User</a>. Here are several examples of how to get the info:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>gh api /users/crguezl | jq .name
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>or with <code class="language-plaintext highlighter-rouge">curl</code></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre> curl \
+-H "Accept: application/vnd.github.v3+json" \
+https://api.github.com/users/crguezl
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>or using the <code class="language-plaintext highlighter-rouge">@octokit/core</code>module:</p>
+
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">Octokit</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">@octokit/core</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">octokit</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Octokit</span><span class="p">({</span> 
+  <span class="c1">// auth: `personal-access-token123` </span>
+<span class="p">});</span>
+
+<span class="k">async</span> <span class="kd">function</span> <span class="nx">getUsername</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">await</span> <span class="nx">octokit</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="dl">'</span><span class="s1">GET /users/{username}</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">username</span><span class="p">:</span> <span class="nx">name</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="nx">getUsername</span><span class="p">(</span><span class="dl">'</span><span class="s1">crguezl</span><span class="dl">'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">r</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>when we run it:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>➜  hello-octokit git:(master) pwd
+/Users/casianorodriguezleon/campus-virtual/2021/learning/octokit-learning/hello-octokit
+➜  hello-octokit git:(master) node --version         
+v14.4.0
+➜  hello-octokit git:(master) node octokit-example.js
+Casiano Rodriguez-Leon
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>Solution at <code class="language-plaintext highlighter-rouge">/campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await/solution-more-complex-example.html</code></li>
+</ul>
+
+<h2 id="call-async-from-non-async">Call async from non-async</h2>
+
+<p>Here is another exercise from the <a href="https://javascript.info/async-await#call-async-from-non-async">JavaScript.Info book</a>. As the book says, it is a task that solves a quite common for developers new to async/await.</p>
+
+<p>We have a “regular” function called <code class="language-plaintext highlighter-rouge">f</code>. How can you call the <code class="language-plaintext highlighter-rouge">async</code> function <code class="language-plaintext highlighter-rouge">wait()</code> and use its result inside of <code class="language-plaintext highlighter-rouge">f</code>?</p>
+
+<p>Give at least two solutions.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">async</span> <span class="kd">function</span> <span class="nx">wait</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">await</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span> <span class="o">=&gt;</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="mi">1000</span><span class="p">));</span>
+
+  <span class="k">return</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// ...what should you write here?</span>
+  <span class="c1">// we need to call async wait() and wait to get 10</span>
+  <span class="c1">// remember, we can't use "await"</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li>Solution at <code class="language-plaintext highlighter-rouge">tema2-async/event-loop/exercises/promises/async-await/solution-call-async-from-nonasync.html</code></li>
+</ul>
+
+<h2 id="see">See</h2>
+
+<ul>
+  <li><a href="https://javascript.info/promise-chaining#bigger-example-fetch">JavaScript.Info book: Bigger example: fetch</a></li>
+  <li><a href="https://javascript.info/custom-errors">Custom errors, extending Error</a></li>
+  <li>For the solutions:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/microtask-queue</code></li>
+      <li><code class="language-plaintext highlighter-rouge">campus-virtual/2021/sytws2021/apuntes/tema2-async/event-loop/exercises/promises/async-await</code></li>
+    </ul>
+  </li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

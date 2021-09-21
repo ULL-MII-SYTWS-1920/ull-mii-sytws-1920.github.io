@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema4-devops/kubernetes-quickstart.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-1920"
+            target="_blank">ULL-MII-SYTWS-1920</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#quickstart">QuickStart</a>
+    <ul>
+      <li><a href="#start-minikube-and-create-a-cluster">Start Minikube and create a cluster</a></li>
+      <li><a href="#kubectl">kubectl</a></li>
+      <li><a href="#kubectl-version">Kubectl version</a>
+        <ul>
+          <li><a href="#kubectl-help">Kubectl help</a></li>
+        </ul>
+      </li>
+      <li><a href="#kubectl-api-versions">kubectl api-versions</a></li>
+      <li><a href="#stop-the-cluster-minikube-stop">Stop the cluster: minikube stop</a></li>
+      <li><a href="#seen-the-status-minikube-status">Seen the status: minikube status</a></li>
+      <li><a href="#kubectl-create">kubectl create</a></li>
+      <li><a href="#kubectl-help-create-deployment">kubectl help create deployment</a></li>
+      <li><a href="#kubectl-create-deployment-hello-minikube-imagek8sgcrioechoserver110">kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="quickstart">QuickStart</h1>
+
+<h2 id="start-minikube-and-create-a-cluster">Start Minikube and create a cluster</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>$ minikube start
+😄  minikube v1.5.2 on Darwin 10.13.6
+🔥  Creating virtualbox VM (CPUs=2, Memory=2000MB, Disk=20000MB) ...
+🐳  Preparing Kubernetes v1.16.2 on Docker '18.09.9' ...
+💾  Downloading kubeadm v1.16.2
+💾  Downloading kubelet v1.16.2
+🚜  Pulling images ...
+🚀  Launching Kubernetes ... 
+⌛  Waiting for: apiserver
+🏄  Done! kubectl is now configured to use "minikube"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="kubectl">kubectl</h2>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl</code> is the command line application that lets you interact with your Minikube Kubernetes cluster. It sends request to the <strong>Kubernetes API server running on the cluster</strong> to manage your Kubernetes environment.</p>
+
+<p><code class="language-plaintext highlighter-rouge">kubectl</code> is like any other application that runs on your machine: it just makes HTTP requests to the <strong>Kubernetes API</strong> on the cluster.</p>
+
+<h2 id="kubectl-version">Kubectl version</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>$ kubectl version
+Client Version: version.Info{Major:"1", Minor:"16", GitVersion:"v1.16.2", GitCommit:"c97fe5036ef3df2967d086711e6c0c405941e14b", GitTreeState:"clean", BuildDate:"2019-10-15T23:43:08Z", GoVersion:"go1.12.10", Compiler:"gc", Platform:"darwin/amd64"}
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="kubectl-help">Kubectl help</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+</pre></td><td class="rouge-code"><pre>$ kubectl
+
+Basic Commands (Beginner):
+  create         Create a resource from a file or from stdin.
+  expose         Take a replication controller, service, deployment or pod and expose it as a new Kubernetes Service
+  run            Run a particular image on the cluster
+  set            Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain        Documentation of resources
+  get            Display one or many resources
+  edit           Edit a resource on the server
+  delete         Delete resources by filenames, stdin, resources and names, or by resources and label selector
+
+Deploy Commands:
+  rollout        Manage the rollout of a resource
+  scale          Set a new size for a Deployment, ReplicaSet, Replication Controller, or Job
+  autoscale      Auto-scale a Deployment, ReplicaSet, or ReplicationController
+
+Cluster Management Commands:
+  certificate    Modify certificate resources.
+  cluster-info   Display cluster info
+  top            Display Resource (CPU/Memory/Storage) usage.
+  cordon         Mark node as unschedulable
+  uncordon       Mark node as schedulable
+  drain          Drain node in preparation for maintenance
+  taint          Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe       Show details of a specific resource or group of resources
+  logs           Print the logs for a container in a pod
+  attach         Attach to a running container
+  exec           Execute a command in a container
+  port-forward   Forward one or more local ports to a pod
+  proxy          Run a proxy to the Kubernetes API server
+  cp             Copy files and directories to and from containers.
+  auth           Inspect authorization
+
+Advanced Commands:
+  diff           Diff live version against would-be applied version
+  apply          Apply a configuration to a resource by filename or stdin
+  patch          Update field(s) of a resource using strategic merge patch
+  replace        Replace a resource by filename or stdin
+  wait           Experimental: Wait for a specific condition on one or many resources.
+  convert        Convert config files between different API versions
+  kustomize      Build a kustomization target from a directory or a remote url.
+
+Settings Commands:
+  label          Update the labels on a resource
+  annotate       Update the annotations on a resource
+  completion     Output shell completion code for the specified shell (bash or zsh)
+
+Other Commands:
+  api-resources  Print the supported API resources on the server
+  api-versions   Print the supported API versions on the server, in the form of "group/version"
+  config         Modify kubeconfig files
+  plugin         Provides utilities for interacting with plugins.
+  version        Print the client and server version information
+
+Usage:
+  kubectl [flags] [options]
+
+Use "kubectl &lt;command&gt; --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="kubectl-api-versions">kubectl api-versions</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>$ kubectl help api-versions
+Print the supported API versions on the server, in the form of "group/version"
+
+Examples:
+  # Print the supported API versions
+  kubectl api-versions
+
+Usage:
+  kubectl api-versions [flags] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre>$ kubectl api-versions
+admissionregistration.k8s.io/v1
+admissionregistration.k8s.io/v1beta1
+apiextensions.k8s.io/v1
+apiextensions.k8s.io/v1beta1
+apiregistration.k8s.io/v1
+apiregistration.k8s.io/v1beta1
+apps/v1
+authentication.k8s.io/v1
+authentication.k8s.io/v1beta1
+authorization.k8s.io/v1
+authorization.k8s.io/v1beta1
+autoscaling/v1
+autoscaling/v2beta1
+autoscaling/v2beta2
+batch/v1
+batch/v1beta1
+certificates.k8s.io/v1beta1
+coordination.k8s.io/v1
+coordination.k8s.io/v1beta1
+events.k8s.io/v1beta1
+extensions/v1beta1
+networking.k8s.io/v1
+networking.k8s.io/v1beta1
+node.k8s.io/v1beta1
+policy/v1beta1
+rbac.authorization.k8s.io/v1
+rbac.authorization.k8s.io/v1beta1
+scheduling.k8s.io/v1
+scheduling.k8s.io/v1beta1
+storage.k8s.io/v1
+storage.k8s.io/v1beta1
+v1
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="stop-the-cluster-minikube-stop">Stop the cluster: minikube stop</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ minikube stop
+✋  Stopping "minikube" in virtualbox ...
+🛑  "minikube" stopped.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="seen-the-status-minikube-status">Seen the status: minikube status</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>$ minikube status
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="kubectl-create">kubectl create</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+</pre></td><td class="rouge-code"><pre>$ kubectl help create
+Create a resource from a file or from stdin.
+
+ JSON and YAML formats are accepted.
+
+Examples:
+  # Create a pod using the data in pod.json.
+  kubectl create -f ./pod.json
+  
+  # Create a pod based on the JSON passed into stdin.
+  cat pod.json | kubectl create -f -
+  
+  # Edit the data in docker-registry.yaml in JSON then create the resource using the edited data.
+  kubectl create -f docker-registry.yaml --edit -o json
+
+Available Commands:
+  clusterrole         Create a ClusterRole.
+  clusterrolebinding  Create a ClusterRoleBinding for a particular ClusterRole
+  configmap           Create a configmap from a local file, directory or literal value
+  cronjob             Create a cronjob with the specified name.
+  deployment          Create a deployment with the specified name.
+  job                 Create a job with the specified name.
+  namespace           Create a namespace with the specified name
+  poddisruptionbudget Create a pod disruption budget with the specified name.
+  priorityclass       Create a priorityclass with the specified name.
+  quota               Create a quota with the specified name.
+  role                Create a role with single rule.
+  rolebinding         Create a RoleBinding for a particular Role or ClusterRole
+  secret              Create a secret using specified subcommand
+  service             Create a service using specified subcommand.
+  serviceaccount      Create a service account with the specified name
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in
+the template. Only applies to golang and jsonpath output formats.
+      --dry-run=false: If true, only print the object that would be sent, without sending it.
+      --edit=false: Edit the API resource before creating
+  -f, --filename=[]: Filename, directory, or URL to files to use to create the resource
+  -k, --kustomize='': Process the kustomization directory. This flag can't be used together with -f or -R.
+  -o, --output='': Output format. One of:
+json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-file.
+      --raw='': Raw URI to POST to the server.  Uses the transport specified by the kubeconfig file.
+      --record=false: Record current kubectl command in the resource annotation. If set to false, do not record the
+command. If set to true, record the command. If not set, default to updating the existing annotation value only if one
+already exists.
+  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage
+related manifests organized within the same directory.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the
+annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+  -l, --selector='': Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The
+template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=true: If true, use a schema to validate the input before sending it
+      --windows-line-endings=false: Only relevant if --edit=true. Defaults to the line ending native to your platform.
+
+Usage:
+  kubectl create -f FILENAME [options]
+
+Use "kubectl &lt;command&gt; --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="kubectl-help-create-deployment">kubectl help create deployment</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td><td class="rouge-code"><pre>$ kubectl help create deployment
+Create a deployment with the specified name.
+
+Aliases:
+deployment, deploy
+
+Examples:
+  # Create a new deployment named my-dep that runs the busybox image.
+  kubectl create deployment my-dep --image=busybox
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in
+the template. Only applies to golang and jsonpath output formats.
+      --dry-run=false: If true, only print the object that would be sent, without sending it.
+      --generator='': The name of the API generator to use.
+      --image=[]: Image name to run.
+  -o, --output='': Output format. One of:
+json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-file.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the
+annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The
+template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=true: If true, use a schema to validate the input before sending it
+
+Usage:
+  kubectl create deployment NAME --image=image [--dry-run] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="kubectl-create-deployment-hello-minikube-imagek8sgcrioechoserver110">kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10</h2>
+
+<p>Now, you can interact with your cluster using <code class="language-plaintext highlighter-rouge">kubectl</code>.</p>
+
+<p>For more information, see <a href="https://kubernetes.io/docs/setup/learning-environment/minikube/#interacting-with-your-cluster">Interacting with Your Cluster</a>.</p>
+
+<p>Let’s create a Kubernetes Deployment using an existing image named <code class="language-plaintext highlighter-rouge">echoserver</code>, 
+which is a simple HTTP server and expose it on port 8080 using <code class="language-plaintext highlighter-rouge">--port</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>$ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+deployment.apps/hello-minikube created
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To access the hello-minikube Deployment, expose it as a Service:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl expose deployment hello-minikube --type=NodePort --port=8080
+service/hello-minikube exposed
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The option <code class="language-plaintext highlighter-rouge">--type=NodePort</code> specifies the type of the Service.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">hello-minikube</code> Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.</p>
+
+<p>Check if the Pod is up and running:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ kubectl get pod
+NAME                              READY   STATUS    RESTARTS   AGE
+hello-minikube-797f975945-xqfgp   1/1     Running   0          2m22s
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>If the output shows the <code class="language-plaintext highlighter-rouge">STATUS</code> as <code class="language-plaintext highlighter-rouge">ContainerCreating</code>, the Pod is still being created.
+If the output shows the <code class="language-plaintext highlighter-rouge">STATUS</code> as <code class="language-plaintext highlighter-rouge">Running</code>, the Pod is now up and running.</p>
+
+<p>Get the URL of the exposed Service to view the Service details:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ minikube service hello-minikube --url
+http://192.168.99.100:30861
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.</p>
+
+<p>The output is similar to this:</p>
+
+<p><img src="/tema4-devops/kubernetes-local-cluster-info.png" alt="kubernetes-local-cluster-info.png" /></p>
+
+<p>If you no longer want the Service and cluster to run, you can delete them.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>$ kubectl delete services hello-minikube
+service "hello-minikube" deleted
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Delete the hello-minikube Deployment:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>kubectl delete deployment hello-minikube
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>The output is similar to this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>deployment.extensions "hello-minikube" deleted
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Stop the local Minikube cluster:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ minikube stop
+✋  Stopping "minikube" in virtualbox ...
+🛑  "minikube" stopped.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Delete the local Minikube cluster:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>$ minikube delete
+🔥  Deleting "minikube" in virtualbox ...
+💔  The "minikube" cluster has been deleted.
+🔥  Successfully deleted profile "minikube"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

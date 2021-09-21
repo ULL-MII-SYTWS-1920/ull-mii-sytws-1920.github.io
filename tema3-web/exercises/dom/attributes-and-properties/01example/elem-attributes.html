@@ -1,0 +1,17 @@
+<body>
+  <div id="elem" about="Elephant"><h1>Attributes</h1></div>
+
+  <script>
+    console.log( elem.getAttribute('About') ); // (1) 'Elephant', reading
+
+    elem.setAttribute('Test', 123); // (2), writing
+
+    console.log( "inner "+elem.innerHTML ); // Sets or gets the HTML describing the element's descendants.
+    console.log( "outer "+elem.outerHTML ); // Gets the serialized HTML fragment describing the element and its descendants
+
+    for (let attr of elem.attributes) { // (4) list all
+      console.log( `${attr.name} = ${attr.value}` );
+    }
+  </script>
+</body>
+
