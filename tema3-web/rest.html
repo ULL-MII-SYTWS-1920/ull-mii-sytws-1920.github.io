@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/rest.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#rest">REST</a>
+    <ul>
+      <li><a href="#bibliografía-básica">Bibliografía Básica</a></li>
+      <li><a href="#rest-api-concepts-and-examples-youtube-video"><a href="https://youtu.be/7YcW25PHnAA">REST API concepts and examples</a> (Youtube video)</a></li>
+      <li><a href="#api-for-beginners-youtube-video-por-le-wagon"><a href="https://youtu.be/oBW_VNg4qD0">API for beginners</a> (Youtube video) por Le Wagon</a></li>
+      <li><a href="#tutorial-crear-api-restful-utilizando-nodejs--expressjs--mongodb"><a href="https://www.programacion.com.py/web/javascript/tutorial-api-rest-usando-node-js-express-mongodb">Tutorial: Crear API RESTful utilizando Node.js + Express.js + MongoDB</a></a></li>
+      <li><a href="#christopher-buecheler-tutorial">Christopher Buecheler tutorial</a></li>
+      <li><a href="#restful-web-services-the-basics-by-alex-rodríguez"><a href="https://www.ibm.com/developerworks/webservices/library/ws-restful/">RESTful Web services: The basics</a> by Alex Rodríguez</a></li>
+      <li><a href="#build-a-restful-api-using-node-and-express-4"><a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4">Build a RESTful API Using Node and Express 4</a></a></li>
+      <li><a href="#restful-api-from-scratch-using-node-express-and-mongodb-youtube-video-sencillo"><a href="https://youtu.be/eB9Fq9I5ocs">RESTful API From Scratch Using Node, Express and MongoDB</a> (YouTube video. Sencillo)</a></li>
+      <li><a href="#rest-api-con-express-mongodb-y-asyncawait-6-vídeos-por-fatz"><a href="https://www.youtube.com/watch?v=0XgRqjAAsaU&amp;list=PLL0TiOXBeDajy0GJ47Ce9dU_iYxddpR4o">REST API con Express, Mongodb y Async/Await</a> 6 vídeos por Fatz</a></li>
+      <li><a href="#clientes-para-apis-rest">Clientes para APIS REST</a></li>
+      <li><a href="#moleculer">Moleculer</a></li>
+      <li><a href="#pagination-in-the-rest-api">Pagination in the REST API</a></li>
+      <li><a href="#google-apis">Google APIs</a>
+        <ul>
+          <li><a href="#googlemapsgoogle-maps-services-js-github"><a href="https://github.com/googlemaps/google-maps-services-js">googlemaps/google-maps-services-js</a> GitHub</a></li>
+          <li><a href="#google-calendar-api"><a href="https://developers.google.com/google-apps/calendar/">Google Calendar API</a></a></li>
+        </ul>
+      </li>
+      <li><a href="#prácticas">Prácticas</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="rest">REST</h1>
+
+<p>REST is an acronym that stands for Representational State Transfer.</p>
+
+<ul>
+  <li><a href="http://crguezl.github.io/apuntes-ruby/node566.html">REST en http://crguezl.github.io/apuntes-ruby/</a></li>
+</ul>
+
+<p>When an API is RESTful, it is HTTP-based and its resources are identified by their URLs.</p>
+
+<p>Requesting or making a change to a resource comes down to issuing an HTTP request using the particular method that matches your intent.</p>
+
+<p>For example, the HTTP GET method retrieves a resource, and HTTP PUT sends a resource to be saved.</p>
+
+<h2 id="bibliografía-básica">Bibliografía Básica</h2>
+
+<ul>
+  <li><a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/book/web-development/9781680505344/part-iidot-working-with-data/chp_databases_html">Safari. Chapter 6. Commanding Databases</a>
+    <ul>
+      <li><a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/">BULL PuntoQ</a></li>
+      <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a> con las soluciones (privado)</li>
+    </ul>
+  </li>
+  <li><a href="https://restfulapi.net/">REST API Tutorial</a></li>
+  <li>Libro <a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781484209172">Pro REST API Development with Node.js by Fernando Doglio. Apress 2015</a> Book PuntoQ BULL</li>
+  <li><a href="https://reflectoring.io/rest-hypermedia/">REST with Hypermedia - Hot or Not?</a> blog by Tom Hombergs
+    <ul>
+      <li><a href="https://github.com/mikekelly/hal-browser">mikekelly/hal-browser</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="rest-api-concepts-and-examples-youtube-video"><a href="https://youtu.be/7YcW25PHnAA">REST API concepts and examples</a> (Youtube video)</h2>
+
+<h2 id="api-for-beginners-youtube-video-por-le-wagon"><a href="https://youtu.be/oBW_VNg4qD0">API for beginners</a> (Youtube video) por Le Wagon</h2>
+
+<ul>
+  <li><a href="https://www.programmableweb.com/">programmableweb.com/</a></li>
+  <li><a href="https://www.twilio.com/blog/2016/09/how-to-send-an-sms-with-node-js-using-twilio.html">How to Send an SMS With Node.js Using Twilio</a></li>
+  <li><a href="https://developers.google.com/maps/documentation/geocoding/intro?hl=es-419">Google &gt;Servicios web &gt; Geocoding API</a></li>
+  <li><a href="https://www.wufoo.com.mx/">Wufoo: Crea y comparte tus formularios</a></li>
+  <li><a href="https://developers.trello.com/">Trello for developers</a></li>
+  <li><a href="https://www.guerrillamail.com/es/">Guerrilla Mail - Direcciones de email temporales</a></li>
+  <li><a href="https://zapier.com/">Zapier</a>
+    <ul>
+      <li><a href="https://zapier.com/learn/getting-started-guide/">Getting Started With Zapier</a></li>
+    </ul>
+  </li>
+  <li><a href="https://requestb.in/">RequestBin</a> gives you a URL that will collect requests made to it and let you inspect them in a human-friendly way.
+Use RequestBin to see what your HTTP client is sending or to inspect and debug webhook requests.</li>
+</ul>
+
+<h2 id="tutorial-crear-api-restful-utilizando-nodejs--expressjs--mongodb"><a href="https://www.programacion.com.py/web/javascript/tutorial-api-rest-usando-node-js-express-mongodb">Tutorial: Crear API RESTful utilizando Node.js + Express.js + MongoDB</a></h2>
+
+<h2 id="christopher-buecheler-tutorial">Christopher Buecheler tutorial</h2>
+
+<ul>
+  <li><a href="https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb">The Dead-Simple Step-By-Step Guide for Front-End Developers to Getting Up and Running With Node.JS, Express, and MongoDB</a> by Christopher Buecheler
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-MII-CA-1718/node-tutorial-for-frontend-devs">Repo ULL-ESIT-MII-CA-1718/node-tutorial-for-frontend-devs</a></li>
+    </ul>
+  </li>
+  <li><a href="https://closebrace.com/tutorials/2017-03-02/creating-a-simple-restful-web-app-with-nodejs-express-and-mongodb">Creating a Simple RESTful Web App with Node.js, Express, and MongoDB</a></li>
+</ul>
+
+<h2 id="restful-web-services-the-basics-by-alex-rodríguez"><a href="https://www.ibm.com/developerworks/webservices/library/ws-restful/">RESTful Web services: The basics</a> by Alex Rodríguez</h2>
+
+<h2 id="build-a-restful-api-using-node-and-express-4"><a href="https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4">Build a RESTful API Using Node and Express 4</a></h2>
+
+<ul>
+  <li><a href="https://github.com/ULL-ESIT-MII-CA-1718/node-api">GitHub repo ULL-ESIT-MII-CA-1718/node-api</a></li>
+</ul>
+
+<h2 id="restful-api-from-scratch-using-node-express-and-mongodb-youtube-video-sencillo"><a href="https://youtu.be/eB9Fq9I5ocs">RESTful API From Scratch Using Node, Express and MongoDB</a> (YouTube video. Sencillo)</h2>
+
+<h2 id="rest-api-con-express-mongodb-y-asyncawait-6-vídeos-por-fatz"><a href="https://www.youtube.com/watch?v=0XgRqjAAsaU&amp;list=PLL0TiOXBeDajy0GJ47Ce9dU_iYxddpR4o">REST API con Express, Mongodb y Async/Await</a> 6 vídeos por Fatz</h2>
+
+<h2 id="clientes-para-apis-rest">Clientes para APIS REST</h2>
+
+<p>API testing requires an application to interact with API. 
+Rest API can be tested with tools like:</p>
+
+<ul>
+  <li>Insomnia</li>
+  <li>Postman</li>
+  <li>Curl</li>
+</ul>
+
+<p><strong>Example Using Insomnia</strong></p>
+
+<p><img src="/assets/images/insomnia.png" alt="request with inmsomnia" /></p>
+
+<ul>
+  <li><a href="https://insomnia.rest/">https://insomnia.rest/</a></li>
+</ul>
+
+<p><strong>Example Using Postman</strong></p>
+
+<p><img src="/assets/images/postman.png" alt="request with Postman" /></p>
+
+<ul>
+  <li><a href="https://www.getpostman.com/">https://www.getpostman.com/</a></li>
+  <li><a href="https://www.sitepoint.com/api-building-and-testing-made-easier-with-postman/">API Building and Testing Made Easier with Postman</a></li>
+  <li><a href="https://learning.getpostman.com/docs/postman/launching_postman/installation_and_updates/">Postman docs</a></li>
+</ul>
+
+<p><strong>Example Using curl</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre>~/.../chapter20-node-js-crguezl/the-http-module(master)]$ curl -d "param1=value1&amp;param2=value2" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://10.150.22.51:8000/data
+
+&lt;h1&gt;Hello!&lt;/h1&gt;
+&lt;p&gt;You asked for 
+&lt;code&gt;
+/data 
+&lt;!-- The url is the full URL without the server, protocol or port. --&gt;
+&lt;/code&gt;
+using the POST method
+&lt;/p&gt;
+&lt;p&gt;Your headers:&lt;/p&gt; 
+&lt;pre&gt;
+{
+  host: '10.150.22.51:8000',
+  'user-agent': 'curl/7.54.0',
+  accept: '*/*',
+  'content-type': 'application/x-www-form-urlencoded',
+  'content-length': '27'
+}
+&lt;/pre&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><a href="https://gist.github.com/subfuzion/08c5d85437d5d4f00e58">curl.md</a> gist illustrating the use of curl</li>
+</ul>
+
+<h2 id="moleculer">Moleculer</h2>
+
+<ul>
+  <li><a href="https://moleculer.services/">Moleculer services</a></li>
+  <li><a href="https://github.com/PAL-ULL/tfm-2021-alexrcas">Repo de TFM de Alexis</a> (Usamos Moleculer)</li>
+</ul>
+
+<p>Es una maravilla:</p>
+
+<ul>
+  <li>Implementa automáticamente un <a href="https://moleculer.services/docs/0.12/moleculer-web.html">API Gateway</a>
+    <ul>
+      <li><a href="https://github.com/moleculerjs/moleculer-web">moleculer-web</a></li>
+    </ul>
+  </li>
+  <li>Implementa un patrón de publicador / suscriptor a eventos
+    <ul>
+      <li><a href="https://moleculer.services/docs/0.14/events.html">Events</a></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://moleculer.services/docs/0.12/examples.html">Examples</a></p>
+  </li>
+  <li><a href="https://youtu.be/t4YR6MWrugw">YouTube video: An Introduction to Moleculer JS</a></li>
+</ul>
+
+<p>API Gateway es un servicio para la creación, publicación, mantenimiento, monitoreo y protección de API REST, HTTP y WebSocket a cualquier escala.</p>
+
+<p>Un API Gateway es la pieza encargada de unificar la publicación de APIs para que sean consumidas por otras aplicaciones o por los desarrolladores.</p>
+
+<ul>
+  <li>Intercambiador de APIs: Componente cuya principal función es la de habilitar la conexión entre los servicios y los clientes.</li>
+  <li>Gestor de APIs: Permite la configuración y publicación de APIs en el componente API Gateway.</li>
+  <li>Dashboard de APIs: Recopila toda la información necesaria para los clientes sobre las APIs publicadas.</li>
+</ul>
+
+<h2 id="pagination-in-the-rest-api">Pagination in the REST API</h2>
+
+<ul>
+  <li><a href="https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/">Pagination in the REST API</a></li>
+</ul>
+
+<h2 id="google-apis">Google APIs</h2>
+
+<h3 id="googlemapsgoogle-maps-services-js-github"><a href="https://github.com/googlemaps/google-maps-services-js">googlemaps/google-maps-services-js</a> GitHub</h3>
+<ul>
+  <li><a href="https://www.uup.es/google-maps-gratis-en-tu-web/">¿Sabes cómo incluir Google Maps gratis en tu web?</a> 07/09/2018</li>
+</ul>
+
+<h3 id="google-calendar-api"><a href="https://developers.google.com/google-apps/calendar/">Google Calendar API</a></h3>
+<ol>
+  <li><a href="https://github.com/ULL-ESIT-MII-CA-1718/nodejs-google-calendar-example">Repo de ejemplo de uso en NodeJS de la API de Calendar</a></li>
+  <li>Tutorial <a href="https://github.com/ULL-ESIT-MII-CA-1718/googlecalendarapidemo">Building a Google Calendar Booking App with MongoDB, ExpressJS, AngularJS, and Node.js </a></li>
+  <li><a href="https://github.com/google/google-api-javascript-client">Google APIs Client Library for JavaScript</a></li>
+  <li><a href="https://developers.google.com/api-client-library/javascript/start/start-js">Google API Client Libraries JavaScript. Tutorial</a></li>
+</ol>
+
+<h2 id="prácticas">Prácticas</h2>
+
+<ul>
+  <li><a href="practicas/p10-t3-commanding-databases">Descripción de la práctica p10-t3-commanding-databases</a></li>
+  <li><a href="practicas/p11-t3-restful">Práctica: developing RESTful Web Services (p11-t3-restful)</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

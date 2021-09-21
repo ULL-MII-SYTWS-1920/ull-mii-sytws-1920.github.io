@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/graphql.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#how-to-graphql">How to GraphQL</a>
+    <ul>
+      <li><a href="#graphql-fundamentals">GRAPHQL FUNDAMENTALS</a></li>
+      <li><a href="#advanced-tutorial-skip-the-first-time-and-come-back-again-after-the-next-tutorials">Advanced Tutorial (Skip the first time and come back again after the next tutorials)</a></li>
+      <li><a href="#graphql-node-tutorial-written-by-maira-bello-build-your-own-graphql-server">GRAPHQL-NODE TUTORIAL. Written by Maira Bello: Build your own GraphQL server</a></li>
+      <li><a href="#react--apollo-tutorial">REACT + APOLLO TUTORIAL</a></li>
+    </ul>
+  </li>
+  <li><a href="#referencias">REFERENCIAS</a></li>
+</ul>
+        
+
+            <div class="container">
+                
+<h2 id="how-to-graphql">How to GraphQL</h2>
+
+<ul>
+  <li><a href="https://youtu.be/X3QM6Ap6u-4">What is GraphQL?</a></li>
+</ul>
+
+<h3 id="graphql-fundamentals">GRAPHQL FUNDAMENTALS</h3>
+
+<ul>
+  <li><a href="https://www.howtographql.com/basics/0-introduction/">Basics Tutorial - Introduction</a></li>
+  <li><a href="https://www.howtographql.com/basics/1-graphql-is-the-better-rest/">GraphQL is the better REST</a></li>
+  <li><a href="https://www.howtographql.com/basics/2-core-concepts/">Core Concpets</a></li>
+  <li><a href="https://www.howtographql.com/basics/3-big-picture/">Big Picture (Architecture)</a></li>
+</ul>
+
+<h3 id="advanced-tutorial-skip-the-first-time-and-come-back-again-after-the-next-tutorials">Advanced Tutorial (Skip the first time and come back again after the next tutorials)</h3>
+
+<ul>
+  <li><a href="https://www.howtographql.com/advanced/0-clients/">Advanced Tutorial - Clients</a></li>
+  <li><a href="https://www.howtographql.com/advanced/1-server/">Server</a></li>
+  <li><a href="https://www.howtographql.com/advanced/2-more-graphql-concepts/">More GraphQL Concepts</a></li>
+  <li><a href="https://www.howtographql.com/advanced/3-[[tooling-and-ecosystem/">Tooling and Ecosystem</a></li>
+  <li><a href="https://www.howtographql.com/advanced/4-security/">Security</a></li>
+  <li><a href="https://www.howtographql.com/advanced/5-common-questions/">Common Questions</a></li>
+</ul>
+
+<h3 id="graphql-node-tutorial-written-by-maira-bello-build-your-own-graphql-server">GRAPHQL-NODE TUTORIAL. Written by Maira Bello: Build your own GraphQL server</h3>
+
+<ul>
+  <li>Maira Bello tutorial: <a href="https://www.howtographql.com/graphql-js/1-getting-started/">https://www.howtographql.com/graphql-js/1-getting-started/</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/0-introduction/">Introduction</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/1-getting-started/">Getting Started</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/2-a-simple-query/">A Simple Query</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/3-a-simple-mutation/">A simple Mutation</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/4-adding-a-database/">Adding a DataBase</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/5-connecting-server-and-database/">Connecting Server and Database with the Prisma Client</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/6-authentication/">Authentication</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/7-subscriptions/">Realtime GraphQL Subscriptions</a></li>
+  <li><a href="https://www.howtographql.com/graphql-js/8-filtering-pagination-and-sorting/">Filtering, Pagination &amp; Sorting</a></li>
+  <li>
+    <p><a href="https://www.howtographql.com/graphql-js/9-summary/">Summary</a></p>
+  </li>
+  <li><a href="https://github.com/howtographql/graphql-js">The GitHub repository howtographql/graphql-js contains the final project for the “GraphQL.js tutorial” on “How to GraphQL”. Note that it also serves as foundation for all frontend tutorials on the “How to GraphQL” site. </a></li>
+</ul>
+
+<h3 id="react--apollo-tutorial">REACT + APOLLO TUTORIAL</h3>
+
+<ul>
+  <li><a href="https://www.howtographql.com/react-apollo/0-introduction/">React + Apollo Tutorial - Introduction</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/1-getting-started/">Getting Started</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/2-queries-loading-links/">Queries: Loading Links</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/3-mutations-creating-links/">Mutations: Creating Links</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/4-routing/">Routing</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/5-authentication/">Authentication</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/6-more-mutations-and-updating-the-store/">More Mutations and Updating the Store</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/7-filtering-searching-the-list-of-links/">Filtering: Searching the List of Links</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/8-subscriptions/">Realtime Updates with GraphQL Subscriptions</a></li>
+  <li><a href="https://www.howtographql.com/react-apollo/9-pagination/">Pagination</a></li>
+  <li>
+    <p><a href="https://www.howtographql.com/react-apollo/10-summary/">Summary</a></p>
+  </li>
+  <li><a href="https://github.com/howtographql/react-apollo">The GitHub repository <code class="language-plaintext highlighter-rouge">howtographql/react-apollo</code> contains the final project for the “REACT + APOLLO TUTORIAL” on “How to GraphQL”</a></li>
+  <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
+</ul>
+
+<h2 id="referencias">REFERENCIAS</h2>
+
+<ul>
+  <li><a href="https://graphql.github.io/graphql-spec/">GraphQL Specifications</a></li>
+  <li><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000007651096">Hands-On Full-Stack Web Development with GraphQL and React</a> Sebastian Grebe 2019. Libro. PuntoQ ULL</li>
+  <li><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000000880800">React Quickly: Painless web apps with React, JSX, Redux, and GraphQL</a> by Azat Mardan. Manning. 2017. Libro. PuntoQ ULL</li>
+  <li>
+    <p><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4100000005599314">Beginning GraphQL by Brian Kimokoti.  Packt 2018</a> PuntoQ BULL Safari</p>
+  </li>
+  <li><a href="https://youtu.be/cUIhcgtMvGc">Por qué API REST está muerto y debemos usar APIs GraphQL - José María Rodríguez Hurtado</a> YouTube</li>
+  <li><a href="https://youtu.be/yr7Tvr9dVNY">GraphQL ha muerto: Vivan las APIs REST con Hypermedia - Jorge Ferrer y José Manuel Navarro</a> YouTube</li>
+  <li><a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781786465757">Learning GraphQL and Relay by Samer Buna. Pack. 2016</a> PuntoQ BULL Safari</li>
+  <li><a href="https://link-springer-com.accedys2.bbtk.ull.es/content/pdf/10.1007%2F978-1-4842-3904-9.pdf">Visual Design of GraphQL Data. Frisendal. APress. 2018</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+    
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_posts/2019-11-27-leccion.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#clase-del-miércoles-27112019">Clase del Miércoles 27/11/2019</a>
+    <ul>
+      <li><a href="#chapter-3-networking-with-sockets">Chapter 3: Networking with Sockets</a>
+        <ul>
+          <li><a href="#the-observer-pattern">The Observer Pattern</a></li>
+          <li><a href="#la-clase-eventemitter">La Clase EventEmitter</a>
+            <ul>
+              <li><a href="#on">on</a></li>
+              <li><a href="#once">once</a></li>
+              <li><a href="#argumentos">Argumentos</a></li>
+              <li><a href="#off">off</a></li>
+              <li><a href="#listenercount-and-rawlisteners">listenerCount and rawListeners</a></li>
+            </ul>
+          </li>
+          <li><a href="#ejercicio">Ejercicio</a></li>
+          <li><a href="#práctica-p4-t2-networking-la-librería-libldj-clientjs">Práctica p4-t2-networking. La Librería: lib/ldj-client.js</a></li>
+          <li><a href="#p4-t2-networking-el-cliente">p4-t2-networking: El cliente</a></li>
+          <li><a href="#el-servidor-de-p4-t2-networking">El Servidor de p4-t2-networking</a></li>
+          <li><a href="#running-server-and-client-en-p4-t2-networking">Running Server and Client en p4-t2-networking</a></li>
+          <li><a href="#resources-and-references-for-this-section">Resources and References for this Section</a></li>
+        </ul>
+      </li>
+      <li><a href="#jam-stack"><a href="/tema3-web/jam">JAM Stack</a></a>
+        <ul>
+          <li><a href="#jekyll">Jekyll</a></li>
+          <li><a href="#jekyll-en-tu-máquina">Jekyll en tu máquina</a></li>
+          <li><a href="#gastby"><a href="gatsby">Gastby</a></a></li>
+          <li><a href="#práctica-p8-t3-jekyll-netlify">Práctica p8-t3-jekyll-netlify</a></li>
+          <li><a href="#hagamos-la-práctica-p8-t3-jekyll-netlify">Hagamos la práctica <a href="/tema3-web/practicas/p8-t3-jekyll-netlify/">p8-t3-jekyll-netlify</a></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="clase-del-miércoles-27112019">Clase del Miércoles 27/11/2019</h1>
+
+<h2 id="chapter-3-networking-with-sockets">Chapter 3: Networking with Sockets</h2>
+
+<h3 id="the-observer-pattern">The Observer Pattern</h3>
+
+<blockquote>
+  <p>The <strong>observer pattern</strong> is a software design pattern in which an object, called the <strong>subject</strong>, maintains a list of its dependents, called <strong>observers</strong>, and notifies them automatically of any state changes, usually by calling one of their methods.</p>
+</blockquote>
+
+<p><img src="/assets/images/observer-design-pattern.png" alt="" /></p>
+
+<p>See also</p>
+
+<ul>
+  <li><a href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript">Learning JavaScript Design Patterns. A book by Addy Osmani</a></li>
+</ul>
+
+<h3 id="la-clase-eventemitter">La Clase EventEmitter</h3>
+
+<ul>
+  <li>Algunos métodos de los objetos de la clase <a href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter</a>:</li>
+</ul>
+
+<p><img src="/assets/images/event-emitter-methods.png" alt="" /></p>
+
+<h4 id="on">on</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="p">[</span><span class="o">~</span><span class="sr">/.../</span><span class="nx">p4</span><span class="o">-</span><span class="nx">t2</span><span class="o">-</span><span class="nx">networking</span><span class="o">/</span><span class="nx">networking</span><span class="o">-</span><span class="kd">with</span><span class="o">-</span><span class="nx">sockets</span><span class="o">-</span><span class="nx">chapter</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="nx">crguezl</span><span class="p">(</span><span class="nx">master</span><span class="p">)]</span><span class="nx">$</span> <span class="nx">node</span>
+<span class="nx">Welcome</span> <span class="nx">to</span> <span class="nx">Node</span><span class="p">.</span><span class="nx">js</span> <span class="nx">v12</span><span class="p">.</span><span class="mf">10.0</span><span class="p">.</span>
+<span class="nx">Type</span> <span class="dl">"</span><span class="s2">.help</span><span class="dl">"</span> <span class="k">for</span> <span class="nx">more</span> <span class="nx">information</span><span class="p">.</span>
+<span class="o">&gt;</span> <span class="kd">const</span> <span class="p">{</span><span class="nx">EventEmitter</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">events</span><span class="dl">"</span><span class="p">)</span>
+<span class="kc">undefined</span>
+<span class="o">&gt;</span> <span class="kd">function</span> <span class="nx">c1</span><span class="p">()</span> <span class="p">{</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">an event occurred!</span><span class="dl">'</span><span class="p">);}</span>
+<span class="kc">undefined</span>
+<span class="o">&gt;</span> <span class="kd">function</span> <span class="nx">c2</span><span class="p">()</span> <span class="p">{</span>   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">yet another event occurred!</span><span class="dl">'</span><span class="p">);}</span>
+<span class="kc">undefined</span>
+<span class="o">&gt;</span> <span class="kd">const</span> <span class="nx">myEmitter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventEmitter</span><span class="p">();</span>
+<span class="kc">undefined</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">,</span> <span class="nx">c1</span><span class="p">);</span>
+<span class="nx">EventEmitter</span> <span class="p">{</span>
+  <span class="nl">_events</span><span class="p">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">:</span> <span class="kc">null</span> <span class="nx">prototype</span><span class="p">]</span> <span class="p">{</span> <span class="nl">eventOne</span><span class="p">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c1</span><span class="p">]</span> <span class="p">},</span>
+  <span class="nx">_eventsCount</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">_maxListeners</span><span class="p">:</span> <span class="kc">undefined</span>
+<span class="p">}</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">,</span> <span class="nx">c2</span><span class="p">)</span>
+<span class="nx">EventEmitter</span> <span class="p">{</span>
+  <span class="nl">_events</span><span class="p">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">:</span> <span class="kc">null</span> <span class="nx">prototype</span><span class="p">]</span> <span class="p">{</span>
+    <span class="nl">eventOne</span><span class="p">:</span> <span class="p">[</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c1</span><span class="p">],</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c2</span><span class="p">]</span> <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nx">_eventsCount</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">_maxListeners</span><span class="p">:</span> <span class="kc">undefined</span>
+<span class="p">}</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">an</span> <span class="nx">event</span> <span class="nx">occurred</span><span class="o">!</span>
+<span class="nx">yet</span> <span class="nx">another</span> <span class="nx">event</span> <span class="nx">occurred</span><span class="o">!</span>
+<span class="kc">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<h4 id="once">once</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOnce</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOnce once fired</span><span class="dl">'</span><span class="p">));</span> 
+<span class="nx">EventEmitter</span> <span class="p">{</span>
+  <span class="nl">_events</span><span class="p">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">:</span> <span class="kc">null</span> <span class="nx">prototype</span><span class="p">]</span> <span class="p">{</span>
+    <span class="nl">eventOne</span><span class="p">:</span> <span class="p">[</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c1</span><span class="p">],</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c2</span><span class="p">]</span> <span class="p">],</span>
+    <span class="nx">eventOnce</span><span class="p">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">bound</span> <span class="nx">onceWrapper</span><span class="p">]</span> <span class="p">{</span> <span class="nl">listener</span><span class="p">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span> <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">_eventsCount</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nx">_maxListeners</span><span class="p">:</span> <span class="kc">undefined</span>
+<span class="p">}</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOnce</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">eventOnce</span> <span class="nx">once</span> <span class="nx">fired</span>
+<span class="kc">true</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOnce</span><span class="dl">'</span><span class="p">);</span>
+<span class="kc">false</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOnce</span><span class="dl">'</span><span class="p">);</span>
+<span class="kc">false</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<h4 id="argumentos">Argumentos</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">status</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">code</span><span class="p">,</span> <span class="nx">msg</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Got </span><span class="p">${</span><span class="nx">code</span><span class="p">}</span><span class="s2"> and </span><span class="p">${</span><span class="nx">msg</span><span class="p">}</span><span class="s2">`</span><span class="p">));</span>
+<span class="nx">EventEmitter</span> <span class="p">{</span>
+  <span class="nl">_events</span><span class="p">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">:</span> <span class="kc">null</span> <span class="nx">prototype</span><span class="p">]</span> <span class="p">{</span>
+    <span class="nl">eventOne</span><span class="p">:</span> <span class="p">[</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c1</span><span class="p">],</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c2</span><span class="p">]</span> <span class="p">],</span>
+    <span class="nx">status</span><span class="p">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nx">_eventsCount</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nx">_maxListeners</span><span class="p">:</span> <span class="kc">undefined</span>
+<span class="p">}</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">status</span><span class="dl">'</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="dl">'</span><span class="s1">ok</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">Got</span> <span class="mi">200</span> <span class="nx">and</span> <span class="nx">ok</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="off">off</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">,</span> <span class="nx">c1</span><span class="p">);</span>
+<span class="nx">EventEmitter</span> <span class="p">{</span>
+  <span class="nl">_events</span><span class="p">:</span> <span class="p">[</span><span class="nb">Object</span><span class="p">:</span> <span class="kc">null</span> <span class="nx">prototype</span><span class="p">]</span> <span class="p">{</span>
+    <span class="nl">eventOne</span><span class="p">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c2</span><span class="p">],</span>
+    <span class="nx">status</span><span class="p">:</span> <span class="p">[</span><span class="nb">Function</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nx">_eventsCount</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nx">_maxListeners</span><span class="p">:</span> <span class="kc">undefined</span>
+<span class="p">}</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">);</span>  
+<span class="nx">yet</span> <span class="nx">another</span> <span class="nx">event</span> <span class="nx">occurred</span><span class="o">!</span>
+<span class="kc">true</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h4 id="listenercount-and-rawlisteners">listenerCount and rawListeners</h4>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">listenerCount</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">)</span>
+<span class="mi">1</span>
+<span class="o">&gt;</span> <span class="nx">myEmitter</span><span class="p">.</span><span class="nx">rawListeners</span><span class="p">(</span><span class="dl">'</span><span class="s1">eventOne</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">[</span> <span class="p">[</span><span class="nb">Function</span><span class="p">:</span> <span class="nx">c2</span><span class="p">]</span> <span class="p">]</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="ejercicio">Ejercicio</h3>
+
+<p>Vamos ahora a escribir una clase <code class="language-plaintext highlighter-rouge">WithTime</code> cuyos objetos disponen de un método <code class="language-plaintext highlighter-rouge">execute</code> que permite ejecutar 
+una función asíncrona <code class="language-plaintext highlighter-rouge">asyncfun</code> que acepta como último argumento una callback <code class="language-plaintext highlighter-rouge">cb</code>.</p>
+
+<p>Como es habitual, se supone que la callback es llamada  <code class="language-plaintext highlighter-rouge">cb(err, data)</code> por <code class="language-plaintext highlighter-rouge">asyncfun</code> cuando esta termina su tarea asíncrona.</p>
+
+<p>El primer parámetro <code class="language-plaintext highlighter-rouge">err</code> indica el error si lo hubo y el segundo <code class="language-plaintext highlighter-rouge">data</code> con el resultado de la operación asíncrona:  <code class="language-plaintext highlighter-rouge">cb(err, data)</code>.</p>
+
+<p>Se pide que:</p>
+
+<ol>
+  <li>La función <code class="language-plaintext highlighter-rouge">execute</code> emita eventos <code class="language-plaintext highlighter-rouge">begin</code> y <code class="language-plaintext highlighter-rouge">end</code>  señalando el comienzo y final de la ejecución de <code class="language-plaintext highlighter-rouge">asyncfun</code></li>
+  <li>Deberá así mismo emitir un evento <code class="language-plaintext highlighter-rouge">result</code> con el resultado de la operación asíncrona.</li>
+  <li>Deberá emitir un evento <code class="language-plaintext highlighter-rouge">time</code> indicando el tiempo que ha tomado la ejecución en nanosegundos (use <a href="https://nodejs.org/api/process.html#process_process_hrtime_bigint"><code class="language-plaintext highlighter-rouge">process.hrtime.bigint</code></a> para ello)</li>
+</ol>
+
+<p>Por ejemplo, un código como:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">inspect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">util</span><span class="dl">"</span><span class="p">).</span><span class="nx">inspect</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">ins</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">inspect</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="p">{</span><span class="na">depth</span><span class="p">:</span> <span class="kc">Infinity</span><span class="p">,</span> <span class="na">colors</span><span class="p">:</span> <span class="kc">true</span><span class="p">});</span>
+<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">node-fetch</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">WithTime</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">./with-time.js</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">withTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WithTime</span><span class="p">();</span>
+
+<span class="nx">withTime</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">begin</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">label</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">About to execute </span><span class="dl">'</span><span class="o">+</span><span class="nx">label</span><span class="p">));</span>
+
+<span class="nx">withTime</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">end</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">label</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Done with execution of </span><span class="dl">'</span><span class="o">+</span><span class="nx">label</span><span class="p">));</span>
+
+<span class="nx">withTime</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">result</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">label</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Function </span><span class="dl">'</span><span class="o">+</span><span class="nx">label</span><span class="o">+</span><span class="dl">'</span><span class="s1"> produced:</span><span class="se">\n</span><span class="dl">'</span><span class="o">+</span><span class="nx">ins</span><span class="p">(</span><span class="nx">data</span><span class="p">)));</span>
+
+<span class="nx">withTime</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">time</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">label</span><span class="p">,</span> <span class="nx">t</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Function </span><span class="dl">'</span><span class="o">+</span><span class="nx">label</span><span class="o">+</span><span class="dl">'</span><span class="s1"> took </span><span class="dl">'</span><span class="o">+</span><span class="nx">t</span><span class="o">+</span><span class="dl">'</span><span class="s1"> nanoseconds</span><span class="dl">'</span><span class="p">));</span>
+
+<span class="kd">const</span> <span class="nx">readFile</span> <span class="o">=</span> <span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">cb</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">resp</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">resp</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Buf!\n</span><span class="p">${</span><span class="nx">e</span><span class="p">}</span><span class="s2">`</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="nx">withTime</span><span class="p">.</span><span class="nx">execute</span><span class="p">(</span><span class="nx">readFile</span><span class="p">,</span> <span class="dl">'</span><span class="s1">https://jsonplaceholder.typicode.com/posts/3</span><span class="dl">'</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Debería producir una salida como está:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre>About to execute readFile
+Function readFile produced:
+{
+  userId: 1,
+  id: 3,
+  title: 'ea molestias quasi exercitationem repellat qui ipsa sit aut',
+  body: 'et iusto sed quo iure\n' +
+    'voluptatem occaecati omnis eligendi aut ad\n' +
+    'voluptatem doloribus vel accusantium quis pariatur\n' +
+    'molestiae porro eius odio et labore et velit aut'
+}
+Function readFile took 331675217 nanoseconds
+Done with execution of readFile
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Esta es una Solución</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../networking-with-sockets-chapter-3-crguezl/event-emitter-tutorial(master)]$ cat with-time.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">EventEmitter</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">events</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">class</span> <span class="nx">WithTime</span> <span class="kd">extends</span> <span class="nx">EventEmitter</span> <span class="p">{</span>
+
+  <span class="c1">// This function executes asyncFunc(...args)</span>
+  <span class="nx">execute</span><span class="p">(</span><span class="nx">asyncFunc</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">label</span> <span class="o">=</span> <span class="nx">asyncFunc</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">begin</span><span class="dl">'</span><span class="p">,</span> <span class="nx">label</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">old</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">hrtime</span><span class="p">.</span><span class="nx">bigint</span><span class="p">();</span>
+    <span class="nx">asyncFunc</span><span class="p">(...</span><span class="nx">args</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span> 
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">result</span><span class="dl">'</span><span class="p">,</span> <span class="nx">label</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">time</span><span class="dl">'</span><span class="p">,</span> <span class="nx">label</span><span class="p">,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">hrtime</span><span class="p">.</span><span class="nx">bigint</span><span class="p">()</span> <span class="o">-</span> <span class="nx">old</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">end</span><span class="dl">'</span><span class="p">,</span> <span class="nx">label</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">WithTime</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="práctica-p4-t2-networking-la-librería-libldj-clientjs">Práctica p4-t2-networking. La Librería: lib/ldj-client.js</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking/networking-with-sockets-chapter-3-crguezl(master)]$ cat lib/ldj-client.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span> <span class="nx">EventEmitter</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">events</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">net</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">EOM</span> <span class="o">=</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">LDJClient</span> <span class="kd">extends</span> <span class="nx">EventEmitter</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">();</span>
+    <span class="kd">let</span> <span class="nx">buffer</span> <span class="o">=</span> <span class="dl">""</span><span class="p">;</span>
+
+    <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">try</span> <span class="p">{</span>
+        <span class="nx">buffer</span> <span class="o">+=</span> <span class="nx">data</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">boundary</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">EOM</span><span class="p">);</span>
+        <span class="k">while</span> <span class="p">(</span><span class="nx">boundary</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">boundary</span><span class="p">);</span>
+          <span class="nx">buffer</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">boundary</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">input</span><span class="p">));</span>
+          <span class="nx">boundary</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">EOM</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">remaining buffer = </span><span class="dl">"</span><span class="o">+</span><span class="nx">buffer</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+
+    <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">buffer</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+        <span class="k">try</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">input</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">'</span><span class="s1">Not a JSON message </span><span class="dl">'</span><span class="o">+</span><span class="nx">e</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span> 
+      <span class="k">this</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+
+  <span class="cm">/*
+  A static method is attached to the LDJClient class rather than
+  to individual instances.
+  */</span>
+  <span class="kd">static</span> <span class="nx">connect</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*
+    The connect method is a convenience
+    for consumers so that they don't have to use new LDJClient to
+    create a new instance of LDJClient
+    */</span>
+    <span class="kd">let</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">net</span><span class="p">.</span><span class="nx">connect</span><span class="p">(...</span><span class="nx">args</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">LDJClient</span><span class="p">(</span><span class="nx">stream</span><span class="p">);</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">LDJClient</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><a href="https://nodejs.org/api/net.html#net_net_createconnection_options_connectlistener"><code class="language-plaintext highlighter-rouge">net.createConnection(options[, connectListener])</code></a> (<code class="language-plaintext highlighter-rouge">net.connect</code> es un sinónimo de <code class="language-plaintext highlighter-rouge">net.createConnection</code>)</li>
+</ul>
+
+<h3 id="p4-t2-networking-el-cliente">p4-t2-networking: El cliente</h3>
+
+<p>El código del cliente:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$ cat net-watcher-ldj-client.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">ins</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">lib/ins.js</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">PORT</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">./port.js</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">LDJClient</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">lib/ldj-client.js</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">ldjClient</span> <span class="o">=</span> <span class="nx">LDJClient</span><span class="p">.</span><span class="nx">connect</span><span class="p">({</span><span class="na">port</span><span class="p">:</span> <span class="nx">PORT</span><span class="p">});</span>
+
+<span class="nx">ldjClient</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">,</span> <span class="nx">message</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">received data: </span><span class="dl">"</span><span class="o">+</span>  <span class="nx">ins</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>El módulo auxiliar:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking/networking-with-sockets-chapter-3-crguezl(master)]$ cat lib/ins.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">inspect</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">util</span><span class="dl">"</span><span class="p">).</span><span class="nx">inspect</span><span class="p">;</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">inspect</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="p">{</span><span class="na">depth</span><span class="p">:</span> <span class="kc">Infinity</span><span class="p">,</span> <span class="na">colors</span><span class="p">:</span> <span class="kc">true</span><span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking/networking-with-sockets-chapter-3-crguezl(master)]$ cat port.js 
+module.exports = 60300;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="el-servidor-de-p4-t2-networking">El Servidor de p4-t2-networking</h3>
+
+<p>Vamos a construir una clase <code class="language-plaintext highlighter-rouge">lib/ldj-server.js</code> para  que los sockets sepan enviar 
+mensajes de acuerdo con el protocolo LDJ</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking/networking-with-sockets-chapter-3-crguezl(master)]$ cat lib/ldj-server.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">net</span>  <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">net</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">EOM</span> <span class="o">=</span> <span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">LDJServer</span> <span class="kd">extends</span> <span class="nx">net</span><span class="p">.</span><span class="nx">Server</span> <span class="p">{</span>
+
+  <span class="kd">static</span> <span class="nx">toLDJSocket</span><span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span> <span class="o">=</span> <span class="nx">message</span> <span class="o">=&gt;</span> <span class="nx">socket</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="o">+</span><span class="nx">EOM</span><span class="p">);</span>
+  <span class="p">}</span> 
+
+  <span class="kd">static</span> <span class="nx">createServer</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">connectionListener</span> <span class="o">=</span> <span class="nx">args</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    <span class="k">return</span> <span class="nx">net</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(...</span><span class="nx">args</span><span class="p">,</span> <span class="nx">socket</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">toLDJSocket</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span> 
+      <span class="k">return</span> <span class="nx">connectionListener</span><span class="p">(</span><span class="nx">socket</span><span class="p">);</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">LDJServer</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Lo que hacemos en la clase <code class="language-plaintext highlighter-rouge">LDJServer</code> as modificar <code class="language-plaintext highlighter-rouge">createServer</code>para que el objeto <code class="language-plaintext highlighter-rouge">Socket</code> disponga de un método <code class="language-plaintext highlighter-rouge">send</code> que 
+envía un mensaje siguiendo el protocolo <code class="language-plaintext highlighter-rouge">LDJ</code>.</p>
+
+<p>Ahora el código del servidor queda así:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking/networking-with-sockets-chapter-3-crguezl(master)]$ cat net-watcher-json-service.js
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">PORT</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">./port.js</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">LDJServer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">./lib/ldj-server.js</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">fs</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">LDJServer</span><span class="p">.</span><span class="nx">toLDJSocket</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">||</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">// Only one watcher, not a watcher per client as in the book</span>
+<span class="kd">const</span> <span class="nx">watcher</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="p">{</span> <span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span> 
+
+<span class="nx">LDJServer</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">connection</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Subscriber connected</span><span class="dl">'</span><span class="p">);</span>
+
+  <span class="nx">connection</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span><span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">watching</span><span class="dl">"</span><span class="p">,</span> <span class="na">target</span><span class="p">:</span> <span class="nx">fileName</span><span class="p">});</span>
+  <span class="nx">watcher</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">change</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">filename</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">filename</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="nx">eventType</span><span class="p">,</span> <span class="na">timestamp</span><span class="p">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span> <span class="na">target</span><span class="p">:</span> <span class="nx">filename</span> <span class="p">};</span>
+      <span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+      <span class="nx">connection</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="nx">connection</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">close</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Subscriber disconnected</span><span class="dl">"</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="nx">PORT</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">listening on port </span><span class="dl">"</span><span class="o">+</span><span class="nx">PORT</span><span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="running-server-and-client-en-p4-t2-networking">Running Server and Client en p4-t2-networking</h3>
+
+<table>
+  <tr><th>Server</th><th>Client</th></tr>
+  <tr>
+    <td><xmp>
+$ node net-watcher-json-service.js
+listening on port 60300
+Subscriber connected
+{"type":"change","timestamp":1574757343821,"target":"target.txt"}
+    </xmp></td>
+    <td><xmp>
+$ node net-watcher-ldj-client.js 
+received data: { type: 'watching', target: '.' }
+received data: { type: 'change', timestamp: 1574757343821, target: 'target.txt' }
+    </xmp></td>
+  </tr>
+  <tr>
+  <td>Salida para el comando </td>
+  <td>touch target.txt</td>
+  </tr>
+</table>
+
+<h3 id="resources-and-references-for-this-section">Resources and References for this Section</h3>
+
+<ul>
+  <li><a href="/tema2-async/sockets">Apuntes del tema Sockets</a></li>
+  <li><a href="https://github.com/ULL-MII-SYTWS-2021/books-shared">PDFs y Material suplementario</a></li>
+  <li><a href="/tema2-async/practicas/p4-t2-networking/">Descripción de la práctica tema2-async/practicas/p4-t2-networking/</a></li>
+  <li><a href="/tema4-devops/github-actions">GitHub Actions</a></li>
+  <li>
+    <p><a href="https://github.com/ULL-MII-SYTWS-2021/p4-t2-networking-crguezl">Repo de ejemplo con una solución y GitHub Actions p4-t2-networking-crguezl</a></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>  [~/.../github-actions-learning/p4-t2-net-github-actions-crguezl(master)]$ pwd -P
+  /Users/casiano/local/src/github-actions-learning/p4-t2-net-github-actions-crguezl
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li><a href="https://code.tutsplus.com/tutorials/real-time-chat-with-nodejs-readline-socketio--cms-20953">Real-Time Chat With Node.js’ Readline &amp; Socket.io</a></li>
+  <li>Para leer: <a href="https://www.freecodecamp.org/news/how-to-code-your-own-event-emitter-in-node-js-a-step-by-step-guide-e13b7e7908e1/">How to code your own event emitter in Node.js: a step-by-step guide</a> por Rajesh Pillai</li>
+  <li><a href="/clases/2019-11-27/">This class in GitHub pages</a></li>
+</ul>
+
+<h2 id="jam-stack"><a href="/tema3-web/jam">JAM Stack</a></h2>
+
+<h3 id="jekyll">Jekyll</h3>
+
+<p>Recuerda que GitHub provee un servicio de Hosting de páginas estáticas (<a href="https://pages.github.com/">GitHub Pages</a>) que se sirven mediante Jekyll.</p>
+
+<p>En las prácticas que siguen, práctica a usar Jekyll desplegando el proyecto en GitHub Pages.</p>
+
+<p>For more details, see <a href="/tema3-web/jekyyl">section Jekyll</a></p>
+
+<h3 id="jekyll-en-tu-máquina">Jekyll en tu máquina</h3>
+
+<p>To run the blog in your machine you need a <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+
+<ul>
+  <li><a href="https://jekyllrb.com/tutorials/using-jekyll-with-bundler/">Using Jekyll with Bundler</a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking-Omar97perez/docs(master)]$ bundle init
+Writing new Gemfile to /Users/casiano/campus-virtual/1920/sytws1920/eval/p4-t2-networking/p4-t2-networking-Omar97perez/docs/Gemfile
+[~/.../p4-t2-networking-Omar97perez/docs(master)]$ bundle exec jekyll serve
+Configuration file: /Users/casiano/campus-virtual/1920/sytws1920/eval/p4-t2-networking/p4-t2-networking-Omar97perez/docs/_config.yml
+            Source: /Users/casiano/campus-virtual/1920/sytws1920/eval/p4-t2-networking/p4-t2-networking-Omar97perez/docs
+       Destination: /Users/casiano/campus-virtual/1920/sytws1920/eval/p4-t2-networking/p4-t2-networking-Omar97perez/docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.303 seconds.
+ Auto-regeneration: enabled for '/Users/casiano/campus-virtual/1920/sytws1920/eval/p4-t2-networking/p4-t2-networking-Omar97perez/docs'
+    Server address: http://127.0.0.1:4000/p3-t1-c3-http-p2-t1-c3-filesystem-omarperezznakar/
+  Server running... press ctrl-c to stop.
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>The reason the server is listening at that address is because the value
+given to <code class="language-plaintext highlighter-rouge">baseurl</code>
+in the configuration file <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../p4-t2-networking-Omar97perez/docs(master)]$ cat _config.yml 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="c1"># Site settings</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Práctica </span><span class="m">4</span>
+<span class="na">email</span><span class="pi">:</span> <span class="s">alu0100945645@ull.edu.es</span>
+<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span> <span class="c1"># this means to ignore newlines until "baseurl:"</span>
+  <span class="s">Write an awesome description for your new site here. You can edit this</span>
+  <span class="s">line in _config.yml. It will appear in your document head meta (for</span>
+  <span class="s">Google search results) and in your feed.xml site description.</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/p3-t1-c3-http-p2-t1-c3-filesystem-omarperezznakar"</span> <span class="c1"># the subpath of your site, e.g. /blog/</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://jekyll.github.io"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
+<span class="na">twitter_username</span><span class="pi">:</span> <span class="s">jekyllrb</span>
+<span class="na">github_username</span><span class="pi">:</span>  <span class="s">jekyll</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Omar Patricio Pérez Znakar</span>
+
+<span class="c1"># Build settings</span>
+<span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/:year/:title:output_ext</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/omar-blog.png" alt="Omar blog" /></p>
+
+<h3 id="gastby"><a href="gatsby">Gastby</a></h3>
+
+<p>Gatsby is a React-based, GraphQL powered, static site generator.</p>
+
+<h3 id="práctica-p8-t3-jekyll-netlify">Práctica p8-t3-jekyll-netlify</h3>
+
+<h3 id="hagamos-la-práctica-p8-t3-jekyll-netlify">Hagamos la práctica <a href="/tema3-web/practicas/p8-t3-jekyll-netlify/">p8-t3-jekyll-netlify</a></h3>
+
+<ul>
+  <li>Práctica <a href="/tema3-web/practicas/p8-t3-jekyll-netlify/">p8-t3-jekyll-netlify</a></li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

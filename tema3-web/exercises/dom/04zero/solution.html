@@ -1,0 +1,47 @@
+<html>
+<body>
+  <div>Users:</div>
+  <ul>
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+  <script>
+    // The <div> DOM node? 
+    let div = document.querySelector('body > div');
+    console.log(div);
+    div = document.body.firstElementChild;
+    console.log(div);
+    div = document.getElementsByTagName('div')[0];
+    console.log(div);
+    div = document.body.children[0];
+    console.log(div);
+    div = document.body.childNodes[1];
+    console.log(div);
+   
+    // The <ul> DOM node
+    let ul = document.getElementsByTagName('ul')[0];
+    console.log(ul);
+    ul = div.nextElementSibling;
+    console.log(ul);
+    ul = document.body.children[1];
+    console.log(ul);
+    ul = document.body.childNodes[3];
+    console.log(ul);
+    ul = document.querySelector('body > ul');
+    console.log(ul);
+
+    //  The second <li> (with Pete)
+    let li2 = ul.lastElementChild;
+    console.log(li2);
+    li2 = ul.lastChild.previousSibling;
+    console.log(li2);
+    li2 = ul.children[1];
+    console.log(li2);
+    li2 = ul.childNodes[ul.childNodes.length-2];
+    console.log(li2);
+
+
+
+  </script>
+</body>
+</html>

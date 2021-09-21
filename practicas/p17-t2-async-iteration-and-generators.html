@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+      
+    <li><a href="/practicas/p16-t2-async-await-is-generators-and-promises.html" title="Previous">&#x2190;</a></li>
+    
+    
+    <li><a href="/practicas/p18-t2-first-come-first-served-for-await.html" title="Next">&#x2192;</a></li>
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_practicas/p17-t2-async-iteration-and-generators.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#descripción-de-la-práctica-p17-t2-async-iteration-and-generators">Descripción de la Práctica p17-t2-async-iteration-and-generators</a>
+    <ul>
+      <li><a href="#description">Description</a></li>
+      <li><a href="#compare-the-performance-of-promiseall-and-for-await-of">Compare the Performance of Promise.all and for-await-of</a></li>
+      <li><a href="#see">See</a>
+        <ul>
+          <li><a href="#es6-modules-in-nodejs">ES6 Modules in Node.JS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="descripción-de-la-práctica-p17-t2-async-iteration-and-generators">Descripción de la Práctica p17-t2-async-iteration-and-generators</h1>
+
+<h2 id="description">Description</h2>
+
+<p>Read the chapter <a href="https://javascript.info/async-iterators-generators">Async iteration and generators</a> of JavaScript.info reproducing the examples and exercises. Submit a report. Here is an example of how to organize your report:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre>➜  learning-async-iteration-and-generators git:(main) tree -I node_modules
+.
+├── 01-recall-iterators
+│   ├── README.md
+│   └── hello-simple-iterator.js
+├── 02-async-iterables
+│   ├── README.md
+│   ├── hello-async-iterables-2.js
+│   └── hello-async-iterables.js
+├── 03-recall-generators
+│   └── README.md
+├── 04-async-generators-finally
+│   ├── README.md
+│   ├── for-await-with-sync.js
+│   ├── hello-async-generator-2.js
+│   ├── hello-async-generator-3.js
+│   ├── hello-async-generator.js
+│   └── hello-async-iterable-range.js
+├── 05-real-life-example-paginated-data
+│   ├── README.md
+│   ├── get-link-example.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── real-life-example.js
+├── 06-all-vs-for-await-performance
+│   ├── README.md
+│   └── all-vs-for-await-performance.js
+├── README.md
+└── package.json
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="compare-the-performance-of-promiseall-and-for-await-of">Compare the Performance of Promise.all and for-await-of</h2>
+
+<p>Add a section and the corresponding code to compare the performance of 
+for-await-of with Promise.all when given an array of promises.
+Consider both cases: when a rejection or an error occurs and when all the promises are fulfilled</p>
+
+<h2 id="see">See</h2>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-SYTWS-2021/learning-async-iteration-and-generators">ULL-MII-SYTWS-2021/learning-async-iteration-and-generators</a> (Private)
+    <ul>
+      <li>campus-virtual/2021/learning/asyncjs-learning/learning-async-iteration-and-generators</li>
+    </ul>
+  </li>
+  <li>Chapter <a href="https://javascript.info/async-iterators-generators">Async iteration and generators</a></li>
+  <li>Chapter <a href="https://javascript.info/iterable">Iterables</a></li>
+  <li>Chapter <a href="https://javascript.info/generators">Generators</a> of JavaScript.info</li>
+</ul>
+
+<h3 id="es6-modules-in-nodejs">ES6 Modules in Node.JS</h3>
+
+<ul>
+  <li>See the Node.js doc <a href="https://nodejs.org/api/packages.html#packages_determining_module_system">Modules: Packages</a> for more details on the use of ECMA 6 Modules in Node.js.</li>
+  <li><a href="https://stackoverflow.com/questions/45854169/how-can-i-use-an-es6-import-in-node-js#:~:text=You%20can%20also%20use%20npm,import%20in%20your%20JavaScript%20files.">How Can I use en es6 Import in Node.JS</a> Stackoverflow</li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

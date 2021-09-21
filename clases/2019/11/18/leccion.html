@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+    
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_posts/2019-11-18-leccion.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#clase-del-lunes-18112019">Clase del Lunes 18/11/2019</a>
+    <ul>
+      <li><a href="#chapter-20-of-eloquent-js">Chapter 20 of Eloquent JS</a>
+        <ul>
+          <li><a href="#using-promises-with-node-fetch-in-the-client">Using Promises with node-fetch in the client</a></li>
+          <li><a href="#rewriting-the-client-with-async-await">Rewriting the client with async-await</a></li>
+          <li><a href="#la-práctica-p3-t1-c3-http-exercises-from-chapter-20-of-ejs">La práctica p3-t1-c3-http: Exercises from Chapter 20 of EJS</a></li>
+          <li><a href="#idempotent-rest-apis">Idempotent REST APIs</a></li>
+        </ul>
+      </li>
+      <li><a href="#resources-and-references-for-this-lesson">Resources and References for this Lesson</a></li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="clase-del-lunes-18112019">Clase del Lunes 18/11/2019</h1>
+
+<h2 id="chapter-20-of-eloquent-js">Chapter 20 of Eloquent JS</h2>
+
+<ul>
+  <li><a href="https://eloquentjavascript.net/20_node.htm">Chapter 20: Node.js</a></li>
+  <li><a href="/tema1-introduccion/practicas/p3-t1-c3-http/">Descripción de la Práctica http</a></li>
+</ul>
+
+<h3 id="using-promises-with-node-fetch-in-the-client">Using Promises with node-fetch in the client</h3>
+
+<p>Making requests with Node’s raw functionality is rather verbose. There are much more convenient wrapper packages available on NPM. For example, <a href="https://www.npmjs.com/package/node-fetch">node-fetch</a> provides the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">promise-based fetch interface</a> that is used in the browser.</p>
+
+<ul>
+  <li><a href="https://fetch.spec.whatwg.org/">Fetch Living Standard</a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>~/.../chapter20-node-js-crguezl/the-http-module(master)]$ pwd -P
+/Users/casiano/local/src/javascript/eloquent-javascript/chapter20-node-js/chapter20-node-js-crguezl/the-http-module
+~/.../chapter20-node-js-crguezl/the-http-module(master)]$ cat simple-client-promise.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">portNumber</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">ip</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">ip</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">hostname</span> <span class="o">=</span> <span class="nx">ip</span><span class="p">.</span><span class="nx">address</span><span class="p">(),</span> 
+      <span class="nx">port</span> <span class="o">=</span> <span class="nx">portNumber</span><span class="p">,</span>
+      <span class="nx">path</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/20_node.html</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>     
+    <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">DELETE</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="na">Accept</span><span class="p">:</span> <span class="dl">"</span><span class="s2">text/html</span><span class="dl">"</span><span class="p">}</span>
+  <span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s2">`http://</span><span class="p">${</span><span class="nx">hostname</span><span class="p">}</span><span class="s2">:</span><span class="p">${</span><span class="nx">port</span><span class="p">}</span><span class="s2">/</span><span class="p">${</span><span class="nx">path</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">r</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">// r is a Response object which is a stream</span>
+        <span class="kd">let</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span> <span class="c1">// Promise { &lt;pending&gt; }</span>
+        <span class="k">return</span> <span class="nx">p</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">r</span><span class="p">))</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span> <span class="nx">e</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hubieron errores:</span><span class="se">\n</span><span class="dl">"</span><span class="o">+</span><span class="nx">e</span><span class="p">));</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Ejecución contra el <a href="https://ull-mii-sytws-1920.github.io/web/2019/11/11/leccion.html#simple-server">server sencillo descrito en la lección del 11/11/2019</a>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-node-js-crguezl/the-http-module(master)]$ node simple-client-promise.js 
+Promise { &lt;pending&gt; }
+
+&lt;h1&gt;Hello!&lt;/h1&gt;
+&lt;p&gt;You asked for 
+&lt;code&gt;
+//20_node.html 
+&lt;!-- The url is the full URL without the server, protocol or port. --&gt;
+&lt;/code&gt;
+using the DELETE method
+&lt;/p&gt;
+&lt;p&gt;Your headers:&lt;/p&gt; 
+&lt;pre&gt;
+{
+  accept: 'text/html',
+  'user-agent': 'node-fetch/1.0 (+https://github.com/bitinn/node-fetch)',
+  'accept-encoding': 'gzip,deflate',
+  connection: 'close',
+  host: '10.150.22.51:8000'
+}
+&lt;/pre&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+<ul>
+  <li><a href="https://www.npmjs.com/package/node-fetch#options">Options for fetch</a></li>
+</ul>
+
+<h3 id="rewriting-the-client-with-async-await">Rewriting the client with async-await</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-node-js-crguezl/the-http-module(master)]$ pwd -P
+/Users/casiano/local/src/javascript/eloquent-javascript/chapter20-node-js/chapter20-node-js-crguezl/the-http-module
+[~/.../chapter20-node-js-crguezl/the-http-module(master)]$ cat simple-client-await.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="nx">portNumber</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">ip</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">ip</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">hostname</span> <span class="o">=</span> <span class="nx">ip</span><span class="p">.</span><span class="nx">address</span><span class="p">(),</span> 
+      <span class="nx">port</span> <span class="o">=</span> <span class="nx">portNumber</span><span class="p">,</span>
+      <span class="nx">path</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/20_node.html</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>     
+    <span class="na">method</span><span class="p">:</span> <span class="dl">"</span><span class="s2">DELETE</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="p">{</span><span class="na">Accept</span><span class="p">:</span> <span class="dl">"</span><span class="s2">text/html</span><span class="dl">"</span><span class="p">}</span>
+  <span class="p">};</span>
+
+<span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">`http://</span><span class="p">${</span><span class="nx">hostname</span><span class="p">}</span><span class="s2">:</span><span class="p">${</span><span class="nx">port</span><span class="p">}</span><span class="s2">/</span><span class="p">${</span><span class="nx">path</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nx">t</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">r</span><span class="p">.</span><span class="nx">text</span><span class="p">();</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span>    
+      <span class="p">}</span>
+      <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hubieron errores:</span><span class="se">\n</span><span class="dl">"</span><span class="o">+</span><span class="nx">e</span><span class="p">);</span>
+      <span class="p">}</span>
+<span class="p">})()</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>People who are just starting to use <code class="language-plaintext highlighter-rouge">await</code> tend to forget the fact that we can’t use <code class="language-plaintext highlighter-rouge">await</code> in top-level code.
+The solution is to wrap it into an anonymous async function.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">/article/promise-chaining/user.json</span><span class="dl">'</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+  <span class="p">...</span>
+<span class="p">})();</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="la-práctica-p3-t1-c3-http-exercises-from-chapter-20-of-ejs">La práctica p3-t1-c3-http: Exercises from Chapter 20 of EJS</h3>
+
+<p>Para ver una solución a la práctica <a href="https://ull-mii-sytws-1920.github.io/web/2019/11/11/leccion.html#soluciones-a-la-pr%C3%A1ctica">repase la sección *soluciones a la Práctica de la clase del 11/11/2019</a>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>[~/.../chapter20-nodejs/juanIrache-20_3_public_space(master)]$ pwd -P
+/Users/casiano/local/src/javascript/eloquent-javascript-3/juanIrache-solutions/20_3_public_space
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Quote from the <a href="https://eloquentjavascript.net/20_node.html#i_h8iNiA8ezX">EJS book hints for this exercise</a>:</p>
+
+<blockquote>
+  <p>You can use the function that implements the <code class="language-plaintext highlighter-rouge">DELETE</code> method as a blueprint for the <code class="language-plaintext highlighter-rouge">MKCOL</code> method. When no file is found, try to create a directory with <code class="language-plaintext highlighter-rouge">mkdir</code>. When a directory exists at that path, you can return a <code class="language-plaintext highlighter-rouge">204</code> response <strong>so that directory creation requests are <u>idempotent</u></strong>. If a nondirectory file exists here, return an error code. Code <code class="language-plaintext highlighter-rouge">400</code> (<code class="language-plaintext highlighter-rouge">bad request</code>) would be appropriate.</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="kd">const</span> <span class="p">{</span><span class="nx">mkdir</span><span class="p">,</span> <span class="nx">stat</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">fs</span><span class="dl">"</span><span class="p">).</span><span class="nx">promises</span><span class="p">;</span>
+
+<span class="nx">methods</span><span class="p">.</span><span class="nx">MKCOL</span> <span class="o">=</span> <span class="k">async</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">urlPath</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">stats</span><span class="p">;</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="nx">stats</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">stat</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span> <span class="o">!=</span> <span class="dl">"</span><span class="s2">ENOENT</span><span class="dl">"</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+    <span class="k">await</span> <span class="nx">mkdir</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">{</span><span class="na">status</span><span class="p">:</span> <span class="mi">204</span><span class="p">};</span> <span class="c1">// NO CONTENT</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">stats</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">())</span> <span class="k">return</span> <span class="p">{</span><span class="na">status</span><span class="p">:</span> <span class="mi">204</span><span class="p">};</span>
+  <span class="k">else</span> <span class="k">return</span> <span class="p">{</span><span class="na">status</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="na">body</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Not a directory</span><span class="dl">"</span><span class="p">};</span>
+<span class="p">};</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="idempotent-rest-apis">Idempotent REST APIs</h3>
+
+<ul>
+  <li>A Web service is defined as <em>“a software system designed to support interoperable machine-to-machine interaction over a network”</em>. 
+Web services are frequently just Web APIs that can be accessed over a network, such as the Internet, and executed on a remote system hosting the requested services.</li>
+  <li>
+    <p>Representational state transfer (REST) is a software architectural style that defines a set of constraints to be used for creating Web services.</p>
+  </li>
+  <li><a href="https://restfulapi.net/idempotent-rest-apis">Idempotent REST APIs</a></li>
+</ul>
+
+<blockquote>
+  <p>When you design REST APIs, you must realize that API consumers can make mistakes. They can write client code in such a way that there can be duplicate requests as well. These duplicate requests may be unintentional as well as intentional some time (e.g. due to timeout or network issues). You have to design fault-tolerant APIs in such a way that duplicate requests do not leave the system unstable.</p>
+</blockquote>
+
+<p>See also <a href="http://restcookbook.com/HTTP%20Methods/idempotency/">What are idempotent and/or safe methods?</a> del libro <a href="http://restcookbook.com/">restcookbook.com/</a></p>
+
+<p><strong>Safe methods</strong> are methods that can be cached, prefetched without any repercussions to the resource.</p>
+
+<p><strong>HTTP POST</strong></p>
+
+<p>Generally – not necessarily – <code class="language-plaintext highlighter-rouge">POST</code> APIs are used to <strong>create</strong> a new resource on server. So when you invoke the same POST request <code class="language-plaintext highlighter-rouge">N</code> times, you will have <code class="language-plaintext highlighter-rouge">N</code> new resources on the server. So, <em><code class="language-plaintext highlighter-rouge">POST</code> is not idempotent</em>.</p>
+
+<p><strong>HTTP PUT</strong></p>
+
+<p>Generally – not necessarily – <code class="language-plaintext highlighter-rouge">PUT</code> APIs are used to <strong>update</strong> the resource state. If you invoke a <code class="language-plaintext highlighter-rouge">PUT</code> API <code class="language-plaintext highlighter-rouge">N</code> times, the very first request will update the resource; then rest <code class="language-plaintext highlighter-rouge">N-1</code> requests will just overwrite the same resource state again and again – effectively not changing anything. Hence, <em><code class="language-plaintext highlighter-rouge">PUT</code> is idempotent</em>.</p>
+
+<p>Recuerda la definición de idempotente:</p>
+
+<blockquote>
+  <p>when making <strong>multiple identical requests</strong> has the same effect as making a single request</p>
+</blockquote>
+
+<p>Si el request es idéntico el fichero no cambiará en los subsiguientes requests</p>
+
+<p><strong>HTTP DELETE</strong></p>
+
+<p>When you invoke <code class="language-plaintext highlighter-rouge">N</code> similar <code class="language-plaintext highlighter-rouge">DELETE</code> requests, first request will delete the resource and response will be <code class="language-plaintext highlighter-rouge">200</code> (OK) or <code class="language-plaintext highlighter-rouge">204</code> (<code class="language-plaintext highlighter-rouge">No Content</code>). Other <code class="language-plaintext highlighter-rouge">N-1</code> requests will return <code class="language-plaintext highlighter-rouge">404</code> (<code class="language-plaintext highlighter-rouge">Not Found</code>).</p>
+
+<p>Clearly, the response is different from first request, <strong>but there is no change of state for any resource</strong> on server side because original resource is already deleted. So, <em><code class="language-plaintext highlighter-rouge">DELETE</code> is idempotent</em>.</p>
+
+<p>Please keep in mind if some systems may have <code class="language-plaintext highlighter-rouge">DELETE</code> APIs like this:</p>
+
+<p><strong>DELETE /item/last</strong></p>
+
+<p>In the above case, calling operation N times will delete N resources – hence <code class="language-plaintext highlighter-rouge">DELETE</code> is not idempotent in this case. In this case, a good suggestion might be to change above API to <code class="language-plaintext highlighter-rouge">POST</code> – because <code class="language-plaintext highlighter-rouge">POST</code> is not idempotent.</p>
+
+<p><strong>POST /item/last</strong></p>
+
+<p>Now, this is closer to HTTP spec – hence more REST compliant.</p>
+
+<p><strong>Resumen de los Distintos Métodos</strong></p>
+
+<table>
+    <tr><th>HTTP Method</th><th>Idempotent</th><th>Safe</th></tr>
+    <tr><td>OPTIONS    </td><td>yes       </td><td>yes</td></tr>
+    <tr><td>GET        </td><td>yes       </td><td>yes</td></tr>
+    <tr><td>HEAD       </td><td>yes       </td><td>yes</td></tr>
+    <tr><td>PUT        </td><td>yes       </td><td>no </td></tr>
+    <tr><td>POST       </td><td>no        </td><td>no </td></tr>
+    <tr><td>DELETE     </td><td>yes       </td><td>no </td></tr>
+    <tr><td>PATCH      </td><td>no        </td><td>no </td></tr>
+</table>
+
+<ul>
+  <li>See <a href="https://stackoverflow.com/questions/28459418/rest-api-put-vs-patch-with-real-life-examples/39338329#39338329">So when is PATCH not idempotent, then?</a></li>
+</ul>
+
+<h2 id="resources-and-references-for-this-lesson">Resources and References for this Lesson</h2>
+
+<ul>
+  <li><a href="/clases/2019-11-18/">This class in GitHub pages</a></li>
+  <li><a href="https://github.com/ULL-MII-SYTWS-2021/eloquent-javascript-exercises">See this repo with the solutions by Juan Irache to EJS exercises</a>
+    <ul>
+      <li><a href="https://github.com/ULL-MII-SYTWS-2021/eloquent-javascript-exercises/tree/master/20_3_public_space">20_3_a_public_space</a></li>
+    </ul>
+  </li>
+  <li>See section <a href="https://eloquentjavascript.net/20_node.html#the-http-module">of the EJS book: The HTTP module</a></li>
+  <li><a href="https://nodejs.org/es/docs/guides/anatomy-of-an-http-transaction/">Node.js docs: Anatomy of an HTTP Transaction</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

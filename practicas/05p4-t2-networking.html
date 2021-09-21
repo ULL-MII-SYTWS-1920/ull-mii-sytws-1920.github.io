@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+      
+    <li><a href="/practicas/p18-t2-first-come-first-served-for-await.html" title="Previous">&#x2190;</a></li>
+    
+    
+    <li><a href="/practicas/06p5-t3-websockets.html" title="Next">&#x2192;</a></li>
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_practicas/05p4-t2-networking.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#práctica-p4-t2-networking">Práctica p4-t2-networking</a>
+    <ul>
+      <li><a href="#testability-exercises">Testability exercises</a></li>
+      <li><a href="#robustness-exercises">Robustness exercises</a></li>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#recursos">Recursos</a>
+        <ul>
+          <li><a href="#nodejs-the-right-way-book">Node.js the Right Way book</a></li>
+          <li><a href="#upm-mooc-on-nodejs">UPM MOOC on Node.JS</a></li>
+          <li><a href="#net-module"><a href="https://nodejs.org/api/net.html">Net module</a></a></li>
+          <li><a href="#gulp">Gulp</a></li>
+          <li><a href="#github-actions">GitHub Actions</a></li>
+          <li><a href="#ci-and-travis">CI and Travis</a></li>
+          <li><a href="#documentación">Documentación</a></li>
+          <li><a href="#pruebas">Pruebas</a></li>
+          <li><a href="#recursos-para-el-profesor">Recursos para el profesor</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="práctica-p4-t2-networking">Práctica p4-t2-networking</h1>
+
+<ul>
+  <li>Lea el Capítulo 3 “Networking with Sockets” de <a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4340000000247287">Node.js 8 the Right Way</a> y resuelva los problemas en la secciónes <em>Testability</em> y <em>Robustness</em></li>
+</ul>
+
+<h2 id="testability-exercises">Testability exercises</h2>
+
+<ul>
+  <li>Add a unit test for a single message that is split over two or more data events from the stream</li>
+  <li>Add a unit test that passes in <code class="language-plaintext highlighter-rouge">null</code> to the <code class="language-plaintext highlighter-rouge">LDJClient</code> constructor, and asserts that an error is thrown</li>
+  <li>Then make the test pass by modifying the constructor to accept <code class="language-plaintext highlighter-rouge">null</code>: the semantic being that the created stream behaves as <code class="language-plaintext highlighter-rouge">/dev/null</code> in Unix. See <a href="https://www.npmjs.com/package/dev-null">npm package dev-null</a></li>
+</ul>
+
+<h2 id="robustness-exercises">Robustness exercises</h2>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">LDJClient</code> already handles the case in which a properly formatted JSON string is split over multiply lines.  What happen if the incoming data is not a properly formatted JSON string?</li>
+  <li>Write a test case that sends a data event that is not JSON. What do you think on how to manage this case?</li>
+  <li>What happens if the last data event completes a a JSON message, but without the trailing new line?</li>
+  <li>Write a case where the stream object sends a data event containing JSON but no newline, followed by a close event. How will you manage this case?</li>
+  <li>Should <code class="language-plaintext highlighter-rouge">LDJClient</code> emit a <code class="language-plaintext highlighter-rouge">close</code> event for its listeners?</li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+  <li><a href="#pruebas">Añadan pruebas</a></li>
+  <li><a href="#documentaci%C3%B3n">Añada documentación</a></li>
+  <li>Añada Integración Contínua usando Travis (Haga un badge en su README.md) o bien use <a href="/tema4-devops/github-actions">GitHub Actions</a></li>
+  <li>Use Jekyll y GitHub Pages para desplegar su informe de práctica</li>
+  <li>Añada un <code class="language-plaintext highlighter-rouge">gulpfile.js</code> para facilitar la ejecución de las tareas</li>
+</ul>
+
+<h2 id="recursos">Recursos</h2>
+
+<h3 id="nodejs-the-right-way-book">Node.js the Right Way book</h3>
+
+<ul>
+  <li><a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/">BULL PuntoQ</a></li>
+  <li><a href="https://puntoq.ull.es/permalink/f/15vbjs7/ullsfx4340000000247287">Node.js 8 the Right Way</a></li>
+  <li><a href="https://books.google.es/books?id=oA9QDwAAQBAJ&amp;lpg=PT96&amp;dq=should%20ldjclient%20emit%20a%20close%20event&amp;hl=es&amp;pg=PT61#v=onepage&amp;q=should%20ldjclient%20emit%20a%20close%20event&amp;f=false">Book “Node.js 8 the Right Way”</a> 2018 Edition. Google Books</li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a> (private repo)</li>
+</ul>
+
+<h3 id="upm-mooc-on-nodejs">UPM MOOC on Node.JS</h3>
+
+<ul>
+  <li>Video en YouTube. UPM. Node.JS: Programación con Sockets TCP/IP:
+    <ul>
+      <li><a href="https://youtu.be/UjH7hw9fWWQ">Video en YouTube. UPM. Node.JS: Programación con Sockets TCP/IP</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="net-module"><a href="https://nodejs.org/api/net.html">Net module</a></h3>
+
+<ul>
+  <li><a href="https://nodejs.org/api/net.html#net_net_createserver_options_connectionlistener">createServer</a></li>
+</ul>
+
+<h3 id="gulp">Gulp</h3>
+
+<ul>
+  <li>Véase la sección <a href="https://casianorodriguezleon.gitbooks.io/ull-esit-1617/apuntes/gulp/">Gulp</a> de los apuntes</li>
+  <li><a href="https://gulpjs.com/docs/en/getting-started/quick-start">gulp quick start</a></li>
+  <li><a href="https://gulpjs.org/getting-started.html">gulp getting started</a></li>
+</ul>
+
+<h3 id="github-actions">GitHub Actions</h3>
+
+<ul>
+  <li><a href="/tema4-devops/github-actions">GitHub Actions</a></li>
+</ul>
+
+<h3 id="ci-and-travis">CI and Travis</h3>
+
+<ul>
+  <li><a href="/tema1-introduccion/travis">Apuntes de Travis</a></li>
+  <li><a href="https://crguezl.github.io/ull-esit-1617/_book/apuntes/pruebas/travis.html">Viejos apuntes de Travis 16/17</a></li>
+</ul>
+
+<h3 id="documentación">Documentación</h3>
+
+<ul>
+  <li><a href="http://documentation.js.org/">documentation.js</a>,</li>
+  <li><a href="https://www.npmjs.com/package/jsdoc">jsdoc</a>,</li>
+  <li><a href="http://jashkenas.github.io/docco/">docco</a></li>
+</ul>
+
+<h3 id="pruebas">Pruebas</h3>
+
+<ul>
+  <li><a href="/tema1-introduccion/pruebas">Apuntes: Sección pruebas</a></li>
+  <li><a href="https://mochajs.org/">Mocha</a></li>
+  <li><a href="https://www.chaijs.com/">chai</a></li>
+</ul>
+
+<h3 id="recursos-para-el-profesor">Recursos para el profesor</h3>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a> (private repo)
+    <ul>
+      <li>Paths related:
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>
+[~/sol-nodejs-the-right-way/networking-with-sockets-chapter-3(master)]$ pwd -P
+/Users/casiano/local/src/CA/sol-nodejs-the-right-way/networking-with-sockets-chapter-3
+
+</pre></td></tr></tbody></table></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way/tree/master/networking-with-sockets-chapter-3">sol-c</a> (private repo)
+    <ul>
+      <li>See the branch <code class="language-plaintext highlighter-rouge">chapter3-exercises</code></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/ULL-MII-CA-1819/networking-ale-ivan">Sol -ai</a>  (private repo)</li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

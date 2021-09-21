@@ -1,0 +1,14 @@
+<!DOCTYPE html><script>
+'use strict';
+fetch('https://javascript.info/article/promise-chaining/user.json')
+    // .then below runs when the remote server responds
+    .then((response) => {
+        // response.text() returns a new promise that resolves with the full response text
+        // when it loads
+        return response.text();
+    })
+    .then((text) => {
+        // ...and here's the content of the remote file
+        alert(text); // {"name": "iliakan", isAdmin: true}
+    });
+</script>

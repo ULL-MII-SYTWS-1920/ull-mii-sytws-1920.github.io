@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<div id="progress"></div>
+
+<script>
+'use strict';
+
+let start = Date.now();
+
+let i = 0;
+
+let chunk = () => {
+  // do a piece of the heavy job (*)
+  do {
+    i++;
+  } while (i % 1e5 != 0);
+  progress.innerHTML = i;
+};
+
+let stop = () => (i == 1e7);
+
+function count(task, condition) { 
+  if (condition()) {
+    alert("Done in " + (Date.now() - start) + 'ms');
+  } else {
+    setTimeout(() => count(task, condition)); // schedule the new call (**)
+  };
+  task();
+}
+
+count(chunk, stop);
+</script>

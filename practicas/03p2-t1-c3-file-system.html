@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+    <li><a href="/search" title="search">&#x1F50D;</a></li>
+    <!--
+    <li><a href="#sytwstoc" title="Table of Contents">≡</a></li>
+    -->
+
+      
+    <li><a href="/practicas/02p2-t1-vscode.html" title="Previous">&#x2190;</a></li>
+    
+    
+    <li><a href="/practicas/05p5-t1-meta.html" title="Next">&#x2192;</a></li>
+    
+    <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//_practicas/03p2-t1-c3-file-system.md" title="Edit this page at GitHub">🐙</a>
+    
+    <li><a href="/references.html" title="Bibliografía">&#x1f4da</a></li>
+    <li><a href="/practicas.html" title="Prácticas">&#x270d</a></li>
+    
+    <li><a href="/clases.html" title="Clases">👨‍🏫</a></li>
+
+    <li><a href="/" title="Home page">&#x1f3e0</a></li>
+    <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+    <li><a href="/tema1-introduccion/" title="Tema 1: Introducción">1</a></li>
+    <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+    <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+    <li><a href="/tema4-devops/" title="Tema 4: Devop">4</a></li>
+    
+</nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+            
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+            
+            
+
+
+
+            <h2 >Table of Contents</h2>
+            
+            <ul id="sytwstoc">
+  <li><a href="#descripción-de-la-práctica-p2-t1-c3-filesystem">Descripción de la práctica p2-t1-c3-filesystem</a>
+      - {:.} <a href="#ejercicio">Ejercicio</a>
+    <ul>
+      <li><a href="#ejercicios">Ejercicios</a></li>
+      <li><a href="#visual-studio-code-y-git">Visual Studio Code y git</a></li>
+      <li><a href="#tablero-kanban">Tablero Kanban</a></li>
+      <li><a href="#recursos">Recursos</a>
+        <ul>
+          <li><a href="#q--a">Q &amp; A</a></li>
+          <li><a href="#a-que-se-refiere-la-pregunta-instead-how-would-you-take-the-process-to-spawn-from-processargv">A que se refiere la pregunta <em>“Instead, how would you take the process to spawn from process.argv?”</em></a></li>
+          <li><a href="#el-libro-nodejs-8-the-right-way">El Libro Node.js 8 the Right Way</a></li>
+          <li><a href="#the-js-event-loop">The JS Event Loop</a></li>
+          <li><a href="#vscode">VScode</a></li>
+          <li><a href="#el-libro-eloquentjs-el-capítulo-20-es-sobre-nodejs">El libro EloquentJS. El capítulo 20 es sobre Node.js</a></li>
+          <li><a href="#el-libro-nodejs-beyond-the-basics">El libro Node.js Beyond the Basics</a></li>
+          <li><a href="#solución">Solución</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+          
+
+            <div class="container">
+                <h1 id="descripción-de-la-práctica-p2-t1-c3-filesystem">Descripción de la práctica p2-t1-c3-filesystem</h1>
+
+<ul>
+  <li><a href="https://classroom.github.com/a/JeTaIHuY">Aceptemos la asignación de la tarea</a></li>
+  <li>Autentíquese en <a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/">BULL PuntoQ</a></li>
+  <li>Una vez autenticado obtendrá acceso al libro <a href="https://puntoq.ull.es/permalink/f/1rcchus/TN_safari_s9781680505344">Node.js 8 the Right Way</a>. Jim Wilson. 2018 (Debes estar autenticado via PuntoQ)</li>
+  <li>Lea el Capítulo 2 “<a href="">Wrangling the File System</a>” de <em>Node.JS The Right Way</em>.</li>
+  <li>Consulte el <a href="https://github.com/ULL-MII-SYTWS-2021/books-shared">repo de bibliografía para la organización</a></li>
+  <li>Resuelva los problemas en la secciones <em>Fortifying the code</em> y <em>Expanding Functionality</em> del capítulo <em>Wrangling the File System</em></li>
+  <li>Haga su desarrollo usando Visual studio Code. <a href="https://code.visualstudio.com/docs/editor/versioncontrol">Use git y github desde visual studio code</a> tanto como pueda</li>
+</ul>
+
+<p>Este es un ejemplo similar a los ejemplos que encontrará en el capítulo
+con la diferencia de que usamos la librería  <a href="https://www.npmjs.com/package/commander">commander.js</a> para procesar los argumentos:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>[~/.../sol-nodejs-the-right-way/filesystem-chapter-2(master)]$ cat watcher-fortifying-code.js 
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="cp">#!/usr/bin/env node
+</span><span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">fs</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">program</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">commander</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">{</span> <span class="nx">version</span><span class="p">,</span> <span class="nx">description</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./package.json</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">program</span>
+    <span class="p">.</span><span class="nx">version</span><span class="p">(</span><span class="nx">version</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">description</span><span class="p">(</span><span class="nx">description</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">usage</span><span class="p">(</span><span class="dl">'</span><span class="s1">[options]</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">option</span><span class="p">(</span><span class="dl">'</span><span class="s1">-f, --file &lt;fileToWatch&gt;</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">set the file or directory to watch</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">)</span>
+
+<span class="nx">program</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">);</span>
+
+<span class="kd">const</span> <span class="nx">fileToWatch</span> <span class="o">=</span> <span class="nx">program</span><span class="p">.</span><span class="nx">file</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nx">fs</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">fileToWatch</span><span class="p">,</span> <span class="p">{</span> <span class="na">recursive</span><span class="p">:</span> <span class="kc">true</span> <span class="p">},</span> <span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`File </span><span class="p">${</span><span class="nx">fileName</span><span class="p">}</span><span class="s2"> changed! Event Type: </span><span class="p">${</span><span class="nx">eventType</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">eventType</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">rename</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="nx">fileToWatch</span> <span class="o">===</span> <span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">`No longer watching </span><span class="p">${</span><span class="nx">fileToWatch</span><span class="p">}</span><span class="s2">!`</span><span class="p">);</span>
+      <span class="nx">process</span><span class="p">.</span><span class="nx">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Now watching </span><span class="p">${</span><span class="nx">fileToWatch</span><span class="p">}</span><span class="s2"> for changes ...`</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">code</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">ENOENT</span><span class="dl">"</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">`No file '</span><span class="p">${</span><span class="nx">fileToWatch</span><span class="p">}</span><span class="s2">' found`</span><span class="p">);</span>
+   <span class="k">else</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Veamos un ejemplo de ejecución cuando no se pasan argumentos:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>[~/.../sol-nodejs-the-right-way/filesystem-chapter-2(master)]$ node watcher-fortifying-code.js 
+Now watching . for changes ...
+^C
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Podemos usar la opción <code class="language-plaintext highlighter-rouge">--help</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>$ node watcher-fortifying-code.js --help
+Usage: watcher-fortifying-code [options]
+
+watch a file or directory for changes
+
+Options:
+  -V, --version             output the version number
+  -f, --file &lt;fileToWatch&gt;  set the file or directory to watch (default: ".")
+  -h, --help                output usage information
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>La opción <code class="language-plaintext highlighter-rouge">-V</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>$ node watcher-fortifying-code.js -V
+1.0.0
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>El programa se nutre para la versión de la que está en el fichero <code class="language-plaintext highlighter-rouge">package.json</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ jq .version,.description  package.json 
+"1.0.0"
+"watch a file or directory for changes"
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Si le pasamos la opción <code class="language-plaintext highlighter-rouge">-f</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>$ node watcher-fortifying-code.js -f target.txt
+No file 'target.txt' found
+[~/.../sol-nodejs-the-right-way/filesystem-chapter-2(master)]$ touch target.txt
+[~/.../sol-nodejs-the-right-way/filesystem-chapter-2(master)]$ node watcher-fortifying-code.js -f target.txt
+Now watching target.txt for changes ...
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="ejercicio">Ejercicio</h3>
+
+<ul>
+  <li>Mejore este ejemplo añadiendo una opción <code class="language-plaintext highlighter-rouge">-r --recursive</code> que indica si <code class="language-plaintext highlighter-rouge">watch</code> debe hacer una  vigilancia recursiva.</li>
+</ul>
+
+<p>The <code class="language-plaintext highlighter-rouge">fs.watch</code> API is not 100% consistent across platforms, and is unavailable in some situations.
+The <code class="language-plaintext highlighter-rouge">recursive</code> option is only supported on macOS and Windows.
+Para sistemas Linux es conveniente utilizar un wrapper como <a href="https://www.npmjs.com/package/node-watch">node-watch</a>.</p>
+
+<h2 id="ejercicios">Ejercicios</h2>
+
+<ul>
+  <li>Resuelva los problemas en la secciones <em>Fortifying the code</em> y <em>Expanding Functionality</em> del capítulo <em>Wrangling the File System</em>
+    <ul>
+      <li>In the file-watching examples, what happens if the target file doesn’t exist?</li>
+      <li>What happens if a file being watched gets deleted?</li>
+      <li>How would you take the process to spawn from <code class="language-plaintext highlighter-rouge">process.argv</code>?</li>
+      <li>How would you pass an arbitrary number of additional parameters from <code class="language-plaintext highlighter-rouge">process.argv</code> to the spawned process?
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">node watcher-spawn-cmd.js target.txt ls -l -h</code></li>
+        </ul>
+      </li>
+      <li>Use la librería  <a href="https://www.npmjs.com/package/commander">commander.js</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="visual-studio-code-y-git">Visual Studio Code y git</h2>
+
+<ul>
+  <li>Haga su desarrollo usando Visual Studio Code. <a href="https://code.visualstudio.com/docs/editor/versioncontrol">Use git y github desde visual studio code</a> tanto como pueda</li>
+</ul>
+
+<h2 id="tablero-kanban">Tablero Kanban</h2>
+
+<ul>
+  <li>Cree un <a href="https://help.github.com/en/github/managing-your-work-on-github/about-project-boards">tablero GitHub del tipo Kanban Automatizado</a>. Convierta en incidencias los requisitos y proceda a moverlos entre los paneles conforme progresa.</li>
+  <li>
+    <p>En el repo que entrega deberán figurar los ejemplos del libro y los ejercicios resueltos.</p>
+  </li>
+  <li>En el repo que entrega deberán figurar los ejemplos del libro y los ejercicios resueltos.</li>
+</ul>
+
+<!--
+* Lea el [capítulo 20: Node.js](http://eloquentjavascript.net/2nd_edition/20_node.html) de la Segunda Edición (¡no la tercera!) del libro Eloquent JavaScript
+* Añada a su repo un servidor de ficheros estáticos como el que se describe en la sección *A simple file server* del capítulo 20 (Node.js) de la Segunda Edición del libro Eloquent JavaScript
+-->
+
+<p>En el <code class="language-plaintext highlighter-rouge">README.md</code> escriba un tutorial sobre lo que ha aprendido. Muestre imágenes o vídeos de su desarrollo con Visual Studio Code.</p>
+
+<h2 id="recursos">Recursos</h2>
+
+<h3 id="q--a">Q &amp; A</h3>
+
+<h3 id="a-que-se-refiere-la-pregunta-instead-how-would-you-take-the-process-to-spawn-from-processargv">A que se refiere la pregunta <em>“Instead, how would you take the process to spawn from process.argv?”</em></h3>
+
+<p>En el fichero <code class="language-plaintext highlighter-rouge">watcher-spawn.js</code> se hace un <code class="language-plaintext highlighter-rouge">spawn</code>del comando <code class="language-plaintext highlighter-rouge">ls</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="rouge-code"><pre><span class="dl">"</span><span class="s2">use strict</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">const</span>
+    <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">),</span>
+    <span class="c1">// The child_process module provides the ability to spawn child processes in a manner that is similar, but not identical, to popen</span>
+    <span class="nx">spawn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">child_process</span><span class="dl">'</span><span class="p">).</span><span class="nx">spawn</span><span class="p">,</span>
+    <span class="nx">filename</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">filename</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="nb">Error</span><span class="p">(</span><span class="dl">"</span><span class="s2">A file to watch must be specified!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">fs</span><span class="p">.</span><span class="nx">watch</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">fN</span><span class="p">)</span> <span class="p">{</span>
+   
+    <span class="kd">let</span> <span class="nx">ls</span> <span class="o">=</span> <span class="nx">spawn</span><span class="p">(</span><span class="dl">'</span><span class="s1">ls</span><span class="dl">'</span><span class="p">,</span> <span class="p">[</span><span class="dl">'</span><span class="s1">-lh</span><span class="dl">'</span><span class="p">,</span> <span class="nx">fN</span><span class="p">]);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ls</span><span class="p">.</span><span class="nx">pid</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="nx">fN</span><span class="p">);</span>
+   
+    <span class="nx">ls</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">stdout</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Now watching </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">filename</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> for changes...</span><span class="dl">"</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>lo que pide la pregunta es escribir una variante del programa anterior 
+en la que el comando a ejecutar en vez de ser <code class="language-plaintext highlighter-rouge">ls</code> se especifique 
+en la línea de comandos:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ ./watcher-sol.js 
+Usage:
+  watcher-sol.js &lt;fileName&gt; [command] [args ... ]
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ ./watcher-sol.js . 'ls' '-l' 
+Now watching . for changes...
+-rw-r--r--  1 casiano  staff  1460 18 oct 08:37 watcher-fortifying-code.js
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>$ ./watcher-sol.js . echo "File change"
+Now watching . for changes...
+File change watcher-fortifying-code.js
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="el-libro-nodejs-8-the-right-way">El Libro Node.js 8 the Right Way</h3>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-SYTWS-2021/books-shared">Repo de bibliografía para la organización</a></li>
+  <li><a href="https://www.ull.es/servicios/biblioteca/servicios/puntoq/">BULL PuntoQ</a></li>
+  <li><a href="https://puntoq.ull.es/permalink/f/1rcchus/TN_safari_s9781680505344">Node.js 8 the Right Way</a> en Safari books O’Reilly. Jim Wilson. 2018 (Debes estar autenticado via PuntoQ)</li>
+  <li><a href="https://books.google.es/books?id=oA9QDwAAQBAJ&amp;lpg=PT96&amp;ots=-mLQPlvsSj&amp;dq=should%20ldjclient%20emit%20a%20close%20event&amp;hl=es&amp;pg=PP1#v=onepage&amp;q=should%20ldjclient%20emit%20a%20close%20event&amp;f=false">Node.js 8 the Right Way</a> en Google Books. Faltan páginas</li>
+</ul>
+
+<h3 id="the-js-event-loop">The JS Event Loop</h3>
+
+<ul>
+  <li><a href="event-loop/README.md">El bucle de Eventos de JS explicado</a> Ejemplos</li>
+</ul>
+
+<h3 id="vscode">VScode</h3>
+
+<ul>
+  <li><a href="https://code.visualstudio.com/docs/editor/versioncontrol">Using Version Control in VS Code</a></li>
+</ul>
+
+<h3 id="el-libro-eloquentjs-el-capítulo-20-es-sobre-nodejs">El libro EloquentJS. El capítulo 20 es sobre Node.js</h3>
+
+<ul>
+  <li><a href="http://eloquentjavascript.net/2nd_edition/">Eloquent JS 2nd Edition</a> Chapter 20</li>
+  <li><a href="http://eloquentjavascript.net/2nd_edition/20_node.html">Capítulo 20 de Eloquent JavaScript: Node.js</a></li>
+</ul>
+
+<h3 id="el-libro-nodejs-beyond-the-basics">El libro Node.js Beyond the Basics</h3>
+
+<p>Este es un libro diferente a la mayoría de los libros sobre Node.Js en cuanto que profundiza en el runtime-system de Node.js y por tanto es relevante en la etapa en la que estamos. Sólo están disponibles la introducción y el capítulo de streams. Elr esto es de pago.</p>
+
+<ul>
+  <li><a href="https://jscomplete.com/learn/node-beyond-basics">Node.js Beyond the Basics</a></li>
+  <li><a href="https://medium.freecodecamp.org/node-js-child-processes-everything-you-need-to-know-e69498fe970a">Node.js Child Processes: Everything you need to know How to use spawn(), exec(), execFile(), and fork()</a></li>
+</ul>
+
+<h3 id="solución">Solución</h3>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-CA-1819/nodejs-the-right-way">GitHub repo ULL-MII-CA-1819/nodejs-the-right-way</a> (Recurso solo disponible para el profesor)</li>
+</ul>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+        </section>
+    
+    </div>
+
+
+    
+</body>
+
+</html>

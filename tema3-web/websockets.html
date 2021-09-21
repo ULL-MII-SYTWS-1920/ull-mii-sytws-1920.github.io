@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/websockets.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#capítulo-websockets">Capítulo: WebSockets</a>
+    <ul>
+      <li><a href="#bibliografía-complementaria">Bibliografía Complementaria</a>
+        <ul>
+          <li><a href="#build-a-simple-chat-app-with-nodejs-and-socketio-mediumcom">Build a simple chat app with node.js and socket.io Medium.com</a></li>
+          <li><a href="#real-time-presentation-slides">Real Time Presentation Slides</a></li>
+          <li><a href="#web-sockets-tutorial-nodejs-and-socketio-chat-app-in-the-net-ninja-youtube-channel-5-videos"><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9">Web Sockets Tutorial (Node.js and Socket.io Chat App)</a> in the Net Ninja Youtube Channel (5 videos)</a></li>
+          <li><a href="#yet-another-chat-socketio--express-nodejs-tutorial-to-build-a-realtime-chat-app-youtube-2-videos">Yet Another Chat: <a href="https://youtu.be/tzNOqcoupWQ">Socket.io &amp; Express NodeJS Tutorial to build a Realtime Chat App</a> Youtube (2 videos)</a></li>
+          <li><a href="#un-artículo-cortito-para-los-que-tienen-prisa">Un artículo cortito para los que tienen prisa</a></li>
+          <li><a href="#un-chat-con-mas-funcionalidades-aunque-usando-versiones-algo-obsoletas">Un chat con mas funcionalidades aunque usando versiones algo obsoletas</a></li>
+        </ul>
+      </li>
+      <li><a href="#bibliografía">Bibliografía</a></li>
+      <li><a href="#prácticas">Prácticas</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="capítulo-websockets">Capítulo: WebSockets</h1>
+
+<p>Lea:</p>
+
+<ul>
+  <li>Capítulo <a href="https://javascript.info/websocket">WebSocket</a> del libro <a href="https://javascript.info/">The Modern JavaScript Tutorial</a></li>
+  <li><a href="https://socket.io/get-started/chat/">Socket.io Official Guide: a chat</a>
+    <ul>
+      <li><a href="https://github.com/socketio/chat-example">Associated Repo</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="bibliografía-complementaria">Bibliografía Complementaria</h2>
+
+<h3 id="build-a-simple-chat-app-with-nodejs-and-socketio-mediumcom">Build a simple chat app with node.js and socket.io Medium.com</h3>
+
+<ul>
+  <li><a href="https://medium.com/@noufel.gouirhate/build-a-simple-chat-app-with-node-js-and-socket-io-ea716c093088">Build a simple chat app with node.js and socket.io</a> By Noufel Gouirhate Dec 24, 2017 Medium.com
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1819/simpleChatApp">Repo ULL-ESIT-DSI-1819/simpleChatApp</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="real-time-presentation-slides">Real Time Presentation Slides</h3>
+
+<ul>
+  <li><a href="https://medium.com/@nafeunasir/real-time-presentation-slides-with-socket-io-express-node-js-and-javascript-cf08a95ff098">Real-time Presentation Slides with Socket.io, Node.js and Javascript</a> by Nafeu Nasir at Medium.com
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1819/realtime-slides-tut.git">Repo ULL-ESIT-DSI-1819/realtime-slides-tut.git</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="web-sockets-tutorial-nodejs-and-socketio-chat-app-in-the-net-ninja-youtube-channel-5-videos"><a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9">Web Sockets Tutorial (Node.js and Socket.io Chat App)</a> in the Net Ninja Youtube Channel (5 videos)</h3>
+
+<ul>
+  <li><a href="https://github.com/ULL-ESIT-DSI-1819/websockets-playlist">Repo ULL-ESIT-DSI-1819/websockets-playlist</a></li>
+  <li><a href="https://youtu.be/vQjiN8Qgs3c">WebSockets (using Socket.io) Tutorial #1 - What Are WebSockets?</a>
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1819/websockets-playlist/tree/lesson-1">Branch lesson 1</a></li>
+    </ul>
+  </li>
+  <li><a href="https://youtu.be/ggVsXljT0MI">WebSockets (using Socket.io) Tutorial #2 - Creating an Express App</a>
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1819/websockets-playlist/tree/lesson-2">Branch lesson 2</a></li>
+    </ul>
+  </li>
+  <li><a href="https://youtu.be/UwS3wJoi7fY">WebSockets (using Socket.io) Tutorial #3 - Using Socket.io</a>
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1819/websockets-playlist/tree/lesson-3">Branch lesson 3</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="yet-another-chat-socketio--express-nodejs-tutorial-to-build-a-realtime-chat-app-youtube-2-videos">Yet Another Chat: <a href="https://youtu.be/tzNOqcoupWQ">Socket.io &amp; Express NodeJS Tutorial to build a Realtime Chat App</a> Youtube (2 videos)</h3>
+<ul>
+  <li><a href="https://youtu.be/tzNOqcoupWQ">Socket.io &amp; Express NodeJS Tutorial to build a Realtime Chat App - Part 1</a></li>
+  <li><a href="https://youtu.be/emnlFamYx7Y">Socket.io &amp; Express NodeJS Tutorial to build a Realtime Chat App - Part 2</a></li>
+  <li><a href="https://github.com/ULL-ESIT-DSI-1819/Socket_io_Chat_Room">Corresponding repo at GitHub</a></li>
+</ul>
+
+<h3 id="un-artículo-cortito-para-los-que-tienen-prisa">Un artículo cortito para los que tienen prisa</h3>
+
+<ul>
+  <li>Article <a href="https://medium.com/@chathuranga94/introduction-to-socket-io-600025322cd2">Introduction to Socket.io</a> by Udara Bibile at Medium.com</li>
+</ul>
+
+<h3 id="un-chat-con-mas-funcionalidades-aunque-usando-versiones-algo-obsoletas">Un chat con mas funcionalidades aunque usando versiones algo obsoletas</h3>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=pNKNYLv2BpQ&amp;list=PLicY6aYZ8ilpmHfJ8jP1lt7ihPpRWBJ9P">Node.js &amp; Socket.io Chat video list</a> by Smitha Milli (4 videos. Includes private messaging and MongoDB. Versiones viejas de express, socket.io y mongodb)
+    <ul>
+      <li><a href="https://github.com/smilli/nodejs-chat-complete">code: nodejs-chat-complete</a></li>
+      <li><a href="https://github.com/smilli/nodejs-chat">Skeleton code for 2014 Hackers@Berkeley Node.js workshop</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="bibliografía">Bibliografía</h2>
+
+<ul>
+  <li>Libro: <a href="https://proquest-safaribooksonline-com.accedys2.bbtk.ull.es/9781782160786">Socket.IO Real-time Web Application Development By: Rohit Rai</a> book at PuntoQ ULL</li>
+</ul>
+
+<h2 id="prácticas">Prácticas</h2>
+
+<ul>
+  <li><a href="practicas/p5-t3-websockets">Descripción de la práctica p5-t3-websockets</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

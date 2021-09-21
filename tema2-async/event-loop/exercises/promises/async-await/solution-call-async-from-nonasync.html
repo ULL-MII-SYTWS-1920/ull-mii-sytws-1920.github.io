@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<script>
+"use strict";globalThis.__codeBoxId = "w4at6c03ox";
+
+async function wait() {
+  await new Promise(resolve => setTimeout(resolve, 100));
+
+  return 10;
+}
+
+function f() {
+  // shows 10 after 1 second
+  wait().then(console.log);
+}
+
+function g() {
+    let aux = async () => {
+        let result = await wait();
+        console.log(result);
+    };
+    aux();
+}
+
+
+f();
+g();
+
+</script>

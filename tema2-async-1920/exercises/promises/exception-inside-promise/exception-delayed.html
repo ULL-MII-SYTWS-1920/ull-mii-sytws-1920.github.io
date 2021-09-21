@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    new Promise(function(resolve, reject) {
+      setTimeout(() => {
+        throw new Error("Whoops!");
+      }, 1000);
+    }).catch(alert);
+  </script>
+</body>
+</html>

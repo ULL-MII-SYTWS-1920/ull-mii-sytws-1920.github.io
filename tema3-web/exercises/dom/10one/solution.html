@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS DOM paragraph style</title>
+</head> 
+<body>
+<p id ='text'>
+    <a href="https://www.w3resource.com/javascript-exercises/javascript-dom-exercises.php" target="_blank" rel="noopener noreferrer">
+        JavaScript Exercises - w3resource
+    </a></p> 
+<div>
+<button id="jsstyle"
+onclick="js_style()">Style</button>
+</div>
+<script>
+function js_style() {
+    let b = document.getElementById("jsstyle");
+    /* 
+    // 1st Solution
+    b.style.backgroundColor = "red";
+    b.style.fontSize = "xx-large";
+    b.style.fontStyle = "italic";
+    b.tyle.color = "green";
+    */
+    // 2nd Solution
+    b.style.cssText = `color: green; background-color: red; font-size: xx-large; font-style: italic`;
+    
+   /*
+   // 3d Solution
+   Object.assign(b.style, {fontSize: "xx-large", color: "green", backgroundColor: "red", fontStyle: "italic"});
+   */
+}
+</script>
+</body>
+</html>

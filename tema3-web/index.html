@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/README.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#servicios-y-aplicaciones-web">Servicios y Aplicaciones Web</a>
+    <ul>
+      <li><a href="#the-browser-the-dom-events-form-fields"><a href="dom">The Browser, The DOM, Events, Form Fields</a></a>
+        <ul>
+          <li><a href="#práctica-del-dom-p4-t3-dom">Práctica del DOM p4-t3-dom</a></li>
+          <li><a href="#ejercicios-del-dom">Ejercicios del DOM</a></li>
+        </ul>
+      </li>
+      <li><a href="#http"><a href="http">HTTP</a></a></li>
+      <li><a href="#websockets"><a href="/tema3-web/websockets.html">WebSockets</a></a></li>
+      <li><a href="#prácticas">Prácticas</a></li>
+      <li><a href="#web-application-bundlers-webpack-parcel"><a href="webpack">Web Application Bundlers: Webpack, Parcel</a></a></li>
+      <li><a href="#web-workers"><a href="web-workers">Web Workers</a></a></li>
+      <li><a href="#cors"><a href="cors">CORS</a></a></li>
+      <li><a href="#rest"><a href="/tema3-web/rest.html">REST</a></a></li>
+      <li><a href="#authentication"><a href="/tema3-web/authentication.html">Authentication</a></a></li>
+      <li><a href="#web-scrapping"><a href="web-scrapping">Web Scrapping</a></a></li>
+      <li><a href="#bases-de-datos-y-motores-de-búsqueda"><a href="bases-de-datos">Bases de Datos y Motores de Búsqueda</a></a></li>
+      <li><a href="#jekyll"><a href="jekyll">Jekyll</a></a></li>
+      <li><a href="#hugo"><a href="hugo">Hugo</a></a></li>
+      <li><a href="#gastby"><a href="gatsby">Gastby</a></a></li>
+      <li><a href="#react"><a href="react">React</a></a></li>
+      <li><a href="#graphql"><a href="graphql">GraphQL</a></a></li>
+      <li><a href="#the-jam-stack"><a href="jam">The JAM Stack</a></a></li>
+      <li><a href="#serverless"><a href="serverless">Serverless</a></a></li>
+      <li><a href="#desktop-apps-using-web-technologies"><a href="electron">Desktop Apps using Web Technologies</a></a></li>
+      <li><a href="#extending-visual-studio-code"><a href="extending-vscode">Extending Visual Studio Code</a></a></li>
+      <li><a href="#webassembly"><a href="webassembly">WebAssembly</a></a></li>
+      <li><a href="#tools-for-static-blogs"><a href="static-blogs">Tools for Static Blogs</a></a></li>
+      <li><a href="#process-managers"><a href="pm2">Process-managers</a></a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="servicios-y-aplicaciones-web">Servicios y Aplicaciones Web</h1>
+
+<h2 id="the-browser-the-dom-events-form-fields"><a href="dom">The Browser, The DOM, Events, Form Fields</a></h2>
+
+<h3 id="práctica-del-dom-p4-t3-dom">Práctica del DOM p4-t3-dom</h3>
+
+<ul>
+  <li><a href="practicas/p4-t3-dom/">Descripción de la práctica p4-t3-dom</a></li>
+</ul>
+
+<h3 id="ejercicios-del-dom">Ejercicios del DOM</h3>
+
+<ul>
+  <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master/tema3-web/exercises/dom">Ejercicios del DOM</a></li>
+</ul>
+
+<h2 id="http"><a href="http">HTTP</a></h2>
+
+<h2 id="websockets"><a href="/tema3-web/websockets.html">WebSockets</a></h2>
+
+<h2 id="prácticas">Prácticas</h2>
+
+<ul>
+  <li><a href="practicas/p5-t3-websockets">Descripción de la práctica p5-t3-websockets</a></li>
+</ul>
+
+<h2 id="web-application-bundlers-webpack-parcel"><a href="webpack">Web Application Bundlers: Webpack, Parcel</a></h2>
+
+<h2 id="web-workers"><a href="web-workers">Web Workers</a></h2>
+
+<h2 id="cors"><a href="cors">CORS</a></h2>
+
+<h2 id="rest"><a href="/tema3-web/rest.html">REST</a></h2>
+
+<h2 id="authentication"><a href="/tema3-web/authentication.html">Authentication</a></h2>
+
+<!--
+**Stylus**
+
+* [A Simple Website in Node.js with Express, Jade and Stylus](https://www.clock.co.uk/insight/a-simple-website-in-nodejs-with-express-jade-and-stylus)
+* [Build a Node.js App with Express + EJS + Stylus by Robin Skafte](https://scotch.io/@robinskafte/build-a-nodejs-app-with-express-ejs-stylus)
+-->
+
+<h2 id="web-scrapping"><a href="web-scrapping">Web Scrapping</a></h2>
+
+<h2 id="bases-de-datos-y-motores-de-búsqueda"><a href="bases-de-datos">Bases de Datos y Motores de Búsqueda</a></h2>
+
+<h2 id="jekyll"><a href="jekyll">Jekyll</a></h2>
+
+<h2 id="hugo"><a href="hugo">Hugo</a></h2>
+
+<h2 id="gastby"><a href="gatsby">Gastby</a></h2>
+
+<h2 id="react"><a href="react">React</a></h2>
+
+<h2 id="graphql"><a href="graphql">GraphQL</a></h2>
+
+<h2 id="the-jam-stack"><a href="jam">The JAM Stack</a></h2>
+
+<h2 id="serverless"><a href="serverless">Serverless</a></h2>
+
+<h2 id="desktop-apps-using-web-technologies"><a href="electron">Desktop Apps using Web Technologies</a></h2>
+
+<h2 id="extending-visual-studio-code"><a href="extending-vscode">Extending Visual Studio Code</a></h2>
+
+<h2 id="webassembly"><a href="webassembly">WebAssembly</a></h2>
+
+<h2 id="tools-for-static-blogs"><a href="static-blogs">Tools for Static Blogs</a></h2>
+
+<h2 id="process-managers"><a href="pm2">Process-managers</a></h2>
+
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

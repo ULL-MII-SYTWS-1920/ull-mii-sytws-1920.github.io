@@ -1,0 +1,1 @@
+Introductory example to Promises from the talk UAI 18

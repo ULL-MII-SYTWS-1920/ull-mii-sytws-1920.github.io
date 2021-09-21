@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema3-web/serverless.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#serverless">Serverless</a>
+    <ul>
+      <li><a href="#qué-es-serverless">¿Qué es Serverless?</a></li>
+      <li><a href="#microservicios">Microservicios</a></li>
+      <li><a href="#serverless-stackcom-tutorial">serverless-stack.com tutorial</a>
+        <ul>
+          <li><a href="#preface">Preface</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#set-up-your-aws-account">Set up your AWS account</a></li>
+          <li><a href="#setting-up-the-serverless-backend">Setting up the Serverless backend</a></li>
+          <li><a href="#building-a-serverless-rest-api">Building a Serverless REST API</a></li>
+          <li><a href="#deploying-the-backend">Deploying the backend</a></li>
+          <li><a href="#setting-up-a-react-app">Setting up a React app</a></li>
+          <li><a href="#building-a-react-app">Building a React app</a></li>
+          <li><a href="#deploying-the-backend-to-production">Deploying the backend to production</a></li>
+          <li><a href="#deploying-the-frontend-to-production">Deploying the frontend to production</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="serverless">Serverless</h1>
+
+<h2 id="qué-es-serverless">¿Qué es Serverless?</h2>
+
+<p><strong><a href="https://serverless-stack.com/chapters/es/what-is-serverless.html">Serverless Stack</a></strong></p>
+
+<blockquote>
+  <p>La computación sin servidor (o serverless para abreviar) es un modelo de ejecución en el que el proveedor en la nube (AWS, Azure o Google Cloud) es responsable de ejecutar un fragmento de código mediante la asignación dinámica de los recursos. Y cobrando solo por la cantidad de recursos utilizados para ejecutar el código. El código, generalmente, se ejecuta dentro de contenedores sin estado que pueden ser activados por una variedad de eventos que incluyen solicitudes HTTP, eventos de base de datos, servicios de colas, alertas de monitoreo, carga de archivos, eventos programados (trabajos cron), etc. El código que se envía a al proveedor en la nube para la ejecución es generalmente en forma de una función. Por lo tanto, serverless a veces se denomina <em>“Funciones como servicio”</em> o <em>“FaaS”</em>. Las siguientes son las ofertas de FaaS de los principales proveedores en la nube:</p>
+</blockquote>
+
+<ul>
+  <li>AWS: <a href="https://aws.amazon.com/lambda/">AWS Lambda</a></li>
+  <li>Microsoft Azure: <a href="https://azure.microsoft.com/en-us/services/functions/">Azure Functions</a></li>
+  <li>Google Cloud: <a href="https://cloud.google.com/functions/">Cloud Functions</a></li>
+</ul>
+
+<p>Mientras que serverless abstrae la infraestructura subyacente al desarrollador, los servidores aún participan en la ejecución de nuestras funciones.</p>
+
+<p>Dado que el código se ejecutará como funciones individuales, hay algunas cosas que debemos tener en cuenta.</p>
+
+<h2 id="microservicios">Microservicios</h2>
+
+<blockquote>
+  <p>El cambio más grande al que nos enfrentamos durante la transición a un mundo sin servidor es que nuestra aplicación debe ser diseñada en forma de funciones. Puede que estés acostumbrado a implementar tu desarrollo como una sola aplicación monolítica en Rails o Express. Pero, en el mundo sin servidor normalmente se requiere que adopte una arquitectura basada en microservicios. Puedes solucionar esto ejecutando toda la aplicación dentro de una sola función como un monolito y manejando el enrutamiento por ti mismo. Pero esto no se recomienda ya que es mejor reducir el tamaño de tus funciones.</p>
+</blockquote>
+
+<h2 id="serverless-stackcom-tutorial">serverless-stack.com tutorial</h2>
+
+<h3 id="preface">Preface</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/who-is-this-guide-for.html">Who is this guide for?</a></li>
+  <li><a href="https://serverless-stack.com/chapters/what-does-this-guide-cover.html">What does this guide cover?</a></li>
+  <li><a href="https://serverless-stack.com/chapters/how-to-get-help.html">How to get help?</a></li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/what-is-serverless.html">What is Serverless?</a></li>
+  <li><a href="https://serverless-stack.com/chapters/what-is-aws-lambda.html">What is AWS Lambda?</a></li>
+  <li><a href="https://serverless-stack.com/chapters/why-create-serverless-apps.html">Why create Serverless apps?</a></li>
+</ul>
+
+<h3 id="set-up-your-aws-account">Set up your AWS account</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/create-an-aws-account.html">Create an AWS account</a></li>
+  <li><a href="https://serverless-stack.com/chapters/create-an-iam-user.html">Create an IAM user</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/what-is-iam.html">What is IAM</a></li>
+      <li><a href="https://serverless-stack.com/chapters/what-is-an-arn.html">What is an ARN</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/configure-the-aws-cli.html">Configure the AWS CLI</a></li>
+</ul>
+
+<h3 id="setting-up-the-serverless-backend">Setting up the Serverless backend</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/create-a-dynamodb-table.html">Create a DynamoDB table</a></li>
+  <li><a href="https://serverless-stack.com/chapters/create-an-s3-bucket-for-file-uploads.html">Create an S3 bucket for file uploads</a></li>
+  <li><a href="https://serverless-stack.com/chapters/create-a-cognito-user-pool.html">Create a Cognito user pool</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/create-a-cognito-test-user.html">Create a Cognito test user</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/setup-the-serverless-framework.html">Set up the Serverless Framework</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/add-support-for-es6-es7-javascript.html">Add support for ES6/ES7 JavaScript</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/initialize-the-backend-repo.html">Initialize the backend repo</a></li>
+</ul>
+
+<h3 id="building-a-serverless-rest-api">Building a Serverless REST API</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/add-a-create-note-api.html">Add a create note API</a></li>
+  <li><a href="https://serverless-stack.com/chapters/add-a-get-note-api.html">Add a get note API</a></li>
+  <li><a href="https://serverless-stack.com/chapters/add-a-list-all-the-notes-api.html">Add a list all the notes API</a></li>
+  <li><a href="https://serverless-stack.com/chapters/add-an-update-note-api.html">Add an update note API</a></li>
+  <li><a href="https://serverless-stack.com/chapters/add-a-delete-note-api.html">Add a delete note API</a></li>
+  <li><a href="https://serverless-stack.com/chapters/working-with-3rd-party-apis.html">Working with 3rd party APIs</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/setup-a-stripe-account.html">Setup a Stripe account</a></li>
+      <li><a href="https://serverless-stack.com/chapters/add-a-billing-api.html">Add a billing API</a></li>
+      <li><a href="https://serverless-stack.com/chapters/load-secrets-from-env.html">Load secrets from .env</a></li>
+      <li><a href="https://serverless-stack.com/chapters/test-the-billing-api.html">Test the billing API</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/unit-tests-in-serverless.html">Unit tests in Serverless</a></li>
+  <li><a href="https://serverless-stack.com/chapters/handle-api-gateway-cors-errors.html">Handle API Gateway CORS errors</a></li>
+</ul>
+
+<h3 id="deploying-the-backend">Deploying the backend</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/deploy-the-apis.html">Deploy the APIs</a></li>
+  <li><a href="https://serverless-stack.com/chapters/create-a-cognito-identity-pool.html">Create a Cognito identity pool</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/cognito-user-pool-vs-identity-pool.html">Cognito user pool vs identity pool</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/test-the-apis.html">Test the APIs</a></li>
+</ul>
+
+<h3 id="setting-up-a-react-app">Setting up a React app</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/create-a-new-reactjs-app.html">Create a new React.js app</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/initialize-the-frontend-repo.html">Initialize the frontend repo</a></li>
+      <li><a href="https://serverless-stack.com/chapters/add-app-favicons.html">Add app favicons</a></li>
+      <li><a href="https://serverless-stack.com/chapters/setup-custom-fonts.html">Set up custom fonts</a></li>
+      <li><a href="https://serverless-stack.com/chapters/setup-bootstrap.html">Set up Bootstrap</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/handle-routes-with-react-router.html">Handle routes with React Router</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/create-containers.html">Create containers</a></li>
+      <li><a href="https://serverless-stack.com/chapters/adding-links-in-the-navbar.html">Adding links in the navbar</a></li>
+      <li><a href="https://serverless-stack.com/chapters/handle-404s.html">Handle 404s</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/configure-aws-amplify.html">Configure AWS Amplify</a></li>
+</ul>
+
+<h3 id="building-a-react-app">Building a React app</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/create-a-login-page.html">Create a login page</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/login-with-aws-cognito.html">Login with AWS Cognito</a></li>
+      <li><a href="https://serverless-stack.com/chapters/add-the-session-to-the-state.html">Add the session to the state</a></li>
+      <li><a href="https://serverless-stack.com/chapters/load-the-state-from-the-session.html">Load the state from the session</a></li>
+      <li><a href="https://serverless-stack.com/chapters/clear-the-session-on-logout.html">Clear the session on logout</a></li>
+      <li><a href="https://serverless-stack.com/chapters/redirect-on-login-and-logout.html">Redirect on login and logout</a></li>
+      <li><a href="https://serverless-stack.com/chapters/give-feedback-while-logging-in.html">Give feedback while logging in</a></li>
+      <li><a href="https://serverless-stack.com/chapters/create-a-custom-react-hook-to-handle-form-fields.html">Create a Custom React Hook to Handle Form Fields</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/create-a-signup-page.html">Create a signup page</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/create-the-signup-form.html">Create the signup form</a></li>
+      <li><a href="https://serverless-stack.com/chapters/signup-with-aws-cognito.html">Signup with AWS Cognito</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/add-the-create-note-page.html">Add the create note page</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/call-the-create-api.html">Call the create API</a></li>
+      <li><a href="https://serverless-stack.com/chapters/upload-a-file-to-s3.html">Upload a file to S3</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/list-all-the-notes.html">List all the notes</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/call-the-list-api.html">Call the list API</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/display-a-note.html">Display a note</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/render-the-note-form.html">Render the note form</a></li>
+      <li><a href="https://serverless-stack.com/chapters/save-changes-to-a-note.html">Save changes to a note</a></li>
+      <li><a href="https://serverless-stack.com/chapters/delete-a-note.html">Delete a note</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/create-a-settings-page.html">Create a settings page</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/add-stripe-keys-to-config.html">Add Stripe keys to config</a></li>
+      <li><a href="https://serverless-stack.com/chapters/create-a-billing-form.html">Create a billing form</a></li>
+      <li><a href="https://serverless-stack.com/chapters/connect-the-billing-form.html">Connect the billing form</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/setup-secure-pages.html">Set up secure pages</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/create-a-route-that-redirects.html">Create a route that redirects</a></li>
+      <li><a href="https://serverless-stack.com/chapters/use-the-redirect-routes.html">Use the redirect routes</a></li>
+      <li><a href="https://serverless-stack.com/chapters/redirect-on-login.html">Redirect on login</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="deploying-the-backend-to-production">Deploying the backend to production</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/getting-production-ready.html">Getting production ready</a></li>
+  <li><a href="https://serverless-stack.com/chapters/what-is-infrastructure-as-code.html">What is Infrastructure as Code?</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/configure-dynamodb-in-serverless.html">Configure DynamoDB in Serverless</a></li>
+      <li><a href="https://serverless-stack.com/chapters/configure-s3-in-serverless.html">Configure S3 in Serverless</a></li>
+      <li><a href="https://serverless-stack.com/chapters/configure-cognito-user-pool-in-serverless.html">Configure Cognito User Pool in Serverless</a></li>
+      <li><a href="https://serverless-stack.com/chapters/configure-cognito-identity-pool-in-serverless.html">Configure Cognito Identity Pool in Serverless</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/deploy-your-serverless-infrastructure.html">Deploy your Serverless infrastructure</a></li>
+  <li><a href="https://serverless-stack.com/chapters/automating-serverless-deployments.html">Automating Serverless deployments</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/setting-up-your-project-on-seed.html">Setting up your project on Seed</a></li>
+      <li><a href="https://serverless-stack.com/chapters/configure-secrets-in-seed.html">Configure secrets in Seed</a></li>
+      <li><a href="https://serverless-stack.com/chapters/deploying-through-seed.html">Deploying through Seed</a></li>
+      <li><a href="https://serverless-stack.com/chapters/set-custom-domains-through-seed.html">Set custom domains through Seed</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/test-the-configured-apis.html">Test the configured APIs</a></li>
+  <li><a href="https://serverless-stack.com/chapters/monitoring-deployments-in-seed.html">Monitoring deployments in Seed</a></li>
+</ul>
+
+<h3 id="deploying-the-frontend-to-production">Deploying the frontend to production</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/automating-react-deployments.html">Automating React Deployments</a>
+    <ul>
+      <li><a href="https://serverless-stack.com/chapters/manage-environments-in-create-react-app.html">Manage environments in Create React App</a></li>
+      <li><a href="https://serverless-stack.com/chapters/create-a-build-script.html">Create a build script</a></li>
+      <li><a href="https://serverless-stack.com/chapters/setting-up-your-project-on-netlify.html">Setting up your project on Netlify</a></li>
+      <li><a href="https://serverless-stack.com/chapters/custom-domain-in-netlify.html">Custom Domains in Netlify</a></li>
+    </ul>
+  </li>
+  <li><a href="https://serverless-stack.com/chapters/frontend-workflow.html">Frontend workflow</a></li>
+</ul>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<ul>
+  <li><a href="https://serverless-stack.com/chapters/wrapping-up.html">Wrapping up</a></li>
+  <li><a href="https://serverless-stack.com/chapters/further-reading.html">Futher reading</a></li>
+  <li><a href="https://serverless-stack.com/chapters/translations.html">Translations</a></li>
+  <li><a href="https://serverless-stack.com/chapters/giving-back.html">Giving back</a></li>
+  <li><a href="https://serverless-stack.com/chapters/changelog.html">Changelog</a></li>
+  <li><a href="https://serverless-stack.com/chapters/staying-up-to-date.html">Staying up to date</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>

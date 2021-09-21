@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang=" en-US ">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="/assets/css/ie.css">
+    <![endif]-->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+    
+</head>
+
+<body>
+    <div id="header">
+            <nav>
+        <li><a href="https://github.com/ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io/tree/master//tema4-devops/control-version.md" title="Edit this page at GitHub">🐙</a>
+        </li>
+        <li><a href="/search" title="search">&#x1F50D;</a></li>
+       
+        <li><a href="/resources.html" title="resources">&#x2699</a></li>
+        <li><a href="/timetables.html" title="horarios">&#x1f5d3</a></li>
+        <li><a href="/references.html" title="bibliografia">&#x1f4da</a></li>
+        <li><a href="/practicas.html" title="prácticas">&#x270d</a></li>
+        
+
+        <li><a href="/clases.html" title="clases">👨‍🏫</a></li>
+        <li><a href="/index.html" title="Home page">&#x1f3e0</a></li>
+        <li><a href="/tema0-presentacion/" title="Tema 0: Presentación">0</a></li>
+        <li><a href="/tema1-introduccion/" title="Tema 1: introducción">1</a></li>
+        <li><a href="/tema2-async/" title="Tema 2: Async">2</a></li>
+        <li><a href="/tema3-web/" title="Tema 3: Web">3</a></li>
+        <li><a href="/tema4-devops/" title="Tema 4: Devops">4</a></li>
+        
+    </nav>
+
+    </div>
+    <!-- end header -->
+
+
+    <div class="wrapper">
+
+        <section>
+           
+<div id="title">
+        <h1>Sistemas y Tecnologías Web: Servidor</h1>
+        <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+        <hr>
+        <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Classroom <a href="https://classroom.github.com/classrooms/68184806-ull-mii-sytws-2021" target="_blank">ULL-MII-SYTWS-2021</a></span>
+        <span class="credits left"> &nbsp; Campus Virtual <a href="https://campusdoctoradoyposgrado.ull.es/course/view.php?id=2020111300" target="_blank">SYTWS</a></span>
+        <span class="credits left"> &nbsp; Chat <a href="https://chat.google.com/u/1/room/AAAAp18fCE8" target="_blank">Chat</a></span>
+        <span class="credits left"> &nbsp; Profesor <a href="https://www.ull.es/apps/guias/guias/view_teacher_niu/745/(%3FPcrguezl.*)/" target="_blank">Casiano</a></span>
+    </div>
+
+<!--
+
+<div id="title">
+    <h1>Sistemas y Tecnologías Web: Servidor</h1>
+    <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
+    <hr>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
+            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left"> &nbsp; Github Classroom <a
+            href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
+            target="_blank">SYTWS 19/20</a></span>
+    <span class="credits left"> &nbsp; Campus Virtual <a
+            href="https://campusvirtual.ull.es/1920/course/view.php?id=201913778" target="_blank">SYTWS
+            19/20</a></span>
+    <span class="credits left"> &nbsp; Profesor <a
+            href="https://www.ull.es/apps/guias/guias/view_teacher_niu/588/(%3FPcrguezl.*)/"" target="
+            _blank">Casiano</a></span>
+</div>
+-->    
+
+
+           
+            <h2 >Table of Contents</h2>
+           
+            <ul id="sytwstoc">
+  <li><a href="#software-development-cycle">Software Development Cycle</a>
+    <ul>
+      <li><a href="#git-submódulos-repos-con-varios-subproyectos">Git Submódulos. Repos con varios Subproyectos</a></li>
+      <li><a href="#github-actions">GitHub Actions</a>
+        <ul>
+          <li><a href="#videos-about-github-actions">Videos about GitHub Actions</a></li>
+        </ul>
+      </li>
+      <li><a href="#github-package-registry">GitHub Package Registry</a></li>
+    </ul>
+  </li>
+</ul>
+        
+
+            <div class="container">
+                <h1 id="software-development-cycle">Software Development Cycle</h1>
+
+<h2 id="git-submódulos-repos-con-varios-subproyectos">Git Submódulos. Repos con varios Subproyectos</h2>
+
+<p>En muchas ocasiones es necesario tener junto a nuestro repo de proyecto otros repos de otros proyectos.
+Por ejemplo, cuando hacemos un paquete para npm es conveniente tener junto al repo del paquete un segundo 
+repositorio con un cliente que nos sirva para probar el correcto uso del paquete en producción. 
+Esto nos lleva a veces a crear 
+un macro-repo que contiene los  repos acoplados.</p>
+
+<ul>
+  <li><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Chacon’s book on Git: Chapter 7.11 Git Tools - Submodules</a></li>
+  <li><a href="https://github.com/ULL-ESIT-DSI-1617/create-a-npm-module">Ejemplo en https://github.com/ULL-ESIT-DSI-1617/create-a-npm-module</a>
+    <ul>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1617/scapegoat">Submódulo https://github.com/ULL-ESIT-DSI-1617/scapegoat</a></li>
+      <li><a href="https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat">Submódulo https://github.com/ULL-ESIT-DSI-1617/prueba-scapegoat</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="github-actions">GitHub Actions</h2>
+
+<p>GitHub Actions enables you to create custom software development life cycle (SDLC) workflows directly in your GitHub repository.</p>
+
+<p>With GitHub Actions you can build end-to-end continuous integration (CI) and continuous deployment (CD) capabilities directly in your repository. GitHub Actions powers GitHub’s built-in continuous integration service.</p>
+
+<p>Workflows run in Linux, macOS, Windows, and containers on GitHub-hosted servers. You can create workflows using actions defined in your repository, open source actions in a public repository on GitHub, or a published Docker container image. Workflows in forked repositories don’t run by default.</p>
+
+<ul>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/#about-github-actions">About GitHub Actions</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#core-concepts-for-github-actions">Core concepts for GitHub Actions</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#notifications-for-workflow-runs">Notifications for workflow runs</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#discovering-actions-in-the-github-community">Discovering actions in the GitHub community</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#migrating-github-actions-from-hcl-to-yaml-syntax">Migrating GitHub Actions from HCL to YAML syntax</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#usage-limits">Usage limits</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#requesting-to-join-the-limited-public-beta-for-github-actions">Requesting to join the limited public beta for GitHub Actions</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#contacting-support">Contacting support</a></li>
+  <li><a href="https://help.github.com/en/github/automating-your-workflow-with-github-actions/about-github-actions#further-reading">Further reading</a></li>
+  <li>
+    <p><a href="https://github.com/ULL-MII-SYTWS-2021/p4-t2-networking-crguezl">Repo de ejemplo de GitHub Actions: p4-t2-networking-crguezl</a> (Private)</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>  [~/.../github-actions-learning/p4-t2-net-github-actions-crguezl(master)]$ pwd -P
+  /Users/casiano/local/src/github-actions-learning/p4-t2-net-github-actions-crguezl
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="videos-about-github-actions">Videos about GitHub Actions</h3>
+
+<ul>
+  <li><a href="https://youtu.be/uLu5g76tDWw">BxJS - (Custom) Github Actions for Node.js projects</a></li>
+  <li><a href="https://youtu.be/Tl4mbL45PKU">GitHub Actions: Open Source Workflow Automation by Bas Peters</a> YoutTube video</li>
+  <li><a href="https://youtu.be/rgxbeIvQj0Q">Introduction to GitHub Actions : my website build &amp; deployment</a></li>
+</ul>
+
+<h2 id="github-package-registry">GitHub Package Registry</h2>
+
+<p>GitHub Package Registry is a software package hosting service, similar to npmjs.org, rubygems.org, or hub.docker.com, that allows you to host your packages and code in one place. You can host software packages privately or publicly and use them as dependencies in your projects.</p>
+
+<ul>
+  <li><a href="https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry#about-github-package-registry">About GitHub Package Registry</a></li>
+  <li><a href="https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry#supported-clients-and-formats">Supported clients and formats</a></li>
+  <li><a href="https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry#searching-packages-on-github">Searching packages on GitHub</a></li>
+  <li><a href="https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry#deleting-a-package">Deleting a package</a></li>
+  <li><a href="https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry#contacting-support">Contacting support</a></li>
+</ul>
+
+            </div>
+                        <details>
+                <summary><h2>Comment with GitHub Utterances</h2></summary>
+                <script src="https://utteranc.es/client.js"
+        repo="ULL-MII-SYTWS-1920/ull-mii-sytws-1920.github.io"
+        issue-term="pathname"
+        label="SYTWS"
+        theme="dark-blue"
+        crossorigin="anonymous"
+        async>
+</script>
+            </details>
+            
+            <details>
+                <summary>
+                   <h2>Comment with Disqus</h2> 
+                </summary>              
+                
+
+
+
+<div id="disqus_thread">
+    thread de discusion
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: 
+EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+       https://disqus.com/admin/universalcode/#configuration-variables*/
+
+/*
+var disqus_config = function () {
+   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://https-ull-mii-sytws-1920-github-io.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+})();
+
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+ 
+
+            </details>
+
+            <!-- -->
+            <!-- end bar -->
+
+            <!-- Mathjax Support  -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+        </section>
+    </div>
+
+    
+</body>
+
+</html>
