@@ -35,6 +35,9 @@ task :b do
   sh "bundle exec jekyll build --future -I -w -d ../website"
 end
 
+task :pushhtml do
+  "./scripts/build-and-push.sh"
+end
 
 desc "sytws: pull and build"
 task :pb do
