@@ -36,7 +36,7 @@ task :b do
 end
 
 task :pushhtml do
-  "./scripts/build-and-push.sh"
+  sh "./scripts/build-and-push.sh"
 end
 
 desc "sytws: pull and build"
