@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link rel="stylesheet" href="/assets/css/style.css?v=88e715cdd6e0bd047c7d68b39d123a466842e492">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a8db9f5ed3bfce1c7849f44f99b16371e6a97696">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="/assets/js/respond.js"></script>
     <!--[if lt IE 9]>
@@ -69,8 +69,8 @@
     <h1>Sistemas y Tecnologías Web: Servidor</h1>
     <p> Master de II. ULL. 1er cuatrimestre. 2020/2021</p>
     <hr>
-    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS-2021"
-            target="_blank">ULL-MII-SYTWS-2021</a></span>
+    <span class="credits left">Organization <a href="https://github.com/ULL-MII-SYTWS"
+            target="_blank">ULL-MII-SYTWS</a></span>
     <span class="credits left"> &nbsp; Github Classroom <a
             href="https://classroom.github.com/classrooms/55384072-master-de-ingenieria-informatica-sistemas-y-tecnologias-web-servidor-classroom"
             target="_blank">SYTWS 19/20</a></span>

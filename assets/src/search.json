@@ -1426,9 +1426,9 @@
   },
   
   {
-    "title": "Temas",
+    "title": "Temas Hemos conseguido que .nojekyll se copie",
     "excerpt": "\n",
-    "content": "Temas\n\n{% for tema in site.temas %}\n\n{{tema.title}}\n\n{% endfor %}\n\nClases\n\n{% include clases-impartidas.md %}\n\nPrácticas Publicadas\n\n{% include practicas-publicadas.md %}\n\nHorarios y Calendarios\n\nEvaluación\n\nBibliografía\n\nRecursos\n\n\n",
+    "content": "Temas Hemos conseguido que .nojekyll se copie\n\n{% for tema in site.temas %}\n\n{{tema.title}}\n\n{% endfor %}\n\nClases\n\n{% include clases-impartidas.md %}\n\nPrácticas Publicadas\n\n{% include practicas-publicadas.md %}\n\nHorarios y Calendarios\n\nEvaluación\n\nBibliografía\n\nRecursos\n\n\n",
     "url": "/"
   },
   
